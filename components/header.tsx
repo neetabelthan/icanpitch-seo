@@ -29,6 +29,12 @@ export function Header() {
             >
               Learn
             </a>
+            <a
+              href="/blog/"
+              className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              Blog
+            </a>
           </nav>
         </div>
       </div>

@@ -350,8 +350,317 @@ export default function CalculatorPage() {
   utils.ts              # Utility functions
 ```
 
+## Adding New Calculator Pages
+
+### Automated Page Generation
+
+All calculator pages are automatically generated from metadata files using the `generate-pages.js` script.
+
+### Step 1: Create Metadata File
+
+Add a new folder in `/learn/` with the SEO-optimized slug name, then create a `metadata.json` file:
+
+```json
+{
+  "slug": "your-calculator-slug-with-seo-keywords",
+  "title": "Your Calculator Title",
+  "metaDescription": "SEO-optimized description with keywords",
+  "h1": "Main Heading for Calculator",
+  "dataRow": {
+    "calculator_name": "calculator-name",
+    "stage": "seed",
+    "founder_type": "technical-founder",
+    "geography": "san-francisco",
+    "intent_modifier": "optimize-workflow",
+    "outcome_modifier": "maximize-efficiency"
+  },
+  "url": "https://icanpitch.com/learn/your-calculator-slug/",
+  "index": 0,
+  "generatedAt": "2025-11-06T00:00:00.000Z"
+}
+```
+
+### Step 2: Update Calculator Slug Mapping
+
+If the calculator name in metadata differs from the actual URL on icanpitch.com, update the mapping in `generate-pages.js`:
+
+```javascript
+const calculatorSlugMap = {
+  'calculator-name': 'actual-icanpitch-url-slug',
+  'burn-rate-calculator': 'burn-rate-runway-calculator',
+  // Add your new mapping here
+};
+```
+
+**Current Mappings:**
+- `burn-rate-calculator` → `burn-rate-runway-calculator`
+- `pre-post-money-calculator` → `pre-post-money-valuation-calculator`
+- `equity-split-calculator` → `co-founder-equity-split-calculator`
+- `option-pool-calculator` → `option-pool-impact-calculator`
+- `pro-rata-calculator` → `pro-rata-rights-impact-calculator`
+- `vesting-calculator` → `vesting-schedule-cliff-explorer`
+- `exit-calculator` → `startup-exit-visualizer`
+
+### Step 3: Generate Pages
+
+Run the page generator script:
+
+```bash
+node generate-pages.js
+```
+
+This will automatically create:
+- React component with proper imports
+- SEO metadata (title, description, Open Graph, Twitter)
+- JSON-LD structured data for search engines
+- Aurora background hero section
+- Content sections with proper styling
+- CTA section with gradient button linking to icanpitch.com
+- Proper function naming (handles edge cases like numbers at start)
+
+### Step 4: Update /learn Index
+
+Add your new calculator to `/app/learn/page.tsx` and `/app/page.tsx` in the calculators array:
+
+```javascript
+{
+  name: "Your Calculator Name",
+  slug: "your-full-seo-slug-here",
+  stage: "Seed",
+  description: "Brief description for the card"
+}
+```
+
+### What Gets Generated Automatically
+
+Each generated page includes:
+
+1. **Header Component** - Logo linking to icanpitch.com, Learn navigation
+2. **SEO Metadata** - Title, description, Open Graph, Twitter cards
+3. **JSON-LD** - Structured data for search engines
+4. **Aurora Hero** - Animated gradient background with title
+5. **Content Sections** - Three H2 sections with relevant content
+6. **Stage Badges** - Colored badges for funding stage, founder type, geography
+7. **CTA Section** - Gradient button linking to the actual calculator
+8. **Responsive Design** - Mobile-first, works on all screen sizes
+
+### Important Notes
+
+- **Function Names**: If slug starts with a number (e.g., 409a), it will be prefixed with `_`
+- **External Links**: All links to icanpitch.com open in new tab (`target="_blank"`)
+- **Button Gradient**: Uses aurora colors (blue → indigo → purple), not bright pink
+- **No Breadcrumbs**: Header navigation is sufficient, no duplicate nav
+- **Clean URLs**: Always include trailing slash for SEO
+
+### File Structure After Generation
+
+```
+/app
+  /learn
+    /your-calculator-slug/
+      page.tsx           # Auto-generated React component
+/learn
+  /your-calculator-slug/
+    metadata.json        # Source metadata
+    index.html          # Static fallback (optional)
+```
+
+### Testing Your New Page
+
+1. Start dev server: `npm run dev`
+2. Visit: `http://localhost:3000/learn/your-slug/`
+3. Check:
+   - Header shows correctly
+   - Aurora background animates
+   - Title uses gradient
+   - CTA button links to correct calculator URL
+   - All links open in new tabs
+
+### Deployment Checklist
+
+- [ ] Metadata file created with proper SEO keywords
+- [ ] Slug mapping added if calculator name differs
+- [ ] `generate-pages.js` executed successfully
+- [ ] Calculator added to /learn index page
+- [ ] Page tested locally
+- [ ] OG image created at `/public/og/your-slug.png` (optional)
+- [ ] Links verified to point to correct icanpitch.com URL
+
+## Adding New Blog Posts
+
+### Automated Blog Post Generation
+
+All blog posts are automatically generated from content + metadata files using the `generate-blog.js` script.
+
+### Step 1: Create Blog Content Folder
+
+Create a new folder in `/content/blog/` with your post slug name:
+
+```
+/content/blog/your-post-slug/
+  metadata.json
+  content.html
+```
+
+**IMPORTANT**: The folder name MUST match the slug in metadata.json!
+
+### Step 2: Create Metadata File
+
+Create `/content/blog/your-post-slug/metadata.json`:
+
+```json
+{
+  "slug": "your-post-slug",
+  "title": "Your Post Title",
+  "description": "SEO description for the post",
+  "date": "2025-01-15",
+  "categories": ["Fundraising", "Equity"],
+  "tags": ["SAFE", "dilution", "equity"],
+  "readingTime": 8,
+  "heroImage": "hero.jpg"
+}
+```
+
+**Note**: Author is always "Neeta Belthan" (hardcoded in generator)
+
+### Step 3: Create Content File
+
+Create `/content/blog/your-post-slug/content.html` with your article content:
+
+```html
+<h2>Your First Section</h2>
+<p>
+  Your paragraph text here. Keep paragraphs focused and readable.
+</p>
+
+<h3>Subsection Title</h3>
+<ul>
+  <li><strong>Key Point</strong>: Explanation here</li>
+  <li><strong>Another Point</strong>: More details</li>
+</ul>
+
+<h2>Next Section</h2>
+<p>
+  Use <a href="https://example.com" target="_blank" rel="noopener noreferrer">links</a>
+  to reference external resources.
+</p>
+
+<ol>
+  <li><strong>First step</strong>: Do this</li>
+  <li><strong>Second step</strong>: Then this</li>
+</ol>
+```
+
+### Step 4: Generate Blog Post
+
+Run the blog generator script:
+
+```bash
+node generate-blog.js
+```
+
+This will automatically create:
+- React component at `/app/blog/your-post-slug/page.tsx`
+- SEO metadata (title, description, Open Graph, Twitter)
+- JSON-LD structured data
+- Hero section with categories and meta info
+- Optimized typography for readability
+- Author bio section (Neeta Belthan)
+- CTA section with link to calculators
+
+### Step 5: Update Blog Index
+
+Add your new post to `/app/blog/page.tsx` in the posts array:
+
+```javascript
+{
+  slug: "your-post-slug",
+  title: "Your Post Title",
+  description: "Brief description",
+  date: "January 15, 2025",
+  categories: ["Fundraising", "Equity"],
+  readingTime: 8,
+}
+```
+
+### Blog Typography Guidelines
+
+The blog generator uses optimized typography for maximum readability:
+
+**Content Container**
+- Max width: `max-w-3xl` (optimal line length ~65-75 characters)
+- Centered on page for focus
+
+**Typography Styles**
+- **H2 Headings**: `text-3xl`, bold, `mt-12 mb-4` (first has no top margin)
+- **H3 Headings**: `text-2xl`, semibold, `mt-8 mb-3`
+- **Paragraphs**: `text-lg`, gray-700, relaxed line height, `mb-6`
+- **Lists**: `text-lg`, gray-700, proper indentation, `space-y-2` between items
+- **Strong Text**: Semibold, darker gray (gray-900)
+- **Links**: Blue-600, underlined, hover:blue-700
+- **Blockquotes**: Left border (blue-500), italic, padded
+
+**Visual Hierarchy**
+```
+H1 Hero (4xl-6xl, gradient) → H2 Sections (3xl) → H3 Subsections (2xl) → Body (lg)
+```
+
+**Spacing System**
+- Between paragraphs: `mb-6` (24px)
+- Before H2: `mt-12` (48px)
+- Before H3: `mt-8` (32px)
+- List items: `space-y-2` (8px)
+
+### What Gets Generated Automatically
+
+Each generated blog post includes:
+
+1. **Header Component** - Logo, Learn/Blog navigation
+2. **SEO Metadata** - Title, description, OG, Twitter cards
+3. **JSON-LD** - Article structured data with author
+4. **Hero Section** - Aurora background with title, categories, meta
+5. **Hero Image** - Optional featured image (if specified)
+6. **Article Content** - Optimized typography for readability
+7. **Tags Section** - Related tags for discoverability
+8. **Author Bio** - Neeta Belthan info with gradient avatar
+9. **CTA Section** - Link to ICanPitch calculators
+10. **Responsive Design** - Mobile-first, works on all devices
+
+### Important Notes
+
+- **Folder = Slug**: Folder name MUST match slug in metadata.json
+- **Author Fixed**: Always "Neeta Belthan", cannot be changed
+- **Typography**: Optimized for readability, don't change font sizes
+- **Max Width**: Keep at `max-w-3xl` for optimal reading experience
+- **Links**: All external links should have `target="_blank"`
+- **Hero Image**: Optional, place in `/public/blog/` directory
+
+### Testing Your Blog Post
+
+1. Start dev server: `npm run dev`
+2. Visit: `http://localhost:3000/blog/your-slug/`
+3. Check:
+   - Typography is easy to read
+   - Proper spacing between sections
+   - Categories display correctly
+   - Author bio shows Neeta Belthan
+   - CTA button links to icanpitch.com
+   - All external links open in new tabs
+
+### Deployment Checklist
+
+- [ ] Folder name matches slug in metadata.json
+- [ ] Content HTML is properly formatted
+- [ ] `generate-blog.js` executed successfully
+- [ ] Post added to /blog index page
+- [ ] Post tested locally for readability
+- [ ] Hero image added to `/public/blog/` (if used)
+- [ ] Reading time estimate is accurate
+
 ## References
 
 - Tailwind CSS: https://tailwindcss.com/docs
 - shadcn/ui: https://ui.shadcn.com
 - Next.js: https://nextjs.org/docs
+- Calculator Page Generator: `generate-pages.js`
+- Blog Post Generator: `generate-blog.js`
