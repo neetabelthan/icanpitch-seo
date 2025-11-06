@@ -11,6 +11,22 @@ export const metadata = {
 export default function BlogPage() {
   const posts = [
     {
+      slug: "safe-calculator-first-time-founders-complete-guide",
+      title: "SAFE Calculator for First-Time Founders: Complete 2025 Guide",
+      description: "Learn how to use a SAFE calculator as a first-time founder. Understand SAFE note mechanics, valuation caps, discount rates, and calculate dilution.",
+      date: "January 16, 2025",
+      categories: ["Fundraising", "SAFE"],
+      readingTime: 10,
+    },
+    {
+      slug: "understanding-pro-rata-rights-startup-investing",
+      title: "Understanding Pro-Rata Rights in Startup Investing: A Complete Guide",
+      description: "Learn everything about pro-rata rights in startup investing, how they work, why they matter for founders and investors, and how to calculate pro-rata allocation.",
+      date: "January 15, 2025",
+      categories: ["Fundraising", "Investors"],
+      readingTime: 10,
+    },
+    {
       slug: "how-to-calculate-pre-money-valuation-series-a",
       title: "How to Calculate Pre-Money Valuation for Series A",
       description: "Complete guide to calculating pre-money valuation for your Series A funding round. Learn the methods, formulas, and factors investors consider.",
