@@ -50,7 +50,7 @@ const jsonLdData = [
 export default function HowToCalculateSafeDilutionBlogPost() {
   return (
     <>
-      {jsonLdData.map((data, index) => (
+      {jsonLdData.map((data: Record<string, any>, index: number) => (
         <Script
           key={index}
           id={`json-ld-${index}`}

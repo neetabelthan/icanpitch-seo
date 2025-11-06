@@ -35,7 +35,7 @@ const jsonLdData = [
       "@type": "Organization",
       "name": "ICanPitch"
     },
-    "datePublished": "2025-11-06T19:33:12.874Z",
+    "datePublished": "2025-11-06T20:40:24.989Z",
     "url": "https://icanpitch.com/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-owne/"
   }
 ];
@@ -43,7 +43,7 @@ const jsonLdData = [
 export default function SafeCalculatorSeedTechnicalFounderSiliconValleyOptimizeEquityDilutionMaximizeFounderOwnePage() {
   return (
     <>
-      {jsonLdData.map((data, index) => (
+      {jsonLdData.map((data: Record<string, any>, index: number) => (
         <Script
           key={index}
           id={`json-ld-${index}`}

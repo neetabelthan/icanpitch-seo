@@ -35,7 +35,7 @@ const jsonLdData = [
       "@type": "Organization",
       "name": "ICanPitch"
     },
-    "datePublished": "2025-11-06T19:33:12.873Z",
+    "datePublished": "2025-11-06T20:40:24.988Z",
     "url": "https://icanpitch.com/learn/pro-rata-calculator-series-b-business-founder-chicago-model-future-dilution-plan-investor-rights/"
   }
 ];
@@ -43,7 +43,7 @@ const jsonLdData = [
 export default function ProRataCalculatorSeriesBBusinessFounderChicagoModelFutureDilutionPlanInvestorRightsPage() {
   return (
     <>
-      {jsonLdData.map((data, index) => (
+      {jsonLdData.map((data: Record<string, any>, index: number) => (
         <Script
           key={index}
           id={`json-ld-${index}`}

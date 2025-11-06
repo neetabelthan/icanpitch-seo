@@ -35,7 +35,7 @@ const jsonLdData = [
       "@type": "Organization",
       "name": "ICanPitch"
     },
-    "datePublished": "2025-11-06T19:33:12.872Z",
+    "datePublished": "2025-11-06T20:40:24.987Z",
     "url": "https://icanpitch.com/learn/option-pool-calculator-pre-seed-technical-founder-san-francisco-size-employee-equity-minimize-founde/"
   }
 ];
@@ -43,7 +43,7 @@ const jsonLdData = [
 export default function OptionPoolCalculatorPreSeedTechnicalFounderSanFranciscoSizeEmployeeEquityMinimizeFoundePage() {
   return (
     <>
-      {jsonLdData.map((data, index) => (
+      {jsonLdData.map((data: Record<string, any>, index: number) => (
         <Script
           key={index}
           id={`json-ld-${index}`}

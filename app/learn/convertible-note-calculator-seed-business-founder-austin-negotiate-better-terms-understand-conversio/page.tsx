@@ -35,7 +35,7 @@ const jsonLdData = [
       "@type": "Organization",
       "name": "ICanPitch"
     },
-    "datePublished": "2025-11-06T19:33:12.871Z",
+    "datePublished": "2025-11-06T20:40:24.986Z",
     "url": "https://icanpitch.com/learn/convertible-note-calculator-seed-business-founder-austin-negotiate-better-terms-understand-conversio/"
   }
 ];
@@ -43,7 +43,7 @@ const jsonLdData = [
 export default function ConvertibleNoteCalculatorSeedBusinessFounderAustinNegotiateBetterTermsUnderstandConversioPage() {
   return (
     <>
-      {jsonLdData.map((data, index) => (
+      {jsonLdData.map((data: Record<string, any>, index: number) => (
         <Script
           key={index}
           id={`json-ld-${index}`}

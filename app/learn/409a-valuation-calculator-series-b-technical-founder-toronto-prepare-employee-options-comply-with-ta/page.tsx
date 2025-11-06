@@ -35,7 +35,7 @@ const jsonLdData = [
       "@type": "Organization",
       "name": "ICanPitch"
     },
-    "datePublished": "2025-11-06T19:33:12.867Z",
+    "datePublished": "2025-11-06T20:40:24.983Z",
     "url": "https://icanpitch.com/learn/409a-valuation-calculator-series-b-technical-founder-toronto-prepare-employee-options-comply-with-ta/"
   }
 ];
@@ -43,7 +43,7 @@ const jsonLdData = [
 export default function _409aValuationCalculatorSeriesBTechnicalFounderTorontoPrepareEmployeeOptionsComplyWithTaPage() {
   return (
     <>
-      {jsonLdData.map((data, index) => (
+      {jsonLdData.map((data: Record<string, any>, index: number) => (
         <Script
           key={index}
           id={`json-ld-${index}`}

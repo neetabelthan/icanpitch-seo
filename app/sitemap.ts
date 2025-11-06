@@ -30,12 +30,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Get all calculator pages from /learn directory
   const learnDir = path.join(process.cwd(), 'learn');
   try {
-    const learnFolders = fs.readdirSync(learnDir).filter(file => {
+    const learnFolders = fs.readdirSync(learnDir).filter((file: string): boolean => {
       const fullPath = path.join(learnDir, file);
       return fs.statSync(fullPath).isDirectory();
     });
 
-    learnFolders.forEach(folder => {
+    learnFolders.forEach((folder: string): void => {
       const metadataPath = path.join(learnDir, folder, 'metadata.json');
       if (fs.existsSync(metadataPath)) {
         const metadata = JSON.parse(fs.readFileSync(metadataPath, 'utf-8'));
@@ -54,12 +54,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Get all blog/SEO pages from /content/blog directory
   const blogDir = path.join(process.cwd(), 'content', 'blog');
   try {
-    const blogFolders = fs.readdirSync(blogDir).filter(file => {
+    const blogFolders = fs.readdirSync(blogDir).filter((file: string): boolean => {
       const fullPath = path.join(blogDir, file);
       return fs.statSync(fullPath).isDirectory();
     });
 
-    blogFolders.forEach(folder => {
+    blogFolders.forEach((folder: string): void => {
       const metadataPath = path.join(blogDir, folder, 'metadata.json');
       if (fs.existsSync(metadataPath)) {
         const metadata = JSON.parse(fs.readFileSync(metadataPath, 'utf-8'));

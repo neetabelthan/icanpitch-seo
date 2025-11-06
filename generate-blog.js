@@ -98,7 +98,7 @@ const jsonLdData = [
 export default function ${functionName}() {
   return (
     <>
-      {jsonLdData.map((data, index) => (
+      {jsonLdData.map((data: Record<string, any>, index: number) => (
         <Script
           key={index}
           id={\`json-ld-\${index}\`}
