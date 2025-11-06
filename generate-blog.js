@@ -46,7 +46,8 @@ function generateBlogPage(metadata, content) {
 
   const isoDate = new Date(date).toISOString();
 
-  return `import { Metadata } from 'next';
+  return `import React from 'react';
+import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
@@ -95,7 +96,7 @@ const jsonLdData = [
   }
 ];
 
-export default function ${functionName}() {
+export default function ${functionName}(): React.JSX.Element {
   return (
     <>
       {jsonLdData.map((data: Record<string, any>, index: number) => (

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import Script from 'next/script';
 import { Button } from '@/components/ui/button';
@@ -35,12 +36,12 @@ const jsonLdData = [
       "@type": "Organization",
       "name": "ICanPitch"
     },
-    "datePublished": "2025-11-06T20:40:24.989Z",
+    "datePublished": "2025-11-06T20:44:56.971Z",
     "url": "https://icanpitch.com/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-owne/"
   }
 ];
 
-export default function SafeCalculatorSeedTechnicalFounderSiliconValleyOptimizeEquityDilutionMaximizeFounderOwnePage() {
+export default function SafeCalculatorSeedTechnicalFounderSiliconValleyOptimizeEquityDilutionMaximizeFounderOwnePage(): React.JSX.Element {
   return (
     <>
       {jsonLdData.map((data: Record<string, any>, index: number) => (

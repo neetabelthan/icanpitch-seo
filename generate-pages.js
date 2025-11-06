@@ -45,7 +45,8 @@ function generatePage(metadata) {
     functionName = '_' + functionName;
   }
 
-  return `import { Metadata } from 'next';
+  return `import React from 'react';
+import { Metadata } from 'next';
 import Script from 'next/script';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -87,7 +88,7 @@ const jsonLdData = [
   }
 ];
 
-export default function ${functionName}() {
+export default function ${functionName}(): React.JSX.Element {
   return (
     <>
       {jsonLdData.map((data: Record<string, any>, index: number) => (

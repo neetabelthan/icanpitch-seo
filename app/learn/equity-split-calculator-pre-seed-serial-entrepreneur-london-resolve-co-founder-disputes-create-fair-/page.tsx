@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import Script from 'next/script';
 import { Button } from '@/components/ui/button';
@@ -35,12 +36,12 @@ const jsonLdData = [
       "@type": "Organization",
       "name": "ICanPitch"
     },
-    "datePublished": "2025-11-06T20:40:24.987Z",
+    "datePublished": "2025-11-06T20:44:56.969Z",
     "url": "https://icanpitch.com/learn/equity-split-calculator-pre-seed-serial-entrepreneur-london-resolve-co-founder-disputes-create-fair-/"
   }
 ];
 
-export default function EquitySplitCalculatorPreSeedSerialEntrepreneurLondonResolveCoFounderDisputesCreateFairPage() {
+export default function EquitySplitCalculatorPreSeedSerialEntrepreneurLondonResolveCoFounderDisputesCreateFairPage(): React.JSX.Element {
   return (
     <>
       {jsonLdData.map((data: Record<string, any>, index: number) => (

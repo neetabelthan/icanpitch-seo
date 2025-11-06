@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
@@ -44,7 +45,7 @@ const jsonLdData = [
   }
 ];
 
-export default function HowToCalculatePreMoneyValuationSeriesABlogPost() {
+export default function HowToCalculatePreMoneyValuationSeriesABlogPost(): React.JSX.Element {
   return (
     <>
       {jsonLdData.map((data: Record<string, any>, index: number) => (
