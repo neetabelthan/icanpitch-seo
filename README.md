@@ -200,6 +200,24 @@ This app can be deployed separately from the main ICanPitch app:
 - Subdomain: `learn.icanpitch.com` or `blog.icanpitch.com`
 - Reverse proxy to subdirectory
 
+### Before Deploying
+
+**IMPORTANT**: Update the base URL in these files to match your subdomain:
+1. `/app/sitemap.ts` - Change `baseUrl` from `https://learn.icanpitch.com` to your subdomain
+2. `/app/robots.ts` - Change `baseUrl` from `https://learn.icanpitch.com` to your subdomain
+
+Example:
+```typescript
+const baseUrl = 'https://learn.icanpitch.com'; // Your actual subdomain
+```
+
+### Sitemap & SEO
+
+- **Sitemap**: Auto-generated at `/sitemap.xml` (includes all calculator & blog pages)
+- **Robots.txt**: Auto-generated at `/robots.txt` (allows all crawlers)
+- **Dynamic**: Updates automatically as you add new pages
+- **Submit to Google**: After deployment, submit sitemap at Google Search Console
+
 ## Design System
 
 - **Colors**: Aurora gradient (blue → indigo → purple)
