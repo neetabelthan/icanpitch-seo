@@ -9,13 +9,11 @@ export const metadata: Metadata = {
   title: "How to Calculate Pre-Money Valuation for Series A | ICanPitch ",
   description: "Complete guide to calculating pre-money valuation for your Series A funding round. Learn the methods, formulas, and factors investors consider.",
   keywords: ["pre-money valuation", "Series A", "valuation", "fundraising", "equity"],
-  
   openGraph: {
     title: "How to Calculate Pre-Money Valuation for Series A",
     description: "Complete guide to calculating pre-money valuation for your Series A funding round. Learn the methods, formulas, and factors investors consider.",
     type: "article",
     publishedTime: "2025-01-15T00:00:00.000Z",
-    
     url: "https://icanpitch.com/blog/how-to-calculate-pre-money-valuation-series-a/",
   },
   twitter: {
@@ -31,7 +29,6 @@ const jsonLdData = [
     "@type": "Article",
     "headline": "How to Calculate Pre-Money Valuation for Series A",
     "description": "Complete guide to calculating pre-money valuation for your Series A funding round. Learn the methods, formulas, and factors investors consider.",
-    
     "datePublished": "2025-01-15T00:00:00.000Z",
     "url": "https://icanpitch.com/blog/how-to-calculate-pre-money-valuation-series-a/",
     "publisher": {
@@ -45,10 +42,10 @@ const jsonLdData = [
   }
 ];
 
-export default function HowToCalculatePreMoneyValuationSeriesABlogPost(): React.JSX.Element {
+export default function HowToCalculatePreMoneyValuationSeriesABlogPost() {
   return (
     <>
-      {jsonLdData.map((data: Record<string, any>, index: number) => (
+      {jsonLdData.map((data, index) => (
         <Script
           key={index}
           id={`json-ld-${index}`}

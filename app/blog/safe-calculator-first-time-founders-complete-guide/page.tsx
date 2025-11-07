@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
@@ -8,13 +9,11 @@ export const metadata: Metadata = {
   title: "SAFE Calculator for First-Time Founders: Complete 2025 Guide | ICanPitch ",
   description: "Learn how to use a SAFE calculator as a first-time founder. Understand SAFE note mechanics, valuation caps, discount rates, and how to calculate dilution to maximize your equity ownership.",
   keywords: ["SAFE", "first-time-founder", "calculator", "pre-seed", "seed-round", "valuation-cap", "dilution"],
-  
   openGraph: {
     title: "SAFE Calculator for First-Time Founders: Complete 2025 Guide",
     description: "Learn how to use a SAFE calculator as a first-time founder. Understand SAFE note mechanics, valuation caps, discount rates, and how to calculate dilution to maximize your equity ownership.",
     type: "article",
     publishedTime: "2025-01-16T00:00:00.000Z",
-    
     url: "https://icanpitch.com/blog/safe-calculator-first-time-founders-complete-guide/",
   },
   twitter: {
@@ -30,7 +29,6 @@ const jsonLdData = [
     "@type": "Article",
     "headline": "SAFE Calculator for First-Time Founders: Complete 2025 Guide",
     "description": "Learn how to use a SAFE calculator as a first-time founder. Understand SAFE note mechanics, valuation caps, discount rates, and how to calculate dilution to maximize your equity ownership.",
-    
     "datePublished": "2025-01-16T00:00:00.000Z",
     "url": "https://icanpitch.com/blog/safe-calculator-first-time-founders-complete-guide/",
     "publisher": {

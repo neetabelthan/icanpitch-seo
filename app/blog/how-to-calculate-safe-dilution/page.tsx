@@ -48,10 +48,10 @@ const jsonLdData = [
   }
 ];
 
-export default function HowToCalculateSafeDilutionBlogPost(): React.JSX.Element {
+export default function HowToCalculateSafeDilutionBlogPost() {
   return (
     <>
-      {jsonLdData.map((data: Record<string, any>, index: number) => (
+      {jsonLdData.map((data, index) => (
         <Script
           key={index}
           id={`json-ld-${index}`}

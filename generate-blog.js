@@ -46,24 +46,16 @@ function generateBlogPage(metadata, content) {
 
   const isoDate = new Date(date).toISOString();
 
-  return `import React from 'react';
-import { Metadata } from 'next';
-import Script from 'next/script';
-import { Badge } from '@/components/ui/badge';
-import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
-
-export const metadata: Metadata = {
-  title: "${title} | ICanPitch ${isSeoPage ? '' : 'Blog'}",
+  const metadataBlock = isSeoPage ?
+`export const metadata: Metadata = {
+  title: "${title} | ICanPitch ",
   description: "${description}",
   keywords: [${tags.map(tag => `"${tag}"`).join(', ')}],
-  ${!isSeoPage ? 'authors: [{ name: "Neeta Belthan" }],' : ''}
   openGraph: {
     title: "${title}",
     description: "${description}",
     type: "article",
     publishedTime: "${isoDate}",
-    ${!isSeoPage ? 'authors: ["Neeta Belthan"],' : ''}
     url: "https://icanpitch.com/blog/${slug}/",
   },
   twitter: {
@@ -71,20 +63,59 @@ export const metadata: Metadata = {
     title: "${title}",
     description: "${description}",
   },
-};
+};` :
+`export const metadata: Metadata = {
+  title: "${title} | ICanPitch Blog",
+  description: "${description}",
+  keywords: [${tags.map(tag => `"${tag}"`).join(', ')}],
+  authors: [{ name: "Neeta Belthan" }],
+  openGraph: {
+    title: "${title}",
+    description: "${description}",
+    type: "article",
+    publishedTime: "${isoDate}",
+    authors: ["Neeta Belthan"],
+    url: "https://icanpitch.com/blog/${slug}/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "${title}",
+    description: "${description}",
+  },
+};`;
 
-const jsonLdData = [
+  const jsonLdBlock = isSeoPage ?
+`const jsonLdData = [
   {
     "@context": "https://schema.org",
-    "@type": "${isSeoPage ? 'Article' : 'BlogPosting'}",
+    "@type": "Article",
     "headline": "${title}",
     "description": "${description}",
-    ${!isSeoPage ? `"author": {
+    "datePublished": "${isoDate}",
+    "url": "https://icanpitch.com/blog/${slug}/",` :
+`const jsonLdData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "${title}",
+    "description": "${description}",
+    "author": {
       "@type": "Person",
       "name": "Neeta Belthan"
-    },` : ''}
+    },
     "datePublished": "${isoDate}",
-    "url": "https://icanpitch.com/blog/${slug}/",
+    "url": "https://icanpitch.com/blog/${slug}/",`;
+
+  return `import React from 'react';
+import { Metadata } from 'next';
+import Script from 'next/script';
+import { Badge } from '@/components/ui/badge';
+import { AuroraBackground } from '@/components/aurora-background';
+import { Header } from '@/components/header';
+
+${metadataBlock}
+
+${jsonLdBlock}
     "publisher": {
       "@type": "Organization",
       "name": "ICanPitch",
@@ -96,10 +127,10 @@ const jsonLdData = [
   }
 ];
 
-export default function ${functionName}(): React.JSX.Element {
+export default function ${functionName}() {
   return (
     <>
-      {jsonLdData.map((data: Record<string, any>, index: number) => (
+      {jsonLdData.map((data, index) => (
         <Script
           key={index}
           id={\`json-ld-\${index}\`}

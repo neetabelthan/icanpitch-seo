@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
@@ -8,13 +9,11 @@ export const metadata: Metadata = {
   title: "Understanding Pro-Rata Rights in Startup Investing: A Complete Guide | ICanPitch ",
   description: "Learn everything about pro-rata rights in startup investing, how they work, why they matter for founders and investors, and how to calculate pro-rata allocation in future funding rounds.",
   keywords: ["pro-rata", "investment-rights", "follow-on-investment", "equity", "dilution"],
-  
   openGraph: {
     title: "Understanding Pro-Rata Rights in Startup Investing: A Complete Guide",
     description: "Learn everything about pro-rata rights in startup investing, how they work, why they matter for founders and investors, and how to calculate pro-rata allocation in future funding rounds.",
     type: "article",
     publishedTime: "2025-01-15T00:00:00.000Z",
-    
     url: "https://icanpitch.com/blog/understanding-pro-rata-rights-startup-investing/",
   },
   twitter: {
@@ -30,7 +29,6 @@ const jsonLdData = [
     "@type": "Article",
     "headline": "Understanding Pro-Rata Rights in Startup Investing: A Complete Guide",
     "description": "Learn everything about pro-rata rights in startup investing, how they work, why they matter for founders and investors, and how to calculate pro-rata allocation in future funding rounds.",
-    
     "datePublished": "2025-01-15T00:00:00.000Z",
     "url": "https://icanpitch.com/blog/understanding-pro-rata-rights-startup-investing/",
     "publisher": {
