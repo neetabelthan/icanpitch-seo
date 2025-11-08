@@ -348,7 +348,7 @@ export default function SafeCalculatorNewYorkStartupSceneBlogPost() {
     
   
 
-<p style={{ marginTop: '8px', fontSize: '14px', color: '#666' }}>
+<p>
   Source: Carta NYC Metro Report 2024, PitchBook Q4 2024, AngelList Data
 </p>
 
@@ -408,7 +408,7 @@ export default function SafeCalculatorNewYorkStartupSceneBlogPost() {
     
   
 
-<p style={{ marginTop: '8px', fontSize: '14px', color: '#666' }}>
+<p>
   Source: Carta Seed Analysis 2024, Cooley LLP Term Survey Q4 2024
 </p>
 
@@ -480,7 +480,7 @@ export default function SafeCalculatorNewYorkStartupSceneBlogPost() {
 </ol>
 
 <h3>Industry and Investor Dynamics</h3>
-<ol start={6}>
+<ol>
   <li><strong>Fintech represents 18% of NYC SAFE deals,</strong> 3x the national average of 6% (Crunchbase, 2024)</li>
   <li><strong>73% of NYC SAFE investors ask about Series A plans during diligence</strong> vs. 48% in SF (Cooley LLP)</li>
   <li><strong>NYC founders close SAFEs in 6-8 weeks average,</strong> compared to 4-6 weeks in SF due to diligence expectations</li>
@@ -489,7 +489,7 @@ export default function SafeCalculatorNewYorkStartupSceneBlogPost() {
 </ol>
 
 <h3>Performance and Outcomes</h3>
-<ol start={11}>
+<ol>
   <li><strong>NYC SAFE-funded companies reach Series A in 16.5 months median,</strong> vs. 14 months in SF (Crunchbase)</li>
   <li><strong>82% of NYC SAFEs convert via valuation cap</strong> rather than discount, matching national trends (AngelList)</li>
   <li><strong>NYC founders raise Series A at median $22M pre-money,</strong> 2x their seed SAFE caps (PitchBook, 2024)</li>
@@ -626,7 +626,7 @@ export default function SafeCalculatorNewYorkStartupSceneBlogPost() {
 <p>
   <strong>Script that works in NYC:</strong>
 </p>
-<blockquote style={{ margin: '16px 0', paddingLeft: '16px', borderLeft: '3px solid #333' }}>
+<blockquote>
   "We're at $45K MRR with 72% gross margins and $220 CAC with 14-month payback. At $750K SAFE capital, we can reach $150K MRR in 16 months with 22 months of runway remaining. This puts us at 3.5x revenue multiple for Series A, comparable to [competitor] who raised at $25M pre-money last quarter. An $8M SAFE cap represents 40% of our expected Series A, which is market-standard for fintech companies at our stage."
 </blockquote>
 

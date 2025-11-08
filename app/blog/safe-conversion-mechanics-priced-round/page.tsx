@@ -157,9 +157,9 @@ export default function SafeConversionMechanicsPricedRoundBlogPost() {
   For post-money SAFEs (the current standard since Y Combinator's 2018 update), the conversion price is calculated as:
 </p>
 
-  <p style={{ margin: 0 }}><strong>Conversion Price = Min(Cap Price, Discount Price)</strong></p>
-  <p style={{ margin: '10px 0 0 0', fontSize: '14px' }}>Where:</p>
-  <ul style={{ margin: '5px 0 0 0', fontSize: '14px' }}>
+  <p><strong>Conversion Price = Min(Cap Price, Discount Price)</strong></p>
+  <p>Where:</p>
+  <ul>
     <li><strong>Cap Price</strong> = Valuation Cap ÷ Company Capitalization</li>
     <li><strong>Discount Price</strong> = Series A Price Per Share × (1 - Discount Rate)</li>
   </ul>
@@ -231,8 +231,8 @@ export default function SafeConversionMechanicsPricedRoundBlogPost() {
   First, determine what new investors are paying per share:
 </p>
 
-  <p style={{ margin: 0 }}><strong>Series A Price Per Share = Pre-Money Valuation ÷ Fully-Diluted Shares Outstanding</strong></p>
-  <p style={{ margin: '10px 0 0 0' }}>$18M ÷ 8M shares = $2.25 per share</p>
+  <p><strong>Series A Price Per Share = Pre-Money Valuation ÷ Fully-Diluted Shares Outstanding</strong></p>
+  <p>$18M ÷ 8M shares = $2.25 per share</p>
 
 <h3>Step 2: Calculate SAFE #1 Conversion</h3>
 <p><strong>SAFE #1: $500K at $6M cap, 20% discount</strong></p>
@@ -284,8 +284,8 @@ export default function SafeConversionMechanicsPricedRoundBlogPost() {
 <h3>Step 4: Calculate Total Post-Conversion Capitalization</h3>
 <p>Now we need to determine total shares outstanding after both SAFEs convert:</p>
 
-  <p style={{ margin: 0 }}><strong>Post-Conversion Share Calculation:</strong></p>
-  <ol style={{ margin: '10px 0 0 0' }}>
+  <p><strong>Post-Conversion Share Calculation:</strong></p>
+  <ol>
     <li>Start with current shares: 8,000,000</li>
     <li>SAFE #1 converts at 8.33% of post-conversion total</li>
     <li>SAFE #2 converts at 3.75% of post-conversion total</li>

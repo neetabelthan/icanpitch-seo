@@ -491,7 +491,7 @@ export default function BurnRateCalculatorLondonBlogPost() {
 
 <h3>Advantage 1: Unmatched Fintech and Financial Services Ecosystem</h3>
 
-<p>According to <strong>London & Partners' 2025 Fintech Report</strong>:</p>
+<p>According to <strong>London &amp; Partners' 2025 Fintech Report</strong>:</p>
 
 <ul>
 <li><strong>London fintech companies:</strong> 2,800+ (37% of UK total)</li>
@@ -847,7 +847,7 @@ export default function BurnRateCalculatorLondonBlogPost() {
 
 <h3>How does the London vs Manchester decision change at different funding stages?</h3>
 
-<p>Pre-seed/seed stage: Manchester's capital efficiency advantage is strongest—extended runway permits more iteration cycles toward product-market fit. According to Y Combinator's 2025 batch data, Manchester-based companies reached PMF with 28% less total capital. Series A: London advantages increase as access to mega-funds, specialized talent, and enterprise customers becomes critical for scaling. Series B+: London premium often justified by ecosystem density, international customer access, and M&A/IPO infrastructure. Carta's 2025 geographic analysis shows 58% of pre-seed companies choose Manchester but 74% of Series B+ companies operate from London, suggesting stage-dependent optimization: start in Manchester for efficiency, relocate to London when growth capital and ecosystem access justify the premium.</p>
+<p>Pre-seed/seed stage: Manchester's capital efficiency advantage is strongest—extended runway permits more iteration cycles toward product-market fit. According to Y Combinator's 2025 batch data, Manchester-based companies reached PMF with 28% less total capital. Series A: London advantages increase as access to mega-funds, specialized talent, and enterprise customers becomes critical for scaling. Series B+: London premium often justified by ecosystem density, international customer access, and M&amp;A/IPO infrastructure. Carta's 2025 geographic analysis shows 58% of pre-seed companies choose Manchester but 74% of Series B+ companies operate from London, suggesting stage-dependent optimization: start in Manchester for efficiency, relocate to London when growth capital and ecosystem access justify the premium.</p>
 
 <h3>What London-specific costs do startups often overlook?</h3>
 

@@ -369,7 +369,7 @@ export default function BurnRateCalculatorTelAvivBlogPost() {
 <ul>
 <li><strong>Standard corporate tax:</strong> 23% on profits</li>
 <li><strong>Preferred Enterprise (tech companies):</strong> 7.5-16% depending on location and qualifications</li>
-<li><strong>Technology Enterprise (qualifying R&D companies):</strong> 6-12% on qualifying income</li>
+<li><strong>Technology Enterprise (qualifying R&amp;D companies):</strong> 6-12% on qualifying income</li>
 <li><strong>Jerusalem-based companies:</strong> Additional tax benefits (5% lower rates)</li>
 </ul>
 
@@ -415,15 +415,15 @@ export default function BurnRateCalculatorTelAvivBlogPost() {
 
 <p>While Israeli employer burdens are higher percentagewise (20% vs 8.5%), the dramatically lower base salaries mean absolute costs remain far lower: <strong>Tel Aviv total loaded engineer costs are $732,000/year vs Silicon Valley's $1,627,500/year—a 55% Tel Aviv advantage.</strong></p>
 
-<h3>Israel Innovation Authority Grants: Non-Dilutive R&D Funding</h3>
+<h3>Israel Innovation Authority Grants: Non-Dilutive R&amp;D Funding</h3>
 
-<p><strong>One of Israel's most powerful advantages: Government R&D grants covering 30-50% of qualified research and development costs.</strong></p>
+<p><strong>One of Israel's most powerful advantages: Government R&amp;D grants covering 30-50% of qualified research and development costs.</strong></p>
 
 <p><strong>Israel Innovation Authority Programs (2025):</strong></p>
 <ul>
 <li><strong>Pre-seed grants:</strong> Up to 85% funding (₪500K-₪1.5M / $150K-$450K) for proof-of-concept</li>
 <li><strong>Seed grants:</strong> Up to 50% funding (₪2M-₪8M / $600K-$2.4M) for product development</li>
-<li><strong>Series A grants:</strong> Up to 30% funding (₪15M / $4.5M max) for scaling R&D</li>
+<li><strong>Series A grants:</strong> Up to 30% funding (₪15M / $4.5M max) for scaling R&amp;D</li>
 <li><strong>Startup stimulus packages:</strong> ₪500M+ annually for seed/pre-seed/Series A matching</li>
 </ul>
 
@@ -498,15 +498,15 @@ export default function BurnRateCalculatorTelAvivBlogPost() {
 
 <p>If your startup builds cybersecurity, infrastructure security, or defense-tech products, Tel Aviv's ecosystem provides irreplaceable advantages. <strong>No other ecosystem can match Israel's combination of elite military-trained security talent at moderate costs.</strong></p>
 
-<h3>Advantage 2: Israel Innovation Authority Non-Dilutive Grants (50% R&D Funding)</h3>
+<h3>Advantage 2: Israel Innovation Authority Non-Dilutive Grants (50% R&amp;D Funding)</h3>
 
-<p><strong>Israel's government R&D funding is the most generous in the developed world, covering 30-85% of qualified research and development costs.</strong></p>
+<p><strong>Israel's government R&amp;D funding is the most generous in the developed world, covering 30-85% of qualified research and development costs.</strong></p>
 
 <p><strong>Real example from Yael's cybersecurity company:</strong></p>
 <ul>
 <li>Series A raise: $2.1M at $10M valuation (17.4% dilution)</li>
-<li>Annual R&D budget: $1.2M (engineering salaries, infrastructure, security research)</li>
-<li>IIA grant (50% of qualified R&D): $600K/year for 2 years = $1.2M total</li>
+<li>Annual R&amp;D budget: $1.2M (engineering salaries, infrastructure, security research)</li>
+<li>IIA grant (50% of qualified R&amp;D): $600K/year for 2 years = $1.2M total</li>
 <li><strong>Effective capital:</strong> $3.3M total ($2.1M equity + $1.2M grants) while only diluting 17.4%</li>
 </ul>
 
@@ -522,18 +522,18 @@ export default function BurnRateCalculatorTelAvivBlogPost() {
 
 <ul>
 <li><strong>88% of Israeli tech revenue comes from exports</strong> (primarily US customers)</li>
-<li><strong>180+ multinational R&D centers in Israel</strong> (Google, Microsoft, Amazon, NVIDIA, Apple, Meta) validate Israeli tech</li>
+<li><strong>180+ multinational R&amp;D centers in Israel</strong> (Google, Microsoft, Amazon, NVIDIA, Apple, Meta) validate Israeli tech</li>
 <li><strong>Israeli founders in Silicon Valley:</strong> Strong diaspora network provides US market access without headquarters relocation</li>
 <li><strong>Direct flights:</strong> 12+ daily Tel Aviv-New York flights, 3-4 daily Tel Aviv-San Francisco flights enable constant US engagement</li>
 </ul>
 
-<p>The successful Israeli model: <strong>Build R&D and product in Tel Aviv at 60% lower costs, open US sales office (2-4 people) for customer proximity, founders travel to US 1 week/month for enterprise sales.</strong> This hybrid model combines Tel Aviv's cost efficiency with US market access.</p>
+<p>The successful Israeli model: <strong>Build R&amp;D and product in Tel Aviv at 60% lower costs, open US sales office (2-4 people) for customer proximity, founders travel to US 1 week/month for enterprise sales.</strong> This hybrid model combines Tel Aviv's cost efficiency with US market access.</p>
 
 <p><strong>Notable examples:</strong></p>
 <ul>
-<li><strong>Wiz:</strong> R&D in Tel Aviv, 85% of $350M ARR from US customers, acquired by Google for $32B in 2025</li>
-<li><strong>Monday.com:</strong> Headquarters and R&D in Tel Aviv, 60% of revenue from US, $14B public company valuation</li>
-<li><strong>JFrog:</strong> R&D in Tel Aviv, US sales headquarters in Sunnyvale, $5B+ public company valuation</li>
+<li><strong>Wiz:</strong> R&amp;D in Tel Aviv, 85% of $350M ARR from US customers, acquired by Google for $32B in 2025</li>
+<li><strong>Monday.com:</strong> Headquarters and R&amp;D in Tel Aviv, 60% of revenue from US, $14B public company valuation</li>
+<li><strong>JFrog:</strong> R&amp;D in Tel Aviv, US sales headquarters in Sunnyvale, $5B+ public company valuation</li>
 </ul>
 
 <h3>Advantage 4: Europe's 4th-Ranked Startup Ecosystem with Capital Efficiency</h3>
@@ -595,7 +595,7 @@ export default function BurnRateCalculatorTelAvivBlogPost() {
 
 <p>Israeli companies typically overcome this via US sales offices, but pure Silicon Valley presence eliminates the friction entirely for enterprise-focused startups.</p>
 
-<h2>The Hybrid Strategy: Tel Aviv R&D + US Sales Presence</h2>
+<h2>The Hybrid Strategy: Tel Aviv R&amp;D + US Sales Presence</h2>
 
 <p>Many successful Israeli startups implement the optimal hybrid model:</p>
 
@@ -661,7 +661,7 @@ export default function BurnRateCalculatorTelAvivBlogPost() {
 <li><strong>Capital efficiency is critical</strong> and you want 35-40% lower burn to extend runway</li>
 <li><strong>Your team includes IDF cyber/intelligence alumni</strong> who prefer staying in Israel</li>
 <li><strong>You're building B2B enterprise products</strong> where remote US sales is viable</li>
-<li><strong>You want to maximize IIA grants</strong> (50% non-dilutive R&D funding) to preserve founder equity</li>
+<li><strong>You want to maximize IIA grants</strong> (50% non-dilutive R&amp;D funding) to preserve founder equity</li>
 <li><strong>You're optimizing for profitability</strong> and sustainable unit economics over growth-at-all-costs</li>
 </ol>
 
@@ -676,18 +676,18 @@ export default function BurnRateCalculatorTelAvivBlogPost() {
 <li><strong>You're optimizing for speed over cost</strong> in winner-take-most markets</li>
 </ol>
 
-<h3>Consider Hybrid (Tel Aviv R&D + US Sales) If:</h3>
+<h3>Consider Hybrid (Tel Aviv R&amp;D + US Sales) If:</h3>
 
 <ol>
 <li><strong>You want cost efficiency without sacrificing US market access</strong></li>
 <li><strong>Your founding team is Israeli</strong> but your customers are American enterprises</li>
-<li><strong>You're building B2B SaaS or infrastructure</strong> where remote R&D works but local sales helps</li>
+<li><strong>You're building B2B SaaS or infrastructure</strong> where remote R&amp;D works but local sales helps</li>
 <li><strong>You want to maximize IIA grants</strong> while maintaining US credibility</li>
 </ol>
 
 <h2>Yael's Decision: How It Played Out</h2>
 
-<p>After running the numbers, Yael chose the hybrid model: Tel Aviv R&D headquarters with 10 people (herself, CTO, 7 engineers, product manager) and US sales presence with 2 remote account executives based in New York and San Francisco.</p>
+<p>After running the numbers, Yael chose the hybrid model: Tel Aviv R&amp;D headquarters with 10 people (herself, CTO, 7 engineers, product manager) and US sales presence with 2 remote account executives based in New York and San Francisco.</p>
 
 <p><strong>Results after 18 months:</strong></p>
 
@@ -708,7 +708,7 @@ export default function BurnRateCalculatorTelAvivBlogPost() {
 
 <h3>Wiz: $32 Billion Google Acquisition (2025)</h3>
 
-<p>Founded in Tel Aviv in 2020, Wiz reached $350M ARR and secured a $32B acquisition by Google in just 5 years—the largest software acquisition in history. The company deliberately built R&D in Tel Aviv while scaling US sales.</p>
+<p>Founded in Tel Aviv in 2020, Wiz reached $350M ARR and secured a $32B acquisition by Google in just 5 years—the largest software acquisition in history. The company deliberately built R&amp;D in Tel Aviv while scaling US sales.</p>
 
 <ul>
 <li><strong>Tel Aviv advantages leveraged:</strong> Unit 8200 alumni founders and engineering team provided unmatched cloud security expertise</li>
@@ -721,7 +721,7 @@ export default function BurnRateCalculatorTelAvivBlogPost() {
 <p>Monday.com (work management platform) achieved a $14B market cap in 2024 while keeping headquarters and 80% of 1,800 employees in Tel Aviv. Key advantages:</p>
 
 <ul>
-<li><strong>Cost efficiency:</strong> Engineering team costs 50% less than US equivalent, enabling aggressive R&D investment</li>
+<li><strong>Cost efficiency:</strong> Engineering team costs 50% less than US equivalent, enabling aggressive R&amp;D investment</li>
 <li><strong>Profitability path:</strong> Lower costs enabled path to profitability while growing 50% annually</li>
 <li><strong>Global reach:</strong> 60% of $500M+ revenue from US customers despite Tel Aviv base</li>
 </ul>
@@ -732,8 +732,8 @@ export default function BurnRateCalculatorTelAvivBlogPost() {
 
 <ul>
 <li><strong>Deep tech expertise:</strong> Israeli AI/computer vision talent from academic institutions (Technion, Hebrew University)</li>
-<li><strong>R&D focus:</strong> Jerusalem-based R&D maintained through Intel acquisition</li>
-<li><strong>Government support:</strong> IIA grants funded early R&D before venture capital</li>
+<li><strong>R&amp;D focus:</strong> Jerusalem-based R&amp;D maintained through Intel acquisition</li>
+<li><strong>Government support:</strong> IIA grants funded early R&amp;D before venture capital</li>
 </ul>
 
 <h2>Calculating Your Exact Tel Aviv Burn Rate</h2>
@@ -775,21 +775,21 @@ export default function BurnRateCalculatorTelAvivBlogPost() {
 
 <h3>Step 5: Add Israel Innovation Authority Grants (Reduce Effective Burn)</h3>
 
-<p>Apply for IIA grants early—they can cover 30-50% of R&D costs, effectively reducing your burn rate by 15-25% for qualifying companies.</p>
+<p>Apply for IIA grants early—they can cover 30-50% of R&amp;D costs, effectively reducing your burn rate by 15-25% for qualifying companies.</p>
 
 <h2>Frequently Asked Questions: Tel Aviv Burn Rates and Startup Costs</h2>
 
 <h3>How much cheaper is Tel Aviv than Silicon Valley for startups?</h3>
 
-<p>Tel Aviv startups burn 30-40% less than Silicon Valley equivalents depending on stage and team composition. A 10-person seed-stage team burns approximately $95,000/month in Tel Aviv versus $165,000/month in Silicon Valley—a difference of $70,000/month or $840,000 annually. The advantage stems primarily from engineering salaries (45-70% lower in Tel Aviv), office costs (33% lower), and Israel Innovation Authority grants (30-50% R&D funding). According to IVC data, the Tel Aviv cost advantage is largest at seed stage (42% savings) and narrows slightly at Series B+ as non-personnel costs like US sales and marketing dominate.</p>
+<p>Tel Aviv startups burn 30-40% less than Silicon Valley equivalents depending on stage and team composition. A 10-person seed-stage team burns approximately $95,000/month in Tel Aviv versus $165,000/month in Silicon Valley—a difference of $70,000/month or $840,000 annually. The advantage stems primarily from engineering salaries (45-70% lower in Tel Aviv), office costs (33% lower), and Israel Innovation Authority grants (30-50% R&amp;D funding). According to IVC data, the Tel Aviv cost advantage is largest at seed stage (42% savings) and narrows slightly at Series B+ as non-personnel costs like US sales and marketing dominate.</p>
 
 <h3>Can Israeli startups successfully sell to US customers from Tel Aviv?</h3>
 
-<p>Yes—88% of Israeli tech revenue comes from exports, primarily to US customers. Successful models include: Tel Aviv R&D + US sales office (2-4 people), founder monthly US travel for enterprise relationships, and remote US-based sales reps. According to Start-Up Nation Central, Israeli B2B companies achieve equivalent US customer penetration to Bay Area competitors while maintaining Tel Aviv headquarters. However, Israeli startups traditionally underperform in consumer products requiring US cultural intuition. For B2B enterprise, cybersecurity, and infrastructure, remote US sales from Tel Aviv base is proven and effective.</p>
+<p>Yes—88% of Israeli tech revenue comes from exports, primarily to US customers. Successful models include: Tel Aviv R&amp;D + US sales office (2-4 people), founder monthly US travel for enterprise relationships, and remote US-based sales reps. According to Start-Up Nation Central, Israeli B2B companies achieve equivalent US customer penetration to Bay Area competitors while maintaining Tel Aviv headquarters. However, Israeli startups traditionally underperform in consumer products requiring US cultural intuition. For B2B enterprise, cybersecurity, and infrastructure, remote US sales from Tel Aviv base is proven and effective.</p>
 
 <h3>What are Israel Innovation Authority grants and how do they work?</h3>
 
-<p>Israel Innovation Authority (IIA) provides non-dilutive grants covering 30-85% of qualified R&D costs for Israeli tech companies. Pre-seed companies can receive up to 85% funding (₪500K-₪1.5M), seed companies up to 50% (₪2M-₪8M), and Series A companies up to 30% (₪15M max). Grants are paid quarterly in arrears against approved R&D expenses (primarily engineering salaries, research costs, and infrastructure). According to IVC, 62% of Israeli seed-stage startups received IIA grants in 2024, averaging $385,000 per company. Grants must be repaid as low-single-digit royalties on future revenue, making them founder-friendly compared to equity dilution. Application process takes 3-6 months with approval rates around 45-55% for quality startups.</p>
+<p>Israel Innovation Authority (IIA) provides non-dilutive grants covering 30-85% of qualified R&amp;D costs for Israeli tech companies. Pre-seed companies can receive up to 85% funding (₪500K-₪1.5M), seed companies up to 50% (₪2M-₪8M), and Series A companies up to 30% (₪15M max). Grants are paid quarterly in arrears against approved R&amp;D expenses (primarily engineering salaries, research costs, and infrastructure). According to IVC, 62% of Israeli seed-stage startups received IIA grants in 2024, averaging $385,000 per company. Grants must be repaid as low-single-digit royalties on future revenue, making them founder-friendly compared to equity dilution. Application process takes 3-6 months with approval rates around 45-55% for quality startups.</p>
 
 <h3>Do US investors discriminate against Tel Aviv-based startups?</h3>
 
@@ -797,7 +797,7 @@ export default function BurnRateCalculatorTelAvivBlogPost() {
 
 <h3>Should I relocate from Tel Aviv to Silicon Valley after Series A?</h3>
 
-<p>Only if you're building consumer products or require proximity to late-stage capital. Most successful Israeli companies maintain Tel Aviv R&D headquarters and add US sales offices without full relocation. Full relocation makes sense when: 70%+ of team needs to be US-based (sales, marketing, operations), you're raising $50M+ growth rounds requiring Bay Area mega-funds, or you're preparing for US IPO. According to IVC, only 18% of Israeli unicorns relocated headquarters to US, while 82% maintained Israeli HQ with US sales presence. The hybrid model (Tel Aviv R&D + US sales) captures both worlds' advantages without relocation costs ($500K-$1.5M) or talent disruption.</p>
+<p>Only if you're building consumer products or require proximity to late-stage capital. Most successful Israeli companies maintain Tel Aviv R&amp;D headquarters and add US sales offices without full relocation. Full relocation makes sense when: 70%+ of team needs to be US-based (sales, marketing, operations), you're raising $50M+ growth rounds requiring Bay Area mega-funds, or you're preparing for US IPO. According to IVC, only 18% of Israeli unicorns relocated headquarters to US, while 82% maintained Israeli HQ with US sales presence. The hybrid model (Tel Aviv R&amp;D + US sales) captures both worlds' advantages without relocation costs ($500K-$1.5M) or talent disruption.</p>
 
 <h3>What about Unit 8200 talent—is it really that special?</h3>
 
@@ -827,8 +827,8 @@ export default function BurnRateCalculatorTelAvivBlogPost() {
 <li><strong>Input your specific team composition</strong> (roles, seniority levels, functional areas)</li>
 <li><strong>See location-adjusted salary benchmarks</strong> for every role across Tel Aviv, Silicon Valley, and hybrid models</li>
 <li><strong>Compare office costs</strong> across Tel Aviv neighborhoods (Rothschild, Sarona, Park Tzameret) and Bay Area cities</li>
-<li><strong>Model hybrid scenarios</strong> (Tel Aviv R&D + US sales presence)</li>
-<li><strong>Factor in IIA grants</strong> (30-50% R&D funding) to see effective burn reduction</li>
+<li><strong>Model hybrid scenarios</strong> (Tel Aviv R&amp;D + US sales presence)</li>
+<li><strong>Factor in IIA grants</strong> (30-50% R&amp;D funding) to see effective burn reduction</li>
 <li><strong>Calculate runway</strong> under different location strategies with various funding scenarios</li>
 <li><strong>Export comparison reports</strong> for board discussions, investor conversations, or founder alignment</li>
 </ul>

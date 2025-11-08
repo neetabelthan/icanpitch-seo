@@ -108,7 +108,7 @@ export default function SafeNotesMultipleSafesStackingGuideBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <p className="tldr">
+                <p>
   <strong>TL;DR:</strong> 47% of seed-stage companies raise 2-3 SAFEs before their Series A, creating "SAFE stacking" that can lead to 35-50% dilution at conversion. Understanding post-money vs pre-money stacking mechanics is critical—the difference can cost founders 10-15% additional dilution on the same capital raised.
 </p>
 
@@ -309,11 +309,11 @@ export default function SafeNotesMultipleSafesStackingGuideBlogPost() {
 
 <h3>Interactive Calculator Model</h3>
 
-  <h4 style={{ marginTop: 0 }}>Multiple SAFE Dilution Calculator</h4>
+  <h4>Multiple SAFE Dilution Calculator</h4>
   <p>Use this framework to model your own SAFE stack:</p>
 
   <p><strong>Formula for Post-Money SAFE Stacking:</strong></p>
-  <code style={{ display: 'block', backgroundColor: '#fff', padding: '15px', borderRadius: '4px', margin: '10px 0', overflowX: 'auto' }}>
+  <code>
 Total SAFE Dilution = Σ (SAFE Amount ÷ SAFE Cap)<br /><br />
 
 Post-Option Pool Ownership = (Initial Ownership %) × (1 - Option Pool %)<br /><br />
@@ -348,7 +348,7 @@ Founder Final Ownership = 1 - Total SAFE Dilution - Series A % - Option Pool %
     
   
 
-  <p style={{ marginBottom: 0 }}><strong>Pro Tip:</strong> Model your cap table in a spreadsheet before signing each SAFE. Tools like Carta, Pulley, or AngelList offer free calculators specifically for SAFE stacking scenarios.</p>
+  <p><strong>Pro Tip:</strong> Model your cap table in a spreadsheet before signing each SAFE. Tools like Carta, Pulley, or AngelList offer free calculators specifically for SAFE stacking scenarios.</p>
 
 <h2>Cap Table Complexity: Real Examples</h2>
 <p>
@@ -412,7 +412,7 @@ Founder Final Ownership = 1 - Total SAFE Dilution - Series A % - Option Pool %
       52.3%
     
     
-      SAFE #1 (Friends & Family)
+      SAFE #1 (Friends &amp; Family)
       $300K @ $3M cap, 20% discount
       8.7%
     

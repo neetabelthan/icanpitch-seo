@@ -270,7 +270,7 @@ export default function BurnRateCalculatorBostonBlogPost() {
 <ul>
 <li><strong>Boston:</strong> $75,000-$105,000 (median: $88,000)</li>
 <li><strong>San Francisco:</strong> $82,000-$115,000 (median: $96,000)</li>
-<li><strong>Boston advantage:</strong> 8% salary savings + density of academic medical centers (Mass General, Brigham & Women's, Beth Israel)</li>
+<li><strong>Boston advantage:</strong> 8% salary savings + density of academic medical centers (Mass General, Brigham &amp; Women's, Beth Israel)</li>
 </ul>
 
 <p>According to <strong>MassBio's 2024 industry report, Greater Boston employs 81,000+ life sciences workers—representing 45% of all US biotech employment</strong> concentrated in a 15-mile radius from Kendall Square. This talent density creates substantial cost advantages: Boston biotech companies pay 8-18% less than SF equivalents for specialized scientific talent while accessing deeper candidate pools.</p>
@@ -678,7 +678,7 @@ export default function BurnRateCalculatorBostonBlogPost() {
 <li><strong>You're building AI infrastructure, developer tools, or crypto</strong> where SF's ecosystem dominates</li>
 <li><strong>You need constant access to mega-funds</strong> and are optimizing for speed over capital efficiency</li>
 <li><strong>Your customers are primarily SF-based tech companies</strong></li>
-<li><strong>You're optimizing for liquidity/exit speed</strong> (IPO and M&A infrastructure concentrated in SF)</li>
+<li><strong>You're optimizing for liquidity/exit speed</strong> (IPO and M&amp;A infrastructure concentrated in SF)</li>
 </ol>
 
 <h2>Dr. Sarah Mitchell's Decision: How It Played Out</h2>

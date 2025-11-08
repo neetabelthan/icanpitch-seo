@@ -367,7 +367,7 @@ export default function FounderVestingSchedules4Year1YearCliffBlogPost() {
 
 <ul>
 <li>Standard 4-year vest with 1-year cliff</li>
-<li>No acceleration provisions because it is too early for M&A scenarios</li>
+<li>No acceleration provisions because it is too early for M&amp;A scenarios</li>
 <li>Repurchase rights on unvested shares at par value</li>
 <li>Monthly vesting after cliff in 87% of cases per Cooley data</li>
 </ul>

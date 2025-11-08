@@ -283,7 +283,7 @@ Sarah lost 18.75% of her pre-deal equity stake just from option pool creation.</
 
 <p>The pool credit mechanism works because the existing 4% is already reflected in the fully diluted capitalization table. Creating a full 15% new pool would result in a 19% total pool (15% new + 4% existing), which exceeds what's needed.</p>
 
-<p>According to Fenwick & West's Q1 2024 Terms Survey, <strong>87% of Series A term sheets include pool credit language when existing pools exceed 3%</strong>, but the provision must be explicitly negotiated. Founders who don't raise this issue leave significant value on the table.</p>
+<p>According to Fenwick &amp; West's Q1 2024 Terms Survey, <strong>87% of Series A term sheets include pool credit language when existing pools exceed 3%</strong>, but the provision must be explicitly negotiated. Founders who don't raise this issue leave significant value on the table.</p>
 
 <h3>When Pool Credits Don't Apply</h3>
 
@@ -365,7 +365,7 @@ Sarah lost 18.75% of her pre-deal equity stake just from option pool creation.</
 
 <p>The math is complex, but Cooley LLP's modeling of 500+ multi-round scenarios demonstrates that <strong>right-sizing pools and refreshing at higher valuations reduces total founder dilution by an average of 2.3 percentage points through Series C</strong> compared to over-sized initial pools.</p>
 
-<h2>Special Situations: M&A, Secondary Sales, and Pool Unwinds</h2>
+<h2>Special Situations: M&amp;A, Secondary Sales, and Pool Unwinds</h2>
 
 <p>Option pools create unique dynamics in exit scenarios that founders should understand when negotiating initial pool size and structure.</p>
 
@@ -391,7 +391,7 @@ Sarah lost 18.75% of her pre-deal equity stake just from option pool creation.</
 
 <p><strong>The unused option pool increased Michael's proceeds by $1.12M (18%)</strong>—a rare scenario where the "phantom dilution" of an unused pool actually benefited the founder.</p>
 
-<p>However, this outcome depends entirely on the acquisition agreement terms. According to Latham & Watkins's survey of 200+ venture-backed M&A transactions, <strong>only 42% of acquisition agreements return unused pool space to common shareholders</strong>. In the remaining 58%, unused pool space is either distributed to all shareholders pro-rata or allocated according to the liquidation preference waterfall.</p>
+<p>However, this outcome depends entirely on the acquisition agreement terms. According to Latham &amp; Watkins's survey of 200+ venture-backed M&amp;A transactions, <strong>only 42% of acquisition agreements return unused pool space to common shareholders</strong>. In the remaining 58%, unused pool space is either distributed to all shareholders pro-rata or allocated according to the liquidation preference waterfall.</p>
 
 <h3>Secondary Sale Complications</h3>
 
@@ -408,7 +408,7 @@ Sarah lost 18.75% of her pre-deal equity stake just from option pool creation.</
 <ul>
 <li>Within 12 months of a preferred stock financing</li>
 <li>Annually if no financing has occurred</li>
-<li>Upon material events (M&A discussions, large partnerships, etc.)</li>
+<li>Upon material events (M&amp;A discussions, large partnerships, etc.)</li>
 </ul>
 
 <p>Creating an option pool <em>before</em> closing a financing round can result in a lower 409A valuation (and thus lower strike prices for employees) because the pool dilution is reflected in the common stock value before the new capital increases the company's overall valuation.</p>
@@ -523,7 +523,7 @@ Sarah lost 18.75% of her pre-deal equity stake just from option pool creation.</
 
 <h3>Mistake 5: Creating Pools Too Small to Attract Key Hires</h3>
 
-<p>The opposite mistake is also possible: negotiating such a small pool that you can't recruit the VP of Engineering who will actually build your product. Fenwick & West cites several cases where <strong>companies had to raise emergency bridge rounds to expand insufficient option pools</strong>, resulting in 10%+ dilution at flat or down valuations.</p>
+<p>The opposite mistake is also possible: negotiating such a small pool that you can't recruit the VP of Engineering who will actually build your product. Fenwick &amp; West cites several cases where <strong>companies had to raise emergency bridge rounds to expand insufficient option pools</strong>, resulting in 10%+ dilution at flat or down valuations.</p>
 
 <p>The optimal pool size is the minimum viable size to execute your hiring plan with a 10-15% buffer, not the absolute smallest number you can negotiate.</p>
 

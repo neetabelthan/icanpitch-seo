@@ -280,7 +280,7 @@ export default function SafeCalculatorBangaloreBlogPost() {
   <strong>Indian angel investors operate differently than US angels, with distinct investment theses shaped by India's economic realities and exit landscape.</strong>
 </p>
 <p>
-  <strong>To attract Indian angel investment:</strong> (1) Demonstrate clear path to ₹1 crore MRR within 18-24 months; (2) Show founding team's ability to navigate Indian regulatory complexity (GST, FEMA, RBI regulations); (3) Build products addressing India-specific problems (payment infrastructure, vernacular content, last-mile logistics); (4) Maintain clean corporate structure with proper DPIIT recognition and compliance; (5) Set realistic exit expectations aligned with Indian M&A market (₹100-500 crore exits, not $1B+ IPO fantasies).
+  <strong>To attract Indian angel investment:</strong> (1) Demonstrate clear path to ₹1 crore MRR within 18-24 months; (2) Show founding team's ability to navigate Indian regulatory complexity (GST, FEMA, RBI regulations); (3) Build products addressing India-specific problems (payment infrastructure, vernacular content, last-mile logistics); (4) Maintain clean corporate structure with proper DPIIT recognition and compliance; (5) Set realistic exit expectations aligned with Indian M&amp;A market (₹100-500 crore exits, not $1B+ IPO fantasies).
 </p>
 <p>
   <strong>Data point: 64% of Bangalore startups that raised seed rounds from domestic angels in 2024 had at least one IIT graduate founder and documented customer traction in 2+ Indian metro cities</strong> (Indian Angel Network data, 2024).
@@ -626,7 +626,7 @@ export default function SafeCalculatorBangaloreBlogPost() {
 
 <h3>How do I handle FEMA compliance for USD-denominated SAFEs?</h3>
 <p>
-  USD-denominated SAFEs from foreign investors require FEMA compliance: (1) <strong>File Form FC-GPR within 30 days</strong> of receiving foreign investment; (2) <strong>Ensure SAFE terms comply with FDI regulations</strong> including valuation requirements and sectoral caps; (3) <strong>Maintain proper documentation</strong> for RBI audits including SAFE agreements, board resolutions, and valuation reports; (4) <strong>Use DPIIT recognition</strong> to qualify for Angel Tax exemptions. Many Bangalore founders work with specialized law firms (Trilegal, Khaitan & Co, AZB Partners) for FEMA compliance. <strong>Non-compliance can result in penalties and complications during Series A due diligence.</strong>
+  USD-denominated SAFEs from foreign investors require FEMA compliance: (1) <strong>File Form FC-GPR within 30 days</strong> of receiving foreign investment; (2) <strong>Ensure SAFE terms comply with FDI regulations</strong> including valuation requirements and sectoral caps; (3) <strong>Maintain proper documentation</strong> for RBI audits including SAFE agreements, board resolutions, and valuation reports; (4) <strong>Use DPIIT recognition</strong> to qualify for Angel Tax exemptions. Many Bangalore founders work with specialized law firms (Trilegal, Khaitan &amp; Co, AZB Partners) for FEMA compliance. <strong>Non-compliance can result in penalties and complications during Series A due diligence.</strong>
 </p>
 
 <h2>Key Takeaways: Bangalore SAFE Calculator Essentials</h2>

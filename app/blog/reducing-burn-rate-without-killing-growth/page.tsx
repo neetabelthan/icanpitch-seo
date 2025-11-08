@@ -384,7 +384,7 @@ export default function ReducingBurnRateWithoutKillingGrowthBlogPost() {
 
 <p><strong>Week 1: Financial Deep Dive</strong></p>
 <ul>
-<li>Pull 12 months of P&L statements and categorize all expenses by function</li>
+<li>Pull 12 months of P&amp;L statements and categorize all expenses by function</li>
 <li>Calculate gross burn, net burn, and runway with 3-month rolling averages</li>
 <li>Identify your current burn multiple and track monthly trend</li>
 <li>Document all recurring subscriptions with costs, owners, and usage data</li>

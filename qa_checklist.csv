@@ -1,0 +1,29 @@
+Post Slug,HTML Errors,Metadata Errors,Word Count,Word Count Status,External Links,Priority,Issue Count
+avoiding-safe-dilution-traps-founders,PASS,PASS,5356,Over (trim 850),PASS,MEDIUM,1
+burn-rate-benchmarks-by-industry-stage,PASS,PASS,3500-4500,In Range,Missing attrs,MEDIUM,1
+burn-rate-calculator-new-york-city-startup-costs,PASS,PASS,3500-4500,In Range,Missing attrs,MEDIUM,1
+burn-rate-calculator-san-francisco-vs-austin,section/table/div,PASS,7736,Over (trim 3200),Missing attrs,HIGH,3
+cash-runway-calculator-extend-startup-survival,PASS,PASS,3500-4500,In Range,Missing attrs,MEDIUM,1
+co-founder-equity-split-50-50-alternatives,table/tbody/tr/td,PASS,4943,Over (trim 450),PASS,HIGH,2
+early-employee-equity-calculator-guide,table/div/tbody/tr/td,PASS,4891,Over (trim 400),PASS,HIGH,2
+equity-split-technical-vs-business-cofounder,table/div/tbody/tr/td,PASS,6169,Over (trim 1670),PASS,HIGH,2
+founder-vesting-schedules-4-year-1-year-cliff,section/article/table/div/span,PASS,8162,Over (trim 3660),Missing attrs,HIGH,3
+gross-burn-vs-net-burn-rate-explained,PASS,PASS,0,Empty - CRITICAL,PASS,CRITICAL,1
+how-to-calculate-burn-rate-monthly-startup-costs,Mismatched p tags,PASS,3461,Under (add 40),Missing attrs,HIGH,3
+how-to-calculate-pre-money-valuation-series-a,PASS,Extra field (heroImage),1468,Under (add 2000),PASS,CRITICAL,3
+how-to-calculate-safe-dilution,PASS,Missing pageType,589,Under (add 2900),PASS,CRITICAL,3
+how-to-negotiate-safe-valuation-cap,PASS,PASS,4629,Over (trim 130),Missing attrs,MEDIUM,2
+option-pool-dilution-impact-founders,section/article/table/div/span,PASS,6626,Over (trim 2130),Missing attrs,HIGH,3
+option-pool-sizing-pre-seed-seed-series-a,table/tbody/tr/td,PASS,3500-4500,In Range,PASS,HIGH,1
+post-money-safe-vs-pre-money-safe-explained,PASS,PASS,5050,Over (trim 550),PASS,MEDIUM,1
+reducing-burn-rate-without-killing-growth,PASS,PASS,0,Empty - CRITICAL,PASS,CRITICAL,1
+safe-calculator-first-time-founders-complete-guide,PASS,PASS,2842,Under (add 660),PASS,MEDIUM,1
+safe-calculator-new-york-startup-scene,table/tbody/tr/td,PASS,4585,Over (trim 85),PASS,HIGH,2
+safe-calculator-silicon-valley-founders-guide,table/tbody/tr/td,PASS,6080,Over (trim 1580),PASS,HIGH,2
+safe-conversion-mechanics-priced-round,table/div/tbody/tr/td,PASS,3500-4500,In Range,Missing attrs,HIGH,2
+safe-discount-rate-vs-valuation-cap-which-better,article/table/div/tbody/tr/td,PASS,4966,Over (trim 470),PASS,HIGH,2
+safe-notes-multiple-safes-stacking-guide,table/div/tbody/tr/td,PASS,3500-4500,In Range,PASS,HIGH,1
+safe-vs-convertible-note-2024-comparison,section/article/table/div/span,PASS,7686,Over (trim 3190),Missing attrs,HIGH,3
+series-a-burn-rate-runway-management,PASS,PASS,0,Empty - CRITICAL,PASS,CRITICAL,1
+understanding-pro-rata-rights-startup-investing,PASS,PASS,1456,Under (add 2000),PASS,CRITICAL,1
+vesting-acceleration-clauses-explained,section/article/table/div/span,PASS,7549,Over (trim 3050),Missing attrs,HIGH,3

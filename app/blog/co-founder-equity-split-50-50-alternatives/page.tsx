@@ -176,7 +176,7 @@ You've raised a seed round and have budget for one senior hire. Founder A wants 
 <p><strong>Scenario 3: The Acquisition Offer</strong><br />
 An acquirer approaches with an offer that's attractive but not life-changing—$8M for a company valued at $12M in its last round. Founder A has student loans and family pressure and wants to accept. Founder B believes in the long-term vision and wants to hold out. Without a tiebreaker mechanism, this often ends in founder separation or forced sale terms neither founder truly wants.</p>
 
-<p><strong>Data from M&A transactions:</strong> Startups with 50/50 splits take 2.7x longer to reach acquisition decisions and are 40% more likely to have acquirers walk away during extended negotiations.</p>
+<p><strong>Data from M&amp;A transactions:</strong> Startups with 50/50 splits take 2.7x longer to reach acquisition decisions and are 40% more likely to have acquirers walk away during extended negotiations.</p>
 
 <h2>Better Alternative: Differentiated Equity Models</h2>
 

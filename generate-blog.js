@@ -4,6 +4,24 @@ const path = require('path');
 const contentDir = path.join(__dirname, 'content', 'blog');
 const appBlogDir = path.join(__dirname, 'app', 'blog');
 
+// Function to escape text content within HTML for JSX compatibility
+function escapeTextInHtml(html) {
+  // Split HTML into valid tags and text
+  // Valid HTML tags: <tagname>, </tagname>, <tagname attr="value">, <tagname/>
+  const parts = html.split(/(<\/?[a-zA-Z][a-zA-Z0-9]*(?:\s[^>]*)?>)/);
+
+  return parts.map((part, index) => {
+    // Check if this is an HTML tag
+    if (part.match(/^<\/?[a-zA-Z][a-zA-Z0-9]*(?:\s[^>]*)?>$/)) {
+      return part;  // Leave HTML tags alone
+    }
+    // This is text content - escape any remaining > and < characters
+    return part
+      .replace(/>/g, '&gt;')
+      .replace(/</g, '&lt;');
+  }).join('');
+}
+
 // Ensure directories exist
 if (!fs.existsSync(contentDir)) {
   console.error('Error: /content/blog directory does not exist. Please create it first.');
@@ -269,7 +287,13 @@ blogDirs.forEach(dir => {
   }
 
   const metadata = JSON.parse(fs.readFileSync(metadataPath, 'utf8'));
-  const content = fs.readFileSync(contentPath, 'utf8');
+  // Add slug from directory name if not in metadata
+  if (!metadata.slug) {
+    metadata.slug = dir;
+  }
+  const rawContent = fs.readFileSync(contentPath, 'utf8');
+  // Escape any raw > or < in text content for JSX compatibility
+  const content = escapeTextInHtml(rawContent);
   const pageContent = generateBlogPage(metadata, content);
 
   // Create directory if it doesn't exist

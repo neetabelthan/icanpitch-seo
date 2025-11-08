@@ -1,0 +1,617 @@
+==================================
+BLOG POST QA REPORT
+Generated: Thu Nov  6 22:23:27 PST 2025
+==================================
+
+DETAILED ERRORS BY POST:
+=========================
+
+Checking: avoiding-safe-dilution-traps-founders
+  [avoiding-safe-dilution-traps-founders] CONTENT QUALITY ERROR: Word count out of range (5356 words, expected 3,500-4,500)
+
+Checking: burn-rate-benchmarks-by-industry-stage
+  [burn-rate-benchmarks-by-industry-stage] CONTENT QUALITY ERROR: External links missing target="_blank"
+348:<p>For detailed NYC-specific burn analysis, see our <a href="https://icanpitch.com/blog/burn-rate-calculator-new-york-city-startup-costs/">NYC startup burn rate calculator</a>. For SF vs. Austin comparisons, check our <a href="https://icanpitch.com/blog/burn-rate-calculator-san-francisco-vs-austin/">geographic cost comparison</a>.</p>
+474:<p>Ready to compare your burn rate against these benchmarks in real-time? Our <a href="https://icanpitch.com/burn-rate-runway-calculator/">burn rate and runway calculator</a> provides:</p>
+523:<p>Calculate your burn rate today, compare it to the relevant benchmarks in this guide, and use our <a href="https://icanpitch.com/burn-rate-runway-calculator/">interactive calculator</a> to model scenarios and plan your path to the next milestone. The difference between running out of cash and reaching escape velocity often comes down to knowing where you stand—and making small course corrections before they become emergencies.</p>
+  [burn-rate-benchmarks-by-industry-stage] CONTENT QUALITY ERROR: External links missing rel="noopener noreferrer"
+
+Checking: burn-rate-calculator-new-york-city-startup-costs
+  [burn-rate-calculator-new-york-city-startup-costs] CONTENT QUALITY ERROR: External links missing target="_blank"
+600:<p>Ready to calculate your exact NYC burn rate with location-adjusted benchmarks? Our <a href="https://icanpitch.com/burn-rate-runway-calculator/">comprehensive burn rate and runway calculator</a> includes:</p>
+625:<p>Use our <a href="https://icanpitch.com/burn-rate-runway-calculator/">NYC burn rate calculator</a> to model scenarios, benchmark your expenses, and build a data-driven financial plan that accounts for the realities of building in America's second-largest startup hub. The difference between running out of cash and reaching your next milestone often comes down to budgeting with NYC-specific data rather than national averages that don't reflect your ground truth.</p>
+  [burn-rate-calculator-new-york-city-startup-costs] CONTENT QUALITY ERROR: External links missing rel="noopener noreferrer"
+
+Checking: burn-rate-calculator-san-francisco-vs-austin
+  [burn-rate-calculator-san-francisco-vs-austin] HTML ERROR: Disallowed tag <section> found
+    Line: 657:  <section class="talent-costs">
+    Line: 814:  </section>
+    Line: 816:  <section class="office-costs">
+    Line: 875:  </section>
+    Line: 877:  <section class="talent-pool-comparison">
+  [burn-rate-calculator-san-francisco-vs-austin] HTML ERROR: Disallowed tag <table> found
+    Line: 665:      <table class="comparison-table">
+    Line: 726:      </table>
+    Line: 734:      <table class="comparison-table">
+    Line: 769:      </table>
+    Line: 775:      <table class="comparison-table">
+  [burn-rate-calculator-san-francisco-vs-austin] HTML ERROR: Disallowed tag <div> found
+    Line: 664:    <div class="comparison-table-wrapper">
+    Line: 727:    </div>
+    Line: 733:    <div class="comparison-table-wrapper">
+    Line: 770:    </div>
+    Line: 774:    <div class="comparison-table-wrapper">
+  [burn-rate-calculator-san-francisco-vs-austin] HTML ERROR: Disallowed tag <tbody> found
+    Line: 676:        <tbody>
+    Line: 725:        </tbody>
+    Line: 743:        <tbody>
+    Line: 768:        </tbody>
+    Line: 784:        <tbody>
+  [burn-rate-calculator-san-francisco-vs-austin] HTML ERROR: Disallowed tag <tr> found
+    Line: 667:          <tr>
+    Line: 674:          </tr>
+    Line: 677:          <tr>
+    Line: 684:          </tr>
+    Line: 685:          <tr>
+  [burn-rate-calculator-san-francisco-vs-austin] HTML ERROR: Disallowed tag <td> found
+    Line: 653:            <td>$360K-$456K</td>
+    Line: 678:            <td><strong>Junior Engineer (0-2 yrs)</strong></td>
+    Line: 679:            <td>$135K-$165K</td>
+    Line: 680:            <td>$95K-$115K</td>
+    Line: 681:            <td>$40K-$50K</td>
+  [burn-rate-calculator-san-francisco-vs-austin] CONTENT QUALITY ERROR: Word count out of range (7736 words, expected 3,500-4,500)
+  [burn-rate-calculator-san-francisco-vs-austin] CONTENT QUALITY ERROR: External links missing target="_blank"
+629:<p>Ready to model your exact cost difference? Use our <a href="https://icanpitch.com/burn-rate-runway-calculator/">interactive burn rate calculator</a> with SF and Austin location options to:</p>
+652:<p>That's your answer. Calculate it precisely with our <a href="https://icanpitch.com/burn-rate-runway-calculator/">SF vs Austin burn rate calculator</a>, and build your financial plan around the location strategy that aligns with your fundraising reality, talent needs, and growth trajectory.</p>
+  [burn-rate-calculator-san-francisco-vs-austin] CONTENT QUALITY ERROR: External links missing rel="noopener noreferrer"
+
+Checking: cash-runway-calculator-extend-startup-survival
+  [cash-runway-calculator-extend-startup-survival] CONTENT QUALITY ERROR: External links missing target="_blank"
+83:<p>As covered in our detailed guide on <a href="https://icanpitch.com/burn-rate-runway-calculator/">how to calculate burn rate</a>, your net burn rate is:</p>
+113:<p>Don't worry—this is complex calculus. The easier approach is to use a <a href="https://icanpitch.com/burn-rate-runway-calculator/">runway calculator</a> that models revenue growth automatically. When Marcus input his 12% monthly growth, his projected runway extended to <strong>10.2 months</strong> instead of 8 flat months—meaningful but still concerning.</p>
+470:<p><strong>Solution:</strong> Build a month-by-month cash flow projection that accounts for planned hiring, seasonal revenue changes, and known expense increases. Use our <a href="https://icanpitch.com/burn-rate-runway-calculator/">runway calculator</a> that models dynamic burn rates automatically.</p>
+  [cash-runway-calculator-extend-startup-survival] CONTENT QUALITY ERROR: External links missing rel="noopener noreferrer"
+
+Checking: co-founder-equity-split-50-50-alternatives
+  [co-founder-equity-split-50-50-alternatives] HTML ERROR: Disallowed tag <table> found
+    Line: 229:<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+    Line: 269:</table>
+  [co-founder-equity-split-50-50-alternatives] HTML ERROR: Disallowed tag <tbody> found
+    Line: 237:  <tbody>
+    Line: 268:  </tbody>
+  [co-founder-equity-split-50-50-alternatives] HTML ERROR: Disallowed tag <tr> found
+    Line: 231:    <tr style="background-color: #f0f0f0;">
+    Line: 235:    </tr>
+    Line: 238:    <tr>
+    Line: 242:    </tr>
+    Line: 243:    <tr>
+  [co-founder-equity-split-50-50-alternatives] HTML ERROR: Disallowed tag <td> found
+    Line: 239:      <td><strong>Idea/Vision</strong></td>
+    Line: 240:      <td>15%</td>
+    Line: 241:      <td>Who conceived the core idea? Whose vision is driving the company?</td>
+    Line: 244:      <td><strong>Domain Expertise</strong></td>
+    Line: 245:      <td>20%</td>
+  [co-founder-equity-split-50-50-alternatives] CONTENT QUALITY ERROR: Word count out of range (4943 words, expected 3,500-4,500)
+
+Checking: early-employee-equity-calculator-guide
+  [early-employee-equity-calculator-guide] HTML ERROR: Disallowed tag <table> found
+    Line: 178:<table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+    Line: 213:</table>
+    Line: 219:<table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+    Line: 254:</table>
+    Line: 260:<table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+  [early-employee-equity-calculator-guide] HTML ERROR: Disallowed tag <div> found
+    Line: 73:<div style="background: #f5f5f5; padding: 20px; border-left: 4px solid #2563eb; margin: 20px 0;">
+    Line: 80:</div>
+    Line: 518:<div style="background: #f9fafb; padding: 24px; border-radius: 8px; margin: 24px 0;">
+    Line: 541:</div>
+    Line: 547:<div style="background: #f5f5f5; padding: 20px; border-left: 4px solid #2563eb; margin: 20px 0; font-family: monospace; font-size: 14px;">
+  [early-employee-equity-calculator-guide] HTML ERROR: Disallowed tag <tbody> found
+    Line: 187:  <tbody>
+    Line: 212:  </tbody>
+    Line: 228:  <tbody>
+    Line: 253:  </tbody>
+    Line: 269:  <tbody>
+  [early-employee-equity-calculator-guide] HTML ERROR: Disallowed tag <tr> found
+    Line: 180:    <tr style="background: #f5f5f5;">
+    Line: 185:    </tr>
+    Line: 188:    <tr>
+    Line: 193:    </tr>
+    Line: 194:    <tr>
+  [early-employee-equity-calculator-guide] HTML ERROR: Disallowed tag <td> found
+    Line: 189:      <td style="padding: 12px; border: 1px solid #ddd;">Founding Engineer</td>
+    Line: 190:      <td style="padding: 12px; border: 1px solid #ddd;"><strong>1.5-3.0%</strong></td>
+    Line: 191:      <td style="padding: 12px; border: 1px solid #ddd;">N/A</td>
+    Line: 192:      <td style="padding: 12px; border: 1px solid #ddd;">N/A</td>
+    Line: 195:      <td style="padding: 12px; border: 1px solid #ddd;">Senior/Staff Engineer</td>
+  [early-employee-equity-calculator-guide] CONTENT QUALITY ERROR: Word count out of range (4891 words, expected 3,500-4,500)
+
+Checking: equity-split-technical-vs-business-cofounder
+  [equity-split-technical-vs-business-cofounder] HTML ERROR: Disallowed tag <table> found
+    Line: 155:<table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+    Line: 205:</table>
+    Line: 213:<table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+    Line: 263:</table>
+    Line: 588:<table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 13px;">
+  [equity-split-technical-vs-business-cofounder] HTML ERROR: Disallowed tag <div> found
+    Line: 523:<div style="background: #f9fafb; padding: 24px; border-radius: 8px; margin: 24px 0;">
+    Line: 546:</div>
+    Line: 552:<div style="background: #f5f5f5; padding: 20px; border-left: 4px solid #2563eb; margin: 20px 0;">
+    Line: 582:</div>
+    Line: 659:<div style="background: #eff6ff; padding: 24px; border-left: 4px solid #2563eb; margin: 24px 0;">
+  [equity-split-technical-vs-business-cofounder] HTML ERROR: Disallowed tag <tbody> found
+    Line: 163:  <tbody>
+    Line: 204:  </tbody>
+    Line: 221:  <tbody>
+    Line: 262:  </tbody>
+    Line: 597:  <tbody>
+  [equity-split-technical-vs-business-cofounder] HTML ERROR: Disallowed tag <tr> found
+    Line: 157:    <tr style="background: #f5f5f5;">
+    Line: 161:    </tr>
+    Line: 164:    <tr>
+    Line: 168:    </tr>
+    Line: 169:    <tr>
+  [equity-split-technical-vs-business-cofounder] HTML ERROR: Disallowed tag <td> found
+    Line: 165:      <td style="padding: 12px; border: 1px solid #ddd;"><strong>Idea / Vision</strong></td>
+    Line: 166:      <td style="padding: 12px; border: 1px solid #ddd;">15 points</td>
+    Line: 167:      <td style="padding: 12px; border: 1px solid #ddd;">Who identified the market opportunity? Who defined what to build?</td>
+    Line: 170:      <td style="padding: 12px; border: 1px solid #ddd;"><strong>Pre-Partnership Work</strong></td>
+    Line: 171:      <td style="padding: 12px; border: 1px solid #ddd;">20 points</td>
+  [equity-split-technical-vs-business-cofounder] CONTENT QUALITY ERROR: Word count out of range (6169 words, expected 3,500-4,500)
+
+Checking: founder-vesting-schedules-4-year-1-year-cliff
+  [founder-vesting-schedules-4-year-1-year-cliff] HTML ERROR: Disallowed tag <section> found
+    Line: 93:        <section class="tldr">
+    Line: 96:        </section>
+    Line: 98:        <section class="opening-story">
+    Line: 113:        </section>
+    Line: 115:        <section>
+  [founder-vesting-schedules-4-year-1-year-cliff] HTML ERROR: Disallowed tag <article> found
+    Line: 87:    <article>
+  [founder-vesting-schedules-4-year-1-year-cliff] HTML ERROR: Disallowed tag <table> found
+    Line: 202:            <table>
+    Line: 257:            </table>
+    Line: 398:                <table>
+    Line: 452:                </table>
+    Line: 561:            <table>
+  [founder-vesting-schedules-4-year-1-year-cliff] HTML ERROR: Disallowed tag <div> found
+    Line: 165:            <div class="example-box">
+    Line: 198:            </div>
+    Line: 277:            <div class="strategy-box">
+    Line: 298:            </div>
+    Line: 317:            <div class="stakeholder-box">
+  [founder-vesting-schedules-4-year-1-year-cliff] HTML ERROR: Disallowed tag <tbody> found
+    Line: 210:                <tbody>
+    Line: 256:                </tbody>
+    Line: 408:                    <tbody>
+    Line: 451:                    </tbody>
+    Line: 570:                <tbody>
+  [founder-vesting-schedules-4-year-1-year-cliff] HTML ERROR: Disallowed tag <tr> found
+    Line: 204:                    <tr>
+    Line: 208:                    </tr>
+    Line: 211:                    <tr>
+    Line: 215:                    </tr>
+    Line: 216:                    <tr>
+  [founder-vesting-schedules-4-year-1-year-cliff] HTML ERROR: Disallowed tag <td> found
+    Line: 212:                        <td>Vesting Period</td>
+    Line: 213:                        <td>Total time until all equity is owned</td>
+    Line: 214:                        <td>4 years (48 months)</td>
+    Line: 217:                        <td>Cliff</td>
+    Line: 218:                        <td>Minimum time before any equity vests</td>
+  [founder-vesting-schedules-4-year-1-year-cliff] HTML ERROR: Disallowed tag <span> found
+    Line: 90:            <p class="meta">Category: <span class="category">Fundraising</span>, <span class="category">Equity</span> | Published: January 18, 2025 | Reading Time: 22 minutes</p>
+  [founder-vesting-schedules-4-year-1-year-cliff] CONTENT QUALITY ERROR: Word count out of range (8162 words, expected 3,500-4,500)
+  [founder-vesting-schedules-4-year-1-year-cliff] CONTENT QUALITY ERROR: External links missing target="_blank"
+1091:                <p><a href="https://icanpitch.com/tools/equity-calculator" class="cta-button">Access Free Calculator →</a></p>
+  [founder-vesting-schedules-4-year-1-year-cliff] CONTENT QUALITY ERROR: External links missing rel="noopener noreferrer"
+
+Checking: gross-burn-vs-net-burn-rate-explained
+  [gross-burn-vs-net-burn-rate-explained] CONTENT QUALITY ERROR: Word count out of range (0 words, expected 3,500-4,500)
+
+Checking: how-to-calculate-burn-rate-monthly-startup-costs
+  [how-to-calculate-burn-rate-monthly-startup-costs] HTML ERROR: Mismatched <p> tags (open: 112, close: 111)
+  [how-to-calculate-burn-rate-monthly-startup-costs] CONTENT QUALITY ERROR: Word count out of range (3461 words, expected 3,500-4,500)
+  [how-to-calculate-burn-rate-monthly-startup-costs] CONTENT QUALITY ERROR: External links missing target="_blank"
+134:<p>This means Emma is consuming $80,900 of her $1.2 million seed funding every month. At this rate, she has approximately 14.8 months of runway (we'll cover runway calculations in detail in our <a href="https://icanpitch.com/burn-rate-runway-calculator/">burn rate and runway calculator</a>).</p>
+345:<p>This told Emma she needs to start fundraising by month 8-9 to ensure she doesn't run out of cash (fundraising typically takes 4-6 months). For detailed guidance, see our <a href="https://icanpitch.com/burn-rate-runway-calculator/">interactive burn rate and runway calculator</a>.</p>
+390:<p>Ready to calculate your own burn rate? Our <a href="https://icanpitch.com/burn-rate-runway-calculator/">burn rate and runway calculator</a> includes:</p>
+  [how-to-calculate-burn-rate-monthly-startup-costs] CONTENT QUALITY ERROR: External links missing rel="noopener noreferrer"
+
+Checking: how-to-calculate-pre-money-valuation-series-a
+  [how-to-calculate-pre-money-valuation-series-a] METADATA WARNING: Unexpected field 'heroImage'
+  [how-to-calculate-pre-money-valuation-series-a] CONTENT QUALITY ERROR: Word count out of range (1468 words, expected 3,500-4,500)
+
+Checking: how-to-calculate-safe-dilution
+  [how-to-calculate-safe-dilution] METADATA ERROR: Missing required field 'pageType'
+  [how-to-calculate-safe-dilution] CONTENT QUALITY ERROR: Word count out of range (589 words, expected 3,500-4,500)
+
+Checking: how-to-negotiate-safe-valuation-cap
+  [how-to-negotiate-safe-valuation-cap] CONTENT QUALITY ERROR: Word count out of range (4629 words, expected 3,500-4,500)
+  [how-to-negotiate-safe-valuation-cap] CONTENT QUALITY ERROR: External links missing rel="noopener noreferrer"
+
+Checking: option-pool-dilution-impact-founders
+  [option-pool-dilution-impact-founders] HTML ERROR: Disallowed tag <section> found
+    Line: 93:        <section class="tldr">
+    Line: 96:        </section>
+    Line: 98:        <section class="opening-story">
+    Line: 109:        </section>
+    Line: 111:        <section>
+  [option-pool-dilution-impact-founders] HTML ERROR: Disallowed tag <article> found
+    Line: 87:    <article>
+  [option-pool-dilution-impact-founders] HTML ERROR: Disallowed tag <table> found
+    Line: 182:            <table>
+    Line: 217:            </table>
+    Line: 410:            <table>
+    Line: 460:            </table>
+    Line: 531:            <table>
+  [option-pool-dilution-impact-founders] HTML ERROR: Disallowed tag <div> found
+    Line: 137:            <div class="calculation-box">
+    Line: 162:            </div>
+    Line: 221:            <div class="example-box">
+    Line: 232:            </div>
+    Line: 234:            <div class="example-box">
+  [option-pool-dilution-impact-founders] HTML ERROR: Disallowed tag <tbody> found
+    Line: 191:                <tbody>
+    Line: 216:                </tbody>
+    Line: 418:                <tbody>
+    Line: 459:                </tbody>
+    Line: 540:                <tbody>
+  [option-pool-dilution-impact-founders] HTML ERROR: Disallowed tag <tr> found
+    Line: 184:                    <tr>
+    Line: 189:                    </tr>
+    Line: 192:                    <tr>
+    Line: 197:                    </tr>
+    Line: 198:                    <tr>
+  [option-pool-dilution-impact-founders] HTML ERROR: Disallowed tag <td> found
+    Line: 193:                        <td>Seed Round</td>
+    Line: 194:                        <td>10%</td>
+    Line: 195:                        <td>8% - 12%</td>
+    Line: 196:                        <td>8-10 percentage points</td>
+    Line: 199:                        <td>Series A</td>
+  [option-pool-dilution-impact-founders] HTML ERROR: Disallowed tag <span> found
+    Line: 90:            <p class="meta">Category: <span class="category">Fundraising</span>, <span class="category">Equity</span> | Published: January 18, 2025 | Reading Time: 18 minutes</p>
+  [option-pool-dilution-impact-founders] CONTENT QUALITY ERROR: Word count out of range (6626 words, expected 3,500-4,500)
+  [option-pool-dilution-impact-founders] CONTENT QUALITY ERROR: External links missing target="_blank"
+920:                <p><a href="https://icanpitch.com/tools/equity-calculator" class="cta-button">Access Free Calculator →</a></p>
+  [option-pool-dilution-impact-founders] CONTENT QUALITY ERROR: External links missing rel="noopener noreferrer"
+
+Checking: option-pool-sizing-pre-seed-seed-series-a
+  [option-pool-sizing-pre-seed-seed-series-a] HTML ERROR: Disallowed tag <table> found
+    Line: 273:<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+    Line: 302:</table>
+    Line: 316:<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+    Line: 345:</table>
+    Line: 381:<table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+  [option-pool-sizing-pre-seed-seed-series-a] HTML ERROR: Disallowed tag <tbody> found
+    Line: 282:  <tbody>
+    Line: 301:  </tbody>
+    Line: 325:  <tbody>
+    Line: 344:  </tbody>
+    Line: 390:  <tbody>
+  [option-pool-sizing-pre-seed-seed-series-a] HTML ERROR: Disallowed tag <tr> found
+    Line: 275:    <tr style="background-color: #f0f0f0;">
+    Line: 280:    </tr>
+    Line: 283:    <tr>
+    Line: 288:    </tr>
+    Line: 289:    <tr>
+  [option-pool-sizing-pre-seed-seed-series-a] HTML ERROR: Disallowed tag <td> found
+    Line: 284:      <td>Founders</td>
+    Line: 285:      <td>100%</td>
+    Line: 286:      <td>80%</td>
+    Line: 287:      <td>53.3%</td>
+    Line: 290:      <td>Option Pool</td>
+
+Checking: post-money-safe-vs-pre-money-safe-explained
+  [post-money-safe-vs-pre-money-safe-explained] CONTENT QUALITY ERROR: Word count out of range (5050 words, expected 3,500-4,500)
+
+Checking: reducing-burn-rate-without-killing-growth
+  [reducing-burn-rate-without-killing-growth] CONTENT QUALITY ERROR: Word count out of range (0 words, expected 3,500-4,500)
+
+Checking: safe-calculator-first-time-founders-complete-guide
+  [safe-calculator-first-time-founders-complete-guide] CONTENT QUALITY ERROR: Word count out of range (2842 words, expected 3,500-4,500)
+
+Checking: safe-calculator-new-york-startup-scene
+  [safe-calculator-new-york-startup-scene] HTML ERROR: Disallowed tag <table> found
+    Line: 186:<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse:collapse;">
+    Line: 240:</table>
+    Line: 246:<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse:collapse;">
+    Line: 300:</table>
+  [safe-calculator-new-york-startup-scene] HTML ERROR: Disallowed tag <tbody> found
+    Line: 196:  <tbody>
+    Line: 239:  </tbody>
+    Line: 256:  <tbody>
+    Line: 299:  </tbody>
+  [safe-calculator-new-york-startup-scene] HTML ERROR: Disallowed tag <tr> found
+    Line: 188:    <tr style="background-color:#f0f0f0;">
+    Line: 194:    </tr>
+    Line: 197:    <tr>
+    Line: 203:    </tr>
+    Line: 204:    <tr>
+  [safe-calculator-new-york-startup-scene] HTML ERROR: Disallowed tag <td> found
+    Line: 198:      <td><strong>Median SAFE Cap</strong></td>
+    Line: 199:      <td>$6.0M</td>
+    Line: 200:      <td>$8.5M</td>
+    Line: 201:      <td>$4.5M</td>
+    Line: 202:      <td>$5.2M</td>
+  [safe-calculator-new-york-startup-scene] CONTENT QUALITY ERROR: Word count out of range (4585 words, expected 3,500-4,500)
+
+Checking: safe-calculator-silicon-valley-founders-guide
+  [safe-calculator-silicon-valley-founders-guide] HTML ERROR: Disallowed tag <table> found
+    Line: 166:<table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+    Line: 207:</table>
+    Line: 213:<table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+    Line: 254:</table>
+  [safe-calculator-silicon-valley-founders-guide] HTML ERROR: Disallowed tag <tbody> found
+    Line: 175:  <tbody>
+    Line: 206:  </tbody>
+    Line: 222:  <tbody>
+    Line: 253:  </tbody>
+  [safe-calculator-silicon-valley-founders-guide] HTML ERROR: Disallowed tag <tr> found
+    Line: 168:    <tr style="background-color: #f0f0f0;">
+    Line: 173:    </tr>
+    Line: 176:    <tr>
+    Line: 181:    </tr>
+    Line: 182:    <tr>
+  [safe-calculator-silicon-valley-founders-guide] HTML ERROR: Disallowed tag <td> found
+    Line: 177:      <td style="border: 1px solid #ddd; padding: 10px;"><strong>Silicon Valley/SF</strong></td>
+    Line: 178:      <td style="border: 1px solid #ddd; padding: 10px;">$8M - $12M</td>
+    Line: 179:      <td style="border: 1px solid #ddd; padding: 10px;">$10M</td>
+    Line: 180:      <td style="border: 1px solid #ddd; padding: 10px;">+67%</td>
+    Line: 183:      <td style="border: 1px solid #ddd; padding: 10px;"><strong>New York City</strong></td>
+  [safe-calculator-silicon-valley-founders-guide] CONTENT QUALITY ERROR: Word count out of range (6080 words, expected 3,500-4,500)
+
+Checking: safe-conversion-mechanics-priced-round
+  [safe-conversion-mechanics-priced-round] HTML ERROR: Disallowed tag <table> found
+    Line: 215:<table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+    Line: 250:</table>
+  [safe-conversion-mechanics-priced-round] HTML ERROR: Disallowed tag <div> found
+    Line: 51:<div style="background: #f5f5f5; padding: 20px; border-left: 4px solid #2563eb; margin: 20px 0;">
+    Line: 58:</div>
+    Line: 126:<div style="background: #f5f5f5; padding: 15px; margin: 15px 0;">
+    Line: 129:</div>
+    Line: 181:<div style="background: #f5f5f5; padding: 15px; margin: 15px 0;">
+  [safe-conversion-mechanics-priced-round] HTML ERROR: Disallowed tag <tbody> found
+    Line: 223:  <tbody>
+    Line: 249:  </tbody>
+  [safe-conversion-mechanics-priced-round] HTML ERROR: Disallowed tag <tr> found
+    Line: 217:    <tr style="background: #f5f5f5;">
+    Line: 221:    </tr>
+    Line: 224:    <tr>
+    Line: 228:    </tr>
+    Line: 229:    <tr style="background: #f9f9f9;">
+  [safe-conversion-mechanics-priced-round] HTML ERROR: Disallowed tag <td> found
+    Line: 225:      <td style="padding: 12px; border: 1px solid #ddd;">Founders (Alex + team)</td>
+    Line: 226:      <td style="padding: 12px; text-align: right; border: 1px solid #ddd;">8,000,000</td>
+    Line: 227:      <td style="padding: 12px; text-align: right; border: 1px solid #ddd;">65.8%</td>
+    Line: 230:      <td style="padding: 12px; border: 1px solid #ddd;">SAFE #1 Holders</td>
+    Line: 231:      <td style="padding: 12px; text-align: right; border: 1px solid #ddd;">757,643</td>
+  [safe-conversion-mechanics-priced-round] CONTENT QUALITY ERROR: External links missing rel="noopener noreferrer"
+
+Checking: safe-discount-rate-vs-valuation-cap-which-better
+  [safe-discount-rate-vs-valuation-cap-which-better] HTML ERROR: Disallowed tag <article> found
+    Line: 1:<article>
+  [safe-discount-rate-vs-valuation-cap-which-better] HTML ERROR: Disallowed tag <table> found
+    Line: 71:  <table>
+    Line: 118:  </table>
+    Line: 196:  <table>
+    Line: 231:  </table>
+  [safe-discount-rate-vs-valuation-cap-which-better] HTML ERROR: Disallowed tag <div> found
+    Line: 42:  <div class="formula-box">
+    Line: 46:  </div>
+    Line: 60:  <div class="formula-box">
+    Line: 63:  </div>
+    Line: 150:  <div class="calculation-box">
+  [safe-discount-rate-vs-valuation-cap-which-better] HTML ERROR: Disallowed tag <tbody> found
+    Line: 81:    <tbody>
+    Line: 117:    </tbody>
+    Line: 205:    <tbody>
+    Line: 230:    </tbody>
+  [safe-discount-rate-vs-valuation-cap-which-better] HTML ERROR: Disallowed tag <tr> found
+    Line: 73:      <tr>
+    Line: 79:      </tr>
+    Line: 82:      <tr>
+    Line: 88:      </tr>
+    Line: 89:      <tr>
+  [safe-discount-rate-vs-valuation-cap-which-better] HTML ERROR: Disallowed tag <td> found
+    Line: 83:        <td>$5M</td>
+    Line: 84:        <td>10.0%</td>
+    Line: 85:        <td>12.5%</td>
+    Line: 86:        <td><strong>Discount</strong></td>
+    Line: 87:        <td>Lower (better for founder)</td>
+  [safe-discount-rate-vs-valuation-cap-which-better] CONTENT QUALITY ERROR: Word count out of range (4966 words, expected 3,500-4,500)
+
+Checking: safe-notes-multiple-safes-stacking-guide
+  [safe-notes-multiple-safes-stacking-guide] HTML ERROR: Disallowed tag <table> found
+    Line: 37:<table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+    Line: 70:</table>
+    Line: 217:  <table style="width: 100%; background-color: #fff; border-collapse: collapse; margin: 15px 0;">
+    Line: 241:  </table>
+    Line: 252:<table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+  [safe-notes-multiple-safes-stacking-guide] HTML ERROR: Disallowed tag <div> found
+    Line: 203:<div style="background-color: #f0f7ff; border-left: 4px solid #2563eb; padding: 20px; margin: 25px 0;">
+    Line: 244:</div>
+  [safe-notes-multiple-safes-stacking-guide] HTML ERROR: Disallowed tag <tbody> found
+    Line: 47:  <tbody>
+    Line: 69:  </tbody>
+    Line: 260:  <tbody>
+    Line: 286:  </tbody>
+    Line: 301:  <tbody>
+  [safe-notes-multiple-safes-stacking-guide] HTML ERROR: Disallowed tag <tr> found
+    Line: 39:    <tr style="background-color: #f5f5f5;">
+    Line: 45:    </tr>
+    Line: 48:    <tr>
+    Line: 54:    </tr>
+    Line: 55:    <tr style="background-color: #f9f9f9;">
+  [safe-notes-multiple-safes-stacking-guide] HTML ERROR: Disallowed tag <td> found
+    Line: 49:      <td style="padding: 12px; border: 1px solid #ddd;">SAFE #1</td>
+    Line: 50:      <td style="padding: 12px; border: 1px solid #ddd;">Month 0</td>
+    Line: 51:      <td style="padding: 12px; border: 1px solid #ddd;">$400K</td>
+    Line: 52:      <td style="padding: 12px; border: 1px solid #ddd;">$4M</td>
+    Line: 53:      <td style="padding: 12px; border: 1px solid #ddd;">Post-Money</td>
+
+Checking: safe-vs-convertible-note-2024-comparison
+  [safe-vs-convertible-note-2024-comparison] HTML ERROR: Disallowed tag <section> found
+    Line: 12:  <section class="intro-section">
+    Line: 18:  </section>
+    Line: 20:  <section class="comparison-table-section">
+    Line: 111:  </section>
+    Line: 113:  <section class="persona-section">
+  [safe-vs-convertible-note-2024-comparison] HTML ERROR: Disallowed tag <article> found
+    Line: 1:<article class="blog-post">
+  [safe-vs-convertible-note-2024-comparison] HTML ERROR: Disallowed tag <table> found
+    Line: 24:      <table class="comparison-table">
+    Line: 109:      </table>
+    Line: 264:        <table class="cost-table">
+    Line: 299:        </table>
+    Line: 791:      <table class="matrix-table">
+  [safe-vs-convertible-note-2024-comparison] HTML ERROR: Disallowed tag <div> found
+    Line: 7:  <div class="tldr-section">
+    Line: 10:  </div>
+    Line: 23:    <div class="comparison-table-wrapper">
+    Line: 110:    </div>
+    Line: 116:    <div class="persona-box">
+  [safe-vs-convertible-note-2024-comparison] HTML ERROR: Disallowed tag <tbody> found
+    Line: 32:        <tbody>
+    Line: 108:        </tbody>
+    Line: 272:          <tbody>
+    Line: 298:          </tbody>
+    Line: 799:        <tbody>
+  [safe-vs-convertible-note-2024-comparison] HTML ERROR: Disallowed tag <tr> found
+    Line: 26:          <tr>
+    Line: 30:          </tr>
+    Line: 33:          <tr>
+    Line: 37:          </tr>
+    Line: 38:          <tr>
+  [safe-vs-convertible-note-2024-comparison] HTML ERROR: Disallowed tag <td> found
+    Line: 34:            <td><strong>Interest Rate</strong></td>
+    Line: 35:            <td>None (0%)</td>
+    Line: 36:            <td>2-8% annually (typically 5%)</td>
+    Line: 39:            <td><strong>Maturity Date</strong></td>
+    Line: 40:            <td>None (stays open until conversion event)</td>
+  [safe-vs-convertible-note-2024-comparison] HTML ERROR: Disallowed tag <span> found
+    Line: 134:            <li><span class="highlight">Savings with SAFE: $6,500</span></li>
+    Line: 143:            <li><span class="highlight">SAFE closed 3.5 weeks faster</span></li>
+    Line: 152:            <li><span class="highlight">SAFE saves dilution equivalent to interest</span></li>
+    Line: 161:            <li><span class="highlight">SAFE eliminates maturity pressure</span></li>
+  [safe-vs-convertible-note-2024-comparison] CONTENT QUALITY ERROR: Word count out of range (7686 words, expected 3,500-4,500)
+  [safe-vs-convertible-note-2024-comparison] CONTENT QUALITY ERROR: External links missing rel="noopener noreferrer"
+
+Checking: series-a-burn-rate-runway-management
+  [series-a-burn-rate-runway-management] CONTENT QUALITY ERROR: Word count out of range (0 words, expected 3,500-4,500)
+
+Checking: understanding-pro-rata-rights-startup-investing
+  [understanding-pro-rata-rights-startup-investing] CONTENT QUALITY ERROR: Word count out of range (1456 words, expected 3,500-4,500)
+
+Checking: vesting-acceleration-clauses-explained
+  [vesting-acceleration-clauses-explained] HTML ERROR: Disallowed tag <section> found
+    Line: 93:        <section class="tldr">
+    Line: 96:        </section>
+    Line: 98:        <section class="opening-story">
+    Line: 130:        </section>
+    Line: 132:        <section>
+  [vesting-acceleration-clauses-explained] HTML ERROR: Disallowed tag <article> found
+    Line: 87:    <article>
+  [vesting-acceleration-clauses-explained] HTML ERROR: Disallowed tag <table> found
+    Line: 298:            <table>
+    Line: 333:            </table>
+    Line: 527:            <table>
+    Line: 567:            </table>
+    Line: 573:            <table>
+  [vesting-acceleration-clauses-explained] HTML ERROR: Disallowed tag <div> found
+    Line: 141:            <div class="baseline-box">
+    Line: 160:            </div>
+    Line: 198:            <div class="example-box">
+    Line: 229:            </div>
+    Line: 235:            <div class="problem-box">
+  [vesting-acceleration-clauses-explained] HTML ERROR: Disallowed tag <tbody> found
+    Line: 306:                <tbody>
+    Line: 332:                </tbody>
+    Line: 535:                <tbody>
+    Line: 566:                </tbody>
+    Line: 582:                <tbody>
+  [vesting-acceleration-clauses-explained] HTML ERROR: Disallowed tag <tr> found
+    Line: 300:                    <tr>
+    Line: 304:                    </tr>
+    Line: 307:                    <tr>
+    Line: 311:                    </tr>
+    Line: 312:                    <tr>
+  [vesting-acceleration-clauses-explained] HTML ERROR: Disallowed tag <td> found
+    Line: 308:                        <td>Exceptional Founder Leverage</td>
+    Line: 309:                        <td>Multiple acquirers competing, founder-CEO is irreplaceable, "take it or leave it" negotiating position</td>
+    Line: 310:                        <td>8% of deals</td>
+    Line: 313:                        <td>Founder Already Fully Vested</td>
+    Line: 314:                        <td>If founder has already vested 100%, single-trigger doesn't matter (included for consistency with exec team)</td>
+  [vesting-acceleration-clauses-explained] HTML ERROR: Disallowed tag <span> found
+    Line: 90:            <p class="meta">Category: <span class="category">Fundraising</span>, <span class="category">Equity</span> | Published: January 18, 2025 | Reading Time: 20 minutes</p>
+  [vesting-acceleration-clauses-explained] CONTENT QUALITY ERROR: Word count out of range (7549 words, expected 3,500-4,500)
+  [vesting-acceleration-clauses-explained] CONTENT QUALITY ERROR: External links missing target="_blank"
+1113:                <p><a href="https://icanpitch.com/tools/equity-calculator" class="cta-button">Access Free Calculator →</a></p>
+  [vesting-acceleration-clauses-explained] CONTENT QUALITY ERROR: External links missing rel="noopener noreferrer"
+
+
+==================================
+SUMMARY REPORT
+==================================
+
+Total posts analyzed: 28/28
+Posts passing all checks: 0/28
+
+ERRORS BY CATEGORY:
+-------------------
+Posts with HTML errors: 15
+  - burn-rate-calculator-san-francisco-vs-austin
+  - co-founder-equity-split-50-50-alternatives
+  - early-employee-equity-calculator-guide
+  - equity-split-technical-vs-business-cofounder
+  - founder-vesting-schedules-4-year-1-year-cliff
+  - how-to-calculate-burn-rate-monthly-startup-costs
+  - option-pool-dilution-impact-founders
+  - option-pool-sizing-pre-seed-seed-series-a
+  - safe-calculator-new-york-startup-scene
+  - safe-calculator-silicon-valley-founders-guide
+  - safe-conversion-mechanics-priced-round
+  - safe-discount-rate-vs-valuation-cap-which-better
+  - safe-notes-multiple-safes-stacking-guide
+  - safe-vs-convertible-note-2024-comparison
+  - vesting-acceleration-clauses-explained
+
+Posts with metadata errors: 1
+  - how-to-calculate-safe-dilution
+
+Posts with file structure errors: 0
+
+Posts with content quality errors: 26
+  - avoiding-safe-dilution-traps-founders
+  - burn-rate-benchmarks-by-industry-stage
+  - burn-rate-calculator-new-york-city-startup-costs
+  - burn-rate-calculator-san-francisco-vs-austin
+  - cash-runway-calculator-extend-startup-survival
+  - co-founder-equity-split-50-50-alternatives
+  - early-employee-equity-calculator-guide
+  - equity-split-technical-vs-business-cofounder
+  - founder-vesting-schedules-4-year-1-year-cliff
+  - gross-burn-vs-net-burn-rate-explained
+  - how-to-calculate-burn-rate-monthly-startup-costs
+  - how-to-calculate-pre-money-valuation-series-a
+  - how-to-calculate-safe-dilution
+  - how-to-negotiate-safe-valuation-cap
+  - option-pool-dilution-impact-founders
+  - post-money-safe-vs-pre-money-safe-explained
+  - reducing-burn-rate-without-killing-growth
+  - safe-calculator-first-time-founders-complete-guide
+  - safe-calculator-new-york-startup-scene
+  - safe-calculator-silicon-valley-founders-guide
+  - safe-conversion-mechanics-priced-round
+  - safe-discount-rate-vs-valuation-cap-which-better
+  - safe-vs-convertible-note-2024-comparison
+  - series-a-burn-rate-runway-management
+  - understanding-pro-rata-rights-startup-investing
+  - vesting-acceleration-clauses-explained
+
+POSTS PASSING ALL CHECKS:
+-------------------------
+  None
+
+==================================
+QA CHECK COMPLETE
+==================================

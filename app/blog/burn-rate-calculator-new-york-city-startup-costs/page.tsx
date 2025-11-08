@@ -371,11 +371,11 @@ export default function BurnRateCalculatorNewYorkCityStartupCostsBlogPost() {
 
 <p><strong>General Liability Insurance:</strong> $800-$1,500/year for basic coverage</p>
 
-<p><strong>Professional Liability (E&O):</strong> $2,000-$5,000/year depending on revenue</p>
+<p><strong>Professional Liability (E&amp;O):</strong> $2,000-$5,000/year depending on revenue</p>
 
 <p><strong>Workers' Compensation:</strong> Varies by industry and payroll (approximately 1.5-3% of payroll in NY)</p>
 
-<p><strong>Directors & Officers (D&O) Insurance:</strong> $3,000-$8,000/year for seed stage; $10,000-$25,000 at Series A</p>
+<p><strong>Directors &amp; Officers (D&amp;O) Insurance:</strong> $3,000-$8,000/year for seed stage; $10,000-$25,000 at Series A</p>
 
 <p><strong>Cyber Liability Insurance:</strong> $2,500-$6,000/year for tech companies</p>
 
@@ -424,7 +424,7 @@ export default function BurnRateCalculatorNewYorkCityStartupCostsBlogPost() {
 <li><strong>Error tracking (Sentry):</strong> $80-$300/month</li>
 </ul>
 
-<p><strong>Sales & Marketing Tools:</strong></p>
+<p><strong>Sales &amp; Marketing Tools:</strong></p>
 <ul>
 <li><strong>CRM (HubSpot, Salesforce):</strong> $50-$150/user</li>
 <li><strong>Email marketing (Mailchimp, SendGrid):</strong> $100-$500/month</li>
@@ -449,7 +449,7 @@ export default function BurnRateCalculatorNewYorkCityStartupCostsBlogPost() {
 </ul>
 <p><strong>Total Personnel: $116,475/month (71% of burn)</strong></p>
 
-<p><strong>Office & Operations:</strong></p>
+<p><strong>Office &amp; Operations:</strong></p>
 <ul>
 <li>WeWork co-working (6 desks): $4,200/month</li>
 <li>Internet/utilities (included in WeWork): $0</li>
@@ -465,7 +465,7 @@ export default function BurnRateCalculatorNewYorkCityStartupCostsBlogPost() {
 </ul>
 <p><strong>Total Professional Services: $7,300/month (4% of burn)</strong></p>
 
-<p><strong>Software & Infrastructure:</strong></p>
+<p><strong>Software &amp; Infrastructure:</strong></p>
 <ul>
 <li>AWS hosting: $3,800/month</li>
 <li>SaaS tools (Slack, GitHub, etc.): $1,800/month</li>
@@ -473,7 +473,7 @@ export default function BurnRateCalculatorNewYorkCityStartupCostsBlogPost() {
 </ul>
 <p><strong>Total Software: $6,400/month (4% of burn)</strong></p>
 
-<p><strong>Marketing & Customer Acquisition:</strong></p>
+<p><strong>Marketing &amp; Customer Acquisition:</strong></p>
 <ul>
 <li>Digital advertising (Google, Meta): $18,000/month</li>
 <li>Marketing tools (HubSpot, Mailchimp): $1,200/month</li>

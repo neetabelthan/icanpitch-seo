@@ -469,7 +469,7 @@ export default function HowToNegotiateSafeValuationCapBlogPost() {
 <li><strong>Use the <a href="https://icanpitch.com/safe-calculator/" target="_blank">SAFE Calculator</a> in real-time:</strong> Pull up iCanPitch's SAFE calculator during meetings. Model different scenarios together: "Let's see what your $500K looks like at $8M cap vs. $6M cap at a $25M Series A."</li>
 </ol>
 
-<h3>Phase 3: Negotiation & Term Sheets</h3>
+<h3>Phase 3: Negotiation &amp; Term Sheets</h3>
 
 <ol>
 <li><strong>Get first commitment ASAP:</strong> Your first "yes" is the hardest. Once you have one committed investor, close them quickly even if cap is at your acceptable (not target) level.</li>
@@ -483,7 +483,7 @@ export default function HowToNegotiateSafeValuationCapBlogPost() {
 <li><strong>Know when to stop negotiating:</strong> Once you're 80% subscribed and within 10% of your target cap, stop optimizing. Close the round and get back to building.</li>
 </ol>
 
-<h3>Phase 4: Closing & Documentation</h3>
+<h3>Phase 4: Closing &amp; Documentation</h3>
 
 <ol>
 <li><strong>Use standard SAFE templates:</strong> Y Combinator's SAFE documents are industry standard. Use them verbatim unless your lawyer advises specific modifications.</li>

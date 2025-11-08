@@ -144,7 +144,7 @@ export default function SafeVsConvertibleNote2024ComparisonBlogPost() {
 
 <p><strong>2. Lower Legal Costs</strong></p>
 
-<p>SAFEs use standardized templates with minimal customization, reducing legal bills dramatically. Fenwick & West's 2024 data shows <strong>median legal costs of $1,800 for SAFEs versus $8,500 for convertible notes</strong>—a $6,700 difference that matters enormously at pre-seed stage.</p>
+<p>SAFEs use standardized templates with minimal customization, reducing legal bills dramatically. Fenwick &amp; West's 2024 data shows <strong>median legal costs of $1,800 for SAFEs versus $8,500 for convertible notes</strong>—a $6,700 difference that matters enormously at pre-seed stage.</p>
 
 <p><strong>3. No Interest Accumulation</strong></p>
 
@@ -407,7 +407,7 @@ export default function SafeVsConvertibleNote2024ComparisonBlogPost() {
 <li>OR get repaid principal + accrued interest (if acquisition is structured as asset sale)</li>
 </ul>
 
-<p>The specific treatment depends on the exact language in the SAFE or note, making legal review critical. Latham & Watkins's analysis of 150 early-stage acquisitions found that <strong>SAFEs and notes converted to equity in 89% of cases, while 11% resulted in cash repayment</strong>, with wide variance based on acquisition structure.</p>
+<p>The specific treatment depends on the exact language in the SAFE or note, making legal review critical. Latham &amp; Watkins's analysis of 150 early-stage acquisitions found that <strong>SAFEs and notes converted to equity in 89% of cases, while 11% resulted in cash repayment</strong>, with wide variance based on acquisition structure.</p>
 
 <h2>Market Trends: The Rise of SAFEs (2015-2024)</h2>
 
@@ -435,7 +435,7 @@ export default function SafeVsConvertibleNote2024ComparisonBlogPost() {
 <li><strong>Investor education:</strong> As more investors understand SAFEs, the "unfamiliarity discount" has disappeared</li>
 </ul>
 
-<p>However, convertible notes remain dominant in certain segments: <strong>bridge rounds (52% notes vs 38% SAFEs), East Coast deals (48% notes vs 41% SAFEs), and international rounds (61% notes vs 27% SAFEs)</strong>, per Fenwick & West's 2023 geographic analysis.</p>
+<p>However, convertible notes remain dominant in certain segments: <strong>bridge rounds (52% notes vs 38% SAFEs), East Coast deals (48% notes vs 41% SAFEs), and international rounds (61% notes vs 27% SAFEs)</strong>, per Fenwick &amp; West's 2023 geographic analysis.</p>
 
 <h2>Common Mistakes Founders Make</h2>
 
@@ -546,7 +546,7 @@ export default function SafeVsConvertibleNote2024ComparisonBlogPost() {
 
 <h3>How long should the maturity date be on a convertible note?</h3>
 
-<p>Standard maturity dates are 18-24 months, with 24 months being most common (54% of notes per Fenwick & West data). Choose maturity based on realistic Series A timeline plus 9-12 month buffer. If you expect Series A in 12 months, set 24-month maturity. Shorter maturities (12-18 months) work for explicit bridge rounds to imminent Series A. Avoid maturities beyond 36 months—they signal low conviction about near-term priced rounds and make investors nervous. Remember that 37% of notes require extensions, so build cushion into initial maturity selection.</p>
+<p>Standard maturity dates are 18-24 months, with 24 months being most common (54% of notes per Fenwick &amp; West data). Choose maturity based on realistic Series A timeline plus 9-12 month buffer. If you expect Series A in 12 months, set 24-month maturity. Shorter maturities (12-18 months) work for explicit bridge rounds to imminent Series A. Avoid maturities beyond 36 months—they signal low conviction about near-term priced rounds and make investors nervous. Remember that 37% of notes require extensions, so build cushion into initial maturity selection.</p>
               </article>
 
               {/* Tags */}
