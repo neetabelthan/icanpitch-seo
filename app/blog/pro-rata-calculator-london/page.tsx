@@ -114,8 +114,25 @@ export default function ProRataCalculatorLondonBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#understanding-pro-rata-rights-in-the-uk-and-european-venture" className="text-blue-600 hover:text-blue-700 text-sm">Understanding Pro-Rata Rights in the UK and European Venture Ecosystem</a></li>
+                  <li><a href="#ukeuropean-pro-rata-standards-and-regional-variations" className="text-blue-600 hover:text-blue-700 text-sm">UK/European Pro-Rata Standards and Regional Variations</a></li>
+                  <li><a href="#how-fca-regulations-impact-pro-rata-rights-and-follow-on-inv" className="text-blue-600 hover:text-blue-700 text-sm">How FCA Regulations Impact Pro-Rata Rights and Follow-On Investment</a></li>
+                  <li><a href="#calculating-pro-rata-allocations-in-uk-rounds" className="text-blue-600 hover:text-blue-700 text-sm">Calculating Pro-Rata Allocations in UK Rounds</a></li>
+                  <li><a href="#pro-rata-negotiation-tactics-for-london-founders" className="text-blue-600 hover:text-blue-700 text-sm">Pro-Rata Negotiation Tactics for London Founders</a></li>
+                  <li><a href="#common-mistakes-london-founders-make-with-pro-rata-rights" className="text-blue-600 hover:text-blue-700 text-sm">Common Mistakes London Founders Make with Pro-Rata Rights</a></li>
+                  <li><a href="#pro-rata-rights-in-uk-venture-rounds-vs-growth-equity" className="text-blue-600 hover:text-blue-700 text-sm">Pro-Rata Rights in UK Venture Rounds vs. Growth Equity</a></li>
+                  <li><a href="#building-a-uk-optimized-pro-rata-calculator" className="text-blue-600 hover:text-blue-700 text-sm">Building a UK-Optimized Pro-Rata Calculator</a></li>
+                  <li><a href="#uk-and-european-resources-for-pro-rata-modeling" className="text-blue-600 hover:text-blue-700 text-sm">UK and European Resources for Pro-Rata Modeling</a></li>
+                  <li><a href="#key-takeaways-for-london-and-uk-founders" className="text-blue-600 hover:text-blue-700 text-sm">Key Takeaways for London and UK Founders</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +143,7 @@ export default function ProRataCalculatorLondonBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Understanding Pro-Rata Rights in the UK and European Venture Ecosystem</h2>
+                <h2 id="understanding-pro-rata-rights-in-the-uk-and-european-venture">Understanding Pro-Rata Rights in the UK and European Venture Ecosystem</h2>
 
 <p>Pro-rata rights in the United Kingdom operate within a distinctly European venture capital framework that differs significantly from U.S. practices. While the fundamental concept remains the same—allowing investors to maintain their ownership percentage by participating proportionally in future funding rounds—the legal structures, regulatory environment, and investor expectations create unique considerations for London-based founders.</p>
 
@@ -134,7 +151,7 @@ export default function ProRataCalculatorLondonBlogPost() {
 
 <p>When Index Ventures or Balderton Capital invests £500K in your seed round at a £8M post-money valuation (giving them 6.25% ownership), pro-rata rights ensure they can invest £937.5K in a £15M Series A to maintain that 6.25% stake. The mechanics are universal, but the execution involves navigating UK company law, Enterprise Investment Scheme (EIS) considerations, Seed Enterprise Investment Scheme (SEIS) implications, and cross-border investor dynamics.</p>
 
-<h2>UK/European Pro-Rata Standards and Regional Variations</h2>
+<h2 id="ukeuropean-pro-rata-standards-and-regional-variations">UK/European Pro-Rata Standards and Regional Variations</h2>
 
 <p>The European venture ecosystem lacks the standardization found in Silicon Valley, with significant variations in pro-rata practices across different markets and investor types.</p>
 
@@ -174,7 +191,7 @@ export default function ProRataCalculatorLondonBlogPost() {
 
 <p>The presence of U.S. investors in London deals has gradually elevated pro-rata rights to a more standard expectation, particularly for fast-growing technology companies targeting global markets.</p>
 
-<h2>How FCA Regulations Impact Pro-Rata Rights and Follow-On Investment</h2>
+<h2 id="how-fca-regulations-impact-pro-rata-rights-and-follow-on-inv">How FCA Regulations Impact Pro-Rata Rights and Follow-On Investment</h2>
 
 <p>The Financial Conduct Authority (FCA) regulates financial services in the UK, and its rules create specific considerations for pro-rata rights that don't exist in the United States.</p>
 
@@ -210,7 +227,21 @@ export default function ProRataCalculatorLondonBlogPost() {
 
 <p>This approach complies with FCA rules, simplifies cap table management, and prevents the impossible situation of offering pro-rata rights to hundreds of retail investors who may not qualify under financial promotion rules.</p>
 
-<h2>Calculating Pro-Rata Allocations in UK Rounds</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Pro-Rata Participation</p>
+                <p className="text-gray-600 mb-4">See how investor follow-on rights affect your cap table in future fundraising rounds.</p>
+                <a
+                  href="https://icanpitch.com/pro-rata-rights-impact-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Pro-Rata Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="calculating-pro-rata-allocations-in-uk-rounds">Calculating Pro-Rata Allocations in UK Rounds</h2>
 
 <p>The mathematics of pro-rata rights are universal, but UK founders must account for several region-specific factors when modeling scenarios.</p>
 
@@ -275,7 +306,7 @@ export default function ProRataCalculatorLondonBlogPost() {
 
 <p>This is why many UK seed rounds with significant EIS investment include partial pro-rata (50-75%) rather than full pro-rata—it aligns legal pro-rata commitments with practical EIS limitations.</p>
 
-<h2>Pro-Rata Negotiation Tactics for London Founders</h2>
+<h2 id="pro-rata-negotiation-tactics-for-london-founders">Pro-Rata Negotiation Tactics for London Founders</h2>
 
 <p>Negotiating pro-rata rights in the UK requires understanding both global venture norms and local market dynamics.</p>
 
@@ -316,7 +347,7 @@ export default function ProRataCalculatorLondonBlogPost() {
 
 <p>This level of tax optimization is expected by sophisticated UK angels and demonstrates founder competence in navigating the UK funding environment.</p>
 
-<h2>Common Mistakes London Founders Make with Pro-Rata Rights</h2>
+<h2 id="common-mistakes-london-founders-make-with-pro-rata-rights">Common Mistakes London Founders Make with Pro-Rata Rights</h2>
 
 <p>UK-specific factors create pitfalls that don't exist in the U.S. venture ecosystem.</p>
 
@@ -354,7 +385,7 @@ export default function ProRataCalculatorLondonBlogPost() {
 
 <p><strong>Solution:</strong> If your company operates in a sensitive sector, include pro-rata provisions stating exercise is "subject to obtaining all required regulatory approvals, including under the National Security and Investment Act 2021." Provide extended exercise windows (90 days) to allow time for approval processes.</p>
 
-<h2>Pro-Rata Rights in UK Venture Rounds vs. Growth Equity</h2>
+<h2 id="pro-rata-rights-in-uk-venture-rounds-vs-growth-equity">Pro-Rata Rights in UK Venture Rounds vs. Growth Equity</h2>
 
 <p>The UK market has a distinctive growth equity and late-stage funding environment that affects how pro-rata rights evolve across funding stages.</p>
 
@@ -394,7 +425,7 @@ export default function ProRataCalculatorLondonBlogPost() {
 
 <p>This structure, increasingly common for UK unicorns, allows early investors to maintain significant ownership through pro-rata exercise while also taking some money off the table through secondary sales.</p>
 
-<h2>Building a UK-Optimized Pro-Rata Calculator</h2>
+<h2 id="building-a-uk-optimized-pro-rata-calculator">Building a UK-Optimized Pro-Rata Calculator</h2>
 
 <p>London founders need modeling tools that account for UK-specific factors. Here's a framework for building an effective calculator:</p>
 
@@ -429,7 +460,7 @@ export default function ProRataCalculatorLondonBlogPost() {
 
 <p>This range helps you structure Series A processes realistically and prepare for different scenarios during lead investor negotiations.</p>
 
-<h2>UK and European Resources for Pro-Rata Modeling</h2>
+<h2 id="uk-and-european-resources-for-pro-rata-modeling">UK and European Resources for Pro-Rata Modeling</h2>
 
 <p>London founders have access to several UK and Europe-specific resources:</p>
 
@@ -441,7 +472,7 @@ export default function ProRataCalculatorLondonBlogPost() {
 <li><strong>Tech Nation:</strong> UK ecosystem reports and fundraising guidance at <a href="https://technation.io" target="_blank" rel="noopener noreferrer">technation.io</a></li>
 </ul>
 
-<h2>Key Takeaways for London and UK Founders</h2>
+<h2 id="key-takeaways-for-london-and-uk-founders">Key Takeaways for London and UK Founders</h2>
 
 <p>Pro-rata rights in the UK venture ecosystem require navigating both global venture standards and UK-specific regulatory and tax considerations:</p>
 
@@ -479,13 +510,30 @@ export default function ProRataCalculatorLondonBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/pro-rata-calculator-berlin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pro-Rata Rights Calculator for Berlin Startups (2025)</span>
+                </Link>
+                <Link href="/blog/pro-rata-calculator-new-york/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pro-Rata Rights Calculator for New York City Startups (2025)</span>
+                </Link>
+                <Link href="/blog/pro-rata-calculator-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pro-Rata Rights Calculator for Silicon Valley Startups (2025)</span>
+                </Link>
+                <Link href="/blog/pro-rata-calculator-singapore/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pro-Rata Rights Calculator for Singapore Startups (2025)</span>
+                </Link>
+                <Link href="/blog/safe-calculator-b2b-saas-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">B2B SaaS SAFE Calculator for London Startups: UK Valuation Benchmarks vs US Comparables</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/pro-rata-calculator-series-b-business-founder-chicago-model-future-dilution-plan-investor-rights/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Pro Rata Calculator</Link>
+              <Link href="/blog/exit-strategy-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Exit & Pro-Rata Guides</Link>
             </div>
           </div>
         </section>
@@ -495,18 +543,18 @@ export default function ProRataCalculatorLondonBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Pro-Rata Participation
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See how investor follow-on rights affect your cap table in future fundraising rounds.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/pro-rata-rights-impact-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Pro-Rata Calculator &rarr;
               </a>
             </div>
           </div>

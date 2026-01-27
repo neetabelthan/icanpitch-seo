@@ -114,8 +114,31 @@ export default function BurnRateCalculatorDublinBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-dublin-startups-need-a-specialized-burn-rate-calculator" className="text-blue-600 hover:text-blue-700 text-sm">Why Dublin Startups Need a Specialized Burn Rate Calculator</a></li>
+                  <li><a href="#understanding-burn-rate-in-the-dublin-context" className="text-blue-600 hover:text-blue-700 text-sm">Understanding Burn Rate in the Dublin Context</a></li>
+                  <li><a href="#components-of-monthly-burn-rate-for-dublin-startups" className="text-blue-600 hover:text-blue-700 text-sm">Components of Monthly Burn Rate for Dublin Startups</a></li>
+                  <li><a href="#how-dublins-rampd-tax-credit-extends-your-runway" className="text-blue-600 hover:text-blue-700 text-sm">How Dublin's R&amp;D Tax Credit Extends Your Runway</a></li>
+                  <li><a href="#enterprise-ireland-and-state-support-impact-on-burn" className="text-blue-600 hover:text-blue-700 text-sm">Enterprise Ireland and State Support Impact on Burn</a></li>
+                  <li><a href="#dublins-funding-environment-and-target-runway" className="text-blue-600 hover:text-blue-700 text-sm">Dublin's Funding Environment and Target Runway</a></li>
+                  <li><a href="#comparing-dublin-burn-rates-to-london-and-berlin" className="text-blue-600 hover:text-blue-700 text-sm">Comparing Dublin Burn Rates to London and Berlin</a></li>
+                  <li><a href="#using-the-burn-rate-calculator-step-by-step-guide" className="text-blue-600 hover:text-blue-700 text-sm">Using the Burn Rate Calculator: Step-by-Step Guide</a></li>
+                  <li><a href="#red-flags-when-your-burn-rate-is-too-high" className="text-blue-600 hover:text-blue-700 text-sm">Red Flags: When Your Burn Rate Is Too High</a></li>
+                  <li><a href="#strategies-to-reduce-burn-rate-without-killing-growth" className="text-blue-600 hover:text-blue-700 text-sm">Strategies to Reduce Burn Rate Without Killing Growth</a></li>
+                  <li><a href="#communicating-burn-rate-to-investors" className="text-blue-600 hover:text-blue-700 text-sm">Communicating Burn Rate to Investors</a></li>
+                  <li><a href="#benchmarking-your-burn-rate-against-dublin-peers" className="text-blue-600 hover:text-blue-700 text-sm">Benchmarking Your Burn Rate Against Dublin Peers</a></li>
+                  <li><a href="#tools-and-resources-for-managing-burn-rate" className="text-blue-600 hover:text-blue-700 text-sm">Tools and Resources for Managing Burn Rate</a></li>
+                  <li><a href="#common-burn-rate-mistakes-dublin-founders-make" className="text-blue-600 hover:text-blue-700 text-sm">Common Burn Rate Mistakes Dublin Founders Make</a></li>
+                  <li><a href="#when-to-start-fundraising-based-on-burn-rate" className="text-blue-600 hover:text-blue-700 text-sm">When to Start Fundraising Based on Burn Rate</a></li>
+                  <li><a href="#take-control-of-your-burn-rate-today" className="text-blue-600 hover:text-blue-700 text-sm">Take Control of Your Burn Rate Today</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +149,7 @@ export default function BurnRateCalculatorDublinBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why Dublin Startups Need a Specialized Burn Rate Calculator</h2>
+                <h2 id="why-dublin-startups-need-a-specialized-burn-rate-calculator">Why Dublin Startups Need a Specialized Burn Rate Calculator</h2>
 
 <p>Dublin has emerged as Europe's premier tech hub, home to the European headquarters of Google, Facebook, Meta, LinkedIn, and hundreds of fast-growing startups in Silicon Docks. But running a startup in Ireland's capital comes with unique financial dynamics that generic burn rate calculators miss entirely.</p>
 
@@ -134,7 +157,7 @@ export default function BurnRateCalculatorDublinBlogPost() {
 
 <p>This guide provides a Dublin-specific framework for calculating, interpreting, and optimizing your monthly burn rate in EUR, with real benchmarks from Ireland's thriving startup ecosystem.</p>
 
-<h2>Understanding Burn Rate in the Dublin Context</h2>
+<h2 id="understanding-burn-rate-in-the-dublin-context">Understanding Burn Rate in the Dublin Context</h2>
 
 <p>Burn rate is the net amount of cash your startup spends each month. It's calculated as monthly expenses minus monthly revenue. For a pre-revenue startup spending €50,000 per month with no income, your burn rate is €50,000. If you're generating €15,000 in monthly revenue, your net burn rate is €35,000.</p>
 
@@ -156,7 +179,7 @@ export default function BurnRateCalculatorDublinBlogPost() {
 
 <p>This positioning makes Dublin an attractive option for startups that need access to tier-one talent without London's crushing costs, or that want European multinational experience without Berlin's smaller talent pool.</p>
 
-<h2>Components of Monthly Burn Rate for Dublin Startups</h2>
+<h2 id="components-of-monthly-burn-rate-for-dublin-startups">Components of Monthly Burn Rate for Dublin Startups</h2>
 
 <p>To calculate your burn rate accurately, you need to account for every category of monthly spending. Here's how Dublin startups typically break down their expenses:</p>
 
@@ -245,7 +268,21 @@ export default function BurnRateCalculatorDublinBlogPost() {
 
 <p>With €800,000 in the bank post-seed, this startup has a <strong>15.5-month runway</strong> before needing additional funding.</p>
 
-<h2>How Dublin's R&amp;D Tax Credit Extends Your Runway</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Calculate Your Burn Rate & Runway</p>
+                <p className="text-gray-600 mb-4">Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.</p>
+                <a
+                  href="https://icanpitch.com/burn-rate-runway-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Burn Rate Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="how-dublins-rampd-tax-credit-extends-your-runway">How Dublin's R&amp;D Tax Credit Extends Your Runway</h2>
 
 <p>Ireland's R&amp;D tax credit is one of Europe's most generous and can dramatically reduce your effective burn rate if your startup qualifies. The program offers a <strong>25% tax credit on qualifying R&amp;D expenditure</strong>, meaning for every €100,000 you spend on eligible R&amp;D activities, you can claim €25,000 back from Revenue.</p>
 
@@ -269,7 +306,7 @@ export default function BurnRateCalculatorDublinBlogPost() {
 
 <p>The credit is typically claimed after your financial year-end and received 6-12 months later, so while it doesn't provide immediate cash flow, it's a significant planning factor for runway calculations.</p>
 
-<h2>Enterprise Ireland and State Support Impact on Burn</h2>
+<h2 id="enterprise-ireland-and-state-support-impact-on-burn">Enterprise Ireland and State Support Impact on Burn</h2>
 
 <p>Enterprise Ireland, Ireland's state agency for indigenous companies, provides multiple funding mechanisms that reduce burn rate or extend runway for qualifying startups:</p>
 
@@ -287,7 +324,7 @@ export default function BurnRateCalculatorDublinBlogPost() {
 
 <p>Many Dublin startups layer Enterprise Ireland funding with private angel or seed rounds, effectively reducing their monthly burn rate by accessing cheaper-than-VC capital sources.</p>
 
-<h2>Dublin's Funding Environment and Target Runway</h2>
+<h2 id="dublins-funding-environment-and-target-runway">Dublin's Funding Environment and Target Runway</h2>
 
 <p>How long should your runway be? In Dublin's funding ecosystem, the answer depends on your stage and growth trajectory:</p>
 
@@ -317,7 +354,7 @@ export default function BurnRateCalculatorDublinBlogPost() {
 
 <p>Dublin founders typically plan for 18-24 months of runway to give themselves time to hit milestones and raise the next round without desperation. Running out of cash with only 3-6 months left puts you in a weak negotiating position.</p>
 
-<h2>Comparing Dublin Burn Rates to London and Berlin</h2>
+<h2 id="comparing-dublin-burn-rates-to-london-and-berlin">Comparing Dublin Burn Rates to London and Berlin</h2>
 
 <p>Understanding how Dublin's cost structure compares to peer European tech hubs helps you plan competitive compensation, set realistic budgets, and communicate effectively with international investors.</p>
 
@@ -345,7 +382,7 @@ export default function BurnRateCalculatorDublinBlogPost() {
 
 <p>Berlin's cost advantage is real but smaller than commonly assumed, and many founders find Dublin's access to experienced talent from Google, Meta, LinkedIn, and other tech giants worth the 15-20% premium. Engineers with 5-10 years at multinational tech companies bring product development discipline, scalability thinking, and international best practices that accelerate growth.</p>
 
-<h2>Using the Burn Rate Calculator: Step-by-Step Guide</h2>
+<h2 id="using-the-burn-rate-calculator-step-by-step-guide">Using the Burn Rate Calculator: Step-by-Step Guide</h2>
 
 <p>Whether you're using a spreadsheet or a dedicated burn rate calculator tool, follow this process to get accurate results and actionable insights:</p>
 
@@ -373,7 +410,7 @@ export default function BurnRateCalculatorDublinBlogPost() {
 
 <p>Project how your burn rate will change as you hire, scale marketing, or increase revenue. Build best-case, base-case, and worst-case scenarios to understand your range of possible outcomes.</p>
 
-<h2>Red Flags: When Your Burn Rate Is Too High</h2>
+<h2 id="red-flags-when-your-burn-rate-is-too-high">Red Flags: When Your Burn Rate Is Too High</h2>
 
 <p>Not all burn rates are created equal. Here are warning signs that your spending is outpacing your progress:</p>
 
@@ -385,7 +422,7 @@ export default function BurnRateCalculatorDublinBlogPost() {
 <li><strong>Premium office space pre-product-market fit:</strong> If you're paying €600+ per desk before reaching €500K ARR, you're overspending on vanity and underspending on growth</li>
 </ul>
 
-<h2>Strategies to Reduce Burn Rate Without Killing Growth</h2>
+<h2 id="strategies-to-reduce-burn-rate-without-killing-growth">Strategies to Reduce Burn Rate Without Killing Growth</h2>
 
 <p>When runway gets tight, founders face pressure to cut costs. Here's how to reduce burn strategically without destroying your growth trajectory:</p>
 
@@ -409,7 +446,7 @@ export default function BurnRateCalculatorDublinBlogPost() {
 
 <p>Every hire should be justified by clear impact on revenue or product milestones. If you can push a hire by 3 months without materially damaging growth, that's €15,000-€25,000 in preserved runway.</p>
 
-<h2>Communicating Burn Rate to Investors</h2>
+<h2 id="communicating-burn-rate-to-investors">Communicating Burn Rate to Investors</h2>
 
 <p>Investors expect transparency about burn rate and runway. In monthly updates or board meetings, provide:</p>
 
@@ -424,7 +461,7 @@ export default function BurnRateCalculatorDublinBlogPost() {
 
 <p>Irish and European investors particularly value capital efficiency. Demonstrating that you're extending runway with R&amp;D tax credits or Enterprise Ireland co-funding shows you're maximizing available resources.</p>
 
-<h2>Benchmarking Your Burn Rate Against Dublin Peers</h2>
+<h2 id="benchmarking-your-burn-rate-against-dublin-peers">Benchmarking Your Burn Rate Against Dublin Peers</h2>
 
 <p>How does your burn rate compare to other Dublin startups? While every company is different, here are rough benchmarks based on stage:</p>
 
@@ -437,7 +474,7 @@ export default function BurnRateCalculatorDublinBlogPost() {
 
 <p>If your burn rate is 50%+ above these benchmarks without corresponding revenue traction, you're likely overspending and should audit your budget.</p>
 
-<h2>Tools and Resources for Managing Burn Rate</h2>
+<h2 id="tools-and-resources-for-managing-burn-rate">Tools and Resources for Managing Burn Rate</h2>
 
 <p>Dublin founders have access to world-class tools and resources for financial planning and burn rate management:</p>
 
@@ -449,7 +486,7 @@ export default function BurnRateCalculatorDublinBlogPost() {
 <li><strong>Financial modeling templates:</strong> Download burn rate and runway models from Frontline Ventures, ACT VC, or European SaaS communities</li>
 </ul>
 
-<h2>Common Burn Rate Mistakes Dublin Founders Make</h2>
+<h2 id="common-burn-rate-mistakes-dublin-founders-make">Common Burn Rate Mistakes Dublin Founders Make</h2>
 
 <p>Learn from these frequent errors that inflate burn unnecessarily:</p>
 
@@ -461,7 +498,7 @@ export default function BurnRateCalculatorDublinBlogPost() {
 <li><strong>No scenario planning:</strong> Assuming best-case revenue growth and hiring accordingly leaves no buffer when sales take longer to ramp</li>
 </ul>
 
-<h2>When to Start Fundraising Based on Burn Rate</h2>
+<h2 id="when-to-start-fundraising-based-on-burn-rate">When to Start Fundraising Based on Burn Rate</h2>
 
 <p>Don't wait until you have 3 months of runway to start fundraising. In Dublin's market, raising capital takes time:</p>
 
@@ -473,7 +510,7 @@ export default function BurnRateCalculatorDublinBlogPost() {
 
 <p>Start fundraising conversations when you have 9-12 months of runway remaining. This gives you time to run a competitive process, negotiate favorable terms, and avoid accepting desperate deals because you're weeks from running out of cash.</p>
 
-<h2>Take Control of Your Burn Rate Today</h2>
+<h2 id="take-control-of-your-burn-rate-today">Take Control of Your Burn Rate Today</h2>
 
 <p>Your burn rate is the most critical financial metric for your startup's survival. In Dublin's competitive tech ecosystem, founders who master burn rate management extend runway, preserve equity, and position themselves for sustainable growth.</p>
 
@@ -502,13 +539,30 @@ export default function BurnRateCalculatorDublinBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/burn-rate-calculator-denver/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Denver Burn Rate Calculator: Track Your Startup's Cash Runway in Colorado's Tech Hub</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-seattle/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Seattle Startups: Track Your Runway in 2025</span>
+                </Link>
+                <Link href="/blog/safe-calculator-dublin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Dublin SAFE Calculator: Model Your Startup Valuation and Dilution in EUR</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-amsterdam/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Amsterdam Burn Rate Calculator: Master Your Startup Cash Runway in Europe's Tech Hub</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-barcelona/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Barcelona Burn Rate Calculator: Master Cash Runway for Spanish Startups</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/burn-rate-calculator-series-a-first-time-founder-new-york-plan-fundraising-timeline-extend-runway-efficiency/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Burn Rate Calculator</Link>
+              <Link href="/blog/burn-rate-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Burn Rate & Runway Guides</Link>
             </div>
           </div>
         </section>
@@ -518,18 +572,18 @@ export default function BurnRateCalculatorDublinBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Calculate Your Burn Rate & Runway
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/burn-rate-runway-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Burn Rate Calculator &rarr;
               </a>
             </div>
           </div>

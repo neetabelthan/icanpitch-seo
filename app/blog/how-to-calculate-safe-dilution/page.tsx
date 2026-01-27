@@ -119,8 +119,22 @@ export default function HowToCalculateSafeDilutionBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#understanding-safe-notes" className="text-blue-600 hover:text-blue-700 text-sm">Understanding SAFE Notes</a></li>
+                  <li><a href="#the-basics-of-safe-conversion" className="text-blue-600 hover:text-blue-700 text-sm">The Basics of SAFE Conversion</a></li>
+                  <li><a href="#calculating-your-dilution-a-real-example" className="text-blue-600 hover:text-blue-700 text-sm">Calculating Your Dilution: A Real Example</a></li>
+                  <li><a href="#common-mistakes-founders-make" className="text-blue-600 hover:text-blue-700 text-sm">Common Mistakes Founders Make</a></li>
+                  <li><a href="#tools-to-help-you-model-dilution" className="text-blue-600 hover:text-blue-700 text-sm">Tools to Help You Model Dilution</a></li>
+                  <li><a href="#best-practices-for-managing-safe-dilution" className="text-blue-600 hover:text-blue-700 text-sm">Best Practices for Managing SAFE Dilution</a></li>
+                  <li><a href="#key-takeaways" className="text-blue-600 hover:text-blue-700 text-sm">Key Takeaways</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -131,7 +145,7 @@ export default function HowToCalculateSafeDilutionBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Understanding SAFE Notes</h2>
+                <h2 id="understanding-safe-notes">Understanding SAFE Notes</h2>
 <p>
   SAFE (Simple Agreement for Future Equity) notes have become the standard instrument for early-stage fundraising.
   But many founders don't fully understand how these convert and dilute their ownership when the next priced round happens.
@@ -141,7 +155,7 @@ export default function HowToCalculateSafeDilutionBlogPost() {
   In this guide, we'll break down exactly how SAFE dilution works, with real examples you can apply to your own startup.
 </p>
 
-<h2>The Basics of SAFE Conversion</h2>
+<h2 id="the-basics-of-safe-conversion">The Basics of SAFE Conversion</h2>
 <p>
   When you raise money via a SAFE note, you're essentially selling future equity at a discount. The SAFE doesn't
   convert into shares immediately—it waits for a "trigger event," usually a priced equity round.
@@ -155,7 +169,7 @@ export default function HowToCalculateSafeDilutionBlogPost() {
   <li><strong>Post-Money vs Pre-Money</strong>: Whether the valuation cap includes the SAFE investment or not</li>
 </ul>
 
-<h2>Calculating Your Dilution: A Real Example</h2>
+<h2 id="calculating-your-dilution-a-real-example">Calculating Your Dilution: A Real Example</h2>
 <p>
   Let's say you raised $500K on a SAFE with a $5M post-money valuation cap. Now you're raising a Series A at a $12M pre-money valuation.
 </p>
@@ -181,7 +195,21 @@ export default function HowToCalculateSafeDilutionBlogPost() {
   <li>This 10% dilutes all existing shareholders proportionally</li>
 </ul>
 
-<h2>Common Mistakes Founders Make</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="common-mistakes-founders-make">Common Mistakes Founders Make</h2>
 
 <h3>1. Not Understanding Post-Money vs Pre-Money SAFEs</h3>
 <p>
@@ -200,13 +228,13 @@ export default function HowToCalculateSafeDilutionBlogPost() {
   Even if your Series A is above the cap, the discount rate can still apply if it results in a better price for investors.
 </p>
 
-<h2>Tools to Help You Model Dilution</h2>
+<h2 id="tools-to-help-you-model-dilution">Tools to Help You Model Dilution</h2>
 <p>
   Rather than calculating this manually (and risking errors), use our <a href="https://icanpitch.com/safe-calculator/" target="_blank" rel="noopener noreferrer">SAFE Calculator</a>
   to model different scenarios and understand exactly how your ownership will be affected.
 </p>
 
-<h2>Best Practices for Managing SAFE Dilution</h2>
+<h2 id="best-practices-for-managing-safe-dilution">Best Practices for Managing SAFE Dilution</h2>
 
 <ol>
   <li><strong>Set realistic caps</strong>: Don't set your valuation cap too low just to close a deal quickly</li>
@@ -216,7 +244,7 @@ export default function HowToCalculateSafeDilutionBlogPost() {
   <li><strong>Plan your option pool</strong>: Factor in both SAFE conversion and your employee option pool when modeling dilution</li>
 </ol>
 
-<h2>Key Takeaways</h2>
+<h2 id="key-takeaways">Key Takeaways</h2>
 <p>
   SAFE notes are a powerful tool for early-stage fundraising, but they come with complexity that many founders underestimate.
   By understanding how conversion works and modeling your dilution scenarios, you can make informed decisions that protect your ownership
@@ -262,13 +290,31 @@ export default function HowToCalculateSafeDilutionBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/avoiding-safe-dilution-traps-founders/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Avoiding SAFE Dilution Traps: 7 Mistakes Founders Make</span>
+                </Link>
+                <Link href="/blog/safe-calculator-first-time-founders-complete-guide/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for First-Time Founders: Complete 2025 Guide</span>
+                </Link>
+                <Link href="/blog/how-to-negotiate-safe-valuation-cap/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Negotiate SAFE Valuation Caps: 2025 Founder's Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-barcelona/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Barcelona SAFE Calculator: Navigate Startup Valuations in Spain's Tech Hub</span>
+                </Link>
+                <Link href="/blog/safe-calculator-dublin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Dublin SAFE Calculator: Model Your Startup Valuation and Dilution in EUR</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/equity-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Equity, Vesting & Option Pool Guides</Link>
             </div>
           </div>
         </section>
@@ -278,18 +324,18 @@ export default function HowToCalculateSafeDilutionBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

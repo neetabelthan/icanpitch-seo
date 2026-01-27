@@ -114,8 +114,27 @@ export default function UnderstandingProRataRightsStartupInvestingBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#what-are-pro-rata-rights" className="text-blue-600 hover:text-blue-700 text-sm">What Are Pro-Rata Rights?</a></li>
+                  <li><a href="#how-pro-rata-rights-work-a-real-example" className="text-blue-600 hover:text-blue-700 text-sm">How Pro-Rata Rights Work: A Real Example</a></li>
+                  <li><a href="#why-pro-rata-rights-matter-for-investors" className="text-blue-600 hover:text-blue-700 text-sm">Why Pro-Rata Rights Matter for Investors</a></li>
+                  <li><a href="#why-pro-rata-rights-matter-for-founders" className="text-blue-600 hover:text-blue-700 text-sm">Why Pro-Rata Rights Matter for Founders</a></li>
+                  <li><a href="#types-of-pro-rata-rights" className="text-blue-600 hover:text-blue-700 text-sm">Types of Pro-Rata Rights</a></li>
+                  <li><a href="#calculating-pro-rata-allocation" className="text-blue-600 hover:text-blue-700 text-sm">Calculating Pro-Rata Allocation</a></li>
+                  <li><a href="#common-pro-rata-rights-scenarios" className="text-blue-600 hover:text-blue-700 text-sm">Common Pro-Rata Rights Scenarios</a></li>
+                  <li><a href="#negotiating-pro-rata-rights-as-a-founder" className="text-blue-600 hover:text-blue-700 text-sm">Negotiating Pro-Rata Rights as a Founder</a></li>
+                  <li><a href="#pro-rata-rights-and-cap-table-management" className="text-blue-600 hover:text-blue-700 text-sm">Pro-Rata Rights and Cap Table Management</a></li>
+                  <li><a href="#the-investors-perspective-when-to-exercise-pro-rata" className="text-blue-600 hover:text-blue-700 text-sm">The Investor's Perspective: When to Exercise Pro-Rata</a></li>
+                  <li><a href="#best-practices-for-founders" className="text-blue-600 hover:text-blue-700 text-sm">Best Practices for Founders</a></li>
+                  <li><a href="#key-takeaways" className="text-blue-600 hover:text-blue-700 text-sm">Key Takeaways</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +145,7 @@ export default function UnderstandingProRataRightsStartupInvestingBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>What Are Pro-Rata Rights?</h2>
+                <h2 id="what-are-pro-rata-rights">What Are Pro-Rata Rights?</h2>
 <p>
   Pro-rata rights (also called participation rights or follow-on rights) give investors the option to maintain their
   ownership percentage in a company by investing additional capital in future funding rounds. This is one of the most
@@ -139,7 +158,7 @@ export default function UnderstandingProRataRightsStartupInvestingBlogPost() {
   their ownership percentage will be diluted as new investors come in.
 </p>
 
-<h2>How Pro-Rata Rights Work: A Real Example</h2>
+<h2 id="how-pro-rata-rights-work-a-real-example">How Pro-Rata Rights Work: A Real Example</h2>
 <p>
   Let's walk through a concrete scenario to understand how pro-rata rights function in practice.
 </p>
@@ -167,7 +186,7 @@ export default function UnderstandingProRataRightsStartupInvestingBlogPost() {
   They already have ownership from the seed round, so they need to invest enough in the Series A to maintain that percentage.
 </p>
 
-<h2>Why Pro-Rata Rights Matter for Investors</h2>
+<h2 id="why-pro-rata-rights-matter-for-investors">Why Pro-Rata Rights Matter for Investors</h2>
 
 <h3>1. Access to High-Performing Companies</h3>
 <p>
@@ -187,7 +206,21 @@ export default function UnderstandingProRataRightsStartupInvestingBlogPost() {
   performers. This is often where the majority of returns are generated.
 </p>
 
-<h2>Why Pro-Rata Rights Matter for Founders</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Pro-Rata Participation</p>
+                <p className="text-gray-600 mb-4">See how investor follow-on rights affect your cap table in future fundraising rounds.</p>
+                <a
+                  href="https://icanpitch.com/pro-rata-rights-impact-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Pro-Rata Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="why-pro-rata-rights-matter-for-founders">Why Pro-Rata Rights Matter for Founders</h2>
 
 <h3>The Trade-Off: Alignment vs. Flexibility</h3>
 <p>
@@ -201,7 +234,7 @@ export default function UnderstandingProRataRightsStartupInvestingBlogPost() {
   <li><strong>Constraint</strong>: You may be obligated to allocate round space to existing investors rather than new ones</li>
 </ul>
 
-<h2>Types of Pro-Rata Rights</h2>
+<h2 id="types-of-pro-rata-rights">Types of Pro-Rata Rights</h2>
 
 <h3>1. Full Pro-Rata</h3>
 <p>
@@ -226,7 +259,7 @@ export default function UnderstandingProRataRightsStartupInvestingBlogPost() {
   the option to participate before the company can offer shares to new investors.
 </p>
 
-<h2>Calculating Pro-Rata Allocation</h2>
+<h2 id="calculating-pro-rata-allocation">Calculating Pro-Rata Allocation</h2>
 
 <p>
   The formula for calculating how much an investor needs to invest to maintain their ownership percentage is:
@@ -256,7 +289,7 @@ export default function UnderstandingProRataRightsStartupInvestingBlogPost() {
   to model different scenarios and understand exactly how pro-rata investments affect ownership across multiple rounds.
 </p>
 
-<h2>Common Pro-Rata Rights Scenarios</h2>
+<h2 id="common-pro-rata-rights-scenarios">Common Pro-Rata Rights Scenarios</h2>
 
 <h3>Scenario 1: Investor Exercises Full Pro-Rata</h3>
 <p>
@@ -283,7 +316,7 @@ export default function UnderstandingProRataRightsStartupInvestingBlogPost() {
   relationship management become critical.
 </p>
 
-<h2>Negotiating Pro-Rata Rights as a Founder</h2>
+<h2 id="negotiating-pro-rata-rights-as-a-founder">Negotiating Pro-Rata Rights as a Founder</h2>
 
 <h3>Who Should Get Pro-Rata Rights?</h3>
 <p>
@@ -304,7 +337,7 @@ export default function UnderstandingProRataRightsStartupInvestingBlogPost() {
   <li><strong>Super pro-rata caps</strong>: If a lead investor negotiates super pro-rata, cap it at a reasonable multiple (1.5x-2x)</li>
 </ol>
 
-<h2>Pro-Rata Rights and Cap Table Management</h2>
+<h2 id="pro-rata-rights-and-cap-table-management">Pro-Rata Rights and Cap Table Management</h2>
 
 <p>
   As your company grows through multiple funding rounds, pro-rata rights can create cap table complexity:
@@ -320,7 +353,7 @@ export default function UnderstandingProRataRightsStartupInvestingBlogPost() {
   This is why many founders limit pro-rata rights to major investors or put time limits on when these rights expire.
 </p>
 
-<h2>The Investor's Perspective: When to Exercise Pro-Rata</h2>
+<h2 id="the-investors-perspective-when-to-exercise-pro-rata">The Investor's Perspective: When to Exercise Pro-Rata</h2>
 
 <p>
   If you're an investor with pro-rata rights, here are factors to consider when deciding whether to exercise:
@@ -334,7 +367,7 @@ export default function UnderstandingProRataRightsStartupInvestingBlogPost() {
   <li><strong>Signal to market</strong>: What message does exercising (or not) send to new investors?</li>
 </ul>
 
-<h2>Best Practices for Founders</h2>
+<h2 id="best-practices-for-founders">Best Practices for Founders</h2>
 
 <ol>
   <li><strong>Be selective early on</strong>: Only grant pro-rata rights to investors who will truly add value beyond capital</li>
@@ -345,7 +378,7 @@ export default function UnderstandingProRataRightsStartupInvestingBlogPost() {
   <li><strong>Use standard terms</strong>: Don't create overly complex pro-rata provisions that will confuse future investors</li>
 </ol>
 
-<h2>Key Takeaways</h2>
+<h2 id="key-takeaways">Key Takeaways</h2>
 
 <p>
   Pro-rata rights are a fundamental part of venture capital investing, balancing the interests of early investors with
@@ -385,13 +418,31 @@ export default function UnderstandingProRataRightsStartupInvestingBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/pro-rata-calculator-new-york/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pro-Rata Rights Calculator for New York City Startups (2025)</span>
+                </Link>
+                <Link href="/blog/pro-rata-calculator-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pro-Rata Rights Calculator for Silicon Valley Startups (2025)</span>
+                </Link>
+                <Link href="/blog/pro-rata-calculator-berlin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pro-Rata Rights Calculator for Berlin Startups (2025)</span>
+                </Link>
+                <Link href="/blog/pro-rata-calculator-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pro-Rata Rights Calculator for London Startups (2025)</span>
+                </Link>
+                <Link href="/blog/pro-rata-calculator-singapore/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pro-Rata Rights Calculator for Singapore Startups (2025)</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/pro-rata-calculator-series-b-business-founder-chicago-model-future-dilution-plan-investor-rights/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Pro Rata Calculator</Link>
+              <Link href="/blog/equity-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Equity, Vesting & Option Pool Guides</Link>
+                <Link href="/blog/exit-strategy-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Exit & Pro-Rata Guides</Link>
             </div>
           </div>
         </section>
@@ -401,18 +452,18 @@ export default function UnderstandingProRataRightsStartupInvestingBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Pro-Rata Participation
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See how investor follow-on rights affect your cap table in future fundraising rounds.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/pro-rata-rights-impact-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Pro-Rata Calculator &rarr;
               </a>
             </div>
           </div>

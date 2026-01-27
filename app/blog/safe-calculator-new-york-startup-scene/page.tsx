@@ -52,6 +52,60 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why are NYC SAFE caps 20-30% lower than Silicon Valley?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The gap reflects structural differences, not company quality. NYC's investor base includes more conservative East Coast VCs and finance-background angels who emphasize risk-adjusted returns. Additionally, NYC's industry mix (fintech, ecommerce, media) trades at lower revenue multiples than SF's infrastructure software focus. However, NYC caps run 15-20% above national averages, making the city a premium market overall. The key is understanding that NYC investors value traction and unit economics over pure growth narrative, which means you may need more revenue to justify higher caps compared to SF peers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I account for multiple SAFEs with different caps in my dilution calculation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Each SAFE converts independently at Series A using its own cap and discount terms. If you raise $300K at a $6M cap and $400K at an $8M cap, they don't average out — they convert separately. The $300K SAFE will convert at better terms (lower cap = more shares for investors). Use a SAFE calculator that supports multiple SAFE inputs to see cumulative dilution. Critical point: 47% of NYC seed companies raise 2-3 SAFEs, so always model the total dilution, not individual SAFEs. The combined dilution is often 20-30% higher than founders initially estimate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should fintech founders expect better SAFE terms in NYC than other sectors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, significantly. NYC fintech SAFEs average 22% higher caps than ecommerce and 18% higher than generic SaaS at equivalent traction levels (Carta data). This reflects NYC's position as the global fintech capital with concentrated investor expertise. Benchmark: $1M ARR fintech company can raise at $12M-$15M SAFE cap in NYC, while ecommerce at $3M revenue raises at $10M-$12M cap. If you're building fintech, leverage NYC's domain expertise by targeting fintech-specific investors (Fin VC, Primary Venture Partners, Viola Fintech) who understand your regulatory complexity and can justify higher caps to their LPs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What Series A metrics do NYC investors expect when I raise a SAFE?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "NYC investors evaluate SAFEs based on your credible path to Series A, which typically requires: Fintech: $1M-$2M ARR with 100%+ net dollar retention. Ecommerce: $3M-$5M annual revenue with 35%+ gross margins. B2B SaaS: $500K-$1M ARR with strong enterprise logos. These metrics are 25-40% higher than SF expectations at seed stage, reflecting East Coast emphasis on capital efficiency. When negotiating SAFE terms, build a financial model showing how SAFE capital gets you to these milestones with 6+ months of runway remaining. NYC investors who see a clear path to Series A will accept caps 15-20% higher than those who view your SAFE as \"bridge to figure things out.\""
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the option pool affect my SAFE dilution calculation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Series A option pool (typically 16-20% in NYC) dilutes all existing shareholders proportionally before new investors enter. This means your SAFE investors get diluted by the pool too, and your founder ownership decreases more than just the Series A percentage. Math example: If SAFEs converted to 10% ownership and Series A creates an 18% pool plus takes 25% equity, your founder dilution isn't just 35% — it's approximately 38-40% depending on calculation method. Always include the option pool in your SAFE calculator inputs to see true dilution. Most founders forget this step and are surprised at Series A when their ownership is 3-5 percentage points lower than expected."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it worth raising from both NYC and SF investors to get better average SAFE terms?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For fintech, ecommerce, and media companies, yes — if you have legitimate connections in both markets. Data shows 23% of NYC founders now deliberately split SAFE rounds geographically, raising blended caps 12-18% higher than NYC-only rounds. The strategy: anchor with $300K-$500K from NYC investors at market caps ($8M-$10M), then add $200K-$300K from SF strategic angels at higher caps ($11M-$13M). Your blended average improves while you gain network effects in both ecosystems. However, this only works if you can articulate why SF investors should care about your East Coast company — usually through category leadership (fintech) or expansion plans (ecommerce entering West Coast markets)."
+        }
+      }
+    ]
   }
 ];
 
@@ -115,8 +169,28 @@ export default function SafeCalculatorNewYorkStartupSceneBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#the-new-york-safe-landscape-what-nyc-founders-need-to-know" className="text-blue-600 hover:text-blue-700 text-sm">The New York SAFE Landscape: What NYC Founders Need to Know</a></li>
+                  <li><a href="#nyc-safe-benchmarks-vs-national-and-silicon-valley-averages" className="text-blue-600 hover:text-blue-700 text-sm">NYC SAFE Benchmarks vs National and Silicon Valley Averages</a></li>
+                  <li><a href="#meet-david-a-brooklyn-fintech-founder-navigating-nyc-safe-te" className="text-blue-600 hover:text-blue-700 text-sm">Meet David: A Brooklyn Fintech Founder Navigating NYC SAFE Terms</a></li>
+                  <li><a href="#industry-specific-safe-guidance-for-nyc-sectors" className="text-blue-600 hover:text-blue-700 text-sm">Industry-Specific SAFE Guidance for NYC Sectors</a></li>
+                  <li><a href="#east-coast-investor-expectations-what-makes-nyc-safes-differ" className="text-blue-600 hover:text-blue-700 text-sm">East Coast Investor Expectations: What Makes NYC SAFEs Different</a></li>
+                  <li><a href="#nyc-vs-sf-vs-austin-vs-national-comprehensive-safe-compariso" className="text-blue-600 hover:text-blue-700 text-sm">NYC vs SF vs Austin vs National: Comprehensive SAFE Comparison Table</a></li>
+                  <li><a href="#geographic-arbitrage-opportunities-for-nyc-founders" className="text-blue-600 hover:text-blue-700 text-sm">Geographic Arbitrage Opportunities for NYC Founders</a></li>
+                  <li><a href="#15-critical-nyc-safe-statistics-every-founder-must-know" className="text-blue-600 hover:text-blue-700 text-sm">15 Critical NYC SAFE Statistics Every Founder Must Know</a></li>
+                  <li><a href="#how-to-calculate-nyc-safe-dilution-step-by-step-with-davids-" className="text-blue-600 hover:text-blue-700 text-sm">How to Calculate NYC SAFE Dilution: Step-by-Step with David's Example</a></li>
+                  <li><a href="#nyc-specific-safe-negotiation-strategies" className="text-blue-600 hover:text-blue-700 text-sm">NYC-Specific SAFE Negotiation Strategies</a></li>
+                  <li><a href="#frequently-asked-questions-safe-calculators-for-nyc-founders" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions: SAFE Calculators for NYC Founders</a></li>
+                  <li><a href="#key-takeaways-nyc-safe-strategies-for-maximum-founder-equity" className="text-blue-600 hover:text-blue-700 text-sm">Key Takeaways: NYC SAFE Strategies for Maximum Founder Equity</a></li>
+                  <li><a href="#next-steps-calculate-your-nyc-safe-dilution-today" className="text-blue-600 hover:text-blue-700 text-sm">Next Steps: Calculate Your NYC SAFE Dilution Today</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -127,7 +201,7 @@ export default function SafeCalculatorNewYorkStartupSceneBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>The New York SAFE Landscape: What NYC Founders Need to Know</h2>
+                <h2 id="the-new-york-safe-landscape-what-nyc-founders-need-to-know">The New York SAFE Landscape: What NYC Founders Need to Know</h2>
 <p>
   If you're raising a SAFE in New York City, you're entering one of the most sophisticated yet conservative startup funding markets in the United States. <strong>Here's the critical statistic every NYC founder should know: New York SAFE valuation caps average $8M-$15M, running 20-30% below Silicon Valley benchmarks but 15-20% above national averages</strong> (Carta NYC Market Report, 2024). This isn't a disadvantage — it's a strategic reality that reflects New York's unique investor composition, industry mix, and capital efficiency expectations.
 </p>
@@ -138,7 +212,7 @@ export default function SafeCalculatorNewYorkStartupSceneBlogPost() {
   This guide breaks down SAFE calculations specifically for New York founders, using NYC-specific benchmarks, investor expectations, and the geographic arbitrage opportunities that make the city's startup ecosystem unique. Whether you're building a fintech platform in Brooklyn, an ecommerce brand in Manhattan, or an adtech company in Chelsea, you need to understand how SAFE notes work in the New York context.
 </p>
 
-<h2>NYC SAFE Benchmarks vs National and Silicon Valley Averages</h2>
+<h2 id="nyc-safe-benchmarks-vs-national-and-silicon-valley-averages">NYC SAFE Benchmarks vs National and Silicon Valley Averages</h2>
 
 <h3>The Core Valuation Gap: Numbers Every NYC Founder Should Memorize</h3>
 <p>
@@ -179,7 +253,7 @@ export default function SafeCalculatorNewYorkStartupSceneBlogPost() {
   <strong>Data point from FirstMark Capital:</strong> NYC fintech startups raising SAFEs have 38% higher revenue at time of raise compared to SF equivalents, yet receive 15-20% lower caps. This reflects East Coast emphasis on traction over narrative.
 </p>
 
-<h2>Meet David: A Brooklyn Fintech Founder Navigating NYC SAFE Terms</h2>
+<h2 id="meet-david-a-brooklyn-fintech-founder-navigating-nyc-safe-te">Meet David: A Brooklyn Fintech Founder Navigating NYC SAFE Terms</h2>
 
 <h3>The Founder Profile</h3>
 <p>
@@ -216,7 +290,21 @@ export default function SafeCalculatorNewYorkStartupSceneBlogPost() {
   <strong>Key insight from calculator:</strong> The $6M cap creates 40% more dilution than the $10M cap despite being only 33% smaller investment. David negotiates the angel syndicate up to $7M cap in exchange for the board observer seat.
 </p>
 
-<h2>Industry-Specific SAFE Guidance for NYC Sectors</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="industry-specific-safe-guidance-for-nyc-sectors">Industry-Specific SAFE Guidance for NYC Sectors</h2>
 
 <h3>Fintech Founders: The NYC Advantage Sector</h3>
 <p>
@@ -266,7 +354,7 @@ export default function SafeCalculatorNewYorkStartupSceneBlogPost() {
   <strong>Negotiation lever:</strong> If you can show subscription revenue or B2B SaaS revenue vs. pure advertising, NYC investors treat you like a SaaS company with 30-40% higher caps.
 </p>
 
-<h2>East Coast Investor Expectations: What Makes NYC SAFEs Different</h2>
+<h2 id="east-coast-investor-expectations-what-makes-nyc-safes-differ">East Coast Investor Expectations: What Makes NYC SAFEs Different</h2>
 
 <h3>The Unit Economics Obsession</h3>
 <p>
@@ -309,7 +397,7 @@ export default function SafeCalculatorNewYorkStartupSceneBlogPost() {
   <strong>Why this matters for SAFE calculations:</strong> When you use a SAFE calculator, model your conversion assuming Series A happens at the metrics NYC investors expect. For fintech: $1M+ ARR. For ecommerce: $3M+ annual revenue with 30%+ margins. For SaaS: $500K+ ARR with strong net retention.
 </p>
 
-<h2>NYC vs SF vs Austin vs National: Comprehensive SAFE Comparison Table</h2>
+<h2 id="nyc-vs-sf-vs-austin-vs-national-comprehensive-safe-compariso">NYC vs SF vs Austin vs National: Comprehensive SAFE Comparison Table</h2>
 
 <h3>Pre-Seed SAFE Terms Comparison</h3>
 
@@ -439,7 +527,7 @@ export default function SafeCalculatorNewYorkStartupSceneBlogPost() {
   <li><strong>Traction expectations vary dramatically:</strong> NYC expects more revenue at seed ($300K ARR) than SF ($200K ARR), but less than Austin ($400K ARR where capital is scarcer)</li>
 </ul>
 
-<h2>Geographic Arbitrage Opportunities for NYC Founders</h2>
+<h2 id="geographic-arbitrage-opportunities-for-nyc-founders">Geographic Arbitrage Opportunities for NYC Founders</h2>
 
 <h3>The East Coast to West Coast SAFE Play</h3>
 <p>
@@ -487,7 +575,7 @@ export default function SafeCalculatorNewYorkStartupSceneBlogPost() {
   <strong>Warning:</strong> This only works if you have legitimate NYC investor connections. Cold-emailing NYC VCs from Austin typically results in Austin-level caps.
 </p>
 
-<h2>15 Critical NYC SAFE Statistics Every Founder Must Know</h2>
+<h2 id="15-critical-nyc-safe-statistics-every-founder-must-know">15 Critical NYC SAFE Statistics Every Founder Must Know</h2>
 
 <h3>Valuation and Terms Data</h3>
 <ol>
@@ -516,7 +604,7 @@ export default function SafeCalculatorNewYorkStartupSceneBlogPost() {
   <li><strong>NYC ecommerce SAFE caps average 22% below fintech equivalents</strong> at the same revenue levels (Carta analysis)</li>
 </ol>
 
-<h2>How to Calculate NYC SAFE Dilution: Step-by-Step with David's Example</h2>
+<h2 id="how-to-calculate-nyc-safe-dilution-step-by-step-with-davids-">How to Calculate NYC SAFE Dilution: Step-by-Step with David's Example</h2>
 
 <h3>Step 1: Input David's Actual SAFE Terms</h3>
 <p>
@@ -625,7 +713,7 @@ export default function SafeCalculatorNewYorkStartupSceneBlogPost() {
   <strong>The 2.9 percentage point difference:</strong> On a $100M exit, this is $2.9M less for David by raising in NYC vs. SF. However, David's NYC investor network helped him close partnership deals that accelerated revenue growth, arguably creating more value than the cap discount cost.
 </p>
 
-<h2>NYC-Specific SAFE Negotiation Strategies</h2>
+<h2 id="nyc-specific-safe-negotiation-strategies">NYC-Specific SAFE Negotiation Strategies</h2>
 
 <h3>Leverage Your Financial Services Background</h3>
 <p>
@@ -675,7 +763,7 @@ export default function SafeCalculatorNewYorkStartupSceneBlogPost() {
   <strong>Why this works:</strong> Pro-rata rights are worth approximately 0.5-1% of cap increase to investors who plan to follow-on. This is a low-cost concession for founders that materially improves terms.
 </p>
 
-<h2>Frequently Asked Questions: SAFE Calculators for NYC Founders</h2>
+<h2 id="frequently-asked-questions-safe-calculators-for-nyc-founders">Frequently Asked Questions: SAFE Calculators for NYC Founders</h2>
 
 <h3>Why are NYC SAFE caps 20-30% lower than Silicon Valley?</h3>
 <p>
@@ -707,7 +795,7 @@ export default function SafeCalculatorNewYorkStartupSceneBlogPost() {
   For fintech, ecommerce, and media companies, yes — if you have legitimate connections in both markets. <strong>Data shows 23% of NYC founders now deliberately split SAFE rounds geographically, raising blended caps 12-18% higher than NYC-only rounds.</strong> The strategy: anchor with $300K-$500K from NYC investors at market caps ($8M-$10M), then add $200K-$300K from SF strategic angels at higher caps ($11M-$13M). Your blended average improves while you gain network effects in both ecosystems. However, this only works if you can articulate why SF investors should care about your East Coast company — usually through category leadership (fintech) or expansion plans (ecommerce entering West Coast markets).
 </p>
 
-<h2>Key Takeaways: NYC SAFE Strategies for Maximum Founder Equity</h2>
+<h2 id="key-takeaways-nyc-safe-strategies-for-maximum-founder-equity">Key Takeaways: NYC SAFE Strategies for Maximum Founder Equity</h2>
 
 <ul>
   <li><strong>NYC SAFE caps run 20-30% below SF but 15-20% above national:</strong> $6M median pre-seed, $11M median seed vs. SF's $8.5M/$15M and national $5.2M/$10M (Carta, 2024)</li>
@@ -722,7 +810,7 @@ export default function SafeCalculatorNewYorkStartupSceneBlogPost() {
   <li><strong>Multiple SAFEs compound dilution:</strong> 47% of NYC seed companies raise 2-3 SAFEs — cumulative dilution is 20-30% higher than single SAFE calculation</li>
 </ul>
 
-<h2>Next Steps: Calculate Your NYC SAFE Dilution Today</h2>
+<h2 id="next-steps-calculate-your-nyc-safe-dilution-today">Next Steps: Calculate Your NYC SAFE Dilution Today</h2>
 
 <p>
   Before you sign your next SAFE term sheet from NYC investors, spend 15 minutes with a <a href="https://icanpitch.com/safe-calculator/" target="_blank" rel="noopener noreferrer">SAFE calculator</a> modeling NYC-specific scenarios. Input your actual terms ($6M-$11M caps depending on stage), assume conservative Series A assumptions ($20M-$25M pre-money for fintech, $18M-$22M for ecommerce), and include the 16-20% option pool that NYC Series A investors will require.
@@ -768,13 +856,31 @@ export default function SafeCalculatorNewYorkStartupSceneBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/safe-calculator-fintech-new-york/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Fintech SAFE Calculator for New York Startups: Valuation Benchmarks & Investor Expectations</span>
+                </Link>
+                <Link href="/blog/how-to-negotiate-safe-valuation-cap/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Negotiate SAFE Valuation Caps: 2025 Founder's Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-bangalore/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Bangalore Startups: 2025 India Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-chicago/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Chicago SAFE Calculator: Navigate Midwest Valuations and Investor Expectations</span>
+                </Link>
+                <Link href="/blog/safe-calculator-first-time-founders-complete-guide/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for First-Time Founders: Complete 2025 Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -784,18 +890,18 @@ export default function SafeCalculatorNewYorkStartupSceneBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

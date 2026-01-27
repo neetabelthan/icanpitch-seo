@@ -52,6 +52,60 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Should I use a valuation cap or a discount rate on my SAFE?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use a valuation cap only (no discount) for simplicity and investor preference. According to Cooley's 2024 data, 62% of SAFEs now include only a cap. Caps provide downside protection for investors while being easier to explain and model. If investors push for both cap AND discount, the cap will almost always be the binding term (whichever gives the investor more equity), making the discount redundant in most scenarios."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I negotiate a cap when I have zero revenue?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Anchor to three factors: (1) Team credentials (previous exits, domain expertise), (2) Market opportunity size (TAM of $1B+), and (3) Product progress (working prototype, design partners, LOIs). Reference the pre-revenue benchmark ranges for your geography. For example: \"We're pre-revenue but have 20 design partners committed to paid pilots at launch. Based on Carta's pre-seed data for [your region], $7M-$8M caps are standard for companies at this stage with comparable team backgrounds.\" The SAFE calculator can show investors how much equity they'd receive even in conservative Series A scenarios."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I have different caps for different investors in the same round?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, but use tiering sparingly and strategically. Acceptable reasons: (1) Rewarding the first investor who committed when you had zero momentum, (2) Giving a strategic investor with exceptional value-add a better cap, or (3) Offering a higher cap to a brand-name angel for signaling value. Keep tiers within 15-20% of each other (e.g., $7M for early/strategic, $8M for standard, $9M for late/brand-name). Always disclose tiering to subsequent investors to maintain trust."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if investors say my cap is too high for my stage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ask for specifics: \"Can you help me understand what cap you think is appropriate and why?\" If they cite lack of traction, ask: \"What specific milestones would justify the cap we're proposing?\" This either reveals they're using outdated benchmarks or helps you identify real gaps. Counter with market data: \"According to Carta's Q4 2024 data, the median pre-seed cap is $8M. We're at the median for our stage.\" If multiple investors say the same thing, your cap may genuinely be misaligned—consider adjusting 10-15% lower or waiting to hit more milestones before raising."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the valuation cap affect future fundraising rounds?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your SAFE cap sets the baseline for your Series A valuation expectations. If you raise at a $10M cap, investors expect your Series A will be at least $20M-$30M (2-3x markup). If your Series A comes in below 2x your cap, it's a \"down round\" signal that can hurt momentum and future investor confidence. Conversely, a too-low cap can create \"phantom dilution\" where early investors own more than expected, crowding out future investor allocations. Always model forward: your cap should leave room for healthy markups (2.5-4x) and sufficient Series A investor ownership (20-25%)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should first-time founders expect lower caps than repeat founders?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, statistically. Carta data shows repeat founders with previous exits command 60% higher caps on average than first-time founders at similar traction levels. This is rational—investors pay a premium for proven execution ability. However, first-time founders with exceptional traction (strong revenue growth, viral adoption, strategic partnerships) can command repeat-founder-level caps. Focus on building traction that speaks louder than your resume. If you're a first-time founder, set your cap at the 40th-50th percentile for your stage, then let traction drive it higher."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +168,28 @@ export default function HowToNegotiateSafeValuationCapBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#what-is-a-safe-valuation-cap-and-why-it-matters" className="text-blue-600 hover:text-blue-700 text-sm">What Is a SAFE Valuation Cap and Why It Matters</a></li>
+                  <li><a href="#geographic-valuation-cap-benchmarks-for-2025" className="text-blue-600 hover:text-blue-700 text-sm">Geographic Valuation Cap Benchmarks for 2025</a></li>
+                  <li><a href="#the-30-40-rule-your-negotiation-framework" className="text-blue-600 hover:text-blue-700 text-sm">The 30-40% Rule: Your Negotiation Framework</a></li>
+                  <li><a href="#critical-negotiation-tactics-what-to-say-and-when" className="text-blue-600 hover:text-blue-700 text-sm">Critical Negotiation Tactics: What to Say and When</a></li>
+                  <li><a href="#15-data-points-to-strengthen-your-negotiation" className="text-blue-600 hover:text-blue-700 text-sm">15 Data Points to Strengthen Your Negotiation</a></li>
+                  <li><a href="#common-safe-cap-negotiation-mistakes" className="text-blue-600 hover:text-blue-700 text-sm">Common SAFE Cap Negotiation Mistakes</a></li>
+                  <li><a href="#whats-reasonable-vs-whats-greedy-the-bright-lines" className="text-blue-600 hover:text-blue-700 text-sm">What's Reasonable vs. What's Greedy: The Bright Lines</a></li>
+                  <li><a href="#when-to-push-back-vs-when-to-accept" className="text-blue-600 hover:text-blue-700 text-sm">When to Push Back vs. When to Accept</a></li>
+                  <li><a href="#step-by-step-safe-cap-negotiation-playbook" className="text-blue-600 hover:text-blue-700 text-sm">Step-by-Step SAFE Cap Negotiation Playbook</a></li>
+                  <li><a href="#safe-cap-calculator-model-your-scenarios" className="text-blue-600 hover:text-blue-700 text-sm">SAFE Cap Calculator: Model Your Scenarios</a></li>
+                  <li><a href="#frequently-asked-questions" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions</a></li>
+                  <li><a href="#your-next-steps-execute-your-safe-cap-negotiation" className="text-blue-600 hover:text-blue-700 text-sm">Your Next Steps: Execute Your SAFE Cap Negotiation</a></li>
+                  <li><a href="#master-your-safe-cap-negotiation-today" className="text-blue-600 hover:text-blue-700 text-sm">Master Your SAFE Cap Negotiation Today</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -128,7 +202,7 @@ export default function HowToNegotiateSafeValuationCapBlogPost() {
               ">
                 <p><strong>TL;DR:</strong> SAFE valuation caps typically range from $6M-$20M depending on stage, geography, and traction. Use the 30-40% Rule (cap should be 30-40% of your expected Series A valuation) as your negotiation anchor. Know your market benchmarks, avoid over-optimizing, and focus on closing strong investors quickly.</p>
 
-<h2>What Is a SAFE Valuation Cap and Why It Matters</h2>
+<h2 id="what-is-a-safe-valuation-cap-and-why-it-matters">What Is a SAFE Valuation Cap and Why It Matters</h2>
 
 <p>A SAFE (Simple Agreement for Future Equity) valuation cap is the maximum valuation at which your SAFE converts into equity during a future priced round. It's the single most important economic term in a SAFE because it directly determines how much of your company early investors will own.</p>
 
@@ -144,7 +218,7 @@ export default function HowToNegotiateSafeValuationCapBlogPost() {
 
 <p>Y Combinator reports that 73% of startups in their Winter 2024 batch raised on SAFE notes with caps, with the average cap at $9.2M for first-time founders and $14.8M for repeat founders. Understanding where you fit in these benchmarks is your starting point for negotiation.</p>
 
-<h2>Geographic Valuation Cap Benchmarks for 2025</h2>
+<h2 id="geographic-valuation-cap-benchmarks-for-2025">Geographic Valuation Cap Benchmarks for 2025</h2>
 
 <p>Location significantly impacts what investors consider "reasonable" for SAFE caps. Based on combined data from AngelList, Carta, and Cooley's Go-To-Market Report, here are realistic ranges by region:</p>
 
@@ -185,7 +259,7 @@ export default function HowToNegotiateSafeValuationCapBlogPost() {
 
 <p><strong>International Benchmark Note:</strong> European pre-seed caps average £4M-£6M ($5M-$7.5M USD), while Southeast Asian markets typically see $3M-$8M caps depending on country and sector maturity.</p>
 
-<h2>The 30-40% Rule: Your Negotiation Framework</h2>
+<h2 id="the-30-40-rule-your-negotiation-framework">The 30-40% Rule: Your Negotiation Framework</h2>
 
 <p>The most practical framework for determining your SAFE cap is what experienced founders call <strong>The 30-40% Rule</strong>: Your valuation cap should be 30-40% of your realistic Series A pre-money valuation.</p>
 
@@ -237,7 +311,21 @@ export default function HowToNegotiateSafeValuationCapBlogPost() {
 <li>Bringing on strategic investor with exceptional value-add (not just money)</li>
 </ul>
 
-<h2>Critical Negotiation Tactics: What to Say and When</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="critical-negotiation-tactics-what-to-say-and-when">Critical Negotiation Tactics: What to Say and When</h2>
 
 <h3>Tactic 1: Lead with Market Data, Not Desire</h3>
 
@@ -283,7 +371,7 @@ export default function HowToNegotiateSafeValuationCapBlogPost() {
 
 <p><strong>Real example:</strong> Jason (our Austin founder) initially proposed an $8M cap. His first interested angel pushed for $6M. Jason held firm because he had two other angels interested at $7M-$8M. When a former VP of Engineering from Datadog offered $100K at $6M plus hands-on technical advisory (8 hours/month), Jason accepted the $6M cap for that specific investor's check. For subsequent angels without equivalent value-add, he closed them at $7.5M.</p>
 
-<h2>15 Data Points to Strengthen Your Negotiation</h2>
+<h2 id="15-data-points-to-strengthen-your-negotiation">15 Data Points to Strengthen Your Negotiation</h2>
 
 <p>Reference these statistics when discussing your SAFE cap with investors:</p>
 
@@ -305,7 +393,7 @@ export default function HowToNegotiateSafeValuationCapBlogPost() {
 <li><strong>Index Ventures (2024):</strong> "European founders raising in USD are seeing cap parity with U.S. peers for the first time since 2019."</li>
 </ol>
 
-<h2>Common SAFE Cap Negotiation Mistakes</h2>
+<h2 id="common-safe-cap-negotiation-mistakes">Common SAFE Cap Negotiation Mistakes</h2>
 
 <h3>Mistake 1: Setting the Cap Too Low Out of Fear</h3>
 
@@ -353,7 +441,7 @@ export default function HowToNegotiateSafeValuationCapBlogPost() {
 
 <p><strong>The fix:</strong> If an investor won't budge on cap but you believe they're strategic, negotiate non-economic terms that provide value without affecting dilution.</p>
 
-<h2>What's Reasonable vs. What's Greedy: The Bright Lines</h2>
+<h2 id="whats-reasonable-vs-whats-greedy-the-bright-lines">What's Reasonable vs. What's Greedy: The Bright Lines</h2>
 
 <h3>Reasonable Cap Positioning</h3>
 
@@ -395,7 +483,7 @@ export default function HowToNegotiateSafeValuationCapBlogPost() {
 
 <p>Jason Lemkin of SaaStr notes: "If you're growing faster than 90% of startups at your stage, you should price like the top 10%. If you're median, price at median. The market is efficient at punishing overconfidence."</p>
 
-<h2>When to Push Back vs. When to Accept</h2>
+<h2 id="when-to-push-back-vs-when-to-accept">When to Push Back vs. When to Accept</h2>
 
 <h3>Push Back When:</h3>
 
@@ -446,7 +534,7 @@ export default function HowToNegotiateSafeValuationCapBlogPost() {
 
 <p>Jason ended up with a blended cap of ~$7.7M, 96% of his target, and a round that closed in 5 weeks. His total dilution: 9.7% (well within his 10% target).</p>
 
-<h2>Step-by-Step SAFE Cap Negotiation Playbook</h2>
+<h2 id="step-by-step-safe-cap-negotiation-playbook">Step-by-Step SAFE Cap Negotiation Playbook</h2>
 
 <h3>Phase 1: Preparation (Before Any Investor Conversations)</h3>
 
@@ -514,7 +602,7 @@ export default function HowToNegotiateSafeValuationCapBlogPost() {
 <li><strong>Track your cap table:</strong> Update your cap table immediately with SAFE conversion calculations. <a href="https://icanpitch.com/safe-calculator/" target="_blank">Use iCanPitch's SAFE calculator</a> to project fully diluted ownership at various Series A scenarios.</li>
 </ol>
 
-<h2>SAFE Cap Calculator: Model Your Scenarios</h2>
+<h2 id="safe-cap-calculator-model-your-scenarios">SAFE Cap Calculator: Model Your Scenarios</h2>
 
 <p>Before entering any negotiation, model multiple cap scenarios to understand dilution implications. Here's what to calculate:</p>
 
@@ -548,7 +636,7 @@ Example: $750K total raised ÷ $8M cap = 9.375% dilution</li>
 
 <p>The calculator provides visual cap table outputs showing exactly how much of your company each investor owns after conversion, helping you make data-driven decisions during negotiations.</p>
 
-<h2>Frequently Asked Questions</h2>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
 
 <h3>Should I use a valuation cap or a discount rate on my SAFE?</h3>
 
@@ -574,7 +662,7 @@ Example: $750K total raised ÷ $8M cap = 9.375% dilution</li>
 
 <p>Yes, statistically. Carta data shows repeat founders with previous exits command 60% higher caps on average than first-time founders at similar traction levels. This is rational—investors pay a premium for proven execution ability. However, first-time founders with exceptional traction (strong revenue growth, viral adoption, strategic partnerships) can command repeat-founder-level caps. Focus on building traction that speaks louder than your resume. If you're a first-time founder, set your cap at the 40th-50th percentile for your stage, then let traction drive it higher.</p>
 
-<h2>Your Next Steps: Execute Your SAFE Cap Negotiation</h2>
+<h2 id="your-next-steps-execute-your-safe-cap-negotiation">Your Next Steps: Execute Your SAFE Cap Negotiation</h2>
 
 <p>Here's your action plan for the next 48 hours:</p>
 
@@ -614,7 +702,7 @@ Example: $750K total raised ÷ $8M cap = 9.375% dilution</li>
 <li><strong>Communicate progress to SAFE investors:</strong> Monthly or quarterly updates showing momentum toward Series A milestones. This keeps investors engaged and willing to participate in future rounds.</li>
 </ol>
 
-<h2>Master Your SAFE Cap Negotiation Today</h2>
+<h2 id="master-your-safe-cap-negotiation-today">Master Your SAFE Cap Negotiation Today</h2>
 
 <p>Negotiating your SAFE valuation cap doesn't have to be intimidating. With the right data, frameworks like the 30-40% Rule, and tools like the <a href="https://icanpitch.com/safe-calculator/" target="_blank">iCanPitch SAFE Calculator</a>, you can approach investors with confidence and close your round at fair terms.</p>
 
@@ -644,13 +732,32 @@ Example: $750K total raised ÷ $8M cap = 9.375% dilution</li>
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/safe-calculator-first-time-founders-complete-guide/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for First-Time Founders: Complete 2025 Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-silicon-valley-founders-guide/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Silicon Valley Founders: Bay Area Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-bangalore/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Bangalore Startups: 2025 India Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-chicago/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Chicago SAFE Calculator: Navigate Midwest Valuations and Investor Expectations</span>
+                </Link>
+                <Link href="/blog/safe-calculator-los-angeles/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Los Angeles Startups: LA Valuation Benchmarks & Terms</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/equity-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Equity, Vesting & Option Pool Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -660,18 +767,18 @@ Example: $750K total raised ÷ $8M cap = 9.375% dilution</li>
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

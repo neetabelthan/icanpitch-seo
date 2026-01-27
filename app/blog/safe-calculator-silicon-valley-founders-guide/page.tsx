@@ -52,6 +52,60 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why are Silicon Valley SAFE caps 40-50% higher than national averages?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Three structural reasons drive the premium: (1) Bay Area talent costs run 45-60% higher ($185K-$220K engineer salaries vs $125K-$150K nationally), requiring more capital for equivalent milestones; (2) 340+ seed VCs in SF create intense competition, pushing valuations higher; (3) Bay Area exits average 1.7x higher valuations than secondary markets, justifying higher entry prices for investors targeting 10-20x returns."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use Silicon Valley SAFE cap benchmarks if I'm raising from SF investors but operating remotely?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, if you execute geographic arbitrage correctly. 68% of Sand Hill Road investors now fund remote-first companies at near-SF cap levels. The key is demonstrating you can recruit SF-caliber talent (ex-FAANG, ex-unicorn) remotely while maintaining lower burn rates. Frame it as: \"Bay Area team quality and exit potential, with capital efficiency from distributed operations.\""
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What SAFE cap should I target as a first-time founder in Silicon Valley with no traction?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For pre-revenue, pre-product first-time founders in SF: target $8M-$10M pre-seed caps. This sits at the lower end of Bay Area benchmarks but accounts for higher execution risk. First-time founders command 15-25% lower caps than repeat founders with identical traction. As you prove product-market fit (revenue, growth, retention), you can raise additional SAFEs at $12M-$15M caps."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I model multiple SAFEs with different caps using a SAFE calculator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use a calculator that supports multiple SAFE tranches with independent caps and discount rates. Input each SAFE separately: SAFE #1 at $500K with $8M cap, SAFE #2 at $750K with $12M cap, etc. The calculator should show cumulative dilution when all SAFEs convert at Series A. Key insight: Multiple SAFEs create 8-12% more dilution than a single SAFE of equivalent total amount due to cap differences."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the relationship between my SAFE cap and expected Series A valuation in Silicon Valley?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Rule of thumb: Set your SAFE cap at 25-35% of your expected Series A pre-money valuation. If you anticipate raising Series A at $40M pre-money, target $10M-$14M SAFE caps. This gives SAFE investors 3-4x upside from cap to Series A, which most Bay Area angels expect. The median SF Series A is $32M, suggesting pre-seed caps of $8M-$11M and seed caps of $11M-$16M."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I negotiate SAFE discount rates or valuation caps in Silicon Valley?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Focus 100% of your negotiation energy on the valuation cap, not the discount. In 82% of successful SAFEs, the cap triggers conversion (not the discount) because Series A valuations exceed the cap. Discount rates (15-20%) are standardized and non-negotiable in 95% of deals. A 5% difference in discount rate changes dilution by under 1 percentage point, while a $2M-$3M cap difference changes dilution by 3-5 percentage points."
+        }
+      }
+    ]
   }
 ];
 
@@ -115,8 +169,31 @@ export default function SafeCalculatorSiliconValleyFoundersGuideBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-silicon-valley-safe-valuations-are-40-50-higher-than-nat" className="text-blue-600 hover:text-blue-700 text-sm">Why Silicon Valley SAFE Valuations Are 40-50% Higher Than National Averages</a></li>
+                  <li><a href="#silicon-valley-safe-benchmarks-what-sand-hill-road-actually-" className="text-blue-600 hover:text-blue-700 text-sm">Silicon Valley SAFE Benchmarks: What Sand Hill Road Actually Pays</a></li>
+                  <li><a href="#meet-priya-aiml-founder-navigating-sand-hill-road-valuations" className="text-blue-600 hover:text-blue-700 text-sm">Meet Priya: AI/ML Founder Navigating Sand Hill Road Valuations</a></li>
+                  <li><a href="#why-bay-area-safe-caps-are-higher-the-structural-economics" className="text-blue-600 hover:text-blue-700 text-sm">Why Bay Area SAFE Caps Are Higher: The Structural Economics</a></li>
+                  <li><a href="#when-to-use-bay-area-benchmarks-vs-national-benchmarks" className="text-blue-600 hover:text-blue-700 text-sm">When to Use Bay Area Benchmarks vs National Benchmarks</a></li>
+                  <li><a href="#silicon-valley-vs-other-tech-hubs-safe-cap-comparison" className="text-blue-600 hover:text-blue-700 text-sm">Silicon Valley vs Other Tech Hubs: SAFE Cap Comparison</a></li>
+                  <li><a href="#how-to-calculate-your-silicon-valley-safe-step-by-step" className="text-blue-600 hover:text-blue-700 text-sm">How to Calculate Your Silicon Valley SAFE: Step-by-Step</a></li>
+                  <li><a href="#silicon-valley-investor-expectations-what-sand-hill-road-vcs" className="text-blue-600 hover:text-blue-700 text-sm">Silicon Valley Investor Expectations: What Sand Hill Road VCs Actually Look For</a></li>
+                  <li><a href="#the-geographic-arbitrage-playbook-raising-silicon-valley-cap" className="text-blue-600 hover:text-blue-700 text-sm">The Geographic Arbitrage Playbook: Raising Silicon Valley Capital Without SF Costs</a></li>
+                  <li><a href="#15-silicon-valley-safe-statistics-every-bay-area-founder-sho" className="text-blue-600 hover:text-blue-700 text-sm">15 Silicon Valley SAFE Statistics Every Bay Area Founder Should Know</a></li>
+                  <li><a href="#modeling-your-silicon-valley-safe-calculator-scenarios-for-b" className="text-blue-600 hover:text-blue-700 text-sm">Modeling Your Silicon Valley SAFE: Calculator Scenarios for Bay Area Founders</a></li>
+                  <li><a href="#common-silicon-valley-safe-mistakes-and-how-to-avoid-them" className="text-blue-600 hover:text-blue-700 text-sm">Common Silicon Valley SAFE Mistakes and How to Avoid Them</a></li>
+                  <li><a href="#when-to-negotiate-your-silicon-valley-safe-cap-and-when-to-a" className="text-blue-600 hover:text-blue-700 text-sm">When to Negotiate Your Silicon Valley SAFE Cap (And When to Accept Investor Terms)</a></li>
+                  <li><a href="#frequently-asked-questions-silicon-valley-safe-calculators" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions: Silicon Valley SAFE Calculators</a></li>
+                  <li><a href="#key-takeaways-silicon-valley-safe-calculators-for-bay-area-f" className="text-blue-600 hover:text-blue-700 text-sm">Key Takeaways: Silicon Valley SAFE Calculators for Bay Area Founders</a></li>
+                  <li><a href="#next-steps-model-your-silicon-valley-safe-today" className="text-blue-600 hover:text-blue-700 text-sm">Next Steps: Model Your Silicon Valley SAFE Today</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -127,7 +204,7 @@ export default function SafeCalculatorSiliconValleyFoundersGuideBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why Silicon Valley SAFE Valuations Are 40-50% Higher Than National Averages</h2>
+                <h2 id="why-silicon-valley-safe-valuations-are-40-50-higher-than-nat">Why Silicon Valley SAFE Valuations Are 40-50% Higher Than National Averages</h2>
 <p>
   <strong>Here's the Silicon Valley reality check: SAFE valuation caps in the Bay Area average 40-50% higher than the national median</strong> (Carta Regional Startup Data, 2024). While the median pre-seed SAFE cap nationally sits at $6M, Silicon Valley founders routinely close SAFEs at $8M-$12M caps. For seed-stage companies, the gap widens further: $12M national median versus $15M-$25M in SF.
 </p>
@@ -138,7 +215,7 @@ export default function SafeCalculatorSiliconValleyFoundersGuideBlogPost() {
   For Silicon Valley founders, using national SAFE benchmarks leaves money on the table. Understanding regional pricing dynamics and using a <a href="https://icanpitch.com/safe-calculator/" target="_blank" rel="noopener noreferrer">SAFE calculator</a> calibrated to Bay Area norms ensures you raise at market rates without unnecessarily diluting your equity.
 </p>
 
-<h2>Silicon Valley SAFE Benchmarks: What Sand Hill Road Actually Pays</h2>
+<h2 id="silicon-valley-safe-benchmarks-what-sand-hill-road-actually-">Silicon Valley SAFE Benchmarks: What Sand Hill Road Actually Pays</h2>
 
 <h3>Pre-Seed SAFE Caps: $8M-$12M is the New Normal</h3>
 <p>
@@ -170,7 +247,7 @@ export default function SafeCalculatorSiliconValleyFoundersGuideBlogPost() {
   Extension caps bridge the valuation gap between seed ($15M-$18M) and the eventual Series A ($30M-$50M). Setting extension caps at 50-70% of expected Series A valuations gives bridge investors 1.4-2x upside while avoiding excessive dilution for founders.
 </p>
 
-<h2>Meet Priya: AI/ML Founder Navigating Sand Hill Road Valuations</h2>
+<h2 id="meet-priya-aiml-founder-navigating-sand-hill-road-valuations">Meet Priya: AI/ML Founder Navigating Sand Hill Road Valuations</h2>
 
 <h3>The Founder Profile</h3>
 <p>
@@ -216,7 +293,21 @@ export default function SafeCalculatorSiliconValleyFoundersGuideBlogPost() {
   Priya chooses Term Sheet B, understanding that Bay Area caps reflect regional economics, not inflated expectations. Her $12M cap positions her SAFE investors for a 2.5x return at a $30M Series A — attractive for angels without sacrificing founder equity.
 </p>
 
-<h2>Why Bay Area SAFE Caps Are Higher: The Structural Economics</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="why-bay-area-safe-caps-are-higher-the-structural-economics">Why Bay Area SAFE Caps Are Higher: The Structural Economics</h2>
 
 <h3>Talent Costs: The 45-60% Silicon Valley Premium</h3>
 <p>
@@ -256,7 +347,7 @@ export default function SafeCalculatorSiliconValleyFoundersGuideBlogPost() {
   Faster fundraising cycles mean SAFE investors convert to equity sooner, reducing time-value risk. When a SAFE converts in 12 months versus 20 months, investors accept slightly lower effective returns (via higher caps) because capital isn't locked up as long.
 </p>
 
-<h2>When to Use Bay Area Benchmarks vs National Benchmarks</h2>
+<h2 id="when-to-use-bay-area-benchmarks-vs-national-benchmarks">When to Use Bay Area Benchmarks vs National Benchmarks</h2>
 
 <h3>You Should Use Silicon Valley SAFE Caps If:</h3>
 <ul>
@@ -286,7 +377,7 @@ export default function SafeCalculatorSiliconValleyFoundersGuideBlogPost() {
   <strong>Execution requirement:</strong> To justify SF caps with non-SF operations, you need either (1) remote teams with FAANG-equivalent talent, or (2) exceptional early traction (revenue, growth, retention) proving you can compete nationally despite geographic location.
 </p>
 
-<h2>Silicon Valley vs Other Tech Hubs: SAFE Cap Comparison</h2>
+<h2 id="silicon-valley-vs-other-tech-hubs-safe-cap-comparison">Silicon Valley vs Other Tech Hubs: SAFE Cap Comparison</h2>
 
 <h3>The Five-Market Benchmark Analysis (2024 Data)</h3>
 <p>
@@ -393,7 +484,7 @@ export default function SafeCalculatorSiliconValleyFoundersGuideBlogPost() {
   <li><strong>Geographic arbitrage is widening:</strong> The gap between SF caps ($10M pre-seed) and national caps ($6M pre-seed) has grown from 35% in 2022 to 67% in 2024</li>
 </ul>
 
-<h2>How to Calculate Your Silicon Valley SAFE: Step-by-Step</h2>
+<h2 id="how-to-calculate-your-silicon-valley-safe-step-by-step">How to Calculate Your Silicon Valley SAFE: Step-by-Step</h2>
 
 <h3>Step 1: Calibrate Your Raise Amount to Bay Area Burn Rates</h3>
 <p>
@@ -455,7 +546,7 @@ export default function SafeCalculatorSiliconValleyFoundersGuideBlogPost() {
   If your calculator shows post-Series A ownership below these targets, your SAFE cap is too low relative to the amount raised. <strong>Rule of thumb: Raising $1M-$1.5M at a $10M-$12M cap should dilute you roughly 10-12%, leaving 40-45% ownership for a single founder after Series A and option pool.</strong>
 </p>
 
-<h2>Silicon Valley Investor Expectations: What Sand Hill Road VCs Actually Look For</h2>
+<h2 id="silicon-valley-investor-expectations-what-sand-hill-road-vcs">Silicon Valley Investor Expectations: What Sand Hill Road VCs Actually Look For</h2>
 
 <h3>Traction Expectations for Premium Caps</h3>
 <p>
@@ -504,7 +595,7 @@ export default function SafeCalculatorSiliconValleyFoundersGuideBlogPost() {
   <li><strong>Revenue traction:</strong> For B2B SaaS at seed stage, under $30K MRR with a $20M cap triggers investor skepticism about capital efficiency</li>
 </ul>
 
-<h2>The Geographic Arbitrage Playbook: Raising Silicon Valley Capital Without SF Costs</h2>
+<h2 id="the-geographic-arbitrage-playbook-raising-silicon-valley-cap">The Geographic Arbitrage Playbook: Raising Silicon Valley Capital Without SF Costs</h2>
 
 <h3>Why Remote-First Founders Can Command Bay Area Caps</h3>
 <p>
@@ -536,7 +627,7 @@ export default function SafeCalculatorSiliconValleyFoundersGuideBlogPost() {
   <li><strong>Ecosystem-dependent startups:</strong> If your growth depends on SF ecosystem relationships (intros, partnerships, talent), remote operations handicap you</li>
 </ul>
 
-<h2>15 Silicon Valley SAFE Statistics Every Bay Area Founder Should Know</h2>
+<h2 id="15-silicon-valley-safe-statistics-every-bay-area-founder-sho">15 Silicon Valley SAFE Statistics Every Bay Area Founder Should Know</h2>
 
 <ol>
   <li><strong>Silicon Valley pre-seed SAFE caps average $10M, 67% higher than the $6M national median</strong> (Carta Regional Data, 2024)</li>
@@ -556,7 +647,7 @@ export default function SafeCalculatorSiliconValleyFoundersGuideBlogPost() {
   <li><strong>47% of Silicon Valley seed companies raise 2-3 separate SAFEs before Series A, compared to 31% nationally</strong> (Carta SAFE Stacking Report, 2024)</li>
 </ol>
 
-<h2>Modeling Your Silicon Valley SAFE: Calculator Scenarios for Bay Area Founders</h2>
+<h2 id="modeling-your-silicon-valley-safe-calculator-scenarios-for-b">Modeling Your Silicon Valley SAFE: Calculator Scenarios for Bay Area Founders</h2>
 
 <h3>Scenario 1: AI/ML Pre-Seed in Palo Alto</h3>
 <p>
@@ -622,7 +713,7 @@ export default function SafeCalculatorSiliconValleyFoundersGuideBlogPost() {
   <li><strong>Capital efficiency advantage:</strong> 18-month runway to Series A on $1.5M raised versus needing $2.2M-$2.5M with full SF burn</li>
 </ul>
 
-<h2>Common Silicon Valley SAFE Mistakes and How to Avoid Them</h2>
+<h2 id="common-silicon-valley-safe-mistakes-and-how-to-avoid-them">Common Silicon Valley SAFE Mistakes and How to Avoid Them</h2>
 
 <h3>Mistake #1: Using National Benchmarks in SF Investor Conversations</h3>
 <p>
@@ -668,7 +759,7 @@ export default function SafeCalculatorSiliconValleyFoundersGuideBlogPost() {
   <strong>How to avoid:</strong> Use a <a href="https://icanpitch.com/safe-calculator/" target="_blank" rel="noopener noreferrer">SAFE calculator</a> that supports multiple SAFE tranches. Before closing your second or third SAFE, input all existing SAFEs plus the new one to see combined dilution. Ensure your total dilution from all SAFEs stays under 15-18% to leave room for Series A and option pool.
 </p>
 
-<h2>When to Negotiate Your Silicon Valley SAFE Cap (And When to Accept Investor Terms)</h2>
+<h2 id="when-to-negotiate-your-silicon-valley-safe-cap-and-when-to-a">When to Negotiate Your Silicon Valley SAFE Cap (And When to Accept Investor Terms)</h2>
 
 <h3>You Have Negotiating Leverage When:</h3>
 <ul>
@@ -697,7 +788,7 @@ export default function SafeCalculatorSiliconValleyFoundersGuideBlogPost() {
   <li><strong>Highlight competitive interest:</strong> "We have term sheets from three firms at $9M-$10M. If you're interested at $11M given [strategic value/brand/network], we'd prioritize you."</li>
 </ol>
 
-<h2>Frequently Asked Questions: Silicon Valley SAFE Calculators</h2>
+<h2 id="frequently-asked-questions-silicon-valley-safe-calculators">Frequently Asked Questions: Silicon Valley SAFE Calculators</h2>
 
 <h3>Why are Silicon Valley SAFE caps 40-50% higher than national averages?</h3>
 <p>
@@ -729,7 +820,7 @@ export default function SafeCalculatorSiliconValleyFoundersGuideBlogPost() {
   <strong>Focus 100% of your negotiation energy on the valuation cap, not the discount.</strong> In 82% of successful SAFEs, the cap triggers conversion (not the discount) because Series A valuations exceed the cap. Discount rates (15-20%) are standardized and non-negotiable in 95% of deals. A 5% difference in discount rate changes dilution by under 1 percentage point, while a $2M-$3M cap difference changes dilution by 3-5 percentage points.
 </p>
 
-<h2>Key Takeaways: Silicon Valley SAFE Calculators for Bay Area Founders</h2>
+<h2 id="key-takeaways-silicon-valley-safe-calculators-for-bay-area-f">Key Takeaways: Silicon Valley SAFE Calculators for Bay Area Founders</h2>
 
 <ul>
   <li><strong>Silicon Valley SAFE caps average 40-50% above national medians:</strong> Pre-seed caps run $8M-$12M (vs $6M nationally), seed caps run $15M-$25M (vs $12M nationally)</li>
@@ -749,7 +840,7 @@ export default function SafeCalculatorSiliconValleyFoundersGuideBlogPost() {
   <li><strong>Always include option pools in dilution calculations:</strong> 15-20% pools created pre-Series A dilute founders and SAFE investors before new money arrives</li>
 </ul>
 
-<h2>Next Steps: Model Your Silicon Valley SAFE Today</h2>
+<h2 id="next-steps-model-your-silicon-valley-safe-today">Next Steps: Model Your Silicon Valley SAFE Today</h2>
 
 <p>
   Before negotiating your next Bay Area SAFE, invest 15-20 minutes with a <a href="https://icanpitch.com/safe-calculator/" target="_blank" rel="noopener noreferrer">SAFE calculator</a> calibrated to Silicon Valley benchmarks. Input your actual terms, model Series A scenarios at $25M, $35M, and $50M pre-money (realistic SF ranges), and see exactly how regional pricing affects your dilution.
@@ -787,13 +878,31 @@ export default function SafeCalculatorSiliconValleyFoundersGuideBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/safe-calculator-first-time-founders-complete-guide/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for First-Time Founders: Complete 2025 Guide</span>
+                </Link>
+                <Link href="/blog/how-to-negotiate-safe-valuation-cap/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Negotiate SAFE Valuation Caps: 2025 Founder's Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-ai-ml-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">AI/ML SAFE Calculator Silicon Valley: 2025 Valuation Benchmarks for Foundation Models vs Application Layer</span>
+                </Link>
+                <Link href="/blog/safe-calculator-consumer-tech-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Consumer Tech SAFE Calculator Silicon Valley: Post-iOS14 Valuation Benchmarks for Social & Mobile Apps</span>
+                </Link>
+                <Link href="/blog/safe-calculator-bangalore/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Bangalore Startups: 2025 India Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -803,18 +912,18 @@ export default function SafeCalculatorSiliconValleyFoundersGuideBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

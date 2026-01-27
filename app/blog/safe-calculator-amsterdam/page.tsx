@@ -52,6 +52,60 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a typical valuation cap for Amsterdam seed-stage startups?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Amsterdam seed-stage startups raising via SAFE typically negotiate valuation caps between €5M-€12M in 2025. Pre-seed rounds (pre-product or minimal traction) range €2M-€5M caps. Seed rounds with demonstrated product-market fit and €200K-€500K ARR command €8M-€15M caps. Amsterdam caps are generally 10-20% lower than London but 15-25% higher than Berlin."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should Amsterdam startups raise SAFEs in EUR or USD?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Amsterdam startups should default to EUR-denominated SAFEs if the majority of capital is raised from European investors and your Series A will likely be led by a European VC. Accept USD SAFEs from US investors who require them, but track currency exposure carefully and model conversion scenarios at different exchange rates. Mixed-currency cap tables are manageable but add complexity."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the Innovation Box affect SAFE valuations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Amsterdam startups eligible for Innovation Box treatment (9% tax rate on IP-derived profits vs. 25.8% standard rate) can justify 10-15% higher valuations when negotiating SAFE caps. The tax advantage increases after-tax cash flows and long-term investor returns. Deeptech and software startups with patentable innovations should highlight Innovation Box eligibility during fundraising to support higher caps."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do SAFEs comply with Netherlands corporate law?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, but standard US SAFE templates require modifications for Dutch BV structures. Work with Netherlands startup lawyers (VBAT, Benvalor, CMS Netherlands) to adapt SAFE terms for Dutch corporate law compliance, including proper share transfer procedures, pre-emption right waivers, and notarial deed requirements at conversion. Budget €2,000-€5,000 for Dutch legal review and customization."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens to SAFEs if my Amsterdam startup is acquired before Series A?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If your startup is acquired before SAFEs convert to equity, SAFE holders typically receive payout based on the liquidation preference terms in the SAFE agreement. Most SAFEs give investors 1x preference (they receive their investment amount back before any payout to founders) or conversion at the valuation cap (whichever is more favorable). This protects early investors in acquisition scenarios."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate dilution from multiple SAFE rounds with different caps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Calculate each SAFE cohort's dilution separately based on their respective caps, then sum total dilution. Example: (1) €300K SAFE at €6M cap = 5% dilution, (2) €400K SAFE at €8M cap = 5% dilution, (3) €500K SAFE at €10M cap = 5% dilution. Total SAFE dilution = 15%. Then calculate Series A dilution separately and apply sequentially. Use cap table software (Carta, Pulley) to model complex scenarios accurately."
+        }
+      }
+    ]
   }
 ];
 
@@ -115,8 +169,29 @@ export default function SafeCalculatorAmsterdamBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#what-is-a-safe-and-why-amsterdam-startups-need-to-understand" className="text-blue-600 hover:text-blue-700 text-sm">What Is a SAFE and Why Amsterdam Startups Need to Understand It</a></li>
+                  <li><a href="#how-safe-conversion-works-the-core-mechanics" className="text-blue-600 hover:text-blue-700 text-sm">How SAFE Conversion Works: The Core Mechanics</a></li>
+                  <li><a href="#amsterdam-safe-valuation-benchmarks-whats-market-in-2025" className="text-blue-600 hover:text-blue-700 text-sm">Amsterdam SAFE Valuation Benchmarks: What's Market in 2025?</a></li>
+                  <li><a href="#calculating-safe-conversion-step-by-step-examples-for-amster" className="text-blue-600 hover:text-blue-700 text-sm">Calculating SAFE Conversion: Step-by-Step Examples for Amsterdam Startups</a></li>
+                  <li><a href="#cross-border-fundraising-managing-eur-and-usd-safes-in-amste" className="text-blue-600 hover:text-blue-700 text-sm">Cross-Border Fundraising: Managing EUR and USD SAFEs in Amsterdam</a></li>
+                  <li><a href="#dutch-legal-considerations-safes-under-netherlands-corporate" className="text-blue-600 hover:text-blue-700 text-sm">Dutch Legal Considerations: SAFEs Under Netherlands Corporate Law</a></li>
+                  <li><a href="#innovation-box-and-safe-tax-implications-for-amsterdam-start" className="text-blue-600 hover:text-blue-700 text-sm">Innovation Box and SAFE Tax Implications for Amsterdam Startups</a></li>
+                  <li><a href="#amsterdam-vc-landscape-whos-investing-via-safes" className="text-blue-600 hover:text-blue-700 text-sm">Amsterdam VC Landscape: Who's Investing via SAFEs?</a></li>
+                  <li><a href="#common-safe-pitfalls-for-amsterdam-founders" className="text-blue-600 hover:text-blue-700 text-sm">Common SAFE Pitfalls for Amsterdam Founders</a></li>
+                  <li><a href="#safe-conversion-modeling-building-your-cap-table" className="text-blue-600 hover:text-blue-700 text-sm">SAFE Conversion Modeling: Building Your Cap Table</a></li>
+                  <li><a href="#when-safes-dont-make-sense-for-amsterdam-startups" className="text-blue-600 hover:text-blue-700 text-sm">When SAFEs Don't Make Sense for Amsterdam Startups</a></li>
+                  <li><a href="#safe-vs-convertible-note-which-is-better-for-amsterdam-start" className="text-blue-600 hover:text-blue-700 text-sm">SAFE vs. Convertible Note: Which Is Better for Amsterdam Startups?</a></li>
+                  <li><a href="#frequently-asked-questions-amsterdam-safe-calculations" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions: Amsterdam SAFE Calculations</a></li>
+                  <li><a href="#take-control-of-your-amsterdam-safe-fundraising" className="text-blue-600 hover:text-blue-700 text-sm">Take Control of Your Amsterdam SAFE Fundraising</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -127,7 +202,7 @@ export default function SafeCalculatorAmsterdamBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>What Is a SAFE and Why Amsterdam Startups Need to Understand It</h2>
+                <h2 id="what-is-a-safe-and-why-amsterdam-startups-need-to-understand">What Is a SAFE and Why Amsterdam Startups Need to Understand It</h2>
 
 <p>A SAFE (Simple Agreement for Future Equity) is a financing instrument that allows Amsterdam startups to raise capital from investors without immediately determining valuation or issuing shares. Created by Y Combinator in 2013 and now widely adopted across European tech hubs, SAFEs have become the default early-stage fundraising mechanism for pre-seed and seed rounds.</p>
 
@@ -137,7 +212,7 @@ export default function SafeCalculatorAmsterdamBlogPost() {
 
 <p>Understanding how SAFEs convert is essential for Amsterdam founders navigating cross-border fundraising, managing cap tables with multiple investor currencies (EUR and USD), and maintaining compliance with Dutch corporate law.</p>
 
-<h2>How SAFE Conversion Works: The Core Mechanics</h2>
+<h2 id="how-safe-conversion-works-the-core-mechanics">How SAFE Conversion Works: The Core Mechanics</h2>
 
 <p>When you raise capital via SAFE, investors receive neither equity nor debt immediately. Instead, they receive a contractual promise that their investment will convert to equity in the future under specific conditions.</p>
 
@@ -181,7 +256,7 @@ export default function SafeCalculatorAmsterdamBlogPost() {
 
 <p>Most Amsterdam SAFEs include both a valuation cap and discount rate. When the SAFE converts, investors benefit from whichever term is more favorable (typically the valuation cap in high-growth scenarios).</p>
 
-<h2>Amsterdam SAFE Valuation Benchmarks: What's Market in 2025?</h2>
+<h2 id="amsterdam-safe-valuation-benchmarks-whats-market-in-2025">Amsterdam SAFE Valuation Benchmarks: What's Market in 2025?</h2>
 
 <p>Amsterdam startup valuations have matured significantly as the Dutch tech ecosystem scales. Here are current market benchmarks for SAFE terms:</p>
 
@@ -226,7 +301,21 @@ export default function SafeCalculatorAmsterdamBlogPost() {
 
 <p>Amsterdam sits in the European upper-middle tier: higher than Berlin and Stockholm, competitive with Paris, but below London's inflated valuations.</p>
 
-<h2>Calculating SAFE Conversion: Step-by-Step Examples for Amsterdam Startups</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="calculating-safe-conversion-step-by-step-examples-for-amster">Calculating SAFE Conversion: Step-by-Step Examples for Amsterdam Startups</h2>
 
 <h3>Scenario 1: Fintech Startup with Valuation Cap Only</h3>
 
@@ -316,7 +405,7 @@ export default function SafeCalculatorAmsterdamBlogPost() {
 
 <p><strong>Result:</strong> Valuation cap is more favorable. SAFE investors convert at €10M cap, receiving 187,500 shares (6% ownership). Without the cap, they would receive only 93,750 shares. The cap delivers 2x more equity in this high-growth scenario.</p>
 
-<h2>Cross-Border Fundraising: Managing EUR and USD SAFEs in Amsterdam</h2>
+<h2 id="cross-border-fundraising-managing-eur-and-usd-safes-in-amste">Cross-Border Fundraising: Managing EUR and USD SAFEs in Amsterdam</h2>
 
 <p>Amsterdam startups frequently raise from both European (EUR-denominated) and US (USD-denominated) investors, creating currency complexity in SAFE management.</p>
 
@@ -358,7 +447,7 @@ export default function SafeCalculatorAmsterdamBlogPost() {
 
 <p>EUR strengthening caused USD SAFE holders to receive slightly less equity. Documenting this currency risk upfront prevents disputes at conversion.</p>
 
-<h2>Dutch Legal Considerations: SAFEs Under Netherlands Corporate Law</h2>
+<h2 id="dutch-legal-considerations-safes-under-netherlands-corporate">Dutch Legal Considerations: SAFEs Under Netherlands Corporate Law</h2>
 
 <p>While SAFEs originated in the US under Delaware law, Amsterdam startups using Dutch BV (Besloten Vennootschap) structure must ensure SAFE terms comply with Netherlands corporate law.</p>
 
@@ -389,7 +478,7 @@ export default function SafeCalculatorAmsterdamBlogPost() {
 
 <p>Experienced Amsterdam startup lawyers (VBAT, Benvalor, CMS Netherlands) provide Netherlands-specific SAFE templates that maintain economic terms while ensuring Dutch legal compliance.</p>
 
-<h2>Innovation Box and SAFE Tax Implications for Amsterdam Startups</h2>
+<h2 id="innovation-box-and-safe-tax-implications-for-amsterdam-start">Innovation Box and SAFE Tax Implications for Amsterdam Startups</h2>
 
 <p>The Netherlands offers one of Europe's most founder-friendly tax regimes for startups, particularly through the Innovation Box (Innovatiebox) incentive.</p>
 
@@ -425,7 +514,7 @@ export default function SafeCalculatorAmsterdamBlogPost() {
   <li><strong>Consult Dutch tax advisors:</strong> Work with advisors experienced in startup equity (EY Netherlands, PwC Netherlands startup practices, boutique firms like Drijver &amp; Partners)</li>
 </ol>
 
-<h2>Amsterdam VC Landscape: Who's Investing via SAFEs?</h2>
+<h2 id="amsterdam-vc-landscape-whos-investing-via-safes">Amsterdam VC Landscape: Who's Investing via SAFEs?</h2>
 
 <p>Understanding which Amsterdam and European investors actively use SAFEs helps founders target fundraising effectively.</p>
 
@@ -456,7 +545,7 @@ export default function SafeCalculatorAmsterdamBlogPost() {
   <li><strong>Techstars:</strong> Amsterdam-based Techstars programs bring US investor connections</li>
 </ul>
 
-<h2>Common SAFE Pitfalls for Amsterdam Founders</h2>
+<h2 id="common-safe-pitfalls-for-amsterdam-founders">Common SAFE Pitfalls for Amsterdam Founders</h2>
 
 <h3>Pitfall 1: Setting Valuation Caps Too Low</h3>
 
@@ -488,7 +577,7 @@ export default function SafeCalculatorAmsterdamBlogPost() {
 
 <p><strong>Solution:</strong> Understand MFN implications. If you expect improving traction to justify higher caps, don't grant MFN on earliest SAFEs.</p>
 
-<h2>SAFE Conversion Modeling: Building Your Cap Table</h2>
+<h2 id="safe-conversion-modeling-building-your-cap-table">SAFE Conversion Modeling: Building Your Cap Table</h2>
 
 <p>Amsterdam founders should model SAFE conversion scenarios before closing any SAFE investment. Here's a practical framework:</p>
 
@@ -541,7 +630,7 @@ export default function SafeCalculatorAmsterdamBlogPost() {
   <li><strong>Ledgy:</strong> Swiss-based platform popular with European startups</li>
 </ul>
 
-<h2>When SAFEs Don't Make Sense for Amsterdam Startups</h2>
+<h2 id="when-safes-dont-make-sense-for-amsterdam-startups">When SAFEs Don't Make Sense for Amsterdam Startups</h2>
 
 <p>Despite their popularity, SAFEs aren't always the right fundraising instrument:</p>
 
@@ -563,7 +652,7 @@ export default function SafeCalculatorAmsterdamBlogPost() {
 
 <p><strong>Better Alternative:</strong> Structure as priced equity with side letter granting specific governance rights.</p>
 
-<h2>SAFE vs. Convertible Note: Which Is Better for Amsterdam Startups?</h2>
+<h2 id="safe-vs-convertible-note-which-is-better-for-amsterdam-start">SAFE vs. Convertible Note: Which Is Better for Amsterdam Startups?</h2>
 
 <p>Before SAFEs gained popularity, convertible notes were the standard bridge financing instrument. Some Amsterdam investors still prefer convertible notes. Here's the comparison:</p>
 
@@ -590,7 +679,7 @@ export default function SafeCalculatorAmsterdamBlogPost() {
 
 <p>Choose convertible notes only if investors specifically require them or you need the forcing mechanism of a maturity date to stay disciplined about fundraising timeline.</p>
 
-<h2>Frequently Asked Questions: Amsterdam SAFE Calculations</h2>
+<h2 id="frequently-asked-questions-amsterdam-safe-calculations">Frequently Asked Questions: Amsterdam SAFE Calculations</h2>
 
 <h3>What is a typical valuation cap for Amsterdam seed-stage startups?</h3>
 
@@ -616,7 +705,7 @@ export default function SafeCalculatorAmsterdamBlogPost() {
 
 <p>Calculate each SAFE cohort's dilution separately based on their respective caps, then sum total dilution. Example: (1) €300K SAFE at €6M cap = 5% dilution, (2) €400K SAFE at €8M cap = 5% dilution, (3) €500K SAFE at €10M cap = 5% dilution. Total SAFE dilution = 15%. Then calculate Series A dilution separately and apply sequentially. Use cap table software (Carta, Pulley) to model complex scenarios accurately.</p>
 
-<h2>Take Control of Your Amsterdam SAFE Fundraising</h2>
+<h2 id="take-control-of-your-amsterdam-safe-fundraising">Take Control of Your Amsterdam SAFE Fundraising</h2>
 
 <p>Mastering SAFE mechanics is essential for Amsterdam founders navigating cross-border fundraising in Europe's increasingly competitive tech ecosystem. Understanding how valuation caps and discounts affect your cap table, modeling conversion scenarios before signing term sheets, and structuring SAFEs to comply with Dutch corporate law separates sophisticated founders from those who discover dilution surprises at Series A.</p>
 
@@ -648,13 +737,31 @@ export default function SafeCalculatorAmsterdamBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/safe-calculator-dublin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Dublin SAFE Calculator: Model Your Startup Valuation and Dilution in EUR</span>
+                </Link>
+                <Link href="/blog/pre-seed-valuation-benchmarks-2025/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pre-Seed Valuation Benchmarks 2025: SAFE Caps and Investor Expectations</span>
+                </Link>
+                <Link href="/blog/safe-calculator-ai-ml-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">AI/ML SAFE Calculator Silicon Valley: 2025 Valuation Benchmarks for Foundation Models vs Application Layer</span>
+                </Link>
+                <Link href="/blog/safe-calculator-b2b-saas-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">B2B SaaS SAFE Calculator for London Startups: UK Valuation Benchmarks vs US Comparables</span>
+                </Link>
+                <Link href="/blog/safe-calculator-barcelona/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Barcelona SAFE Calculator: Navigate Startup Valuations in Spain's Tech Hub</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -664,18 +771,18 @@ export default function SafeCalculatorAmsterdamBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

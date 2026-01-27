@@ -114,8 +114,30 @@ export default function SafeCalculatorMiamiBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-miami-safe-valuations-differ-from-traditional-tech-hubs" className="text-blue-600 hover:text-blue-700 text-sm">Why Miami SAFE Valuations Differ from Traditional Tech Hubs</a></li>
+                  <li><a href="#safe-mechanics-understanding-valuation-caps-discounts-and-co" className="text-blue-600 hover:text-blue-700 text-sm">SAFE Mechanics: Understanding Valuation Caps, Discounts, and Conversion</a></li>
+                  <li><a href="#miami-valuation-benchmarks-pre-seed-through-seed-stage" className="text-blue-600 hover:text-blue-700 text-sm">Miami Valuation Benchmarks: Pre-Seed Through Seed Stage</a></li>
+                  <li><a href="#crypto-and-web3-miamis-valuation-premium-sector" className="text-blue-600 hover:text-blue-700 text-sm">Crypto and Web3: Miami's Valuation Premium Sector</a></li>
+                  <li><a href="#latin-america-expansion-the-geographic-premium" className="text-blue-600 hover:text-blue-700 text-sm">Latin America Expansion: The Geographic Premium</a></li>
+                  <li><a href="#miami-vc-landscape-whos-writing-safe-checks" className="text-blue-600 hover:text-blue-700 text-sm">Miami VC Landscape: Who's Writing SAFE Checks</a></li>
+                  <li><a href="#calculating-safe-dilution-how-much-equity-youre-actually-giv" className="text-blue-600 hover:text-blue-700 text-sm">Calculating SAFE Dilution: How Much Equity You're Actually Giving Up</a></li>
+                  <li><a href="#pro-rata-rights-and-safe-side-letters" className="text-blue-600 hover:text-blue-700 text-sm">Pro Rata Rights and SAFE Side Letters</a></li>
+                  <li><a href="#when-to-use-safes-vs-priced-equity-rounds" className="text-blue-600 hover:text-blue-700 text-sm">When to Use SAFEs vs. Priced Equity Rounds</a></li>
+                  <li><a href="#real-estate-tech-miamis-domain-expertise-advantage" className="text-blue-600 hover:text-blue-700 text-sm">Real Estate Tech: Miami's Domain Expertise Advantage</a></li>
+                  <li><a href="#avoiding-common-safe-mistakes-that-destroy-cap-tables" className="text-blue-600 hover:text-blue-700 text-sm">Avoiding Common SAFE Mistakes That Destroy Cap Tables</a></li>
+                  <li><a href="#using-icanpitchs-safe-calculator-for-miami-startups" className="text-blue-600 hover:text-blue-700 text-sm">Using ICanPitch's SAFE Calculator for Miami Startups</a></li>
+                  <li><a href="#preparing-for-series-a-how-safe-terms-affect-your-next-round" className="text-blue-600 hover:text-blue-700 text-sm">Preparing for Series A: How SAFE Terms Affect Your Next Round</a></li>
+                  <li><a href="#miami-safe-benchmarking-industry-specific-insights" className="text-blue-600 hover:text-blue-700 text-sm">Miami SAFE Benchmarking: Industry-Specific Insights</a></li>
+                  <li><a href="#miami-safe-calculator-navigate-your-fundraising-journey-with" className="text-blue-600 hover:text-blue-700 text-sm">Miami SAFE Calculator: Navigate Your Fundraising Journey with Confidence</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +148,7 @@ export default function SafeCalculatorMiamiBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why Miami SAFE Valuations Differ from Traditional Tech Hubs</h2>
+                <h2 id="why-miami-safe-valuations-differ-from-traditional-tech-hubs">Why Miami SAFE Valuations Differ from Traditional Tech Hubs</h2>
 
 <p>Simple Agreements for Future Equity (SAFEs) have become the dominant early-stage fundraising instrument for Miami startups, but calculating dilution and understanding appropriate valuation caps requires deep knowledge of South Florida's emerging venture ecosystem. Unlike Silicon Valley where SAFE benchmarks are well-established across decades of venture activity, Miami's rapid transformation from 2020-2024 created a dynamic pricing environment where valuations vary significantly by sector, founder background, and Latin America expansion potential.</p>
 
@@ -134,7 +156,7 @@ export default function SafeCalculatorMiamiBlogPost() {
 
 <p>Miami pre-seed SAFE valuations typically range from $4 million to $7 million, while seed-stage SAFEs range from $8 million to $13 million. These benchmarks sit approximately 25-30% below San Francisco equivalents, but the discount narrows significantly for crypto/Web3 companies and startups with credible Latin America expansion strategies. Understanding where your company fits within these ranges—and how to position your startup to command premium valuations—directly determines how much equity you surrender for each dollar raised.</p>
 
-<h2>SAFE Mechanics: Understanding Valuation Caps, Discounts, and Conversion</h2>
+<h2 id="safe-mechanics-understanding-valuation-caps-discounts-and-co">SAFE Mechanics: Understanding Valuation Caps, Discounts, and Conversion</h2>
 
 <p>The SAFE agreement contains two primary mechanisms that determine how much equity investors receive: the valuation cap and the discount rate. The <strong>valuation cap</strong> sets a maximum company valuation for conversion purposes, protecting investors from excessive dilution if your Series A valuation far exceeds expectations. The <strong>discount rate</strong> (typically 15-25%) gives SAFE investors a price reduction compared to Series A investors, compensating them for earlier risk.</p>
 
@@ -148,7 +170,7 @@ export default function SafeCalculatorMiamiBlogPost() {
 
 <p>Miami investors have largely adopted post-money SAFEs as the standard, particularly for institutional seed funds and experienced angels. However, some early-stage angel groups still use pre-money structures, so founders should verify which type you're signing to accurately forecast dilution.</p>
 
-<h2>Miami Valuation Benchmarks: Pre-Seed Through Seed Stage</h2>
+<h2 id="miami-valuation-benchmarks-pre-seed-through-seed-stage">Miami Valuation Benchmarks: Pre-Seed Through Seed Stage</h2>
 
 <p>Valuation benchmarks in Miami vary by company stage, sector, and team pedigree, but general ranges have emerged as the ecosystem has matured. These benchmarks reflect actual deal terms from 2023-2024 rather than inflated 2021 valuations that proved unsustainable.</p>
 
@@ -168,7 +190,21 @@ export default function SafeCalculatorMiamiBlogPost() {
 
 <p>Seed round sizes in Miami typically fall between $1 million and $2.5 million, providing 18-24 months of runway to reach Series A metrics: $1 million+ in ARR for B2B companies, strong unit economics, and demonstrated scalability of customer acquisition channels.</p>
 
-<h2>Crypto and Web3: Miami's Valuation Premium Sector</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="crypto-and-web3-miamis-valuation-premium-sector">Crypto and Web3: Miami's Valuation Premium Sector</h2>
 
 <p>Miami has established itself as the Western Hemisphere's crypto and Web3 capital, and this positioning creates meaningfully higher valuations for blockchain-native companies compared to other sectors. Crypto startups in Miami command 30-50% valuation premiums compared to equivalent Web2 companies, partially closing the gap with San Francisco and even exceeding Bay Area valuations in certain DeFi and infrastructure categories.</p>
 
@@ -188,7 +224,7 @@ export default function SafeCalculatorMiamiBlogPost() {
 
 <p>Some investors require token warrants or side letters guaranteeing allocation in future token generation events (TGEs) in addition to equity from SAFE conversion. These structures are complex and require specialized legal counsel familiar with SEC regulations around tokens, particularly the <a href="https://www.sec.gov/corpfin/framework-investment-contract-analysis-digital-assets" target="_blank" rel="noopener noreferrer">Howey Test framework</a> that determines whether tokens constitute securities.</p>
 
-<h2>Latin America Expansion: The Geographic Premium</h2>
+<h2 id="latin-america-expansion-the-geographic-premium">Latin America Expansion: The Geographic Premium</h2>
 
 <p>Miami's position as the gateway to Latin America creates valuation premiums for startups with credible expansion strategies targeting the region's 650 million consumers and $5 trillion economy. Investors recognize that operating from Miami provides structural advantages for Latin America go-to-market: time zone overlap, cultural fluency, bilingual talent access, and flight connectivity that dramatically reduces the cost and complexity of regional expansion.</p>
 
@@ -202,7 +238,7 @@ export default function SafeCalculatorMiamiBlogPost() {
 
 <p>E-commerce enablement tools, logistics and delivery infrastructure, and creator economy platforms targeting Spanish and Portuguese-speaking markets represent additional sectors where Latin America expansion stories resonate with investors and justify premium valuations.</p>
 
-<h2>Miami VC Landscape: Who's Writing SAFE Checks</h2>
+<h2 id="miami-vc-landscape-whos-writing-safe-checks">Miami VC Landscape: Who's Writing SAFE Checks</h2>
 
 <p>Understanding the local investor ecosystem helps you target fundraising efficiently and structure SAFEs with terms that align with market standards. Miami's venture landscape includes local firms deploying dedicated funds, national VCs with Miami presences, and an expanding angel investor community of successful founders recycling capital.</p>
 
@@ -230,7 +266,7 @@ export default function SafeCalculatorMiamiBlogPost() {
 
 <p>International investors, particularly from Latin America, also participate actively in Miami deals. Funds based in São Paulo, Mexico City, and Buenos Aires view Miami startups as natural bridge investments connecting U.S. and Latin American markets, bringing regional expertise and distribution channels alongside capital.</p>
 
-<h2>Calculating SAFE Dilution: How Much Equity You're Actually Giving Up</h2>
+<h2 id="calculating-safe-dilution-how-much-equity-youre-actually-giv">Calculating SAFE Dilution: How Much Equity You're Actually Giving Up</h2>
 
 <p>Understanding dilution requires working through the conversion math carefully. With post-money SAFEs, the calculation is straightforward: <strong>Investor Ownership % = SAFE Investment Amount / Post-Money Valuation Cap</strong>.</p>
 
@@ -253,7 +289,7 @@ export default function SafeCalculatorMiamiBlogPost() {
 
 <p>This compounding effect makes SAFE valuation caps critically important. Raising that second SAFE at $8M instead of $7M reduces dilution from 5.71% to 5.00%—a seemingly small difference that compounds over multiple rounds and could mean the difference between founders retaining control through Series B or being minority shareholders in their own company.</p>
 
-<h2>Pro Rata Rights and SAFE Side Letters</h2>
+<h2 id="pro-rata-rights-and-safe-side-letters">Pro Rata Rights and SAFE Side Letters</h2>
 
 <p>Sophisticated SAFE investors often negotiate pro rata rights—the contractual ability to invest in your next priced round to maintain their ownership percentage. While pro rata rights benefit founders by guaranteeing access to capital from existing investors who know your business, they also create complexity in managing your cap table and can crowd out new investors in subsequent rounds.</p>
 
@@ -269,7 +305,7 @@ export default function SafeCalculatorMiamiBlogPost() {
 
 <p>Miami investors vary in their approach to MFN clauses. Institutional seed funds often request them as standard provisions, while angel investors may be flexible on MFN in exchange for other favorable terms. Founders should carefully consider MFN implications before agreeing—these clauses can constrain your flexibility in future fundraising scenarios.</p>
 
-<h2>When to Use SAFEs vs. Priced Equity Rounds</h2>
+<h2 id="when-to-use-safes-vs-priced-equity-rounds">When to Use SAFEs vs. Priced Equity Rounds</h2>
 
 <p>SAFEs offer speed and simplicity but aren't always the optimal structure. Understanding when to use SAFEs versus negotiating a priced equity round helps you balance execution velocity with long-term cap table health.</p>
 
@@ -293,7 +329,7 @@ export default function SafeCalculatorMiamiBlogPost() {
 
 <p>Many Miami startups use hybrid approaches: raising an initial $300,000-$500,000 on SAFEs to reach product-market fit, then converting to a priced seed round when raising $1.5M-$2M from institutional investors. This balances the speed advantages of SAFEs for initial capital with the governance clarity of priced rounds for larger institutional investments.</p>
 
-<h2>Real Estate Tech: Miami's Domain Expertise Advantage</h2>
+<h2 id="real-estate-tech-miamis-domain-expertise-advantage">Real Estate Tech: Miami's Domain Expertise Advantage</h2>
 
 <p>Miami's historical strength in real estate development has created a thriving proptech (property technology) ecosystem where domain expertise translates into more favorable SAFE terms. Investors in Miami understand real estate operating models, revenue streams, and growth dynamics in ways that generalist tech VCs in other markets may not, creating opportunities for proptech founders to access smart capital at reasonable valuations.</p>
 
@@ -307,7 +343,7 @@ export default function SafeCalculatorMiamiBlogPost() {
 
 <p>Hospitality technology serving Miami's tourism and hotel industry represents another natural fit. Software for vacation rental management, hotel operations, and guest experience optimization can validate product-market fit locally before expanding to other tourism markets.</p>
 
-<h2>Avoiding Common SAFE Mistakes That Destroy Cap Tables</h2>
+<h2 id="avoiding-common-safe-mistakes-that-destroy-cap-tables">Avoiding Common SAFE Mistakes That Destroy Cap Tables</h2>
 
 <p>SAFE structures create specific pitfalls that can damage your cap table and complicate future fundraising. Understanding these mistakes helps you avoid expensive errors that haunt your company for years.</p>
 
@@ -331,7 +367,7 @@ export default function SafeCalculatorMiamiBlogPost() {
 
 <p>If you subsequently raise at $15 million pre-money, the 25% discount yields $11.25 million conversion price, so investors use the $10 million cap instead (better for them, worse for you). Understanding these mechanics during negotiation helps you avoid agreeing to terms that compound in investor favor.</p>
 
-<h2>Using ICanPitch's SAFE Calculator for Miami Startups</h2>
+<h2 id="using-icanpitchs-safe-calculator-for-miami-startups">Using ICanPitch's SAFE Calculator for Miami Startups</h2>
 
 <p>Manually calculating SAFE dilution across multiple tranches, valuation caps, and discount rates creates opportunities for errors that can mislead you about true ownership stakes. <a href="https://www.icanpitch.com/" target="_blank" rel="noopener noreferrer">ICanPitch's SAFE calculator</a> provides Miami-specific benchmarking and dilution modeling that helps you understand whether proposed terms align with market norms and how different scenarios affect your cap table.</p>
 
@@ -341,7 +377,7 @@ export default function SafeCalculatorMiamiBlogPost() {
 
 <p>The calculator also models pro rata rights scenarios, showing how existing investor participation in your Series A affects available allocation for new investors. If 60% of your planned $5 million Series A will be consumed by existing investors exercising pro rata, you can adjust your fundraising strategy to either increase round size or negotiate pro rata limitations before they become problematic.</p>
 
-<h2>Preparing for Series A: How SAFE Terms Affect Your Next Round</h2>
+<h2 id="preparing-for-series-a-how-safe-terms-affect-your-next-round">Preparing for Series A: How SAFE Terms Affect Your Next Round</h2>
 
 <p>The SAFE terms you negotiate today directly impact your Series A fundraising 12-18 months in the future. Sophisticated founders understand this connection and structure SAFEs with Series A implications in mind.</p>
 
@@ -357,7 +393,7 @@ export default function SafeCalculatorMiamiBlogPost() {
 
 <p>Cleaning up your cap table before raising Series A—consolidating small holders, resolving any disputed terms, and ensuring all documentation is complete—dramatically smooths the fundraising process. Many Miami law firms including <a href="https://www.greenbergtraurig.com/" target="_blank" rel="noopener noreferrer">Greenberg Traurig</a> and <a href="https://www.akerman.com/" target="_blank" rel="noopener noreferrer">Akerman</a> specialize in startup cap table clean-up and can resolve issues proactively before they complicate Series A diligence.</p>
 
-<h2>Miami SAFE Benchmarking: Industry-Specific Insights</h2>
+<h2 id="miami-safe-benchmarking-industry-specific-insights">Miami SAFE Benchmarking: Industry-Specific Insights</h2>
 
 <p>While general valuation ranges provide useful guidelines, understanding sector-specific benchmarks helps you negotiate from positions of knowledge rather than accepting first offers.</p>
 
@@ -379,7 +415,7 @@ export default function SafeCalculatorMiamiBlogPost() {
 
 <p>Consumer companies that do raise SAFEs in Miami typically need to demonstrate exceptional metrics: 30%+ month-over-month user growth, strong engagement (daily active users / monthly active users ratios above 20%), and clear monetization pathways. Pre-seed consumer companies might raise at $3M-$5M caps, while seed-stage companies need hundreds of thousands of active users to justify $8M-$10M valuations.</p>
 
-<h2>Miami SAFE Calculator: Navigate Your Fundraising Journey with Confidence</h2>
+<h2 id="miami-safe-calculator-navigate-your-fundraising-journey-with">Miami SAFE Calculator: Navigate Your Fundraising Journey with Confidence</h2>
 
 <p>SAFE agreements offer speed and flexibility but require careful structuring to avoid dilution regret and cap table problems that haunt your company through multiple funding rounds. Miami's emerging venture ecosystem creates opportunities for founders who understand local valuation benchmarks, investor expectations, and sector-specific dynamics.</p>
 
@@ -408,13 +444,31 @@ export default function SafeCalculatorMiamiBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/safe-calculator-crypto-web3-miami/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Crypto/Web3 SAFE Calculator Miami: Token vs Equity Considerations & Crypto-Native Investor Expectations</span>
+                </Link>
+                <Link href="/blog/pre-seed-valuation-benchmarks-2025/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pre-Seed Valuation Benchmarks 2025: SAFE Caps and Investor Expectations</span>
+                </Link>
+                <Link href="/blog/safe-calculator-ai-ml-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">AI/ML SAFE Calculator Silicon Valley: 2025 Valuation Benchmarks for Foundation Models vs Application Layer</span>
+                </Link>
+                <Link href="/blog/safe-calculator-amsterdam/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Amsterdam SAFE Calculator: Navigate Cross-Border Fundraising and Dutch Valuations</span>
+                </Link>
+                <Link href="/blog/safe-calculator-b2b-saas-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">B2B SaaS SAFE Calculator for London Startups: UK Valuation Benchmarks vs US Comparables</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -424,18 +478,18 @@ export default function SafeCalculatorMiamiBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

@@ -115,8 +115,28 @@ export default function BurnRateCalculatorHongKongBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#what-is-burn-rate-for-hong-kong-startups" className="text-blue-600 hover:text-blue-700 text-sm">What is Burn Rate for Hong Kong Startups?</a></li>
+                  <li><a href="#how-to-calculate-your-hong-kong-startups-burn-rate-in-hkd" className="text-blue-600 hover:text-blue-700 text-sm">How to Calculate Your Hong Kong Startup's Burn Rate in HKD</a></li>
+                  <li><a href="#hong-kong-burn-rate-benchmarks-by-startup-stage-and-industry" className="text-blue-600 hover:text-blue-700 text-sm">Hong Kong Burn Rate Benchmarks by Startup Stage and Industry</a></li>
+                  <li><a href="#why-hong-kong-office-costs-drive-burn-rate-and-how-to-optimi" className="text-blue-600 hover:text-blue-700 text-sm">Why Hong Kong Office Costs Drive Burn Rate (And How to Optimize)</a></li>
+                  <li><a href="#hong-kong-vs-singapore-vs-shenzhen-burn-rate-and-apac-expans" className="text-blue-600 hover:text-blue-700 text-sm">Hong Kong vs. Singapore vs. Shenzhen: Burn Rate and APAC Expansion Trade-offs</a></li>
+                  <li><a href="#cyberport-and-hkstp-government-support-to-extend-your-runway" className="text-blue-600 hover:text-blue-700 text-sm">Cyberport and HKSTP: Government Support to Extend Your Runway</a></li>
+                  <li><a href="#multi-currency-burn-rate-managing-hkd-usd-and-rmb-operations" className="text-blue-600 hover:text-blue-700 text-sm">Multi-Currency Burn Rate: Managing HKD, USD, and RMB Operations</a></li>
+                  <li><a href="#when-to-worry-red-flags-in-your-hong-kong-burn-rate" className="text-blue-600 hover:text-blue-700 text-sm">When to Worry: Red Flags in Your Hong Kong Burn Rate</a></li>
+                  <li><a href="#actionable-burn-rate-reduction-tactics-for-hong-kong-startup" className="text-blue-600 hover:text-blue-700 text-sm">Actionable Burn Rate Reduction Tactics for Hong Kong Startups</a></li>
+                  <li><a href="#how-to-present-burn-rate-to-hong-kong-and-apac-investors" className="text-blue-600 hover:text-blue-700 text-sm">How to Present Burn Rate to Hong Kong and APAC Investors</a></li>
+                  <li><a href="#burn-rate-calculator-step-by-step-template-for-hong-kong-sta" className="text-blue-600 hover:text-blue-700 text-sm">Burn Rate Calculator: Step-by-Step Template for Hong Kong Startups</a></li>
+                  <li><a href="#mainland-china-market-access-does-higher-hong-kong-burn-pay-" className="text-blue-600 hover:text-blue-700 text-sm">Mainland China Market Access: Does Higher Hong Kong Burn Pay Off?</a></li>
+                  <li><a href="#key-takeaways-optimizing-your-hong-kong-startups-burn-rate" className="text-blue-600 hover:text-blue-700 text-sm">Key Takeaways: Optimizing Your Hong Kong Startup's Burn Rate</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -127,7 +147,7 @@ export default function BurnRateCalculatorHongKongBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>What is Burn Rate for Hong Kong Startups?</h2>
+                <h2 id="what-is-burn-rate-for-hong-kong-startups">What is Burn Rate for Hong Kong Startups?</h2>
 
 <p>Burn rate is the speed at which your Hong Kong startup spends its cash reserves, typically measured monthly in Hong Kong Dollars (HKD). For founders operating in Hong Kong's high-cost environment while targeting APAC markets, understanding your burn rate is critical to maintaining runway and securing follow-on funding from cross-border investors.</p>
 
@@ -135,7 +155,7 @@ export default function BurnRateCalculatorHongKongBlogPost() {
 
 <p>Hong Kong startups face unique burn rate dynamics compared to Singapore or Shenzhen counterparts. While office costs in premium districts like Central or Quarry Bay can exceed HKD 80-120 per square foot annually, Hong Kong offers unparalleled access to mainland China markets, international banking infrastructure, and a mature ecosystem of investors familiar with both Western and Chinese deal structures.</p>
 
-<h2>How to Calculate Your Hong Kong Startup's Burn Rate in HKD</h2>
+<h2 id="how-to-calculate-your-hong-kong-startups-burn-rate-in-hkd">How to Calculate Your Hong Kong Startup's Burn Rate in HKD</h2>
 
 <p>Calculating burn rate for a Hong Kong-based startup requires accounting for the city's specific cost structure and multi-currency operations common in APAC-focused businesses:</p>
 
@@ -158,7 +178,7 @@ export default function BurnRateCalculatorHongKongBlogPost() {
 <p><strong>Step 4: Calculate Runway</strong></p>
 <p>Runway (months) = Cash in Bank / Monthly Net Burn. If you have HKD 5,400,000 in the bank with HKD 360,000 monthly burn, your runway is <strong>15 months</strong>.</p>
 
-<h2>Hong Kong Burn Rate Benchmarks by Startup Stage and Industry</h2>
+<h2 id="hong-kong-burn-rate-benchmarks-by-startup-stage-and-industry">Hong Kong Burn Rate Benchmarks by Startup Stage and Industry</h2>
 
 <p>Hong Kong burn rate benchmarks differ significantly based on your startup's stage, industry vertical, and market focus (local Hong Kong, Greater Bay Area, or pan-APAC):</p>
 
@@ -196,7 +216,21 @@ export default function BurnRateCalculatorHongKongBlogPost() {
 
 <p><strong>DeepTech and Biotech:</strong> Highest burn rates due to R&amp;D costs and longer commercialization timelines. Hong Kong Science Park tenants in biotech can burn HKD 1-2M/month at later stages, often supplemented by government grants (Innovation and Technology Fund offers up to HKD 10M for R&amp;D projects).</p>
 
-<h2>Why Hong Kong Office Costs Drive Burn Rate (And How to Optimize)</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Calculate Your Burn Rate & Runway</p>
+                <p className="text-gray-600 mb-4">Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.</p>
+                <a
+                  href="https://icanpitch.com/burn-rate-runway-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Burn Rate Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="why-hong-kong-office-costs-drive-burn-rate-and-how-to-optimi">Why Hong Kong Office Costs Drive Burn Rate (And How to Optimize)</h2>
 
 <p>Hong Kong consistently ranks among the world's most expensive cities for office space, with Grade A office rents in Central averaging HKD 130-180 per square foot annually. For a 1,000 sq ft office, this translates to HKD 130,000-180,000/month before fit-out costs and management fees.</p>
 
@@ -218,7 +252,7 @@ export default function BurnRateCalculatorHongKongBlogPost() {
 
 <p>The strategic trade-off: Hong Kong's premium office costs buy you proximity to multinational banks, corporate innovation labs, and mainland China decision-makers. For fintech startups targeting institutional clients or those requiring frequent Shenzhen/Guangzhou travel, the Central location can justify the burn rate impact.</p>
 
-<h2>Hong Kong vs. Singapore vs. Shenzhen: Burn Rate and APAC Expansion Trade-offs</h2>
+<h2 id="hong-kong-vs-singapore-vs-shenzhen-burn-rate-and-apac-expans">Hong Kong vs. Singapore vs. Shenzhen: Burn Rate and APAC Expansion Trade-offs</h2>
 
 <p>Choosing your APAC headquarters directly impacts burn rate, funding access, and market entry strategy. Here's how Hong Kong compares to its primary competitors:</p>
 
@@ -263,7 +297,7 @@ export default function BurnRateCalculatorHongKongBlogPost() {
 
 <p>Many successful APAC startups adopt a "Hong Kong HQ + Shenzhen R&amp;D + Singapore Sales" structure, balancing Hong Kong's higher burn rate with operational leverage in lower-cost markets.</p>
 
-<h2>Cyberport and HKSTP: Government Support to Extend Your Runway</h2>
+<h2 id="cyberport-and-hkstp-government-support-to-extend-your-runway">Cyberport and HKSTP: Government Support to Extend Your Runway</h2>
 
 <p>Hong Kong's government-backed incubators provide critical non-dilutive funding and subsidized resources that can reduce your burn rate by HKD 100,000-300,000 in the first 12-18 months:</p>
 
@@ -294,7 +328,7 @@ export default function BurnRateCalculatorHongKongBlogPost() {
 
 <p><strong>Impact on Burn Rate:</strong> A typical Cyberport incubatee receives HKD 530,000 over 24 months (avg. HKD 22,000/month) plus free office space (HKD 20,000/month value), effectively reducing net burn by HKD 40,000-50,000/month during the programme. This can extend an early-stage startup's runway from 12 months to 16-18 months, providing critical additional time to reach product-market fit before raising institutional capital.</p>
 
-<h2>Multi-Currency Burn Rate: Managing HKD, USD, and RMB Operations</h2>
+<h2 id="multi-currency-burn-rate-managing-hkd-usd-and-rmb-operations">Multi-Currency Burn Rate: Managing HKD, USD, and RMB Operations</h2>
 
 <p>Hong Kong startups often operate in multiple currencies, creating unique burn rate management challenges:</p>
 
@@ -316,7 +350,7 @@ export default function BurnRateCalculatorHongKongBlogPost() {
 <p><strong>Accounting for Multi-Currency Burn:</strong></p>
 <p>Convert all currencies to a single reporting currency (typically USD for international VCs, HKD for local-focused startups) using month-end exchange rates. Track currency-specific cash balances to avoid forced conversions at unfavorable rates. Many Hong Kong accounting firms (PwC, Deloitte, local specialists like Kaizen) offer multi-currency bookkeeping services for HKD 8,000-20,000/month.</p>
 
-<h2>When to Worry: Red Flags in Your Hong Kong Burn Rate</h2>
+<h2 id="when-to-worry-red-flags-in-your-hong-kong-burn-rate">When to Worry: Red Flags in Your Hong Kong Burn Rate</h2>
 
 <p>Certain burn rate patterns signal trouble for Hong Kong-based startups, especially when approaching fundraising:</p>
 
@@ -329,7 +363,7 @@ export default function BurnRateCalculatorHongKongBlogPost() {
   <li><strong>Over-Reliance on Government Grants Without Commercial Traction:</strong> Cyberport/HKSTP funding is excellent for extending runway, but if 100% of your funding is non-dilutive grants with no customer revenue or VC validation by month 18-24, you may struggle to raise institutional capital.</li>
 </ul>
 
-<h2>Actionable Burn Rate Reduction Tactics for Hong Kong Startups</h2>
+<h2 id="actionable-burn-rate-reduction-tactics-for-hong-kong-startup">Actionable Burn Rate Reduction Tactics for Hong Kong Startups</h2>
 
 <p>If you need to extend runway by 3-6 months without raising capital, these Hong Kong-specific tactics can reduce burn by 20-40%:</p>
 
@@ -344,7 +378,7 @@ export default function BurnRateCalculatorHongKongBlogPost() {
   <li><strong>Pause Non-Essential Marketing:</strong> If CAC (Customer Acquisition Cost) exceeds HKD 5,000 and LTV (Lifetime Value) is unproven, pause paid ads and focus on founder-led sales, content marketing, and partnerships—reducing burn by HKD 30,000-80,000/month.</li>
 </ol>
 
-<h2>How to Present Burn Rate to Hong Kong and APAC Investors</h2>
+<h2 id="how-to-present-burn-rate-to-hong-kong-and-apac-investors">How to Present Burn Rate to Hong Kong and APAC Investors</h2>
 
 <p>Hong Kong and broader APAC investors evaluate burn rate through a different lens than US VCs, emphasizing capital efficiency and path to profitability earlier in the lifecycle:</p>
 
@@ -374,7 +408,7 @@ export default function BurnRateCalculatorHongKongBlogPost() {
   <li><strong>"Can you operate leaner?"</strong> Be prepared to present a "Plan B" showing 30% burn reduction scenario (where you'd cut, impact on growth) to demonstrate flexibility and capital discipline.</li>
 </ul>
 
-<h2>Burn Rate Calculator: Step-by-Step Template for Hong Kong Startups</h2>
+<h2 id="burn-rate-calculator-step-by-step-template-for-hong-kong-sta">Burn Rate Calculator: Step-by-Step Template for Hong Kong Startups</h2>
 
 <p>Use this comprehensive template to calculate your monthly burn rate in HKD and project runway scenarios:</p>
 
@@ -421,7 +455,7 @@ export default function BurnRateCalculatorHongKongBlogPost() {
 
 <p>Review this calculation monthly and update your board/investors quarterly. Aim to always maintain 12+ months runway to avoid distressed fundraising situations.</p>
 
-<h2>Mainland China Market Access: Does Higher Hong Kong Burn Pay Off?</h2>
+<h2 id="mainland-china-market-access-does-higher-hong-kong-burn-pay-">Mainland China Market Access: Does Higher Hong Kong Burn Pay Off?</h2>
 
 <p>The critical question for founders choosing Hong Kong despite higher burn rates: does proximity to mainland China markets justify the premium?</p>
 
@@ -442,7 +476,7 @@ export default function BurnRateCalculatorHongKongBlogPost() {
 
 <p>The data: Hong Kong startups successfully entering mainland China markets typically achieve 30-50% of revenue from China within 24-36 months of launch, justifying the higher burn rate. Startups that fail to crack the China market often relocate to Singapore or shut down Hong Kong operations after Series A, having incurred 30-40% higher cumulative burn without corresponding revenue benefit.</p>
 
-<h2>Key Takeaways: Optimizing Your Hong Kong Startup's Burn Rate</h2>
+<h2 id="key-takeaways-optimizing-your-hong-kong-startups-burn-rate">Key Takeaways: Optimizing Your Hong Kong Startup's Burn Rate</h2>
 
 <ul>
   <li><strong>Calculate Burn Rate Monthly:</strong> Track Total Expenses - Revenue in HKD, and monitor runway (Cash / Net Burn) to maintain 12+ months buffer before fundraising</li>
@@ -477,13 +511,30 @@ export default function BurnRateCalculatorHongKongBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/burn-rate-calculator-stockholm/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Stockholm Burn Rate Calculator: Master Your Runway in Sweden's Tech Capital</span>
+                </Link>
+                <Link href="/blog/safe-calculator-hong-kong/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Hong Kong SAFE Calculator: APAC Valuation Guide for Cross-Border Fundraising (2025)</span>
+                </Link>
+                <Link href="/blog/burn-rate-benchmarks-by-industry-stage/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Benchmarks by Industry and Stage: 2025 Data</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-amsterdam/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Amsterdam Burn Rate Calculator: Master Your Startup Cash Runway in Europe's Tech Hub</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-barcelona/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Barcelona Burn Rate Calculator: Master Cash Runway for Spanish Startups</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/burn-rate-calculator-series-a-first-time-founder-new-york-plan-fundraising-timeline-extend-runway-efficiency/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Burn Rate Calculator</Link>
+              <Link href="/blog/burn-rate-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Burn Rate & Runway Guides</Link>
             </div>
           </div>
         </section>
@@ -493,18 +544,18 @@ export default function BurnRateCalculatorHongKongBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Calculate Your Burn Rate & Runway
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/burn-rate-runway-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Burn Rate Calculator &rarr;
               </a>
             </div>
           </div>

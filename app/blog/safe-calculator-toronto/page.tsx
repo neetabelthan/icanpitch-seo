@@ -114,8 +114,30 @@ export default function SafeCalculatorTorontoBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-toronto-founders-need-a-canadian-aware-safe-calculator" className="text-blue-600 hover:text-blue-700 text-sm">Why Toronto Founders Need a Canadian-Aware SAFE Calculator</a></li>
+                  <li><a href="#safe-fundamentals-how-the-instrument-works" className="text-blue-600 hover:text-blue-700 text-sm">SAFE Fundamentals: How the Instrument Works</a></li>
+                  <li><a href="#the-toronto-safe-market-adoption-and-norms" className="text-blue-600 hover:text-blue-700 text-sm">The Toronto SAFE Market: Adoption and Norms</a></li>
+                  <li><a href="#toronto-valuation-benchmarks-setting-your-safe-cap" className="text-blue-600 hover:text-blue-700 text-sm">Toronto Valuation Benchmarks: Setting Your SAFE Cap</a></li>
+                  <li><a href="#cad-vs-usd-currency-denomination-strategy-for-toronto-safes" className="text-blue-600 hover:text-blue-700 text-sm">CAD vs USD: Currency Denomination Strategy for Toronto SAFEs</a></li>
+                  <li><a href="#discount-rates-in-the-toronto-market" className="text-blue-600 hover:text-blue-700 text-sm">Discount Rates in the Toronto Market</a></li>
+                  <li><a href="#calculating-safe-dilution-toronto-specific-scenarios" className="text-blue-600 hover:text-blue-700 text-sm">Calculating SAFE Dilution: Toronto-Specific Scenarios</a></li>
+                  <li><a href="#cross-border-fundraising-us-investors-in-toronto-safes" className="text-blue-600 hover:text-blue-700 text-sm">Cross-Border Fundraising: US Investors in Toronto SAFEs</a></li>
+                  <li><a href="#pro-rata-rights-toronto-market-standards" className="text-blue-600 hover:text-blue-700 text-sm">Pro-Rata Rights: Toronto Market Standards</a></li>
+                  <li><a href="#post-money-vs-pre-money-safes-toronto-adoption" className="text-blue-600 hover:text-blue-700 text-sm">Post-Money vs. Pre-Money SAFEs: Toronto Adoption</a></li>
+                  <li><a href="#common-safe-pitfalls-for-toronto-founders" className="text-blue-600 hover:text-blue-700 text-sm">Common SAFE Pitfalls for Toronto Founders</a></li>
+                  <li><a href="#preparing-for-safe-conversion-your-series-a-process" className="text-blue-600 hover:text-blue-700 text-sm">Preparing for SAFE Conversion: Your Series A Process</a></li>
+                  <li><a href="#using-icanpitchs-safe-calculator-for-toronto-fundraising" className="text-blue-600 hover:text-blue-700 text-sm">Using ICanPitch's SAFE Calculator for Toronto Fundraising</a></li>
+                  <li><a href="#toronto-investor-perspectives-on-safes" className="text-blue-600 hover:text-blue-700 text-sm">Toronto Investor Perspectives on SAFEs</a></li>
+                  <li><a href="#conclusion-mastering-safes-in-torontos-ecosystem" className="text-blue-600 hover:text-blue-700 text-sm">Conclusion: Mastering SAFEs in Toronto's Ecosystem</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,13 +148,13 @@ export default function SafeCalculatorTorontoBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why Toronto Founders Need a Canadian-Aware SAFE Calculator</h2>
+                <h2 id="why-toronto-founders-need-a-canadian-aware-safe-calculator">Why Toronto Founders Need a Canadian-Aware SAFE Calculator</h2>
 
 <p>The Simple Agreement for Future Equity (SAFE) has become the dominant instrument for early-stage startup fundraising in North America, including Toronto's rapidly maturing tech ecosystem. Yet most SAFE calculators and educational resources are built for Silicon Valley's market dynamics—USD denomination, US legal frameworks, and Valley-specific valuation norms. If you're a Toronto founder using a generic SAFE calculator, you're missing critical variables that affect your actual dilution and fundraising strategy.</p>
 
 <p>Understanding SAFEs in the Toronto context means navigating CAD vs USD denomination decisions, recognizing how Canadian valuation benchmarks differ from US comparables, managing cross-border investor expectations, and understanding the unique position of Canadian investors who often bridge to US-led follow-on rounds. This guide provides Toronto-specific SAFE insights and a calculator that accounts for the realities of raising capital in Canada's largest tech hub.</p>
 
-<h2>SAFE Fundamentals: How the Instrument Works</h2>
+<h2 id="safe-fundamentals-how-the-instrument-works">SAFE Fundamentals: How the Instrument Works</h2>
 
 <p>A SAFE is a contractual agreement where an investor provides capital today in exchange for equity in the future, triggered by a specific event (typically a priced equity round). Created by Y Combinator in 2013 and refined in 2018, SAFEs have largely replaced convertible notes for pre-seed and seed fundraising.</p>
 
@@ -144,7 +166,7 @@ export default function SafeCalculatorTorontoBlogPost() {
 
 <p><strong>Pro-Rata Rights:</strong> These give SAFE investors the right to invest additional capital in future rounds to maintain their ownership percentage. Toronto angel investors increasingly negotiate for pro-rata rights, particularly when investing $50,000+, as this provides access to follow-on opportunities in successful companies.</p>
 
-<h2>The Toronto SAFE Market: Adoption and Norms</h2>
+<h2 id="the-toronto-safe-market-adoption-and-norms">The Toronto SAFE Market: Adoption and Norms</h2>
 
 <p>Toronto's adoption of SAFEs has accelerated significantly since 2018, driven by founders trained at Y Combinator (through companies like Clearco, Borrowell, and Properly), increased cross-border investment from US funds, and standardization advocacy from ecosystem anchors like MaRS Discovery District and the DMZ.</p>
 
@@ -154,7 +176,21 @@ export default function SafeCalculatorTorontoBlogPost() {
 
 <p><strong>Key Differences from US Market:</strong> Toronto SAFEs typically have slightly higher valuation caps relative to company stage compared to Silicon Valley equivalents, reflecting smaller round sizes and more conservative valuations. They more frequently include pro-rata rights (60-70% of Toronto SAFEs versus 40-50% in the Valley). Canadian investors also negotiate for information rights more consistently, wanting regular updates even though SAFEs don't provide board seats.</p>
 
-<h2>Toronto Valuation Benchmarks: Setting Your SAFE Cap</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your Convertible Note</p>
+                <p className="text-gray-600 mb-4">Calculate how your convertible notes convert to equity at your next priced round.</p>
+                <a
+                  href="https://icanpitch.com/convertible-note-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Convertible Note Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="toronto-valuation-benchmarks-setting-your-safe-cap">Toronto Valuation Benchmarks: Setting Your SAFE Cap</h2>
 
 <p>Determining the right valuation cap for your SAFE is more art than science, but Toronto market data provides useful benchmarks. Understanding where your startup fits helps you set realistic caps that attract investors without over-diluting yourself.</p>
 
@@ -166,7 +202,7 @@ export default function SafeCalculatorTorontoBlogPost() {
 
 <p><strong>Vertical and Founder Variations:</strong> Fintech startups command 15-25% premium valuations due to Toronto's strength in financial services and strong investor familiarity. AI/ML companies with credible technical teams see similar premiums. Marketplaces and consumer social typically face 10-20% discounts unless showing exceptional growth. Second-time founders (especially with successful exits) can often command 30-50% higher caps than first-timers at equivalent traction.</p>
 
-<h2>CAD vs USD: Currency Denomination Strategy for Toronto SAFEs</h2>
+<h2 id="cad-vs-usd-currency-denomination-strategy-for-toronto-safes">CAD vs USD: Currency Denomination Strategy for Toronto SAFEs</h2>
 
 <p>One of the most consequential decisions for Toronto founders is whether to denominate SAFEs in CAD or USD. This choice affects dilution calculations, investor appeal, and conversion mechanics when you raise your priced round.</p>
 
@@ -182,7 +218,7 @@ export default function SafeCalculatorTorontoBlogPost() {
 
 <p><strong>Currency Movement Implications:</strong> Consider a Toronto founder who raises USD $500K on a USD $5M cap when the exchange rate is 1.35 (CAD $675K). If the Series A happens when the rate is 1.25, that USD $5M cap is now worth CAD $6.25M—effectively increasing the valuation cap by 11% from the founder's perspective. This benefits founders when CAD strengthens and hurts them when it weakens. Most sophisticated Toronto founders lock in currency denomination aligned with their expected Series A denomination to avoid this uncertainty.</p>
 
-<h2>Discount Rates in the Toronto Market</h2>
+<h2 id="discount-rates-in-the-toronto-market">Discount Rates in the Toronto Market</h2>
 
 <p>While valuation caps get the most attention, discount rates significantly impact dilution—particularly when your priced round occurs at a valuation below your SAFE cap. Understanding Toronto norms helps you negotiate intelligently.</p>
 
@@ -194,7 +230,7 @@ export default function SafeCalculatorTorontoBlogPost() {
 
 <p><strong>MFN (Most Favored Nations) Clauses:</strong> Some early Toronto SAFE investors negotiate MFN provisions that automatically grant them any better terms given to later SAFE investors. If you give your first investor's SAFE a 20% discount and CAD $4M cap, then later issue a SAFE at 15% discount and CAD $5M cap, MFN would give the first investor the better terms from each (20% discount OR the $4M cap, whichever is better at conversion). These clauses can create complex scenarios—avoid them when possible by keeping terms consistent across all SAFE investors in a given round.</p>
 
-<h2>Calculating SAFE Dilution: Toronto-Specific Scenarios</h2>
+<h2 id="calculating-safe-dilution-toronto-specific-scenarios">Calculating SAFE Dilution: Toronto-Specific Scenarios</h2>
 
 <p>Understanding how SAFEs convert and what ownership percentage you'll retain requires working through specific scenarios. The math is straightforward but often counterintuitive, particularly when multiple SAFEs stack or caps interact with round valuations.</p>
 
@@ -218,7 +254,7 @@ export default function SafeCalculatorTorontoBlogPost() {
 
 <p>Each SAFE converts at its respective cap. The first SAFE gets $400K / $4M = 10% ownership. The second gets $600K / $7M = 8.6%. Total SAFE dilution is approximately 18.6%. Be very careful with stacked SAFEs—each successive SAFE dilutes earlier investors and founders, and the total dilution can become quite painful. Toronto founders should generally avoid more than two SAFE rounds before converting via a priced round.</p>
 
-<h2>Cross-Border Fundraising: US Investors in Toronto SAFEs</h2>
+<h2 id="cross-border-fundraising-us-investors-in-toronto-safes">Cross-Border Fundraising: US Investors in Toronto SAFEs</h2>
 
 <p>A significant percentage of Toronto seed rounds include US investors—angels from San Francisco or New York, scout checks from top-tier funds, or direct investments from US-based micro VCs. Managing these cross-border relationships requires understanding differing expectations and structural considerations.</p>
 
@@ -232,7 +268,7 @@ export default function SafeCalculatorTorontoBlogPost() {
 
 <p><strong>Information Rights and Communication:</strong> US investors, particularly scouts and angels connected to major funds, often expect monthly updates and detailed metrics—more frequent and comprehensive than traditional Canadian investor expectations. Set clear communication protocols upfront. These relationships are valuable because they create warm introductions for your Series A, but they require ongoing cultivation.</p>
 
-<h2>Pro-Rata Rights: Toronto Market Standards</h2>
+<h2 id="pro-rata-rights-toronto-market-standards">Pro-Rata Rights: Toronto Market Standards</h2>
 
 <p>Pro-rata rights allow SAFE investors to invest in future rounds to maintain their ownership percentage. These rights have become increasingly standard in Toronto, particularly for larger SAFE investments, and have important implications for your Series A and beyond.</p>
 
@@ -244,7 +280,7 @@ export default function SafeCalculatorTorontoBlogPost() {
 
 <p><strong>Side Letters vs. SAFE Terms:</strong> Pro-rata rights can be included directly in SAFE documents or in separate side letters. Toronto legal practice leans toward side letters to keep the core SAFE document clean and consistent across investors, with individual side letters addressing pro-rata, information rights, and other investor-specific terms. This provides flexibility if you need to offer different terms to different investors.</p>
 
-<h2>Post-Money vs. Pre-Money SAFEs: Toronto Adoption</h2>
+<h2 id="post-money-vs-pre-money-safes-toronto-adoption">Post-Money vs. Pre-Money SAFEs: Toronto Adoption</h2>
 
 <p>Y Combinator introduced post-money SAFEs in 2018 to simplify dilution calculations and make founder economics more predictable. Toronto's adoption has been gradual, with the market now approximately 60% post-money, 40% pre-money for new SAFEs issued in 2024-2025.</p>
 
@@ -254,7 +290,7 @@ export default function SafeCalculatorTorontoBlogPost() {
 
 <p><strong>Why Toronto Lags Valley Adoption:</strong> Some Toronto investors, particularly those who began investing before 2018, remain more familiar with pre-money SAFEs and resist change. Others argue pre-money SAFEs give investors better protection against dilution from multiple SAFE rounds. Push for post-money SAFEs when possible—they're founder-friendly and increasingly standard. If investors insist on pre-money, use a SAFE cap calculator to model scenarios with multiple SAFEs so you understand maximum dilution.</p>
 
-<h2>Common SAFE Pitfalls for Toronto Founders</h2>
+<h2 id="common-safe-pitfalls-for-toronto-founders">Common SAFE Pitfalls for Toronto Founders</h2>
 
 <p>Toronto founders, particularly first-timers, make predictable mistakes with SAFEs that create problems at conversion or make future fundraising more difficult. Avoid these common traps.</p>
 
@@ -268,7 +304,7 @@ export default function SafeCalculatorTorontoBlogPost() {
 
 <p><strong>No Conversion Trigger Agreement:</strong> What happens if you bootstrap to profitability and never raise a priced round? Or if the company fails and you sell assets for a small amount? Standard SAFE documents address these scenarios, but founders sometimes customize them without legal counsel and remove protective language. Ensure your SAFEs clearly specify conversion triggers: priced equity round, acquisition, dissolution, and ideally an expiration (7-10 years) if no conversion event occurs.</p>
 
-<h2>Preparing for SAFE Conversion: Your Series A Process</h2>
+<h2 id="preparing-for-safe-conversion-your-series-a-process">Preparing for SAFE Conversion: Your Series A Process</h2>
 
 <p>When you're ready to raise your Series A, SAFEs convert into the equity securities issued in that round. Understanding this process helps you negotiate better and avoid surprises.</p>
 
@@ -280,7 +316,7 @@ export default function SafeCalculatorTorontoBlogPost() {
 
 <p><strong>Conversion Mechanics and Timing:</strong> SAFEs typically convert immediately before the Series A closing. Your lawyers will prepare a cap table showing pre-conversion, post-SAFE-conversion, and post-Series-A states. All parties sign documents simultaneously at closing. Ensure your cap table management software (Carta is standard for Toronto startups raising institutional rounds) is updated accurately. Errors in conversion calculations can create serious legal issues and misaligned economic interests.</p>
 
-<h2>Using ICanPitch's SAFE Calculator for Toronto Fundraising</h2>
+<h2 id="using-icanpitchs-safe-calculator-for-toronto-fundraising">Using ICanPitch's SAFE Calculator for Toronto Fundraising</h2>
 
 <p>While the math behind SAFE conversion is conceptually simple, modeling different scenarios—multiple SAFEs, varying caps and discounts, different Series A valuations, option pools—becomes complex quickly. ICanPitch's SAFE calculator is designed to handle these scenarios and provide clarity for Toronto founders navigating both CAD and USD considerations.</p>
 
@@ -290,7 +326,7 @@ export default function SafeCalculatorTorontoBlogPost() {
 
 <p>The tool is especially useful for Toronto founders managing cross-border rounds—model a USD-denominated SAFE round converting into a CAD-denominated Series A (or vice versa) at different exchange rates to understand currency risk. This analysis often reveals that currency uncertainty is material enough to warrant keeping all securities in the same denomination.</p>
 
-<h2>Toronto Investor Perspectives on SAFEs</h2>
+<h2 id="toronto-investor-perspectives-on-safes">Toronto Investor Perspectives on SAFEs</h2>
 
 <p>Understanding how Toronto investors think about SAFEs helps you negotiate better and position your fundraising effectively.</p>
 
@@ -306,7 +342,7 @@ export default function SafeCalculatorTorontoBlogPost() {
 
 <p>The benefit of US investors is access to their networks for your Series A. A well-connected Valley angel can make introductions to tier-one funds that Toronto investors can't. Whether that's worth accepting a 20-30% lower cap depends on your specific situation and alternative capital sources.</p>
 
-<h2>Conclusion: Mastering SAFEs in Toronto's Ecosystem</h2>
+<h2 id="conclusion-mastering-safes-in-torontos-ecosystem">Conclusion: Mastering SAFEs in Toronto's Ecosystem</h2>
 
 <p>SAFEs have become the standard instrument for early-stage fundraising in Toronto, offering founders speed, simplicity, and flexibility while providing investors meaningful upside participation. Success with SAFEs requires understanding both universal mechanics and Toronto-specific market dynamics: valuation benchmarks that typically run 20-30% below Silicon Valley equivalents, the strategic choice between CAD and USD denomination, cross-border investor relationship management, and the path from SAFE conversion to institutional Series A rounds.</p>
 
@@ -335,13 +371,30 @@ export default function SafeCalculatorTorontoBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/safe-vs-convertible-note-2024-comparison/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE vs Convertible Note: Complete 2024 Comparison Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-paris/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Paris Startups: Navigate French Convertible Financing</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-toronto/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Toronto Startups: Master Your Runway in Canada's Tech Hub</span>
+                </Link>
+                <Link href="/blog/avoiding-safe-dilution-traps-founders/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Avoiding SAFE Dilution Traps: 7 Mistakes Founders Make</span>
+                </Link>
+                <Link href="/blog/how-to-negotiate-safe-valuation-cap/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Negotiate SAFE Valuation Caps: 2025 Founder's Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/convertible-note-calculator-seed-business-founder-austin-negotiate-better-terms-understand-conversion-scenarios/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Convertible Note Calculator</Link>
+              <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -351,18 +404,18 @@ export default function SafeCalculatorTorontoBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your Convertible Note
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Calculate how your convertible notes convert to equity at your next priced round.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/convertible-note-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Convertible Note Calculator &rarr;
               </a>
             </div>
           </div>

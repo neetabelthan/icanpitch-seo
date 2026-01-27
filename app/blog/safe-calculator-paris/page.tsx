@@ -114,8 +114,31 @@ export default function SafeCalculatorParisBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-paris-founders-need-a-european-aware-safe-calculator" className="text-blue-600 hover:text-blue-700 text-sm">Why Paris Founders Need a European-Aware SAFE Calculator</a></li>
+                  <li><a href="#safe-vs-bsa-air-understanding-your-french-fundraising-option" className="text-blue-600 hover:text-blue-700 text-sm">SAFE vs BSA-AIR: Understanding Your French Fundraising Options</a></li>
+                  <li><a href="#safe-fundamentals-how-the-instrument-works" className="text-blue-600 hover:text-blue-700 text-sm">SAFE Fundamentals: How the Instrument Works</a></li>
+                  <li><a href="#paris-valuation-benchmarks-setting-your-safe-cap" className="text-blue-600 hover:text-blue-700 text-sm">Paris Valuation Benchmarks: Setting Your SAFE Cap</a></li>
+                  <li><a href="#eur-vs-usd-currency-denomination-strategy-for-paris-safes" className="text-blue-600 hover:text-blue-700 text-sm">EUR vs USD: Currency Denomination Strategy for Paris SAFEs</a></li>
+                  <li><a href="#discount-rates-in-the-paris-market" className="text-blue-600 hover:text-blue-700 text-sm">Discount Rates in the Paris Market</a></li>
+                  <li><a href="#calculating-safe-dilution-paris-specific-scenarios" className="text-blue-600 hover:text-blue-700 text-sm">Calculating SAFE Dilution: Paris-Specific Scenarios</a></li>
+                  <li><a href="#french-tax-and-legal-considerations-for-safes" className="text-blue-600 hover:text-blue-700 text-sm">French Tax and Legal Considerations for SAFEs</a></li>
+                  <li><a href="#cross-border-fundraising-us-and-uk-investors-in-paris-safes" className="text-blue-600 hover:text-blue-700 text-sm">Cross-Border Fundraising: US and UK Investors in Paris SAFEs</a></li>
+                  <li><a href="#pro-rata-rights-european-market-standards" className="text-blue-600 hover:text-blue-700 text-sm">Pro-Rata Rights: European Market Standards</a></li>
+                  <li><a href="#post-money-vs-pre-money-safes-european-adoption" className="text-blue-600 hover:text-blue-700 text-sm">Post-Money vs Pre-Money SAFEs: European Adoption</a></li>
+                  <li><a href="#common-safe-pitfalls-for-paris-founders" className="text-blue-600 hover:text-blue-700 text-sm">Common SAFE Pitfalls for Paris Founders</a></li>
+                  <li><a href="#preparing-for-safe-conversion-your-series-a-process" className="text-blue-600 hover:text-blue-700 text-sm">Preparing for SAFE Conversion: Your Series A Process</a></li>
+                  <li><a href="#using-icanpitchs-safe-calculator-for-paris-fundraising" className="text-blue-600 hover:text-blue-700 text-sm">Using ICanPitch's SAFE Calculator for Paris Fundraising</a></li>
+                  <li><a href="#bpifrance-co-investment-and-safe-structure" className="text-blue-600 hover:text-blue-700 text-sm">Bpifrance Co-Investment and SAFE Structure</a></li>
+                  <li><a href="#conclusion-mastering-safes-in-pariss-ecosystem" className="text-blue-600 hover:text-blue-700 text-sm">Conclusion: Mastering SAFEs in Paris's Ecosystem</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,13 +149,13 @@ export default function SafeCalculatorParisBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why Paris Founders Need a European-Aware SAFE Calculator</h2>
+                <h2 id="why-paris-founders-need-a-european-aware-safe-calculator">Why Paris Founders Need a European-Aware SAFE Calculator</h2>
 
 <p>The Simple Agreement for Future Equity (SAFE) has gained significant traction in Paris's startup ecosystem over the past five years, driven by founders returning from Y Combinator, increased US investor participation in French rounds, and standardization efforts by leading French VCs. Yet Paris founders face a unique challenge: SAFEs exist alongside traditional French instruments like BSA-AIR (Bons de Souscription d'Actions - Air) and obligations convertibles (convertible bonds), creating a multi-instrument landscape that differs fundamentally from the US market.</p>
 
 <p>Understanding SAFEs in the Paris context means navigating the choice between US-style SAFEs and French legal alternatives, recognizing how European valuation benchmarks differ from Silicon Valley norms, managing the expectations of French investors who may be less familiar with the instrument, and understanding how SAFEs interact with French tax incentives like JEI status and FCPI/FIP fund requirements. This guide provides Paris-specific SAFE insights and a calculator that accounts for the realities of raising capital in France.</p>
 
-<h2>SAFE vs BSA-AIR: Understanding Your French Fundraising Options</h2>
+<h2 id="safe-vs-bsa-air-understanding-your-french-fundraising-option">SAFE vs BSA-AIR: Understanding Your French Fundraising Options</h2>
 
 <p>Unlike the US market where SAFEs have become universally dominant for early-stage rounds, Paris founders often choose between SAFEs (US legal instrument adapted for France) and BSA-AIR (French legal instrument created specifically for startups). Understanding the difference is critical for strategic fundraising.</p>
 
@@ -148,7 +171,7 @@ export default function SafeCalculatorParisBlogPost() {
 
 <p>Many Paris startups raising cross-border rounds use SAFEs for simplicity and international recognition. Approximately 60% of Paris pre-seed and seed rounds under EUR 2M now use SAFEs or BSA-AIR, with the remaining 40% using priced equity or convertible notes. The trend strongly favors SAFEs/BSA-AIR as French investors become more comfortable with the instruments.</p>
 
-<h2>SAFE Fundamentals: How the Instrument Works</h2>
+<h2 id="safe-fundamentals-how-the-instrument-works">SAFE Fundamentals: How the Instrument Works</h2>
 
 <p>SAFEs are contractual agreements where an investor provides capital today in exchange for equity delivered at a future triggering event—typically your next priced equity round (Series Seed or Series A). The conversion mechanics reward early investors for higher risk through favorable pricing relative to later investors.</p>
 
@@ -160,7 +183,21 @@ export default function SafeCalculatorParisBlogPost() {
 
 <p><strong>Triggering Events:</strong> SAFEs typically convert on: equity financing above a minimum threshold (e.g., EUR 500,000), acquisition or change of control, or IPO. Some also include dissolution provisions specifying SAFE holder priority in liquidation scenarios. French SAFEs sometimes add specific provisions around JEI status changes or Bpifrance co-investment requirements.</p>
 
-<h2>Paris Valuation Benchmarks: Setting Your SAFE Cap</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="paris-valuation-benchmarks-setting-your-safe-cap">Paris Valuation Benchmarks: Setting Your SAFE Cap</h2>
 
 <p>Determining the right valuation cap requires understanding where your startup fits in the Paris market. French valuations have historically run 20-40% below US equivalents at comparable stages, though the gap has narrowed as the Paris ecosystem has matured.</p>
 
@@ -176,7 +213,7 @@ export default function SafeCalculatorParisBlogPost() {
 
 <p><strong>Vertical and Founder Variations:</strong> Deeptech and AI startups with strong academic pedigree (teams from Ecole Polytechnique, INRIA, ENS) can command 20-30% premium valuations due to French investor familiarity and government support infrastructure. Fintech benefits from Paris's banking ecosystem strength. Marketplaces and consumer social typically see 10-20% discounts unless showing exceptional metrics. Second-time founders (especially with successful exits) command 30-50% higher caps than first-timers at equivalent traction.</p>
 
-<h2>EUR vs USD: Currency Denomination Strategy for Paris SAFEs</h2>
+<h2 id="eur-vs-usd-currency-denomination-strategy-for-paris-safes">EUR vs USD: Currency Denomination Strategy for Paris SAFEs</h2>
 
 <p>Currency denomination is one of the most consequential but often overlooked decisions for Paris founders raising SAFEs. This choice affects dilution calculations, investor appeal, conversion mechanics, and your strategic positioning for Series A.</p>
 
@@ -192,7 +229,7 @@ export default function SafeCalculatorParisBlogPost() {
 
 <p><strong>Hybrid Approaches:</strong> Some Paris startups issue separate tranches in EUR and USD depending on investor preference. This creates administrative complexity but can be worthwhile for larger rounds pulling capital from both European and US sources. Ensure your cap table platform (Ledgy, Carta, or Capdesk for European startups) handles multi-currency securities correctly.</p>
 
-<h2>Discount Rates in the Paris Market</h2>
+<h2 id="discount-rates-in-the-paris-market">Discount Rates in the Paris Market</h2>
 
 <p>While valuation caps receive most attention, discount rates significantly impact dilution, particularly when your priced round occurs at a valuation below your SAFE cap. Understanding Paris and broader European norms helps you negotiate intelligently.</p>
 
@@ -206,7 +243,7 @@ export default function SafeCalculatorParisBlogPost() {
 
 <p><strong>Most Favored Nations (MFN) Clauses:</strong> Some early Paris SAFE investors negotiate MFN provisions automatically granting them any better terms given to later SAFE investors. These create complex cascading scenarios if you're not disciplined about term consistency. Avoid MFN clauses when possible by maintaining consistent terms across all SAFE investors within a given fundraising tranche.</p>
 
-<h2>Calculating SAFE Dilution: Paris-Specific Scenarios</h2>
+<h2 id="calculating-safe-dilution-paris-specific-scenarios">Calculating SAFE Dilution: Paris-Specific Scenarios</h2>
 
 <p>Understanding how SAFEs convert and what ownership you'll retain requires working through specific scenarios. The mathematics are straightforward but often counterintuitive, particularly when multiple SAFEs stack or when caps interact with round valuations.</p>
 
@@ -228,7 +265,7 @@ export default function SafeCalculatorParisBlogPost() {
 
 <p>Each converts independently at its cap. First SAFE: EUR 300K / EUR 3M = 10%. Second SAFE: EUR 500K / EUR 6M = 8.3%. Total SAFE dilution is approximately 18.3% before the Series A. Be extremely careful with stacked SAFEs—each successive SAFE dilutes earlier investors and founders. Paris founders should generally limit themselves to two SAFE tranches maximum before converting via priced equity.</p>
 
-<h2>French Tax and Legal Considerations for SAFEs</h2>
+<h2 id="french-tax-and-legal-considerations-for-safes">French Tax and Legal Considerations for SAFEs</h2>
 
 <p>SAFEs interact with French tax and legal structures in ways that differ from US treatment. Understanding these nuances prevents surprises and optimizes structure.</p>
 
@@ -240,7 +277,7 @@ export default function SafeCalculatorParisBlogPost() {
 
 <p><strong>Legal Documentation Costs:</strong> French SAFE documentation typically costs EUR 5,000-10,000 in legal fees for the initial template, with EUR 1,000-2,000 for each additional closing of the same terms. This is comparable to BSA-AIR costs and dramatically cheaper than priced equity rounds (EUR 15,000-30,000+). Use established French startup law firms (DS Avocats, Orrick, White &amp; Case, Gide) who have template documentation and don't need to recreate from scratch.</p>
 
-<h2>Cross-Border Fundraising: US and UK Investors in Paris SAFEs</h2>
+<h2 id="cross-border-fundraising-us-and-uk-investors-in-paris-safes">Cross-Border Fundraising: US and UK Investors in Paris SAFEs</h2>
 
 <p>A significant and growing percentage of Paris seed rounds include non-French investors—US angels and micro-VCs, UK seed funds, or European cross-border investors. Managing these relationships requires understanding differing expectations and structural considerations.</p>
 
@@ -254,7 +291,7 @@ export default function SafeCalculatorParisBlogPost() {
 
 <p><strong>Information Rights and Reporting:</strong> International investors, particularly institutional seed funds, typically expect monthly or quarterly updates with detailed metrics—more frequent and comprehensive than traditional French angel expectations. Set clear communication protocols upfront. These relationships are valuable for Series A positioning but require ongoing cultivation and transparency.</p>
 
-<h2>Pro-Rata Rights: European Market Standards</h2>
+<h2 id="pro-rata-rights-european-market-standards">Pro-Rata Rights: European Market Standards</h2>
 
 <p>Pro-rata rights allow SAFE investors to invest in future rounds to maintain their ownership percentage. These have become increasingly standard in Paris and across Europe, with important implications for your Series A and beyond.</p>
 
@@ -266,7 +303,7 @@ export default function SafeCalculatorParisBlogPost() {
 
 <p><strong>Side Letters vs. Embedded Terms:</strong> Pro-rata rights can be included directly in SAFE documents or in separate side letters. French legal practice increasingly favors side letters to keep core SAFE documents clean and consistent across investors, with individual side letters addressing pro-rata, information rights, and other investor-specific terms. This provides flexibility if different investors receive different ancillary rights.</p>
 
-<h2>Post-Money vs Pre-Money SAFEs: European Adoption</h2>
+<h2 id="post-money-vs-pre-money-safes-european-adoption">Post-Money vs Pre-Money SAFEs: European Adoption</h2>
 
 <p>Y Combinator introduced post-money SAFEs in 2018 to simplify dilution calculations and make founder economics more predictable. Paris adoption has been gradual but accelerating, with the market now approximately 55% post-money, 45% pre-money for new SAFEs issued in 2024-2025.</p>
 
@@ -276,7 +313,7 @@ export default function SafeCalculatorParisBlogPost() {
 
 <p><strong>Why European Adoption Lags US:</strong> Some European investors, particularly those who began investing before 2018, remain more familiar with pre-money SAFEs and resist change. Others argue pre-money SAFEs provide better investor protection against dilution from multiple SAFE rounds. However, the European startup ecosystem is increasingly standardizing on post-money SAFEs following US market evolution. Push for post-money SAFEs when possible—they're founder-friendly and becoming standard.</p>
 
-<h2>Common SAFE Pitfalls for Paris Founders</h2>
+<h2 id="common-safe-pitfalls-for-paris-founders">Common SAFE Pitfalls for Paris Founders</h2>
 
 <p>Paris founders, particularly first-timers, make predictable mistakes with SAFEs that create problems at conversion or complicate future fundraising.</p>
 
@@ -290,7 +327,7 @@ export default function SafeCalculatorParisBlogPost() {
 
 <p><strong>Ignoring Option Pool Impact:</strong> SAFEs convert at your Series A, which will include an option pool (typically 10-15% of post-money in Europe). Many Paris founders don't model this when calculating dilution. If you've sold 20% via SAFEs, raise a Series A taking 25% dilution, and create a 12% option pool, you retain only 63%, not the 68% you expected. Always model the full waterfall including option pool.</p>
 
-<h2>Preparing for SAFE Conversion: Your Series A Process</h2>
+<h2 id="preparing-for-safe-conversion-your-series-a-process">Preparing for SAFE Conversion: Your Series A Process</h2>
 
 <p>When you raise your Series A, SAFEs convert into the equity securities issued in that round. Understanding this process helps you negotiate effectively and avoid surprises.</p>
 
@@ -302,7 +339,7 @@ export default function SafeCalculatorParisBlogPost() {
 
 <p><strong>Conversion Mechanics and Timing:</strong> SAFEs convert immediately before Series A closing. Your lawyers prepare cap tables showing pre-conversion, post-SAFE-conversion, and post-Series-A states. All parties sign simultaneously at closing. Ensure your cap table management platform (Ledgy and Capdesk are standard for European startups; Carta for those with US investors) is updated accurately. Errors in conversion calculations create serious legal issues and economic misalignment.</p>
 
-<h2>Using ICanPitch's SAFE Calculator for Paris Fundraising</h2>
+<h2 id="using-icanpitchs-safe-calculator-for-paris-fundraising">Using ICanPitch's SAFE Calculator for Paris Fundraising</h2>
 
 <p>While SAFE conversion mathematics are conceptually straightforward, modeling multiple scenarios—stacked SAFEs with varying caps and discounts, different Series A valuations, currency considerations, option pool impact—becomes complex rapidly. ICanPitch's SAFE calculator handles these scenarios and provides clarity for Paris founders navigating both EUR and USD considerations.</p>
 
@@ -312,7 +349,7 @@ export default function SafeCalculatorParisBlogPost() {
 
 <p>The tool is especially valuable for Paris founders managing cross-border rounds—model EUR-denominated SAFEs converting into USD-denominated Series A (or vice versa) at different exchange rates to understand currency risk. This analysis often reveals currency uncertainty is material enough to warrant maintaining all securities in the same denomination.</p>
 
-<h2>Bpifrance Co-Investment and SAFE Structure</h2>
+<h2 id="bpifrance-co-investment-and-safe-structure">Bpifrance Co-Investment and SAFE Structure</h2>
 
 <p>Bpifrance (the French public investment bank) increasingly participates in early-stage rounds, often alongside SAFEs or shortly after SAFE rounds. Understanding how Bpifrance investments interact with SAFEs helps you plan fundraising sequences strategically.</p>
 
@@ -322,7 +359,7 @@ export default function SafeCalculatorParisBlogPost() {
 
 <p><strong>Valuation Coordination:</strong> Bpifrance often prices convertible investments at valuation caps aligned with recent SAFE caps or slightly above. If your SAFE cap was EUR 5M, expect Bpifrance to anchor near EUR 5-6M. Coordinate timing and valuation conversations to avoid creating cap table complexity with widely divergent caps that convert differently.</p>
 
-<h2>Conclusion: Mastering SAFEs in Paris's Ecosystem</h2>
+<h2 id="conclusion-mastering-safes-in-pariss-ecosystem">Conclusion: Mastering SAFEs in Paris's Ecosystem</h2>
 
 <p>SAFEs have become a standard instrument for early-stage fundraising in Paris, offering founders speed, cost efficiency, and flexibility while providing investors meaningful upside participation. Success with SAFEs in the French context requires understanding both universal mechanics and Paris-specific dynamics: the choice between SAFEs and BSA-AIR, valuation benchmarks that run 20-30% below US equivalents, strategic currency denomination decisions, cross-border investor relationship management, and interaction with French tax incentives like JEI.</p>
 
@@ -352,13 +389,31 @@ export default function SafeCalculatorParisBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/avoiding-safe-dilution-traps-founders/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Avoiding SAFE Dilution Traps: 7 Mistakes Founders Make</span>
+                </Link>
+                <Link href="/blog/how-to-negotiate-safe-valuation-cap/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Negotiate SAFE Valuation Caps: 2025 Founder's Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-bangalore/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Bangalore Startups: 2025 India Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-chicago/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Chicago SAFE Calculator: Navigate Midwest Valuations and Investor Expectations</span>
+                </Link>
+                <Link href="/blog/safe-calculator-first-time-founders-complete-guide/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for First-Time Founders: Complete 2025 Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -368,18 +423,18 @@ export default function SafeCalculatorParisBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

@@ -38,8 +38,8 @@ const jsonLdData = [
       "@type": "Organization",
       "name": "ICanPitch"
     },
-    "datePublished": "2026-01-27T03:45:30.435Z",
-    "dateModified": "2026-01-27T03:45:30.435Z",
+    "datePublished": "2026-01-27T21:21:28.685Z",
+    "dateModified": "2026-01-27T21:21:28.685Z",
     "url": "https://learn.icanpitch.com/learn/equity-split-calculator-pre-seed-serial-entrepreneur-london-resolve-co-founder-disputes-create-fair-equity-distribution/",
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -109,8 +109,51 @@ export default function EquitySplitCalculatorPreSeedSerialEntrepreneurLondonReso
                   <li>Review the suggested equity split percentages</li>
                   <li>Model vesting schedules to protect all co-founders</li>
                 </ol>
+
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">When to Use This Calculator</h2>
+                <ul className="space-y-3 text-lg text-gray-700 list-disc list-inside mb-6">
+                  <li>You are forming a new company with one or more co-founders and need to agree on ownership</li>
+                  <li>You are bringing on a late co-founder and need to determine a fair share</li>
+                  <li>You want a data-driven framework to resolve a disagreement about equity distribution</li>
+                  <li>You are a solo founder considering giving equity to an early contributor and want to benchmark fairness</li>
+                </ul>
+
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">Key Metrics and Formulas</h2>
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">Our calculator uses a weighted contribution model. Each co-founder is scored across dimensions like idea generation, domain expertise, technical skills, business development, capital contribution, time commitment, and opportunity cost. Each dimension carries a configurable weight, and the final split is proportional to each founder's total weighted score. The formula is: Founder Equity % = (Founder Score / Total All Scores) x 100. We recommend pairing any split with a standard 4-year vesting schedule and 1-year cliff to protect all parties.</p>
+
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">Common Mistakes to Avoid</h2>
+                <ul className="space-y-3 text-lg text-gray-700 list-disc list-inside mb-6">
+                  <li>Defaulting to 50/50 because it feels fair: Equal splits ignore real differences in contribution and often lead to resentment</li>
+                  <li>Not using vesting: Without vesting, a co-founder who leaves after 3 months keeps their full share</li>
+                  <li>Splitting equity before defining roles: Make sure each founder's expected contribution is clear before assigning percentages</li>
+                  <li>Giving away too much equity to advisors early: Advisors typically receive 0.25%-1.0%, not co-founder-level stakes</li>
+                </ul>
+
+                {/* Expert Tips */}
+                <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Expert Tips</h3>
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex gap-2"><span className="text-blue-500 font-bold flex-shrink-0">&#x2713;</span><span>Have the equity conversation early, ideally before incorporating, and put the agreement in writing</span></li>
+                    <li className="flex gap-2"><span className="text-blue-500 font-bold flex-shrink-0">&#x2713;</span><span>Use a 4-year vesting schedule with a 1-year cliff for all founders, including yourself</span></li>
+                    <li className="flex gap-2"><span className="text-blue-500 font-bold flex-shrink-0">&#x2713;</span><span>Revisit the split if roles or commitment levels change significantly in the first year</span></li>
+                  </ul>
+                </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Recommended Reading */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Recommended Reading</h3>
+            <ul className="space-y-2">
+              <li><Link href="/blog/co-founder-equity-split-50-50-alternatives/" className="text-blue-600 hover:text-blue-700 underline">Co-Founder Equity Split: Why 50/50 Fails and Better Alternatives</Link></li>
+                  <li><Link href="/blog/equity-split-technical-vs-business-cofounder/" className="text-blue-600 hover:text-blue-700 underline">Equity Split: Technical vs Business Co-Founder Guide</Link></li>
+                  <li><Link href="/blog/avoiding-safe-dilution-traps-founders/" className="text-blue-600 hover:text-blue-700 underline">Avoiding SAFE Dilution Traps: 7 Mistakes Founders Make</Link></li>
+                  <li><Link href="/blog/early-employee-equity-calculator-guide/" className="text-blue-600 hover:text-blue-700 underline">Early Employee Equity Calculator: How Much to Offer Guide</Link></li>
+                  <li><Link href="/blog/founder-vesting-schedules-4-year-1-year-cliff/" className="text-blue-600 hover:text-blue-700 underline">Founder Vesting Schedules: 4-Year 1-Year Cliff Explained</Link></li>
+            </ul>
           </div>
         </section>
 
@@ -150,7 +193,7 @@ export default function EquitySplitCalculatorPreSeedSerialEntrepreneurLondonReso
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Start Calculator →
+                      Start Calculator &rarr;
                     </a>
                   </Button>
                 </CardContent>

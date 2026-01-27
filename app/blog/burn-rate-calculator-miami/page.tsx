@@ -114,8 +114,30 @@ export default function BurnRateCalculatorMiamiBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-miamis-burn-rate-calculation-differs-from-silicon-valley" className="text-blue-600 hover:text-blue-700 text-sm">Why Miami's Burn Rate Calculation Differs from Silicon Valley</a></li>
+                  <li><a href="#miamis-tech-boom-understanding-the-2020-2024-transformation" className="text-blue-600 hover:text-blue-700 text-sm">Miami's Tech Boom: Understanding the 2020-2024 Transformation</a></li>
+                  <li><a href="#breaking-down-miami-startup-costs-salaries-office-and-operat" className="text-blue-600 hover:text-blue-700 text-sm">Breaking Down Miami Startup Costs: Salaries, Office, and Operations</a></li>
+                  <li><a href="#how-to-calculate-your-miami-startups-burn-rate" className="text-blue-600 hover:text-blue-700 text-sm">How to Calculate Your Miami Startup's Burn Rate</a></li>
+                  <li><a href="#miami-vs-silicon-valley-vs-new-york-burn-rate-comparison" className="text-blue-600 hover:text-blue-700 text-sm">Miami vs. Silicon Valley vs. New York: Burn Rate Comparison</a></li>
+                  <li><a href="#latin-america-market-access-the-strategic-burn-rate-multipli" className="text-blue-600 hover:text-blue-700 text-sm">Latin America Market Access: The Strategic Burn Rate Multiplier</a></li>
+                  <li><a href="#the-miami-venture-capital-landscape-local-funding-sources" className="text-blue-600 hover:text-blue-700 text-sm">The Miami Venture Capital Landscape: Local Funding Sources</a></li>
+                  <li><a href="#crypto-and-web3-miamis-burn-rate-sweet-spot" className="text-blue-600 hover:text-blue-700 text-sm">Crypto and Web3: Miami's Burn Rate Sweet Spot</a></li>
+                  <li><a href="#when-miamis-lower-burn-rate-becomes-a-strategic-advantage" className="text-blue-600 hover:text-blue-700 text-sm">When Miami's Lower Burn Rate Becomes a Strategic Advantage</a></li>
+                  <li><a href="#real-estate-tech-miamis-emerging-strength" className="text-blue-600 hover:text-blue-700 text-sm">Real Estate Tech: Miami's Emerging Strength</a></li>
+                  <li><a href="#calculating-runway-how-long-your-cash-will-last" className="text-blue-600 hover:text-blue-700 text-sm">Calculating Runway: How Long Your Cash Will Last</a></li>
+                  <li><a href="#common-burn-rate-mistakes-miami-founders-make" className="text-blue-600 hover:text-blue-700 text-sm">Common Burn Rate Mistakes Miami Founders Make</a></li>
+                  <li><a href="#using-icanpitchs-burn-rate-calculator-for-miami-startups" className="text-blue-600 hover:text-blue-700 text-sm">Using ICanPitch's Burn Rate Calculator for Miami Startups</a></li>
+                  <li><a href="#preparing-for-your-next-fundraise-burn-rate-metrics-investor" className="text-blue-600 hover:text-blue-700 text-sm">Preparing for Your Next Fundraise: Burn Rate Metrics Investors Evaluate</a></li>
+                  <li><a href="#miami-burn-rate-calculator-take-control-of-your-startups-fin" className="text-blue-600 hover:text-blue-700 text-sm">Miami Burn Rate Calculator: Take Control of Your Startup's Financial Future</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +148,7 @@ export default function BurnRateCalculatorMiamiBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why Miami's Burn Rate Calculation Differs from Silicon Valley</h2>
+                <h2 id="why-miamis-burn-rate-calculation-differs-from-silicon-valley">Why Miami's Burn Rate Calculation Differs from Silicon Valley</h2>
 
 <p>Miami has emerged as one of North America's fastest-growing tech ecosystems, but calculating your startup's burn rate in South Florida requires understanding the unique cost structure that sets it apart from traditional hubs like San Francisco and New York. Your monthly burn rate—the speed at which your startup consumes cash before reaching profitability—directly determines how long your runway lasts and when you'll need to raise your next round.</p>
 
@@ -134,7 +156,7 @@ export default function BurnRateCalculatorMiamiBlogPost() {
 
 <p>Between 2020 and 2024, Miami experienced an unprecedented tech migration catalyzed by Mayor Francis Suarez's aggressive recruitment of tech founders, favorable tax policies, and the city's emergence as the de facto capital of crypto and Web3 innovation in the United States. This transformation hasn't just created a geographic alternative—it's created a fundamentally different economic model for early-stage companies.</p>
 
-<h2>Miami's Tech Boom: Understanding the 2020-2024 Transformation</h2>
+<h2 id="miamis-tech-boom-understanding-the-2020-2024-transformation">Miami's Tech Boom: Understanding the 2020-2024 Transformation</h2>
 
 <p>The COVID-19 pandemic accelerated a trend that had been building throughout the late 2010s: Miami's transformation from a tourism and real estate hub into a legitimate technology center. When Mayor Francis Suarez tweeted "How can I help?" in response to a prominent tech investor suggesting Miami as an alternative to Silicon Valley in December 2020, he catalyzed a movement that would bring thousands of founders, investors, and technologists to South Florida.</p>
 
@@ -144,7 +166,7 @@ export default function BurnRateCalculatorMiamiBlogPost() {
 
 <p>This ecosystem evolution created infrastructure that directly impacts burn rate calculations. The availability of affordable office space in neighborhoods like Wynwood and Brickell, the emergence of local talent pools from University of Miami and Florida International University, and the concentration of service providers familiar with startup economics all contribute to the cost advantages Miami founders can leverage.</p>
 
-<h2>Breaking Down Miami Startup Costs: Salaries, Office, and Operations</h2>
+<h2 id="breaking-down-miami-startup-costs-salaries-office-and-operat">Breaking Down Miami Startup Costs: Salaries, Office, and Operations</h2>
 
 <p>The largest component of most startup burn rates is personnel costs, and Miami offers substantial savings compared to coastal tech hubs without sacrificing talent quality. A senior software engineer in San Francisco commands $180,000-$220,000 in base salary plus equity, while the same role in Miami typically ranges from $115,000-$145,000. This 35-40% differential compounds across your entire engineering team.</p>
 
@@ -164,7 +186,21 @@ export default function BurnRateCalculatorMiamiBlogPost() {
 
 <p>Additionally, Florida has no corporate income tax beyond the federal level, though this primarily benefits later-stage companies reaching profitability. The state does impose a 5.5% corporate income tax, which is lower than California's 8.84% rate, creating long-term savings as your company scales.</p>
 
-<h2>How to Calculate Your Miami Startup's Burn Rate</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Calculate Your Burn Rate & Runway</p>
+                <p className="text-gray-600 mb-4">Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.</p>
+                <a
+                  href="https://icanpitch.com/burn-rate-runway-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Burn Rate Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="how-to-calculate-your-miami-startups-burn-rate">How to Calculate Your Miami Startup's Burn Rate</h2>
 
 <p>Calculating burn rate accurately requires distinguishing between gross burn and net burn. <strong>Gross burn rate</strong> represents your total monthly expenses—salaries, rent, software subscriptions, marketing, legal fees, and all other operational costs. <strong>Net burn rate</strong> subtracts any monthly revenue from gross burn, showing the actual cash consumption rate.</p>
 
@@ -198,7 +234,7 @@ export default function BurnRateCalculatorMiamiBlogPost() {
 
 <p>Most Miami startups find that personnel represents 60-70% of total burn, with technology infrastructure consuming another 10-15%. This concentration means that hiring decisions have an outsized impact on runway—every additional engineer shortens runway by 4-6 weeks depending on your cash reserves.</p>
 
-<h2>Miami vs. Silicon Valley vs. New York: Burn Rate Comparison</h2>
+<h2 id="miami-vs-silicon-valley-vs-new-york-burn-rate-comparison">Miami vs. Silicon Valley vs. New York: Burn Rate Comparison</h2>
 
 <p>Let's model a hypothetical Series A startup with 15 employees to illustrate the real-world cost differences. This company has secured $3 million in funding and needs to reach $1 million ARR (annual recurring revenue) before raising a Series B.</p>
 
@@ -243,7 +279,7 @@ export default function BurnRateCalculatorMiamiBlogPost() {
 
 <p>The Miami startup gains 4.6 additional months of runway compared to the San Francisco equivalent—nearly 50% more time to hit product-market fit, acquire customers, and demonstrate traction before needing to raise additional capital. This extended runway reduces dilution over the company's lifetime and decreases the risk of running out of cash during market downturns when fundraising becomes difficult.</p>
 
-<h2>Latin America Market Access: The Strategic Burn Rate Multiplier</h2>
+<h2 id="latin-america-market-access-the-strategic-burn-rate-multipli">Latin America Market Access: The Strategic Burn Rate Multiplier</h2>
 
 <p>Miami's geographic and cultural position as the gateway to Latin America creates unique opportunities that can dramatically improve the efficiency of your burn rate. While this advantage doesn't reduce monthly cash consumption directly, it can accelerate revenue growth and customer acquisition, improving your net burn rate faster than competitors in other geographies.</p>
 
@@ -253,7 +289,7 @@ export default function BurnRateCalculatorMiamiBlogPost() {
 
 <p>Flight connectivity is unmatched. Direct flights from Miami International Airport reach every major Latin American capital, typically in 3-6 hours. This makes in-person customer meetings, regional conferences, and team travel dramatically more cost-effective than operating from the West Coast. A sales team member can conduct customer meetings in Mexico City or Bogotá with a day trip or overnight stay, while the same trip from San Francisco requires 2-3 days of travel time.</p>
 
-<h2>The Miami Venture Capital Landscape: Local Funding Sources</h2>
+<h2 id="the-miami-venture-capital-landscape-local-funding-sources">The Miami Venture Capital Landscape: Local Funding Sources</h2>
 
 <p>Understanding the local investor ecosystem helps you plan burn rate strategically around fundraising cycles. Miami's VC landscape has matured significantly since 2020, with both local firms deploying larger funds and coastal investors establishing Miami presences.</p>
 
@@ -275,7 +311,7 @@ export default function BurnRateCalculatorMiamiBlogPost() {
 
 <p>The local angel investor community has also expanded dramatically. Founders who successfully exited companies in previous tech waves are now deploying capital into the next generation of Miami startups, creating pre-seed and seed-stage funding options that didn't exist five years ago.</p>
 
-<h2>Crypto and Web3: Miami's Burn Rate Sweet Spot</h2>
+<h2 id="crypto-and-web3-miamis-burn-rate-sweet-spot">Crypto and Web3: Miami's Burn Rate Sweet Spot</h2>
 
 <p>Miami has emerged as the Western Hemisphere's crypto and Web3 capital, a positioning that creates unique opportunities and challenges for burn rate management. The concentration of crypto-native investors, talent, and events means that blockchain startups can build and fundraise more efficiently in Miami than almost anywhere else in the United States.</p>
 
@@ -285,7 +321,7 @@ export default function BurnRateCalculatorMiamiBlogPost() {
 
 <p>For crypto startups, Miami's regulatory environment offers advantages beyond just tax policy. Florida has taken a generally pro-innovation stance toward digital assets, with state-level initiatives to accept cryptocurrency for certain government services and explore blockchain applications in public sector operations. This creates a more favorable operating environment compared to states with aggressive or uncertain regulatory approaches.</p>
 
-<h2>When Miami's Lower Burn Rate Becomes a Strategic Advantage</h2>
+<h2 id="when-miamis-lower-burn-rate-becomes-a-strategic-advantage">When Miami's Lower Burn Rate Becomes a Strategic Advantage</h2>
 
 <p>The decision to operate from Miami versus San Francisco or New York isn't purely about minimizing burn rate—it's about maximizing the strategic value of each dollar you spend. Lower costs create flexibility that can be deployed in multiple ways depending on your company's stage and objectives.</p>
 
@@ -301,7 +337,7 @@ export default function BurnRateCalculatorMiamiBlogPost() {
 
 <p>The $80,000-$100,000 you save monthly on payroll and rent can fund sophisticated marketing programs that drive customer acquisition and revenue growth. For a B2B SaaS company targeting $100,000+ annual contract values, that extra budget might fund a content marketing team, paid acquisition campaigns, or industry conference presence that directly generates pipeline.</p>
 
-<h2>Real Estate Tech: Miami's Emerging Strength</h2>
+<h2 id="real-estate-tech-miamis-emerging-strength">Real Estate Tech: Miami's Emerging Strength</h2>
 
 <p>Miami's historical foundation in real estate development has created a concentration of proptech (property technology) startups leveraging local domain expertise. Companies building software for residential real estate, commercial property management, construction tech, and hospitality operations benefit from proximity to potential customers and deep industry knowledge unavailable in pure tech hubs.</p>
 
@@ -309,7 +345,7 @@ export default function BurnRateCalculatorMiamiBlogPost() {
 
 <p>Real estate's cyclical nature also creates opportunities for contrarian builders. During market downturns when construction and transaction volumes decline, proptech startups can acquire customers eager to improve operational efficiency and reduce costs. Miami's real estate market volatility—driven by international capital flows, climate considerations, and economic cycles—creates both challenges and opportunities for founders who understand the domain deeply.</p>
 
-<h2>Calculating Runway: How Long Your Cash Will Last</h2>
+<h2 id="calculating-runway-how-long-your-cash-will-last">Calculating Runway: How Long Your Cash Will Last</h2>
 
 <p>Burn rate becomes actionable when you convert it into runway—the number of months until you run out of cash. The basic formula is simple: <strong>Runway (in months) = Current Cash Balance / Monthly Net Burn Rate</strong>.</p>
 
@@ -330,7 +366,7 @@ export default function BurnRateCalculatorMiamiBlogPost() {
 
 <p>Miami's lower burn rate effectively extends this timeline. If you raise $3 million with a $200,000 monthly burn (15-month runway), you hit the "start fundraising" trigger around month 3-4 of operations. With Miami's $140,000 burn rate, the same $3 million provides 21 months of runway, letting you defer fundraising conversations until month 9-10. Those additional 6 months allow for more product development, customer acquisition, and revenue growth—all factors that increase your valuation and reduce dilution in the next round.</p>
 
-<h2>Common Burn Rate Mistakes Miami Founders Make</h2>
+<h2 id="common-burn-rate-mistakes-miami-founders-make">Common Burn Rate Mistakes Miami Founders Make</h2>
 
 <p>Despite cost advantages, Miami founders still make expensive errors that unnecessarily inflate burn rate and shorten runway. Understanding these pitfalls helps you avoid them:</p>
 
@@ -350,7 +386,7 @@ export default function BurnRateCalculatorMiamiBlogPost() {
 
 <p>Conversely, being too conservative with sales and marketing spend can leave revenue potential unrealized. If you've validated that $5,000 in paid ads generates $15,000 in qualified pipeline, you should be scaling that investment aggressively. The lowest burn rate isn't always the best burn rate—you want the most efficient burn rate that balances growth and preservation of runway.</p>
 
-<h2>Using ICanPitch's Burn Rate Calculator for Miami Startups</h2>
+<h2 id="using-icanpitchs-burn-rate-calculator-for-miami-startups">Using ICanPitch's Burn Rate Calculator for Miami Startups</h2>
 
 <p>Manually tracking burn rate across multiple bank accounts, credit cards, and expense categories creates opportunities for errors and missed insights. <a href="https://www.icanpitch.com/" target="_blank" rel="noopener noreferrer">ICanPitch's burn rate calculator</a> provides Miami-specific benchmarking and projections that help you understand whether your spend aligns with comparable startups in South Florida's ecosystem.</p>
 
@@ -358,7 +394,7 @@ export default function BurnRateCalculatorMiamiBlogPost() {
 
 <p>Scenario modeling features let you project how hiring decisions, office expansions, or marketing investments affect runway. Before committing to hire three engineers, you can model the impact: $45,000 additional monthly burn reduces your 15-month runway to 11.5 months, potentially requiring you to accelerate fundraising timelines or hit revenue milestones faster to justify the investment.</p>
 
-<h2>Preparing for Your Next Fundraise: Burn Rate Metrics Investors Evaluate</h2>
+<h2 id="preparing-for-your-next-fundraise-burn-rate-metrics-investor">Preparing for Your Next Fundraise: Burn Rate Metrics Investors Evaluate</h2>
 
 <p>When you enter fundraising conversations, investors scrutinize burn rate and capital efficiency through several lenses. Understanding these metrics helps you position your Miami cost advantage as a strategic strength rather than simply "cheaper operations."</p>
 
@@ -374,7 +410,7 @@ export default function BurnRateCalculatorMiamiBlogPost() {
 
 <p>If your current $150,000 monthly burn is growing 5% monthly while revenue grows from $40,000 to $60,000 monthly (50% growth rate), you can project profitability timelines with reasonable accuracy. Miami startups reaching profitability in 18-24 months on their Series A capital are significantly more attractive than companies requiring 36-48 months and additional funding rounds.</p>
 
-<h2>Miami Burn Rate Calculator: Take Control of Your Startup's Financial Future</h2>
+<h2 id="miami-burn-rate-calculator-take-control-of-your-startups-fin">Miami Burn Rate Calculator: Take Control of Your Startup's Financial Future</h2>
 
 <p>Understanding and actively managing your burn rate separates successful founders from those who run out of cash before reaching product-market fit. Miami's cost advantages create opportunities, but those opportunities only materialize if you track spending rigorously, forecast accurately, and make strategic trade-offs about where to deploy capital.</p>
 
@@ -402,13 +438,30 @@ export default function BurnRateCalculatorMiamiBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/burn-rate-calculator-denver/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Denver Burn Rate Calculator: Track Your Startup's Cash Runway in Colorado's Tech Hub</span>
+                </Link>
+                <Link href="/blog/safe-calculator-miami/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Miami SAFE Calculator: Navigate SAFE Financing in South Florida's Crypto & Web3 Capital</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-amsterdam/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Amsterdam Burn Rate Calculator: Master Your Startup Cash Runway in Europe's Tech Hub</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-barcelona/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Barcelona Burn Rate Calculator: Master Cash Runway for Spanish Startups</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-dublin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Dublin Burn Rate Calculator: Track Your Startup's Monthly Cash Flow in EUR</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/burn-rate-calculator-series-a-first-time-founder-new-york-plan-fundraising-timeline-extend-runway-efficiency/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Burn Rate Calculator</Link>
+              <Link href="/blog/burn-rate-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Burn Rate & Runway Guides</Link>
             </div>
           </div>
         </section>
@@ -418,18 +471,18 @@ export default function BurnRateCalculatorMiamiBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Calculate Your Burn Rate & Runway
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/burn-rate-runway-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Burn Rate Calculator &rarr;
               </a>
             </div>
           </div>

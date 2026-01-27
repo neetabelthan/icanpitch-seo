@@ -114,8 +114,28 @@ export default function SeedBurnRateBenchmarks2025BlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#understanding-seed-stage-burn-rate-in-2025" className="text-blue-600 hover:text-blue-700 text-sm">Understanding Seed Stage Burn Rate in 2025</a></li>
+                  <li><a href="#seed-stage-burn-rate-by-industry-2025-data" className="text-blue-600 hover:text-blue-700 text-sm">Seed Stage Burn Rate by Industry (2025 Data)</a></li>
+                  <li><a href="#scaling-from-pre-seed-to-seed-team-growth-patterns" className="text-blue-600 hover:text-blue-700 text-sm">Scaling from Pre-Seed to Seed: Team Growth Patterns</a></li>
+                  <li><a href="#geographic-burn-rate-variations-at-seed" className="text-blue-600 hover:text-blue-700 text-sm">Geographic Burn Rate Variations at Seed</a></li>
+                  <li><a href="#burn-rate-and-product-market-fit" className="text-blue-600 hover:text-blue-700 text-sm">Burn Rate and Product-Market Fit</a></li>
+                  <li><a href="#seed-stage-runway-18-24-months-standard" className="text-blue-600 hover:text-blue-700 text-sm">Seed Stage Runway: 18-24 Months Standard</a></li>
+                  <li><a href="#burn-multiple-the-key-efficiency-metric" className="text-blue-600 hover:text-blue-700 text-sm">Burn Multiple: The Key Efficiency Metric</a></li>
+                  <li><a href="#when-your-seed-burn-rate-is-too-high" className="text-blue-600 hover:text-blue-700 text-sm">When Your Seed Burn Rate Is Too High</a></li>
+                  <li><a href="#optimizing-seed-stage-burn-rate" className="text-blue-600 hover:text-blue-700 text-sm">Optimizing Seed Stage Burn Rate</a></li>
+                  <li><a href="#burn-rate-benchmarks-by-seed-round-size" className="text-blue-600 hover:text-blue-700 text-sm">Burn Rate Benchmarks by Seed Round Size</a></li>
+                  <li><a href="#seed-burn-rate-by-milestone" className="text-blue-600 hover:text-blue-700 text-sm">Seed Burn Rate by Milestone</a></li>
+                  <li><a href="#seed-burn-rate-key-takeaways" className="text-blue-600 hover:text-blue-700 text-sm">Seed Burn Rate: Key Takeaways</a></li>
+                  <li><a href="#model-your-seed-burn-rate-and-runway" className="text-blue-600 hover:text-blue-700 text-sm">Model Your Seed Burn Rate and Runway</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,13 +146,13 @@ export default function SeedBurnRateBenchmarks2025BlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Understanding Seed Stage Burn Rate in 2025</h2>
+                <h2 id="understanding-seed-stage-burn-rate-in-2025">Understanding Seed Stage Burn Rate in 2025</h2>
 
 <p>Seed stage represents the critical transition from product validation to product-market fit (PMF) and early scaling. Unlike pre-seed, where lean operations dominate, seed-stage companies strategically increase burn to accelerate growth, build out teams, and invest in go-to-market strategies. The key challenge is scaling burn rate in alignment with traction, avoiding the trap of premature scaling that killed countless 2022-2023 startups.</p>
 
 <p>According to <a href="https://www.carta.com" target="_blank" rel="noopener noreferrer">Carta's</a> 2024 Seed Stage Report, median seed-stage burn rates now range from $80,000 to $200,000 per month, with most companies clustering around $120,000-$150,000 monthly. This represents a 20-30% decrease from 2021 peaks but higher than pre-seed by 2-3x, reflecting intentional team expansion and market investment.</p>
 
-<h2>Seed Stage Burn Rate by Industry (2025 Data)</h2>
+<h2 id="seed-stage-burn-rate-by-industry-2025-data">Seed Stage Burn Rate by Industry (2025 Data)</h2>
 
 <p>Industry dynamics fundamentally shape appropriate seed-stage burn rates:</p>
 
@@ -200,7 +220,7 @@ export default function SeedBurnRateBenchmarks2025BlogPost() {
 
 <p>Application-layer AI companies (using third-party models) burn closer to standard SaaS rates, while infrastructure and model developers burn at the high end.</p>
 
-<h2>Scaling from Pre-Seed to Seed: Team Growth Patterns</h2>
+<h2 id="scaling-from-pre-seed-to-seed-team-growth-patterns">Scaling from Pre-Seed to Seed: Team Growth Patterns</h2>
 
 <p>The transition from pre-seed to seed fundamentally changes team composition and burn rate:</p>
 
@@ -242,7 +262,21 @@ export default function SeedBurnRateBenchmarks2025BlogPost() {
 
 <p>Most successful seed-stage companies balance product and GTM, growing both functions in parallel but weighted toward their primary constraint.</p>
 
-<h2>Geographic Burn Rate Variations at Seed</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Calculate Your Burn Rate & Runway</p>
+                <p className="text-gray-600 mb-4">Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.</p>
+                <a
+                  href="https://icanpitch.com/burn-rate-runway-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Burn Rate Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="geographic-burn-rate-variations-at-seed">Geographic Burn Rate Variations at Seed</h2>
 
 <h3>San Francisco Bay Area</h3>
 
@@ -272,7 +306,7 @@ export default function SeedBurnRateBenchmarks2025BlogPost() {
 
 <p>However, remote companies face hidden costs: team offsites ($10K-$25K quarterly), collaboration tools, and sometimes slower execution due to time zone challenges.</p>
 
-<h2>Burn Rate and Product-Market Fit</h2>
+<h2 id="burn-rate-and-product-market-fit">Burn Rate and Product-Market Fit</h2>
 
 <p>The relationship between burn rate and PMF is critical at seed stage:</p>
 
@@ -302,7 +336,7 @@ export default function SeedBurnRateBenchmarks2025BlogPost() {
   <li><strong>Market pull:</strong> Inbound demand exceeding sales capacity</li>
 </ul>
 
-<h2>Seed Stage Runway: 18-24 Months Standard</h2>
+<h2 id="seed-stage-runway-18-24-months-standard">Seed Stage Runway: 18-24 Months Standard</h2>
 
 <p>The standard seed runway target is <strong>18-24 months</strong>, longer than pre-seed's 12-18 months. Here's why:</p>
 
@@ -335,7 +369,7 @@ export default function SeedBurnRateBenchmarks2025BlogPost() {
 
 <p>Note: "average" monthly burn is critical—you might start at $70K/month and ramp to $120K/month as you hire, averaging around $92K.</p>
 
-<h2>Burn Multiple: The Key Efficiency Metric</h2>
+<h2 id="burn-multiple-the-key-efficiency-metric">Burn Multiple: The Key Efficiency Metric</h2>
 
 <p>At seed stage, investors increasingly evaluate <strong>burn multiple</strong>: the ratio of capital burned to net new ARR generated.</p>
 
@@ -356,7 +390,7 @@ export default function SeedBurnRateBenchmarks2025BlogPost() {
 
 <p>If you burned $1.44M but only added $360K ARR, your burn multiple is 4.0x—a signal you're scaling costs faster than revenue, which will hurt Series A prospects.</p>
 
-<h2>When Your Seed Burn Rate Is Too High</h2>
+<h2 id="when-your-seed-burn-rate-is-too-high">When Your Seed Burn Rate Is Too High</h2>
 
 <p>Warning signs your burn is unsustainable:</p>
 
@@ -376,7 +410,7 @@ export default function SeedBurnRateBenchmarks2025BlogPost() {
 
 <p>If your CAC payback exceeds 18 months or LTV:CAC is below 2:1, increasing burn to "grow faster" will only accelerate your path to insolvency. Fix unit economics before scaling spend.</p>
 
-<h2>Optimizing Seed Stage Burn Rate</h2>
+<h2 id="optimizing-seed-stage-burn-rate">Optimizing Seed Stage Burn Rate</h2>
 
 <h3>1. Hire for Leverage, Not Coverage</h3>
 
@@ -398,7 +432,7 @@ export default function SeedBurnRateBenchmarks2025BlogPost() {
 
 <p>Break down burn into Engineering, GTM, Operations, and Other. If one function is growing disproportionately without corresponding output, you've identified waste.</p>
 
-<h2>Burn Rate Benchmarks by Seed Round Size</h2>
+<h2 id="burn-rate-benchmarks-by-seed-round-size">Burn Rate Benchmarks by Seed Round Size</h2>
 
 <p>Your round size should align with your burn rate and runway targets:</p>
 
@@ -423,7 +457,7 @@ export default function SeedBurnRateBenchmarks2025BlogPost() {
 
 <p>Larger seeds support aggressive scaling in competitive markets. Expect to build a 12-18 person team, invest heavily in GTM, and target $2M-$3M ARR for Series A.</p>
 
-<h2>Seed Burn Rate by Milestone</h2>
+<h2 id="seed-burn-rate-by-milestone">Seed Burn Rate by Milestone</h2>
 
 <p>Smart founders phase burn rate increases with milestone achievements:</p>
 
@@ -451,7 +485,7 @@ export default function SeedBurnRateBenchmarks2025BlogPost() {
 
 <p>Optimize metrics for Series A (ARR growth, net retention, gross margins), build executive team, establish board rhythms.</p>
 
-<h2>Seed Burn Rate: Key Takeaways</h2>
+<h2 id="seed-burn-rate-key-takeaways">Seed Burn Rate: Key Takeaways</h2>
 
 <ul>
   <li><strong>Standard range:</strong> $80K-$200K/month depending on industry, stage, and geography</li>
@@ -463,7 +497,7 @@ export default function SeedBurnRateBenchmarks2025BlogPost() {
   <li><strong>Efficiency focus:</strong> 2025 investors reward capital-efficient growth over growth-at-all-costs</li>
 </ul>
 
-<h2>Model Your Seed Burn Rate and Runway</h2>
+<h2 id="model-your-seed-burn-rate-and-runway">Model Your Seed Burn Rate and Runway</h2>
 
 <p>Use <a href="https://www.icanpitch.com" target="_blank" rel="noopener noreferrer">ICanPitch's runway and burn rate calculator</a> to model different hiring plans, compare your burn against industry benchmarks, and optimize your path to product-market fit and Series A readiness. Get data-driven insights for your specific stage and market.</p>
 
@@ -486,13 +520,30 @@ export default function SeedBurnRateBenchmarks2025BlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/pre-seed-burn-rate-benchmarks-2025/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pre-Seed Burn Rate Benchmarks 2025: What Founders Need to Know</span>
+                </Link>
+                <Link href="/blog/series-a-burn-rate-benchmarks-2025/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Series A Burn Rate Benchmarks 2025: Efficiency Metrics and Growth Scaling</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-chicago/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Chicago Burn Rate Calculator: Track Startup Runway in the Midwest Tech Hub</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-seattle/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Seattle Startups: Track Your Runway in 2025</span>
+                </Link>
+                <Link href="/blog/burn-rate-benchmarks-by-industry-stage/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Benchmarks by Industry and Stage: 2025 Data</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/burn-rate-calculator-series-a-first-time-founder-new-york-plan-fundraising-timeline-extend-runway-efficiency/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Burn Rate Calculator</Link>
+              <Link href="/blog/burn-rate-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Burn Rate & Runway Guides</Link>
             </div>
           </div>
         </section>
@@ -502,18 +553,18 @@ export default function SeedBurnRateBenchmarks2025BlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Calculate Your Burn Rate & Runway
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/burn-rate-runway-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Burn Rate Calculator &rarr;
               </a>
             </div>
           </div>

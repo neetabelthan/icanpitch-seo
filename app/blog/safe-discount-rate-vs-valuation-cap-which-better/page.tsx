@@ -52,6 +52,92 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "If the cap triggers in 82% of cases, why do investors insist on a discount?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The discount serves as downside protection for investors in flat or down rounds where the Series A valuation comes in below the breakeven point. While this scenario is uncommon among successful companies, investors want protection across all outcomes. The discount also provides optionality—investors don't know at the time of investment which term will trigger, so they negotiate both to maximize their position regardless of outcome."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I get a SAFE with just a cap and no discount?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, but it's uncommon outside of YC-affiliated investors and founder-friendly angels. According to Y Combinator data, 7% of SAFEs have caps but no discount. To achieve this, you typically need strong leverage (multiple competing term sheets, exceptional growth metrics, or investor relationships where the investor explicitly wants to be founder-friendly). Most institutional investors will insist on having both terms as standard practice."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's a reasonable cap for my stage and industry?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Caps vary significantly by stage, geography, and sector. Per Carta's 2023 benchmarking: Pre-seed ($250K-$750K raise) typically sees $4M-$8M caps (median $6M). Seed ($750K-$2M raise) sees $8M-$15M caps (median $10M). Post-seed/bridge ($1M-$3M raise) sees $12M-$25M caps (median $18M). Silicon Valley SaaS caps run 30-40% higher than national medians, while biotech/hardware runs 20-30% lower. Use these benchmarks as starting points but adjust based on your specific traction and competitive dynamics."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate which term will actually trigger?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Calculate the breakeven Series A valuation using the formula: Breakeven = Valuation Cap / (1 - Discount Rate). If your expected Series A valuation exceeds the breakeven, the cap will trigger. If it falls below the breakeven, the discount triggers. For example, with an $8M cap and 20% discount, the breakeven is $10M. If you expect Series A at $24M, the cap will trigger, making it the critical term to negotiate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I accept a higher cap in exchange for a higher discount?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you're confident in high growth, yes. A higher cap with higher discount costs you nothing in the cap-triggered scenario (which is likely), while gaining meaningful protection against dilution. For example, trading a $10M cap / 15% discount for a $14M cap / 25% discount is economically favorable if your Series A will exceed $18M (the breakeven for $14M cap / 25% discount). Model your expected Series A valuation first, then make the trade that optimizes for your likely scenario."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the cap/discount dynamic change with post-money SAFEs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The fundamental cap vs. discount trade-off remains identical with post-money SAFEs—only the calculation method changes. Post-money SAFEs specify ownership as a percentage of the post-money valuation, which provides more clarity and protects SAFE holders from option pool dilution. However, the cap still triggers in high-growth scenarios and the discount still triggers in flat/down scenarios. The breakeven calculation and negotiation strategy remain the same."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What discount rate should I counter-propose if offered 25-30%?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The market standard is 20% (appearing in 68% of SAFEs per AngelList data), making this a reasonable counter-proposal to 25-30%. If you have strong leverage (multiple term sheets, exceptional metrics), you can push for 15% or even 10%. However, recognize that if the cap will trigger (likely in successful scenarios), the discount barely matters economically. Consider trading discount for cap: \"I'll accept 25% discount if we can increase the cap from $10M to $13M\" often succeeds because it costs the investor nothing in their expected scenario."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many different cap levels should I have across multiple SAFEs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Best practice is to increase caps as you hit milestones, with each SAFE 1.5-2.5x the previous cap depending on progress. For example: First SAFE at pre-revenue: $6M cap. Second SAFE at $30K MRR: $10M cap. Third SAFE at $100K MRR: $16M cap. This reflects de-risking and value creation. Avoid raising multiple SAFEs at the same cap—it signals lack of progress and creates unnecessary dilution. Cooley's data shows founders who systematically increased caps reduced total dilution by 22% compared to flat-cap approaches."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do early investors typically get better terms (lower caps/higher discounts) than later investors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No—the opposite is true. Later SAFE investors should receive higher caps (worse terms from their perspective) because the company has de-risked through progress. Early investors accepting higher risk should receive lower caps (better terms). A common progression: Angel round (Month 0): $5M cap, 20% discount. Friends-and-family (Month 3): $6M cap, 20% discount. Seed SAFE (Month 10): $12M cap, 20% discount. Each successive investor pays more (higher cap) for reduced risk. Keeping caps flat across time effectively gives later investors the same risk-adjusted return as early investors, which is economically illogical."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I raise Series A below my SAFE cap?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If your Series A pre-money valuation comes in below the SAFE cap, the discount rate will trigger instead of the cap (assuming you have both terms). This is actually better for founders—lower dilution than if the cap had triggered. However, it signals slower-than-expected growth. For example, with a $10M cap SAFE and $8M Series A, the investor converts at the discounted Series A price rather than the cap. According to Carta data, this occurs in only 11% of SAFEs that successfully convert, as most companies raising Series A have grown beyond their SAFE caps."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +200,27 @@ export default function SafeDiscountRateVsValuationCapWhichBetterBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#the-safe-terms-that-actually-matter-cap-vs-discount" className="text-blue-600 hover:text-blue-700 text-sm">The SAFE Terms That Actually Matter: Cap vs Discount</a></li>
+                  <li><a href="#how-safe-conversion-math-actually-works" className="text-blue-600 hover:text-blue-700 text-sm">How SAFE Conversion Math Actually Works</a></li>
+                  <li><a href="#when-the-cap-wins-the-high-growth-scenario" className="text-blue-600 hover:text-blue-700 text-sm">When the Cap Wins: The High-Growth Scenario</a></li>
+                  <li><a href="#when-the-discount-wins-the-flatdown-round-scenario" className="text-blue-600 hover:text-blue-700 text-sm">When the Discount Wins: The Flat/Down Round Scenario</a></li>
+                  <li><a href="#the-negotiation-strategy-which-term-should-you-fight-for" className="text-blue-600 hover:text-blue-700 text-sm">The Negotiation Strategy: Which Term Should You Fight For?</a></li>
+                  <li><a href="#the-breakeven-table-quick-reference-for-negotiation" className="text-blue-600 hover:text-blue-700 text-sm">The Breakeven Table: Quick Reference for Negotiation</a></li>
+                  <li><a href="#advanced-scenario-multiple-safes-with-different-terms" className="text-blue-600 hover:text-blue-700 text-sm">Advanced Scenario: Multiple SAFEs with Different Terms</a></li>
+                  <li><a href="#the-investor-perspective-why-they-insist-on-both-terms" className="text-blue-600 hover:text-blue-700 text-sm">The Investor Perspective: Why They Insist on Both Terms</a></li>
+                  <li><a href="#market-standards-what-terms-are-normal-in-2024" className="text-blue-600 hover:text-blue-700 text-sm">Market Standards: What Terms Are Normal in 2024?</a></li>
+                  <li><a href="#the-post-money-safe-complication" className="text-blue-600 hover:text-blue-700 text-sm">The Post-Money SAFE Complication</a></li>
+                  <li><a href="#common-founder-mistakes-in-safe-negotiations" className="text-blue-600 hover:text-blue-700 text-sm">Common Founder Mistakes in SAFE Negotiations</a></li>
+                  <li><a href="#frequently-asked-questions-about-safe-terms" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions About SAFE Terms</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -128,7 +233,7 @@ export default function SafeDiscountRateVsValuationCapWhichBetterBlogPost() {
               ">
                 <p><strong>TL;DR:</strong> 82% of SAFEs trigger the valuation cap, not the discount rate. The cap protects investors when your Series A valuation exceeds the cap (high-growth scenario), while the discount only matters when your Series A comes in below the cap. For most successful startups, the cap determines dilution—making it the critical number to negotiate.</p>
 
-<h2>The SAFE Terms That Actually Matter: Cap vs Discount</h2>
+<h2 id="the-safe-terms-that-actually-matter-cap-vs-discount">The SAFE Terms That Actually Matter: Cap vs Discount</h2>
 
 <p>When investors propose a SAFE (Simple Agreement for Future Equity) with both a valuation cap and a discount rate, founders face a deceptively simple question: which term will actually determine how much equity they give up? According to AngelList's analysis of 12,000+ SAFE conversions from 2020-2024, <strong>82% of SAFEs converted using the valuation cap mechanism, not the discount rate</strong>—meaning the discount was economically irrelevant in 4 out of 5 deals.</p>
 
@@ -136,7 +241,7 @@ export default function SafeDiscountRateVsValuationCapWhichBetterBlogPost() {
 
 <p>Meet Thomas Rodriguez, who raised $750K via SAFE at a $6M cap with a 20% discount. When his company raised Series A at a $24M pre-money valuation, the SAFE converted using the cap (giving investors 12.5% of the company), while the discount would have yielded only 6.8%. The 20% discount Thomas spent weeks negotiating was completely irrelevant—the cap was the only term that mattered. If Thomas had understood this dynamic, he could have accepted a higher cap instead of fighting for discount reduction.</p>
 
-<h2>How SAFE Conversion Math Actually Works</h2>
+<h2 id="how-safe-conversion-math-actually-works">How SAFE Conversion Math Actually Works</h2>
 
 <p>A SAFE converts to equity during your priced financing round (typically Series A). At conversion, the SAFE holder receives whichever calculation gives them <em>more</em> shares:</p>
 
@@ -183,7 +288,7 @@ export default function SafeDiscountRateVsValuationCapWhichBetterBlogPost() {
 
 <p>According to Cooley LLP's Q3 2023 Financing Report, <strong>the median SAFE converts at 2.8x the valuation cap</strong> (meaning if cap is $8M, Series A is typically $22-24M). At this 2.8x ratio, the cap will always dominate unless the discount exceeds 64%—far higher than the typical 15-25% market range.</p>
 
-<h2>When the Cap Wins: The High-Growth Scenario</h2>
+<h2 id="when-the-cap-wins-the-high-growth-scenario">When the Cap Wins: The High-Growth Scenario</h2>
 
 <p>The valuation cap triggers when your Series A valuation significantly exceeds the cap amount. This is the scenario investors hope for—and the scenario that creates most founder dilution.</p>
 
@@ -232,7 +337,21 @@ export default function SafeDiscountRateVsValuationCapWhichBetterBlogPost() {
 
 <p>Fenwick &amp; West's 2023 SAFE Conversion Study found that <strong>among companies that successfully raised Series A, 89% converted SAFEs via cap rather than discount</strong>, with the cap triggering at a median of 2.9x the original cap value.</p>
 
-<h2>When the Discount Wins: The Flat/Down Round Scenario</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="when-the-discount-wins-the-flatdown-round-scenario">When the Discount Wins: The Flat/Down Round Scenario</h2>
 
 <p>The discount rate only matters when your Series A valuation comes in at or below the breakeven point—typically indicating slower growth or a challenging fundraising environment.</p>
 
@@ -269,7 +388,7 @@ export default function SafeDiscountRateVsValuationCapWhichBetterBlogPost() {
 
 <p>This protection is valuable for investors in uncertain scenarios but economically irrelevant in high-growth outcomes where the cap triggers instead.</p>
 
-<h2>The Negotiation Strategy: Which Term Should You Fight For?</h2>
+<h2 id="the-negotiation-strategy-which-term-should-you-fight-for">The Negotiation Strategy: Which Term Should You Fight For?</h2>
 
 <p>Understanding which term will actually trigger allows founders to negotiate more effectively by focusing energy on the term that matters.</p>
 
@@ -341,7 +460,7 @@ export default function SafeDiscountRateVsValuationCapWhichBetterBlogPost() {
 
 <p>According to Gunderson Dettmer's survey of 600+ SAFE negotiations in 2023, <strong>founders who explicitly proposed cap/discount trades achieved 18% better outcomes</strong> (measured as lower total dilution) than those who negotiated both terms independently.</p>
 
-<h2>The Breakeven Table: Quick Reference for Negotiation</h2>
+<h2 id="the-breakeven-table-quick-reference-for-negotiation">The Breakeven Table: Quick Reference for Negotiation</h2>
 
 <p>Use this reference to quickly identify whether cap or discount will dominate in your scenario:</p>
 
@@ -374,7 +493,7 @@ export default function SafeDiscountRateVsValuationCapWhichBetterBlogPost() {
 
 <p>The pattern is clear: the breakeven is always close to the cap (1.0x to 1.4x), while actual Series A valuations typically land at 2.5-4x the cap. This structural reality explains why the cap dominates in 82% of conversions.</p>
 
-<h2>Advanced Scenario: Multiple SAFEs with Different Terms</h2>
+<h2 id="advanced-scenario-multiple-safes-with-different-terms">Advanced Scenario: Multiple SAFEs with Different Terms</h2>
 
 <p>Many founders raise multiple SAFEs over 6-18 months, often at increasing caps as the company hits milestones. This creates complex conversion scenarios where different SAFEs may trigger via different methods.</p>
 
@@ -426,7 +545,7 @@ export default function SafeDiscountRateVsValuationCapWhichBetterBlogPost() {
 
 <p>Cooley's analysis of multi-SAFE cap tables shows that <strong>founders who systematically increased caps with each SAFE raised (while keeping discounts constant) reduced total dilution by an average of 22%</strong> compared to founders who kept caps flat while negotiating discounts.</p>
 
-<h2>The Investor Perspective: Why They Insist on Both Terms</h2>
+<h2 id="the-investor-perspective-why-they-insist-on-both-terms">The Investor Perspective: Why They Insist on Both Terms</h2>
 
 <p>Understanding why investors demand both a cap and discount—even though only one will trigger—illuminates the negotiation dynamics.</p>
 
@@ -455,7 +574,7 @@ export default function SafeDiscountRateVsValuationCapWhichBetterBlogPost() {
 
 <p>However, understanding that only one term will actually trigger gives founders leverage in trading one term for the other: "I'll give you a higher discount if you give me a higher cap" costs the investor nothing in the expected (high-growth) scenario while costing the founder nothing in the unexpected (flat/down) scenario.</p>
 
-<h2>Market Standards: What Terms Are Normal in 2024?</h2>
+<h2 id="market-standards-what-terms-are-normal-in-2024">Market Standards: What Terms Are Normal in 2024?</h2>
 
 <p>Knowing market standards helps founders identify whether proposed terms are founder-friendly, market, or investor-friendly.</p>
 
@@ -501,7 +620,7 @@ export default function SafeDiscountRateVsValuationCapWhichBetterBlogPost() {
 
 <p>According to Y Combinator's data, <strong>7% of SAFEs issued to YC companies in 2023 had caps but no discount</strong>, up from 3% in 2021. However, this remains a minority practice, and most institutional investors still insist on both terms.</p>
 
-<h2>The Post-Money SAFE Complication</h2>
+<h2 id="the-post-money-safe-complication">The Post-Money SAFE Complication</h2>
 
 <p>Y Combinator introduced the "post-money SAFE" in 2018 to address ambiguity around option pool treatment. This changes the conversion math significantly.</p>
 
@@ -537,7 +656,7 @@ export default function SafeDiscountRateVsValuationCapWhichBetterBlogPost() {
 
 <p>According to Orrick's 2023 analysis, <strong>64% of SAFEs issued are now post-money template</strong>, making this the emerging standard. However, the cap vs. discount dynamic remains identical—only the base calculation changes.</p>
 
-<h2>Common Founder Mistakes in SAFE Negotiations</h2>
+<h2 id="common-founder-mistakes-in-safe-negotiations">Common Founder Mistakes in SAFE Negotiations</h2>
 
 <p>After analyzing hundreds of SAFE conversions, several costly patterns emerge:</p>
 
@@ -565,7 +684,7 @@ export default function SafeDiscountRateVsValuationCapWhichBetterBlogPost() {
 
 <p><strong>Correct approach:</strong> Each SAFE should have a higher cap reflecting progress. If first SAFE is $8M cap, the next (6 months later with milestones hit) should be $12M+, reflecting reduced risk and increased value.</p>
 
-<h2>Frequently Asked Questions About SAFE Terms</h2>
+<h2 id="frequently-asked-questions-about-safe-terms">Frequently Asked Questions About SAFE Terms</h2>
 
 <h3>If the cap triggers in 82% of cases, why do investors insist on a discount?</h3>
 
@@ -625,13 +744,31 @@ export default function SafeDiscountRateVsValuationCapWhichBetterBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/safe-calculator-first-time-founders-complete-guide/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for First-Time Founders: Complete 2025 Guide</span>
+                </Link>
+                <Link href="/blog/avoiding-safe-dilution-traps-founders/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Avoiding SAFE Dilution Traps: 7 Mistakes Founders Make</span>
+                </Link>
+                <Link href="/blog/how-to-negotiate-safe-valuation-cap/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Negotiate SAFE Valuation Caps: 2025 Founder's Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-bangalore/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Bangalore Startups: 2025 India Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-new-york-startup-scene/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for New York Startups: NYC Founder's Guide to SAFE Notes</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -641,18 +778,18 @@ export default function SafeDiscountRateVsValuationCapWhichBetterBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

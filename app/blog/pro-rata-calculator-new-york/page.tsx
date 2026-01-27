@@ -114,8 +114,26 @@ export default function ProRataCalculatorNewYorkBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-nyc-leads-the-nation-in-pro-rata-rights-52-of-seed-safes" className="text-blue-600 hover:text-blue-700 text-sm">Why NYC Leads the Nation in Pro-Rata Rights: 52% of Seed SAFEs Include Follow-On Rights</a></li>
+                  <li><a href="#east-coast-investor-culture-why-nyc-vcs-prioritize-pro-rata-" className="text-blue-600 hover:text-blue-700 text-sm">East Coast Investor Culture: Why NYC VCs Prioritize Pro-Rata Rights</a></li>
+                  <li><a href="#how-pro-rata-rights-work-in-nyc-series-a-and-series-b-rounds" className="text-blue-600 hover:text-blue-700 text-sm">How Pro-Rata Rights Work in NYC Series A and Series B Rounds</a></li>
+                  <li><a href="#calculating-pro-rata-allocations-nyc-founder-methodology" className="text-blue-600 hover:text-blue-700 text-sm">Calculating Pro-Rata Allocations: NYC Founder Methodology</a></li>
+                  <li><a href="#nyc-specific-pro-rata-negotiation-tactics" className="text-blue-600 hover:text-blue-700 text-sm">NYC-Specific Pro-Rata Negotiation Tactics</a></li>
+                  <li><a href="#common-pro-rata-mistakes-in-nyc-fundraising" className="text-blue-600 hover:text-blue-700 text-sm">Common Pro-Rata Mistakes in NYC Fundraising</a></li>
+                  <li><a href="#pro-rata-rights-and-nycs-unique-investor-landscape" className="text-blue-600 hover:text-blue-700 text-sm">Pro-Rata Rights and NYC's Unique Investor Landscape</a></li>
+                  <li><a href="#pro-rata-rights-calculator-building-your-nyc-model" className="text-blue-600 hover:text-blue-700 text-sm">Pro-Rata Rights Calculator: Building Your NYC Model</a></li>
+                  <li><a href="#how-pro-rata-rights-impact-nyc-exits-and-acquisitions" className="text-blue-600 hover:text-blue-700 text-sm">How Pro-Rata Rights Impact NYC Exits and Acquisitions</a></li>
+                  <li><a href="#nyc-specific-resources-for-pro-rata-modeling" className="text-blue-600 hover:text-blue-700 text-sm">NYC-Specific Resources for Pro-Rata Modeling</a></li>
+                  <li><a href="#key-takeaways-for-nyc-founders" className="text-blue-600 hover:text-blue-700 text-sm">Key Takeaways for NYC Founders</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +144,7 @@ export default function ProRataCalculatorNewYorkBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why NYC Leads the Nation in Pro-Rata Rights: 52% of Seed SAFEs Include Follow-On Rights</h2>
+                <h2 id="why-nyc-leads-the-nation-in-pro-rata-rights-52-of-seed-safes">Why NYC Leads the Nation in Pro-Rata Rights: 52% of Seed SAFEs Include Follow-On Rights</h2>
 
 <p>New York City has emerged as a distinctive fundraising ecosystem where pro-rata rights are not just common—they're the expectation. According to recent Carta data, an impressive 52% of seed-stage SAFEs in the New York metropolitan area include pro-rata rights for investors, the highest percentage of any major U.S. startup hub. This significantly exceeds Silicon Valley's 38% and reflects the unique investor culture that has developed along the East Coast.</p>
 
@@ -134,7 +152,7 @@ export default function ProRataCalculatorNewYorkBlogPost() {
 
 <p>Pro-rata rights allow investors to maintain their ownership percentage in your company by participating proportionally in future funding rounds. When Greycroft invests $750K in your seed round at a $12M post-money valuation (giving them 6.25% ownership), pro-rata rights ensure they can invest $1.875M in a $30M Series A to maintain that 6.25% stake. Without these rights, their ownership would dilute to roughly 2.5% after the Series A.</p>
 
-<h2>East Coast Investor Culture: Why NYC VCs Prioritize Pro-Rata Rights</h2>
+<h2 id="east-coast-investor-culture-why-nyc-vcs-prioritize-pro-rata-">East Coast Investor Culture: Why NYC VCs Prioritize Pro-Rata Rights</h2>
 
 <p>The prevalence of pro-rata rights in New York deals stems from several factors that distinguish the East Coast venture ecosystem from its West Coast counterpart.</p>
 
@@ -169,7 +187,7 @@ export default function ProRataCalculatorNewYorkBlogPost() {
 
 <p>A common NYC scenario: You raise a $2M seed from Lerer Hippeau and several angels, then raise a $15M Series A led by Accel or Lightspeed from California. Without pro-rata rights, your NYC seed investors get diluted significantly and lose influence on the board. With pro-rata rights, they can invest $500K-$1M to maintain ownership and preserve their board seat or observer rights.</p>
 
-<h2>How Pro-Rata Rights Work in NYC Series A and Series B Rounds</h2>
+<h2 id="how-pro-rata-rights-work-in-nyc-series-a-and-series-b-rounds">How Pro-Rata Rights Work in NYC Series A and Series B Rounds</h2>
 
 <p>The mechanics of pro-rata rights in New York deals follow standard venture practices, but with some regional nuances that founders should understand.</p>
 
@@ -233,7 +251,21 @@ export default function ProRataCalculatorNewYorkBlogPost() {
 
 <p>This leaves only $24.98M for the new Series B lead (Tiger Global or Coatue) who wants $30M for 15% ownership. The solution? Most NYC companies negotiate with existing investors to reduce pro-rata participation or increase the round size to $45M. This is why experienced founders limit pro-rata rights at the seed stage.</p>
 
-<h2>Calculating Pro-Rata Allocations: NYC Founder Methodology</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Pro-Rata Participation</p>
+                <p className="text-gray-600 mb-4">See how investor follow-on rights affect your cap table in future fundraising rounds.</p>
+                <a
+                  href="https://icanpitch.com/pro-rata-rights-impact-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Pro-Rata Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="calculating-pro-rata-allocations-nyc-founder-methodology">Calculating Pro-Rata Allocations: NYC Founder Methodology</h2>
 
 <p>New York founders need practical frameworks to model pro-rata scenarios during fundraising. Here's the step-by-step methodology used by experienced NYC entrepreneurs:</p>
 
@@ -298,7 +330,7 @@ export default function ProRataCalculatorNewYorkBlogPost() {
 
 <p>This range helps you enter Series A negotiations with realistic expectations and flexibility.</p>
 
-<h2>NYC-Specific Pro-Rata Negotiation Tactics</h2>
+<h2 id="nyc-specific-pro-rata-negotiation-tactics">NYC-Specific Pro-Rata Negotiation Tactics</h2>
 
 <p>New York's investment culture requires different negotiation approaches than Silicon Valley. Here are tactics that work specifically in the NYC ecosystem:</p>
 
@@ -340,7 +372,7 @@ export default function ProRataCalculatorNewYorkBlogPost() {
 
 <p>This approach is used successfully by NYC companies working with groups like Tech:NYC Angels, Empire Angels, or Brooklyn Bridge Ventures' co-investment network. It preserves flexibility for future rounds while still giving angels some follow-on opportunity.</p>
 
-<h2>Common Pro-Rata Mistakes in NYC Fundraising</h2>
+<h2 id="common-pro-rata-mistakes-in-nyc-fundraising">Common Pro-Rata Mistakes in NYC Fundraising</h2>
 
 <p>New York founders make several predictable mistakes when negotiating pro-rata rights. Learning from others' experiences can save you significant headaches:</p>
 
@@ -379,7 +411,7 @@ export default function ProRataCalculatorNewYorkBlogPost() {
 
 <p><strong>Solution:</strong> Give corporate strategics limited or conditional pro-rata rights. Common structure: 25-50% pro-rata in Series A only, conditional on maintaining commercial partnership or hitting joint business milestones. This preserves optionality while acknowledging the strategic relationship.</p>
 
-<h2>Pro-Rata Rights and NYC's Unique Investor Landscape</h2>
+<h2 id="pro-rata-rights-and-nycs-unique-investor-landscape">Pro-Rata Rights and NYC's Unique Investor Landscape</h2>
 
 <p>Understanding how different types of NYC investors approach pro-rata rights helps you negotiate more effectively.</p>
 
@@ -420,7 +452,7 @@ export default function ProRataCalculatorNewYorkBlogPost() {
 
 <p>Recommended approach: Don't offer pro-rata to angels investing &lt;$50K. For $50K-$100K checks, offer pooled/syndicate pro-rata. For $100K+ angel checks, consider partial pro-rata (50%) if they're strategically valuable.</p>
 
-<h2>Pro-Rata Rights Calculator: Building Your NYC Model</h2>
+<h2 id="pro-rata-rights-calculator-building-your-nyc-model">Pro-Rata Rights Calculator: Building Your NYC Model</h2>
 
 <p>NYC founders should build a dynamic pro-rata calculator that accounts for the region's typical fundraising patterns. Here's a framework:</p>
 
@@ -471,7 +503,7 @@ export default function ProRataCalculatorNewYorkBlogPost() {
 
 <p>This three-scenario approach helps you enter Series A negotiations with realistic ranges and prevents surprises when existing investors commit more or less capital than expected.</p>
 
-<h2>How Pro-Rata Rights Impact NYC Exits and Acquisitions</h2>
+<h2 id="how-pro-rata-rights-impact-nyc-exits-and-acquisitions">How Pro-Rata Rights Impact NYC Exits and Acquisitions</h2>
 
 <p>New York's exit landscape—dominated by strategic acquisitions in fintech, media, and healthcare rather than IPOs—creates unique pro-rata dynamics.</p>
 
@@ -522,7 +554,7 @@ export default function ProRataCalculatorNewYorkBlogPost() {
 <li><strong>Selective pro-rata exercise:</strong> In down rounds, some investors exercise pro-rata while others don't, creating asymmetric ownership changes</li>
 </ul>
 
-<h2>NYC-Specific Resources for Pro-Rata Modeling</h2>
+<h2 id="nyc-specific-resources-for-pro-rata-modeling">NYC-Specific Resources for Pro-Rata Modeling</h2>
 
 <p>New York founders have access to several regional resources for understanding and modeling pro-rata rights:</p>
 
@@ -534,7 +566,7 @@ export default function ProRataCalculatorNewYorkBlogPost() {
 <li><strong>Carta NYC Benchmarking:</strong> Regional cap table and pro-rata data for NYC companies at <a href="https://carta.com" target="_blank" rel="noopener noreferrer">carta.com</a></li>
 </ul>
 
-<h2>Key Takeaways for NYC Founders</h2>
+<h2 id="key-takeaways-for-nyc-founders">Key Takeaways for NYC Founders</h2>
 
 <p>Pro-rata rights are more prevalent in New York than any other major U.S. startup hub, reflecting the East Coast's relationship-driven, long-term investment culture:</p>
 
@@ -571,13 +603,31 @@ export default function ProRataCalculatorNewYorkBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/pro-rata-calculator-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pro-Rata Rights Calculator for Silicon Valley Startups (2025)</span>
+                </Link>
+                <Link href="/blog/pro-rata-calculator-berlin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pro-Rata Rights Calculator for Berlin Startups (2025)</span>
+                </Link>
+                <Link href="/blog/pro-rata-calculator-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pro-Rata Rights Calculator for London Startups (2025)</span>
+                </Link>
+                <Link href="/blog/pro-rata-calculator-singapore/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pro-Rata Rights Calculator for Singapore Startups (2025)</span>
+                </Link>
+                <Link href="/blog/safe-calculator-fintech-new-york/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Fintech SAFE Calculator for New York Startups: Valuation Benchmarks & Investor Expectations</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/pro-rata-calculator-series-b-business-founder-chicago-model-future-dilution-plan-investor-rights/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Pro Rata Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/exit-strategy-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Exit & Pro-Rata Guides</Link>
             </div>
           </div>
         </section>
@@ -587,18 +637,18 @@ export default function ProRataCalculatorNewYorkBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Pro-Rata Participation
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See how investor follow-on rights affect your cap table in future fundraising rounds.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/pro-rata-rights-impact-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Pro-Rata Calculator &rarr;
               </a>
             </div>
           </div>

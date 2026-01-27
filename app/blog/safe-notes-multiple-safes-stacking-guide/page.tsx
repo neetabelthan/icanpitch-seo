@@ -52,6 +52,60 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "1. How many SAFEs is too many?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The data shows a clear inflection point at 3 SAFEs. Companies raising 4 or more SAFEs experience significantly worse outcomes: lower Series A success rates (only 12% close within 24 months), higher dilution (founders retain only 42% vs 63% with 2 SAFEs), and more cap table complexity. If you're considering a 4th SAFE, seriously evaluate whether a priced seed round would be cleaner and more founder-friendly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "2. Should I use the same valuation cap for multiple SAFEs if I raise them close together?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you're raising SAFEs within 3-6 months without meaningful milestone achievement, using the same cap is reasonable and transparent. However, this often signals you under-raised on your initial SAFE. Better approach: Raise enough in SAFE #1 to reach a meaningful milestone that justifies a higher cap on SAFE #2. Sequential SAFEs at the same cap add complexity without benefit—consider a rolling SAFE at one cap instead."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "3. Do post-money SAFEs always dilute less than pre-money SAFEs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In SAFE stacking scenarios, yes. Post-money SAFEs calculate dilution independently at each cap, while pre-money SAFEs create compounding dilution where later SAFEs dilute earlier ones. The difference becomes more pronounced with 3+ SAFEs. However, for a single SAFE converting into a priced round, the dilution is nearly identical—the benefit of post-money is predictability, not necessarily lower dilution. The critical advantage of post-money is knowing your exact dilution at signing, which is invaluable when stacking multiple SAFEs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "4. What happens if my Series A valuation is lower than one of my SAFE caps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If your Series A pre-money valuation is lower than a SAFE cap, that SAFE converts at the Series A valuation, not the cap. This is called a \"down round\" conversion. For example, if you have a SAFE at a $10M cap but raise Series A at $8M pre-money, the SAFE converts at the $8M valuation. This protects the SAFE holder from overpaying but can create significant dilution for founders. To avoid this scenario, be conservative with your caps and ensure each SAFE cap is at least 30-40% below your realistic Series A target valuation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "5. Can I consolidate multiple SAFEs before my Series A?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, and many founders do this to clean up their cap table. The process typically involves: (1) Getting all SAFE holders to agree to convert their SAFEs into a single class of preferred stock at an agreed-upon valuation, effectively creating a \"synthetic\" priced round; or (2) Amending all SAFEs to have identical terms and treating them as one instrument. This requires unanimous consent from all SAFE holders, which can be difficult to obtain. It's much easier to avoid this situation by using rolling SAFEs at the same cap or limiting yourself to 2-3 SAFEs maximum."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "6. Should I include a discount rate, valuation cap, or both in my SAFEs when stacking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For SAFE stacking, simplicity is critical. Most experienced founders use cap-only SAFEs (no discount) for all but their first SAFE. Here's why: Discount rates create additional complexity at conversion because they can trigger different conversion prices for different SAFEs. Cap-only SAFEs are cleaner, easier to model, and preferred by Series A investors who need to understand your cap table quickly. The exception: Your very first SAFE (friends and family) might include a 15-20% discount to reward early believers, but subsequent SAFEs should be cap-only. If an investor insists on a discount in a later SAFE, it's often a signal they don't believe in your valuation cap—address that concern directly rather than adding complexity via a discount."
+        }
+      }
+    ]
   }
 ];
 
@@ -115,8 +169,26 @@ export default function SafeNotesMultipleSafesStackingGuideBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#what-is-safe-stacking" className="text-blue-600 hover:text-blue-700 text-sm">What is SAFE Stacking?</a></li>
+                  <li><a href="#meet-sarah-founder-navigating-multiple-safes" className="text-blue-600 hover:text-blue-700 text-sm">Meet Sarah: Founder Navigating Multiple SAFEs</a></li>
+                  <li><a href="#post-money-vs-pre-money-safe-stacking-the-critical-differenc" className="text-blue-600 hover:text-blue-700 text-sm">Post-Money vs Pre-Money SAFE Stacking: The Critical Difference</a></li>
+                  <li><a href="#cumulative-dilution-calculations-the-full-picture" className="text-blue-600 hover:text-blue-700 text-sm">Cumulative Dilution Calculations: The Full Picture</a></li>
+                  <li><a href="#cap-table-complexity-real-examples" className="text-blue-600 hover:text-blue-700 text-sm">Cap Table Complexity: Real Examples</a></li>
+                  <li><a href="#key-statistics-on-safe-stacking" className="text-blue-600 hover:text-blue-700 text-sm">Key Statistics on SAFE Stacking</a></li>
+                  <li><a href="#when-multiple-safes-make-sense-vs-when-to-do-a-priced-round" className="text-blue-600 hover:text-blue-700 text-sm">When Multiple SAFEs Make Sense vs When to Do a Priced Round</a></li>
+                  <li><a href="#managing-safe-stack-dilution-practical-steps" className="text-blue-600 hover:text-blue-700 text-sm">Managing SAFE Stack Dilution: Practical Steps</a></li>
+                  <li><a href="#frequently-asked-questions" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions</a></li>
+                  <li><a href="#final-takeaways-safe-stacking-best-practices" className="text-blue-600 hover:text-blue-700 text-sm">Final Takeaways: SAFE Stacking Best Practices</a></li>
+                  <li><a href="#further-reading-and-resources" className="text-blue-600 hover:text-blue-700 text-sm">Further Reading and Resources</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -131,7 +203,7 @@ export default function SafeNotesMultipleSafesStackingGuideBlogPost() {
   <strong>TL;DR:</strong> 47% of seed-stage companies raise 2-3 SAFEs before their Series A, creating "SAFE stacking" that can lead to 35-50% dilution at conversion. Understanding post-money vs pre-money stacking mechanics is critical—the difference can cost founders 10-15% additional dilution on the same capital raised.
 </p>
 
-<h2>What is SAFE Stacking?</h2>
+<h2 id="what-is-safe-stacking">What is SAFE Stacking?</h2>
 <p>
   SAFE stacking refers to the practice of raising multiple SAFE (Simple Agreement for Future Equity) rounds over time, typically between initial launch and a priced equity round. Rather than raising all seed capital in a single SAFE or convertible note, founders incrementally raise capital through sequential SAFEs—often at different valuation caps and terms.
 </p>
@@ -157,7 +229,7 @@ export default function SafeNotesMultipleSafesStackingGuideBlogPost() {
   However, SAFE stacking introduces significant complexity in cap table management and cumulative dilution that most founders underestimate until conversion.
 </p>
 
-<h2>Meet Sarah: Founder Navigating Multiple SAFEs</h2>
+<h2 id="meet-sarah-founder-navigating-multiple-safes">Meet Sarah: Founder Navigating Multiple SAFEs</h2>
 <p>
   Sarah is the founder of a B2B SaaS company that has raised $1.5M across three separate SAFEs over 18 months. Her journey illustrates the real-world mechanics and challenges of SAFE stacking:
 </p>
@@ -216,7 +288,7 @@ export default function SafeNotesMultipleSafesStackingGuideBlogPost() {
   Combined, Sarah's investors will own approximately 41.67% after the Series A closes (before accounting for the option pool). If Sarah started with 100% ownership, she now owns roughly 58.33%—but the reality is more complex when you factor in option pools, advisor shares, and co-founder equity.
 </p>
 
-<h2>Post-Money vs Pre-Money SAFE Stacking: The Critical Difference</h2>
+<h2 id="post-money-vs-pre-money-safe-stacking-the-critical-differenc">Post-Money vs Pre-Money SAFE Stacking: The Critical Difference</h2>
 <p>
   The single most important decision when stacking SAFEs is whether you're using post-money or pre-money SAFEs. This isn't a minor technical detail—it can result in 10-15% additional dilution on the same capital raised.
 </p>
@@ -282,7 +354,21 @@ export default function SafeNotesMultipleSafesStackingGuideBlogPost() {
   <li>Post-money SAFEs reduce cap table modeling errors by 73% according to attorney surveys (Cooley, 2024)</li>
 </ul>
 
-<h2>Cumulative Dilution Calculations: The Full Picture</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Understand Your Valuation</p>
+                <p className="text-gray-600 mb-4">See how pre-money valuation, investment amount, and post-money relate to ownership percentages.</p>
+                <a
+                  href="https://icanpitch.com/pre-post-money-valuation-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Valuation Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="cumulative-dilution-calculations-the-full-picture">Cumulative Dilution Calculations: The Full Picture</h2>
 <p>
   Understanding your dilution from multiple SAFEs requires modeling the complete conversion scenario. Here's the comprehensive formula for post-money SAFE stacking:
 </p>
@@ -369,7 +455,7 @@ Founder Final Ownership = 1 - Total SAFE Dilution - Series A % - Option Pool %
 
   <p><strong>Pro Tip:</strong> Model your cap table in a spreadsheet before signing each SAFE. Tools like Carta, Pulley, or AngelList offer free calculators specifically for SAFE stacking scenarios.</p>
 
-<h2>Cap Table Complexity: Real Examples</h2>
+<h2 id="cap-table-complexity-real-examples">Cap Table Complexity: Real Examples</h2>
 <p>
   SAFE stacking creates cap table complexity that compounds with each additional SAFE. Here are three real scenarios (anonymized from Carta data):
 </p>
@@ -483,7 +569,7 @@ Founder Final Ownership = 1 - Total SAFE Dilution - Series A % - Option Pool %
   <strong>Complexity Score: 9/10</strong> - Extensive investor coordination required, side letter tracking, governance implications, difficult to model dilution without knowing final Series A structure.
 </p>
 
-<h2>Key Statistics on SAFE Stacking</h2>
+<h2 id="key-statistics-on-safe-stacking">Key Statistics on SAFE Stacking</h2>
 <p>
   The following statistics from venture capital data providers illustrate SAFE stacking trends and outcomes:
 </p>
@@ -521,7 +607,7 @@ Founder Final Ownership = 1 - Total SAFE Dilution - Series A % - Option Pool %
   <li>73% of companies with 4+ SAFEs report "significant" cap table cleanup required at Series A (Cooley attorney survey, 2024)</li>
 </ul>
 
-<h2>When Multiple SAFEs Make Sense vs When to Do a Priced Round</h2>
+<h2 id="when-multiple-safes-make-sense-vs-when-to-do-a-priced-round">When Multiple SAFEs Make Sense vs When to Do a Priced Round</h2>
 <p>
   SAFE stacking is a tool, not a default strategy. Here's when it makes sense and when you should consider a priced equity round instead.
 </p>
@@ -614,7 +700,7 @@ Founder Final Ownership = 1 - Total SAFE Dilution - Series A % - Option Pool %
   This approach gives you the flexibility of a SAFE early while establishing proper governance and valuation before raising significant capital.
 </p>
 
-<h2>Managing SAFE Stack Dilution: Practical Steps</h2>
+<h2 id="managing-safe-stack-dilution-practical-steps">Managing SAFE Stack Dilution: Practical Steps</h2>
 <p>
   If you're raising multiple SAFEs, follow these practices to minimize dilution and cap table complexity:
 </p>
@@ -671,7 +757,7 @@ Founder Final Ownership = 1 - Total SAFE Dilution - Series A % - Option Pool %
   <li>Address concerns early rather than during Series A diligence</li>
 </ul>
 
-<h2>Frequently Asked Questions</h2>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
 
 <h3>1. How many SAFEs is too many?</h3>
 <p>
@@ -703,7 +789,7 @@ Founder Final Ownership = 1 - Total SAFE Dilution - Series A % - Option Pool %
   For SAFE stacking, simplicity is critical. Most experienced founders use cap-only SAFEs (no discount) for all but their first SAFE. Here's why: Discount rates create additional complexity at conversion because they can trigger different conversion prices for different SAFEs. Cap-only SAFEs are cleaner, easier to model, and preferred by Series A investors who need to understand your cap table quickly. The exception: Your very first SAFE (friends and family) might include a 15-20% discount to reward early believers, but subsequent SAFEs should be cap-only. If an investor insists on a discount in a later SAFE, it's often a signal they don't believe in your valuation cap—address that concern directly rather than adding complexity via a discount.
 </p>
 
-<h2>Final Takeaways: SAFE Stacking Best Practices</h2>
+<h2 id="final-takeaways-safe-stacking-best-practices">Final Takeaways: SAFE Stacking Best Practices</h2>
 <p>
   SAFE stacking is a powerful tool for extending runway and raising capital incrementally, but it requires discipline and strategic planning:
 </p>
@@ -726,7 +812,7 @@ Founder Final Ownership = 1 - Total SAFE Dilution - Series A % - Option Pool %
   The key to successful SAFE stacking isn't avoiding dilution entirely—it's ensuring every dollar raised and every percentage point of equity given up is in service of building a more valuable company.
 </p>
 
-<h2>Further Reading and Resources</h2>
+<h2 id="further-reading-and-resources">Further Reading and Resources</h2>
 <ul>
   <li><a href="https://www.ycombinator.com/documents" target="_blank" rel="noopener noreferrer">Y Combinator SAFE Templates and Guide</a> - Official post-money SAFE templates</li>
   <li><a href="https://carta.com/blog/equity-101/" target="_blank" rel="noopener noreferrer">Carta Equity 101</a> - Cap table management and dilution modeling</li>
@@ -756,13 +842,31 @@ Founder Final Ownership = 1 - Total SAFE Dilution - Series A % - Option Pool %
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/post-money-safe-vs-pre-money-safe-2025/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Post-Money SAFE vs Pre-Money SAFE: Complete 2025 Comparison</span>
+                </Link>
+                <Link href="/blog/post-money-safe-vs-pre-money-safe-explained/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Post-Money SAFE vs Pre-Money SAFE: Complete 2025 Comparison</span>
+                </Link>
+                <Link href="/blog/how-to-calculate-pre-money-valuation-series-a/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Calculate Pre-Money Valuation for Series A</span>
+                </Link>
+                <Link href="/blog/seed-valuation-benchmarks-2025/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Seed Valuation Benchmarks 2025: Post-Money Caps, ARR Requirements, and Investor Expectations</span>
+                </Link>
+                <Link href="/blog/option-pool-dilution-impact-founders/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Option Pool Dilution Impact on Founders: Complete Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/pre-post-money-calculator-series-a-first-time-founder-seattle-understand-valuation-mechanics-negotiate-better-terms/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Pre Post Money Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -772,18 +876,18 @@ Founder Final Ownership = 1 - Total SAFE Dilution - Series A % - Option Pool %
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Understand Your Valuation
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See how pre-money valuation, investment amount, and post-money relate to ownership percentages.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/pre-post-money-valuation-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Valuation Calculator &rarr;
               </a>
             </div>
           </div>

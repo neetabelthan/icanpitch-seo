@@ -52,6 +52,60 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a healthy burn rate for an Amsterdam seed-stage startup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For Amsterdam seed-stage startups (pre-Series A), healthy monthly burn rate ranges from €30,000-€70,000 depending on team size and stage. With typical seed funding of €500K-€1.5M, this provides 18-24 months of runway to reach Series A milestones. Burn rate above €80,000/month without clear revenue traction raises red flags for European investors."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the 30% ruling affect burn rate calculations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The 30% ruling allows Amsterdam startups to provide 30% of qualifying employees' gross salary tax-free, effectively reducing employer costs by 8-12% compared to non-ruling eligible hires. For a 10-person team with 6 international employees leveraging the ruling, this can reduce monthly personnel burn by €5,000-€8,000, significantly extending runway."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should Amsterdam startups track burn rate in EUR or USD?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Track burn rate in EUR if your primary operations, team, and vendors are European. Only track in USD if you're raising from US investors who require USD reporting or have significant USD-denominated costs. Currency fluctuations can distort burn rate analysis—stick to your operational currency for accuracy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What burn rate metrics do Amsterdam VCs focus on during due diligence?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Amsterdam and European VCs primarily evaluate: (1) Net burn rate and months of runway remaining, (2) Burn multiple (net burn ÷ net new ARR), ideally below 2x, (3) Trajectory of burn rate relative to revenue growth, and (4) Major cost categories as percentage of total burn. They want to see disciplined spending with clear ROI on customer acquisition and product development."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can deeptech startups in Amsterdam reduce infrastructure burn rate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Amsterdam deeptech startups should: (1) Apply for EU and Dutch compute grants (Horizon Europe provides subsidized cloud credits), (2) Leverage SURF (Dutch national cloud infrastructure for research) for early-stage development at reduced rates, (3) Implement aggressive cloud cost optimization (reserved instances, spot instances for training), and (4) Partner with universities (UvA, TU Delft) for access to shared GPU clusters."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the typical burn rate for an Amsterdam startup preparing for Series A?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Amsterdam startups 6-12 months from Series A typically burn €100,000-€180,000 monthly with teams of 15-25 people. At this stage, you should have €500K-€1.5M ARR demonstrating product-market fit, with net burn rate declining as revenue scales. Investors expect clear evidence that additional funding will accelerate growth, not just extend runway."
+        }
+      }
+    ]
   }
 ];
 
@@ -115,8 +169,27 @@ export default function BurnRateCalculatorAmsterdamBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#what-is-burn-rate-and-why-it-matters-for-amsterdam-startups" className="text-blue-600 hover:text-blue-700 text-sm">What Is Burn Rate and Why It Matters for Amsterdam Startups</a></li>
+                  <li><a href="#how-to-calculate-burn-rate-for-your-amsterdam-startup" className="text-blue-600 hover:text-blue-700 text-sm">How to Calculate Burn Rate for Your Amsterdam Startup</a></li>
+                  <li><a href="#amsterdam-startup-cost-structure-whats-driving-your-burn-rat" className="text-blue-600 hover:text-blue-700 text-sm">Amsterdam Startup Cost Structure: What's Driving Your Burn Rate?</a></li>
+                  <li><a href="#amsterdam-vs-other-european-tech-hubs-burn-rate-benchmarks" className="text-blue-600 hover:text-blue-700 text-sm">Amsterdam vs. Other European Tech Hubs: Burn Rate Benchmarks</a></li>
+                  <li><a href="#optimizing-burn-rate-strategies-for-amsterdam-startups" className="text-blue-600 hover:text-blue-700 text-sm">Optimizing Burn Rate: Strategies for Amsterdam Startups</a></li>
+                  <li><a href="#red-flags-when-your-amsterdam-startups-burn-rate-is-unhealth" className="text-blue-600 hover:text-blue-700 text-sm">Red Flags: When Your Amsterdam Startup's Burn Rate Is Unhealthy</a></li>
+                  <li><a href="#amsterdam-investor-expectations-what-vcs-want-to-see" className="text-blue-600 hover:text-blue-700 text-sm">Amsterdam Investor Expectations: What VCs Want to See</a></li>
+                  <li><a href="#cash-runway-extension-strategies-for-amsterdam-startups" className="text-blue-600 hover:text-blue-700 text-sm">Cash Runway Extension Strategies for Amsterdam Startups</a></li>
+                  <li><a href="#tools-and-resources-for-amsterdam-burn-rate-management" className="text-blue-600 hover:text-blue-700 text-sm">Tools and Resources for Amsterdam Burn Rate Management</a></li>
+                  <li><a href="#real-amsterdam-startup-burn-rate-examples" className="text-blue-600 hover:text-blue-700 text-sm">Real Amsterdam Startup Burn Rate Examples</a></li>
+                  <li><a href="#frequently-asked-questions-amsterdam-startup-burn-rate" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions: Amsterdam Startup Burn Rate</a></li>
+                  <li><a href="#take-control-of-your-amsterdam-startups-financial-future" className="text-blue-600 hover:text-blue-700 text-sm">Take Control of Your Amsterdam Startup's Financial Future</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -127,7 +200,7 @@ export default function BurnRateCalculatorAmsterdamBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>What Is Burn Rate and Why It Matters for Amsterdam Startups</h2>
+                <h2 id="what-is-burn-rate-and-why-it-matters-for-amsterdam-startups">What Is Burn Rate and Why It Matters for Amsterdam Startups</h2>
 
 <p>Your burn rate is the speed at which your startup consumes cash to cover operating expenses before generating positive cash flow. For Amsterdam-based startups, understanding burn rate is critical for navigating Europe's dynamic tech ecosystem, where funding rounds are competitive and runway management separates successful scale-ups from failed ventures.</p>
 
@@ -135,7 +208,7 @@ export default function BurnRateCalculatorAmsterdamBlogPost() {
 
 <p>Burn rate directly determines your cash runway: the number of months your startup can operate before running out of money. For Amsterdam startups raising in EUR and managing cross-border teams, precise burn rate calculation isn't just accounting—it's survival strategy.</p>
 
-<h2>How to Calculate Burn Rate for Your Amsterdam Startup</h2>
+<h2 id="how-to-calculate-burn-rate-for-your-amsterdam-startup">How to Calculate Burn Rate for Your Amsterdam Startup</h2>
 
 <p>Calculating burn rate requires tracking your monthly cash outflows across all operational categories. Here's the fundamental formula:</p>
 
@@ -160,7 +233,7 @@ export default function BurnRateCalculatorAmsterdamBlogPost() {
 
 <p>Early-stage pre-revenue startups focus on gross burn. Growth-stage companies with recurring revenue track net burn to measure efficiency as they scale toward profitability.</p>
 
-<h2>Amsterdam Startup Cost Structure: What's Driving Your Burn Rate?</h2>
+<h2 id="amsterdam-startup-cost-structure-whats-driving-your-burn-rat">Amsterdam Startup Cost Structure: What's Driving Your Burn Rate?</h2>
 
 <p>Understanding your burn rate starts with mapping where every euro goes. Amsterdam startups typically allocate costs across these categories:</p>
 
@@ -227,7 +300,21 @@ export default function BurnRateCalculatorAmsterdamBlogPost() {
   <li><strong>Insurance (liability, D&amp;O, cyber):</strong> €500-€2,000/month</li>
 </ul>
 
-<h2>Amsterdam vs. Other European Tech Hubs: Burn Rate Benchmarks</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Calculate Your Burn Rate & Runway</p>
+                <p className="text-gray-600 mb-4">Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.</p>
+                <a
+                  href="https://icanpitch.com/burn-rate-runway-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Burn Rate Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="amsterdam-vs-other-european-tech-hubs-burn-rate-benchmarks">Amsterdam vs. Other European Tech Hubs: Burn Rate Benchmarks</h2>
 
 <p>How does Amsterdam compare to Berlin, London, Paris, and Stockholm? Here's a breakdown for a 15-person tech startup:</p>
 
@@ -267,7 +354,7 @@ export default function BurnRateCalculatorAmsterdamBlogPost() {
 
 <p><strong>Key Insight:</strong> Amsterdam offers a balanced cost-benefit equation—higher than Berlin but significantly lower than London, with access to top-tier fintech and sustainability investors, multilingual talent, and favorable tax treatment through the 30% ruling.</p>
 
-<h2>Optimizing Burn Rate: Strategies for Amsterdam Startups</h2>
+<h2 id="optimizing-burn-rate-strategies-for-amsterdam-startups">Optimizing Burn Rate: Strategies for Amsterdam Startups</h2>
 
 <h3>1. Leverage the 30% Ruling Strategically</h3>
 
@@ -309,7 +396,7 @@ export default function BurnRateCalculatorAmsterdamBlogPost() {
 
 <p>Amsterdam startups working with US-based SaaS vendors should negotiate EUR-denominated contracts to avoid currency fluctuation risk. A 10% EUR/USD swing can unexpectedly increase burn rate by €2,000-€5,000 monthly for cloud and software costs.</p>
 
-<h2>Red Flags: When Your Amsterdam Startup's Burn Rate Is Unhealthy</h2>
+<h2 id="red-flags-when-your-amsterdam-startups-burn-rate-is-unhealth">Red Flags: When Your Amsterdam Startup's Burn Rate Is Unhealthy</h2>
 
 <p>Experienced European VCs look for these warning signs:</p>
 
@@ -329,7 +416,7 @@ export default function BurnRateCalculatorAmsterdamBlogPost() {
 
 <p>Paul Graham's "default alive" concept is critical: can your startup reach profitability before running out of money with current burn rate and growth trajectory? If your answer requires multiple assumptions going perfectly right, your burn rate is too aggressive.</p>
 
-<h2>Amsterdam Investor Expectations: What VCs Want to See</h2>
+<h2 id="amsterdam-investor-expectations-what-vcs-want-to-see">Amsterdam Investor Expectations: What VCs Want to See</h2>
 
 <p>When Amsterdam-based VCs like Peak Capital, henQ, AlbionVC, and Balderton evaluate startups, they scrutinize burn rate through specific lenses:</p>
 
@@ -359,7 +446,7 @@ export default function BurnRateCalculatorAmsterdamBlogPost() {
   <li><strong>Key Metrics:</strong> Path to cash flow positive within 12-18 months, or clear scaling toward market leadership</li>
 </ul>
 
-<h2>Cash Runway Extension Strategies for Amsterdam Startups</h2>
+<h2 id="cash-runway-extension-strategies-for-amsterdam-startups">Cash Runway Extension Strategies for Amsterdam Startups</h2>
 
 <p>If your burn rate analysis reveals runway concerns, consider these tactics successful Amsterdam founders deploy:</p>
 
@@ -391,7 +478,7 @@ export default function BurnRateCalculatorAmsterdamBlogPost() {
 
 <p>If burn rate analysis shows you won't reach Series A milestones, consider strategic acquihire conversations with Amsterdam scale-ups actively recruiting talent. Companies like Mollie, Bunq, and MessageBird frequently acquire early-stage teams.</p>
 
-<h2>Tools and Resources for Amsterdam Burn Rate Management</h2>
+<h2 id="tools-and-resources-for-amsterdam-burn-rate-management">Tools and Resources for Amsterdam Burn Rate Management</h2>
 
 <h3>Financial Planning Tools</h3>
 
@@ -419,7 +506,7 @@ export default function BurnRateCalculatorAmsterdamBlogPost() {
   <li><strong>Rabobank StartupLab:</strong> Banking services tailored for tech startups with dedicated advisors</li>
 </ul>
 
-<h2>Real Amsterdam Startup Burn Rate Examples</h2>
+<h2 id="real-amsterdam-startup-burn-rate-examples">Real Amsterdam Startup Burn Rate Examples</h2>
 
 <h3>Case Study 1: Amsterdam Fintech Startup (Series A)</h3>
 
@@ -466,7 +553,7 @@ export default function BurnRateCalculatorAmsterdamBlogPost() {
 
 <p><strong>Investor Assessment:</strong> Lean burn rate appropriate for technical development stage. WBSO utilization demonstrates smart use of Dutch incentives. High compute costs (11%) typical for AI/ML development.</p>
 
-<h2>Frequently Asked Questions: Amsterdam Startup Burn Rate</h2>
+<h2 id="frequently-asked-questions-amsterdam-startup-burn-rate">Frequently Asked Questions: Amsterdam Startup Burn Rate</h2>
 
 <h3>What is a healthy burn rate for an Amsterdam seed-stage startup?</h3>
 
@@ -492,7 +579,7 @@ export default function BurnRateCalculatorAmsterdamBlogPost() {
 
 <p>Amsterdam startups 6-12 months from Series A typically burn €100,000-€180,000 monthly with teams of 15-25 people. At this stage, you should have €500K-€1.5M ARR demonstrating product-market fit, with net burn rate declining as revenue scales. Investors expect clear evidence that additional funding will accelerate growth, not just extend runway.</p>
 
-<h2>Take Control of Your Amsterdam Startup's Financial Future</h2>
+<h2 id="take-control-of-your-amsterdam-startups-financial-future">Take Control of Your Amsterdam Startup's Financial Future</h2>
 
 <p>Mastering burn rate management is the difference between Amsterdam startups that scale to become European tech leaders and those that run out of runway before achieving product-market fit. With Amsterdam's advantages—the 30% ruling, strong fintech and deeptech ecosystems, English-first business culture, and access to European capital—founders who combine ambition with financial discipline build enduring companies.</p>
 
@@ -522,13 +609,30 @@ export default function BurnRateCalculatorAmsterdamBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/burn-rate-calculator-barcelona/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Barcelona Burn Rate Calculator: Master Cash Runway for Spanish Startups</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-denver/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Denver Burn Rate Calculator: Track Your Startup's Cash Runway in Colorado's Tech Hub</span>
+                </Link>
+                <Link href="/blog/safe-calculator-amsterdam/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Amsterdam SAFE Calculator: Navigate Cross-Border Fundraising and Dutch Valuations</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-dublin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Dublin Burn Rate Calculator: Track Your Startup's Monthly Cash Flow in EUR</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-miami/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Miami Burn Rate Calculator: Track Your Startup Runway in South Florida's Tech Hub</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/burn-rate-calculator-series-a-first-time-founder-new-york-plan-fundraising-timeline-extend-runway-efficiency/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Burn Rate Calculator</Link>
+              <Link href="/blog/burn-rate-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Burn Rate & Runway Guides</Link>
             </div>
           </div>
         </section>
@@ -538,18 +642,18 @@ export default function BurnRateCalculatorAmsterdamBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Calculate Your Burn Rate & Runway
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/burn-rate-runway-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Burn Rate Calculator &rarr;
               </a>
             </div>
           </div>

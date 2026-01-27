@@ -38,8 +38,8 @@ const jsonLdData = [
       "@type": "Organization",
       "name": "ICanPitch"
     },
-    "datePublished": "2026-01-27T03:45:30.435Z",
-    "dateModified": "2026-01-27T03:45:30.435Z",
+    "datePublished": "2026-01-27T21:21:28.692Z",
+    "dateModified": "2026-01-27T21:21:28.692Z",
     "url": "https://learn.icanpitch.com/learn/exit-calculator-growth-serial-entrepreneur-miami-model-exit-scenarios-maximize-founder-proceeds/",
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -109,8 +109,51 @@ export default function ExitCalculatorGrowthSerialEntrepreneurMiamiModelExitScen
                   <li>Model different exit valuations to see payout ranges</li>
                   <li>Compare founder proceeds across exit scenarios</li>
                 </ol>
+
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">When to Use This Calculator</h2>
+                <ul className="space-y-3 text-lg text-gray-700 list-disc list-inside mb-6">
+                  <li>You received an acquisition offer and want to calculate what founders and employees actually take home</li>
+                  <li>You are negotiating liquidation preferences in a term sheet and want to see the downstream impact</li>
+                  <li>You want to understand at what exit valuation founders start to benefit more than investors</li>
+                  <li>You are modeling different exit scenarios for your board or co-founders</li>
+                </ul>
+
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">Key Metrics and Formulas</h2>
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">Liquidation preference waterfall: First, preferred stockholders receive their liquidation preference (typically 1x their investment). If participating preferred, they also share in the remaining proceeds pro-rata with common stockholders. The breakeven exit valuation is the point where converting to common stock yields more than taking the preference. Breakeven = Liquidation Preference / (1 - Investor Ownership %). For non-participating preferred, investors choose the higher of their preference or their pro-rata share. Our calculator models both structures and shows founder proceeds at each exit valuation.</p>
+
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">Common Mistakes to Avoid</h2>
+                <ul className="space-y-3 text-lg text-gray-700 list-disc list-inside mb-6">
+                  <li>Ignoring liquidation preferences when evaluating an acquisition offer: Founders often overestimate their payout at moderate exit values</li>
+                  <li>Not modeling participating vs non-participating preferred: Participating preferred can take a much larger share of exit proceeds</li>
+                  <li>Forgetting about multiple rounds of preferences stacking: Each round's preference is paid before common stockholders see anything</li>
+                  <li>Not accounting for escrow holdbacks: Acquirers typically hold back 10-20% for indemnification claims</li>
+                </ul>
+
+                {/* Expert Tips */}
+                <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Expert Tips</h3>
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex gap-2"><span className="text-blue-500 font-bold flex-shrink-0">&#x2713;</span><span>Always model exits at 1x, 3x, 5x, and 10x your total raised to understand the full range of outcomes</span></li>
+                    <li className="flex gap-2"><span className="text-blue-500 font-bold flex-shrink-0">&#x2713;</span><span>Negotiate non-participating preferred whenever possible to keep more upside for founders and employees</span></li>
+                    <li className="flex gap-2"><span className="text-blue-500 font-bold flex-shrink-0">&#x2713;</span><span>Use our calculator before accepting any term sheet to understand the exit implications of proposed terms</span></li>
+                  </ul>
+                </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Recommended Reading */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Recommended Reading</h3>
+            <ul className="space-y-2">
+              <li><Link href="/blog/exit-calculator-berlin/" className="text-blue-600 hover:text-blue-700 underline">Berlin Exit Calculator: German Startup Valuation & European M&A 2025</Link></li>
+                  <li><Link href="/blog/exit-calculator-london/" className="text-blue-600 hover:text-blue-700 underline">London Exit Calculator: UK Startup Valuation & Brexit Impact on M&A 2025</Link></li>
+                  <li><Link href="/blog/exit-calculator-new-york/" className="text-blue-600 hover:text-blue-700 underline">NYC Exit Calculator: New York Startup Exit Valuations & Fintech M&A 2025</Link></li>
+                  <li><Link href="/blog/exit-calculator-silicon-valley/" className="text-blue-600 hover:text-blue-700 underline">Silicon Valley Exit Calculator: Startup Valuation & M&A Multiples 2025</Link></li>
+                  <li><Link href="/blog/exit-calculator-singapore/" className="text-blue-600 hover:text-blue-700 underline">Singapore Exit Calculator: APAC Startup Valuation & Cross-Border M&A 2025</Link></li>
+            </ul>
           </div>
         </section>
 
@@ -150,7 +193,7 @@ export default function ExitCalculatorGrowthSerialEntrepreneurMiamiModelExitScen
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Start Calculator →
+                      Start Calculator &rarr;
                     </a>
                   </Button>
                 </CardContent>

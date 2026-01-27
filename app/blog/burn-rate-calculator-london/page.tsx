@@ -52,6 +52,92 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much more expensive is London than Manchester for startups?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "London startups burn 45-60% more than Manchester equivalents depending on stage and team composition. A 10-person seed-stage team burns approximately £145,000/month in London versus £92,000/month in Manchester—a difference of £53,000/month or £636,000 annually. The premium stems primarily from engineering salaries (25% higher in London), office costs (144% higher), and higher absolute tax burdens on elevated salaries. According to Beauhurst's 2025 UK Startup Finance Report, the gap is largest at pre-seed stage (55% premium) and narrows slightly at Series B+ as non-personnel costs like marketing and sales dominate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I hire equivalent engineering talent in Manchester versus London?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Manchester has strong generalist software engineering talent—University of Manchester produces 1,800 CS graduates annually and the city hosts major tech company offices (Amazon, Google, Microsoft, The Hut Group). For standard full-stack, backend, or mobile development, Manchester talent is equivalent to London at 20-25% lower cost. However, London maintains significant advantages in specialized domains: 5.2x more AI/ML engineers, 6.8x more cybersecurity specialists, and 7.1x more product managers with fintech experience. According to Hired's 2025 UK talent report, 79% of companies building fintech or regulatory-intensive products prefer London-based talent for specialized compliance and domain expertise."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do investors discriminate against Manchester-based startups?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Top-tier London-based VCs increasingly invest in Manchester and regional UK companies—Balderton Capital, Accel, and Index Ventures all have Manchester portfolio companies. However, mega-rounds over £40M still heavily favor London companies (73% of mega-rounds go to London vs. 1.8% to Manchester). For seed through Series A, location matters less than metrics and team quality. For Series B+, London proximity to mega-funds provides valuation and access advantages. According to Pitchbook's 2025 European Venture Monitor, Manchester companies raise Series A at 8% lower valuations than equivalent London companies when controlling for metrics, though the gap is narrowing as remote investment becomes normalized post-pandemic."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I relocate from London to Manchester to extend runway?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you're burning over £120,000/month with under 12 months runway and no immediate fundraising path, Manchester relocation can extend survival by 45-60%. However, relocation costs (£40,000-£120,000 including recruiting, moving expenses, potential attrition) and business disruption must be factored. A better strategy for most companies: open a Manchester office for new hires while keeping core London team intact, achieving hybrid model benefits without full disruption. According to Beauhurst's 2025 analysis, 32% of London-based scale-ups opened regional UK offices between 2022-2024, but only 6% fully relocated, suggesting hybrid models deliver better ROI than wholesale moves."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What about remote-first as an alternative to both London and Manchester?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fully remote UK companies achieve the lowest burn rates—typically 30-40% below London and 15-20% below Manchester through geographic salary arbitrage and zero office costs. However, remote-first companies face challenges: 28% higher recruiting costs, 18-25% longer time-to-hire, and coordination overhead. According to GitLab's 2025 Remote Work Report, remote-first startups work best for: companies with experienced remote-first leadership, async-friendly work not requiring constant real-time collaboration, and strong documentation culture. Remote-first is valid for SaaS, developer tools, and content businesses, but challenging for fintech (regulatory engagement), hardware (prototyping), or sales-intensive businesses requiring customer proximity."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the London vs Manchester decision change at different funding stages?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pre-seed/seed stage: Manchester's capital efficiency advantage is strongest—extended runway permits more iteration cycles toward product-market fit. According to Y Combinator's 2025 batch data, Manchester-based companies reached PMF with 28% less total capital. Series A: London advantages increase as access to mega-funds, specialized talent, and enterprise customers becomes critical for scaling. Series B+: London premium often justified by ecosystem density, international customer access, and M&amp;A/IPO infrastructure. Carta's 2025 geographic analysis shows 58% of pre-seed companies choose Manchester but 74% of Series B+ companies operate from London, suggesting stage-dependent optimization: start in Manchester for efficiency, relocate to London when growth capital and ecosystem access justify the premium."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What London-specific costs do startups often overlook?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Beyond salaries and office space, London startups face hidden costs: transport costs for team (Zone 1-2 travel cards cost £2,160/person annually vs. £840 Manchester tram passes), higher contractor rates (London contractors command 30-45% premiums), elevated recruiting fees (London agencies charge 20-25% of salary vs. 15-20% regionally), expensive team social costs (team dinners, offsites, celebrations cost 40-50% more), and higher employee benefits expectations (London employees expect enhanced benefits to offset cost of living). According to SeedLegals' 2025 startup cost analysis, these hidden London costs add 8-12% to total burn beyond base salaries and rent, translating to £12,000-£18,000/month for a 12-person team."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is London worth it for non-fintech startups?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "London's premium is most justified for fintech, but other sectors benefit too: B2B SaaS targeting FTSE 250 enterprises (180 headquartered in London), AI/ML companies requiring specialized talent (London has 5.2x more AI engineers than Manchester), blockchain/crypto businesses (London is Europe's crypto hub with 420+ Web3 companies), and marketplace businesses requiring urban density for network effects. However, consumer apps, ecommerce, gaming, and dev tools see diminishing London returns—these sectors can achieve equivalent outcomes from Manchester, Edinburgh, or remote-first at 45-60% lower burn. According to Sifted's 2025 sector analysis, SaaS companies outside fintech raised equivalent Series A valuations regardless of London vs. regional location when controlling for metrics."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the best London alternatives in the UK?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Beyond Manchester, consider: Edinburgh for AI research talent (University of Edinburgh is #1 UK AI program) and fintech heritage, Bristol for gaming and creative tech (home to Aardman, strong game dev scene), Cambridge for biotech and deep tech (university spinout ecosystem), and Leeds for ecommerce and digital agencies (strong retail tech cluster). Manchester leads for generalist software engineering and cost efficiency (39% cheaper than London), Edinburgh offers highest skilled workforce percentage (60%+ highly skilled), and Bristol provides quality of life advantages with coastal access. According to Startups.co.uk's 2025 Best UK Startup Cities ranking, the optimal non-London choice depends on your sector: fintech still favors London or Edinburgh, SaaS favors Manchester or Leeds, and deep tech favors Cambridge."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much runway should I have before moving to London?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If considering relocation to London, have minimum 18 months runway post-move to justify the risk and absorption time. Moving to London makes strategic sense when: you've achieved product-market fit and need to scale faster through better talent access, you're preparing for Series A and need London VC proximity, you have enterprise customers or partnerships requiring London presence, or your burn multiple is under 2x (sustainable enough to absorb London premium). According to Techstars' 2025 cohort analysis, companies that relocated to London pre-PMF failed at 68% rates vs. 34% for those who moved post-PMF, suggesting timing matters more than location itself—achieve PMF with capital efficiency, then invest London premium in scaling advantages."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +200,31 @@ export default function BurnRateCalculatorLondonBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#the-750000-location-decision-every-uk-founder-faces" className="text-blue-600 hover:text-blue-700 text-sm">The £750,000 Location Decision Every UK Founder Faces</a></li>
+                  <li><a href="#the-bottom-line-london-vs-uk-regional-cities-burn-rate-by-st" className="text-blue-600 hover:text-blue-700 text-sm">The Bottom Line: London vs UK Regional Cities Burn Rate by Stage</a></li>
+                  <li><a href="#engineering-salaries-the-primary-driver-of-londons-burn-prem" className="text-blue-600 hover:text-blue-700 text-sm">Engineering Salaries: The Primary Driver of London's Burn Premium</a></li>
+                  <li><a href="#office-space-londons-steepest-premium" className="text-blue-600 hover:text-blue-700 text-sm">Office Space: London's Steepest Premium</a></li>
+                  <li><a href="#tax-considerations-national-insurance-and-corporation-tax-im" className="text-blue-600 hover:text-blue-700 text-sm">Tax Considerations: National Insurance and Corporation Tax Impact</a></li>
+                  <li><a href="#cost-of-living-impact-on-talent-value-proposition" className="text-blue-600 hover:text-blue-700 text-sm">Cost of Living Impact on Talent Value Proposition</a></li>
+                  <li><a href="#when-londons-premium-is-worth-paying" className="text-blue-600 hover:text-blue-700 text-sm">When London's Premium Is Worth Paying</a></li>
+                  <li><a href="#when-manchester-and-regional-uk-cities-win" className="text-blue-600 hover:text-blue-700 text-sm">When Manchester and Regional UK Cities Win</a></li>
+                  <li><a href="#the-hybrid-strategy-best-of-both-worlds" className="text-blue-600 hover:text-blue-700 text-sm">The Hybrid Strategy: Best of Both Worlds</a></li>
+                  <li><a href="#decision-framework-london-vs-manchester-for-your-startup" className="text-blue-600 hover:text-blue-700 text-sm">Decision Framework: London vs Manchester for Your Startup</a></li>
+                  <li><a href="#sophies-decision-how-it-played-out" className="text-blue-600 hover:text-blue-700 text-sm">Sophie's Decision: How It Played Out</a></li>
+                  <li><a href="#real-london-startup-success-stories" className="text-blue-600 hover:text-blue-700 text-sm">Real London Startup Success Stories</a></li>
+                  <li><a href="#calculating-your-exact-london-burn-rate" className="text-blue-600 hover:text-blue-700 text-sm">Calculating Your Exact London Burn Rate</a></li>
+                  <li><a href="#frequently-asked-questions-london-burn-rates-and-startup-cos" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions: London Burn Rates and Startup Costs</a></li>
+                  <li><a href="#calculate-your-specific-london-vs-manchester-burn-rate" className="text-blue-600 hover:text-blue-700 text-sm">Calculate Your Specific London vs Manchester Burn Rate</a></li>
+                  <li><a href="#the-bottom-line-location-as-strategic-lever-not-destiny" className="text-blue-600 hover:text-blue-700 text-sm">The Bottom Line: Location as Strategic Lever, Not Destiny</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -128,7 +237,7 @@ export default function BurnRateCalculatorLondonBlogPost() {
               ">
                 <p><strong>TL;DR:</strong> London startups burn 45-60% more than UK regional equivalents—a 10-person seed team burns £145,000/month in London versus £92,000/month in Manchester. The £636,000 annual difference buys access to Europe's largest tech ecosystem, £63.2 billion VC market, and unparalleled fintech talent. Choose London for capital-intensive growth and top-tier fundraising; choose regional UK cities for capital efficiency and extended runway.</p>
 
-<h2>The £750,000 Location Decision Every UK Founder Faces</h2>
+<h2 id="the-750000-location-decision-every-uk-founder-faces">The £750,000 Location Decision Every UK Founder Faces</h2>
 
 <p>Meet Sophie Richardson, a second-time founder choosing between London and Manchester for her Series A fintech startup. Her 12-person team could operate from either location, but the financial implications are staggering:</p>
 
@@ -141,7 +250,7 @@ export default function BurnRateCalculatorLondonBlogPost() {
 
 <p>This guide provides the definitive cost comparison between Europe's leading fintech hub (London) and the UK's fastest-growing tech cities (Manchester, Edinburgh), helping you make the location decision that maximizes your odds of success.</p>
 
-<h2>The Bottom Line: London vs UK Regional Cities Burn Rate by Stage</h2>
+<h2 id="the-bottom-line-london-vs-uk-regional-cities-burn-rate-by-st">The Bottom Line: London vs UK Regional Cities Burn Rate by Stage</h2>
 
 <p>Before diving into line-item breakdowns, here's the high-level comparison based on <strong>2025 data from Carta, Beauhurst, and Wellfound</strong>:</p>
 
@@ -201,7 +310,7 @@ export default function BurnRateCalculatorLondonBlogPost() {
 
 <p>The pattern is clear: <strong>London companies burn 50-65% more than Manchester companies at every stage</strong>. According to <strong>Beauhurst's 2025 UK Startup Finance Report, London attracts over 70% of UK venture capital but also experiences 52% higher failure rates due to unsustainable burn</strong>. The question isn't whether London is more expensive—it definitively is—but whether the premium delivers commensurate value for your specific startup.</p>
 
-<h2>Engineering Salaries: The Primary Driver of London's Burn Premium</h2>
+<h2 id="engineering-salaries-the-primary-driver-of-londons-burn-prem">Engineering Salaries: The Primary Driver of London's Burn Premium</h2>
 
 <p>Personnel costs represent 70-77% of total burn for early-stage UK startups. Engineering salaries drive the London premium. Here's the 2025 comparison:</p>
 
@@ -316,7 +425,21 @@ export default function BurnRateCalculatorLondonBlogPost() {
 <li><strong>London Premium:</strong> +26%</li>
 </ul>
 
-<h2>Office Space: London's Steepest Premium</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Calculate Your Burn Rate & Runway</p>
+                <p className="text-gray-600 mb-4">Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.</p>
+                <a
+                  href="https://icanpitch.com/burn-rate-runway-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Burn Rate Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="office-space-londons-steepest-premium">Office Space: London's Steepest Premium</h2>
 
 <p>If engineering salaries drive 50-60% of the London-Manchester burn gap, office space drives another 15-20%.</p>
 
@@ -378,7 +501,7 @@ export default function BurnRateCalculatorLondonBlogPost() {
 
 <p>According to <strong>CBRE's 2025 UK Tech Office Market Report, London office rents increased 5.2% year-over-year while Manchester decreased 1.8%</strong>, widening the already substantial gap as demand for London tech space remains strong despite hybrid work trends.</p>
 
-<h2>Tax Considerations: National Insurance and Corporation Tax Impact</h2>
+<h2 id="tax-considerations-national-insurance-and-corporation-tax-im">Tax Considerations: National Insurance and Corporation Tax Impact</h2>
 
 <p>Unlike US cities with varying state tax rates, UK startups face uniform national tax structures—but London's higher salaries amplify absolute tax burdens.</p>
 
@@ -461,7 +584,7 @@ export default function BurnRateCalculatorLondonBlogPost() {
 
 <p>The London engineer earns 25% more gross but takes home only 21.5% more after tax—partially offsetting the salary premium for employers while employees enjoy improved purchasing power despite higher London living costs.</p>
 
-<h2>Cost of Living Impact on Talent Value Proposition</h2>
+<h2 id="cost-of-living-impact-on-talent-value-proposition">Cost of Living Impact on Talent Value Proposition</h2>
 
 <p>London's cost of living significantly impacts employee satisfaction and retention:</p>
 
@@ -504,7 +627,7 @@ export default function BurnRateCalculatorLondonBlogPost() {
 
 <p>This cost-of-living differential means Manchester employees maintain similar quality of life on 20-25% lower salaries—explaining why the salary gap doesn't need to be 1:1 to attract equivalent talent quality.</p>
 
-<h2>When London's Premium Is Worth Paying</h2>
+<h2 id="when-londons-premium-is-worth-paying">When London's Premium Is Worth Paying</h2>
 
 <p>Despite burning 45-60% more cash, London offers advantages that justify the premium for certain startups:</p>
 
@@ -582,7 +705,7 @@ export default function BurnRateCalculatorLondonBlogPost() {
 
 <p>According to <strong>SaaStr's 2025 European SaaS Report, London-based B2B SaaS companies close enterprise deals 34% faster than regional UK equivalents</strong> due to customer proximity and credibility.</p>
 
-<h2>When Manchester and Regional UK Cities Win</h2>
+<h2 id="when-manchester-and-regional-uk-cities-win">When Manchester and Regional UK Cities Win</h2>
 
 <p>Manchester, Edinburgh, and other UK tech hubs provide compelling advantages for certain startup profiles:</p>
 
@@ -647,7 +770,7 @@ export default function BurnRateCalculatorLondonBlogPost() {
 
 <p>For AI-focused startups seeking world-class research talent without London costs, Edinburgh provides an exceptional middle ground.</p>
 
-<h2>The Hybrid Strategy: Best of Both Worlds</h2>
+<h2 id="the-hybrid-strategy-best-of-both-worlds">The Hybrid Strategy: Best of Both Worlds</h2>
 
 <p>Many successful UK startups split the difference with distributed teams:</p>
 
@@ -702,7 +825,7 @@ export default function BurnRateCalculatorLondonBlogPost() {
 
 <p>According to <strong>Beauhurst's 2025 geographic strategy analysis, 32% of Manchester-based unicorn-track startups maintain some London presence</strong> for ecosystem access without full relocation costs.</p>
 
-<h2>Decision Framework: London vs Manchester for Your Startup</h2>
+<h2 id="decision-framework-london-vs-manchester-for-your-startup">Decision Framework: London vs Manchester for Your Startup</h2>
 
 <p>Use this framework to evaluate the right location choice:</p>
 
@@ -738,7 +861,7 @@ export default function BurnRateCalculatorLondonBlogPost() {
 <li><strong>You're optimizing for diversity</strong> of perspective, background, and socioeconomic inclusion</li>
 </ol>
 
-<h2>Sophie's Decision: How It Played Out</h2>
+<h2 id="sophies-decision-how-it-played-out">Sophie's Decision: How It Played Out</h2>
 
 <p>After running the numbers, Sophie chose a hybrid model: London office with 4 people (herself, co-founder, Head of Compliance, senior fintech engineer) and Manchester office with 8 people (6 engineers, product manager, designer).</p>
 
@@ -753,7 +876,7 @@ export default function BurnRateCalculatorLondonBlogPost() {
 
 <p>Sophie's reflection: "We couldn't have secured our banking partnerships without London proximity—enterprise fintech demands London credibility. But we also couldn't have survived to profitability burning pure London rates. The hybrid model balanced credibility with sustainability."</p>
 
-<h2>Real London Startup Success Stories</h2>
+<h2 id="real-london-startup-success-stories">Real London Startup Success Stories</h2>
 
 <p>London's unicorn ecosystem provides proven validation of the premium investment:</p>
 
@@ -801,7 +924,7 @@ export default function BurnRateCalculatorLondonBlogPost() {
 
 <p>According to <strong>Dealroom and Accel's 2025 research, London unicorns have collectively spawned 782 new startups</strong>—more than any European city—demonstrating compounding ecosystem returns.</p>
 
-<h2>Calculating Your Exact London Burn Rate</h2>
+<h2 id="calculating-your-exact-london-burn-rate">Calculating Your Exact London Burn Rate</h2>
 
 <p>To model your specific London burn rate, use this systematic approach:</p>
 
@@ -842,7 +965,7 @@ export default function BurnRateCalculatorLondonBlogPost() {
 
 <p>Unexpected costs invariably emerge—recruitment fees, emergency contractor needs, compliance requirements, equipment replacement.</p>
 
-<h2>Frequently Asked Questions: London Burn Rates and Startup Costs</h2>
+<h2 id="frequently-asked-questions-london-burn-rates-and-startup-cos">Frequently Asked Questions: London Burn Rates and Startup Costs</h2>
 
 <h3>How much more expensive is London than Manchester for startups?</h3>
 
@@ -884,7 +1007,7 @@ export default function BurnRateCalculatorLondonBlogPost() {
 
 <p>If considering relocation to London, have minimum 18 months runway post-move to justify the risk and absorption time. Moving to London makes strategic sense when: you've achieved product-market fit and need to scale faster through better talent access, you're preparing for Series A and need London VC proximity, you have enterprise customers or partnerships requiring London presence, or your burn multiple is under 2x (sustainable enough to absorb London premium). According to Techstars' 2025 cohort analysis, companies that relocated to London pre-PMF failed at 68% rates vs. 34% for those who moved post-PMF, suggesting timing matters more than location itself—achieve PMF with capital efficiency, then invest London premium in scaling advantages.</p>
 
-<h2>Calculate Your Specific London vs Manchester Burn Rate</h2>
+<h2 id="calculate-your-specific-london-vs-manchester-burn-rate">Calculate Your Specific London vs Manchester Burn Rate</h2>
 
 <p>Ready to model your exact cost difference? Use our <a href="https://icanpitch.com/burn-rate-runway-calculator/" target="_blank" rel="noopener noreferrer">interactive burn rate calculator</a> with London and UK regional city options to:</p>
 
@@ -900,7 +1023,7 @@ export default function BurnRateCalculatorLondonBlogPost() {
 
 <p>The calculator incorporates all 2025 benchmark data from this guide including Wellfound salary data, CBRE office costs, and Beauhurst ecosystem statistics, providing personalized recommendations based on your industry, stage, and team profile.</p>
 
-<h2>The Bottom Line: Location as Strategic Lever, Not Destiny</h2>
+<h2 id="the-bottom-line-location-as-strategic-lever-not-destiny">The Bottom Line: Location as Strategic Lever, Not Destiny</h2>
 
 <p>London and Manchester represent fundamentally different startup philosophies: London optimizes for speed, ecosystem access, and winner-take-most dynamics at the cost of capital efficiency. Manchester optimizes for sustainability, extended runway, and superior unit economics at the cost of ecosystem density and specialized talent access.</p>
 
@@ -931,13 +1054,30 @@ export default function BurnRateCalculatorLondonBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/burn-rate-benchmarks-by-industry-stage/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Benchmarks by Industry and Stage: 2025 Data</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-berlin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Berlin Startups: 2025 Cost Guide</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-boston/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Boston Startups: 2025 Cost Guide</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-los-angeles/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Los Angeles Startups: 2025 Cost Guide</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-new-york-city-startup-costs/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for NYC Startups: New York Cost Guide 2025</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/burn-rate-calculator-series-a-first-time-founder-new-york-plan-fundraising-timeline-extend-runway-efficiency/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Burn Rate Calculator</Link>
+              <Link href="/blog/burn-rate-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Burn Rate & Runway Guides</Link>
             </div>
           </div>
         </section>
@@ -947,18 +1087,18 @@ export default function BurnRateCalculatorLondonBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Calculate Your Burn Rate & Runway
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/burn-rate-runway-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Burn Rate Calculator &rarr;
               </a>
             </div>
           </div>

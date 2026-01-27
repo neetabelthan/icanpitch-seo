@@ -38,8 +38,8 @@ const jsonLdData = [
       "@type": "Organization",
       "name": "ICanPitch"
     },
-    "datePublished": "2026-01-27T03:45:30.438Z",
-    "dateModified": "2026-01-27T03:45:30.438Z",
+    "datePublished": "2026-01-27T21:21:28.734Z",
+    "dateModified": "2026-01-27T21:21:28.734Z",
     "url": "https://learn.icanpitch.com/learn/vesting-calculator-seed-serial-entrepreneur-boston-plan-founder-vesting-protect-against-co-founder-departure/",
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -109,8 +109,51 @@ export default function VestingCalculatorSeedSerialEntrepreneurBostonPlanFounder
                   <li>View the vesting timeline month by month</li>
                   <li>Model acceleration triggers for M&A scenarios</li>
                 </ol>
+
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">When to Use This Calculator</h2>
+                <ul className="space-y-3 text-lg text-gray-700 list-disc list-inside mb-6">
+                  <li>You are setting up founder vesting as part of your incorporation documents</li>
+                  <li>You are making an offer to a key hire and need to explain their vesting timeline</li>
+                  <li>You want to model what happens to unvested shares if a co-founder leaves at various points</li>
+                  <li>You are negotiating acceleration clauses for an acquisition scenario and need to show the impact</li>
+                </ul>
+
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">Key Metrics and Formulas</h2>
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">Standard 4-year vesting with a 1-year cliff: 0% vests during the first year, 25% vests at the 1-year mark (cliff), then 1/48th of the total grant vests each month after that. Shares vested at month M (where M is 12 or more) equals Total Grant x (M / 48). Single-trigger acceleration vests all unvested shares upon acquisition. Double-trigger acceleration requires both acquisition and termination. Our calculator models all three scenarios and shows vested vs unvested equity at any point in the schedule.</p>
+
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">Common Mistakes to Avoid</h2>
+                <ul className="space-y-3 text-lg text-gray-700 list-disc list-inside mb-6">
+                  <li>Not vesting founder shares: Investors will require vesting anyway, so set it up proactively on your terms</li>
+                  <li>Using a cliff for employees longer than 1 year: Longer cliffs increase retention risk and are seen as unfair</li>
+                  <li>Granting acceleration without understanding the cost: Single-trigger acceleration can give away significant equity in an acquisition</li>
+                  <li>Forgetting to account for early exercise (83(b) elections): If employees early-exercise, they start the capital gains clock early</li>
+                </ul>
+
+                {/* Expert Tips */}
+                <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Expert Tips</h3>
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex gap-2"><span className="text-blue-500 font-bold flex-shrink-0">&#x2713;</span><span>File an 83(b) election within 30 days of receiving restricted stock to start the capital gains clock</span></li>
+                    <li className="flex gap-2"><span className="text-blue-500 font-bold flex-shrink-0">&#x2713;</span><span>Consider double-trigger acceleration for founders to protect the acquiring company while still protecting yourself</span></li>
+                    <li className="flex gap-2"><span className="text-blue-500 font-bold flex-shrink-0">&#x2713;</span><span>Document your vesting terms in your stock plan and individual grant agreements, not just verbal agreements</span></li>
+                  </ul>
+                </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Recommended Reading */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Recommended Reading</h3>
+            <ul className="space-y-2">
+              <li><Link href="/blog/co-founder-equity-split-50-50-alternatives/" className="text-blue-600 hover:text-blue-700 underline">Co-Founder Equity Split: Why 50/50 Fails and Better Alternatives</Link></li>
+                  <li><Link href="/blog/early-employee-equity-calculator-guide/" className="text-blue-600 hover:text-blue-700 underline">Early Employee Equity Calculator: How Much to Offer Guide</Link></li>
+                  <li><Link href="/blog/founder-vesting-schedules-4-year-1-year-cliff/" className="text-blue-600 hover:text-blue-700 underline">Founder Vesting Schedules: 4-Year 1-Year Cliff Explained</Link></li>
+                  <li><Link href="/blog/understanding-pro-rata-rights-startup-investing/" className="text-blue-600 hover:text-blue-700 underline">Understanding Pro-Rata Rights in Startup Investing: A Complete Guide</Link></li>
+                  <li><Link href="/blog/vesting-acceleration-clauses-explained/" className="text-blue-600 hover:text-blue-700 underline">Vesting Acceleration Clauses: Single vs Double Trigger Explained</Link></li>
+            </ul>
           </div>
         </section>
 
@@ -150,7 +193,7 @@ export default function VestingCalculatorSeedSerialEntrepreneurBostonPlanFounder
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Start Calculator →
+                      Start Calculator &rarr;
                     </a>
                   </Button>
                 </CardContent>

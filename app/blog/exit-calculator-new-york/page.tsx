@@ -52,6 +52,52 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between strategic and financial buyer valuations in NYC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Strategic buyers (corporate acquirers) typically pay 20-40% premium to financial buyers (PE/growth equity) in NYC for companies with clear strategic fit. Strategic buyers use revenue or ARR multiples (8-12x ARR for fintech) while financial buyers use EBITDA multiples (10-14x EBITDA). Financial buyer deals involve 60-80% cash and 20-40% rollover equity, while strategic deals are typically 100% cash. For example, a $50M ARR fintech company might receive a $400M strategic offer (8x ARR, all cash) vs a $300M PE offer (12x $25M EBITDA, with 70% cash / 30% rollover)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do NYC fintech exit multiples compare to Silicon Valley?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "NYC fintech companies command exit multiples 10-20% below Silicon Valley due to higher concentration of financial buyers (PE firms) vs strategic acquirers in NYC. NYC fintech medians: 8-12x ARR for B2B fintech SaaS vs Silicon Valley's 10-15x ARR. However, NYC payment and banking infrastructure companies with Wall Street strategic fit can exceed valley multiples when acquired by banks or card networks. For example, Plaid's $5.3B Visa offer (35x revenue) was driven by NYC-centric financial services strategic value."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I target PE or strategic buyers for my NYC exit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Target PE buyers if you're EBITDA-profitable or within 12 months of profitability, have &gt;$30M ARR, want to stay involved as CEO for 2-4 years, and are building a defensible market leadership position. Target strategic buyers if you're growing &gt;50% YoY, have clear platform integration with an acquirer, want full liquidity (100% cash vs 70% cash), and prefer to exit within 12-18 months. Run dual-track process with both PE and strategic buyers to create competitive tension and maximize valuation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does rollover equity in PE deals affect my exit proceeds?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PE deals typically require founders to roll 20-40% of exit proceeds into the PE-owned entity for upside in the next exit (called \"second bite of apple\"). Rollover equity is illiquid for 5-7 years until PE exits the company, and is subject to PE fund performance risk. When comparing offers, discount rollover equity by 30-50% for illiquidity: a $100M PE offer with 70% cash / 30% rollover is economically equivalent to $75-85M all-cash strategic offer. However, if PE successfully executes on value creation plan, rollover equity can 2-3x in value at second exit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What EBITDA margin do I need for a PE exit in NYC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "NYC PE firms target companies with 15-25% EBITDA margins or clear path to those margins within 12-18 months post-acquisition. Companies with &lt;10% EBITDA margins face 30-50% valuation discounts vs 20%+ margin peers. Focus on EBITDA margin expansion 12-18 months before exit: reduce sales efficiency ratio (S&amp;M as % of revenue), scale G&amp;A slower than revenue growth, and improve gross margins through pricing power and COGS optimization. Every 5% improvement in EBITDA margin adds 1-2x to your EBITDA multiple."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +160,28 @@ export default function ExitCalculatorNewYorkBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#nyc-exit-calculator-model-your-new-york-startup-exit-valuati" className="text-blue-600 hover:text-blue-700 text-sm">NYC Exit Calculator: Model Your New York Startup Exit Valuation</a></li>
+                  <li><a href="#tldr-nyc-exit-valuation-quick-reference" className="text-blue-600 hover:text-blue-700 text-sm">TL;DR: NYC Exit Valuation Quick Reference</a></li>
+                  <li><a href="#why-nyc-exit-valuations-differ-from-silicon-valley" className="text-blue-600 hover:text-blue-700 text-sm">Why NYC Exit Valuations Differ From Silicon Valley</a></li>
+                  <li><a href="#nyc-exit-multiples-by-sector-2025-benchmarks" className="text-blue-600 hover:text-blue-700 text-sm">NYC Exit Multiples by Sector (2025 Benchmarks)</a></li>
+                  <li><a href="#strategic-vs-financial-buyer-exit-dynamics-in-nyc" className="text-blue-600 hover:text-blue-700 text-sm">Strategic vs Financial Buyer Exit Dynamics in NYC</a></li>
+                  <li><a href="#step-by-step-nyc-exit-valuation-calculation" className="text-blue-600 hover:text-blue-700 text-sm">Step-by-Step NYC Exit Valuation Calculation</a></li>
+                  <li><a href="#optimizing-your-nyc-exit-strategic-vs-financial-buyer-decisi" className="text-blue-600 hover:text-blue-700 text-sm">Optimizing Your NYC Exit: Strategic vs Financial Buyer Decision Framework</a></li>
+                  <li><a href="#maximizing-your-nyc-exit-valuation-tactical-playbook" className="text-blue-600 hover:text-blue-700 text-sm">Maximizing Your NYC Exit Valuation: Tactical Playbook</a></li>
+                  <li><a href="#common-nyc-exit-valuation-mistakes" className="text-blue-600 hover:text-blue-700 text-sm">Common NYC Exit Valuation Mistakes</a></li>
+                  <li><a href="#nyc-exit-calculator-ready-to-use-valuation-framework" className="text-blue-600 hover:text-blue-700 text-sm">NYC Exit Calculator: Ready-to-Use Valuation Framework</a></li>
+                  <li><a href="#resources-and-tools-for-nyc-exit-planning" className="text-blue-600 hover:text-blue-700 text-sm">Resources and Tools for NYC Exit Planning</a></li>
+                  <li><a href="#frequently-asked-questions-nyc-exit-valuations" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions: NYC Exit Valuations</a></li>
+                  <li><a href="#next-steps-plan-your-nyc-exit-strategy" className="text-blue-600 hover:text-blue-700 text-sm">Next Steps: Plan Your NYC Exit Strategy</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,13 +192,13 @@ export default function ExitCalculatorNewYorkBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>NYC Exit Calculator: Model Your New York Startup Exit Valuation</h2>
+                <h2 id="nyc-exit-calculator-model-your-new-york-startup-exit-valuati">NYC Exit Calculator: Model Your New York Startup Exit Valuation</h2>
 
 <p>New York City has emerged as the second-largest tech exit market in the United States, with distinct valuation dynamics driven by fintech dominance, financial buyer activity, and strategic acquirers from Wall Street. NYC exits differ fundamentally from Silicon Valley in acquirer profiles, exit multiples, and sector concentration.</p>
 
 <p>This comprehensive guide provides NYC founders with actionable exit valuation frameworks, current market multiples across fintech, e-commerce, and media tech sectors, and step-by-step calculations to model strategic vs financial buyer scenarios using New York-specific benchmarks.</p>
 
-<h2>TL;DR: NYC Exit Valuation Quick Reference</h2>
+<h2 id="tldr-nyc-exit-valuation-quick-reference">TL;DR: NYC Exit Valuation Quick Reference</h2>
 
 <p><strong>Fintech Exit Multiples (2025):</strong> 8-12x ARR for payment and lending platforms with strong unit economics; 10-15x ARR for wealth management and capital markets infrastructure with enterprise traction.</p>
 
@@ -142,7 +208,7 @@ export default function ExitCalculatorNewYorkBlogPost() {
 
 <p><strong>Strategic vs Financial Buyers:</strong> Strategic acquirers pay 20-30% premium to financial buyers but require strategic fit; private equity and growth equity buyers dominate NYC M&amp;A volume.</p>
 
-<h2>Why NYC Exit Valuations Differ From Silicon Valley</h2>
+<h2 id="why-nyc-exit-valuations-differ-from-silicon-valley">Why NYC Exit Valuations Differ From Silicon Valley</h2>
 
 <p>New York City commands exit multiples 15-25% below Silicon Valley averages due to structural market differences, but offers unique advantages in specific sectors:</p>
 
@@ -154,7 +220,21 @@ export default function ExitCalculatorNewYorkBlogPost() {
 
 <p><strong>4. Profitability Focus:</strong> NYC investors and acquirers emphasize unit economics and path to profitability over growth-at-all-costs. Companies with positive economics command premium valuations relative to unprofitable high-growth peers.</p>
 
-<h2>NYC Exit Multiples by Sector (2025 Benchmarks)</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your Exit Scenarios</p>
+                <p className="text-gray-600 mb-4">Calculate founder proceeds at different exit valuations with liquidation preference waterfalls.</p>
+                <a
+                  href="https://icanpitch.com/startup-exit-visualizer/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Exit Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="nyc-exit-multiples-by-sector-2025-benchmarks">NYC Exit Multiples by Sector (2025 Benchmarks)</h2>
 
 <h3>Fintech Exit Multiples</h3>
 
@@ -234,7 +314,7 @@ export default function ExitCalculatorNewYorkBlogPost() {
   <li>Key Drivers: Verified audience reach, email list size &gt;1M, social distribution independence, programmatic CPM premium</li>
 </ul>
 
-<h2>Strategic vs Financial Buyer Exit Dynamics in NYC</h2>
+<h2 id="strategic-vs-financial-buyer-exit-dynamics-in-nyc">Strategic vs Financial Buyer Exit Dynamics in NYC</h2>
 
 <h3>Financial Buyers: Private Equity and Growth Equity</h3>
 
@@ -282,7 +362,7 @@ export default function ExitCalculatorNewYorkBlogPost() {
 
 <p><strong>Strategic Buyer Deal Structure:</strong> All-cash transactions at 100% liquidity are most common. Founders typically exit within 12-18 months post-acquisition after earn-out period. Retention packages focus on key technical talent rather than founder ongoing involvement.</p>
 
-<h2>Step-by-Step NYC Exit Valuation Calculation</h2>
+<h2 id="step-by-step-nyc-exit-valuation-calculation">Step-by-Step NYC Exit Valuation Calculation</h2>
 
 <h3>Step 1: Determine Your Primary Valuation Metric</h3>
 
@@ -384,7 +464,7 @@ export default function ExitCalculatorNewYorkBlogPost() {
   <li><strong>Founder Proceeds: ($750M - $80M) x 0.12 = $80.4M (fully liquid)</strong></li>
 </ul>
 
-<h2>Optimizing Your NYC Exit: Strategic vs Financial Buyer Decision Framework</h2>
+<h2 id="optimizing-your-nyc-exit-strategic-vs-financial-buyer-decisi">Optimizing Your NYC Exit: Strategic vs Financial Buyer Decision Framework</h2>
 
 <h3>Choose Financial Buyers (PE/Growth Equity) When:</h3>
 
@@ -406,7 +486,7 @@ export default function ExitCalculatorNewYorkBlogPost() {
   <li><strong>You're building competitive threat:</strong> Defensive acquisitions command 50-100% strategic premium</li>
 </ul>
 
-<h2>Maximizing Your NYC Exit Valuation: Tactical Playbook</h2>
+<h2 id="maximizing-your-nyc-exit-valuation-tactical-playbook">Maximizing Your NYC Exit Valuation: Tactical Playbook</h2>
 
 <h3>Build Relationships With PE Firms 18-24 Months Before Exit</h3>
 
@@ -441,7 +521,7 @@ export default function ExitCalculatorNewYorkBlogPost() {
   <li><strong>Avoid Aug-Sep:</strong> PE partners on vacation; deal velocity drops 40% in late summer</li>
 </ul>
 
-<h2>Common NYC Exit Valuation Mistakes</h2>
+<h2 id="common-nyc-exit-valuation-mistakes">Common NYC Exit Valuation Mistakes</h2>
 
 <h3>Mistake 1: Ignoring EBITDA Requirements for PE Buyers</h3>
 
@@ -467,7 +547,7 @@ export default function ExitCalculatorNewYorkBlogPost() {
 
 <p><strong>Solution:</strong> Qualify strategic fit before investing time in strategic buyer process. Ask: Does your product integrate into their platform? Do you serve their customer base? Are you a competitive threat? If no to all three, strategic premium unlikely.</p>
 
-<h2>NYC Exit Calculator: Ready-to-Use Valuation Framework</h2>
+<h2 id="nyc-exit-calculator-ready-to-use-valuation-framework">NYC Exit Calculator: Ready-to-Use Valuation Framework</h2>
 
 <h3>Financial Buyer (PE/Growth Equity) Valuation Calculator</h3>
 
@@ -533,7 +613,7 @@ export default function ExitCalculatorNewYorkBlogPost() {
 <p><strong>Step 5:</strong> Calculate founder proceeds (all-cash):</p>
 <p><strong>Founder Proceeds = (Exit Valuation - Liquidation Preferences) x Founder Ownership %</strong></p>
 
-<h2>Resources and Tools for NYC Exit Planning</h2>
+<h2 id="resources-and-tools-for-nyc-exit-planning">Resources and Tools for NYC Exit Planning</h2>
 
 <h3>NYC-Specific Exit Resources</h3>
 
@@ -553,7 +633,7 @@ export default function ExitCalculatorNewYorkBlogPost() {
   <li><strong>E-Commerce/Consumer:</strong> LUMA Partners, GP Bullhound, Lincoln International</li>
 </ul>
 
-<h2>Frequently Asked Questions: NYC Exit Valuations</h2>
+<h2 id="frequently-asked-questions-nyc-exit-valuations">Frequently Asked Questions: NYC Exit Valuations</h2>
 
 <h3>What is the difference between strategic and financial buyer valuations in NYC?</h3>
 
@@ -575,7 +655,7 @@ export default function ExitCalculatorNewYorkBlogPost() {
 
 <p>NYC PE firms target companies with 15-25% EBITDA margins or clear path to those margins within 12-18 months post-acquisition. Companies with &lt;10% EBITDA margins face 30-50% valuation discounts vs 20%+ margin peers. Focus on EBITDA margin expansion 12-18 months before exit: reduce sales efficiency ratio (S&amp;M as % of revenue), scale G&amp;A slower than revenue growth, and improve gross margins through pricing power and COGS optimization. Every 5% improvement in EBITDA margin adds 1-2x to your EBITDA multiple.</p>
 
-<h2>Next Steps: Plan Your NYC Exit Strategy</h2>
+<h2 id="next-steps-plan-your-nyc-exit-strategy">Next Steps: Plan Your NYC Exit Strategy</h2>
 
 <p>NYC exits require early strategic decisions on PE vs strategic buyer paths, given the distinct valuation methodologies and deal structures. Model both scenarios today, then optimize your metrics for your target buyer profile 12-18 months before entering the market.</p>
 
@@ -612,13 +692,31 @@ export default function ExitCalculatorNewYorkBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/exit-calculator-berlin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Berlin Exit Calculator: German Startup Valuation & European M&A 2025</span>
+                </Link>
+                <Link href="/blog/exit-calculator-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">London Exit Calculator: UK Startup Valuation & Brexit Impact on M&A 2025</span>
+                </Link>
+                <Link href="/blog/exit-calculator-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Silicon Valley Exit Calculator: Startup Valuation & M&A Multiples 2025</span>
+                </Link>
+                <Link href="/blog/exit-calculator-singapore/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Singapore Exit Calculator: APAC Startup Valuation & Cross-Border M&A 2025</span>
+                </Link>
+                <Link href="/blog/vesting-acceleration-clauses-explained/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Vesting Acceleration Clauses: Single vs Double Trigger Explained</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/exit-calculator-growth-serial-entrepreneur-miami-model-exit-scenarios-maximize-founder-proceeds/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Exit Calculator</Link>
+              <Link href="/blog/exit-strategy-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Exit & Pro-Rata Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -628,18 +726,18 @@ export default function ExitCalculatorNewYorkBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your Exit Scenarios
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Calculate founder proceeds at different exit valuations with liquidation preference waterfalls.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/startup-exit-visualizer/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Exit Calculator &rarr;
               </a>
             </div>
           </div>

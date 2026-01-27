@@ -52,6 +52,60 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a standard option pool size for a seed-stage startup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A standard option pool at seed stage is 10-15% of the fully diluted cap table, with 13% being the median. This provides enough equity to hire 10-20 employees (mostly engineers, designers, and early sales) between seed and Series A rounds. Pre-seed startups typically use smaller 5-10% pools since they'll make fewer hires before raising institutional capital."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the option pool dilute founders or investors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Option pools almost always dilute founders and existing shareholders, not new investors. In 92% of venture deals, the option pool is created from the pre-money valuation, meaning it's calculated before the new investment comes in. For example, if you have a $10M pre-money valuation and need a 20% pool, founders first dilute from 100% to 80% to create the pool, then everyone dilutes together when the new money comes in."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should you refresh your option pool?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most startups refresh their option pool at each major funding round (Series A, B, C, etc.), typically adding 10-15% to whatever remains from the previous pool. The median time between refreshes is 18-24 months. You should consider an emergency mid-cycle refresh only if you're below 3-5% remaining pool with 9+ months until your next funding round and have critical hires who would otherwise be blocked."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens to option pool shares that aren't used?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unallocated option pool shares remain in the pool and are reflected in everyone's ownership percentages on a fully diluted basis. They don't \"go back\" to founders or investors—they stay reserved for future employee grants. When you raise your next round, the remaining pool is considered in the pre-money valuation, so unused pool capacity does reduce dilution in the next round."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you negotiate option pool size with investors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, option pool size is negotiable, though investors will push back if you propose something below market standards. The best approach is to build a detailed 18-24 month hiring plan showing exactly who you'll hire, when, and what equity they'll receive. Founders who present data-backed hiring plans reduce pool size by an average of 2.3 percentage points compared to those who accept investor proposals without negotiation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much equity should a VP-level hire get at Series A?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "VP-level hires at Series A typically receive 0.5-1.5% equity, depending on the role and criticality. VP of Engineering/CTO and VP of Sales tend toward the higher end (0.75-1.5%), while VP of Marketing or VP of Customer Success trend toward the lower end (0.4-0.9%). These percentages decrease at later stages as the company's valuation increases, making smaller percentages more valuable in absolute dollar terms."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +168,27 @@ export default function OptionPoolSizingPreSeedSeedSeriesABlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#what-is-an-option-pool-and-why-does-it-matter" className="text-blue-600 hover:text-blue-700 text-sm">What Is an Option Pool and Why Does It Matter?</a></li>
+                  <li><a href="#option-pool-sizing-by-funding-stage" className="text-blue-600 hover:text-blue-700 text-sm">Option Pool Sizing by Funding Stage</a></li>
+                  <li><a href="#industry-variations-when-to-deviate-from-standard-sizes" className="text-blue-600 hover:text-blue-700 text-sm">Industry Variations: When to Deviate from Standard Sizes</a></li>
+                  <li><a href="#geography-and-competitive-dynamics" className="text-blue-600 hover:text-blue-700 text-sm">Geography and Competitive Dynamics</a></li>
+                  <li><a href="#who-gets-diluted-when-you-create-an-option-pool" className="text-blue-600 hover:text-blue-700 text-sm">Who Gets Diluted When You Create an Option Pool?</a></li>
+                  <li><a href="#how-to-size-your-option-pool-step-by-step-process" className="text-blue-600 hover:text-blue-700 text-sm">How to Size Your Option Pool: Step-by-Step Process</a></li>
+                  <li><a href="#option-pool-refresh-mechanics" className="text-blue-600 hover:text-blue-700 text-sm">Option Pool Refresh Mechanics</a></li>
+                  <li><a href="#equity-grant-benchmarks-by-role-and-stage" className="text-blue-600 hover:text-blue-700 text-sm">Equity Grant Benchmarks by Role and Stage</a></li>
+                  <li><a href="#common-option-pool-mistakes" className="text-blue-600 hover:text-blue-700 text-sm">Common Option Pool Mistakes</a></li>
+                  <li><a href="#tools-and-calculators" className="text-blue-600 hover:text-blue-700 text-sm">Tools and Calculators</a></li>
+                  <li><a href="#frequently-asked-questions" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions</a></li>
+                  <li><a href="#key-takeaways" className="text-blue-600 hover:text-blue-700 text-sm">Key Takeaways</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -128,7 +201,7 @@ export default function OptionPoolSizingPreSeedSeedSeriesABlogPost() {
               ">
                 <p><strong>TL;DR:</strong> Standard option pool sizes are 10% for pre-seed, 15% for seed stage, and 15-20% for Series A. Option pools dilute existing shareholders (primarily founders) and are typically created from pre-money valuation. Understanding proper sizing prevents both running out of equity for key hires and over-diluting founders unnecessarily.</p>
 
-<h2>What Is an Option Pool and Why Does It Matter?</h2>
+<h2 id="what-is-an-option-pool-and-why-does-it-matter">What Is an Option Pool and Why Does It Matter?</h2>
 
 <p>An option pool (also called an equity incentive plan or stock option plan) is a reserved allocation of company equity set aside specifically to compensate employees, advisors, and consultants. These aren't shares that have been issued yet—they're reserved shares that will be granted as stock options over time as you hire and grow your team.</p>
 
@@ -148,7 +221,7 @@ export default function OptionPoolSizingPreSeedSeedSeriesABlogPost() {
 
 <p>If you're raising venture capital, investors will require an option pool as part of the deal. The question isn't whether to create one—it's how big it should be, when to create it, and who bears the dilution.</p>
 
-<h2>Option Pool Sizing by Funding Stage</h2>
+<h2 id="option-pool-sizing-by-funding-stage">Option Pool Sizing by Funding Stage</h2>
 
 <p>The right option pool size depends on your stage, industry, hiring plans, and geography. Here are the benchmarks based on data from thousands of startups.</p>
 
@@ -274,7 +347,7 @@ export default function OptionPoolSizingPreSeedSeedSeriesABlogPost() {
 
 <p><strong>Statistics:</strong> The median option pool refresh at Series B is 12%, according to Carta data on 5,000+ Series B rounds.</p>
 
-<h2>Industry Variations: When to Deviate from Standard Sizes</h2>
+<h2 id="industry-variations-when-to-deviate-from-standard-sizes">Industry Variations: When to Deviate from Standard Sizes</h2>
 
 <p>While the benchmarks above apply broadly, certain industries and business models require different option pool sizing strategies.</p>
 
@@ -328,7 +401,21 @@ export default function OptionPoolSizingPreSeedSeedSeriesABlogPost() {
   <li>Smaller teams mean each hire gets larger individual grants</li>
 </ul>
 
-<h2>Geography and Competitive Dynamics</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Size Your Option Pool</p>
+                <p className="text-gray-600 mb-4">Model how different option pool sizes affect founder dilution before and after your next round.</p>
+                <a
+                  href="https://icanpitch.com/option-pool-impact-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Option Pool Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="geography-and-competitive-dynamics">Geography and Competitive Dynamics</h2>
 
 <p>Your location affects option pool sizing due to different compensation norms and competition.</p>
 
@@ -374,7 +461,7 @@ export default function OptionPoolSizingPreSeedSeedSeriesABlogPost() {
   <li><strong>Israel:</strong> 15-20% at Series A (equity culture similar to US)</li>
 </ul>
 
-<h2>Who Gets Diluted When You Create an Option Pool?</h2>
+<h2 id="who-gets-diluted-when-you-create-an-option-pool">Who Gets Diluted When You Create an Option Pool?</h2>
 
 <p>This is the single most important aspect of option pool sizing that founders misunderstand. The timing and structure of option pool creation determines who bears the dilution—and it's almost always the founders and existing shareholders, not the new investors.</p>
 
@@ -494,7 +581,7 @@ export default function OptionPoolSizingPreSeedSeedSeriesABlogPost() {
 
 <p><strong>The compromise:</strong> Build a detailed hiring plan showing exactly who you'll hire, when, and what equity they'll receive. Use this to justify a right-sized pool—neither too large (unnecessary founder dilution) nor too small (running out of equity for key hires).</p>
 
-<h2>How to Size Your Option Pool: Step-by-Step Process</h2>
+<h2 id="how-to-size-your-option-pool-step-by-step-process">How to Size Your Option Pool: Step-by-Step Process</h2>
 
 <p>Don't let investors dictate your option pool size without analysis. Here's how to determine the right size for your specific situation.</p>
 
@@ -592,7 +679,7 @@ export default function OptionPoolSizingPreSeedSeedSeriesABlogPost() {
 
 <p><strong>Statistics:</strong> Founders who present detailed hiring plans during option pool negotiations reduce the final pool size by an average of 2.3 percentage points compared to founders who accept the investor's initial proposal, according to survey data from 500+ Series A founders.</p>
 
-<h2>Option Pool Refresh Mechanics</h2>
+<h2 id="option-pool-refresh-mechanics">Option Pool Refresh Mechanics</h2>
 
 <p>Eventually, you'll allocate most of your option pool to employees. At that point, you need to refresh it for continued hiring. Here's how refreshes work.</p>
 
@@ -672,7 +759,7 @@ export default function OptionPoolSizingPreSeedSeedSeriesABlogPost() {
 
 <p><strong>Statistics:</strong> 73% of option pool refreshes happen as part of a new funding round, 19% happen mid-cycle by board approval, and 8% happen through special stock issuances.</p>
 
-<h2>Equity Grant Benchmarks by Role and Stage</h2>
+<h2 id="equity-grant-benchmarks-by-role-and-stage">Equity Grant Benchmarks by Role and Stage</h2>
 
 <p>To size your option pool accurately, you need to know market rates for equity compensation. Here are benchmarks for common roles at seed and Series A stages.</p>
 
@@ -794,7 +881,7 @@ export default function OptionPoolSizingPreSeedSeedSeriesABlogPost() {
 
 <p><strong>Why equity grants decrease at later stages:</strong> As your company's valuation increases, the absolute dollar value of a smaller percentage becomes more significant. A 0.1% grant at a $10M seed valuation is worth $10K; the same grant at a $100M Series B valuation is worth $100K.</p>
 
-<h2>Common Option Pool Mistakes</h2>
+<h2 id="common-option-pool-mistakes">Common Option Pool Mistakes</h2>
 
 <h3>Mistake 1: Accepting Investor's First Proposal Without Analysis</h3>
 
@@ -836,7 +923,7 @@ export default function OptionPoolSizingPreSeedSeedSeriesABlogPost() {
 
 <p><strong>The fix:</strong> Model your cap table through Series B and C, including expected option pool refreshes at each stage. Understand total dilution trajectory from the beginning.</p>
 
-<h2>Tools and Calculators</h2>
+<h2 id="tools-and-calculators">Tools and Calculators</h2>
 
 <p>Use our <a href="https://icanpitch.com/option-pool-calculator/" target="_blank" rel="noopener noreferrer">Option Pool Calculator</a> to model:</p>
 
@@ -850,7 +937,7 @@ export default function OptionPoolSizingPreSeedSeedSeriesABlogPost() {
 
 <p>For broader cap table planning including SAFEs and dilution, see our <a href="https://icanpitch.com/dilution-calculator/" target="_blank" rel="noopener noreferrer">Dilution Calculator</a>.</p>
 
-<h2>Frequently Asked Questions</h2>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
 
 <h3>What is a standard option pool size for a seed-stage startup?</h3>
 
@@ -876,7 +963,7 @@ export default function OptionPoolSizingPreSeedSeedSeriesABlogPost() {
 
 <p>VP-level hires at Series A typically receive 0.5-1.5% equity, depending on the role and criticality. VP of Engineering/CTO and VP of Sales tend toward the higher end (0.75-1.5%), while VP of Marketing or VP of Customer Success trend toward the lower end (0.4-0.9%). These percentages decrease at later stages as the company's valuation increases, making smaller percentages more valuable in absolute dollar terms.</p>
 
-<h2>Key Takeaways</h2>
+<h2 id="key-takeaways">Key Takeaways</h2>
 
 <p>Option pool sizing is one of the most important and least understood aspects of startup fundraising. The right size depends on your stage, industry, geography, and specific hiring plans—not just blanket rules of thumb.</p>
 
@@ -920,13 +1007,30 @@ export default function OptionPoolSizingPreSeedSeedSeriesABlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/option-pool-dilution-impact-founders/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Option Pool Dilution Impact on Founders: Complete Guide</span>
+                </Link>
+                <Link href="/blog/option-pool-calculator-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Silicon Valley Option Pool Calculator: Pre-Money vs Post-Money ESOP Guide (2025)</span>
+                </Link>
+                <Link href="/blog/option-pool-calculator-berlin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Berlin Option Pool Calculator: German ESOP vs VSOP Guide (2025)</span>
+                </Link>
+                <Link href="/blog/option-pool-calculator-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">London Option Pool Calculator: UK ESOP & EMI Scheme Guide (2025)</span>
+                </Link>
+                <Link href="/blog/option-pool-calculator-new-york/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">NYC Option Pool Calculator: East Coast Startup Equity Standards (2025)</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/option-pool-calculator-pre-seed-technical-founder-san-francisco-size-employee-equity-minimize-founder-dilution/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Option Pool Calculator</Link>
+              <Link href="/blog/equity-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Equity, Vesting & Option Pool Guides</Link>
             </div>
           </div>
         </section>
@@ -936,18 +1040,18 @@ export default function OptionPoolSizingPreSeedSeedSeriesABlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Size Your Option Pool
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Model how different option pool sizes affect founder dilution before and after your next round.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/option-pool-impact-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Option Pool Calculator &rarr;
               </a>
             </div>
           </div>

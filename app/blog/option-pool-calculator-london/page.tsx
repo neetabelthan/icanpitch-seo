@@ -52,6 +52,60 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What happens to EMI options if we exceed £30M in gross assets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Existing EMI options remain valid and retain their tax-advantaged status. However, you cannot grant new EMI options after exceeding the threshold. You'll need to transition to CSOPs, Growth Shares, or non-qualified options for future grants."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I get an HMRC valuation agreement for every option grant?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not necessarily. Obtain HMRC agreements for your initial EMI grant and after each funding round when valuations change materially. For grants between funding rounds at consistent valuations, use your most recent HMRC agreement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I grant EMI options to advisors or non-executive directors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. EMI options require an employment relationship with at least 25 hours per week or 75% of working time committed to the company. Advisors and NEDs don't meet this threshold and must receive non-qualified options or Growth Shares."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I handle EMI options for employees who relocate internationally?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EMI tax benefits apply based on UK tax residency at exercise. If an employee becomes non-UK tax resident before exercising, they lose EMI tax advantages and face their new country's tax treatment. Include mobility clauses in option agreements addressing this scenario."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's better for senior hires: EMI options plus non-qualified options, or pure Growth Shares?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It depends on the hire's risk tolerance and your valuation trajectory. EMI plus non-qualified options provide optionality (the right but not obligation to purchase shares). Growth Shares are actual shares with immediate ownership but require upfront payment. Model both for your specific candidate and let them choose."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should London startups create option pools as large as US companies?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Generally no. UK compensation norms emphasize cash over equity, EMI tax benefits amplify the value of smaller grants, and employee risk tolerance is lower in Europe. A 12% London pool often accomplishes what requires 18% in San Francisco. Build hiring plans based on UK benchmarks, not US defaults."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +168,27 @@ export default function OptionPoolCalculatorLondonBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#understanding-uk-option-pools-and-emi-schemes" className="text-blue-600 hover:text-blue-700 text-sm">Understanding UK Option Pools and EMI Schemes</a></li>
+                  <li><a href="#what-is-an-emi-scheme-and-why-does-it-matter" className="text-blue-600 hover:text-blue-700 text-sm">What Is an EMI Scheme and Why Does It Matter?</a></li>
+                  <li><a href="#london-option-pool-standards-by-stage-and-industry" className="text-blue-600 hover:text-blue-700 text-sm">London Option Pool Standards by Stage and Industry</a></li>
+                  <li><a href="#how-to-calculate-uk-option-pools-with-emi-considerations" className="text-blue-600 hover:text-blue-700 text-sm">How to Calculate UK Option Pools with EMI Considerations</a></li>
+                  <li><a href="#pre-money-vs-post-money-option-pools-in-london-deals" className="text-blue-600 hover:text-blue-700 text-sm">Pre-Money vs Post-Money Option Pools in London Deals</a></li>
+                  <li><a href="#hmrc-compliance-and-emi-administration" className="text-blue-600 hover:text-blue-700 text-sm">HMRC Compliance and EMI Administration</a></li>
+                  <li><a href="#common-option-pool-mistakes-for-london-startups" className="text-blue-600 hover:text-blue-700 text-sm">Common Option Pool Mistakes for London Startups</a></li>
+                  <li><a href="#london-employee-equity-benchmarks-by-role" className="text-blue-600 hover:text-blue-700 text-sm">London Employee Equity Benchmarks by Role</a></li>
+                  <li><a href="#growth-shares-as-emi-alternatives" className="text-blue-600 hover:text-blue-700 text-sm">Growth Shares as EMI Alternatives</a></li>
+                  <li><a href="#how-to-use-the-icanpitch-london-option-pool-calculator" className="text-blue-600 hover:text-blue-700 text-sm">How to Use the ICanPitch London Option Pool Calculator</a></li>
+                  <li><a href="#option-pool-faqs-for-london-founders" className="text-blue-600 hover:text-blue-700 text-sm">Option Pool FAQs for London Founders</a></li>
+                  <li><a href="#start-planning-your-london-option-pool" className="text-blue-600 hover:text-blue-700 text-sm">Start Planning Your London Option Pool</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +199,7 @@ export default function OptionPoolCalculatorLondonBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Understanding UK Option Pools and EMI Schemes</h2>
+                <h2 id="understanding-uk-option-pools-and-emi-schemes">Understanding UK Option Pools and EMI Schemes</h2>
 
 <p>London startups operate within a fundamentally different equity compensation framework than their US counterparts, shaped by tax-advantaged Enterprise Management Incentive (EMI) schemes, HMRC regulations, and European employee expectations around cash compensation versus equity risk.</p>
 
@@ -134,7 +207,7 @@ export default function OptionPoolCalculatorLondonBlogPost() {
 
 <p><strong>The critical advantage for London founders:</strong> EMI schemes allow you to grant tax-efficient options that deliver outsized value to employees without requiring massive option pools. Understanding EMI mechanics, HMRC compliance requirements, and valuation rules is essential for creating appropriately sized pools that attract talent without excessive founder dilution.</p>
 
-<h2>What Is an EMI Scheme and Why Does It Matter?</h2>
+<h2 id="what-is-an-emi-scheme-and-why-does-it-matter">What Is an EMI Scheme and Why Does It Matter?</h2>
 
 <p>The Enterprise Management Incentive scheme is HMRC's tax-advantaged share option program designed specifically to help early-stage UK companies recruit and retain employees. EMI options provide significant tax benefits compared to non-qualified options:</p>
 
@@ -179,7 +252,7 @@ export default function OptionPoolCalculatorLondonBlogPost() {
 
 <p>Plan for this transition when modeling long-term option pool strategies. Many London companies time fundraising rounds to stay below £30M gross assets as long as possible to maintain EMI eligibility.</p>
 
-<h2>London Option Pool Standards by Stage and Industry</h2>
+<h2 id="london-option-pool-standards-by-stage-and-industry">London Option Pool Standards by Stage and Industry</h2>
 
 <p>UK option pools follow different sizing conventions than US markets. Here's what to expect across London's major startup sectors:</p>
 
@@ -223,7 +296,21 @@ export default function OptionPoolCalculatorLondonBlogPost() {
 
 <p><strong>Biotech and Healthtech (10-15%):</strong> Life sciences startups allocate larger pools for senior scientific talent and regulatory specialists.</p>
 
-<h2>How to Calculate UK Option Pools with EMI Considerations</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Size Your Option Pool</p>
+                <p className="text-gray-600 mb-4">Model how different option pool sizes affect founder dilution before and after your next round.</p>
+                <a
+                  href="https://icanpitch.com/option-pool-impact-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Option Pool Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="how-to-calculate-uk-option-pools-with-emi-considerations">How to Calculate UK Option Pools with EMI Considerations</h2>
 
 <p>Calculating option pools for UK companies requires accounting for EMI limits, HMRC valuation requirements, and the transition to non-EMI schemes at scale. Follow this systematic process:</p>
 
@@ -310,7 +397,7 @@ export default function OptionPoolCalculatorLondonBlogPost() {
 <li>More founder-friendly but less common in UK</li>
 </ul>
 
-<h2>Pre-Money vs Post-Money Option Pools in London Deals</h2>
+<h2 id="pre-money-vs-post-money-option-pools-in-london-deals">Pre-Money vs Post-Money Option Pools in London Deals</h2>
 
 <p>Understanding the difference between pre-money and post-money option pool treatment is crucial because it determines who bears the cost of employee equity grants.</p>
 
@@ -358,7 +445,7 @@ export default function OptionPoolCalculatorLondonBlogPost() {
 
 <p>The 2.2 percentage point difference in founder ownership represents approximately £220,000 in value for every £10M of exit valuation.</p>
 
-<h2>HMRC Compliance and EMI Administration</h2>
+<h2 id="hmrc-compliance-and-emi-administration">HMRC Compliance and EMI Administration</h2>
 
 <p>Maintaining EMI qualification requires ongoing compliance with HMRC regulations. Here's what London founders need to manage:</p>
 
@@ -422,7 +509,7 @@ export default function OptionPoolCalculatorLondonBlogPost() {
 <li>Board minutes approving the valuation methodology</li>
 </ul>
 
-<h2>Common Option Pool Mistakes for London Startups</h2>
+<h2 id="common-option-pool-mistakes-for-london-startups">Common Option Pool Mistakes for London Startups</h2>
 
 <p>UK founders make specific errors related to EMI schemes and cross-border equity grants. Avoid these pitfalls:</p>
 
@@ -456,7 +543,7 @@ export default function OptionPoolCalculatorLondonBlogPost() {
 
 <p><strong>Solution:</strong> Include mobility clauses in option agreements addressing tax treatment if employees relocate. Consult international tax advisors before granting significant options to employees likely to move abroad.</p>
 
-<h2>London Employee Equity Benchmarks by Role</h2>
+<h2 id="london-employee-equity-benchmarks-by-role">London Employee Equity Benchmarks by Role</h2>
 
 <p>Use these London-specific equity benchmarks when building hiring plans and sizing option pools:</p>
 
@@ -496,7 +583,7 @@ export default function OptionPoolCalculatorLondonBlogPost() {
 
 <p><strong>Note:</strong> These ranges are 25-40% lower than Silicon Valley equivalents due to EMI tax advantages and UK compensation structures that emphasize base salary over equity risk.</p>
 
-<h2>Growth Shares as EMI Alternatives</h2>
+<h2 id="growth-shares-as-emi-alternatives">Growth Shares as EMI Alternatives</h2>
 
 <p>When you exceed EMI limits, Growth Shares provide a tax-efficient alternative for senior hires and key employees:</p>
 
@@ -531,7 +618,7 @@ export default function OptionPoolCalculatorLondonBlogPost() {
 <li>May require upfront payment (though often nominal)</li>
 </ul>
 
-<h2>How to Use the ICanPitch London Option Pool Calculator</h2>
+<h2 id="how-to-use-the-icanpitch-london-option-pool-calculator">How to Use the ICanPitch London Option Pool Calculator</h2>
 
 <p>The <a href="https://icanpitch.com/" target="_blank" rel="noopener noreferrer">ICanPitch platform</a> includes UK-specific calculators that account for EMI schemes, HMRC valuations, and London equity benchmarks:</p>
 
@@ -555,7 +642,7 @@ export default function OptionPoolCalculatorLondonBlogPost() {
 
 <p>Input your growth projections (employee headcount and gross assets) to forecast when you'll exceed EMI eligibility thresholds. Plan alternative equity structures before losing qualification.</p>
 
-<h2>Option Pool FAQs for London Founders</h2>
+<h2 id="option-pool-faqs-for-london-founders">Option Pool FAQs for London Founders</h2>
 
 <h3>What happens to EMI options if we exceed £30M in gross assets?</h3>
 
@@ -581,7 +668,7 @@ export default function OptionPoolCalculatorLondonBlogPost() {
 
 <p>Generally no. UK compensation norms emphasize cash over equity, EMI tax benefits amplify the value of smaller grants, and employee risk tolerance is lower in Europe. A 12% London pool often accomplishes what requires 18% in San Francisco. Build hiring plans based on UK benchmarks, not US defaults.</p>
 
-<h2>Start Planning Your London Option Pool</h2>
+<h2 id="start-planning-your-london-option-pool">Start Planning Your London Option Pool</h2>
 
 <p>UK option pools require navigating EMI regulations, HMRC compliance, and European compensation expectations that differ fundamentally from US venture norms. London founders have a powerful advantage: EMI schemes deliver exceptional tax efficiency that makes smaller equity grants more valuable to employees while preserving founder ownership.</p>
 
@@ -610,13 +697,30 @@ export default function OptionPoolCalculatorLondonBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/option-pool-calculator-berlin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Berlin Option Pool Calculator: German ESOP vs VSOP Guide (2025)</span>
+                </Link>
+                <Link href="/blog/option-pool-calculator-new-york/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">NYC Option Pool Calculator: East Coast Startup Equity Standards (2025)</span>
+                </Link>
+                <Link href="/blog/option-pool-calculator-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Silicon Valley Option Pool Calculator: Pre-Money vs Post-Money ESOP Guide (2025)</span>
+                </Link>
+                <Link href="/blog/option-pool-calculator-singapore/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Singapore Option Pool Calculator: APAC ESOP Standards & Tax Guide (2025)</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for London Startups: 2025 Cost Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/option-pool-calculator-pre-seed-technical-founder-san-francisco-size-employee-equity-minimize-founder-dilution/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Option Pool Calculator</Link>
+              <Link href="/blog/equity-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Equity, Vesting & Option Pool Guides</Link>
             </div>
           </div>
         </section>
@@ -626,18 +730,18 @@ export default function OptionPoolCalculatorLondonBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Size Your Option Pool
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Model how different option pool sizes affect founder dilution before and after your next round.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/option-pool-impact-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Option Pool Calculator &rarr;
               </a>
             </div>
           </div>

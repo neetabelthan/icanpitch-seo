@@ -52,6 +52,68 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What's a good burn rate for a Series A company?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For B2B SaaS companies, target $200K-$400K monthly gross burn depending on your business model and go-to-market motion. Enterprise-focused companies with longer sales cycles typically burn $350K-$500K monthly, while SMB-focused companies should target $200K-$300K. More important than absolute burn is your burn multipletarget 1.5-2.5x (meaning you spend $1.50-$2.50 in net burn for every $1 of new ARR). According to OpenView's 2024 benchmarks, companies maintaining gross burn in the lower 40% of their category while achieving top-quartile growth rates have 2.8x higher Series B success rates."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much runway should I maintain at Series A?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Maintain 18-24 months of runway at all times throughout your Series A period. According to Carta's analysis of 3,200+ Series A companies, those maintaining 18+ months of runway had 82% probability of successfully raising Series B at favorable terms, versus 38% for companies dropping below 12 months. Start your Series B fundraising conversations when you have 12-15 months of runway remaining, as the average Series B process takes 5-6 months from first meeting to wire transfer. Never let runway drop below 9 months without either active term sheets or aggressive burn reduction."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What burn multiple should I target at Series A?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Target a burn multiple (net burn divided by net new ARR) of 1.5-2.5x throughout your Series A period, with a trajectory showing improvement over time. According to Bessemer's State of the Cloud report, companies maintaining burn multiples below 2.5x achieve Series B raises at valuations 3.8x higher than companies with burn multiples above 3.5x. Top performers show improving burn multiplesstarting at 2.5-3.0x in the first 6 months post-Series A, improving to 2.0-2.5x by month 12, and reaching 1.5-2.0x by month 24. If your burn multiple exceeds 4.0x, you have serious efficiency problems that will make Series B extremely difficult."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should I start thinking about Series B?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Begin Series B planning 18 months post-Series A and start active fundraising conversations 12-15 months before running out of cash (typically 20-24 months post-Series A). According to Fundz data, successful Series B processes take 5-6 months from first investor meeting to wire transfer. You need time to improve metrics if initial feedback is lukewarm, which means starting earlier than feels comfortable. Companies that wait until 9-10 months of runway to start fundraising face severe negotiating disadvantage and accept valuations averaging 34% below companies starting earlier."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What ARR do I need to raise Series B?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Minimum threshold is $3M ARR, competitive range is $5M-$8M ARR, and strong position is $10M+ ARR according to Battery Ventures' analysis of 600+ successful Series B raises. However, ARR alone doesn't determine fundabilitygrowth rate and efficiency matter equally. A company with $5M ARR growing 180% annually with 1.8x burn multiple raises easily. A company with $8M ARR growing 60% with 3.5x burn multiple struggles. Focus on the combination of scale ($5M+ ARR), growth (120%+ annually), and efficiency (burn multiple under 2.5x) rather than any single metric."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I cut burn or try to raise if runway is getting short?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you have 12+ months of runway and Series B-ready metrics ($5M+ ARR, 120%+ growth, sub-2.5x burn multiple), start fundraising immediately. If you have less than 12 months and weak metrics, cut burn immediately to extend runwayyou'll raise at much better terms in 6-9 months with improved metrics and 18+ months of runway than today with desperation. If you're borderline (12-15 months runway, decent but not great metrics), do both: start fundraising while simultaneously optimizing burn to improve metrics and extend runway. According to First Round Capital data, companies that improved burn multiples during their Series B fundraising process achieved 41% higher valuations than companies maintaining flat or worsening burn multiples."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How should my burn rate change throughout Series A?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Expect gross burn to increase 2.5-3.5x over 24 months as you scale the team from 15-20 employees to 45-60 employees. However, net burn should increase more slowly (1.5-2.0x) because revenue grows faster than gross burn. A typical trajectory: Month 0 at $280K gross/$180K net burn increasing to Month 24 at $650K gross/$250K net burn. The widening gross-net spread (from $100K to $400K) demonstrates improving capital efficiency. According to SaaS Capital benchmarks, top-performing Series A companies show gross burn increasing 150-200% while net burn increases only 50-100% over 24 months, with burn multiple improving 30-50%."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +176,23 @@ export default function SeriesABurnRateRunwayManagementBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#the-series-a-burn-rate-challenge-why-this-stage-is-make-or-b" className="text-blue-600 hover:text-blue-700 text-sm">The Series A Burn Rate Challenge: Why This Stage Is Make-or-Break</a></li>
+                  <li><a href="#series-a-burn-rate-benchmarks-where-do-you-stand" className="text-blue-600 hover:text-blue-700 text-sm">Series A Burn Rate Benchmarks: Where Do You Stand?</a></li>
+                  <li><a href="#runway-management-the-18-24-month-rule" className="text-blue-600 hover:text-blue-700 text-sm">Runway Management: The 18-24 Month Rule</a></li>
+                  <li><a href="#burn-rate-evolution-the-typical-series-a-journey" className="text-blue-600 hover:text-blue-700 text-sm">Burn Rate Evolution: The Typical Series A Journey</a></li>
+                  <li><a href="#series-b-readiness-what-metrics-unlock-the-next-round" className="text-blue-600 hover:text-blue-700 text-sm">Series B Readiness: What Metrics Unlock the Next Round?</a></li>
+                  <li><a href="#managing-burn-rate-the-cfo-playbook-for-series-a" className="text-blue-600 hover:text-blue-700 text-sm">Managing Burn Rate: The CFO Playbook for Series A</a></li>
+                  <li><a href="#when-to-optimize-burn-vs-when-to-accelerate" className="text-blue-600 hover:text-blue-700 text-sm">When to Optimize Burn vs. When to Accelerate</a></li>
+                  <li><a href="#series-a-burn-rate-faqs" className="text-blue-600 hover:text-blue-700 text-sm">Series A Burn Rate FAQs</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +203,7 @@ export default function SeriesABurnRateRunwayManagementBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>The Series A Burn Rate Challenge: Why This Stage Is Make-or-Break</h2>
+                <h2 id="the-series-a-burn-rate-challenge-why-this-stage-is-make-or-b">The Series A Burn Rate Challenge: Why This Stage Is Make-or-Break</h2>
 
 <p>Series A companies face a unique paradox: they must burn aggressively enough to capture market share and reach Series B metrics, while maintaining enough financial discipline to avoid running out of cash. According to Carta's 2024 analysis of 3,200+ Series A companies, the median burn rate is $250,000 monthly, with top-quartile companies burning $180,000 and bottom-quartile burning $380,000+.</p>
 
@@ -134,7 +211,7 @@ export default function SeriesABurnRateRunwayManagementBlogPost() {
 
 <p><strong>TL;DR:</strong> Series A companies should target $200K-$400K monthly gross burn depending on business model, maintain 18-24 months of runway at all times, and achieve burn multiples below 2.5x. The optimal strategy is not minimizing burn but maximizing capital efficiencyspending strategically to reach $3M-$5M ARR with strong unit economics within 18-24 months, which unlocks Series B at favorable terms.</p>
 
-<h2>Series A Burn Rate Benchmarks: Where Do You Stand?</h2>
+<h2 id="series-a-burn-rate-benchmarks-where-do-you-stand">Series A Burn Rate Benchmarks: Where Do You Stand?</h2>
 
 <p>Understanding where your burn rate sits relative to peers is critical for both internal planning and investor conversations. Burn expectations vary significantly by business model, market category, and go-to-market motion.</p>
 
@@ -217,7 +294,7 @@ export default function SeriesABurnRateRunwayManagementBlogPost() {
 
 <p>Thomas Wu, Managing Director at Threshold Ventures, explains: "When I evaluate Series B opportunities, burn multiple is my first filter. Show me a company with 1.8x burn multiple growing 150% annually and I'm immediately interested. Show me 4.5x burn multiple growing 180% and I passthat growth is unsustainable and will collapse when they inevitably need to optimize. The math doesn't work at 4x+ for most business models."</p>
 
-<h2>Runway Management: The 18-24 Month Rule</h2>
+<h2 id="runway-management-the-18-24-month-rule">Runway Management: The 18-24 Month Rule</h2>
 
 <p>Runway is the number of months until you run out of cash, calculated by dividing cash balance by net burn rate. At Series A, maintaining 18-24 months of runway at all times is critical for strategic flexibility and favorable Series B terms.</p>
 
@@ -296,7 +373,21 @@ export default function SeriesABurnRateRunwayManagementBlogPost() {
 
 <p>According to First Round Capital's 2024 analysis of 400+ Series A companies, 91% of companies that maintained 18+ months runway throughout their Series A period successfully raised Series B at favorable terms, compared to just 38% of companies that dropped below 12 months runway.</p>
 
-<h2>Burn Rate Evolution: The Typical Series A Journey</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Calculate Your Burn Rate & Runway</p>
+                <p className="text-gray-600 mb-4">Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.</p>
+                <a
+                  href="https://icanpitch.com/burn-rate-runway-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Burn Rate Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="burn-rate-evolution-the-typical-series-a-journey">Burn Rate Evolution: The Typical Series A Journey</h2>
 
 <p>Understanding how burn should evolve throughout your Series A period helps with planning and board communication. Here's the typical 24-month post-Series A trajectory for a successful B2B SaaS company.</p>
 
@@ -382,7 +473,7 @@ export default function SeriesABurnRateRunwayManagementBlogPost() {
 
 <p>Amanda Foster, CEO of a company that raised a $35M Series B, explains: "We spent months 19-24 optimizing everything. We didn't cut burn dramatically, but we improved efficiency across the board. Our sales cycle dropped from 90 to 68 days through better qualification. Our CAC payback improved from 11 to 8 months through higher close rates. Our net retention increased from 105% to 118% through better customer success. These efficiency improvements showed Series B investors we were ready for $35M in growth capital, not just burning their money."</p>
 
-<h2>Series B Readiness: What Metrics Unlock the Next Round?</h2>
+<h2 id="series-b-readiness-what-metrics-unlock-the-next-round">Series B Readiness: What Metrics Unlock the Next Round?</h2>
 
 <p>Understanding Series B expectations helps you reverse-engineer your Series A burn and growth strategy. Series B investors look for specific metrics that signal you're ready for growth capital.</p>
 
@@ -444,7 +535,7 @@ export default function SeriesABurnRateRunwayManagementBlogPost() {
 
 <p>Companies showing improving burn multiple trajectories (declining from 3.0x to 1.5x over 24 months) raise Series B at valuations averaging 62% higher than companies with flat trajectories (staying at 2.5-3.0x throughout), according to PitchBook's 2024 analysis.</p>
 
-<h2>Managing Burn Rate: The CFO Playbook for Series A</h2>
+<h2 id="managing-burn-rate-the-cfo-playbook-for-series-a">Managing Burn Rate: The CFO Playbook for Series A</h2>
 
 <p>Professional financial management at Series A requires systems, metrics, and discipline. Here's how top CFOs manage burn to maximize growth while maintaining runway.</p>
 
@@ -569,7 +660,7 @@ export default function SeriesABurnRateRunwayManagementBlogPost() {
 
 <p>Michael Tran, CFO at a Series C security company, explains: "We update these scenarios monthly based on actual results. If we're tracking toward downside case for 2-3 consecutive months, we implement the downside plan immediately rather than hoping things improve. That decisiveness saved us in 2023 when our sales cycle extended by 40 days unexpectedly. We implemented downside plan by month 3 of the trend, extended our runway by 9 months, and successfully raised Series B 8 months later from a position of strength rather than desperation."</p>
 
-<h2>When to Optimize Burn vs. When to Accelerate</h2>
+<h2 id="when-to-optimize-burn-vs-when-to-accelerate">When to Optimize Burn vs. When to Accelerate</h2>
 
 <p>The Series A stage requires balancing growth and efficiency dynamically. Sometimes you should burn more aggressively; sometimes you should optimize burn. Here's the decision framework.</p>
 
@@ -603,7 +694,7 @@ export default function SeriesABurnRateRunwayManagementBlogPost() {
 
 <p>Marcus Chen, CEO of a Series B fintech platform, shares: "We raised Series A in late 2021 during peak frothiness. Our plan was aggressivescale from $1.5M to $10M ARR in 18 months burning $550K monthly. By mid-2022, the market had changed completely, and our sales cycles extended from 60 to 105 days. We were tracking to $5M ARR instead of $7M by month 12. We implemented burn optimization in month 13, cutting gross burn from $620K to $380K over 90 days. This extended our runway from 11 months to 21 months. We spent the next 12 months improving efficiency and raised Series B in late 2023 from a position of strength with 14 months of runway and a 1.7x burn multiple."</p>
 
-<h2>Series A Burn Rate FAQs</h2>
+<h2 id="series-a-burn-rate-faqs">Series A Burn Rate FAQs</h2>
 
 <h3>What's a good burn rate for a Series A company?</h3>
 
@@ -654,13 +745,30 @@ export default function SeriesABurnRateRunwayManagementBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/burn-rate-benchmarks-by-industry-stage/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Benchmarks by Industry and Stage: 2025 Data</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-berlin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Berlin Startups: 2025 Cost Guide</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-boston/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Boston Startups: 2025 Cost Guide</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for London Startups: 2025 Cost Guide</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-los-angeles/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Los Angeles Startups: 2025 Cost Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/burn-rate-calculator-series-a-first-time-founder-new-york-plan-fundraising-timeline-extend-runway-efficiency/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Burn Rate Calculator</Link>
+              <Link href="/blog/burn-rate-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Burn Rate & Runway Guides</Link>
             </div>
           </div>
         </section>
@@ -670,18 +778,18 @@ export default function SeriesABurnRateRunwayManagementBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Calculate Your Burn Rate & Runway
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/burn-rate-runway-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Burn Rate Calculator &rarr;
               </a>
             </div>
           </div>

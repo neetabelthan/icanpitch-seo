@@ -52,6 +52,60 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Should co-founders split equity 50/50?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, in most cases. Research shows that 62% of 50/50 equity splits result in founder conflict within 3 years. Only choose 50/50 if contributions, commitment, and risk are truly equal, and you have a formal tiebreaker mechanism for decision deadlocks. Alternative splits like 60/40 or 70/30 create clearer decision authority while still providing meaningful equity to both founders."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the most common co-founder equity split?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For two-founder startups that reach Series A funding, the most common equity split is 60/40 (34% of startups), followed by 70/30 (26%), and then 50/50 (22%). The remaining 18% use various other splits. The trend among successful startups is clearly toward differentiated equity rather than equal splits."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you fairly split equity between co-founders?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use a systematic framework that evaluates: (1) idea/vision contribution, (2) domain expertise, (3) full-time commitment level, (4) financial risk taken, (5) network and relationships, and (6) execution capability. Weight each factor based on importance to your specific startup, score each founder, and use the resulting ratio to determine an appropriate split. Always implement 4-year vesting with a 1-year cliff regardless of the split you choose."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens to founder equity when someone leaves?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you have proper vesting in place, departing founders keep only the equity that has vested up to their departure date. Unvested equity returns to the company. For example, with standard 4-year vesting and a 1-year cliff, a founder who leaves at 9 months gets zero equity (didn't reach the cliff), while one who leaves at 2 years keeps 50% of their total allocation (24 months vested out of 48 total)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you change co-founder equity splits after incorporation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, but it's complex and requires legal counsel. Equity can be adjusted through: (1) issuing new shares to increase one founder's percentage, (2) buying back shares from a founder who's leaving or reducing their role, (3) adjusting future vesting schedules, or (4) milestone-based grants. Any changes may trigger tax events and require new legal agreements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do investors care about how founders split equity?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, significantly. 78% of VCs prefer seeing one founder with majority or clear decision-making authority rather than 50/50 splits. VCs view equity splits as signals of: (1) founder maturity and clear thinking, (2) decision-making capability, (3) potential for future founder conflict, and (4) how realistic founders are about relative contributions. Well-structured equity splits can improve your funding prospects."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +168,29 @@ export default function CoFounderEquitySplit5050AlternativesBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-the-5050-equity-split-is-the-startup-worlds-most-dangero" className="text-blue-600 hover:text-blue-700 text-sm">Why the 50/50 Equity Split Is the Startup World's Most Dangerous Default</a></li>
+                  <li><a href="#the-psychology-behind-fair-vs-equal" className="text-blue-600 hover:text-blue-700 text-sm">The Psychology Behind &quot;Fair&quot; vs. &quot;Equal&quot;</a></li>
+                  <li><a href="#decision-deadlock-when-5050-splits-paralyze-startups" className="text-blue-600 hover:text-blue-700 text-sm">Decision Deadlock: When 50/50 Splits Paralyze Startups</a></li>
+                  <li><a href="#better-alternative-differentiated-equity-models" className="text-blue-600 hover:text-blue-700 text-sm">Better Alternative: Differentiated Equity Models</a></li>
+                  <li><a href="#the-vesting-factor-why-your-equity-split-isnt-complete-witho" className="text-blue-600 hover:text-blue-700 text-sm">The Vesting Factor: Why Your Equity Split Isn't Complete Without It</a></li>
+                  <li><a href="#decision-framework-how-to-choose-your-equity-split" className="text-blue-600 hover:text-blue-700 text-sm">Decision Framework: How to Choose Your Equity Split</a></li>
+                  <li><a href="#investor-perspective-why-vcs-care-about-your-equity-split" className="text-blue-600 hover:text-blue-700 text-sm">Investor Perspective: Why VCs Care About Your Equity Split</a></li>
+                  <li><a href="#real-case-studies-equity-splits-in-famous-startups" className="text-blue-600 hover:text-blue-700 text-sm">Real Case Studies: Equity Splits in Famous Startups</a></li>
+                  <li><a href="#implementation-making-your-equity-split-official" className="text-blue-600 hover:text-blue-700 text-sm">Implementation: Making Your Equity Split Official</a></li>
+                  <li><a href="#common-mistakes-and-how-to-avoid-them" className="text-blue-600 hover:text-blue-700 text-sm">Common Mistakes and How to Avoid Them</a></li>
+                  <li><a href="#when-to-revisit-your-equity-split" className="text-blue-600 hover:text-blue-700 text-sm">When to Revisit Your Equity Split</a></li>
+                  <li><a href="#tools-and-resources-for-equity-splits" className="text-blue-600 hover:text-blue-700 text-sm">Tools and Resources for Equity Splits</a></li>
+                  <li><a href="#frequently-asked-questions" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions</a></li>
+                  <li><a href="#key-takeaways" className="text-blue-600 hover:text-blue-700 text-sm">Key Takeaways</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -128,7 +203,7 @@ export default function CoFounderEquitySplit5050AlternativesBlogPost() {
               ">
                 <p><strong>TL;DR:</strong> 62% of 50/50 co-founder equity splits end in founder conflict within 3 years, primarily due to imbalanced contributions, decision-making deadlocks, and misaligned expectations. Alternative models like 60/40, 70/30, or dynamic splits based on contribution frameworks create clearer accountability, reduce conflict, and align equity with actual value creation.</p>
 
-<h2>Why the 50/50 Equity Split Is the Startup World's Most Dangerous Default</h2>
+<h2 id="why-the-5050-equity-split-is-the-startup-worlds-most-dangero">Why the 50/50 Equity Split Is the Startup World's Most Dangerous Default</h2>
 
 <p>Two founders walk into a lawyer's office to incorporate their startup. When asked how they want to split equity, they look at each other and say, "50/50, of course. We're equal partners."</p>
 
@@ -148,7 +223,7 @@ export default function CoFounderEquitySplit5050AlternativesBlogPost() {
   <li><strong>Dilution disputes:</strong> Equal splits create 34% more conflict during fundraising rounds when discussing how to handle dilution and option pools</li>
 </ul>
 
-<h2>The Psychology Behind "Fair" vs. "Equal"</h2>
+<h2 id="the-psychology-behind-fair-vs-equal">The Psychology Behind "Fair" vs. "Equal"</h2>
 
 <p>The fundamental mistake founders make is confusing "equal" with "fair." A 50/50 split feels emotionally safe—it avoids the uncomfortable conversation about who brings more value to the table. But this avoidance creates far bigger problems down the road.</p>
 
@@ -178,7 +253,7 @@ export default function CoFounderEquitySplit5050AlternativesBlogPost() {
 
 <p>By this point, changing the equity split is emotionally charged, legally complex, and often impossible without triggering a founder breakup.</p>
 
-<h2>Decision Deadlock: When 50/50 Splits Paralyze Startups</h2>
+<h2 id="decision-deadlock-when-5050-splits-paralyze-startups">Decision Deadlock: When 50/50 Splits Paralyze Startups</h2>
 
 <p>One of the most concrete problems with 50/50 splits is decision-making paralysis during critical moments. Unlike public companies with boards and voting procedures, early-stage startups need rapid decision-making to survive.</p>
 
@@ -197,7 +272,21 @@ An acquirer approaches with an offer that's attractive but not life-changing—$
 
 <p><strong>Data from M&amp;A transactions:</strong> Startups with 50/50 splits take 2.7x longer to reach acquisition decisions and are 40% more likely to have acquirers walk away during extended negotiations.</p>
 
-<h2>Better Alternative: Differentiated Equity Models</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Plan Your Vesting Schedule</p>
+                <p className="text-gray-600 mb-4">Visualize vesting timelines, cliff dates, and acceleration scenarios for founders and employees.</p>
+                <a
+                  href="https://icanpitch.com/vesting-schedule-cliff-explorer/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Vesting Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="better-alternative-differentiated-equity-models">Better Alternative: Differentiated Equity Models</h2>
 
 <p>The solution isn't arbitrary inequality—it's thoughtfully differentiated equity based on actual contribution, risk, and value creation. Here are the proven models that reduce conflict and align incentives.</p>
 
@@ -296,7 +385,7 @@ Founder C (Head of Growth): 20% - joined 3 months later, brings enterprise sales
 
 <p><strong>Statistics:</strong> Dynamic equity models show the highest correlation with actual contribution (0.87) but are used by fewer than 10% of startups due to complexity.</p>
 
-<h2>The Vesting Factor: Why Your Equity Split Isn't Complete Without It</h2>
+<h2 id="the-vesting-factor-why-your-equity-split-isnt-complete-witho">The Vesting Factor: Why Your Equity Split Isn't Complete Without It</h2>
 
 <p>Regardless of which split model you choose, your equity agreement is incomplete and potentially dangerous without founder vesting. Vesting protects all founders from the scenario where someone takes their equity and leaves early.</p>
 
@@ -346,7 +435,7 @@ Founder C (Head of Growth): 20% - joined 3 months later, brings enterprise sales
   <li>Post-funding equity follows standard 4-year schedules</li>
 </ul>
 
-<h2>Decision Framework: How to Choose Your Equity Split</h2>
+<h2 id="decision-framework-how-to-choose-your-equity-split">Decision Framework: How to Choose Your Equity Split</h2>
 
 <p>Now that you understand the problems with 50/50 and the alternative models, here's a systematic framework for determining the right split for your specific situation.</p>
 
@@ -501,7 +590,7 @@ Founder C (Head of Growth): 20% - joined 3 months later, brings enterprise sales
 
 <p>If you see these red flags, you may have a co-founder compatibility problem that goes beyond equity splits.</p>
 
-<h2>Investor Perspective: Why VCs Care About Your Equity Split</h2>
+<h2 id="investor-perspective-why-vcs-care-about-your-equity-split">Investor Perspective: Why VCs Care About Your Equity Split</h2>
 
 <p>Your equity split isn't just an internal matter—it sends signals to investors about your team's maturity, decision-making capability, and potential for founder conflict.</p>
 
@@ -537,7 +626,7 @@ Founder C (Head of Growth): 20% - joined 3 months later, brings enterprise sales
   <li>Clear leadership and decision-making capability</li>
 </ul>
 
-<h2>Real Case Studies: Equity Splits in Famous Startups</h2>
+<h2 id="real-case-studies-equity-splits-in-famous-startups">Real Case Studies: Equity Splits in Famous Startups</h2>
 
 <h3>Case Study 1: Google (60/40 Differentiated Split)</h3>
 
@@ -563,7 +652,7 @@ Founder C (Head of Growth): 20% - joined 3 months later, brings enterprise sales
 
 <p><strong>Key lesson:</strong> 50/50 splits without vesting and contribution accountability can destroy otherwise viable companies.</p>
 
-<h2>Implementation: Making Your Equity Split Official</h2>
+<h2 id="implementation-making-your-equity-split-official">Implementation: Making Your Equity Split Official</h2>
 
 <p>Once you've decided on an equity split, you need to formalize it correctly. Here's the step-by-step process:</p>
 
@@ -603,7 +692,7 @@ Founder C (Head of Growth): 20% - joined 3 months later, brings enterprise sales
 
 <p>Delaying this process creates problems. According to startup lawyer surveys, <strong>67% of founder disputes involve equity issues that could have been prevented with early, clear agreements.</strong></p>
 
-<h2>Common Mistakes and How to Avoid Them</h2>
+<h2 id="common-mistakes-and-how-to-avoid-them">Common Mistakes and How to Avoid Them</h2>
 
 <h3>Mistake 1: "We'll Figure It Out Later"</h3>
 
@@ -651,7 +740,7 @@ Founder C (Head of Growth): 20% - joined 3 months later, brings enterprise sales
 
 <p><strong>The fix:</strong> If decision-making authority is unequal, equity should reflect that (60/40 or 70/30), or you need a formal governance structure (board with tiebreaker) to clarify decision processes.</p>
 
-<h2>When to Revisit Your Equity Split</h2>
+<h2 id="when-to-revisit-your-equity-split">When to Revisit Your Equity Split</h2>
 
 <p>Equity splits aren't always set in stone. Here are scenarios where revisiting the split is appropriate:</p>
 
@@ -679,7 +768,7 @@ Founder C (Head of Growth): 20% - joined 3 months later, brings enterprise sales
 
 <p><strong>Warning:</strong> Equity revisions are complex, potentially triggering tax events, and should always involve legal counsel.</p>
 
-<h2>Tools and Resources for Equity Splits</h2>
+<h2 id="tools-and-resources-for-equity-splits">Tools and Resources for Equity Splits</h2>
 
 <h3>Free Calculators and Tools</h3>
 
@@ -703,7 +792,7 @@ Founder C (Head of Growth): 20% - joined 3 months later, brings enterprise sales
   <li><strong>"Venture Deals"</strong> by Brad Feld - Context on how equity splits affect fundraising</li>
 </ul>
 
-<h2>Frequently Asked Questions</h2>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
 
 <h3>Should co-founders split equity 50/50?</h3>
 
@@ -729,7 +818,7 @@ Founder C (Head of Growth): 20% - joined 3 months later, brings enterprise sales
 
 <p>Yes, significantly. 78% of VCs prefer seeing one founder with majority or clear decision-making authority rather than 50/50 splits. VCs view equity splits as signals of: (1) founder maturity and clear thinking, (2) decision-making capability, (3) potential for future founder conflict, and (4) how realistic founders are about relative contributions. Well-structured equity splits can improve your funding prospects.</p>
 
-<h2>Key Takeaways</h2>
+<h2 id="key-takeaways">Key Takeaways</h2>
 
 <p>The 50/50 equity split is startup folklore's most persistent and dangerous myth. While it feels fair and avoids difficult conversations, it creates decision deadlocks, contribution imbalances, and founder conflict in 62% of cases.</p>
 
@@ -772,13 +861,30 @@ Founder C (Head of Growth): 20% - joined 3 months later, brings enterprise sales
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/founder-vesting-schedules-4-year-1-year-cliff/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Founder Vesting Schedules: 4-Year 1-Year Cliff Explained</span>
+                </Link>
+                <Link href="/blog/early-employee-equity-calculator-guide/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Early Employee Equity Calculator: How Much to Offer Guide</span>
+                </Link>
+                <Link href="/blog/option-pool-dilution-impact-founders/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Option Pool Dilution Impact on Founders: Complete Guide</span>
+                </Link>
+                <Link href="/blog/equity-split-technical-vs-business-cofounder/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Equity Split: Technical vs Business Co-Founder Guide</span>
+                </Link>
+                <Link href="/blog/option-pool-sizing-pre-seed-seed-series-a/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Option Pool Sizing: Pre-Seed, Seed, and Series A Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/vesting-calculator-seed-serial-entrepreneur-boston-plan-founder-vesting-protect-against-co-founder-departure/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Vesting Calculator</Link>
+              <Link href="/blog/equity-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Equity, Vesting & Option Pool Guides</Link>
             </div>
           </div>
         </section>
@@ -788,18 +894,18 @@ Founder C (Head of Growth): 20% - joined 3 months later, brings enterprise sales
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Plan Your Vesting Schedule
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Visualize vesting timelines, cliff dates, and acceleration scenarios for founders and employees.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/vesting-schedule-cliff-explorer/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Vesting Calculator &rarr;
               </a>
             </div>
           </div>

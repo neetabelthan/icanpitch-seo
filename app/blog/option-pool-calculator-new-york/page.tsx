@@ -52,6 +52,60 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Should NYC option pools be larger than Silicon Valley's?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not necessarily. While some NYC investors request 18-20% pools (slightly above SF's 15-18%), actual hiring plans often require less equity because NYC base salaries are higher and individual grants are smaller. Build a bottom-up hiring plan rather than accepting market standards without analysis."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I account for SAFEs and convertible notes in my option pool calculation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Convert all SAFEs and notes at your anticipated Series A price per share, add them to your fully diluted share count, then calculate option pool size as a percentage of that total. Many founders forget this step and under-reserve option pool capacity."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I run out of option pool before my next fundraise?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You'll need to issue options from outside the pool, which dilutes all shareholders proportionally. This creates tension with investors and complicates your cap table. Always maintain a 15-20% buffer in your pool for unexpected hires or larger-than-planned grants."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I create a larger pool to avoid dilution at Series B?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Creating an oversized pool at Series A dilutes you now to avoid dilution later—but you bear the full cost today. It's better to create right-sized pools at each round rather than over-reserving early."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I handle advisor grants in my option pool?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Standard advisor grants range from 0.10-0.25% depending on involvement level and stage. Most founders allocate 5-10% of their option pool to advisors, with the remaining 90-95% reserved for employees."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I negotiate option pool size after signing a term sheet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Option pool size is a binding term sheet provision. Once you sign, you've agreed to that pool size through the definitive financing documents. Negotiate pool size before signing the term sheet—it's nearly impossible to change afterward."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +168,26 @@ export default function OptionPoolCalculatorNewYorkBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#what-makes-nyc-option-pools-different-from-silicon-valley" className="text-blue-600 hover:text-blue-700 text-sm">What Makes NYC Option Pools Different from Silicon Valley?</a></li>
+                  <li><a href="#nyc-option-pool-standards-by-industry-and-stage" className="text-blue-600 hover:text-blue-700 text-sm">NYC Option Pool Standards by Industry and Stage</a></li>
+                  <li><a href="#pre-money-vs-post-money-pools-in-nyc-venture-deals" className="text-blue-600 hover:text-blue-700 text-sm">Pre-Money vs Post-Money Pools in NYC Venture Deals</a></li>
+                  <li><a href="#how-to-calculate-your-nyc-option-pool-step-by-step" className="text-blue-600 hover:text-blue-700 text-sm">How to Calculate Your NYC Option Pool: Step-by-Step</a></li>
+                  <li><a href="#nyc-employee-equity-benchmarks-by-role-and-stage" className="text-blue-600 hover:text-blue-700 text-sm">NYC Employee Equity Benchmarks by Role and Stage</a></li>
+                  <li><a href="#common-option-pool-mistakes-nyc-founders-make" className="text-blue-600 hover:text-blue-700 text-sm">Common Option Pool Mistakes NYC Founders Make</a></li>
+                  <li><a href="#negotiating-option-pool-size-with-nyc-investors" className="text-blue-600 hover:text-blue-700 text-sm">Negotiating Option Pool Size with NYC Investors</a></li>
+                  <li><a href="#nyc-specific-option-vesting-practices" className="text-blue-600 hover:text-blue-700 text-sm">NYC-Specific Option Vesting Practices</a></li>
+                  <li><a href="#how-to-use-the-icanpitch-nyc-option-pool-calculator" className="text-blue-600 hover:text-blue-700 text-sm">How to Use the ICanPitch NYC Option Pool Calculator</a></li>
+                  <li><a href="#option-pool-faqs-for-nyc-founders" className="text-blue-600 hover:text-blue-700 text-sm">Option Pool FAQs for NYC Founders</a></li>
+                  <li><a href="#start-modeling-your-nyc-option-pool-strategy" className="text-blue-600 hover:text-blue-700 text-sm">Start Modeling Your NYC Option Pool Strategy</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +198,7 @@ export default function OptionPoolCalculatorNewYorkBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>What Makes NYC Option Pools Different from Silicon Valley?</h2>
+                <h2 id="what-makes-nyc-option-pools-different-from-silicon-valley">What Makes NYC Option Pools Different from Silicon Valley?</h2>
 
 <p>New York City has evolved into America's second-largest startup ecosystem, with distinct compensation philosophies that directly impact option pool sizing and employee equity grants. While Silicon Valley companies compete almost exclusively on equity upside, NYC startups balance equity with higher base salaries, reflecting the city's deep talent pools in finance, media, fashion, and professional services.</p>
 
@@ -134,7 +206,7 @@ export default function OptionPoolCalculatorNewYorkBlogPost() {
 
 <p><strong>The NYC founder's dilemma:</strong> East Coast investors often push for larger option pools to "match Silicon Valley standards," but NYC hiring realities frequently require fewer total options because candidates accept smaller equity grants paired with stronger cash packages. Understanding this dynamic is crucial for negotiating appropriately sized pools that don't over-dilute founders.</p>
 
-<h2>NYC Option Pool Standards by Industry and Stage</h2>
+<h2 id="nyc-option-pool-standards-by-industry-and-stage">NYC Option Pool Standards by Industry and Stage</h2>
 
 <p>New York's diverse startup ecosystem means option pool sizes vary significantly by industry vertical. Here's what to expect across NYC's major sectors:</p>
 
@@ -188,7 +260,7 @@ export default function OptionPoolCalculatorNewYorkBlogPost() {
 <li>Clinical operations: 0.10-0.25%</li>
 </ul>
 
-<h2>Pre-Money vs Post-Money Pools in NYC Venture Deals</h2>
+<h2 id="pre-money-vs-post-money-pools-in-nyc-venture-deals">Pre-Money vs Post-Money Pools in NYC Venture Deals</h2>
 
 <p>East Coast venture capital firms predominantly use pre-money option pool structures, meaning founders absorb the full dilution of employee equity grants. However, NYC's competitive fundraising environment—with multiple active micro-VCs, crossover growth funds, and increasing West Coast investor activity—has created more flexibility for founder-friendly terms.</p>
 
@@ -240,7 +312,21 @@ export default function OptionPoolCalculatorNewYorkBlogPost() {
 
 <p><strong>Founder benefit:</strong> Post-money treatment preserves an additional 2-3 percentage points of founder ownership on an $18M post-money deal—potentially worth $500K-$900K if the company exits at a meaningful valuation.</p>
 
-<h2>How to Calculate Your NYC Option Pool: Step-by-Step</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Size Your Option Pool</p>
+                <p className="text-gray-600 mb-4">Model how different option pool sizes affect founder dilution before and after your next round.</p>
+                <a
+                  href="https://icanpitch.com/option-pool-impact-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Option Pool Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="how-to-calculate-your-nyc-option-pool-step-by-step">How to Calculate Your NYC Option Pool: Step-by-Step</h2>
 
 <p>Follow this systematic process to calculate precisely how option pool creation will impact your cap table:</p>
 
@@ -313,7 +399,7 @@ export default function OptionPoolCalculatorNewYorkBlogPost() {
 
 <p>Founders went from 75% to 49.4%—losing 25.6 percentage points. Of that dilution, 9.2 points came from the option pool and 16.4 points from investor equity.</p>
 
-<h2>NYC Employee Equity Benchmarks by Role and Stage</h2>
+<h2 id="nyc-employee-equity-benchmarks-by-role-and-stage">NYC Employee Equity Benchmarks by Role and Stage</h2>
 
 <p>Use these NYC-specific benchmarks when building your hiring plan and justifying your target option pool size to investors:</p>
 
@@ -356,7 +442,7 @@ export default function OptionPoolCalculatorNewYorkBlogPost() {
 
 <p><strong>NYC-specific note:</strong> These ranges are approximately 20-30% lower than Silicon Valley equivalents because NYC base salaries are 10-20% higher and employees have stronger preferences for cash-heavy compensation.</p>
 
-<h2>Common Option Pool Mistakes NYC Founders Make</h2>
+<h2 id="common-option-pool-mistakes-nyc-founders-make">Common Option Pool Mistakes NYC Founders Make</h2>
 
 <p>Avoid these frequent errors that cost East Coast founders unnecessary dilution:</p>
 
@@ -390,7 +476,7 @@ export default function OptionPoolCalculatorNewYorkBlogPost() {
 
 <p><strong>Solution:</strong> Create a detailed hiring matrix with specific roles, seniority levels, and grant ranges. Model every individual hire rather than using blanket percentages.</p>
 
-<h2>Negotiating Option Pool Size with NYC Investors</h2>
+<h2 id="negotiating-option-pool-size-with-nyc-investors">Negotiating Option Pool Size with NYC Investors</h2>
 
 <p>East Coast investors have become increasingly sophisticated about option pools. Here's how to negotiate effectively:</p>
 
@@ -438,7 +524,7 @@ export default function OptionPoolCalculatorNewYorkBlogPost() {
 
 <p>If the company exits at $200M, the investor's return differs by only ~$1M between pool scenarios—immaterial compared to the binary outcome of success or failure. Meanwhile, founders' ownership differs by 3-4 percentage points, worth $6M-$8M.</p>
 
-<h2>NYC-Specific Option Vesting Practices</h2>
+<h2 id="nyc-specific-option-vesting-practices">NYC-Specific Option Vesting Practices</h2>
 
 <p>While four-year vesting with a one-year cliff is standard across US startups, NYC has developed specific practices around acceleration and vesting schedules:</p>
 
@@ -458,7 +544,7 @@ export default function OptionPoolCalculatorNewYorkBlogPost() {
 
 <p>NYC startups refresh grants earlier than West Coast companies—often at the three-year mark rather than waiting until initial grants fully vest. This reflects competition from finance and consulting, where annual bonuses create ongoing retention incentives.</p>
 
-<h2>How to Use the ICanPitch NYC Option Pool Calculator</h2>
+<h2 id="how-to-use-the-icanpitch-nyc-option-pool-calculator">How to Use the ICanPitch NYC Option Pool Calculator</h2>
 
 <p>The <a href="https://icanpitch.com/" target="_blank" rel="noopener noreferrer">ICanPitch platform</a> includes specialized calculators for NYC startups that account for East Coast compensation dynamics:</p>
 
@@ -482,7 +568,7 @@ export default function OptionPoolCalculatorNewYorkBlogPost() {
 
 <p>Project your cap table through Series B and C to understand long-term ownership trajectories. See exactly how refresh pools at each round impact founder equity.</p>
 
-<h2>Option Pool FAQs for NYC Founders</h2>
+<h2 id="option-pool-faqs-for-nyc-founders">Option Pool FAQs for NYC Founders</h2>
 
 <h3>Should NYC option pools be larger than Silicon Valley's?</h3>
 
@@ -508,7 +594,7 @@ export default function OptionPoolCalculatorNewYorkBlogPost() {
 
 <p>Option pool size is a binding term sheet provision. Once you sign, you've agreed to that pool size through the definitive financing documents. Negotiate pool size before signing the term sheet—it's nearly impossible to change afterward.</p>
 
-<h2>Start Modeling Your NYC Option Pool Strategy</h2>
+<h2 id="start-modeling-your-nyc-option-pool-strategy">Start Modeling Your NYC Option Pool Strategy</h2>
 
 <p>Option pool creation is one of the most significant founder dilution events in your fundraising journey. NYC founders have unique leverage in these negotiations due to higher cash compensation norms and diverse talent pools that allow for smaller individual equity grants.</p>
 
@@ -536,13 +622,30 @@ export default function OptionPoolCalculatorNewYorkBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/option-pool-calculator-singapore/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Singapore Option Pool Calculator: APAC ESOP Standards & Tax Guide (2025)</span>
+                </Link>
+                <Link href="/blog/option-pool-calculator-berlin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Berlin Option Pool Calculator: German ESOP vs VSOP Guide (2025)</span>
+                </Link>
+                <Link href="/blog/option-pool-calculator-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">London Option Pool Calculator: UK ESOP & EMI Scheme Guide (2025)</span>
+                </Link>
+                <Link href="/blog/option-pool-calculator-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Silicon Valley Option Pool Calculator: Pre-Money vs Post-Money ESOP Guide (2025)</span>
+                </Link>
+                <Link href="/blog/safe-calculator-new-york-startup-scene/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for New York Startups: NYC Founder's Guide to SAFE Notes</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/option-pool-calculator-pre-seed-technical-founder-san-francisco-size-employee-equity-minimize-founder-dilution/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Option Pool Calculator</Link>
+              <Link href="/blog/equity-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Equity, Vesting & Option Pool Guides</Link>
             </div>
           </div>
         </section>
@@ -552,18 +655,18 @@ export default function OptionPoolCalculatorNewYorkBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Size Your Option Pool
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Model how different option pool sizes affect founder dilution before and after your next round.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/option-pool-impact-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Option Pool Calculator &rarr;
               </a>
             </div>
           </div>

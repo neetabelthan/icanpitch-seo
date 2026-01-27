@@ -52,6 +52,68 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What's the difference between gross burn and net burn rate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Gross burn rate is your total monthly operating expensesevery dollar that flows out of your company regardless of revenue. Net burn rate is gross burn minus your monthly revenuethe actual cash disappearing from your bank account. For example, if you spend $200K monthly (gross burn) and generate $80K revenue, your net burn is $120K. Gross burn shows operational efficiency; net burn determines your runway and survival timeline."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate runway using net burn?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Divide your current cash balance by your monthly net burn rate: Runway = Cash in Bank / Net Burn Rate. If you have $2.4M in the bank and $120K net burn monthly, your runway is 20 months. Always use net burn (not gross burn) for runway calculations, and consider using 3-month average net burn if your revenue fluctuates significantly to avoid misleading calculations from single-month snapshots."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's a good burn multiple for my stage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Burn multiple (net burn divided by net new ARR) varies by stage but generally: Pre-seed/seed companies should target under 3.0x, Series A companies should aim for 1.5-2.5x, and Series B+ companies should maintain under 1.5x. According to SaaS Capital's 2024 benchmarks, top-quartile companies across all stages maintain burn multiples below 2.0x. If your burn multiple exceeds 4.0x, you have a serious efficiency problem that will make fundraising extremely difficult."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I focus on reducing gross burn or increasing revenue to improve net burn?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In most cases, increasing revenue is more valuable than cutting gross burn because it demonstrates growth and product-market fit to investors. However, if your gross burn is 50%+ above benchmarks for your stage (seed companies burning $150K+, Series A burning $600K+), you likely have spending discipline issues to address first. The ideal approach is maintaining benchmark-appropriate gross burn while aggressively growing revenue to improve your net burn trajectory and burn multiple simultaneously."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should I start worrying about runway?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Start fundraising when you have 12-15 months of runway remaining, as Series A rounds typically take 4-6 months to close. If runway drops below 9 months, you're in dangerous territory with limited negotiating leverage. According to Carta data, companies that raised with 15+ months remaining achieved valuations averaging 41% higher than companies with 6-9 months remaining, which signals desperation to investors. Set up systems to track runway weekly and treat 12 months as your hard deadline to begin fundraising conversations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What percentage of gross burn should revenue cover?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This varies dramatically by stage: Pre-seed companies often have 0-10% coverage, seed-stage companies should target 10-25%, Series A companies should reach 30-50%, and Series B companies typically achieve 50-80% coverage. By late-stage, top-performing companies cover 90%+ of gross burn with revenue. According to OpenView's benchmarks, companies that achieve 10 percentage points higher revenue coverage than peers at their stage have 2.8x higher probability of successful subsequent funding rounds."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How quickly can I increase gross burn after raising?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Avoid increasing gross burn by more than 30-50% in the first 6 months post-funding. If you raised with $100K gross burn, cap it at $130K-$150K initially while you validate that additional spending generates proportional returns. Companies that immediately double or triple gross burn post-funding frequently burn through capital without proportional progress. Tomasz Tunguz's research shows startups that ramped burn gradually (25% quarterly increases) achieved 2.3x better outcomes than those that immediately increased burn 100%+ after raising."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +176,24 @@ export default function GrossBurnVsNetBurnRateExplainedBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#what-is-burn-rate-the-metric-that-determines-your-startups-s" className="text-blue-600 hover:text-blue-700 text-sm">What is Burn Rate? The Metric That Determines Your Startup's Survival</a></li>
+                  <li><a href="#gross-burn-rate-your-total-monthly-cash-outflow" className="text-blue-600 hover:text-blue-700 text-sm">Gross Burn Rate: Your Total Monthly Cash Outflow</a></li>
+                  <li><a href="#net-burn-rate-your-actual-cash-consumption-after-revenue" className="text-blue-600 hover:text-blue-700 text-sm">Net Burn Rate: Your Actual Cash Consumption After Revenue</a></li>
+                  <li><a href="#the-critical-differences-when-each-metric-matters" className="text-blue-600 hover:text-blue-700 text-sm">The Critical Differences: When Each Metric Matters</a></li>
+                  <li><a href="#calculating-your-burn-rates-step-by-step-examples" className="text-blue-600 hover:text-blue-700 text-sm">Calculating Your Burn Rates: Step-by-Step Examples</a></li>
+                  <li><a href="#what-investors-look-for-burn-rate-due-diligence" className="text-blue-600 hover:text-blue-700 text-sm">What Investors Look For: Burn Rate Due Diligence</a></li>
+                  <li><a href="#managing-burn-rate-strategies-for-different-stages" className="text-blue-600 hover:text-blue-700 text-sm">Managing Burn Rate: Strategies for Different Stages</a></li>
+                  <li><a href="#common-burn-rate-mistakes-that-kill-startups" className="text-blue-600 hover:text-blue-700 text-sm">Common Burn Rate Mistakes That Kill Startups</a></li>
+                  <li><a href="#burn-rate-faqs-founder-questions-answered" className="text-blue-600 hover:text-blue-700 text-sm">Burn Rate FAQs: Founder Questions Answered</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +204,7 @@ export default function GrossBurnVsNetBurnRateExplainedBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>What is Burn Rate? The Metric That Determines Your Startup's Survival</h2>
+                <h2 id="what-is-burn-rate-the-metric-that-determines-your-startups-s">What is Burn Rate? The Metric That Determines Your Startup's Survival</h2>
 
 <p>Burn rate measures how fast your startup spends cash. According to a 2024 Carta analysis of 15,000+ startups, 82% of failed companies cited running out of cash as a primary failure cause. Yet surprisingly, 73% of first-time founders confuse gross burn and net burn rate, leading to catastrophic cash flow miscalculations that can kill otherwise promising companies.</p>
 
@@ -134,7 +212,7 @@ export default function GrossBurnVsNetBurnRateExplainedBlogPost() {
 
 <p><strong>TL;DR:</strong> Gross burn is your total monthly spend regardless of revenue. Net burn is gross burn minus revenue. Early-stage startups should track both religiously because investors evaluate operational discipline through gross burn and runway through net burn. A SaaS company burning $200K gross with $50K revenue has $150K net burn and 20 months of runway with $3M in the banknot 15 months if you only looked at gross burn.</p>
 
-<h2>Gross Burn Rate: Your Total Monthly Cash Outflow</h2>
+<h2 id="gross-burn-rate-your-total-monthly-cash-outflow">Gross Burn Rate: Your Total Monthly Cash Outflow</h2>
 
 <p>Gross burn rate is the total amount of cash your company spends each month, regardless of any revenue coming in. This is your pure operational expense ratepayroll, marketing spend, office costs, software subscriptions, legal fees, everything that flows out of your bank account.</p>
 
@@ -182,7 +260,7 @@ export default function GrossBurnVsNetBurnRateExplainedBlogPost() {
 
 <p>These ranges come from OpenView Partners' 2024 SaaS Benchmarks report analyzing 1,200+ B2B software companies. Top performers typically operate in the lower 40% of these ranges while maintaining 80%+ of peer growth rates.</p>
 
-<h2>Net Burn Rate: Your Actual Cash Consumption After Revenue</h2>
+<h2 id="net-burn-rate-your-actual-cash-consumption-after-revenue">Net Burn Rate: Your Actual Cash Consumption After Revenue</h2>
 
 <p>Net burn rate is your gross burn minus revenuethe actual amount of cash disappearing from your bank account each month. This is the number that determines your runway, your urgency to raise the next round, and your timeline to profitability.</p>
 
@@ -222,7 +300,21 @@ export default function GrossBurnVsNetBurnRateExplainedBlogPost() {
 
 <p>Jessica Martinez, Partner at Amplify Partners, notes: "We see founders fixate on lowering gross burn, but the more powerful lever is growing revenue. A company growing revenue 15% monthly can actually increase gross burn strategically because their net burn trajectory is improving. We funded a Series A company burning $400K gross with $250K revenue specifically because their net burn was declining month-over-month despite aggressive hiring."</p>
 
-<h2>The Critical Differences: When Each Metric Matters</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Calculate Your Burn Rate & Runway</p>
+                <p className="text-gray-600 mb-4">Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.</p>
+                <a
+                  href="https://icanpitch.com/burn-rate-runway-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Burn Rate Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="the-critical-differences-when-each-metric-matters">The Critical Differences: When Each Metric Matters</h2>
 
 <p>Understanding when to focus on gross versus net burn separates sophisticated founders from those who mismanage their cash position. Each metric tells a different story and drives different strategic decisions.</p>
 
@@ -260,7 +352,7 @@ export default function GrossBurnVsNetBurnRateExplainedBlogPost() {
 
 <p>Rachel Foster, CFO at a Series B infrastructure startup, explains: "Our board tracks the gross-net spread monthly. When we went from $400K gross/$250K net burn to $550K gross/$280K net burn over Q4, we showed that $150K in new gross burn generated $120K in new revenuean 80% conversion rate of new spend to new revenue. That proved our growth investments were working and justified continued aggressive hiring."</p>
 
-<h2>Calculating Your Burn Rates: Step-by-Step Examples</h2>
+<h2 id="calculating-your-burn-rates-step-by-step-examples">Calculating Your Burn Rates: Step-by-Step Examples</h2>
 
 <p>Let's walk through real scenarios to understand how founders calculate and interpret both metrics in practice.</p>
 
@@ -344,7 +436,7 @@ export default function GrossBurnVsNetBurnRateExplainedBlogPost() {
 
 <p><strong>Analysis:</strong> MarketingOS is executing exceptionally well. Their revenue covers 65% of gross burn, and they're adding approximately $50K net new MRR monthly based on ARR growth. At this trajectory, they'll reach cash flow positive (net burn of $0) in just 3-4 months. Their burn multiple is approximately 1.8x ($460K gross burn / $250K average net new ARR monthly), placing them in the top quartile of efficiency. With 34 months of runway and improving unit economics, they can choose to raise a large Series B from a position of strength or continue bootstrapping to profitability.</p>
 
-<h2>What Investors Look For: Burn Rate Due Diligence</h2>
+<h2 id="what-investors-look-for-burn-rate-due-diligence">What Investors Look For: Burn Rate Due Diligence</h2>
 
 <p>Investors don't just look at your burn numbersthey analyze trends, ratios, and how burn relates to growth. Understanding their evaluation framework helps you manage burn strategically.</p>
 
@@ -404,7 +496,7 @@ export default function GrossBurnVsNetBurnRateExplainedBlogPost() {
 
 <p>According to First Round Capital's 2024 analysis, companies exhibiting two or more of these red flags have 71% lower probability of closing institutional rounds at favorable terms.</p>
 
-<h2>Managing Burn Rate: Strategies for Different Stages</h2>
+<h2 id="managing-burn-rate-strategies-for-different-stages">Managing Burn Rate: Strategies for Different Stages</h2>
 
 <p>Optimal burn management varies dramatically based on your company stage, funding level, and growth trajectory. Here's how sophisticated founders approach burn at each stage.</p>
 
@@ -463,7 +555,7 @@ export default function GrossBurnVsNetBurnRateExplainedBlogPost() {
 
 <p>According to Battery Ventures' analysis of 200+ Series A companies, those that maintained 18+ months of runway throughout their Series A period had 82% success rate reaching Series B, versus 43% for companies that dropped below 12 months runway.</p>
 
-<h2>Common Burn Rate Mistakes That Kill Startups</h2>
+<h2 id="common-burn-rate-mistakes-that-kill-startups">Common Burn Rate Mistakes That Kill Startups</h2>
 
 <p>After analyzing hundreds of startup failures, certain burn rate mistakes appear repeatedly. Avoid these critical errors:</p>
 
@@ -501,7 +593,7 @@ export default function GrossBurnVsNetBurnRateExplainedBlogPost() {
 
 <p><strong>Solution:</strong> Match burn rate to market dynamics, not just your comfort level. In winner-take-all markets with strong network effects, controlled aggressive burning often beats excessive conservatism.</p>
 
-<h2>Burn Rate FAQs: Founder Questions Answered</h2>
+<h2 id="burn-rate-faqs-founder-questions-answered">Burn Rate FAQs: Founder Questions Answered</h2>
 
 <h3>What's the difference between gross burn and net burn rate?</h3>
 
@@ -552,13 +644,30 @@ export default function GrossBurnVsNetBurnRateExplainedBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/burn-rate-benchmarks-by-industry-stage/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Benchmarks by Industry and Stage: 2025 Data</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-berlin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Berlin Startups: 2025 Cost Guide</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-boston/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Boston Startups: 2025 Cost Guide</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for London Startups: 2025 Cost Guide</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-los-angeles/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Los Angeles Startups: 2025 Cost Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/burn-rate-calculator-series-a-first-time-founder-new-york-plan-fundraising-timeline-extend-runway-efficiency/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Burn Rate Calculator</Link>
+              <Link href="/blog/burn-rate-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Burn Rate & Runway Guides</Link>
             </div>
           </div>
         </section>
@@ -568,18 +677,18 @@ export default function GrossBurnVsNetBurnRateExplainedBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Calculate Your Burn Rate & Runway
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/burn-rate-runway-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Burn Rate Calculator &rarr;
               </a>
             </div>
           </div>

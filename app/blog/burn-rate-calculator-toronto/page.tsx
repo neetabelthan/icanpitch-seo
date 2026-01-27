@@ -114,8 +114,31 @@ export default function BurnRateCalculatorTorontoBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-toronto-startups-need-a-localized-burn-rate-calculator" className="text-blue-600 hover:text-blue-700 text-sm">Why Toronto Startups Need a Localized Burn Rate Calculator</a></li>
+                  <li><a href="#understanding-burn-rate-the-foundation-of-startup-financial-" className="text-blue-600 hover:text-blue-700 text-sm">Understanding Burn Rate: The Foundation of Startup Financial Health</a></li>
+                  <li><a href="#the-toronto-tech-ecosystem-context-for-your-burn-rate-strate" className="text-blue-600 hover:text-blue-700 text-sm">The Toronto Tech Ecosystem: Context for Your Burn Rate Strategy</a></li>
+                  <li><a href="#toronto-cost-structure-40-50-lower-than-silicon-valley" className="text-blue-600 hover:text-blue-700 text-sm">Toronto Cost Structure: 40-50% Lower Than Silicon Valley</a></li>
+                  <li><a href="#toronto-salary-benchmarks-engineering-and-operations-costs" className="text-blue-600 hover:text-blue-700 text-sm">Toronto Salary Benchmarks: Engineering and Operations Costs</a></li>
+                  <li><a href="#sramped-tax-credits-canadas-most-valuable-burn-rate-reductio" className="text-blue-600 hover:text-blue-700 text-sm">SR&amp;ED Tax Credits: Canada's Most Valuable Burn Rate Reduction Tool</a></li>
+                  <li><a href="#irap-and-other-government-funding-non-dilutive-capital-sourc" className="text-blue-600 hover:text-blue-700 text-sm">IRAP and Other Government Funding: Non-Dilutive Capital Sources</a></li>
+                  <li><a href="#cad-vs-usd-currency-considerations-for-toronto-startups" className="text-blue-600 hover:text-blue-700 text-sm">CAD vs USD: Currency Considerations for Toronto Startups</a></li>
+                  <li><a href="#toronto-specific-burn-rate-benchmarks-by-stage-and-vertical" className="text-blue-600 hover:text-blue-700 text-sm">Toronto-Specific Burn Rate Benchmarks by Stage and Vertical</a></li>
+                  <li><a href="#how-to-calculate-your-toronto-startup-burn-rate-step-by-step" className="text-blue-600 hover:text-blue-700 text-sm">How to Calculate Your Toronto Startup Burn Rate: Step-by-Step</a></li>
+                  <li><a href="#optimizing-burn-rate-toronto-specific-strategies" className="text-blue-600 hover:text-blue-700 text-sm">Optimizing Burn Rate: Toronto-Specific Strategies</a></li>
+                  <li><a href="#when-to-raise-reading-the-toronto-funding-environment" className="text-blue-600 hover:text-blue-700 text-sm">When to Raise: Reading the Toronto Funding Environment</a></li>
+                  <li><a href="#using-icanpitchs-burn-rate-calculator-for-toronto-startups" className="text-blue-600 hover:text-blue-700 text-sm">Using ICanPitch's Burn Rate Calculator for Toronto Startups</a></li>
+                  <li><a href="#burn-rate-red-flags-toronto-investors-watch-for" className="text-blue-600 hover:text-blue-700 text-sm">Burn Rate Red Flags Toronto Investors Watch For</a></li>
+                  <li><a href="#burn-rate-communication-board-and-investor-updates" className="text-blue-600 hover:text-blue-700 text-sm">Burn Rate Communication: Board and Investor Updates</a></li>
+                  <li><a href="#conclusion-mastering-burn-rate-in-torontos-tech-ecosystem" className="text-blue-600 hover:text-blue-700 text-sm">Conclusion: Mastering Burn Rate in Toronto's Tech Ecosystem</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,13 +149,13 @@ export default function BurnRateCalculatorTorontoBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why Toronto Startups Need a Localized Burn Rate Calculator</h2>
+                <h2 id="why-toronto-startups-need-a-localized-burn-rate-calculator">Why Toronto Startups Need a Localized Burn Rate Calculator</h2>
 
 <p>Toronto has emerged as Canada's undisputed tech capital, home to success stories like Shopify, Wealthsimple, Ritual, and a thriving fintech and AI ecosystem. Yet despite this momentum, most burn rate calculators and runway planning tools are built for Silicon Valley economics. If you're a Toronto founder calculating burn in USD terms or using SF salary benchmarks, you're planning with the wrong map.</p>
 
 <p>Understanding your burn rate in the Toronto context means accounting for CAD currency fluctuations, significantly different cost structures, unique government incentives like SR&amp;ED tax credits, and the distinct talent market shaped by Waterloo pipelines and cross-border competition. This guide provides Toronto-specific insights and a calculator built for the realities of building a startup in Canada's largest tech hub.</p>
 
-<h2>Understanding Burn Rate: The Foundation of Startup Financial Health</h2>
+<h2 id="understanding-burn-rate-the-foundation-of-startup-financial-">Understanding Burn Rate: The Foundation of Startup Financial Health</h2>
 
 <p>Your burn rate is the speed at which your startup consumes cash reserves. It's measured monthly and represents your net cash outflow—the difference between what you spend and what you earn. For pre-revenue startups, it's simply your monthly expenses. For revenue-generating companies, it's monthly expenses minus monthly revenue.</p>
 
@@ -140,7 +163,7 @@ export default function BurnRateCalculatorTorontoBlogPost() {
 
 <p>This metric matters profoundly because it determines when you'll need to raise capital, how much negotiating leverage you have with investors, and whether you can survive unexpected market conditions. Toronto investors, particularly those at funds like OMERS Ventures, Inovia Capital, and BDC Capital, scrutinize burn rate closely as an indicator of founder discipline and market understanding.</p>
 
-<h2>The Toronto Tech Ecosystem: Context for Your Burn Rate Strategy</h2>
+<h2 id="the-toronto-tech-ecosystem-context-for-your-burn-rate-strate">The Toronto Tech Ecosystem: Context for Your Burn Rate Strategy</h2>
 
 <p>Toronto's startup ecosystem has distinct characteristics that directly impact how you should think about burn rate and runway management. The city is home to over 4,000 startups and has produced multiple billion-dollar exits, creating a mature but increasingly competitive funding environment.</p>
 
@@ -150,7 +173,21 @@ export default function BurnRateCalculatorTorontoBlogPost() {
 
 <p>The city's strengths in fintech (Wealthsimple, Clearco), e-commerce (Shopify's headquarters effect), and AI (Vector Institute partnerships) mean certain verticals have deeper talent pools and more investor familiarity. If you're building in these areas, you may find hiring more efficient and investor conversations more productive, both factors that influence optimal burn rate.</p>
 
-<h2>Toronto Cost Structure: 40-50% Lower Than Silicon Valley</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Calculate Your Burn Rate & Runway</p>
+                <p className="text-gray-600 mb-4">Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.</p>
+                <a
+                  href="https://icanpitch.com/burn-rate-runway-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Burn Rate Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="toronto-cost-structure-40-50-lower-than-silicon-valley">Toronto Cost Structure: 40-50% Lower Than Silicon Valley</h2>
 
 <p>One of Toronto's most significant advantages is cost efficiency. While still Canada's most expensive city, Toronto's startup costs run 40-50% below San Francisco and 25-35% below New York. This differential creates a strategic opportunity: you can achieve similar technical and product milestones with substantially less capital, giving you more runway per dollar raised.</p>
 
@@ -160,7 +197,7 @@ export default function BurnRateCalculatorTorontoBlogPost() {
 
 <p><strong>Living Cost Impact on Compensation:</strong> While office costs directly hit your P&amp;L, living costs indirectly influence burn through salary expectations. Toronto's cost of living is approximately 30% below San Francisco's. A one-bedroom apartment in a desirable neighborhood (King West, Liberty Village, Distillery District) rents for CAD $2,200-3,000 monthly versus USD $3,500-4,500 in SF. This differential means Toronto engineers accept lower nominal salaries while maintaining comparable quality of life.</p>
 
-<h2>Toronto Salary Benchmarks: Engineering and Operations Costs</h2>
+<h2 id="toronto-salary-benchmarks-engineering-and-operations-costs">Toronto Salary Benchmarks: Engineering and Operations Costs</h2>
 
 <p>Understanding current Toronto salary benchmarks is essential for accurate burn rate projection. The city's talent market reflects competition between startups, scale-ups like Shopify and Wealthsimple, and US tech companies hiring remotely.</p>
 
@@ -174,7 +211,7 @@ export default function BurnRateCalculatorTorontoBlogPost() {
 
 <p><strong>Employer Costs Beyond Salary:</strong> Canadian payroll includes CPP (Canada Pension Plan) contributions of 5.95% matched by employers, EI (Employment Insurance) premiums of 1.58% with employer multiplier of 1.4x, and various provincial obligations. Total employer burden runs approximately 12-15% above base salary—substantially lower than US healthcare and benefits costs which can add 25-35%.</p>
 
-<h2>SR&amp;ED Tax Credits: Canada's Most Valuable Burn Rate Reduction Tool</h2>
+<h2 id="sramped-tax-credits-canadas-most-valuable-burn-rate-reductio">SR&amp;ED Tax Credits: Canada's Most Valuable Burn Rate Reduction Tool</h2>
 
 <p>The Scientific Research and Experimental Development (SR&amp;ED) program is the Canadian government's largest innovation incentive, providing tax credits of 35-65% on eligible R&amp;D expenditures. For Toronto startups burning cash on product development, SR&amp;ED can effectively reduce annual burn by 15-30%—a game-changing impact on runway.</p>
 
@@ -186,7 +223,7 @@ export default function BurnRateCalculatorTorontoBlogPost() {
 
 <p>Work with SR&amp;ED consultants who specialize in software startups (many work on contingency, taking 15-25% of credits received). Firms like SRED Unlimited, G6 Consulting, and Boast.AI are well-established in the Toronto ecosystem. Proper documentation from day one—technical meeting notes, sprint retrospectives, architecture decision records—dramatically increases claim success rates.</p>
 
-<h2>IRAP and Other Government Funding: Non-Dilutive Capital Sources</h2>
+<h2 id="irap-and-other-government-funding-non-dilutive-capital-sourc">IRAP and Other Government Funding: Non-Dilutive Capital Sources</h2>
 
 <p>Beyond SR&amp;ED, Toronto startups have access to multiple government programs that can reduce effective burn rate without equity dilution. The National Research Council's Industrial Research Assistance Program (IRAP) provides up to CAD $10 million in non-repayable funding for technical development, effectively paying for 30-50% of project costs.</p>
 
@@ -198,7 +235,7 @@ export default function BurnRateCalculatorTorontoBlogPost() {
 
 <p><strong>Strategic Timing:</strong> These programs require 3-6 months from application to funding, so apply before you desperately need the capital. A common Toronto startup strategy: raise a seed round, immediately apply for IRAP and OCE programs, then use that non-dilutive capital to extend runway by 6-9 months before your Series A.</p>
 
-<h2>CAD vs USD: Currency Considerations for Toronto Startups</h2>
+<h2 id="cad-vs-usd-currency-considerations-for-toronto-startups">CAD vs USD: Currency Considerations for Toronto Startups</h2>
 
 <p>Operating in CAD while often raising from US investors or selling to US customers creates both complexity and opportunity for Toronto startups. The exchange rate (typically CAD $1.25-1.40 per USD) impacts everything from burn rate calculations to fundraising strategy.</p>
 
@@ -210,7 +247,7 @@ export default function BurnRateCalculatorTorontoBlogPost() {
 
 <p><strong>Currency Risk Management:</strong> Consider holding 3-6 months of operating reserves in CAD with remaining cash in USD if you raise USD rounds. This provides operational stability while maintaining optionality on currency movements. Some startups use forward contracts to lock in exchange rates for planned expense periods, removing uncertainty from runway calculations.</p>
 
-<h2>Toronto-Specific Burn Rate Benchmarks by Stage and Vertical</h2>
+<h2 id="toronto-specific-burn-rate-benchmarks-by-stage-and-vertical">Toronto-Specific Burn Rate Benchmarks by Stage and Vertical</h2>
 
 <p>Understanding what other Toronto startups burn at comparable stages helps calibrate whether your burn rate is efficient, aggressive, or concerning. These benchmarks are drawn from MaRS portfolio data, DMZ graduate reports, and Toronto venture capital published metrics.</p>
 
@@ -222,7 +259,7 @@ export default function BurnRateCalculatorTorontoBlogPost() {
 
 <p><strong>Vertical Variations:</strong> Fintech startups often burn 15-25% higher due to regulatory compliance costs, security requirements, and more expensive financial services talent. AI/ML companies may burn higher on compute costs (cloud GPU instances) but can offset this with IRAP funding. E-commerce and marketplace businesses typically have higher customer acquisition costs reflected in elevated marketing burn.</p>
 
-<h2>How to Calculate Your Toronto Startup Burn Rate: Step-by-Step</h2>
+<h2 id="how-to-calculate-your-toronto-startup-burn-rate-step-by-step">How to Calculate Your Toronto Startup Burn Rate: Step-by-Step</h2>
 
 <p>Calculating accurate burn rate requires systematic monthly tracking across all expense categories. Use this framework whether you're in Excel, QuickBooks, or specialized startup finance tools like Runway or Finmark.</p>
 
@@ -238,7 +275,7 @@ export default function BurnRateCalculatorTorontoBlogPost() {
 
 <p><strong>Step 6: Determine Runway.</strong> Divide your current cash balance by net burn rate. If you have CAD $480,000 in the bank and CAD $60,000 net burn, your runway is 8 months. Most Toronto VCs want to see 12-18 months minimum; below 6 months triggers urgent fundraising mode.</p>
 
-<h2>Optimizing Burn Rate: Toronto-Specific Strategies</h2>
+<h2 id="optimizing-burn-rate-toronto-specific-strategies">Optimizing Burn Rate: Toronto-Specific Strategies</h2>
 
 <p>Extending runway without sacrificing growth requires strategic decisions that balance cost reduction with continued progress toward milestones. Toronto's ecosystem offers specific leverage points.</p>
 
@@ -252,7 +289,7 @@ export default function BurnRateCalculatorTorontoBlogPost() {
 
 <p><strong>Revenue Acceleration vs. Burn Reduction:</strong> At certain stages, increasing revenue is a better path to runway extension than cutting costs. If you're at CAD $20,000 MRR growing 15% monthly, doubling growth rate to 30% improves net burn trajectory faster than cutting CAD $10,000 from monthly expenses. This is particularly relevant for Toronto B2B SaaS startups where additional sales headcount can have rapid payback.</p>
 
-<h2>When to Raise: Reading the Toronto Funding Environment</h2>
+<h2 id="when-to-raise-reading-the-toronto-funding-environment">When to Raise: Reading the Toronto Funding Environment</h2>
 
 <p>Toronto's funding environment has distinct seasonal and cyclical patterns. Understanding these helps optimize fundraising timing relative to your burn rate and runway.</p>
 
@@ -264,7 +301,7 @@ export default function BurnRateCalculatorTorontoBlogPost() {
 
 <p><strong>The 6-Month Danger Zone:</strong> When runway drops below 6 months, investor leverage shifts dramatically. You're now negotiating from weakness, and valuations suffer. Toronto investors are generally founder-friendly but realistic—if you're raising out of desperation, terms will reflect that. Maintain discipline to start fundraising at 9-12 months runway minimum.</p>
 
-<h2>Using ICanPitch's Burn Rate Calculator for Toronto Startups</h2>
+<h2 id="using-icanpitchs-burn-rate-calculator-for-toronto-startups">Using ICanPitch's Burn Rate Calculator for Toronto Startups</h2>
 
 <p>While general burn rate formulas are straightforward, scenario planning and sensitivity analysis require more sophisticated tools. ICanPitch's burn rate calculator is designed specifically for startups navigating the complexities of different markets, currencies, and funding environments.</p>
 
@@ -274,7 +311,7 @@ export default function BurnRateCalculatorTorontoBlogPost() {
 
 <p>Use the calculator during financial planning cycles, board meetings, and fundraising preparation. Share scenarios with investors to demonstrate financial sophistication and realistic planning—Toronto VCs consistently cite financial planning discipline as a key evaluation criterion.</p>
 
-<h2>Burn Rate Red Flags Toronto Investors Watch For</h2>
+<h2 id="burn-rate-red-flags-toronto-investors-watch-for">Burn Rate Red Flags Toronto Investors Watch For</h2>
 
 <p>Toronto investors are pattern-matchers who have seen hundreds of startup burn rate profiles. Certain patterns trigger concern and deeper scrutiny.</p>
 
@@ -286,7 +323,7 @@ export default function BurnRateCalculatorTorontoBlogPost() {
 
 <p><strong>Geographic Inefficiency:</strong> If your burn rate matches Silicon Valley startups despite being in Toronto, investors will question why you're not leveraging local cost advantages. A Toronto seed-stage startup burning CAD $100,000+ monthly (USD $75,000+) should have exceptional traction or a compelling explanation for elevated costs.</p>
 
-<h2>Burn Rate Communication: Board and Investor Updates</h2>
+<h2 id="burn-rate-communication-board-and-investor-updates">Burn Rate Communication: Board and Investor Updates</h2>
 
 <p>How you communicate burn rate is as important as the number itself. Toronto investors value transparency, proactive communication, and thoughtful analysis.</p>
 
@@ -296,7 +333,7 @@ export default function BurnRateCalculatorTorontoBlogPost() {
 
 <p><strong>Early Warning System:</strong> If burn rate is trending higher than planned or runway is compressing faster than expected, communicate immediately. Toronto investors strongly prefer early warning with a plan over late surprises. A proactive email outlining the situation and your proposed response (cost cuts, accelerated fundraising, bridge round) maintains credibility.</p>
 
-<h2>Conclusion: Mastering Burn Rate in Toronto's Tech Ecosystem</h2>
+<h2 id="conclusion-mastering-burn-rate-in-torontos-tech-ecosystem">Conclusion: Mastering Burn Rate in Toronto's Tech Ecosystem</h2>
 
 <p>Toronto offers Canadian and international founders a compelling environment to build capital-efficient startups: costs 40-50% below Silicon Valley, access to strong technical talent through Waterloo and local universities, government programs that can reduce effective burn by 20-30%, and a maturing investor ecosystem with increasingly sophisticated capital sources.</p>
 
@@ -326,13 +363,30 @@ export default function BurnRateCalculatorTorontoBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/burn-rate-calculator-paris/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Paris Startups: Master Runway in Europe's Tech Capital</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-chicago/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Chicago Burn Rate Calculator: Track Startup Runway in the Midwest Tech Hub</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-seattle/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Seattle Startups: Track Your Runway in 2025</span>
+                </Link>
+                <Link href="/blog/burn-rate-benchmarks-by-industry-stage/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Benchmarks by Industry and Stage: 2025 Data</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-berlin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Berlin Startups: 2025 Cost Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/burn-rate-calculator-series-a-first-time-founder-new-york-plan-fundraising-timeline-extend-runway-efficiency/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Burn Rate Calculator</Link>
+              <Link href="/blog/burn-rate-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Burn Rate & Runway Guides</Link>
             </div>
           </div>
         </section>
@@ -342,18 +396,18 @@ export default function BurnRateCalculatorTorontoBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Calculate Your Burn Rate & Runway
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/burn-rate-runway-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Burn Rate Calculator &rarr;
               </a>
             </div>
           </div>

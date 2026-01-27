@@ -52,6 +52,60 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much cash runway should a startup have?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Aim for 18-24 months of cash runway at all times. This provides sufficient buffer to fundraise from a position of strength (fundraising takes 4-6 months on average), weather unexpected challenges, and avoid desperate decision-making. According to Carta's data, startups with 18+ months runway are 4.3x more likely to successfully close their next funding round."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should I start fundraising based on my runway?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Start fundraising when you have 12-18 months of runway remaining. This follows the \"18-6-6 rule\": begin with 18 months runway, expect 6 months for the fundraising process, and maintain 6 months buffer for delays. If your runway drops below 12 months, you're in yellow-flag territory and should accelerate your fundraising timeline immediately."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I extend my startup's runway without cutting headcount?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Focus on non-personnel cost reductions first: renegotiate SaaS subscriptions (average 22% savings), optimize cloud infrastructure (30-40% savings typical), reduce or eliminate paid marketing spend, downsize office space, and eliminate discretionary spending. Additionally, accelerate revenue through price increases, upsells to existing customers, and collecting outstanding receivables. These strategies can extend runway 30-50% without layoffs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between runway and burn rate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Burn rate is how much cash you spend per month (expenses minus revenue), while runway is how many months until you run out of money (cash balance divided by burn rate). Burn rate is a velocity metric, runway is a time metric. For example, $80,000 monthly burn rate with $640,000 cash balance equals 8 months of runway."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I include accounts receivable in my runway calculation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, only include liquid cash that's currently in your bank accounts. Accounts receivable (money customers owe but haven't paid) should not be counted until it's actually received. Many startups fail despite having large receivables on paper because customers pay late or default entirely. Use cash-basis accounting for accurate runway calculations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate runway with growing revenue?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use a dynamic runway model that accounts for month-over-month revenue growth reducing your net burn rate over time. The formula is complex (logarithmic calculation), so use a runway calculator that handles the math automatically. As a rule of thumb, if your revenue is growing 10%+ monthly, your actual runway is 15-25% longer than the simple calculation suggests."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +168,28 @@ export default function CashRunwayCalculatorExtendStartupSurvivalBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#the-wake-up-call-every-founder-dreads" className="text-blue-600 hover:text-blue-700 text-sm">The Wake-Up Call Every Founder Dreads</a></li>
+                  <li><a href="#what-is-cash-runway-the-definition-that-determines-your-surv" className="text-blue-600 hover:text-blue-700 text-sm">What Is Cash Runway? The Definition That Determines Your Survival</a></li>
+                  <li><a href="#how-to-calculate-your-cash-runway-step-by-step-guide" className="text-blue-600 hover:text-blue-700 text-sm">How to Calculate Your Cash Runway: Step-by-Step Guide</a></li>
+                  <li><a href="#runway-benchmarks-how-much-do-you-really-need" className="text-blue-600 hover:text-blue-700 text-sm">Runway Benchmarks: How Much Do You Really Need?</a></li>
+                  <li><a href="#the-12-most-effective-strategies-to-extend-your-runway" className="text-blue-600 hover:text-blue-700 text-sm">The 12 Most Effective Strategies to Extend Your Runway</a></li>
+                  <li><a href="#marcuss-total-runway-extension-the-results" className="text-blue-600 hover:text-blue-700 text-sm">Marcus's Total Runway Extension: The Results</a></li>
+                  <li><a href="#when-should-you-start-fundraising-based-on-your-runway" className="text-blue-600 hover:text-blue-700 text-sm">When Should You Start Fundraising Based on Your Runway?</a></li>
+                  <li><a href="#how-to-monitor-runway-dashboard-and-cadence" className="text-blue-600 hover:text-blue-700 text-sm">How to Monitor Runway: Dashboard and Cadence</a></li>
+                  <li><a href="#common-runway-calculation-mistakes-that-can-kill-your-compan" className="text-blue-600 hover:text-blue-700 text-sm">Common Runway Calculation Mistakes (That Can Kill Your Company)</a></li>
+                  <li><a href="#using-a-cash-runway-calculator-essential-tool-for-every-foun" className="text-blue-600 hover:text-blue-700 text-sm">Using a Cash Runway Calculator: Essential Tool for Every Founder</a></li>
+                  <li><a href="#frequently-asked-questions-about-cash-runway" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions About Cash Runway</a></li>
+                  <li><a href="#your-runway-action-plan-what-to-do-today" className="text-blue-600 hover:text-blue-700 text-sm">Your Runway Action Plan: What to Do Today</a></li>
+                  <li><a href="#take-control-of-your-runway-today" className="text-blue-600 hover:text-blue-700 text-sm">Take Control of Your Runway Today</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -128,7 +202,7 @@ export default function CashRunwayCalculatorExtendStartupSurvivalBlogPost() {
               ">
                 <p><strong>TL;DR:</strong> Cash runway is the number of months until your startup runs out of money, calculated by dividing your cash balance by monthly burn rate. With 68% of startups failing because they run out of cash, extending runway through strategic cost cuts and revenue acceleration is critical for survival.</p>
 
-<h2>The Wake-Up Call Every Founder Dreads</h2>
+<h2 id="the-wake-up-call-every-founder-dreads">The Wake-Up Call Every Founder Dreads</h2>
 
 <p>Marcus Chen, founder of a fintech startup, received an email that changed everything. A key investor who had verbally committed to his Series A backed out due to "market conditions." Suddenly, Marcus faced a terrifying reality: <strong>he had 8 months of cash runway left</strong>, and fundraising typically takes 4-6 months.</p>
 
@@ -146,7 +220,7 @@ export default function CashRunwayCalculatorExtendStartupSurvivalBlogPost() {
 <li>Real tactics Marcus used to extend his runway from 8 to 16 months</li>
 </ul>
 
-<h2>What Is Cash Runway? The Definition That Determines Your Survival</h2>
+<h2 id="what-is-cash-runway-the-definition-that-determines-your-surv">What Is Cash Runway? The Definition That Determines Your Survival</h2>
 
 <p>Cash runway is the number of months your startup can operate before running out of money, assuming your current burn rate and no additional revenue growth or fundraising.</p>
 
@@ -175,7 +249,7 @@ export default function CashRunwayCalculatorExtendStartupSurvivalBlogPost() {
 
 <p>Marcus experienced this firsthand. When his runway dropped below 9 months, two engineering candidates who had been excited about joining suddenly "decided to explore other opportunities." The talent market had spoken: 8 months wasn't enough buffer.</p>
 
-<h2>How to Calculate Your Cash Runway: Step-by-Step Guide</h2>
+<h2 id="how-to-calculate-your-cash-runway-step-by-step-guide">How to Calculate Your Cash Runway: Step-by-Step Guide</h2>
 
 <p>Let's walk through the exact process Marcus used, which works whether you're pre-revenue or generating millions in ARR.</p>
 
@@ -268,7 +342,21 @@ $640,000 ÷ $80,000 = <strong>8 months of runway</strong></p>
 
 <p>This scenario analysis transformed Marcus's thinking from "we're in crisis mode" to "we have clear options and timelines." According to <strong>Bessemer Venture Partners' operational playbooks, 78% of successful pivot stories involved scenario-based runway planning</strong>.</p>
 
-<h2>Runway Benchmarks: How Much Do You Really Need?</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Calculate Your Burn Rate & Runway</p>
+                <p className="text-gray-600 mb-4">Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.</p>
+                <a
+                  href="https://icanpitch.com/burn-rate-runway-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Burn Rate Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="runway-benchmarks-how-much-do-you-really-need">Runway Benchmarks: How Much Do You Really Need?</h2>
 
 <h3>Minimum Runway Thresholds by Stage</h3>
 
@@ -308,7 +396,7 @@ $640,000 ÷ $80,000 = <strong>8 months of runway</strong></p>
 <li><strong>International markets:</strong> 12-18 months depending on ecosystem maturity</li>
 </ul>
 
-<h2>The 12 Most Effective Strategies to Extend Your Runway</h2>
+<h2 id="the-12-most-effective-strategies-to-extend-your-runway">The 12 Most Effective Strategies to Extend Your Runway</h2>
 
 <p>Marcus needed to extend his 8-month runway immediately. Here's exactly what he did—and what worked.</p>
 
@@ -486,7 +574,7 @@ $640,000 ÷ $80,000 = <strong>8 months of runway</strong></p>
 
 <p>According to <strong>Bessemer's State of the Cloud, companies with 110%+ net revenue retention can grow sustainably with 60% less capital</strong> than those relying purely on new customer acquisition.</p>
 
-<h2>Marcus's Total Runway Extension: The Results</h2>
+<h2 id="marcuss-total-runway-extension-the-results">Marcus's Total Runway Extension: The Results</h2>
 
 <p>After implementing these 12 strategies over 6 weeks, Marcus's financial picture transformed:</p>
 
@@ -511,7 +599,7 @@ $640,000 ÷ $80,000 = <strong>8 months of runway</strong></p>
 
 <p>Marcus closed his Series A three months later.</p>
 
-<h2>When Should You Start Fundraising Based on Your Runway?</h2>
+<h2 id="when-should-you-start-fundraising-based-on-your-runway">When Should You Start Fundraising Based on Your Runway?</h2>
 
 <p>Understanding your runway determines your fundraising timeline. Here are the exact thresholds:</p>
 
@@ -552,7 +640,7 @@ $640,000 ÷ $80,000 = <strong>8 months of runway</strong></p>
 
 <p><strong>Strategy:</strong> Pivot to alternative financing (revenue-based financing, venture debt, customer prepayments), explore M&amp;A conversations, prepare for potential shutdown scenarios including asset sales.</p>
 
-<h2>How to Monitor Runway: Dashboard and Cadence</h2>
+<h2 id="how-to-monitor-runway-dashboard-and-cadence">How to Monitor Runway: Dashboard and Cadence</h2>
 
 <h3>Weekly Runway Check (For Startups with Under 12 Months Runway)</h3>
 
@@ -589,7 +677,7 @@ $640,000 ÷ $80,000 = <strong>8 months of runway</strong></p>
 <li><strong>Red alert:</strong> Runway drops below 9 months → Emergency measures + bridge financing</li>
 </ul>
 
-<h2>Common Runway Calculation Mistakes (That Can Kill Your Company)</h2>
+<h2 id="common-runway-calculation-mistakes-that-can-kill-your-compan">Common Runway Calculation Mistakes (That Can Kill Your Company)</h2>
 
 <h3>Mistake 1: Assuming Flat Burn Rate</h3>
 
@@ -621,7 +709,7 @@ $640,000 ÷ $80,000 = <strong>8 months of runway</strong></p>
 
 <p><strong>Solution:</strong> Use conservative revenue projections (lower end of your range) for runway planning. According to <strong>Redpoint Ventures' analysis, founder revenue projections are 2.3x too optimistic on average</strong>.</p>
 
-<h2>Using a Cash Runway Calculator: Essential Tool for Every Founder</h2>
+<h2 id="using-a-cash-runway-calculator-essential-tool-for-every-foun">Using a Cash Runway Calculator: Essential Tool for Every Founder</h2>
 
 <p>Marcus initially tracked runway in a spreadsheet, but this became unmanageable when modeling multiple scenarios. He switched to using our <a href="https://icanpitch.com/burn-rate-runway-calculator/">cash runway calculator</a>, which provided:</p>
 
@@ -636,7 +724,7 @@ $640,000 ÷ $80,000 = <strong>8 months of runway</strong></p>
 
 <p>The calculator takes 3 minutes to complete and provides instant insights that would take hours to build in Excel. It's the same analysis that costs $1,500+ from a fractional CFO—available free to all founders.</p>
 
-<h2>Frequently Asked Questions About Cash Runway</h2>
+<h2 id="frequently-asked-questions-about-cash-runway">Frequently Asked Questions About Cash Runway</h2>
 
 <h3>How much cash runway should a startup have?</h3>
 
@@ -662,7 +750,7 @@ $640,000 ÷ $80,000 = <strong>8 months of runway</strong></p>
 
 <p>Use a dynamic runway model that accounts for month-over-month revenue growth reducing your net burn rate over time. The formula is complex (logarithmic calculation), so use a runway calculator that handles the math automatically. As a rule of thumb, if your revenue is growing 10%+ monthly, your actual runway is 15-25% longer than the simple calculation suggests.</p>
 
-<h2>Your Runway Action Plan: What to Do Today</h2>
+<h2 id="your-runway-action-plan-what-to-do-today">Your Runway Action Plan: What to Do Today</h2>
 
 <p>Marcus's journey from 8 months to 16+ months of runway didn't happen by accident. It resulted from systematic analysis, hard decisions, and disciplined execution. Here's your action plan:</p>
 
@@ -699,7 +787,7 @@ $640,000 ÷ $80,000 = <strong>8 months of runway</strong></p>
 <li>Prepare contingency scenarios</li>
 </ul>
 
-<h2>Take Control of Your Runway Today</h2>
+<h2 id="take-control-of-your-runway-today">Take Control of Your Runway Today</h2>
 
 <p>Marcus's story had a happy ending because he took decisive action when faced with a runway crisis. The difference between startups that run out of cash and those that successfully fundraise often comes down to one critical skill: <strong>ruthless financial discipline</strong>.</p>
 
@@ -736,13 +824,30 @@ $640,000 ÷ $80,000 = <strong>8 months of runway</strong></p>
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/burn-rate-benchmarks-by-industry-stage/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Benchmarks by Industry and Stage: 2025 Data</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-berlin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Berlin Startups: 2025 Cost Guide</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-boston/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Boston Startups: 2025 Cost Guide</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for London Startups: 2025 Cost Guide</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-los-angeles/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Los Angeles Startups: 2025 Cost Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/burn-rate-calculator-series-a-first-time-founder-new-york-plan-fundraising-timeline-extend-runway-efficiency/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Burn Rate Calculator</Link>
+              <Link href="/blog/burn-rate-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Burn Rate & Runway Guides</Link>
             </div>
           </div>
         </section>
@@ -752,18 +857,18 @@ $640,000 ÷ $80,000 = <strong>8 months of runway</strong></p>
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Calculate Your Burn Rate & Runway
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/burn-rate-runway-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Burn Rate Calculator &rarr;
               </a>
             </div>
           </div>

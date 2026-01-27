@@ -52,6 +52,52 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does a typical Barcelona seed-stage startup burn per month?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Barcelona seed-stage startups (5-10 people) typically burn €40,000-€70,000 per month, which is 30-40% lower than equivalent teams in London or Paris. The lower burn is driven primarily by competitive salary costs and affordable office space in tech districts like 22@ and Poblenou."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the biggest burn rate mistake Barcelona founders make?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Underestimating true employment costs. Spanish employers must account for ~30% social security contributions and the 14-payment salary structure. A €60,000 gross salary actually costs your company ~€78,000 annually (€6,500/month), not €60,000."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long should my runway be before starting to fundraise in Barcelona?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Start fundraising with 9-12 months of runway remaining. European fundraising processes take 4-8 months on average, and Barcelona startups increasingly raise from cross-border investors (UK, France, Germany, US), which can extend timelines."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can CDTI grants meaningfully reduce my burn rate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. CDTI grants ranging from €50,000 to €500,000+ can extend runway by 3-6 months for innovation-focused startups. While administrative burden exists, Barcelona founders should aggressively pursue these non-dilutive funding sources alongside equity raises."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Barcelona's burn rate compare to Madrid?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Madrid burn rates run 5-10% higher than Barcelona due to slightly higher salaries and office costs. However, the difference is small compared to the 30-40% cost advantage both Spanish cities hold over London, Paris, or Amsterdam."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +160,28 @@ export default function BurnRateCalculatorBarcelonaBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-barcelona-startups-need-a-specialized-burn-rate-calculat" className="text-blue-600 hover:text-blue-700 text-sm">Why Barcelona Startups Need a Specialized Burn Rate Calculator</a></li>
+                  <li><a href="#what-is-burn-rate-and-why-it-matters-for-barcelona-startups" className="text-blue-600 hover:text-blue-700 text-sm">What is Burn Rate and Why It Matters for Barcelona Startups</a></li>
+                  <li><a href="#barcelona-cost-structure-breaking-down-your-monthly-burn" className="text-blue-600 hover:text-blue-700 text-sm">Barcelona Cost Structure: Breaking Down Your Monthly Burn</a></li>
+                  <li><a href="#barcelona-vs-major-european-hubs-burn-rate-comparison" className="text-blue-600 hover:text-blue-700 text-sm">Barcelona vs Major European Hubs: Burn Rate Comparison</a></li>
+                  <li><a href="#how-to-calculate-your-barcelona-startups-burn-rate" className="text-blue-600 hover:text-blue-700 text-sm">How to Calculate Your Barcelona Startup's Burn Rate</a></li>
+                  <li><a href="#barcelona-specific-burn-rate-considerations" className="text-blue-600 hover:text-blue-700 text-sm">Barcelona-Specific Burn Rate Considerations</a></li>
+                  <li><a href="#barcelona-startup-benchmarks-whats-normal" className="text-blue-600 hover:text-blue-700 text-sm">Barcelona Startup Benchmarks: What's Normal?</a></li>
+                  <li><a href="#common-burn-rate-mistakes-barcelona-founders-make" className="text-blue-600 hover:text-blue-700 text-sm">Common Burn Rate Mistakes Barcelona Founders Make</a></li>
+                  <li><a href="#strategies-to-optimize-burn-rate-in-barcelona" className="text-blue-600 hover:text-blue-700 text-sm">Strategies to Optimize Burn Rate in Barcelona</a></li>
+                  <li><a href="#when-to-raise-your-next-round-barcelona-fundraising-timing" className="text-blue-600 hover:text-blue-700 text-sm">When to Raise Your Next Round: Barcelona Fundraising Timing</a></li>
+                  <li><a href="#tools-and-resources-for-barcelona-founders" className="text-blue-600 hover:text-blue-700 text-sm">Tools and Resources for Barcelona Founders</a></li>
+                  <li><a href="#faq-barcelona-startup-burn-rate" className="text-blue-600 hover:text-blue-700 text-sm">FAQ: Barcelona Startup Burn Rate</a></li>
+                  <li><a href="#master-your-burn-rate-with-icanpitchs-barcelona-calculator" className="text-blue-600 hover:text-blue-700 text-sm">Master Your Burn Rate with ICanPitch's Barcelona Calculator</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +192,7 @@ export default function BurnRateCalculatorBarcelonaBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why Barcelona Startups Need a Specialized Burn Rate Calculator</h2>
+                <h2 id="why-barcelona-startups-need-a-specialized-burn-rate-calculat">Why Barcelona Startups Need a Specialized Burn Rate Calculator</h2>
 
 <p>Barcelona has emerged as one of Europe's most dynamic startup ecosystems, combining world-class talent, competitive operational costs, and a thriving international community. With anchor institutions like <strong>Barcelona Tech City</strong>, flagship events like <strong>Mobile World Congress</strong>, and accelerators such as <strong>Pier01</strong> and <strong>Antai Venture Builder</strong>, the city attracts founders building software, travel tech, mobile, and gaming companies.</p>
 
@@ -134,7 +200,7 @@ export default function BurnRateCalculatorBarcelonaBlogPost() {
 
 <p>This guide provides Barcelona founders with a comprehensive framework for calculating monthly burn rate, projecting runway, and benchmarking against peer cities like Madrid, Berlin, London, and Paris.</p>
 
-<h2>What is Burn Rate and Why It Matters for Barcelona Startups</h2>
+<h2 id="what-is-burn-rate-and-why-it-matters-for-barcelona-startups">What is Burn Rate and Why It Matters for Barcelona Startups</h2>
 
 <p><strong>Burn rate</strong> is the speed at which your startup consumes cash reserves each month. It's calculated as:</p>
 
@@ -154,7 +220,7 @@ export default function BurnRateCalculatorBarcelonaBlogPost() {
   <li><strong>EUR-based accounting:</strong> Financial planning in euros with exposure to European markets</li>
 </ul>
 
-<h2>Barcelona Cost Structure: Breaking Down Your Monthly Burn</h2>
+<h2 id="barcelona-cost-structure-breaking-down-your-monthly-burn">Barcelona Cost Structure: Breaking Down Your Monthly Burn</h2>
 
 <p>Understanding typical cost components helps Barcelona founders build accurate burn rate models. Here's what early-stage startups typically spend:</p>
 
@@ -213,7 +279,21 @@ export default function BurnRateCalculatorBarcelonaBlogPost() {
   <li><strong>Insurance:</strong> €200-€600/month (liability, D&amp;O)</li>
 </ul>
 
-<h2>Barcelona vs Major European Hubs: Burn Rate Comparison</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Calculate Your Burn Rate & Runway</p>
+                <p className="text-gray-600 mb-4">Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.</p>
+                <a
+                  href="https://icanpitch.com/burn-rate-runway-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Burn Rate Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="barcelona-vs-major-european-hubs-burn-rate-comparison">Barcelona vs Major European Hubs: Burn Rate Comparison</h2>
 
 <p>Barcelona's cost advantage becomes clear when comparing identical 8-person startup teams (3 engineers, 2 product/design, 2 sales/marketing, 1 founder) across European tech hubs:</p>
 
@@ -239,7 +319,7 @@ export default function BurnRateCalculatorBarcelonaBlogPost() {
 
 <p>This cost efficiency is why Barcelona has become particularly attractive for bootstrapped startups and capital-efficient companies in mobile, gaming, and SaaS.</p>
 
-<h2>How to Calculate Your Barcelona Startup's Burn Rate</h2>
+<h2 id="how-to-calculate-your-barcelona-startups-burn-rate">How to Calculate Your Barcelona Startup's Burn Rate</h2>
 
 <p>Follow this step-by-step process to calculate accurate monthly burn rate:</p>
 
@@ -302,7 +382,7 @@ export default function BurnRateCalculatorBarcelonaBlogPost() {
 
 <p>Always maintain a buffer—aim for 12-18 months of runway, and start fundraising when you have 6-9 months remaining.</p>
 
-<h2>Barcelona-Specific Burn Rate Considerations</h2>
+<h2 id="barcelona-specific-burn-rate-considerations">Barcelona-Specific Burn Rate Considerations</h2>
 
 <h3>Spanish Employment Laws Impact on Cash Flow</h3>
 
@@ -338,7 +418,7 @@ export default function BurnRateCalculatorBarcelonaBlogPost() {
   <li><strong>Multi-currency accounting:</strong> Tools like Deel, Wise, or Revolut Business help manage international payments</li>
 </ul>
 
-<h2>Barcelona Startup Benchmarks: What's Normal?</h2>
+<h2 id="barcelona-startup-benchmarks-whats-normal">Barcelona Startup Benchmarks: What's Normal?</h2>
 
 <p>Based on Barcelona Tech City reports and local accelerator data, here are typical burn rates by stage:</p>
 
@@ -369,7 +449,7 @@ export default function BurnRateCalculatorBarcelonaBlogPost() {
   <li><strong>Target runway:</strong> 18-30 months on €3M-€7M raised</li>
 </ul>
 
-<h2>Common Burn Rate Mistakes Barcelona Founders Make</h2>
+<h2 id="common-burn-rate-mistakes-barcelona-founders-make">Common Burn Rate Mistakes Barcelona Founders Make</h2>
 
 <h3>Underestimating True Employment Costs</h3>
 
@@ -391,7 +471,7 @@ export default function BurnRateCalculatorBarcelonaBlogPost() {
 
 <p>The excitement of closing a round often leads to rapid hiring. Barcelona's 6-month trial periods provide some protection, but hiring ahead of product-market fit is still the number one burn rate killer.</p>
 
-<h2>Strategies to Optimize Burn Rate in Barcelona</h2>
+<h2 id="strategies-to-optimize-burn-rate-in-barcelona">Strategies to Optimize Burn Rate in Barcelona</h2>
 
 <h3>Leverage Barcelona's International Talent Pool Strategically</h3>
 
@@ -417,7 +497,7 @@ export default function BurnRateCalculatorBarcelonaBlogPost() {
 
 <p>Review every expense monthly and justify its continuation. Software subscriptions, unused tools, and low-ROI marketing channels often persist unnoticed. In Barcelona's cost-efficient environment, disciplined expense management creates outsized runway advantages.</p>
 
-<h2>When to Raise Your Next Round: Barcelona Fundraising Timing</h2>
+<h2 id="when-to-raise-your-next-round-barcelona-fundraising-timing">When to Raise Your Next Round: Barcelona Fundraising Timing</h2>
 
 <p>Barcelona's funding environment has distinct characteristics that impact fundraising timing:</p>
 
@@ -433,7 +513,7 @@ export default function BurnRateCalculatorBarcelonaBlogPost() {
 
 <p>While Barcelona's local ecosystem is strong, Spanish startups increasingly raise from UK, French, German, and US investors. Plan for international investor diligence, which may extend timelines and require English-language materials.</p>
 
-<h2>Tools and Resources for Barcelona Founders</h2>
+<h2 id="tools-and-resources-for-barcelona-founders">Tools and Resources for Barcelona Founders</h2>
 
 <h3>Burn Rate Calculation Tools</h3>
 
@@ -460,7 +540,7 @@ export default function BurnRateCalculatorBarcelonaBlogPost() {
   <li><strong>Factorial:</strong> Payroll and HR management for Spanish companies</li>
 </ul>
 
-<h2>FAQ: Barcelona Startup Burn Rate</h2>
+<h2 id="faq-barcelona-startup-burn-rate">FAQ: Barcelona Startup Burn Rate</h2>
 
 <h3>How much does a typical Barcelona seed-stage startup burn per month?</h3>
 
@@ -482,7 +562,7 @@ export default function BurnRateCalculatorBarcelonaBlogPost() {
 
 <p>Madrid burn rates run 5-10% higher than Barcelona due to slightly higher salaries and office costs. However, the difference is small compared to the 30-40% cost advantage both Spanish cities hold over London, Paris, or Amsterdam.</p>
 
-<h2>Master Your Burn Rate with ICanPitch's Barcelona Calculator</h2>
+<h2 id="master-your-burn-rate-with-icanpitchs-barcelona-calculator">Master Your Burn Rate with ICanPitch's Barcelona Calculator</h2>
 
 <p>Understanding and optimizing burn rate is critical for Barcelona startup survival and success. The city's cost advantages create opportunities for capital efficiency, but Spanish employment laws, EUR-based operations, and unique ecosystem characteristics require specialized financial planning.</p>
 
@@ -521,13 +601,30 @@ export default function BurnRateCalculatorBarcelonaBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/burn-rate-calculator-amsterdam/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Amsterdam Burn Rate Calculator: Master Your Startup Cash Runway in Europe's Tech Hub</span>
+                </Link>
+                <Link href="/blog/safe-calculator-barcelona/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Barcelona SAFE Calculator: Navigate Startup Valuations in Spain's Tech Hub</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-denver/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Denver Burn Rate Calculator: Track Your Startup's Cash Runway in Colorado's Tech Hub</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-dublin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Dublin Burn Rate Calculator: Track Your Startup's Monthly Cash Flow in EUR</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-miami/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Miami Burn Rate Calculator: Track Your Startup Runway in South Florida's Tech Hub</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/burn-rate-calculator-series-a-first-time-founder-new-york-plan-fundraising-timeline-extend-runway-efficiency/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Burn Rate Calculator</Link>
+              <Link href="/blog/burn-rate-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Burn Rate & Runway Guides</Link>
             </div>
           </div>
         </section>
@@ -537,18 +634,18 @@ export default function BurnRateCalculatorBarcelonaBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Calculate Your Burn Rate & Runway
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/burn-rate-runway-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Burn Rate Calculator &rarr;
               </a>
             </div>
           </div>

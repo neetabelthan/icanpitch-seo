@@ -52,6 +52,52 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What happens if I raise multiple SAFEs with different valuation caps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "All SAFEs convert at Series A, each using their own terms. If you raised a $250K SAFE at a $4M cap and a $500K SAFE at a $6M cap, they convert independently — the first SAFE gets better terms (lower cap = more shares). This is called \"SAFE stacking\" and can create 10-15% more dilution than a single SAFE."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I use a pre-money or post-money SAFE?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Always use post-money SAFEs. They're the industry standard (94% of new SAFEs) and make dilution predictable. Pre-money SAFEs create unexpected dilution when you raise multiple SAFEs. No reputable investor will push for pre-money SAFEs in 2025."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's a reasonable valuation cap for a pre-revenue startup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For pre-revenue, pre-seed startups: $3M-$8M depending on geography, team, and market. Rule of thumb: Set your SAFE cap at 30-40% of your expected Series A valuation. If you think you'll raise Series A at $15M, a $5M-$6M SAFE cap is reasonable."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much dilution should I expect from my first SAFE?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Typical first SAFE: 8-15% dilution depending on the amount raised and cap. Benchmark: Raising $500K on a $6M cap = 8.33% dilution. If your calculator shows more than 15% dilution from a single SAFE, your cap is too low or you're raising too much."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should I convert my SAFE to equity?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SAFEs automatically convert during your next priced equity round (typically Series A). You don't choose when — the conversion is triggered by the priced round terms. Time to conversion: Average 12-18 months from SAFE signing to Series A close (PitchBook data)."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +160,27 @@ export default function SafeCalculatorFirstTimeFoundersCompleteGuideBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#what-is-a-safe-note" className="text-blue-600 hover:text-blue-700 text-sm">What is a SAFE Note?</a></li>
+                  <li><a href="#key-safe-terms-every-first-time-founder-must-understand" className="text-blue-600 hover:text-blue-700 text-sm">Key SAFE Terms Every First-Time Founder Must Understand</a></li>
+                  <li><a href="#why-first-time-founders-need-a-safe-calculator" className="text-blue-600 hover:text-blue-700 text-sm">Why First-Time Founders Need a SAFE Calculator</a></li>
+                  <li><a href="#how-to-use-a-safe-calculator-step-by-step-guide-for-first-ti" className="text-blue-600 hover:text-blue-700 text-sm">How to Use a SAFE Calculator: Step-by-Step Guide for First-Time Founders</a></li>
+                  <li><a href="#real-world-safe-calculator-example-the-500k-seed-round" className="text-blue-600 hover:text-blue-700 text-sm">Real-World SAFE Calculator Example: The $500K Seed Round</a></li>
+                  <li><a href="#common-safe-calculator-mistakes-first-time-founders-make" className="text-blue-600 hover:text-blue-700 text-sm">Common SAFE Calculator Mistakes First-Time Founders Make</a></li>
+                  <li><a href="#how-to-negotiate-safe-terms-as-a-first-time-founder" className="text-blue-600 hover:text-blue-700 text-sm">How to Negotiate SAFE Terms as a First-Time Founder</a></li>
+                  <li><a href="#the-first-time-founders-safe-calculator-checklist" className="text-blue-600 hover:text-blue-700 text-sm">The First-Time Founder's SAFE Calculator Checklist</a></li>
+                  <li><a href="#safe-calculator-tools-and-resources-for-first-time-founders" className="text-blue-600 hover:text-blue-700 text-sm">SAFE Calculator Tools and Resources for First-Time Founders</a></li>
+                  <li><a href="#frequently-asked-questions-safe-calculators-for-first-time-f" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions: SAFE Calculators for First-Time Founders</a></li>
+                  <li><a href="#key-takeaways-safe-calculator-essentials-for-first-time-foun" className="text-blue-600 hover:text-blue-700 text-sm">Key Takeaways: SAFE Calculator Essentials for First-Time Founders</a></li>
+                  <li><a href="#next-steps-model-your-safe-today" className="text-blue-600 hover:text-blue-700 text-sm">Next Steps: Model Your SAFE Today</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +191,7 @@ export default function SafeCalculatorFirstTimeFoundersCompleteGuideBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>What is a SAFE Note?</h2>
+                <h2 id="what-is-a-safe-note">What is a SAFE Note?</h2>
 <p>
   <strong>SAFE stands for "Simple Agreement for Future Equity"</strong> — a financing instrument created by Y Combinator in 2013 that allows startups to raise capital without immediately determining a company valuation. According to Y Combinator data, over 15,000 startups have raised capital using SAFEs, making it the dominant pre-seed and seed funding instrument in 2025.
 </p>
@@ -142,7 +207,7 @@ export default function SafeCalculatorFirstTimeFoundersCompleteGuideBlogPost() {
   Here's a stat every first-time founder should know: <strong>78% of Y Combinator companies raise their first funding using SAFEs</strong> (Y Combinator, 2024). This isn't just a popular option — it's the industry standard for pre-revenue and early-traction startups raising $100K to $2M before Series A.
 </p>
 
-<h2>Key SAFE Terms Every First-Time Founder Must Understand</h2>
+<h2 id="key-safe-terms-every-first-time-founder-must-understand">Key SAFE Terms Every First-Time Founder Must Understand</h2>
 
 <h3>Valuation Cap: Your Most Important Term</h3>
 <p>
@@ -168,7 +233,7 @@ export default function SafeCalculatorFirstTimeFoundersCompleteGuideBlogPost() {
   <strong>Pre-Money SAFEs</strong> (older version, pre-2018) can lead to unexpected dilution if you raise multiple SAFEs, because each new SAFE dilutes the previous ones. First-time founders should only use post-money SAFEs — they're more transparent and prevent "SAFE stacking" dilution surprises.
 </p>
 
-<h2>Why First-Time Founders Need a SAFE Calculator</h2>
+<h2 id="why-first-time-founders-need-a-safe-calculator">Why First-Time Founders Need a SAFE Calculator</h2>
 
 <h3>The Hidden Dilution Problem</h3>
 <p>
@@ -178,7 +243,21 @@ export default function SafeCalculatorFirstTimeFoundersCompleteGuideBlogPost() {
   A SAFE calculator helps you model exactly how much ownership you'll have after each funding round, preventing the common mistake of accepting investor-friendly terms that leave you with minimal equity at exit. <strong>Without running the numbers, first-time founders underestimate dilution by an average of 12-18 percentage points</strong> (AngelList data, 2024).
 </p>
 
-<h2>How to Use a SAFE Calculator: Step-by-Step Guide for First-Time Founders</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="how-to-use-a-safe-calculator-step-by-step-guide-for-first-ti">How to Use a SAFE Calculator: Step-by-Step Guide for First-Time Founders</h2>
 
 <h3>Step 1: Gather Your SAFE Terms</h3>
 <p>
@@ -225,7 +304,7 @@ export default function SafeCalculatorFirstTimeFoundersCompleteGuideBlogPost() {
   <li><strong>Worst case:</strong> Low valuation ($8-12M) - SAFE cap protects investors significantly, causing maximum founder dilution</li>
 </ul>
 
-<h2>Real-World SAFE Calculator Example: The $500K Seed Round</h2>
+<h2 id="real-world-safe-calculator-example-the-500k-seed-round">Real-World SAFE Calculator Example: The $500K Seed Round</h2>
 
 <h3>The Scenario: A SaaS Founder in Austin Raising Pre-Seed</h3>
 <p>
@@ -259,7 +338,7 @@ export default function SafeCalculatorFirstTimeFoundersCompleteGuideBlogPost() {
   Sarah's ownership dropped from 80% to 45.3% — a <strong>34.7 percentage point dilution</strong> from one SAFE and one equity round. By modeling this before signing, she knew exactly what to expect and negotiated a higher Series A valuation to minimize dilution.
 </p>
 
-<h2>Common SAFE Calculator Mistakes First-Time Founders Make</h2>
+<h2 id="common-safe-calculator-mistakes-first-time-founders-make">Common SAFE Calculator Mistakes First-Time Founders Make</h2>
 
 <h3>Mistake #1: Ignoring Multiple SAFEs (The "Stacking Problem")</h3>
 <p>
@@ -293,7 +372,7 @@ export default function SafeCalculatorFirstTimeFoundersCompleteGuideBlogPost() {
   <strong>The balance:</strong> A $3M cap might seem reasonable at pre-seed, but if you raise Series A at $30M, your SAFE investors get 10x leverage. Balance investor friendliness with protecting your equity — aim for caps that are 30-40% of your expected Series A valuation.
 </p>
 
-<h2>How to Negotiate SAFE Terms as a First-Time Founder</h2>
+<h2 id="how-to-negotiate-safe-terms-as-a-first-time-founder">How to Negotiate SAFE Terms as a First-Time Founder</h2>
 
 <h3>Typical SAFE Cap Ranges by Stage (2024 Benchmarks)</h3>
 <p>
@@ -333,7 +412,7 @@ export default function SafeCalculatorFirstTimeFoundersCompleteGuideBlogPost() {
   Pro-rata rights don't affect your immediate dilution but can complicate future fundraising by eating into your Series A round allocation. Consider granting pro-rata only to your largest and most strategic SAFE investors.
 </p>
 
-<h2>The First-Time Founder's SAFE Calculator Checklist</h2>
+<h2 id="the-first-time-founders-safe-calculator-checklist">The First-Time Founder's SAFE Calculator Checklist</h2>
 
 <h3>Before You Sign Any SAFE, Model These 5 Scenarios</h3>
 <ol>
@@ -352,7 +431,7 @@ export default function SafeCalculatorFirstTimeFoundersCompleteGuideBlogPost() {
   <li><strong>Projected exit ownership below 20%:</strong> After 3-4 rounds, you'll own too little to be motivated</li>
 </ul>
 
-<h2>SAFE Calculator Tools and Resources for First-Time Founders</h2>
+<h2 id="safe-calculator-tools-and-resources-for-first-time-founders">SAFE Calculator Tools and Resources for First-Time Founders</h2>
 
 <h3>Interactive Online Calculators</h3>
 <p>
@@ -372,7 +451,7 @@ export default function SafeCalculatorFirstTimeFoundersCompleteGuideBlogPost() {
   Tools like Carta, Pulley, and AngelList Stack automatically calculate SAFE conversions and track your full cap table across multiple rounds. <strong>Recommendation: Once you have more than 10 shareholders or 2+ SAFEs, invest in cap table software ($50-300/month).</strong> The automation and accuracy are worth it.
 </p>
 
-<h2>Frequently Asked Questions: SAFE Calculators for First-Time Founders</h2>
+<h2 id="frequently-asked-questions-safe-calculators-for-first-time-f">Frequently Asked Questions: SAFE Calculators for First-Time Founders</h2>
 
 <h3>What happens if I raise multiple SAFEs with different valuation caps?</h3>
 <p>
@@ -399,7 +478,7 @@ export default function SafeCalculatorFirstTimeFoundersCompleteGuideBlogPost() {
   SAFEs automatically convert during your next priced equity round (typically Series A). You don't choose when — the conversion is triggered by the priced round terms. <strong>Time to conversion: Average 12-18 months from SAFE signing to Series A close</strong> (PitchBook data).
 </p>
 
-<h2>Key Takeaways: SAFE Calculator Essentials for First-Time Founders</h2>
+<h2 id="key-takeaways-safe-calculator-essentials-for-first-time-foun">Key Takeaways: SAFE Calculator Essentials for First-Time Founders</h2>
 
 <ul>
   <li><strong>Always model before signing:</strong> Use a SAFE calculator to understand exactly how much ownership you'll give up when the SAFE converts at various Series A valuations (2x, 3x, 5x your cap)</li>
@@ -414,7 +493,7 @@ export default function SafeCalculatorFirstTimeFoundersCompleteGuideBlogPost() {
   <li><strong>Geography matters:</strong> Silicon Valley SAFE caps average 40-50% higher than other US cities — adjust expectations based on location</li>
 </ul>
 
-<h2>Next Steps: Model Your SAFE Today</h2>
+<h2 id="next-steps-model-your-safe-today">Next Steps: Model Your SAFE Today</h2>
 
 <p>
   Before you sign your next SAFE term sheet, invest 10-15 minutes with a <a href="https://icanpitch.com/safe-calculator/" target="_blank" rel="noopener noreferrer">SAFE calculator</a> to model the conversion scenarios. Input your actual terms, adjust the Series A assumptions across 3-5 scenarios, and see exactly how much dilution you're accepting.
@@ -447,13 +526,31 @@ export default function SafeCalculatorFirstTimeFoundersCompleteGuideBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/safe-calculator-silicon-valley-founders-guide/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Silicon Valley Founders: Bay Area Guide</span>
+                </Link>
+                <Link href="/blog/how-to-negotiate-safe-valuation-cap/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Negotiate SAFE Valuation Caps: 2025 Founder's Guide</span>
+                </Link>
+                <Link href="/blog/avoiding-safe-dilution-traps-founders/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Avoiding SAFE Dilution Traps: 7 Mistakes Founders Make</span>
+                </Link>
+                <Link href="/blog/safe-discount-rate-vs-valuation-cap-which-better/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Discount Rate vs Valuation Cap: Which Matters More?</span>
+                </Link>
+                <Link href="/blog/safe-calculator-bangalore/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Bangalore Startups: 2025 India Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -463,18 +560,18 @@ export default function SafeCalculatorFirstTimeFoundersCompleteGuideBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

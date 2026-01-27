@@ -52,6 +52,52 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the average exit multiple for Silicon Valley SaaS companies?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The median exit multiple for Silicon Valley SaaS companies is 10-15x ARR as of 2025, compared to 6-10x ARR for SaaS companies in other markets. High-growth SaaS with 100%+ net retention and strong unit economics command 15-20x ARR. This premium reflects competitive acquirer dynamics, concentration of strategic buyers (Salesforce, Oracle, Microsoft, Google), and higher baseline growth rates in valley companies."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate founder proceeds after liquidation preferences?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Calculate founder proceeds using this formula: (Exit Valuation - Total Liquidation Preferences) x Founder Ownership Percentage. For example, if your company exits for $200M, you raised $50M with 1x liquidation preferences, and you own 20% post-dilution, your proceeds are: ($200M - $50M) x 0.20 = $30M. Critical to model this early since liquidation preferences can consume 30-70% of exit value in companies that raised multiple rounds."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is an IPO or M&amp;A exit more valuable in Silicon Valley?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "M&amp;A typically provides 20-40% higher immediate valuation than IPO in Silicon Valley due to strategic premiums and competitive bidding. However, IPO may generate more long-term value if your company can sustain public market growth rates and re-rate upward post-IPO. IPO makes sense if you can reach $150M+ ARR with clear path to $500M+ ARR; below that threshold, M&amp;A usually maximizes founder value. IPO requires 12-18 months longer time to liquidity vs M&amp;A."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What exit multiple should AI startups expect in 2025?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI companies with proprietary models and enterprise revenue traction command 20-30x ARR multiples in Silicon Valley M&amp;A, double the 10-15x multiple for traditional SaaS. Pre-revenue AI companies with exceptional technical talent see acqui-hire valuations of $3-5M per AI/ML engineer. Strategic acquirers (Google, Microsoft, Amazon) pay premium multiples to acquire AI capabilities for core product roadmaps. Consumer AI products without clear monetization trade on user engagement metrics ($50-150 per DAU)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does the typical Silicon Valley exit process take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Expect 6-9 months from initial acquisition conversations to closed M&amp;A transaction in Silicon Valley. Timeline breaks down: 4-6 weeks for initial due diligence and LOI, 8-12 weeks for definitive agreement negotiation, 12-16 weeks for regulatory approval and closing. Add 2-3 months if running competitive process with multiple bidders. IPO process takes 12-18 months from IPO decision to first trade, including S-1 preparation, roadshow, and pricing."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +160,27 @@ export default function ExitCalculatorSiliconValleyBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#silicon-valley-exit-calculator-model-your-startup-exit-valua" className="text-blue-600 hover:text-blue-700 text-sm">Silicon Valley Exit Calculator: Model Your Startup Exit Valuation</a></li>
+                  <li><a href="#tldr-silicon-valley-exit-valuation-quick-reference" className="text-blue-600 hover:text-blue-700 text-sm">TL;DR: Silicon Valley Exit Valuation Quick Reference</a></li>
+                  <li><a href="#why-silicon-valley-exit-valuations-are-different" className="text-blue-600 hover:text-blue-700 text-sm">Why Silicon Valley Exit Valuations Are Different</a></li>
+                  <li><a href="#silicon-valley-exit-multiples-by-sector-2025-benchmarks" className="text-blue-600 hover:text-blue-700 text-sm">Silicon Valley Exit Multiples by Sector (2025 Benchmarks)</a></li>
+                  <li><a href="#step-by-step-silicon-valley-exit-valuation-calculation" className="text-blue-600 hover:text-blue-700 text-sm">Step-by-Step Silicon Valley Exit Valuation Calculation</a></li>
+                  <li><a href="#ipo-vs-mampa-choosing-your-silicon-valley-exit-path" className="text-blue-600 hover:text-blue-700 text-sm">IPO vs M&amp;A: Choosing Your Silicon Valley Exit Path</a></li>
+                  <li><a href="#maximizing-your-silicon-valley-exit-valuation-tactical-playb" className="text-blue-600 hover:text-blue-700 text-sm">Maximizing Your Silicon Valley Exit Valuation: Tactical Playbook</a></li>
+                  <li><a href="#common-silicon-valley-exit-valuation-mistakes" className="text-blue-600 hover:text-blue-700 text-sm">Common Silicon Valley Exit Valuation Mistakes</a></li>
+                  <li><a href="#silicon-valley-exit-calculator-ready-to-use-valuation-framew" className="text-blue-600 hover:text-blue-700 text-sm">Silicon Valley Exit Calculator: Ready-to-Use Valuation Framework</a></li>
+                  <li><a href="#resources-and-tools-for-silicon-valley-exit-planning" className="text-blue-600 hover:text-blue-700 text-sm">Resources and Tools for Silicon Valley Exit Planning</a></li>
+                  <li><a href="#frequently-asked-questions-silicon-valley-exit-valuations" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions: Silicon Valley Exit Valuations</a></li>
+                  <li><a href="#next-steps-plan-your-silicon-valley-exit-strategy" className="text-blue-600 hover:text-blue-700 text-sm">Next Steps: Plan Your Silicon Valley Exit Strategy</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,13 +191,13 @@ export default function ExitCalculatorSiliconValleyBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Silicon Valley Exit Calculator: Model Your Startup Exit Valuation</h2>
+                <h2 id="silicon-valley-exit-calculator-model-your-startup-exit-valua">Silicon Valley Exit Calculator: Model Your Startup Exit Valuation</h2>
 
 <p>Silicon Valley remains the global epicenter for high-value tech exits, with median acquisition values 2-3x higher than other markets. Whether you're building a SaaS platform in Palo Alto or a consumer app in San Francisco, understanding valley-specific exit multiples is critical for cap table planning, investor negotiations, and founder liquidity decisions.</p>
 
 <p>This comprehensive guide provides Silicon Valley founders with actionable exit valuation frameworks, current market multiples across sectors, and step-by-step calculations to model IPO vs M&amp;A scenarios using valley benchmarks.</p>
 
-<h2>TL;DR: Silicon Valley Exit Valuation Quick Reference</h2>
+<h2 id="tldr-silicon-valley-exit-valuation-quick-reference">TL;DR: Silicon Valley Exit Valuation Quick Reference</h2>
 
 <p><strong>SaaS Exit Multiples (2025):</strong> 10-15x ARR for companies with 100%+ net retention and 40%+ gross margins. High-growth SaaS with AI integration commanding 15-20x ARR.</p>
 
@@ -142,7 +207,7 @@ export default function ExitCalculatorSiliconValleyBlogPost() {
 
 <p><strong>Median Exit Timeline:</strong> 7-9 years from founding to acquisition; 10-12 years to IPO in current market.</p>
 
-<h2>Why Silicon Valley Exit Valuations Are Different</h2>
+<h2 id="why-silicon-valley-exit-valuations-are-different">Why Silicon Valley Exit Valuations Are Different</h2>
 
 <p>Silicon Valley commands premium exit multiples compared to global markets for four structural reasons:</p>
 
@@ -154,7 +219,21 @@ export default function ExitCalculatorSiliconValleyBlogPost() {
 
 <p><strong>4. IPO Optionality:</strong> Credible IPO alternatives force acquirers to price M&amp;A competitively against public market comps. Companies that could realistically go public command 20-40% higher acquisition premiums.</p>
 
-<h2>Silicon Valley Exit Multiples by Sector (2025 Benchmarks)</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your Exit Scenarios</p>
+                <p className="text-gray-600 mb-4">Calculate founder proceeds at different exit valuations with liquidation preference waterfalls.</p>
+                <a
+                  href="https://icanpitch.com/startup-exit-visualizer/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Exit Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="silicon-valley-exit-multiples-by-sector-2025-benchmarks">Silicon Valley Exit Multiples by Sector (2025 Benchmarks)</h2>
 
 <h3>Enterprise SaaS Exit Multiples</h3>
 
@@ -218,7 +297,7 @@ export default function ExitCalculatorSiliconValleyBlogPost() {
   <li>Key Drivers: Developer lock-in, consumption-based pricing growth, platform extensibility</li>
 </ul>
 
-<h2>Step-by-Step Silicon Valley Exit Valuation Calculation</h2>
+<h2 id="step-by-step-silicon-valley-exit-valuation-calculation">Step-by-Step Silicon Valley Exit Valuation Calculation</h2>
 
 <h3>Step 1: Determine Your Primary Valuation Metric</h3>
 
@@ -309,7 +388,7 @@ export default function ExitCalculatorSiliconValleyBlogPost() {
   <li>Founder Ownership Post-Dilution: 15%</li>
   <li><strong>Founder Proceeds: $170M x 0.15 = $25.5M</strong></li>
 </ul>
-<h2>IPO vs M&amp;A: Choosing Your Silicon Valley Exit Path</h2>
+<h2 id="ipo-vs-mampa-choosing-your-silicon-valley-exit-path">IPO vs M&amp;A: Choosing Your Silicon Valley Exit Path</h2>
 
 <h3>When to Pursue an IPO in Silicon Valley</h3>
 
@@ -349,7 +428,7 @@ export default function ExitCalculatorSiliconValleyBlogPost() {
   <li><strong>Strategic Resources:</strong> Acquirer's distribution, brand, and capital accelerate growth faster than independent path</li>
 </ul>
 
-<h2>Maximizing Your Silicon Valley Exit Valuation: Tactical Playbook</h2>
+<h2 id="maximizing-your-silicon-valley-exit-valuation-tactical-playb">Maximizing Your Silicon Valley Exit Valuation: Tactical Playbook</h2>
 
 <h3>Build Competitive Tension 12-18 Months Before Exit</h3>
 
@@ -391,7 +470,7 @@ export default function ExitCalculatorSiliconValleyBlogPost() {
   <li><strong>Interest Rate Sensitivity:</strong> Rising rates compress public tech multiples 20-40%, making strategic M&amp;A relatively more attractive</li>
 </ul>
 
-<h2>Common Silicon Valley Exit Valuation Mistakes</h2>
+<h2 id="common-silicon-valley-exit-valuation-mistakes">Common Silicon Valley Exit Valuation Mistakes</h2>
 
 <h3>Mistake 1: Using Outdated Comparables</h3>
 
@@ -417,7 +496,7 @@ export default function ExitCalculatorSiliconValleyBlogPost() {
 
 <p><strong>Solution:</strong> Always cultivate 2-3 acquirer relationships simultaneously. Use investment bankers to create structured auction process. Accept lower probability of closing any individual deal in exchange for 40%+ higher valuation when deal closes.</p>
 
-<h2>Silicon Valley Exit Calculator: Ready-to-Use Valuation Framework</h2>
+<h2 id="silicon-valley-exit-calculator-ready-to-use-valuation-framew">Silicon Valley Exit Calculator: Ready-to-Use Valuation Framework</h2>
 
 <h3>Quick Valuation Calculator</h3>
 
@@ -453,7 +532,7 @@ export default function ExitCalculatorSiliconValleyBlogPost() {
 <p><strong>Step 6:</strong> Subtract liquidation preferences to calculate founder proceeds:</p>
 <p><strong>Founder Proceeds = (Exit Valuation - Total Liquidation Preferences) x Founder Ownership %</strong></p>
 
-<h2>Resources and Tools for Silicon Valley Exit Planning</h2>
+<h2 id="resources-and-tools-for-silicon-valley-exit-planning">Resources and Tools for Silicon Valley Exit Planning</h2>
 
 <h3>Valuation Benchmarking Tools</h3>
 
@@ -472,7 +551,7 @@ export default function ExitCalculatorSiliconValleyBlogPost() {
   <li><strong><a href="https://www.fenwick.com/insights/publications/ma-deal-terms-study" target="_blank" rel="noopener noreferrer">Fenwick M&amp;A Deal Terms Study</a>:</strong> Standard M&amp;A terms in Silicon Valley</li>
 </ul>
 
-<h2>Frequently Asked Questions: Silicon Valley Exit Valuations</h2>
+<h2 id="frequently-asked-questions-silicon-valley-exit-valuations">Frequently Asked Questions: Silicon Valley Exit Valuations</h2>
 
 <h3>What is the average exit multiple for Silicon Valley SaaS companies?</h3>
 
@@ -494,7 +573,7 @@ export default function ExitCalculatorSiliconValleyBlogPost() {
 
 <p>Expect 6-9 months from initial acquisition conversations to closed M&amp;A transaction in Silicon Valley. Timeline breaks down: 4-6 weeks for initial due diligence and LOI, 8-12 weeks for definitive agreement negotiation, 12-16 weeks for regulatory approval and closing. Add 2-3 months if running competitive process with multiple bidders. IPO process takes 12-18 months from IPO decision to first trade, including S-1 preparation, roadshow, and pricing.</p>
 
-<h2>Next Steps: Plan Your Silicon Valley Exit Strategy</h2>
+<h2 id="next-steps-plan-your-silicon-valley-exit-strategy">Next Steps: Plan Your Silicon Valley Exit Strategy</h2>
 
 <p>Successful Silicon Valley exits require 18-24 months of strategic positioning before entering the market. Model your exit scenarios today using the frameworks in this guide, then work backward to identify gaps in your metrics, strategic positioning, and investor syndicate.</p>
 
@@ -532,13 +611,31 @@ export default function ExitCalculatorSiliconValleyBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/exit-calculator-berlin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Berlin Exit Calculator: German Startup Valuation & European M&A 2025</span>
+                </Link>
+                <Link href="/blog/exit-calculator-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">London Exit Calculator: UK Startup Valuation & Brexit Impact on M&A 2025</span>
+                </Link>
+                <Link href="/blog/exit-calculator-new-york/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">NYC Exit Calculator: New York Startup Exit Valuations & Fintech M&A 2025</span>
+                </Link>
+                <Link href="/blog/exit-calculator-singapore/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Singapore Exit Calculator: APAC Startup Valuation & Cross-Border M&A 2025</span>
+                </Link>
+                <Link href="/blog/vesting-acceleration-clauses-explained/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Vesting Acceleration Clauses: Single vs Double Trigger Explained</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/exit-calculator-growth-serial-entrepreneur-miami-model-exit-scenarios-maximize-founder-proceeds/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Exit Calculator</Link>
+              <Link href="/blog/exit-strategy-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Exit & Pro-Rata Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -548,18 +645,18 @@ export default function ExitCalculatorSiliconValleyBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your Exit Scenarios
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Calculate founder proceeds at different exit valuations with liquidation preference waterfalls.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/startup-exit-visualizer/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Exit Calculator &rarr;
               </a>
             </div>
           </div>

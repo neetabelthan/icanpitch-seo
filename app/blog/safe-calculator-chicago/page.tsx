@@ -114,8 +114,29 @@ export default function SafeCalculatorChicagoBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-chicago-founders-need-a-safe-calculator" className="text-blue-600 hover:text-blue-700 text-sm">Why Chicago Founders Need a SAFE Calculator</a></li>
+                  <li><a href="#what-is-a-safe-and-why-chicago-investors-use-them" className="text-blue-600 hover:text-blue-700 text-sm">What Is a SAFE and Why Chicago Investors Use Them</a></li>
+                  <li><a href="#chicago-safe-valuation-benchmarks-by-stage-and-sector" className="text-blue-600 hover:text-blue-700 text-sm">Chicago SAFE Valuation Benchmarks by Stage and Sector</a></li>
+                  <li><a href="#comparing-chicago-valuations-to-san-francisco-and-new-york-c" className="text-blue-600 hover:text-blue-700 text-sm">Comparing Chicago Valuations to San Francisco and New York City</a></li>
+                  <li><a href="#understanding-safe-terms-valuation-caps-discounts-and-pro-ra" className="text-blue-600 hover:text-blue-700 text-sm">Understanding SAFE Terms: Valuation Caps, Discounts, and Pro Rata Rights</a></li>
+                  <li><a href="#how-to-calculate-safe-dilution-step-by-step-guide" className="text-blue-600 hover:text-blue-700 text-sm">How to Calculate SAFE Dilution: Step-by-Step Guide</a></li>
+                  <li><a href="#chicago-investor-expectations-around-safe-terms" className="text-blue-600 hover:text-blue-700 text-sm">Chicago Investor Expectations Around SAFE Terms</a></li>
+                  <li><a href="#key-chicago-vcs-and-their-safe-investment-approach" className="text-blue-600 hover:text-blue-700 text-sm">Key Chicago VCs and Their SAFE Investment Approach</a></li>
+                  <li><a href="#common-safe-mistakes-chicago-founders-make" className="text-blue-600 hover:text-blue-700 text-sm">Common SAFE Mistakes Chicago Founders Make</a></li>
+                  <li><a href="#strategic-considerations-when-to-use-safes-vs-priced-rounds-" className="text-blue-600 hover:text-blue-700 text-sm">Strategic Considerations: When to Use SAFEs vs. Priced Rounds in Chicago</a></li>
+                  <li><a href="#chicago-specific-safe-negotiation-strategies" className="text-blue-600 hover:text-blue-700 text-sm">Chicago-Specific SAFE Negotiation Strategies</a></li>
+                  <li><a href="#using-a-safe-calculator-practical-examples-for-chicago-found" className="text-blue-600 hover:text-blue-700 text-sm">Using a SAFE Calculator: Practical Examples for Chicago Founders</a></li>
+                  <li><a href="#preparing-for-series-a-how-safe-terms-impact-future-fundrais" className="text-blue-600 hover:text-blue-700 text-sm">Preparing for Series A: How SAFE Terms Impact Future Fundraising</a></li>
+                  <li><a href="#calculate-your-chicago-safe-terms-today" className="text-blue-600 hover:text-blue-700 text-sm">Calculate Your Chicago SAFE Terms Today</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +147,7 @@ export default function SafeCalculatorChicagoBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why Chicago Founders Need a SAFE Calculator</h2>
+                <h2 id="why-chicago-founders-need-a-safe-calculator">Why Chicago Founders Need a SAFE Calculator</h2>
 
 <p>Simple Agreements for Future Equity (SAFEs) have become the dominant fundraising instrument for early-stage Chicago startups, particularly in the city's thriving fintech, healthcare technology, and logistics sectors. However, Chicago's investment ecosystem operates with distinct valuation benchmarks and investor expectations that differ significantly from coastal markets. Understanding how to structure SAFE terms that align with Midwest investor expectations while protecting founder equity requires Chicago-specific knowledge and precise calculation tools.</p>
 
@@ -134,7 +155,7 @@ export default function SafeCalculatorChicagoBlogPost() {
 
 <p>A SAFE calculator tailored to Chicago's ecosystem helps founders model dilution scenarios, compare term sheets from multiple investors, understand how different discounts and caps interact, and structure deals that balance investor returns with founder control. Whether you're raising your first pre-seed round from <a href="https://www.hydeparkangels.com" target="_blank" rel="noopener noreferrer">Hyde Park Angels</a>, negotiating seed terms with <a href="https://mathventurepartners.com" target="_blank" rel="noopener noreferrer">MATH Venture Partners</a>, or fielding interest from <a href="https://www.pritzkergroup.com/venture-capital/" target="_blank" rel="noopener noreferrer">Pritzker Group Venture Capital</a>, understanding SAFE mechanics and Chicago-specific valuation norms is fundamental to successful fundraising.</p>
 
-<h2>What Is a SAFE and Why Chicago Investors Use Them</h2>
+<h2 id="what-is-a-safe-and-why-chicago-investors-use-them">What Is a SAFE and Why Chicago Investors Use Them</h2>
 
 <p>The Simple Agreement for Future Equity (SAFE) was created by <a href="https://www.ycombinator.com/documents" target="_blank" rel="noopener noreferrer">Y Combinator</a> in 2013 as an alternative to convertible notes. SAFEs represent the right to purchase equity in a future priced round, providing investors early-stage exposure without immediately setting a company valuation or creating debt obligations.</p>
 
@@ -155,7 +176,7 @@ export default function SafeCalculatorChicagoBlogPost() {
 <li><strong>Standard Documentation:</strong> Y Combinator's open-source SAFE documents reduce legal costs—critical in a market where founders carefully manage burn rate</li>
 </ul>
 
-<h2>Chicago SAFE Valuation Benchmarks by Stage and Sector</h2>
+<h2 id="chicago-safe-valuation-benchmarks-by-stage-and-sector">Chicago SAFE Valuation Benchmarks by Stage and Sector</h2>
 
 <p>Chicago's valuation landscape reflects the city's emphasis on sustainable unit economics, capital efficiency, and demonstrated traction over narrative-driven fundraising common on the coasts.</p>
 
@@ -231,7 +252,21 @@ export default function SafeCalculatorChicagoBlogPost() {
 <li>Typical raise: $1.5M-$2.5M on SAFE with 15-20% discount and $9M-$11M cap</li>
 </ul>
 
-<h2>Comparing Chicago Valuations to San Francisco and New York City</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="comparing-chicago-valuations-to-san-francisco-and-new-york-c">Comparing Chicago Valuations to San Francisco and New York City</h2>
 
 <p>Understanding valuation differentials across markets helps Chicago founders contextualize term sheets and negotiate effectively with out-of-market investors.</p>
 
@@ -297,7 +332,7 @@ export default function SafeCalculatorChicagoBlogPost() {
 <li><strong>Extended Runway:</strong> Smaller raises at lower valuations still provide 18-24 months runway in Chicago versus 12-15 months for coastal equivalents, creating more time to achieve milestones</li>
 </ul>
 
-<h2>Understanding SAFE Terms: Valuation Caps, Discounts, and Pro Rata Rights</h2>
+<h2 id="understanding-safe-terms-valuation-caps-discounts-and-pro-ra">Understanding SAFE Terms: Valuation Caps, Discounts, and Pro Rata Rights</h2>
 
 <p>SAFEs contain several key terms that founders must understand to model dilution and negotiate effectively.</p>
 
@@ -366,7 +401,7 @@ export default function SafeCalculatorChicagoBlogPost() {
 <li>Avoid offering materially better terms to later investors unless company circumstances have significantly changed</li>
 </ul>
 
-<h2>How to Calculate SAFE Dilution: Step-by-Step Guide</h2>
+<h2 id="how-to-calculate-safe-dilution-step-by-step-guide">How to Calculate SAFE Dilution: Step-by-Step Guide</h2>
 
 <p>Understanding dilution mechanics helps founders model cap table scenarios and make informed decisions about fundraising strategy.</p>
 
@@ -421,7 +456,7 @@ export default function SafeCalculatorChicagoBlogPost() {
 
 <p>Post-money valuation calculation with multiple SAFE tranches becomes more complex and typically requires spreadsheet modeling or dedicated SAFE calculators.</p>
 
-<h2>Chicago Investor Expectations Around SAFE Terms</h2>
+<h2 id="chicago-investor-expectations-around-safe-terms">Chicago Investor Expectations Around SAFE Terms</h2>
 
 <p>Chicago's investment community has developed distinct norms around SAFE negotiations that reflect the region's values and market dynamics.</p>
 
@@ -466,7 +501,7 @@ export default function SafeCalculatorChicagoBlogPost() {
 
 <p><strong>Chicago Best Practice:</strong> Raise from 3-8 investors with one clear lead (largest check, most engaged, strongest value-add). This structure provides capital while demonstrating institutional validation.</p>
 
-<h2>Key Chicago VCs and Their SAFE Investment Approach</h2>
+<h2 id="key-chicago-vcs-and-their-safe-investment-approach">Key Chicago VCs and Their SAFE Investment Approach</h2>
 
 <p>Understanding individual investor philosophies helps founders target the right partners and structure appropriate terms.</p>
 
@@ -531,7 +566,7 @@ export default function SafeCalculatorChicagoBlogPost() {
 <li>Active board members who emphasize operational excellence and financial discipline</li>
 </ul>
 
-<h2>Common SAFE Mistakes Chicago Founders Make</h2>
+<h2 id="common-safe-mistakes-chicago-founders-make">Common SAFE Mistakes Chicago Founders Make</h2>
 
 <p>Even with standard documents, founders make strategic and tactical errors that compromise future fundraising or create unnecessary dilution.</p>
 
@@ -589,7 +624,7 @@ export default function SafeCalculatorChicagoBlogPost() {
 
 <p><strong>Solution:</strong> Before raising SAFEs, define 3-5 key milestones you'll achieve before Series A (revenue targets, customer logos, product development goals, team building). Communicate these to SAFE investors and report progress quarterly.</p>
 
-<h2>Strategic Considerations: When to Use SAFEs vs. Priced Rounds in Chicago</h2>
+<h2 id="strategic-considerations-when-to-use-safes-vs-priced-rounds-">Strategic Considerations: When to Use SAFEs vs. Priced Rounds in Chicago</h2>
 
 <p>While SAFEs dominate Chicago pre-seed and seed fundraising, certain scenarios warrant priced equity rounds even at early stages.</p>
 
@@ -613,7 +648,7 @@ export default function SafeCalculatorChicagoBlogPost() {
 <li><strong>Cap Table Simplification:</strong> After multiple SAFE rounds, a priced round converts all SAFEs and establishes clear ownership structure</li>
 </ul>
 
-<h2>Chicago-Specific SAFE Negotiation Strategies</h2>
+<h2 id="chicago-specific-safe-negotiation-strategies">Chicago-Specific SAFE Negotiation Strategies</h2>
 
 <p>Effective negotiation requires understanding Chicago investor psychology and regional norms.</p>
 
@@ -647,7 +682,7 @@ export default function SafeCalculatorChicagoBlogPost() {
 
 <p>"Beyond capital, we're seeking investors who can facilitate introductions to Fortune 500 pilot customers, particularly in [industry vertical]. We're reserving allocation for investors who can accelerate our GTM strategy."</p>
 
-<h2>Using a SAFE Calculator: Practical Examples for Chicago Founders</h2>
+<h2 id="using-a-safe-calculator-practical-examples-for-chicago-found">Using a SAFE Calculator: Practical Examples for Chicago Founders</h2>
 
 <p>Let's walk through specific scenarios Chicago founders encounter.</p>
 
@@ -726,7 +761,7 @@ export default function SafeCalculatorChicagoBlogPost() {
 
 <p><strong>Key Insight:</strong> Multiple SAFE tranches create substantial dilution (nearly 30% before Series A). Founders should limit SAFE rounds and transition to priced equity once traction justifies it.</p>
 
-<h2>Preparing for Series A: How SAFE Terms Impact Future Fundraising</h2>
+<h2 id="preparing-for-series-a-how-safe-terms-impact-future-fundrais">Preparing for Series A: How SAFE Terms Impact Future Fundraising</h2>
 
 <p>SAFE terms you negotiate today directly impact Series A dynamics 18-24 months later.</p>
 
@@ -759,7 +794,7 @@ export default function SafeCalculatorChicagoBlogPost() {
 <li>Difficulty recruiting executives who expect meaningful equity grants</li>
 </ul>
 
-<h2>Calculate Your Chicago SAFE Terms Today</h2>
+<h2 id="calculate-your-chicago-safe-terms-today">Calculate Your Chicago SAFE Terms Today</h2>
 
 <p>SAFEs have become the dominant early-stage fundraising instrument in Chicago's startup ecosystem, offering founders speed, flexibility, and deferred valuation negotiations that align with the region's emphasis on demonstrated traction over narrative-driven fundraising. However, SAFE terms—valuation caps, discounts, pro rata rights—directly impact founder dilution, Series A dynamics, and long-term cap table health.</p>
 
@@ -792,13 +827,31 @@ export default function SafeCalculatorChicagoBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/how-to-negotiate-safe-valuation-cap/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Negotiate SAFE Valuation Caps: 2025 Founder's Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-first-time-founders-complete-guide/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for First-Time Founders: Complete 2025 Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-los-angeles/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Los Angeles Startups: LA Valuation Benchmarks & Terms</span>
+                </Link>
+                <Link href="/blog/safe-calculator-new-york-startup-scene/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for New York Startups: NYC Founder's Guide to SAFE Notes</span>
+                </Link>
+                <Link href="/blog/safe-calculator-silicon-valley-founders-guide/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Silicon Valley Founders: Bay Area Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -808,18 +861,18 @@ export default function SafeCalculatorChicagoBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

@@ -114,8 +114,28 @@ export default function SeriesABurnRateBenchmarks2025BlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#understanding-series-a-burn-rate-in-2025" className="text-blue-600 hover:text-blue-700 text-sm">Understanding Series A Burn Rate in 2025</a></li>
+                  <li><a href="#series-a-burn-rate-by-industry-2025-data" className="text-blue-600 hover:text-blue-700 text-sm">Series A Burn Rate by Industry (2025 Data)</a></li>
+                  <li><a href="#burn-multiple-the-critical-series-a-metric" className="text-blue-600 hover:text-blue-700 text-sm">Burn Multiple: The Critical Series A Metric</a></li>
+                  <li><a href="#cac-payback-and-ltvcac-at-series-a" className="text-blue-600 hover:text-blue-700 text-sm">CAC Payback and LTV:CAC at Series A</a></li>
+                  <li><a href="#series-a-team-scaling-and-headcount-growth" className="text-blue-600 hover:text-blue-700 text-sm">Series A Team Scaling and Headcount Growth</a></li>
+                  <li><a href="#geographic-burn-rate-variations-at-series-a" className="text-blue-600 hover:text-blue-700 text-sm">Geographic Burn Rate Variations at Series A</a></li>
+                  <li><a href="#series-a-runway-18-24-months-standard" className="text-blue-600 hover:text-blue-700 text-sm">Series A Runway: 18-24 Months Standard</a></li>
+                  <li><a href="#when-series-a-burn-rate-is-too-high" className="text-blue-600 hover:text-blue-700 text-sm">When Series A Burn Rate Is Too High</a></li>
+                  <li><a href="#optimizing-series-a-burn-rate" className="text-blue-600 hover:text-blue-700 text-sm">Optimizing Series A Burn Rate</a></li>
+                  <li><a href="#when-to-raise-series-b" className="text-blue-600 hover:text-blue-700 text-sm">When to Raise Series B</a></li>
+                  <li><a href="#series-a-burn-rate-by-round-size" className="text-blue-600 hover:text-blue-700 text-sm">Series A Burn Rate by Round Size</a></li>
+                  <li><a href="#series-a-burn-rate-key-takeaways" className="text-blue-600 hover:text-blue-700 text-sm">Series A Burn Rate: Key Takeaways</a></li>
+                  <li><a href="#optimize-your-series-a-burn-and-efficiency-metrics" className="text-blue-600 hover:text-blue-700 text-sm">Optimize Your Series A Burn and Efficiency Metrics</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,13 +146,13 @@ export default function SeriesABurnRateBenchmarks2025BlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Understanding Series A Burn Rate in 2025</h2>
+                <h2 id="understanding-series-a-burn-rate-in-2025">Understanding Series A Burn Rate in 2025</h2>
 
 <p>Series A marks the transition from product-market fit validation to scaling proven business models. Unlike earlier stages where capital efficiency is paramount, Series A companies intentionally increase burn to capture market share, build competitive moats, and race toward Series B metrics. However, the 2025 funding environment demands disciplined scaling—growth with efficiency rather than growth-at-all-costs.</p>
 
 <p>According to <a href="https://www.carta.com" target="_blank" rel="noopener noreferrer">Carta's</a> 2024 Series A Report, median monthly burn rates range from $200,000 to $400,000, with best-in-class companies maintaining burn multiples (capital burned per dollar of new ARR) under 2.0x while scaling aggressively. This represents a fundamental shift from 2021, when Series A companies often burned $300K-$600K/month with minimal efficiency scrutiny.</p>
 
-<h2>Series A Burn Rate by Industry (2025 Data)</h2>
+<h2 id="series-a-burn-rate-by-industry-2025-data">Series A Burn Rate by Industry (2025 Data)</h2>
 
 <h3>B2B SaaS</h3>
 
@@ -200,7 +220,7 @@ export default function SeriesABurnRateBenchmarks2025BlogPost() {
 
 <p>Cost structure: $120K-$250K/month in engineering (hardware, firmware, software, industrial design), $80K-$200K/month in manufacturing and supply chain, $50K-$120K/month in inventory and tooling, $40K-$80K/month in sales and marketing.</p>
 
-<h2>Burn Multiple: The Critical Series A Metric</h2>
+<h2 id="burn-multiple-the-critical-series-a-metric">Burn Multiple: The Critical Series A Metric</h2>
 
 <p>Burn multiple has emerged as the defining efficiency metric for Series A companies in 2025. It measures capital efficiency by dividing net burn by net new ARR.</p>
 
@@ -249,7 +269,21 @@ export default function SeriesABurnRateBenchmarks2025BlogPost() {
 
 <p>The best companies do both simultaneously—they prune inefficient spend while doubling down on proven growth channels.</p>
 
-<h2>CAC Payback and LTV:CAC at Series A</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Calculate Your Burn Rate & Runway</p>
+                <p className="text-gray-600 mb-4">Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.</p>
+                <a
+                  href="https://icanpitch.com/burn-rate-runway-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Burn Rate Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="cac-payback-and-ltvcac-at-series-a">CAC Payback and LTV:CAC at Series A</h2>
 
 <p>Beyond burn multiple, investors scrutinize unit economics:</p>
 
@@ -275,7 +309,7 @@ export default function SeriesABurnRateBenchmarks2025BlogPost() {
 
 <p>LTV:CAC ratios above 5:1 often signal you're leaving growth on the table—you could afford to spend more on customer acquisition and still maintain healthy economics.</p>
 
-<h2>Series A Team Scaling and Headcount Growth</h2>
+<h2 id="series-a-team-scaling-and-headcount-growth">Series A Team Scaling and Headcount Growth</h2>
 
 <h3>Typical Series A Headcount</h3>
 
@@ -319,7 +353,7 @@ export default function SeriesABurnRateBenchmarks2025BlogPost() {
   <li>Business development: 2-4 (partnerships, supply acquisition for marketplaces)</li>
 </ul>
 
-<h2>Geographic Burn Rate Variations at Series A</h2>
+<h2 id="geographic-burn-rate-variations-at-series-a">Geographic Burn Rate Variations at Series A</h2>
 
 <h3>San Francisco Bay Area</h3>
 
@@ -345,7 +379,7 @@ export default function SeriesABurnRateBenchmarks2025BlogPost() {
 
 <p>Remote-first Series A companies can scale to 30-40 employees while maintaining burn rates equivalent to 20-25 person SF teams. This geographic arbitrage translates directly to better burn multiples and longer runways.</p>
 
-<h2>Series A Runway: 18-24 Months Standard</h2>
+<h2 id="series-a-runway-18-24-months-standard">Series A Runway: 18-24 Months Standard</h2>
 
 <p>Series A companies should target <strong>18-24 month runways</strong>, with 20-24 months considered best practice in 2025.</p>
 
@@ -374,7 +408,7 @@ export default function SeriesABurnRateBenchmarks2025BlogPost() {
 
 <p>Note that burn will likely start at $200K-$250K and ramp to $350K-$400K as you hire, averaging around $313K.</p>
 
-<h2>When Series A Burn Rate Is Too High</h2>
+<h2 id="when-series-a-burn-rate-is-too-high">When Series A Burn Rate Is Too High</h2>
 
 <h3>Warning Sign 1: Burn Growing Faster Than ARR</h3>
 
@@ -392,7 +426,7 @@ export default function SeriesABurnRateBenchmarks2025BlogPost() {
 
 <p>If CAC is increasing quarter-over-quarter or LTV is decreasing (due to churn), your unit economics are moving the wrong direction. Scaling spend on broken unit economics accelerates failure.</p>
 
-<h2>Optimizing Series A Burn Rate</h2>
+<h2 id="optimizing-series-a-burn-rate">Optimizing Series A Burn Rate</h2>
 
 <h3>1. Hire for Proven Channels Only</h3>
 
@@ -414,7 +448,7 @@ export default function SeriesABurnRateBenchmarks2025BlogPost() {
 
 <p>Fractional CFOs, CMOs, or CROs cost 50-70% less than full-time executives and provide strategic value without burning cash on full compensation packages until you reach appropriate scale.</p>
 
-<h2>When to Raise Series B</h2>
+<h2 id="when-to-raise-series-b">When to Raise Series B</h2>
 
 <p>Start Series B fundraising when you hit these milestones:</p>
 
@@ -452,7 +486,7 @@ export default function SeriesABurnRateBenchmarks2025BlogPost() {
   <li>Clear path to $50M+ ARR within 3-4 years</li>
 </ul>
 
-<h2>Series A Burn Rate by Round Size</h2>
+<h2 id="series-a-burn-rate-by-round-size">Series A Burn Rate by Round Size</h2>
 
 <h3>$5M-$8M Series A</h3>
 
@@ -475,7 +509,7 @@ export default function SeriesABurnRateBenchmarks2025BlogPost() {
 
 <p>Larger Series A rounds support aggressive scaling in winner-take-all markets. Build 40-60 person teams, dominate go-to-market, target $10M-$15M ARR for Series B.</p>
 
-<h2>Series A Burn Rate: Key Takeaways</h2>
+<h2 id="series-a-burn-rate-key-takeaways">Series A Burn Rate: Key Takeaways</h2>
 
 <ul>
   <li><strong>Standard range:</strong> $200K-$400K/month depending on industry, geography, and business model</li>
@@ -487,7 +521,7 @@ export default function SeriesABurnRateBenchmarks2025BlogPost() {
   <li><strong>Efficiency focus:</strong> 2025 investors demand growth with efficiency, not growth-at-all-costs</li>
 </ul>
 
-<h2>Optimize Your Series A Burn and Efficiency Metrics</h2>
+<h2 id="optimize-your-series-a-burn-and-efficiency-metrics">Optimize Your Series A Burn and Efficiency Metrics</h2>
 
 <p>Use <a href="https://www.icanpitch.com" target="_blank" rel="noopener noreferrer">ICanPitch's burn multiple and efficiency calculator</a> to model different scaling scenarios, benchmark your metrics against top performers, and plan your path to Series B with confidence. Get data-driven insights on optimal burn rates, team composition, and fundraising timing for your specific market and stage.</p>
 
@@ -510,13 +544,30 @@ export default function SeriesABurnRateBenchmarks2025BlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/pre-seed-burn-rate-benchmarks-2025/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pre-Seed Burn Rate Benchmarks 2025: What Founders Need to Know</span>
+                </Link>
+                <Link href="/blog/seed-burn-rate-benchmarks-2025/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Seed Stage Burn Rate Benchmarks 2025: Scaling from Pre-Seed to PMF</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-chicago/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Chicago Burn Rate Calculator: Track Startup Runway in the Midwest Tech Hub</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-paris/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Paris Startups: Master Runway in Europe's Tech Capital</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-seattle/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Seattle Startups: Track Your Runway in 2025</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/burn-rate-calculator-series-a-first-time-founder-new-york-plan-fundraising-timeline-extend-runway-efficiency/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Burn Rate Calculator</Link>
+              <Link href="/blog/burn-rate-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Burn Rate & Runway Guides</Link>
             </div>
           </div>
         </section>
@@ -526,18 +577,18 @@ export default function SeriesABurnRateBenchmarks2025BlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Calculate Your Burn Rate & Runway
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/burn-rate-runway-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Burn Rate Calculator &rarr;
               </a>
             </div>
           </div>

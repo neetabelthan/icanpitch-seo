@@ -52,6 +52,60 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What happens to my vested shares if I am fired?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your vested shares remain yours permanently—the company cannot take them back. Only unvested shares are subject to company repurchase. If you are terminated at month 30 with 62.5% vested, you keep 62.5% of your original grant and forfeit the remaining 37.5%. According to Delaware corporate law, vested shares are your property regardless of termination reason, though your shareholder agreement may include drag-along provisions requiring you to participate in company sales."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I negotiate a shorter vesting period than 4 years?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Technically yes, but practically no. Survey data from Cooley's Q1 2024 report shows 3-year vesting appears in only 3% of venture-backed term sheets, almost exclusively for late-joining co-founders at post-Series-B companies. Early-stage investors view 4-year vesting as standard and will not negotiate. The only common variation is vesting credit for past work, which effectively shortens the period by crediting time already served."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does my vesting pause if I take a leave of absence?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This depends on your stock purchase agreement language. Most agreements specify that vesting continues during approved medical leaves and pauses during other extended leaves. According to Gunderson Dettmer's standard founder agreements, leaves of 30 days or less do not affect vesting, leaves of 30 to 90 days require board approval to continue vesting, and leaves exceeding 90 days typically pause vesting. Parental leave treatment varies—58% of venture-backed startups now include language allowing vesting to continue during 12-week parental leaves per Cooley's 2024 data."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if the company is acquired before my shares fully vest?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Without acceleration provisions, your unvested shares continue vesting on the original schedule under the new owner. With single-trigger acceleration, all shares vest immediately at acquisition. With double-trigger acceleration, which is most common, shares vest if you are terminated without cause or quit for good reason within 12 months post-acquisition. According to CB Insights acquisition data, 37% of acquired founders leave within 12 months post-acquisition, making double-trigger acceleration valuable protection worth an average of $1.2M to $4.8M in additional payout."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I sell my vested shares?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Only with company approval and only if a buyer exists. Your shareholder agreement includes a Right of First Refusal, known as ROFR, requiring you to offer shares to the company first before selling to outside buyers. Additionally, your shares are restricted securities under SEC rules—you cannot freely sell them until the company goes public or you meet specific holding period requirements. Carta's 2024 liquidity data shows only 14% of startup employees successfully sell shares pre-IPO, typically through company-facilitated tender offers or secondary marketplaces like EquityZen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do advisors get the same vesting schedule as founders?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Advisors typically receive 2-year vesting schedules, often with no cliff or a 3-month cliff. According to the Founder Institute's Founder Advisor Standard Template known as FAST, standard advisor equity is 0.25% to 1.0% with 2-year vesting. The rationale: advisors are not full-time team members and typically provide value in shorter bursts rather than consistent long-term contribution."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +168,31 @@ export default function FounderVestingSchedules4Year1YearCliffBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#what-is-a-founder-vesting-schedule" className="text-blue-600 hover:text-blue-700 text-sm">What Is a Founder Vesting Schedule?</a></li>
+                  <li><a href="#the-standard-4-year-vesting-schedule-explained" className="text-blue-600 hover:text-blue-700 text-sm">The Standard 4-Year Vesting Schedule Explained</a></li>
+                  <li><a href="#why-investors-require-founder-vesting" className="text-blue-600 hover:text-blue-700 text-sm">Why Investors Require Founder Vesting</a></li>
+                  <li><a href="#calculating-your-vested-equity-exact-formulas" className="text-blue-600 hover:text-blue-700 text-sm">Calculating Your Vested Equity: Exact Formulas</a></li>
+                  <li><a href="#the-83b-election-critical-tax-decision-for-founders" className="text-blue-600 hover:text-blue-700 text-sm">The 83(b) Election: Critical Tax Decision for Founders</a></li>
+                  <li><a href="#negotiating-your-founder-vesting-terms" className="text-blue-600 hover:text-blue-700 text-sm">Negotiating Your Founder Vesting Terms</a></li>
+                  <li><a href="#common-founder-vesting-mistakes-and-how-to-avoid-them" className="text-blue-600 hover:text-blue-700 text-sm">Common Founder Vesting Mistakes and How to Avoid Them</a></li>
+                  <li><a href="#founder-vesting-across-different-stages" className="text-blue-600 hover:text-blue-700 text-sm">Founder Vesting Across Different Stages</a></li>
+                  <li><a href="#vesting-for-technical-vs-non-technical-founders" className="text-blue-600 hover:text-blue-700 text-sm">Vesting for Technical vs Non-Technical Founders</a></li>
+                  <li><a href="#state-law-variations-in-founder-vesting" className="text-blue-600 hover:text-blue-700 text-sm">State Law Variations in Founder Vesting</a></li>
+                  <li><a href="#how-vesting-affects-cap-table-and-dilution" className="text-blue-600 hover:text-blue-700 text-sm">How Vesting Affects Cap Table and Dilution</a></li>
+                  <li><a href="#vesting-when-you-are-a-solo-founder" className="text-blue-600 hover:text-blue-700 text-sm">Vesting When You Are a Solo Founder</a></li>
+                  <li><a href="#frequently-asked-questions-about-founder-vesting" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions About Founder Vesting</a></li>
+                  <li><a href="#action-steps-implementing-founder-vesting-correctly" className="text-blue-600 hover:text-blue-700 text-sm">Action Steps: Implementing Founder Vesting Correctly</a></li>
+                  <li><a href="#conclusion-vesting-protects-everyone" className="text-blue-600 hover:text-blue-700 text-sm">Conclusion: Vesting Protects Everyone</a></li>
+                  <li><a href="#related-resources" className="text-blue-600 hover:text-blue-700 text-sm">Related Resources</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -128,7 +205,7 @@ export default function FounderVestingSchedules4Year1YearCliffBlogPost() {
               ">
                 <p><strong>TL;DR:</strong> 92% of funded startups require founder vesting schedules. The standard 4-year vesting period with a 1-year cliff protects both founders and investors by ensuring long-term commitment. Founders earn 25% of their equity after the first year, then the remaining 75% vests monthly over 36 months. Understanding this structure is critical before signing your incorporation documents or accepting term sheets.</p>
 
-<h2>What Is a Founder Vesting Schedule?</h2>
+<h2 id="what-is-a-founder-vesting-schedule">What Is a Founder Vesting Schedule?</h2>
 
 <p>A founder vesting schedule is a legal mechanism that determines when startup founders fully own the equity shares allocated to them at incorporation. Rather than receiving 100% ownership immediately, founders earn their equity over time—typically 4 years—as they continue working for the company.</p>
 
@@ -136,7 +213,7 @@ export default function FounderVestingSchedules4Year1YearCliffBlogPost() {
 
 <p>Sarah Chen, founding partner at Baseline Ventures, explains: "Founder vesting is insurance against the most common startup failure mode—co-founder breakups. When a founding team member leaves after 6 months with 25% of the company, the remaining founders cannot recruit talent, cannot raise capital, and the company is essentially dead."</p>
 
-<h2>The Standard 4-Year Vesting Schedule Explained</h2>
+<h2 id="the-standard-4-year-vesting-schedule-explained">The Standard 4-Year Vesting Schedule Explained</h2>
 
 <p>The industry-standard founder vesting structure follows this precise formula:</p>
 
@@ -159,7 +236,7 @@ export default function FounderVestingSchedules4Year1YearCliffBlogPost() {
 
 <p>Research from Cooley's 2024 Go-to-Market Report shows that <strong>87% of venture-backed startups use monthly vesting after the cliff</strong>, while 13% use quarterly vesting, which is less founder-friendly and less common at top-tier VCs.</p>
 
-<h2>Why Investors Require Founder Vesting</h2>
+<h2 id="why-investors-require-founder-vesting">Why Investors Require Founder Vesting</h2>
 
 <p>Venture capitalists are not being punitive when they require founder vesting—they are protecting their investment and the remaining team members. According to data from First Round Capital's State of Startups 2024, <strong>23% of startups experience a co-founder departure within the first 24 months</strong>.</p>
 
@@ -188,7 +265,21 @@ export default function FounderVestingSchedules4Year1YearCliffBlogPost() {
 
 <p>Jason Calacanis, angel investor in 250 plus startups, states: "The single biggest preventable mistake I see is founders who do not implement vesting from day one. It is the difference between a fundable company and an unfundable one."</p>
 
-<h2>Calculating Your Vested Equity: Exact Formulas</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Plan Your Vesting Schedule</p>
+                <p className="text-gray-600 mb-4">Visualize vesting timelines, cliff dates, and acceleration scenarios for founders and employees.</p>
+                <a
+                  href="https://icanpitch.com/vesting-schedule-cliff-explorer/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Vesting Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="calculating-your-vested-equity-exact-formulas">Calculating Your Vested Equity: Exact Formulas</h2>
 
 <p>Understanding precisely how many shares you have vested requires straightforward mathematics:</p>
 
@@ -233,7 +324,7 @@ export default function FounderVestingSchedules4Year1YearCliffBlogPost() {
 
 <p>Critical note: This represents paper value only. According to Carta's 2024 Liquidity Report, <strong>only 14% of startup equity holders successfully sell shares before an IPO or acquisition</strong>. Your vested equity has no cash value until a liquidity event occurs.</p>
 
-<h2>The 83(b) Election: Critical Tax Decision for Founders</h2>
+<h2 id="the-83b-election-critical-tax-decision-for-founders">The 83(b) Election: Critical Tax Decision for Founders</h2>
 
 <p>When founders receive equity subject to vesting, they face an immediate tax decision that can save or cost hundreds of thousands of dollars: filing an 83(b) election with the IRS.</p>
 
@@ -283,7 +374,7 @@ export default function FounderVestingSchedules4Year1YearCliffBlogPost() {
 
 <p>Data from Clerky shows <strong>83(b) elections must be postmarked within 30 days</strong>—not received, but postmarked. The safest practice is filing within 7 days of receiving your stock grant.</p>
 
-<h2>Negotiating Your Founder Vesting Terms</h2>
+<h2 id="negotiating-your-founder-vesting-terms">Negotiating Your Founder Vesting Terms</h2>
 
 <p>While 4-year vesting with a 1-year cliff is standard, certain terms are negotiable depending on your situation and leverage.</p>
 
@@ -344,7 +435,7 @@ export default function FounderVestingSchedules4Year1YearCliffBlogPost() {
 <li>Competitive term sheet situations with multiple investors</li>
 </ul>
 
-<h2>Common Founder Vesting Mistakes and How to Avoid Them</h2>
+<h2 id="common-founder-vesting-mistakes-and-how-to-avoid-them">Common Founder Vesting Mistakes and How to Avoid Them</h2>
 
 <h3>Mistake 1: Not Implementing Vesting at Incorporation</h3>
 
@@ -378,7 +469,7 @@ export default function FounderVestingSchedules4Year1YearCliffBlogPost() {
 
 <p><strong>Solution:</strong> Read Section 8, which covers Repurchase Rights, of your stock purchase agreement carefully. The company has the right—not the obligation—to repurchase unvested shares, typically at the original purchase price. This means if you paid $200 for 2M shares and 750K are unvested when you leave, the company can buy back those 750K shares for $75.</p>
 
-<h2>Founder Vesting Across Different Stages</h2>
+<h2 id="founder-vesting-across-different-stages">Founder Vesting Across Different Stages</h2>
 
 <h3>Pre-Seed and Seed Stage Vesting</h3>
 
@@ -421,7 +512,7 @@ export default function FounderVestingSchedules4Year1YearCliffBlogPost() {
 
 <p>Alternative structure: Founders negotiate vesting credit for Founder A's pre-Founder-B work, creating earlier vesting acceleration for Founder A to reflect their higher contribution and risk.</p>
 
-<h2>Vesting for Technical vs Non-Technical Founders</h2>
+<h2 id="vesting-for-technical-vs-non-technical-founders">Vesting for Technical vs Non-Technical Founders</h2>
 
 <p>A common question: Should technical founders who built the MVP before fundraising receive more equity or faster vesting than business founders?</p>
 
@@ -437,7 +528,7 @@ export default function FounderVestingSchedules4Year1YearCliffBlogPost() {
 
 <p>Alex Iskold, Managing Partner at 2048 Ventures, notes: "The key is aligning vesting with ongoing value creation, not past value. If your technical founder built the MVP in 4 months but your business founder will spend 4 years building distribution, equal ongoing vesting makes sense with an equity split that reflects initial contribution."</p>
 
-<h2>State Law Variations in Founder Vesting</h2>
+<h2 id="state-law-variations-in-founder-vesting">State Law Variations in Founder Vesting</h2>
 
 <p>While most startup law follows Delaware corporate code because 83% of venture-backed startups incorporate in Delaware, state-specific variations affect vesting:</p>
 
@@ -467,7 +558,7 @@ export default function FounderVestingSchedules4Year1YearCliffBlogPost() {
 
 <p>According to Carta's 2024 incorporation data, <strong>83% of venture-backed startups choose Delaware incorporation</strong> regardless of where founders physically work, specifically to access standardized equity frameworks.</p>
 
-<h2>How Vesting Affects Cap Table and Dilution</h2>
+<h2 id="how-vesting-affects-cap-table-and-dilution">How Vesting Affects Cap Table and Dilution</h2>
 
 <p>Understanding how unvested shares appear on your cap table is critical for calculating real ownership percentages.</p>
 
@@ -502,7 +593,7 @@ export default function FounderVestingSchedules4Year1YearCliffBlogPost() {
 
 <p>This example shows why vesting matters: the company can reallocate departed founders' unvested equity without diluting remaining founders.</p>
 
-<h2>Vesting When You Are a Solo Founder</h2>
+<h2 id="vesting-when-you-are-a-solo-founder">Vesting When You Are a Solo Founder</h2>
 
 <p>Solo founders frequently ask: "If I own 100% of the company, do I still need vesting?"</p>
 
@@ -525,7 +616,7 @@ export default function FounderVestingSchedules4Year1YearCliffBlogPost() {
 <li>May negotiate 6-month cliff if significant traction pre-funding</li>
 </ul>
 
-<h2>Frequently Asked Questions About Founder Vesting</h2>
+<h2 id="frequently-asked-questions-about-founder-vesting">Frequently Asked Questions About Founder Vesting</h2>
 
 <h3>What happens to my vested shares if I am fired?</h3>
 
@@ -551,7 +642,7 @@ export default function FounderVestingSchedules4Year1YearCliffBlogPost() {
 
 <p>No. Advisors typically receive 2-year vesting schedules, often with no cliff or a 3-month cliff. According to the Founder Institute's Founder Advisor Standard Template known as FAST, standard advisor equity is 0.25% to 1.0% with 2-year vesting. The rationale: advisors are not full-time team members and typically provide value in shorter bursts rather than consistent long-term contribution.</p>
 
-<h2>Action Steps: Implementing Founder Vesting Correctly</h2>
+<h2 id="action-steps-implementing-founder-vesting-correctly">Action Steps: Implementing Founder Vesting Correctly</h2>
 
 <p>To implement founder vesting properly from day one:</p>
 
@@ -566,7 +657,7 @@ export default function FounderVestingSchedules4Year1YearCliffBlogPost() {
 
 <p>According to research from Feld and Mendelson's "Venture Deals," <strong>founders who properly implement vesting from day one are 2.8x more likely to successfully close institutional funding</strong> and experience 64% fewer co-founder conflicts.</p>
 
-<h2>Conclusion: Vesting Protects Everyone</h2>
+<h2 id="conclusion-vesting-protects-everyone">Conclusion: Vesting Protects Everyone</h2>
 
 <p>Founder vesting schedules, particularly the standard 4-year schedule with a 1-year cliff, exist to protect the long-term value of your company. While signing documents that prevent you from immediately owning 100% of your equity feels uncomfortable, 92% of funded startups implement vesting because the alternative—co-founder departures destroying cap tables—is far more painful.</p>
 
@@ -582,7 +673,7 @@ export default function FounderVestingSchedules4Year1YearCliffBlogPost() {
 
 <p>As Chris Sacca, investor in Uber, Twitter, Instagram, and 100 plus other startups notes: "Founder vesting is not an investor being greedy—it is an investor ensuring the founding team they are betting on will actually be there to build the company. Skip vesting and you are unfundable. Implement it correctly and you are protecting yourself from the most common startup failure mode: co-founder breakups."</p>
 
-<h2>Related Resources</h2>
+<h2 id="related-resources">Related Resources</h2>
 
 <ul>
 <li><a href="/blog/option-pool-dilution-impact-founders">Option Pool Dilution Impact on Founders: Complete Guide</a></li>
@@ -609,13 +700,30 @@ export default function FounderVestingSchedules4Year1YearCliffBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/co-founder-equity-split-50-50-alternatives/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Co-Founder Equity Split: Why 50/50 Fails and Better Alternatives</span>
+                </Link>
+                <Link href="/blog/early-employee-equity-calculator-guide/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Early Employee Equity Calculator: How Much to Offer Guide</span>
+                </Link>
+                <Link href="/blog/option-pool-dilution-impact-founders/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Option Pool Dilution Impact on Founders: Complete Guide</span>
+                </Link>
+                <Link href="/blog/equity-split-technical-vs-business-cofounder/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Equity Split: Technical vs Business Co-Founder Guide</span>
+                </Link>
+                <Link href="/blog/how-to-calculate-safe-dilution/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Calculate SAFE Dilution: A Founder's Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/vesting-calculator-seed-serial-entrepreneur-boston-plan-founder-vesting-protect-against-co-founder-departure/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Vesting Calculator</Link>
+              <Link href="/blog/equity-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Equity, Vesting & Option Pool Guides</Link>
             </div>
           </div>
         </section>
@@ -625,18 +733,18 @@ export default function FounderVestingSchedules4Year1YearCliffBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Plan Your Vesting Schedule
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Visualize vesting timelines, cliff dates, and acceleration scenarios for founders and employees.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/vesting-schedule-cliff-explorer/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Vesting Calculator &rarr;
               </a>
             </div>
           </div>

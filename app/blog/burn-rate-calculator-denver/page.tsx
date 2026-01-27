@@ -114,8 +114,26 @@ export default function BurnRateCalculatorDenverBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-denver-startups-need-a-specialized-burn-rate-calculator" className="text-blue-600 hover:text-blue-700 text-sm">Why Denver Startups Need a Specialized Burn Rate Calculator</a></li>
+                  <li><a href="#understanding-burn-rate-the-critical-metric-for-denver-found" className="text-blue-600 hover:text-blue-700 text-sm">Understanding Burn Rate: The Critical Metric for Denver Founders</a></li>
+                  <li><a href="#denvers-cost-advantages-real-numbers-for-real-startups" className="text-blue-600 hover:text-blue-700 text-sm">Denver's Cost Advantages: Real Numbers for Real Startups</a></li>
+                  <li><a href="#how-to-calculate-your-denver-startups-burn-rate" className="text-blue-600 hover:text-blue-700 text-sm">How to Calculate Your Denver Startup's Burn Rate</a></li>
+                  <li><a href="#denver-specific-burn-rate-benchmarks-by-stage" className="text-blue-600 hover:text-blue-700 text-sm">Denver-Specific Burn Rate Benchmarks by Stage</a></li>
+                  <li><a href="#denvers-startup-ecosystem-resources-for-managing-burn-rate" className="text-blue-600 hover:text-blue-700 text-sm">Denver's Startup Ecosystem: Resources for Managing Burn Rate</a></li>
+                  <li><a href="#industry-specific-burn-rate-considerations-in-denver" className="text-blue-600 hover:text-blue-700 text-sm">Industry-Specific Burn Rate Considerations in Denver</a></li>
+                  <li><a href="#strategies-to-reduce-burn-rate-in-denvers-market" className="text-blue-600 hover:text-blue-700 text-sm">Strategies to Reduce Burn Rate in Denver's Market</a></li>
+                  <li><a href="#when-to-raise-your-next-round-denver-timing-considerations" className="text-blue-600 hover:text-blue-700 text-sm">When to Raise Your Next Round: Denver Timing Considerations</a></li>
+                  <li><a href="#red-flags-signs-your-burn-rate-is-unsustainable" className="text-blue-600 hover:text-blue-700 text-sm">Red Flags: Signs Your Burn Rate Is Unsustainable</a></li>
+                  <li><a href="#calculate-your-burn-rate-with-denver-specific-assumptions" className="text-blue-600 hover:text-blue-700 text-sm">Calculate Your Burn Rate with Denver-Specific Assumptions</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +144,7 @@ export default function BurnRateCalculatorDenverBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why Denver Startups Need a Specialized Burn Rate Calculator</h2>
+                <h2 id="why-denver-startups-need-a-specialized-burn-rate-calculator">Why Denver Startups Need a Specialized Burn Rate Calculator</h2>
 
 <p>Denver has emerged as one of America's most attractive startup ecosystems, offering a compelling combination of lower operating costs, exceptional quality of life, and access to talented engineers who are increasingly choosing Colorado over traditional tech hubs. If you're building a startup in Denver—whether you're developing software, outdoor recreation technology, cannabis tech, or aerospace innovations—understanding your burn rate with Denver-specific costs is essential for sustainable growth.</p>
 
@@ -134,7 +152,7 @@ export default function BurnRateCalculatorDenverBlogPost() {
 
 <p>Denver's tech ecosystem has matured significantly, with established accelerators like <strong>Techstars Boulder</strong>, <strong>Galvanize</strong>, and <strong>Boomtown Accelerator</strong> providing structured support. Local venture capital firms including <strong>Access Venture Partners</strong>, <strong>Ridgeline Ventures</strong>, and <strong>Colorado Impact Fund</strong> understand the regional market dynamics and can provide realistic benchmarks for your financial planning. Using a burn rate calculator calibrated to Denver's cost structure helps you communicate credibly with these local investors who expect founders to understand their regional advantages.</p>
 
-<h2>Understanding Burn Rate: The Critical Metric for Denver Founders</h2>
+<h2 id="understanding-burn-rate-the-critical-metric-for-denver-found">Understanding Burn Rate: The Critical Metric for Denver Founders</h2>
 
 <p>Burn rate measures how much cash your startup spends each month. There are two types to track:</p>
 
@@ -147,7 +165,7 @@ export default function BurnRateCalculatorDenverBlogPost() {
 
 <p>Your <strong>runway</strong> is calculated by dividing your current cash balance by your monthly net burn rate. If you have $500,000 in the bank and burn $50,000 monthly, you have 10 months of runway. Denver's cost advantages mean you can often achieve 15-18 months of runway with the same capital that would provide only 10-12 months in San Francisco.</p>
 
-<h2>Denver's Cost Advantages: Real Numbers for Real Startups</h2>
+<h2 id="denvers-cost-advantages-real-numbers-for-real-startups">Denver's Cost Advantages: Real Numbers for Real Startups</h2>
 
 <p>Denver offers substantial cost savings across every category of startup expenses:</p>
 
@@ -176,7 +194,21 @@ export default function BurnRateCalculatorDenverBlogPost() {
 
 <p>The city's outdoor recreation access—with world-class skiing 90 minutes away and hundreds of hiking trails within 30 minutes—creates a lifestyle value that many engineers explicitly seek out, making Denver an easier recruiting market despite slightly lower salaries than coastal hubs.</p>
 
-<h2>How to Calculate Your Denver Startup's Burn Rate</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Calculate Your Burn Rate & Runway</p>
+                <p className="text-gray-600 mb-4">Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.</p>
+                <a
+                  href="https://icanpitch.com/burn-rate-runway-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Burn Rate Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="how-to-calculate-your-denver-startups-burn-rate">How to Calculate Your Denver Startup's Burn Rate</h2>
 
 <p>Follow this step-by-step process to calculate your burn rate accurately:</p>
 
@@ -235,7 +267,7 @@ export default function BurnRateCalculatorDenverBlogPost() {
 
 <p>This gives you 14 months to reach profitability or raise your next round—a comfortable timeline for a seed-stage startup.</p>
 
-<h2>Denver-Specific Burn Rate Benchmarks by Stage</h2>
+<h2 id="denver-specific-burn-rate-benchmarks-by-stage">Denver-Specific Burn Rate Benchmarks by Stage</h2>
 
 <p>Understanding typical burn rates for Denver startups at different stages helps you assess whether your spending is reasonable:</p>
 
@@ -275,7 +307,7 @@ export default function BurnRateCalculatorDenverBlogPost() {
 
 <p>By Series A, Denver startups often adopt hybrid models with distributed teams across Colorado and other states, leveraging the city's central location and mountain time zone to collaborate effectively with both coasts.</p>
 
-<h2>Denver's Startup Ecosystem: Resources for Managing Burn Rate</h2>
+<h2 id="denvers-startup-ecosystem-resources-for-managing-burn-rate">Denver's Startup Ecosystem: Resources for Managing Burn Rate</h2>
 
 <p>Denver offers robust support infrastructure for startups focused on financial discipline:</p>
 
@@ -295,7 +327,7 @@ export default function BurnRateCalculatorDenverBlogPost() {
 
 <p><strong>Colorado Impact Fund</strong> targets startups creating positive social and environmental impact alongside financial returns—particularly relevant for Denver's strong outdoor recreation and sustainability-focused startup community.</p>
 
-<h2>Industry-Specific Burn Rate Considerations in Denver</h2>
+<h2 id="industry-specific-burn-rate-considerations-in-denver">Industry-Specific Burn Rate Considerations in Denver</h2>
 
 <h3>Software and SaaS Startups</h3>
 
@@ -345,7 +377,7 @@ export default function BurnRateCalculatorDenverBlogPost() {
 <li>Potential partnerships with prime contractors headquartered in Colorado</li>
 </ul>
 
-<h2>Strategies to Reduce Burn Rate in Denver's Market</h2>
+<h2 id="strategies-to-reduce-burn-rate-in-denvers-market">Strategies to Reduce Burn Rate in Denver's Market</h2>
 
 <h3>Optimize Your Talent Strategy</h3>
 
@@ -390,7 +422,7 @@ export default function BurnRateCalculatorDenverBlogPost() {
 <li>Price products appropriately from day one rather than relying on future price increases</li>
 </ul>
 
-<h2>When to Raise Your Next Round: Denver Timing Considerations</h2>
+<h2 id="when-to-raise-your-next-round-denver-timing-considerations">When to Raise Your Next Round: Denver Timing Considerations</h2>
 
 <p>Denver startups should begin fundraising conversations when they have 9-12 months of runway remaining. Colorado's venture ecosystem is smaller than coastal markets, meaning fundraising can take 4-6 months from first conversation to closed round (versus 3-4 months in San Francisco where you may encounter investors more organically).</p>
 
@@ -413,7 +445,7 @@ export default function BurnRateCalculatorDenverBlogPost() {
 <li>Team of 15-25 with experienced leaders in key functions</li>
 </ul>
 
-<h2>Red Flags: Signs Your Burn Rate Is Unsustainable</h2>
+<h2 id="red-flags-signs-your-burn-rate-is-unsustainable">Red Flags: Signs Your Burn Rate Is Unsustainable</h2>
 
 <p>Watch for these warning signals:</p>
 
@@ -428,7 +460,7 @@ export default function BurnRateCalculatorDenverBlogPost() {
 
 <p>If you notice these patterns, take immediate action: cut non-essential expenses, freeze hiring, explore bridge financing, or consider strategic alternatives like partnerships or acquisition.</p>
 
-<h2>Calculate Your Burn Rate with Denver-Specific Assumptions</h2>
+<h2 id="calculate-your-burn-rate-with-denver-specific-assumptions">Calculate Your Burn Rate with Denver-Specific Assumptions</h2>
 
 <p>Ready to calculate your startup's burn rate with accurate Denver market assumptions? Use a specialized burn rate calculator that incorporates Colorado-specific costs including Denver engineering salaries, realistic office expenses, and regional tax implications.</p>
 
@@ -458,13 +490,30 @@ export default function BurnRateCalculatorDenverBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/burn-rate-calculator-amsterdam/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Amsterdam Burn Rate Calculator: Master Your Startup Cash Runway in Europe's Tech Hub</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-barcelona/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Barcelona Burn Rate Calculator: Master Cash Runway for Spanish Startups</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-dublin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Dublin Burn Rate Calculator: Track Your Startup's Monthly Cash Flow in EUR</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-miami/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Miami Burn Rate Calculator: Track Your Startup Runway in South Florida's Tech Hub</span>
+                </Link>
+                <Link href="/blog/safe-calculator-denver/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Denver SAFE Calculator: Navigate Startup Valuations in Colorado's Growing Tech Ecosystem</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/burn-rate-calculator-series-a-first-time-founder-new-york-plan-fundraising-timeline-extend-runway-efficiency/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Burn Rate Calculator</Link>
+              <Link href="/blog/burn-rate-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Burn Rate & Runway Guides</Link>
             </div>
           </div>
         </section>
@@ -474,18 +523,18 @@ export default function BurnRateCalculatorDenverBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Calculate Your Burn Rate & Runway
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/burn-rate-runway-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Burn Rate Calculator &rarr;
               </a>
             </div>
           </div>

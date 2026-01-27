@@ -114,8 +114,26 @@ export default function ProRataCalculatorSiliconValleyBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#what-are-pro-rata-rights-and-why-do-silicon-valley-investors" className="text-blue-600 hover:text-blue-700 text-sm">What Are Pro-Rata Rights and Why Do Silicon Valley Investors Demand Them?</a></li>
+                  <li><a href="#how-pro-rata-rights-work-in-silicon-valley-series-a-and-seri" className="text-blue-600 hover:text-blue-700 text-sm">How Pro-Rata Rights Work in Silicon Valley Series A and Series B Rounds</a></li>
+                  <li><a href="#calculating-your-pro-rata-allocation-silicon-valley-method" className="text-blue-600 hover:text-blue-700 text-sm">Calculating Your Pro-Rata Allocation: Silicon Valley Method</a></li>
+                  <li><a href="#silicon-valley-investor-expectations-on-pro-rata-rights" className="text-blue-600 hover:text-blue-700 text-sm">Silicon Valley Investor Expectations on Pro-Rata Rights</a></li>
+                  <li><a href="#negotiating-pro-rata-rights-in-silicon-valley-founder-tactic" className="text-blue-600 hover:text-blue-700 text-sm">Negotiating Pro-Rata Rights in Silicon Valley: Founder Tactics</a></li>
+                  <li><a href="#common-pro-rata-mistakes-silicon-valley-founders-make" className="text-blue-600 hover:text-blue-700 text-sm">Common Pro-Rata Mistakes Silicon Valley Founders Make</a></li>
+                  <li><a href="#pro-rata-rights-calculator-building-your-own-model" className="text-blue-600 hover:text-blue-700 text-sm">Pro-Rata Rights Calculator: Building Your Own Model</a></li>
+                  <li><a href="#how-pro-rata-rights-impact-your-silicon-valley-exit-strategy" className="text-blue-600 hover:text-blue-700 text-sm">How Pro-Rata Rights Impact Your Silicon Valley Exit Strategy</a></li>
+                  <li><a href="#advanced-pro-rata-structures-pay-to-play-and-anti-dilution" className="text-blue-600 hover:text-blue-700 text-sm">Advanced Pro-Rata Structures: Pay-to-Play and Anti-Dilution</a></li>
+                  <li><a href="#resources-for-silicon-valley-founders" className="text-blue-600 hover:text-blue-700 text-sm">Resources for Silicon Valley Founders</a></li>
+                  <li><a href="#key-takeaways-for-silicon-valley-founders" className="text-blue-600 hover:text-blue-700 text-sm">Key Takeaways for Silicon Valley Founders</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +144,7 @@ export default function ProRataCalculatorSiliconValleyBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>What Are Pro-Rata Rights and Why Do Silicon Valley Investors Demand Them?</h2>
+                <h2 id="what-are-pro-rata-rights-and-why-do-silicon-valley-investors">What Are Pro-Rata Rights and Why Do Silicon Valley Investors Demand Them?</h2>
 
 <p>Pro-rata rights give investors the option to maintain their ownership percentage in your startup by participating in future funding rounds. In Silicon Valley, where competition for the best deals is fierce and valuations climb rapidly between rounds, these rights have become a standard negotiation point that can significantly impact your cap table strategy.</p>
 
@@ -134,7 +152,7 @@ export default function ProRataCalculatorSiliconValleyBlogPost() {
 
 <p>When a Silicon Valley VC like Sequoia, Andreessen Horowitz, or Benchmark invests $500K in your seed round at a $10M post-money valuation, they own 5% of your company. If you raise a Series A at a $40M post-money valuation and they exercise their pro-rata rights, they can invest an additional $2M to maintain that 5% ownership. Without pro-rata, their stake would dilute to approximately 1.25% in the new round.</p>
 
-<h2>How Pro-Rata Rights Work in Silicon Valley Series A and Series B Rounds</h2>
+<h2 id="how-pro-rata-rights-work-in-silicon-valley-series-a-and-seri">How Pro-Rata Rights Work in Silicon Valley Series A and Series B Rounds</h2>
 
 <p>The mechanics of pro-rata rights become particularly important as your startup progresses through funding stages in the Bay Area ecosystem. Understanding how these rights operate at each stage helps you forecast dilution, plan your fundraising strategy, and negotiate effectively with both existing and new investors.</p>
 
@@ -169,7 +187,7 @@ export default function ProRataCalculatorSiliconValleyBlogPost() {
 
 <p>This is why many Silicon Valley founders negotiate "standard" rather than "full" pro-rata rights at seed and Series A, preserving flexibility for later rounds.</p>
 
-<h2>Calculating Your Pro-Rata Allocation: Silicon Valley Method</h2>
+<h2 id="calculating-your-pro-rata-allocation-silicon-valley-method">Calculating Your Pro-Rata Allocation: Silicon Valley Method</h2>
 
 <p>Silicon Valley investors have developed standardized approaches to calculating pro-rata allocations that differ slightly from practices in other ecosystems. Understanding these calculations helps you model scenarios and negotiate intelligently.</p>
 
@@ -220,7 +238,21 @@ export default function ProRataCalculatorSiliconValleyBlogPost() {
 
 <p>In this scenario, NEA would get slightly more than their target 20% because existing investors aren't filling the entire round. This is typical in Silicon Valley, where new leads often benefit from some existing investors choosing not to exercise their full pro-rata.</p>
 
-<h2>Silicon Valley Investor Expectations on Pro-Rata Rights</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Pro-Rata Participation</p>
+                <p className="text-gray-600 mb-4">See how investor follow-on rights affect your cap table in future fundraising rounds.</p>
+                <a
+                  href="https://icanpitch.com/pro-rata-rights-impact-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Pro-Rata Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="silicon-valley-investor-expectations-on-pro-rata-rights">Silicon Valley Investor Expectations on Pro-Rata Rights</h2>
 
 <p>Understanding what different types of Bay Area investors expect regarding pro-rata rights helps you negotiate effectively and avoid surprises during term sheet discussions.</p>
 
@@ -260,7 +292,7 @@ export default function ProRataCalculatorSiliconValleyBlogPost() {
 
 <p>The general pattern: corporate VCs with dedicated funds (GV, Salesforce) behave like traditional VCs regarding pro-rata, while strategic arms of operating companies (Intel, Cisco) are more flexible and selective about follow-on investments.</p>
 
-<h2>Negotiating Pro-Rata Rights in Silicon Valley: Founder Tactics</h2>
+<h2 id="negotiating-pro-rata-rights-in-silicon-valley-founder-tactic">Negotiating Pro-Rata Rights in Silicon Valley: Founder Tactics</h2>
 
 <p>Pro-rata rights are negotiable, especially at seed stage. Silicon Valley founders have developed effective tactics for structuring these rights to preserve future fundraising flexibility while keeping investors motivated and aligned.</p>
 
@@ -301,7 +333,7 @@ export default function ProRataCalculatorSiliconValleyBlogPost() {
 
 <p>YC-backed companies often negotiate hard on MFN clauses because they close multiple SAFE tranches at increasing valuations. Trading MFN for pro-rata can be advantageous if you plan to raise your Series A within 12-18 months.</p>
 
-<h2>Common Pro-Rata Mistakes Silicon Valley Founders Make</h2>
+<h2 id="common-pro-rata-mistakes-silicon-valley-founders-make">Common Pro-Rata Mistakes Silicon Valley Founders Make</h2>
 
 <p>Even experienced founders stumble on pro-rata rights provisions. Here are the most expensive mistakes and how to avoid them:</p>
 
@@ -339,7 +371,7 @@ export default function ProRataCalculatorSiliconValleyBlogPost() {
 
 <p><strong>Solution:</strong> Always document pro-rata rights in your SAFE, convertible note, or equity documents. Use clear language specifying: exact percentage of pro-rata (100%, 50%, etc.), which future rounds it applies to, any conditions or limitations, and expiration or termination provisions.</p>
 
-<h2>Pro-Rata Rights Calculator: Building Your Own Model</h2>
+<h2 id="pro-rata-rights-calculator-building-your-own-model">Pro-Rata Rights Calculator: Building Your Own Model</h2>
 
 <p>Understanding the theory is valuable, but Silicon Valley founders need practical tools to model scenarios. Here's how to build a simple pro-rata calculator in a spreadsheet:</p>
 
@@ -374,7 +406,7 @@ export default function ProRataCalculatorSiliconValleyBlogPost() {
 
 <p>This model lets you test scenarios like "What if only 50% of seed investors exercise pro-rata?" or "What happens if my Series A lead wants 25% instead of 20%?"</p>
 
-<h2>How Pro-Rata Rights Impact Your Silicon Valley Exit Strategy</h2>
+<h2 id="how-pro-rata-rights-impact-your-silicon-valley-exit-strategy">How Pro-Rata Rights Impact Your Silicon Valley Exit Strategy</h2>
 
 <p>Pro-rata rights don't just affect your fundraising rounds—they significantly impact your eventual exit, whether through acquisition or IPO.</p>
 
@@ -400,7 +432,7 @@ export default function ProRataCalculatorSiliconValleyBlogPost() {
 <li><strong>Price per share basis:</strong> Investors who exercised pro-rata have a blended cost basis across multiple rounds, affecting their selling decisions post-IPO</li>
 </ul>
 
-<h2>Advanced Pro-Rata Structures: Pay-to-Play and Anti-Dilution</h2>
+<h2 id="advanced-pro-rata-structures-pay-to-play-and-anti-dilution">Advanced Pro-Rata Structures: Pay-to-Play and Anti-Dilution</h2>
 
 <p>Silicon Valley term sheets often combine pro-rata rights with other protective provisions. Understanding these combinations helps you negotiate more effectively.</p>
 
@@ -428,7 +460,7 @@ export default function ProRataCalculatorSiliconValleyBlogPost() {
 
 <p>Example: An investor owns 10% with full ratchet anti-dilution. You raise a down round that triggers anti-dilution, increasing their ownership to 15%. In the next round, their pro-rata allocation is calculated based on 15%, not 10%—a significant difference on a $30M+ round.</p>
 
-<h2>Resources for Silicon Valley Founders</h2>
+<h2 id="resources-for-silicon-valley-founders">Resources for Silicon Valley Founders</h2>
 
 <p>Mastering pro-rata rights requires ongoing education and access to the right tools. Here are essential resources used by Bay Area founders:</p>
 
@@ -440,7 +472,7 @@ export default function ProRataCalculatorSiliconValleyBlogPost() {
 <li><strong>Holloway Equity Compensation Guide:</strong> Comprehensive guide to equity and pro-rata rights at <a href="https://www.holloway.com/g/equity-compensation" target="_blank" rel="noopener noreferrer">holloway.com/g/equity-compensation</a></li>
 </ul>
 
-<h2>Key Takeaways for Silicon Valley Founders</h2>
+<h2 id="key-takeaways-for-silicon-valley-founders">Key Takeaways for Silicon Valley Founders</h2>
 
 <p>Pro-rata rights are a standard component of institutional venture investment in Silicon Valley, but they require careful negotiation and strategic planning:</p>
 
@@ -476,13 +508,31 @@ export default function ProRataCalculatorSiliconValleyBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/pro-rata-calculator-new-york/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pro-Rata Rights Calculator for New York City Startups (2025)</span>
+                </Link>
+                <Link href="/blog/pro-rata-calculator-berlin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pro-Rata Rights Calculator for Berlin Startups (2025)</span>
+                </Link>
+                <Link href="/blog/pro-rata-calculator-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pro-Rata Rights Calculator for London Startups (2025)</span>
+                </Link>
+                <Link href="/blog/pro-rata-calculator-singapore/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pro-Rata Rights Calculator for Singapore Startups (2025)</span>
+                </Link>
+                <Link href="/blog/safe-calculator-ai-ml-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">AI/ML SAFE Calculator Silicon Valley: 2025 Valuation Benchmarks for Foundation Models vs Application Layer</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/pro-rata-calculator-series-b-business-founder-chicago-model-future-dilution-plan-investor-rights/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Pro Rata Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/exit-strategy-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Exit & Pro-Rata Guides</Link>
             </div>
           </div>
         </section>
@@ -492,18 +542,18 @@ export default function ProRataCalculatorSiliconValleyBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Pro-Rata Participation
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See how investor follow-on rights affect your cap table in future fundraising rounds.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/pro-rata-rights-impact-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Pro-Rata Calculator &rarr;
               </a>
             </div>
           </div>

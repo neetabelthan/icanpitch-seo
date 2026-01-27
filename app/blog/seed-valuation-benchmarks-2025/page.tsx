@@ -114,8 +114,27 @@ export default function SeedValuationBenchmarks2025BlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#understanding-seed-valuations-in-2025" className="text-blue-600 hover:text-blue-700 text-sm">Understanding Seed Valuations in 2025</a></li>
+                  <li><a href="#seed-valuation-ranges-by-geography-2025" className="text-blue-600 hover:text-blue-700 text-sm">Seed Valuation Ranges by Geography (2025)</a></li>
+                  <li><a href="#seed-valuation-by-traction-level-2025" className="text-blue-600 hover:text-blue-700 text-sm">Seed Valuation by Traction Level (2025)</a></li>
+                  <li><a href="#seed-valuation-by-industry-2025" className="text-blue-600 hover:text-blue-700 text-sm">Seed Valuation by Industry (2025)</a></li>
+                  <li><a href="#seed-round-structures-post-money-safes-vs-priced-rounds" className="text-blue-600 hover:text-blue-700 text-sm">Seed Round Structures: Post-Money SAFEs vs. Priced Rounds</a></li>
+                  <li><a href="#seed-dilution-and-cap-table-management" className="text-blue-600 hover:text-blue-700 text-sm">Seed Dilution and Cap Table Management</a></li>
+                  <li><a href="#revenue-requirements-by-seed-valuation-tier" className="text-blue-600 hover:text-blue-700 text-sm">Revenue Requirements by Seed Valuation Tier</a></li>
+                  <li><a href="#what-seed-investors-evaluate-in-2025" className="text-blue-600 hover:text-blue-700 text-sm">What Seed Investors Evaluate in 2025</a></li>
+                  <li><a href="#common-seed-valuation-mistakes" className="text-blue-600 hover:text-blue-700 text-sm">Common Seed Valuation Mistakes</a></li>
+                  <li><a href="#how-to-increase-your-seed-valuation" className="text-blue-600 hover:text-blue-700 text-sm">How to Increase Your Seed Valuation</a></li>
+                  <li><a href="#seed-valuation-benchmarks-key-takeaways" className="text-blue-600 hover:text-blue-700 text-sm">Seed Valuation Benchmarks: Key Takeaways</a></li>
+                  <li><a href="#model-your-seed-valuation-and-cap-table" className="text-blue-600 hover:text-blue-700 text-sm">Model Your Seed Valuation and Cap Table</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,13 +145,13 @@ export default function SeedValuationBenchmarks2025BlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Understanding Seed Valuations in 2025</h2>
+                <h2 id="understanding-seed-valuations-in-2025">Understanding Seed Valuations in 2025</h2>
 
 <p>Seed valuations have stabilized after the 2022-2023 market correction, settling into a more rational range based on traction, team quality, and market opportunity. Unlike pre-seed, where investors bet primarily on founders and vision, seed-stage investors expect demonstrable product-market fit, early revenue or strong user metrics, and clear paths to Series A milestones.</p>
 
 <p>According to <a href="https://www.carta.com" target="_blank" rel="noopener noreferrer">Carta's</a> Q4 2024 Seed Report, median seed valuations now range from $8 million to $15 million post-money, with significant variation by geography, industry, traction level, and competitive dynamics. This represents healthy compression from 2021 peaks ($12M-$20M medians) but sustainable levels that allow for meaningful Series A step-ups.</p>
 
-<h2>Seed Valuation Ranges by Geography (2025)</h2>
+<h2 id="seed-valuation-ranges-by-geography-2025">Seed Valuation Ranges by Geography (2025)</h2>
 
 <h3>San Francisco Bay Area</h3>
 
@@ -184,7 +203,7 @@ export default function SeedValuationBenchmarks2025BlogPost() {
 
 <p>LatAm seed valuations have grown significantly, especially for fintech and marketplace companies addressing large local markets. Top companies in Sao Paulo, Mexico City, and Buenos Aires now reach $6M-$8M post-money with strong traction.</p>
 
-<h2>Seed Valuation by Traction Level (2025)</h2>
+<h2 id="seed-valuation-by-traction-level-2025">Seed Valuation by Traction Level (2025)</h2>
 
 <p>Traction drives valuation more than any other factor at seed stage:</p>
 
@@ -224,7 +243,21 @@ export default function SeedValuationBenchmarks2025BlogPost() {
 
 <p>According to <a href="https://www.nfx.com" target="_blank" rel="noopener noreferrer">NFX research</a>, approximately 15-20% of seed-stage companies fall into this category, typically in competitive markets where founders want to move quickly.</p>
 
-<h2>Seed Valuation by Industry (2025)</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Understand Your Valuation</p>
+                <p className="text-gray-600 mb-4">See how pre-money valuation, investment amount, and post-money relate to ownership percentages.</p>
+                <a
+                  href="https://icanpitch.com/pre-post-money-valuation-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Valuation Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="seed-valuation-by-industry-2025">Seed Valuation by Industry (2025)</h2>
 
 <h3>B2B SaaS</h3>
 
@@ -296,7 +329,7 @@ export default function SeedValuationBenchmarks2025BlogPost() {
 
 <p>Deep tech companies (advanced materials, biotech, quantum) raise larger seed rounds ($2M-$5M) at moderate valuations, understanding the capital will fund 24-30 month runways to reach Series A milestones.</p>
 
-<h2>Seed Round Structures: Post-Money SAFEs vs. Priced Rounds</h2>
+<h2 id="seed-round-structures-post-money-safes-vs-priced-rounds">Seed Round Structures: Post-Money SAFEs vs. Priced Rounds</h2>
 
 <h3>Post-Money SAFE Dominance</h3>
 
@@ -326,7 +359,7 @@ export default function SeedValuationBenchmarks2025BlogPost() {
   <li><strong>Option pool:</strong> 10-15% fully diluted, refreshed at seed</li>
 </ul>
 
-<h2>Seed Dilution and Cap Table Management</h2>
+<h2 id="seed-dilution-and-cap-table-management">Seed Dilution and Cap Table Management</h2>
 
 <p>Typical dilution at seed ranges from 15% to 25%, with most rounds settling around 18-20%.</p>
 
@@ -356,7 +389,7 @@ export default function SeedValuationBenchmarks2025BlogPost() {
 
 <p>Great seed investors provide: customer introductions, Series A warm intros, strategic advice, talent referrals, and operational support. This value often exceeds the cost of an extra 2-3% dilution.</p>
 
-<h2>Revenue Requirements by Seed Valuation Tier</h2>
+<h2 id="revenue-requirements-by-seed-valuation-tier">Revenue Requirements by Seed Valuation Tier</h2>
 
 <p>For B2B SaaS companies, here's the ARR expected at different valuation levels:</p>
 
@@ -378,7 +411,7 @@ export default function SeedValuationBenchmarks2025BlogPost() {
 
 <p>Top-tier seed valuations for companies with exceptional traction, hot markets, or competitive fundraising processes. Many could raise Series A but prefer seed structures for speed.</p>
 
-<h2>What Seed Investors Evaluate in 2025</h2>
+<h2 id="what-seed-investors-evaluate-in-2025">What Seed Investors Evaluate in 2025</h2>
 
 <h3>1. Product-Market Fit Evidence</h3>
 
@@ -404,7 +437,7 @@ export default function SeedValuationBenchmarks2025BlogPost() {
 
 <p>Investors evaluate whether you can realistically reach Series A metrics ($1M-$3M ARR, strong growth) within 18-24 months. Unclear paths to Series A result in lower seed valuations or passed opportunities.</p>
 
-<h2>Common Seed Valuation Mistakes</h2>
+<h2 id="common-seed-valuation-mistakes">Common Seed Valuation Mistakes</h2>
 
 <h3>Mistake 1: Extrapolating 2021 Valuations</h3>
 
@@ -424,7 +457,7 @@ export default function SeedValuationBenchmarks2025BlogPost() {
 
 <p>Many founders don't model how pre-seed, seed, and Series A dilution compound. After three rounds, founders often own 40-50% of their company—less if valuations required more dilution.</p>
 
-<h2>How to Increase Your Seed Valuation</h2>
+<h2 id="how-to-increase-your-seed-valuation">How to Increase Your Seed Valuation</h2>
 
 <h3>1. Build More Traction</h3>
 
@@ -442,7 +475,7 @@ export default function SeedValuationBenchmarks2025BlogPost() {
 
 <p>Fintech investors pay premiums for fintech companies, vertical SaaS investors for vertical plays. Generalist investors discount what they don't understand deeply.</p>
 
-<h2>Seed Valuation Benchmarks: Key Takeaways</h2>
+<h2 id="seed-valuation-benchmarks-key-takeaways">Seed Valuation Benchmarks: Key Takeaways</h2>
 
 <ul>
   <li><strong>Geographic range:</strong> $8M-$15M post-money typical, with SF/NYC 20-40% above other markets</li>
@@ -454,7 +487,7 @@ export default function SeedValuationBenchmarks2025BlogPost() {
   <li><strong>Investor focus:</strong> PMF evidence, unit economics, market size, and Series A readiness</li>
 </ul>
 
-<h2>Model Your Seed Valuation and Cap Table</h2>
+<h2 id="model-your-seed-valuation-and-cap-table">Model Your Seed Valuation and Cap Table</h2>
 
 <p>Use <a href="https://www.icanpitch.com" target="_blank" rel="noopener noreferrer">ICanPitch's valuation and dilution calculator</a> to model different seed valuations, understand dilution across multiple rounds, and benchmark your traction against industry standards. Get data-driven insights to optimize your fundraising strategy and cap table structure.</p>
 
@@ -477,13 +510,30 @@ export default function SeedValuationBenchmarks2025BlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/how-to-calculate-pre-money-valuation-series-a/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Calculate Pre-Money Valuation for Series A</span>
+                </Link>
+                <Link href="/blog/post-money-safe-vs-pre-money-safe-2025/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Post-Money SAFE vs Pre-Money SAFE: Complete 2025 Comparison</span>
+                </Link>
+                <Link href="/blog/post-money-safe-vs-pre-money-safe-explained/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Post-Money SAFE vs Pre-Money SAFE: Complete 2025 Comparison</span>
+                </Link>
+                <Link href="/blog/series-a-valuation-benchmarks-2025/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Series A Valuation Benchmarks 2025: ARR Requirements and Valuation Multiples by Sector</span>
+                </Link>
+                <Link href="/blog/safe-notes-multiple-safes-stacking-guide/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Multiple SAFEs and SAFE Stacking: Complete Founder's Guide (2025)</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/pre-post-money-calculator-series-a-first-time-founder-seattle-understand-valuation-mechanics-negotiate-better-terms/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Pre Post Money Calculator</Link>
+              <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -493,18 +543,18 @@ export default function SeedValuationBenchmarks2025BlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Understand Your Valuation
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See how pre-money valuation, investment amount, and post-money relate to ownership percentages.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/pre-post-money-valuation-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Valuation Calculator &rarr;
               </a>
             </div>
           </div>

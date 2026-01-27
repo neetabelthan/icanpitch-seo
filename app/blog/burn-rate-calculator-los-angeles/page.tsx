@@ -54,6 +54,68 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much should a 10-person LA startup burn monthly?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A typical 10-person LA seed-stage startup burns $120,000-$150,000 monthly including salaries, office, and operating expenses. This assumes 5-6 engineers ($125K-180K each), 2 product/design roles ($110K-145K each), 1-2 commercial roles ($95K-130K each), and operations support. Add 20-30% for entertainment tech companies with content production, creator partnerships, or gaming development costs. The equivalent SF team burns $165,000-$190,000 monthly, representing 18-24% savings in LA."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are typical engineering salaries in Los Angeles versus San Francisco?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mid-level engineers (3-5 years) earn $125,000-$180,000 in LA versus $150,000-$200,000 in SF, representing 12-18% savings. Senior engineers (6+ years) earn $160,000-$240,000 in LA versus $200,000-$280,000 in SF. However, entertainment tech specialists with gaming, video processing, or real-time systems experience command smaller geographic differentials: LA gaming engineers earn $180,000-$240,000 versus SF gaming engineers at $200,000-$260,000, just 9-12% savings due to LA's gaming industry density."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should LA startups use co-working or traditional office space?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Co-working makes financial sense until 12-15 employees. At $340/month per dedicated desk, a 10-person team pays $3,400/month. A comparable 2,000 sqft Culver City office costs $7,482/month but requires $40K-60K in furniture, buildout, and deposits. Co-working provides flexibility for rapid scaling or pivoting. Traditional office becomes cost-competitive at 15+ employees and provides private meeting spaces valuable for entertainment partnerships, brand deals, and studio relationships. Gaming and content production companies often move to traditional office earlier (8-10 people) to accommodate specialized equipment and production workflows."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does California's employment law affect LA startup burn rate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "California imposes employer payroll taxes of 9.65% blended rate (3.4% state unemployment insurance for new employers + 6.2% Social Security + 1.45% Medicare + 0.1% employment training tax). On $1M annual payroll, that's $96,500 in taxes versus $76,200 in Texas (no state unemployment insurance). Additionally, budget 2-3% of payroll for employment law compliance including mandatory paid sick leave (24-40 hours annually), meal and rest break requirements, PAGA exposure, and employment practices liability insurance. The total California employment burden adds 12-15% to base compensation costs versus Texas or Florida."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What burn rate do LA investors expect for seed and Series A startups?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "LA seed investors expect 18-24 months of runway at investment, reflecting the city's lower burn rates and founder-friendly culture. For $3.2M median seed rounds, this implies $130,000-$178,000 monthly burn rates for 10-15 person teams. Series A investors expect 24-30 months of runway from $9-11M rounds, implying $300,000-$460,000 monthly burn for 20-30 person teams. LA investors are 20-30% more profitability-focused than SF peers, expecting clear paths to positive unit economics and cash flow breakeven within 12-18 months of Series B rather than open-ended growth-at-all-costs models."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much should creator economy and entertainment tech companies budget for specialized costs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Creator economy startups budget $10,000-$30,000 monthly for creator partnerships including micro-influencer campaigns ($500-$3,000 per post), ongoing creator relationships ($5,000-$25,000 monthly per exclusive creator), and product seeding programs ($3,000-$15,000 monthly). Entertainment tech companies budget $3,000-$10,000 monthly for specialized legal support (studio contracts, IP licensing, guild navigation), 15-25% salary premiums for entertainment specialists, and production costs. Gaming companies add $5,000-$15,000 monthly for QA and playtesting, plus engine licensing costs ($500-$2,000 monthly). These specialized costs increase total burn by 20-40% versus equivalent SaaS companies but reflect LA's unique market positioning."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cost difference between Santa Monica and other LA startup hubs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Santa Monica commands LA's highest office costs at $75.40/sqft annually ($12,567/month for 2,000 sqft) versus Culver City at $44.89/sqft ($7,482/month), Downtown LA at $44.52/sqft ($7,420/month), and Pasadena at $38-45/sqft ($6,333-$7,500/month). Over 36-month lease, Santa Monica costs $452,412 versus Culver City at $269,352, a $183,060 premium. Co-working shows similar patterns: Santa Monica WeWork runs $550-$820/month versus Pasadena at $350-$450/month. The Santa Monica premium makes sense post-Series A for consumer brands requiring beach city positioning for recruiting and brand partnerships, but represents capital inefficiency for pre-revenue startups."
+        }
+      }
+    ]
   }
 ];
 
@@ -119,8 +181,30 @@ export default function BurnRateCalculatorLosAngelesBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#tldr-los-angeles-burn-rate-calculator-essentials" className="text-blue-600 hover:text-blue-700 text-sm">TL;DR: Los Angeles Burn Rate Calculator Essentials</a></li>
+                  <li><a href="#meet-marcus-johnson-creator-economy-founder-in-venice-beach" className="text-blue-600 hover:text-blue-700 text-sm">Meet Marcus Johnson: Creator Economy Founder in Venice Beach</a></li>
+                  <li><a href="#why-los-angeles-burn-rate-calculations-are-different" className="text-blue-600 hover:text-blue-700 text-sm">Why Los Angeles Burn Rate Calculations Are Different</a></li>
+                  <li><a href="#los-angeles-startup-salary-benchmarks-by-role-2025" className="text-blue-600 hover:text-blue-700 text-sm">Los Angeles Startup Salary Benchmarks by Role (2025)</a></li>
+                  <li><a href="#los-angeles-office-amp-infrastructure-costs" className="text-blue-600 hover:text-blue-700 text-sm">Los Angeles Office &amp; Infrastructure Costs</a></li>
+                  <li><a href="#calculating-your-los-angeles-startup-burn-rate" className="text-blue-600 hover:text-blue-700 text-sm">Calculating Your Los Angeles Startup Burn Rate</a></li>
+                  <li><a href="#los-angeles-cost-advantage-the-specific-savings" className="text-blue-600 hover:text-blue-700 text-sm">Los Angeles Cost Advantage: The Specific Savings</a></li>
+                  <li><a href="#entertainment-tech-amp-creator-economy-las-unique-costs" className="text-blue-600 hover:text-blue-700 text-sm">Entertainment Tech &amp; Creator Economy: LA's Unique Costs</a></li>
+                  <li><a href="#los-angeles-specific-tax-amp-compliance-costs" className="text-blue-600 hover:text-blue-700 text-sm">Los Angeles-Specific Tax &amp; Compliance Costs</a></li>
+                  <li><a href="#los-angeles-venture-capital-amp-funding-dynamics" className="text-blue-600 hover:text-blue-700 text-sm">Los Angeles Venture Capital &amp; Funding Dynamics</a></li>
+                  <li><a href="#optimizing-burn-rate-for-la-ecosystem-advantages" className="text-blue-600 hover:text-blue-700 text-sm">Optimizing Burn Rate for LA Ecosystem Advantages</a></li>
+                  <li><a href="#common-la-burn-rate-mistakes" className="text-blue-600 hover:text-blue-700 text-sm">Common LA Burn Rate Mistakes</a></li>
+                  <li><a href="#los-angeles-burn-rate-calculator-step-by-step-framework" className="text-blue-600 hover:text-blue-700 text-sm">Los Angeles Burn Rate Calculator: Step-by-Step Framework</a></li>
+                  <li><a href="#frequently-asked-questions-la-burn-rate" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions: LA Burn Rate</a></li>
+                  <li><a href="#marcuss-los-angeles-burn-rate-decision" className="text-blue-600 hover:text-blue-700 text-sm">Marcus's Los Angeles Burn Rate Decision</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -131,11 +215,11 @@ export default function BurnRateCalculatorLosAngelesBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>TL;DR: Los Angeles Burn Rate Calculator Essentials</h2>
+                <h2 id="tldr-los-angeles-burn-rate-calculator-essentials">TL;DR: Los Angeles Burn Rate Calculator Essentials</h2>
 
 <p>Los Angeles startups burn 15-25% less capital than San Francisco while accessing the nation's third-largest venture market with $6-7 billion in annual VC funding. Silicon Beach costs are lower across every category: engineer salaries run $100K-310K versus SF's $120K-350K, office space averages $48.72/sqft versus SF's $70+/sqft, and co-working starts at $340/month for dedicated desks. LA's unique advantage lies in entertainment tech convergence, creator economy infrastructure, and D2C brand ecosystems that don't exist anywhere else. The 5,933-startup ecosystem produced 42 unicorns including SpaceX at $350B valuation, proving you can build world-class companies with 20% lower burn rates.</p>
 
-<h2>Meet Marcus Johnson: Creator Economy Founder in Venice Beach</h2>
+<h2 id="meet-marcus-johnson-creator-economy-founder-in-venice-beach">Meet Marcus Johnson: Creator Economy Founder in Venice Beach</h2>
 
 <p>Marcus Johnson sits in a Venice Beach coffee shop watching content creators film TikToks outside. He's building a creator economy platform connecting brands with micro-influencers, and just raised a $3.2M seed round from Upfront Ventures. His cap table spreadsheet shows 18 months of runway, but the math feels wrong.</p>
 
@@ -145,7 +229,7 @@ export default function BurnRateCalculatorLosAngelesBlogPost() {
 
 <p>This is the Los Angeles burn rate calculation challenge: understanding Silicon Beach cost structures, entertainment tech salary premiums, and how to leverage LA's 15-25% cost advantage without sacrificing talent quality or market positioning.</p>
 
-<h2>Why Los Angeles Burn Rate Calculations Are Different</h2>
+<h2 id="why-los-angeles-burn-rate-calculations-are-different">Why Los Angeles Burn Rate Calculations Are Different</h2>
 
 <p>Los Angeles is the only major tech hub where entertainment, gaming, and consumer brands converge with venture-backed technology. This creates unique cost dynamics that don't apply in San Francisco, New York, or Austin.</p>
 
@@ -175,7 +259,21 @@ export default function BurnRateCalculatorLosAngelesBlogPost() {
 
 <p>Your burn rate varies 20-30% based on hub selection. Venice Beach co-working at $340/month per person scales differently than Culver City Class B office at $41.19/sqft for a 2,000 sqft space ($6,865/month).</p>
 
-<h2>Los Angeles Startup Salary Benchmarks by Role (2025)</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Calculate Your Burn Rate & Runway</p>
+                <p className="text-gray-600 mb-4">Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.</p>
+                <a
+                  href="https://icanpitch.com/burn-rate-runway-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Burn Rate Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="los-angeles-startup-salary-benchmarks-by-role-2025">Los Angeles Startup Salary Benchmarks by Role (2025)</h2>
 
 <p>LA salaries reflect the city's unique positioning: 10-20% below San Francisco for most roles, but with entertainment tech premiums for specialized positions. These ranges come from levels.fyi, Built In LA, and Glassdoor 2024 data across 4,000+ venture-backed LA startups.</p>
 
@@ -213,7 +311,7 @@ export default function BurnRateCalculatorLosAngelesBlogPost() {
 
 <p><strong>Recruiter/Talent</strong>: $75,000-$120,000. In-house recruiters for tech roles earn $75K-95K. Senior talent leaders managing high-volume hiring command $110K-140K. Many startups use agencies or fractional recruiters until Series A.</p>
 
-<h2>Los Angeles Office &amp; Infrastructure Costs</h2>
+<h2 id="los-angeles-office-amp-infrastructure-costs">Los Angeles Office &amp; Infrastructure Costs</h2>
 
 <p>LA's multi-hub geography creates more pricing variance than any other US tech ecosystem. Office costs in Santa Monica run 68% higher than Downtown LA, enabling strategic burn rate optimization.</p>
 
@@ -255,7 +353,7 @@ export default function BurnRateCalculatorLosAngelesBlogPost() {
 
 <p><strong>Legal &amp; Compliance</strong>: $2K-5K monthly for seed-stage startups (corporate counsel, contract reviews, employment law). Entertainment tech companies add IP protection, content licensing, SAG-AFTRA navigation, running $4K-8K monthly.</p>
 
-<h2>Calculating Your Los Angeles Startup Burn Rate</h2>
+<h2 id="calculating-your-los-angeles-startup-burn-rate">Calculating Your Los Angeles Startup Burn Rate</h2>
 
 <p>LA burn rate calculation requires modeling three scenarios: lean co-working, balanced traditional office, and premium Silicon Beach positioning. Here's the framework Marcus Johnson uses for his Venice Beach creator economy platform.</p>
 
@@ -349,7 +447,7 @@ export default function BurnRateCalculatorLosAngelesBlogPost() {
 
 <p>Series A rounds in LA average $9.3M-11M (Carta 2024 data). At $10M raised with 20% dilution, this burn rate provides 24.4 months of runway to reach Series B metrics or profitability.</p>
 
-<h2>Los Angeles Cost Advantage: The Specific Savings</h2>
+<h2 id="los-angeles-cost-advantage-the-specific-savings">Los Angeles Cost Advantage: The Specific Savings</h2>
 
 <p>LA's 15-25% cost advantage versus San Francisco manifests differently across budget categories. Understanding where you save most helps optimize hiring and spending decisions.</p>
 
@@ -455,7 +553,7 @@ export default function BurnRateCalculatorLosAngelesBlogPost() {
 
 <p>Over 18 months to Series A, that's $531,000 in capital preservation. The difference between raising $3M and requiring $3.6M, or extending runway by 3.9 additional months.</p>
 
-<h2>Entertainment Tech &amp; Creator Economy: LA's Unique Costs</h2>
+<h2 id="entertainment-tech-amp-creator-economy-las-unique-costs">Entertainment Tech &amp; Creator Economy: LA's Unique Costs</h2>
 
 <p>LA startups in entertainment tech, gaming, and creator economy face specialized costs that don't exist in traditional SaaS markets. Budget for these LA-specific line items.</p>
 
@@ -491,7 +589,7 @@ export default function BurnRateCalculatorLosAngelesBlogPost() {
 
 <p><strong>Social Commerce Tools</strong>: Shopify Plus ($2,000/month), Gorgias customer support ($300-$900/month), Klaviyo email ($500-$2,000/month based on subscribers), paid social creative tools. Budget $4K-8K monthly for D2C commerce stack.</p>
 
-<h2>Los Angeles-Specific Tax &amp; Compliance Costs</h2>
+<h2 id="los-angeles-specific-tax-amp-compliance-costs">Los Angeles-Specific Tax &amp; Compliance Costs</h2>
 
 <p>California imposes the nation's highest state taxes and most complex employment regulations. LA startups must budget 15-25% more for compliance than Texas or Florida counterparts.</p>
 
@@ -533,7 +631,7 @@ export default function BurnRateCalculatorLosAngelesBlogPost() {
 
 <p><strong>Sales Tax</strong>: 9.5% combined state/county/city rate (as of 2024). Applies to tangible goods, not SaaS subscriptions. D2C companies collect and remit monthly.</p>
 
-<h2>Los Angeles Venture Capital &amp; Funding Dynamics</h2>
+<h2 id="los-angeles-venture-capital-amp-funding-dynamics">Los Angeles Venture Capital &amp; Funding Dynamics</h2>
 
 <p>LA's $6-7B annual VC market (third-largest in US) follows different funding patterns than SF. Understanding LA capital dynamics affects burn rate strategy.</p>
 
@@ -563,7 +661,7 @@ export default function BurnRateCalculatorLosAngelesBlogPost() {
 
 <p><strong>Market Leadership</strong>: LA's startup culture values category creation over incremental innovation. Investors want "only in LA" stories: entertainment tech convergence, creator economy platforms, D2C brand innovation. Position your company as possible only in LA ecosystem.</p>
 
-<h2>Optimizing Burn Rate for LA Ecosystem Advantages</h2>
+<h2 id="optimizing-burn-rate-for-la-ecosystem-advantages">Optimizing Burn Rate for LA Ecosystem Advantages</h2>
 
 <p>Smart LA founders optimize burn rate around ecosystem-specific advantages: entertainment crossover, creator partnerships, lower costs, and differentiated talent.</p>
 
@@ -597,7 +695,7 @@ export default function BurnRateCalculatorLosAngelesBlogPost() {
 
 <p><strong>LA Advantage</strong>: Lower burn rates give LA startups 2-4 extra months of runway versus SF equivalents. Use this buffer for product iteration, partnership development, or extended Series A fundraising cycles.</p>
 
-<h2>Common LA Burn Rate Mistakes</h2>
+<h2 id="common-la-burn-rate-mistakes">Common LA Burn Rate Mistakes</h2>
 
 <p>LA founders make predictable burn rate errors that SF or NYC founders avoid. Learn from 5,933 LA startups' mistakes.</p>
 
@@ -631,7 +729,7 @@ export default function BurnRateCalculatorLosAngelesBlogPost() {
 
 <p><strong>Fix</strong>: Align burn rate with LA market expectations. LA Series A investors expect 18-24 month runways and profitability paths, not 12-15 month hypergrowth sprints. Burn at $120K-150K monthly for 10-person team and extend runway by 8-12 months.</p>
 
-<h2>Los Angeles Burn Rate Calculator: Step-by-Step Framework</h2>
+<h2 id="los-angeles-burn-rate-calculator-step-by-step-framework">Los Angeles Burn Rate Calculator: Step-by-Step Framework</h2>
 
 <p>Use this framework to calculate your LA-specific burn rate with entertainment tech considerations and geographic optimization.</p>
 
@@ -693,7 +791,7 @@ export default function BurnRateCalculatorLosAngelesBlogPost() {
 
 <p>Conservative extends runway but may miss growth windows. Aggressive maximizes growth but risks running out of cash before Series A metrics. Most LA companies optimize for conservative path with 20-25% contingency buffer.</p>
 
-<h2>Frequently Asked Questions: LA Burn Rate</h2>
+<h2 id="frequently-asked-questions-la-burn-rate">Frequently Asked Questions: LA Burn Rate</h2>
 
 <h3>How much should a 10-person LA startup burn monthly?</h3>
 
@@ -723,7 +821,7 @@ export default function BurnRateCalculatorLosAngelesBlogPost() {
 
 <p>Santa Monica commands LA's highest office costs at $75.40/sqft annually ($12,567/month for 2,000 sqft) versus Culver City at $44.89/sqft ($7,482/month), Downtown LA at $44.52/sqft ($7,420/month), and Pasadena at $38-45/sqft ($6,333-$7,500/month). Over 36-month lease, Santa Monica costs $452,412 versus Culver City at $269,352, a $183,060 premium. Co-working shows similar patterns: Santa Monica WeWork runs $550-$820/month versus Pasadena at $350-$450/month. The Santa Monica premium makes sense post-Series A for consumer brands requiring beach city positioning for recruiting and brand partnerships, but represents capital inefficiency for pre-revenue startups.</p>
 
-<h2>Marcus's Los Angeles Burn Rate Decision</h2>
+<h2 id="marcuss-los-angeles-burn-rate-decision">Marcus's Los Angeles Burn Rate Decision</h2>
 
 <p>Marcus Johnson closes his laptop at the Venice Beach coffee shop. The burn rate framework clarifies his creator economy platform's path forward.</p>
 
@@ -773,13 +871,30 @@ export default function BurnRateCalculatorLosAngelesBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/burn-rate-calculator-berlin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Berlin Startups: 2025 Cost Guide</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-new-york-city-startup-costs/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for NYC Startups: New York Cost Guide 2025</span>
+                </Link>
+                <Link href="/blog/burn-rate-benchmarks-by-industry-stage/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Benchmarks by Industry and Stage: 2025 Data</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-boston/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Boston Startups: 2025 Cost Guide</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for London Startups: 2025 Cost Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/burn-rate-calculator-series-a-first-time-founder-new-york-plan-fundraising-timeline-extend-runway-efficiency/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Burn Rate Calculator</Link>
+              <Link href="/blog/burn-rate-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Burn Rate & Runway Guides</Link>
             </div>
           </div>
         </section>
@@ -789,18 +904,18 @@ export default function BurnRateCalculatorLosAngelesBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Calculate Your Burn Rate & Runway
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/burn-rate-runway-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Burn Rate Calculator &rarr;
               </a>
             </div>
           </div>

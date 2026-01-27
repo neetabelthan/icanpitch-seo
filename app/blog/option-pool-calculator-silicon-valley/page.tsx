@@ -52,6 +52,60 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What option pool size should I create at incorporation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "At incorporation, create a small pool of 5-8% for your first critical hires. You'll expand this pool when you raise institutional capital. Creating a large pool too early dilutes founders unnecessarily if those early hires don't materialize."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I negotiate option pool size with investors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. Pool size is negotiable like every other term sheet provision. Come prepared with a detailed hiring plan showing exactly why you need more or less than the investor's initial request. Data-driven founders win these negotiations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens to unused option pool shares?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unused pool shares remain reserved but unissued. They dilute founders but benefit investors because investor ownership percentages are calculated on a fully diluted basis (assuming the entire pool is granted). This is why oversized pools favor investors."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I create a pool large enough to cover my next executive hire?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. If you'll hire a VP of Sales who requires 0.75% equity but your current pool only has 0.5% remaining, expand the pool before extending the offer. Otherwise, you'll dilute all shareholders to make the grant."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do refresh pools work at Series B?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "At Series B, investors typically expect a refresh pool of 10-15% to accommodate continued hiring. This means creating new option shares, which dilutes all existing shareholders proportionally (unless negotiated as a pre-money pool, which dilutes only founders)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between pool size and grants outstanding?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pool size is the total shares reserved for options. Grants outstanding are options already issued to employees. The difference is your remaining pool available for future hires. Track this closely—running out of pool mid-fundraise creates problems."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +168,25 @@ export default function OptionPoolCalculatorSiliconValleyBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#what-is-a-silicon-valley-option-pool-and-why-does-it-matter" className="text-blue-600 hover:text-blue-700 text-sm">What Is a Silicon Valley Option Pool and Why Does It Matter?</a></li>
+                  <li><a href="#pre-money-vs-post-money-option-pools-the-2-million-differenc" className="text-blue-600 hover:text-blue-700 text-sm">Pre-Money vs Post-Money Option Pools: The $2 Million Difference</a></li>
+                  <li><a href="#silicon-valley-option-pool-standards-by-stage" className="text-blue-600 hover:text-blue-700 text-sm">Silicon Valley Option Pool Standards by Stage</a></li>
+                  <li><a href="#how-option-pools-dilute-founders-a-worked-example" className="text-blue-600 hover:text-blue-700 text-sm">How Option Pools Dilute Founders: A Worked Example</a></li>
+                  <li><a href="#silicon-valley-option-pool-calculator-step-by-step" className="text-blue-600 hover:text-blue-700 text-sm">Silicon Valley Option Pool Calculator: Step-by-Step</a></li>
+                  <li><a href="#common-option-pool-mistakes-in-silicon-valley" className="text-blue-600 hover:text-blue-700 text-sm">Common Option Pool Mistakes in Silicon Valley</a></li>
+                  <li><a href="#option-pool-best-practices-for-silicon-valley-founders" className="text-blue-600 hover:text-blue-700 text-sm">Option Pool Best Practices for Silicon Valley Founders</a></li>
+                  <li><a href="#how-to-use-the-icanpitch-option-pool-calculator" className="text-blue-600 hover:text-blue-700 text-sm">How to Use the ICanPitch Option Pool Calculator</a></li>
+                  <li><a href="#option-pool-faqs-for-silicon-valley-startups" className="text-blue-600 hover:text-blue-700 text-sm">Option Pool FAQs for Silicon Valley Startups</a></li>
+                  <li><a href="#start-calculating-your-silicon-valley-option-pool" className="text-blue-600 hover:text-blue-700 text-sm">Start Calculating Your Silicon Valley Option Pool</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +197,7 @@ export default function OptionPoolCalculatorSiliconValleyBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>What Is a Silicon Valley Option Pool and Why Does It Matter?</h2>
+                <h2 id="what-is-a-silicon-valley-option-pool-and-why-does-it-matter">What Is a Silicon Valley Option Pool and Why Does It Matter?</h2>
 
 <p>An option pool (also called an Employee Stock Option Pool or ESOP) is a reserved percentage of your startup's equity designated exclusively for employee stock options. In Silicon Valley, option pools are the primary mechanism for attracting world-class engineering, product, and business talent to early-stage startups that can't yet compete on cash compensation with Google, Meta, or established tech companies.</p>
 
@@ -134,7 +205,7 @@ export default function OptionPoolCalculatorSiliconValleyBlogPost() {
 
 <p><strong>The critical decision every Silicon Valley founder faces:</strong> Should you create your option pool on a pre-money or post-money basis? This single choice determines whether founders or investors absorb the dilution from employee equity grants.</p>
 
-<h2>Pre-Money vs Post-Money Option Pools: The $2 Million Difference</h2>
+<h2 id="pre-money-vs-post-money-option-pools-the-2-million-differenc">Pre-Money vs Post-Money Option Pools: The $2 Million Difference</h2>
 
 <p>Understanding the timing of option pool creation is essential because it directly impacts founder dilution. Here's how the two approaches work:</p>
 
@@ -188,7 +259,7 @@ export default function OptionPoolCalculatorSiliconValleyBlogPost() {
 
 <p>Without the option pool, founders would own 76.9%. The 20% pool costs founders an additional 15.4 percentage points of dilution.</p>
 
-<h2>Silicon Valley Option Pool Standards by Stage</h2>
+<h2 id="silicon-valley-option-pool-standards-by-stage">Silicon Valley Option Pool Standards by Stage</h2>
 
 <p>Option pool sizes in Silicon Valley follow predictable patterns based on startup stage, hiring plans, and investor expectations. Here's what to expect:</p>
 
@@ -232,7 +303,21 @@ export default function OptionPoolCalculatorSiliconValleyBlogPost() {
 
 <p>Post-Series A companies typically create refresh pools of 10-15% with each major round to accommodate continued hiring and retention grants for existing employees whose initial options have vested.</p>
 
-<h2>How Option Pools Dilute Founders: A Worked Example</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Size Your Option Pool</p>
+                <p className="text-gray-600 mb-4">Model how different option pool sizes affect founder dilution before and after your next round.</p>
+                <a
+                  href="https://icanpitch.com/option-pool-impact-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Option Pool Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="how-option-pools-dilute-founders-a-worked-example">How Option Pools Dilute Founders: A Worked Example</h2>
 
 <p>Let's walk through a complete cap table evolution to see exactly how option pools impact founder ownership through multiple funding rounds.</p>
 
@@ -300,7 +385,7 @@ export default function OptionPoolCalculatorSiliconValleyBlogPost() {
 
 <p><strong>Total founder dilution from option pools:</strong> Founders went from 100% ownership to 57.8% combined. Of the 42.2% dilution, 20 percentage points came from option pools and 22.2% from investors. The option pools represent nearly half of all founder dilution.</p>
 
-<h2>Silicon Valley Option Pool Calculator: Step-by-Step</h2>
+<h2 id="silicon-valley-option-pool-calculator-step-by-step">Silicon Valley Option Pool Calculator: Step-by-Step</h2>
 
 <p>Follow this process to calculate your exact option pool dilution before your next fundraising round:</p>
 
@@ -343,7 +428,7 @@ export default function OptionPoolCalculatorSiliconValleyBlogPost() {
 
 <p><strong>Final Founder % = New Founder % × (Pre-Money Valuation ÷ Post-Money Valuation)</strong></p>
 
-<h2>Common Option Pool Mistakes in Silicon Valley</h2>
+<h2 id="common-option-pool-mistakes-in-silicon-valley">Common Option Pool Mistakes in Silicon Valley</h2>
 
 <p>Even experienced founders make these errors when negotiating option pools. Avoid these pitfalls:</p>
 
@@ -377,7 +462,7 @@ export default function OptionPoolCalculatorSiliconValleyBlogPost() {
 
 <p><strong>Solution:</strong> Build a bottom-up hiring model. List every role you'll hire in the next 18-24 months, assign market-rate equity grants, sum the total, and add 10-15% buffer. This is your required pool.</p>
 
-<h2>Option Pool Best Practices for Silicon Valley Founders</h2>
+<h2 id="option-pool-best-practices-for-silicon-valley-founders">Option Pool Best Practices for Silicon Valley Founders</h2>
 
 <p>Follow these guidelines to optimize your option pool strategy:</p>
 
@@ -411,7 +496,7 @@ export default function OptionPoolCalculatorSiliconValleyBlogPost() {
 
 <p>Don't allocate 100% of your option pool to new hires. Reserve 20-30% for refresh grants to retain top performers whose initial grants have mostly vested.</p>
 
-<h2>How to Use the ICanPitch Option Pool Calculator</h2>
+<h2 id="how-to-use-the-icanpitch-option-pool-calculator">How to Use the ICanPitch Option Pool Calculator</h2>
 
 <p>The <a href="https://icanpitch.com/" target="_blank" rel="noopener noreferrer">ICanPitch platform</a> includes an interactive option pool calculator designed specifically for Silicon Valley startups. Here's how to use it effectively:</p>
 
@@ -435,7 +520,7 @@ export default function OptionPoolCalculatorSiliconValleyBlogPost() {
 
 <p>Project your cap table through Series B and C to understand long-term dilution trajectories. Plan your pool strategy across multiple rounds, not just the current fundraise.</p>
 
-<h2>Option Pool FAQs for Silicon Valley Startups</h2>
+<h2 id="option-pool-faqs-for-silicon-valley-startups">Option Pool FAQs for Silicon Valley Startups</h2>
 
 <h3>What option pool size should I create at incorporation?</h3>
 
@@ -461,7 +546,7 @@ export default function OptionPoolCalculatorSiliconValleyBlogPost() {
 
 <p>Pool size is the total shares reserved for options. Grants outstanding are options already issued to employees. The difference is your remaining pool available for future hires. Track this closely—running out of pool mid-fundraise creates problems.</p>
 
-<h2>Start Calculating Your Silicon Valley Option Pool</h2>
+<h2 id="start-calculating-your-silicon-valley-option-pool">Start Calculating Your Silicon Valley Option Pool</h2>
 
 <p>Option pool mechanics directly determine how much of your company you'll own after fundraising. Understanding pre-money vs post-money treatment, market standards by stage, and dilution mathematics puts you in control of these negotiations rather than accepting investor defaults.</p>
 
@@ -490,13 +575,31 @@ export default function OptionPoolCalculatorSiliconValleyBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/option-pool-calculator-berlin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Berlin Option Pool Calculator: German ESOP vs VSOP Guide (2025)</span>
+                </Link>
+                <Link href="/blog/option-pool-calculator-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">London Option Pool Calculator: UK ESOP & EMI Scheme Guide (2025)</span>
+                </Link>
+                <Link href="/blog/option-pool-calculator-new-york/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">NYC Option Pool Calculator: East Coast Startup Equity Standards (2025)</span>
+                </Link>
+                <Link href="/blog/option-pool-calculator-singapore/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Singapore Option Pool Calculator: APAC ESOP Standards & Tax Guide (2025)</span>
+                </Link>
+                <Link href="/blog/option-pool-dilution-impact-founders/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Option Pool Dilution Impact on Founders: Complete Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/option-pool-calculator-pre-seed-technical-founder-san-francisco-size-employee-equity-minimize-founder-dilution/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Option Pool Calculator</Link>
+              <Link href="/blog/equity-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Equity, Vesting & Option Pool Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -506,18 +609,18 @@ export default function OptionPoolCalculatorSiliconValleyBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Size Your Option Pool
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Model how different option pool sizes affect founder dilution before and after your next round.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/option-pool-impact-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Option Pool Calculator &rarr;
               </a>
             </div>
           </div>

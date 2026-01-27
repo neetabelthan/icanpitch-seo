@@ -114,8 +114,27 @@ export default function SafeCalculatorDenverBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-denver-startups-need-safe-valuation-guidance" className="text-blue-600 hover:text-blue-700 text-sm">Why Denver Startups Need SAFE Valuation Guidance</a></li>
+                  <li><a href="#understanding-safes-the-fundraising-instrument-dominating-de" className="text-blue-600 hover:text-blue-700 text-sm">Understanding SAFEs: The Fundraising Instrument Dominating Denver's Ecosystem</a></li>
+                  <li><a href="#denver-valuation-benchmarks-by-stage-and-sector" className="text-blue-600 hover:text-blue-700 text-sm">Denver Valuation Benchmarks by Stage and Sector</a></li>
+                  <li><a href="#sector-specific-valuation-considerations-in-denver" className="text-blue-600 hover:text-blue-700 text-sm">Sector-Specific Valuation Considerations in Denver</a></li>
+                  <li><a href="#how-to-calculate-safe-dilution-what-denver-founders-need-to-" className="text-blue-600 hover:text-blue-700 text-sm">How to Calculate SAFE Dilution: What Denver Founders Need to Know</a></li>
+                  <li><a href="#denvers-venture-capital-landscape-who-invests-at-each-stage" className="text-blue-600 hover:text-blue-700 text-sm">Denver's Venture Capital Landscape: Who Invests at Each Stage</a></li>
+                  <li><a href="#common-safe-mistakes-denver-founders-make" className="text-blue-600 hover:text-blue-700 text-sm">Common SAFE Mistakes Denver Founders Make</a></li>
+                  <li><a href="#negotiating-your-safe-what-denver-investors-expect" className="text-blue-600 hover:text-blue-700 text-sm">Negotiating Your SAFE: What Denver Investors Expect</a></li>
+                  <li><a href="#planning-your-denver-fundraising-timeline" className="text-blue-600 hover:text-blue-700 text-sm">Planning Your Denver Fundraising Timeline</a></li>
+                  <li><a href="#post-safe-strategy-setting-up-for-series-a-success" className="text-blue-600 hover:text-blue-700 text-sm">Post-SAFE Strategy: Setting Up for Series A Success</a></li>
+                  <li><a href="#calculate-your-safe-dilution-and-plan-your-raise" className="text-blue-600 hover:text-blue-700 text-sm">Calculate Your SAFE Dilution and Plan Your Raise</a></li>
+                  <li><a href="#key-takeaways-for-denver-founders-using-safes" className="text-blue-600 hover:text-blue-700 text-sm">Key Takeaways for Denver Founders Using SAFEs</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +145,7 @@ export default function SafeCalculatorDenverBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why Denver Startups Need SAFE Valuation Guidance</h2>
+                <h2 id="why-denver-startups-need-safe-valuation-guidance">Why Denver Startups Need SAFE Valuation Guidance</h2>
 
 <p>Denver's startup ecosystem has evolved from an emerging market to a recognized tech hub, but valuation expectations remain distinctly regional. If you're raising capital in Colorado using a Simple Agreement for Future Equity (SAFE), understanding how Denver valuations compare to coastal markets is essential for successful fundraising. Denver pre-seed valuations typically range from $3 million to $5.5 million, and seed rounds from $7 million to $11 million—approximately 35-40% below San Francisco benchmarks but increasingly competitive with Austin and other secondary markets.</p>
 
@@ -134,7 +153,7 @@ export default function SafeCalculatorDenverBlogPost() {
 
 <p>Denver's valuation dynamics reflect the region's strengths and realities: exceptional engineering talent at 45-55% lower costs than San Francisco, a growing but still emerging venture capital ecosystem, and sector specialization in software, outdoor recreation technology, cannabis tech, and aerospace. Understanding where to set your SAFE valuation cap requires balancing ambition with market knowledge—price too high and you'll struggle to close local investors; price too conservatively and you'll dilute unnecessarily when the SAFE converts.</p>
 
-<h2>Understanding SAFEs: The Fundraising Instrument Dominating Denver's Ecosystem</h2>
+<h2 id="understanding-safes-the-fundraising-instrument-dominating-de">Understanding SAFEs: The Fundraising Instrument Dominating Denver's Ecosystem</h2>
 
 <p>A SAFE (Simple Agreement for Future Equity) is an investment contract where investors provide capital today in exchange for equity delivered at a future priced round. Unlike convertible notes, SAFEs have no interest rate, no maturity date, and no repayment obligation—they simply convert to equity when a qualifying event occurs, typically a priced equity round (Series A) or company sale.</p>
 
@@ -149,7 +168,7 @@ export default function SafeCalculatorDenverBlogPost() {
 
 <p>Most Denver startups use valuation cap-only SAFEs without discounts, following the Y Combinator standard form. This simplifies the conversion calculation and aligns with investor expectations in Colorado's market.</p>
 
-<h2>Denver Valuation Benchmarks by Stage and Sector</h2>
+<h2 id="denver-valuation-benchmarks-by-stage-and-sector">Denver Valuation Benchmarks by Stage and Sector</h2>
 
 <p>Denver valuations reflect the city's cost advantages and ecosystem maturity. Here are realistic benchmarks based on recent Colorado funding activity:</p>
 
@@ -208,7 +227,21 @@ export default function SafeCalculatorDenverBlogPost() {
 
 <p>Bridge rounds work well when you have strong momentum but need 6-9 more months to reach $1M ARR or other Series A targets. However, raising too many SAFE rounds creates complex cap tables and can complicate Series A negotiations, so use bridge financing strategically rather than habitually.</p>
 
-<h2>Sector-Specific Valuation Considerations in Denver</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="sector-specific-valuation-considerations-in-denver">Sector-Specific Valuation Considerations in Denver</h2>
 
 <h3>Software and B2B SaaS</h3>
 
@@ -262,7 +295,7 @@ export default function SafeCalculatorDenverBlogPost() {
 
 <p>Aerospace startups often need 24-36 months to demonstrate key technical milestones, so investors accept higher early valuations in exchange for proven technical teams and government engagement.</p>
 
-<h2>How to Calculate SAFE Dilution: What Denver Founders Need to Know</h2>
+<h2 id="how-to-calculate-safe-dilution-what-denver-founders-need-to-">How to Calculate SAFE Dilution: What Denver Founders Need to Know</h2>
 
 <p>Understanding how your SAFE converts to equity helps you evaluate whether your valuation cap is appropriate and how much ownership you'll retain through Series A.</p>
 
@@ -315,7 +348,7 @@ export default function SafeCalculatorDenverBlogPost() {
 
 <p>This example shows healthy founder ownership (65%) after raising $6.5M total—a realistic outcome for Denver startups that price SAFEs appropriately relative to Series A expectations.</p>
 
-<h2>Denver's Venture Capital Landscape: Who Invests at Each Stage</h2>
+<h2 id="denvers-venture-capital-landscape-who-invests-at-each-stage">Denver's Venture Capital Landscape: Who Invests at Each Stage</h2>
 
 <p>Understanding which investors participate at different stages helps you set realistic valuations:</p>
 
@@ -348,7 +381,7 @@ export default function SafeCalculatorDenverBlogPost() {
 
 <p>By Series A ($5M-$12M rounds), Denver startups typically attract multi-regional or national funds including Foundry Group (Boulder-based but Series A focused), Grotech Ventures, Arthur Ventures, and increasingly coastal funds expanding to Colorado for cost-efficient deals.</p>
 
-<h2>Common SAFE Mistakes Denver Founders Make</h2>
+<h2 id="common-safe-mistakes-denver-founders-make">Common SAFE Mistakes Denver Founders Make</h2>
 
 <h3>Overpricing Your SAFE Relative to Series A Expectations</h3>
 
@@ -374,7 +407,7 @@ export default function SafeCalculatorDenverBlogPost() {
 
 <p>Better approach: Model your Series A with a planned option pool and ensure your SAFE valuation caps account for this future dilution.</p>
 
-<h2>Negotiating Your SAFE: What Denver Investors Expect</h2>
+<h2 id="negotiating-your-safe-what-denver-investors-expect">Negotiating Your SAFE: What Denver Investors Expect</h2>
 
 <p>Denver investors generally follow standard SAFE terms with limited negotiation, but understanding market norms helps you navigate conversations:</p>
 
@@ -404,7 +437,7 @@ export default function SafeCalculatorDenverBlogPost() {
 
 <p>If an investor requires special governance or information rights, consider whether they should invest in a priced equity round instead where such terms are standard and expected.</p>
 
-<h2>Planning Your Denver Fundraising Timeline</h2>
+<h2 id="planning-your-denver-fundraising-timeline">Planning Your Denver Fundraising Timeline</h2>
 
 <p>Colorado's smaller venture ecosystem means fundraising timelines differ from San Francisco:</p>
 
@@ -436,7 +469,7 @@ export default function SafeCalculatorDenverBlogPost() {
 
 <p>Begin with target milestones: For software startups, aim to start seed fundraising at $20K-$30K MRR with 15-20% monthly growth; for Series A, target $100K-$150K MRR with clear path to $2M+ ARR.</p>
 
-<h2>Post-SAFE Strategy: Setting Up for Series A Success</h2>
+<h2 id="post-safe-strategy-setting-up-for-series-a-success">Post-SAFE Strategy: Setting Up for Series A Success</h2>
 
 <p>After closing your SAFE round, focus on metrics that justify Series A valuations:</p>
 
@@ -472,7 +505,7 @@ export default function SafeCalculatorDenverBlogPost() {
 <li>Document sales process and average deal size/timeline</li>
 </ul>
 
-<h2>Calculate Your SAFE Dilution and Plan Your Raise</h2>
+<h2 id="calculate-your-safe-dilution-and-plan-your-raise">Calculate Your SAFE Dilution and Plan Your Raise</h2>
 
 <p>Understanding SAFE conversions and modeling different valuation scenarios is essential for making informed fundraising decisions. Whether you're raising pre-seed capital at a $4M cap or seed funding at $9M, calculating the dilution implications helps you balance fundraising amount, valuation, and ownership retention.</p>
 
@@ -488,7 +521,7 @@ export default function SafeCalculatorDenverBlogPost() {
 
 <p>Access comprehensive SAFE calculators and cap table modeling tools designed for Denver and Colorado founders at <a href="https://icanpitch.com" target="_blank" rel="noopener noreferrer">ICanPitch</a>, where you can calculate conversion scenarios, model dilution across funding rounds, and plan your fundraising strategy with region-specific valuation benchmarks.</p>
 
-<h2>Key Takeaways for Denver Founders Using SAFEs</h2>
+<h2 id="key-takeaways-for-denver-founders-using-safes">Key Takeaways for Denver Founders Using SAFEs</h2>
 
 <p>SAFEs have become the standard fundraising instrument for early-stage startups in Denver's ecosystem, offering simplicity and founder-friendly terms that accelerate deals. By understanding Denver's valuation benchmarks—$3M-$5.5M pre-seed caps and $7M-$11M seed caps—you can price your SAFE competitively while preserving adequate room for valuation step-ups at Series A.</p>
 
@@ -519,13 +552,31 @@ export default function SafeCalculatorDenverBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/pre-seed-valuation-benchmarks-2025/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pre-Seed Valuation Benchmarks 2025: SAFE Caps and Investor Expectations</span>
+                </Link>
+                <Link href="/blog/safe-calculator-los-angeles/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Los Angeles Startups: LA Valuation Benchmarks & Terms</span>
+                </Link>
+                <Link href="/blog/safe-calculator-fintech-new-york/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Fintech SAFE Calculator for New York Startups: Valuation Benchmarks & Investor Expectations</span>
+                </Link>
+                <Link href="/blog/how-to-negotiate-safe-valuation-cap/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Negotiate SAFE Valuation Caps: 2025 Founder's Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-ai-ml-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">AI/ML SAFE Calculator Silicon Valley: 2025 Valuation Benchmarks for Foundation Models vs Application Layer</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -535,18 +586,18 @@ export default function SafeCalculatorDenverBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

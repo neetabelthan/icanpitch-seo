@@ -114,8 +114,24 @@ export default function SafeCalculatorEcommerceLosAngelesBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-la-e-commerce-brands-need-post-ios14-safe-benchmarks" className="text-blue-600 hover:text-blue-700 text-sm">Why LA E-commerce Brands Need Post-iOS14 SAFE Benchmarks</a></li>
+                  <li><a href="#la-e-commerce-safe-valuation-benchmarks-2024-2025" className="text-blue-600 hover:text-blue-700 text-sm">LA E-commerce SAFE Valuation Benchmarks (2024-2025)</a></li>
+                  <li><a href="#how-post-ios14-attribution-challenges-impact-dtc-valuations" className="text-blue-600 hover:text-blue-700 text-sm">How Post-iOS14 Attribution Challenges Impact DTC Valuations</a></li>
+                  <li><a href="#unit-economics-that-drive-la-e-commerce-valuations" className="text-blue-600 hover:text-blue-700 text-sm">Unit Economics That Drive LA E-commerce Valuations</a></li>
+                  <li><a href="#revenue-vs-arr-e-commerce-valuation-differences-from-saas" className="text-blue-600 hover:text-blue-700 text-sm">Revenue vs ARR: E-commerce Valuation Differences from SaaS</a></li>
+                  <li><a href="#los-angeles-e-commerce-investor-landscape" className="text-blue-600 hover:text-blue-700 text-sm">Los Angeles E-commerce Investor Landscape</a></li>
+                  <li><a href="#common-mistakes-la-e-commerce-founders-make-with-safes" className="text-blue-600 hover:text-blue-700 text-sm">Common Mistakes LA E-commerce Founders Make with SAFEs</a></li>
+                  <li><a href="#la-e-commerce-safe-valuation-calculator-step-by-step-framewo" className="text-blue-600 hover:text-blue-700 text-sm">LA E-commerce SAFE Valuation Calculator: Step-by-Step Framework</a></li>
+                  <li><a href="#next-steps-navigating-your-la-e-commerce-safe" className="text-blue-600 hover:text-blue-700 text-sm">Next Steps: Navigating Your LA E-commerce SAFE</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,13 +142,13 @@ export default function SafeCalculatorEcommerceLosAngelesBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why LA E-commerce Brands Need Post-iOS14 SAFE Benchmarks</h2>
+                <h2 id="why-la-e-commerce-brands-need-post-ios14-safe-benchmarks">Why LA E-commerce Brands Need Post-iOS14 SAFE Benchmarks</h2>
 
 <p>If you're raising a SAFE round for your direct-to-consumer (DTC) e-commerce brand in Los Angeles, you're navigating a fundamentally transformed landscape. Apple's iOS 14.5 App Tracking Transparency (ATT), launched in April 2021, increased Facebook/Instagram customer acquisition costs (CAC) by 40-80% for DTC brands, simultaneously compressing gross margins and making venture-scale growth economics far more challenging. The golden era of 2015-2020 DTC funding—when brands like Glossier, Warby Parker, and Allbirds raised at 8-12x revenue multiples—has given way to a more disciplined 2025 environment valuing profitability, retention, and multi-channel distribution over pure growth.</p>
 
 <p>Los Angeles, as the epicenter of consumer brand innovation with deep expertise in fashion, beauty, wellness, and lifestyle categories, offers unique advantages: access to influencer networks, creative talent, production infrastructure, and consumer-focused investors like Greycroft, Upfront Ventures, and Science Inc. However, LA DTC brands must demonstrate superior unit economics and brand strength to command premium valuations. This guide provides post-iOS14 e-commerce benchmarks, revenue multiple frameworks, and LA-specific investor expectations for 2025.</p>
 
-<h2>LA E-commerce SAFE Valuation Benchmarks (2024-2025)</h2>
+<h2 id="la-e-commerce-safe-valuation-benchmarks-2024-2025">LA E-commerce SAFE Valuation Benchmarks (2024-2025)</h2>
 
 <p>E-commerce valuations in LA cluster around revenue multiples, unit economics, and brand strength rather than user metrics. Here's current market data for DTC SAFEs closed in the past 18 months:</p>
 
@@ -174,7 +190,7 @@ export default function SafeCalculatorEcommerceLosAngelesBlogPost() {
 
 <p>What changed: Investors now demand profitability path, not just revenue growth. Brands growing 200% YoY but burning $2 for every $1 in revenue are unfundable. Brands growing 50-100% YoY with improving contribution margins raise at premium multiples.</p>
 
-<h2>How Post-iOS14 Attribution Challenges Impact DTC Valuations</h2>
+<h2 id="how-post-ios14-attribution-challenges-impact-dtc-valuations">How Post-iOS14 Attribution Challenges Impact DTC Valuations</h2>
 
 <p>Apple's ATT framework destroyed Facebook's attribution pixel for iOS users (60%+ of US consumers), fundamentally changing DTC economics and investor expectations.</p>
 
@@ -218,7 +234,21 @@ export default function SafeCalculatorEcommerceLosAngelesBlogPost() {
 
 <p>Investors reward brands demonstrating measurement sophistication with 15-25% valuation premiums—it signals operational maturity and data-driven scaling capability.</p>
 
-<h2>Unit Economics That Drive LA E-commerce Valuations</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="unit-economics-that-drive-la-e-commerce-valuations">Unit Economics That Drive LA E-commerce Valuations</h2>
 
 <p>LA e-commerce investors evaluate brands through financial KPIs that predict scalability and venture-style returns.</p>
 
@@ -274,7 +304,7 @@ export default function SafeCalculatorEcommerceLosAngelesBlogPost() {
 
 <p>LA category benchmarks: Beauty/skincare typically achieves 65-75% gross margins, fashion 50-65%, wellness/supplements 60-70%, home goods 50-60%.</p>
 
-<h2>Revenue vs ARR: E-commerce Valuation Differences from SaaS</h2>
+<h2 id="revenue-vs-arr-e-commerce-valuation-differences-from-saas">Revenue vs ARR: E-commerce Valuation Differences from SaaS</h2>
 
 <p>A critical distinction: E-commerce brands are valued on total revenue multiples, not ARR (annual recurring revenue) like SaaS, unless they have subscription models.</p>
 
@@ -313,7 +343,7 @@ export default function SafeCalculatorEcommerceLosAngelesBlogPost() {
 
 <p>Investor preference: Brands demonstrating ability to convert one-time customers to subscription receive premium valuations (20-40% lift) for flywheel potential.</p>
 
-<h2>Los Angeles E-commerce Investor Landscape</h2>
+<h2 id="los-angeles-e-commerce-investor-landscape">Los Angeles E-commerce Investor Landscape</h2>
 
 <p>LA's consumer-focused investor ecosystem understands DTC brand building better than Silicon Valley tech investors. Knowing who invests and what they value helps calibrate SAFE terms.</p>
 
@@ -357,7 +387,7 @@ export default function SafeCalculatorEcommerceLosAngelesBlogPost() {
 
 <p>Series A DTC valuations range from $30M-$150M post-money depending on growth rate and profitability trajectory. Multiples compress to 2-4x revenue at Series A as focus shifts from growth to efficiency.</p>
 
-<h2>Common Mistakes LA E-commerce Founders Make with SAFEs</h2>
+<h2 id="common-mistakes-la-e-commerce-founders-make-with-safes">Common Mistakes LA E-commerce Founders Make with SAFEs</h2>
 
 <p>DTC fundraising has unique complexities that trip up founders:</p>
 
@@ -391,7 +421,7 @@ export default function SafeCalculatorEcommerceLosAngelesBlogPost() {
 
 <p>Benchmark: Model conservatively. DTC seed rounds should be $1.5M-$4M to reach $5M-$15M revenue milestone where Series A becomes viable.</p>
 
-<h2>LA E-commerce SAFE Valuation Calculator: Step-by-Step Framework</h2>
+<h2 id="la-e-commerce-safe-valuation-calculator-step-by-step-framewo">LA E-commerce SAFE Valuation Calculator: Step-by-Step Framework</h2>
 
 <p>Use this framework to estimate a defensible DTC SAFE cap in Los Angeles:</p>
 
@@ -448,7 +478,7 @@ Repeat rate (38%): $19.8M x 1.15 = $22.8M<br />
 Channel diversification: $22.8M x 1.20 = $27.4M<br />
 <strong>Suggested SAFE cap: $25M-$30M</strong></p>
 
-<h2>Next Steps: Navigating Your LA E-commerce SAFE</h2>
+<h2 id="next-steps-navigating-your-la-e-commerce-safe">Next Steps: Navigating Your LA E-commerce SAFE</h2>
 
 <p>Post-iOS14 DTC fundraising requires demonstrating capital-efficient customer acquisition, strong retention, and clear paths to profitability. The most successful LA e-commerce founders approach SAFEs with:</p>
 
@@ -484,13 +514,31 @@ Channel diversification: $22.8M x 1.20 = $27.4M<br />
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/safe-calculator-los-angeles/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Los Angeles Startups: LA Valuation Benchmarks & Terms</span>
+                </Link>
+                <Link href="/blog/safe-calculator-ai-ml-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">AI/ML SAFE Calculator Silicon Valley: 2025 Valuation Benchmarks for Foundation Models vs Application Layer</span>
+                </Link>
+                <Link href="/blog/safe-calculator-b2b-saas-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">B2B SaaS SAFE Calculator for London Startups: UK Valuation Benchmarks vs US Comparables</span>
+                </Link>
+                <Link href="/blog/safe-calculator-climate-tech-san-francisco/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Climate Tech SAFE Calculator San Francisco: Cleantech Valuations with IRA Impact & Hardware vs Software Dynamics</span>
+                </Link>
+                <Link href="/blog/safe-calculator-consumer-tech-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Consumer Tech SAFE Calculator Silicon Valley: Post-iOS14 Valuation Benchmarks for Social & Mobile Apps</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -500,18 +548,18 @@ Channel diversification: $22.8M x 1.20 = $27.4M<br />
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

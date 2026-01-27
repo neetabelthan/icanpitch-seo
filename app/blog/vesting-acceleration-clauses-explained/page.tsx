@@ -52,6 +52,100 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is double-trigger acceleration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Double-trigger acceleration means your unvested equity vests immediately only if two events occur: (1) a change of control (acquisition/merger), AND (2) you're terminated without cause or resign for good reason within a specified timeframe (typically 12-18 months after acquisition). For example, if your company is acquired and you have 50% unvested equity, it only accelerates if the acquirer also fires you or constructively terminates you (demotes you, cuts pay, relocates you). If you keep your job post-acquisition, vesting continues normally. According to Wilson Sonsini's 2024 data, 85% of acquisitions include double-trigger acceleration for founders and executives."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is single-trigger acceleration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Single-trigger acceleration means your unvested equity vests immediately upon a single event—typically a change of control (acquisition or merger). No second condition is required. For example, if your company is acquired and you have 60% unvested equity with single-trigger acceleration, all 60% vests immediately at closing regardless of whether you keep your job, get fired, or voluntarily leave. Single-trigger is rare for founders (only 15% of deals per Fenwick data) because it creates perverse incentives—founders could push for acquisition, get fully vested, then leave immediately. Investors strongly resist single-trigger for founders, though it's more common for regular employees (32% of companies offer it)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I negotiate for single-trigger or double-trigger acceleration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You should negotiate for double-trigger acceleration with broad \"good reason\" definitions. Single-trigger is nearly impossible to obtain for founders because investors view it as misaligning incentives (founders could force suboptimal acquisitions knowing they'll fully vest and leave). Double-trigger with comprehensive good reason protection provides meaningful safety—you're covered if terminated or constructively forced out—without creating the moral hazard investors fear. Focus negotiation on: (1) 100% acceleration percentage, (2) broad good reason definition, (3) 18-24 month window rather than 12 months. These are achievable and provide robust protection."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does \"good reason\" mean in acceleration clauses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Good reason defines what post-acquisition changes allow you to resign and still trigger acceleration (the second trigger in double-trigger). Typical good reason provisions include: material reduction in base salary (15-20%+), material reduction in duties or responsibilities, relocation more than 35-50 miles, material breach of employment agreement, or change in reporting structure. Broad definitions include additional provisions like budget cuts, team size reductions, elimination of direct reports, or assignment to inconsistent roles. The broader the definition, the better your protection against acquirers who degrade your role to force resignation without triggering acceleration. Negotiate 5+ good reason provisions rather than accepting standard 2-3."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long is the acceleration window in double-trigger clauses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Standard acceleration windows are 12 months, meaning the termination or good reason resignation must occur within 12 months after the acquisition to trigger acceleration. However, Cooley data shows 42% of post-acquisition terminations occur between months 12-18, suggesting acquirers deliberately wait out standard windows. Negotiate for 18-24 month windows to improve protection. Some agreements include extended windows for specific scenarios, like 24 months if you're terminated during integration planning. The longer the window, the better your protection against timing-based avoidance tactics."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does acceleration apply if I voluntarily quit after acquisition?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Generally no, unless you quit for \"good reason\" as defined in your equity agreement. Voluntary resignation without good reason forfeits all unvested equity and doesn't trigger acceleration, even if the resignation occurs post-acquisition. This is why \"good reason\" definitions are critical—they determine what acquirer actions allow you to quit and still claim constructive termination. If you simply don't like the acquirer or prefer to leave, but none of the good reason provisions are met, you forfeit unvested equity. Document any material changes that might constitute good reason before resigning, and follow required notice-cure-resignation procedures precisely."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What percentage of my unvested equity should accelerate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Founders should negotiate for 100% acceleration—all unvested equity vests immediately upon double-trigger. This is standard for founders in 73% of venture-backed companies per Wilson Sonsini data. Executives typically receive 50-100% acceleration depending on seniority and negotiating leverage. Partial acceleration (25-50%) is more common for non-executive employees. Don't accept less than 100% as a founder without significant concessions elsewhere—this is a critical protection against post-acquisition termination. If investors resist 100%, consider compromise structures like 100% if terminated within 6 months, 75% if terminated months 6-12, 50% if terminated months 12-18."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I negotiate acceleration terms during M&amp;A even if my original equity agreement lacks it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. M&amp;A provides a second negotiation opportunity, particularly if the acquirer needs you for transition/integration. Even if your original equity grant lacked acceleration, you can request it as part of your post-acquisition employment package. Common approaches: Request acceleration in exchange for longer employment commitment (24 months instead of 12), request acceleration in lieu of cash retention bonuses, or request acceleration as condition of signing employment agreement. According to Latham &amp; Watkins, 67% of acquisitions include some renegotiation of acceleration terms, with 43% of founders in strong positions achieving improvements. The key is having leverage—if you're critical to transition, you have bargaining power."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does acceleration affect my taxes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, significantly. When unvested stock options accelerate and you exercise them, you may face immediate tax on the spread between exercise price and fair market value (for ISOs, this triggers AMT; for NSOs, ordinary income). When unvested restricted stock accelerates, you face immediate ordinary income tax on the full fair market value of the accelerated shares. This can create large tax bills in acquisition year. Some founders negotiate \"double-trigger + exercise\" structures where options accelerate but don't auto-exercise until you leave, deferring tax. Consult a tax advisor before acceleration events to plan for tax implications and ensure you have liquidity to pay taxes owed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens to acceleration if the acquisition is structured as an asset sale instead of stock sale?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Asset sale treatment depends on how your equity agreement defines \"change of control.\" Well-drafted agreements include asset sales in the change of control definition (typically: sale of substantially all assets, or 80%+ of assets). If your agreement only covers stock sales, an asset sale wouldn't trigger acceleration—you'd forfeit unvested equity despite the economic sale of the company. This is why broad change of control definitions matter. Review your equity agreement to confirm asset sales are included. If not, and asset sale is being negotiated, request acceleration as part of the M&amp;A deal terms even if your equity agreement doesn't technically require it. Most acquirers will agree to avoid disputes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do all employees get acceleration, or just founders?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not all employees receive acceleration. According to Pave's 2024 data, only 32% of non-executive employees receive any acceleration protection. Founders receive acceleration in 85% of cases (usually 100% double-trigger), C-level executives in 71% of cases (usually 50-100% double-trigger), and senior individual contributors in 42% of cases (usually 25-50% double-trigger). Most standard employees receive no acceleration—unvested equity is forfeited upon termination regardless of acquisition. Employees can sometimes negotiate acceleration at hire (rare), upon promotion to senior roles (more common), or during M&amp;A as part of retention packages (most common). The key is having leverage—the more critical you are to the business, the better your chances of obtaining acceleration protection."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +208,25 @@ export default function VestingAccelerationClausesExplainedBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#what-is-vesting-acceleration-and-why-it-matters" className="text-blue-600 hover:text-blue-700 text-sm">What Is Vesting Acceleration and Why It Matters</a></li>
+                  <li><a href="#single-trigger-vs-double-trigger-acceleration-the-core-disti" className="text-blue-600 hover:text-blue-700 text-sm">Single-Trigger vs Double-Trigger Acceleration: The Core Distinction</a></li>
+                  <li><a href="#the-anatomy-of-good-reason-definitions" className="text-blue-600 hover:text-blue-700 text-sm">The Anatomy of &quot;Good Reason&quot; Definitions</a></li>
+                  <li><a href="#partial-vs-full-acceleration-how-much-vests" className="text-blue-600 hover:text-blue-700 text-sm">Partial vs Full Acceleration: How Much Vests?</a></li>
+                  <li><a href="#change-of-control-definitions-when-does-trigger-1-occur" className="text-blue-600 hover:text-blue-700 text-sm">Change of Control Definitions: When Does Trigger 1 Occur?</a></li>
+                  <li><a href="#real-world-scenarios-how-acceleration-plays-out-in-mampa" className="text-blue-600 hover:text-blue-700 text-sm">Real-World Scenarios: How Acceleration Plays Out in M&amp;A</a></li>
+                  <li><a href="#negotiating-acceleration-founder-strategies" className="text-blue-600 hover:text-blue-700 text-sm">Negotiating Acceleration: Founder Strategies</a></li>
+                  <li><a href="#employee-acceleration-what-regular-employees-should-know" className="text-blue-600 hover:text-blue-700 text-sm">Employee Acceleration: What Regular Employees Should Know</a></li>
+                  <li><a href="#common-acceleration-mistakes-and-how-to-avoid-them" className="text-blue-600 hover:text-blue-700 text-sm">Common Acceleration Mistakes and How to Avoid Them</a></li>
+                  <li><a href="#frequently-asked-questions-about-vesting-acceleration" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions About Vesting Acceleration</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -128,7 +239,7 @@ export default function VestingAccelerationClausesExplainedBlogPost() {
               ">
                 <p><strong>TL;DR:</strong> Vesting acceleration determines when your unvested equity becomes yours in M&amp;A scenarios. Double-trigger acceleration (85% of deals) requires both acquisition AND termination to vest immediately. Single-trigger acceleration (15% of deals) vests all equity upon acquisition alone. Founders should negotiate for double-trigger with broad "good reason" definitions to protect against post-acquisition termination while avoiding investor resistance to single-trigger terms.</p>
 
-<h2>What Is Vesting Acceleration and Why It Matters</h2>
+<h2 id="what-is-vesting-acceleration-and-why-it-matters">What Is Vesting Acceleration and Why It Matters</h2>
 
 <p>Vesting acceleration clauses determine what happens to your unvested equity when your company is acquired. Without acceleration protection, you could lose years of unvested equity if terminated post-acquisition, even if the acquisition was largely driven by your work. With acceleration, some or all of your unvested shares immediately become yours under specific conditions.</p>
 
@@ -136,7 +247,7 @@ export default function VestingAccelerationClausesExplainedBlogPost() {
 
 <p>Meet Priya Sharma, who sold her Series B SaaS company for $45M after four years. At acquisition, she had 18 months (37.5%) of unvested equity remaining on her four-year vesting schedule. Her equity agreement included double-trigger 100% acceleration. When the acquirer eliminated her role six months post-close (a common tactic to avoid acceleration), the termination triggered full vesting of her remaining equity—worth $1.4M. Without this clause, she would have forfeited that $1.4M entirely, receiving only the value of her already-vested shares.</p>
 
-<h2>Single-Trigger vs Double-Trigger Acceleration: The Core Distinction</h2>
+<h2 id="single-trigger-vs-double-trigger-acceleration-the-core-disti">Single-Trigger vs Double-Trigger Acceleration: The Core Distinction</h2>
 
 <p>The fundamental question in acceleration clauses is: what events must occur to trigger immediate vesting? This creates two primary structures with dramatically different implications.</p>
 
@@ -191,7 +302,7 @@ export default function VestingAccelerationClausesExplainedBlogPost() {
 
 <p>According to Cooley LLP's 2024 M&amp;A Report, <strong>85% of acquisitions above $25M include double-trigger acceleration provisions</strong>, making this the de facto market standard for venture-backed company acquisitions.</p>
 
-<h2>The Anatomy of "Good Reason" Definitions</h2>
+<h2 id="the-anatomy-of-good-reason-definitions">The Anatomy of "Good Reason" Definitions</h2>
 
 <p>The power of double-trigger acceleration depends entirely on how broadly or narrowly "good reason" for resignation is defined. This single definition determines whether you have meaningful protection or a paper tiger.</p>
 
@@ -233,7 +344,21 @@ export default function VestingAccelerationClausesExplainedBlogPost() {
 
 <p>This notice-cure-resignation sequence must be carefully followed or you forfeit acceleration rights—a technicality that has cost many executives their acceleration benefits.</p>
 
-<h2>Partial vs Full Acceleration: How Much Vests?</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your Exit Scenarios</p>
+                <p className="text-gray-600 mb-4">Calculate founder proceeds at different exit valuations with liquidation preference waterfalls.</p>
+                <a
+                  href="https://icanpitch.com/startup-exit-visualizer/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Exit Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="partial-vs-full-acceleration-how-much-vests">Partial vs Full Acceleration: How Much Vests?</h2>
 
 <p>Acceleration clauses specify what percentage of unvested equity vests upon triggering events. This percentage is heavily negotiated and varies by role and company stage.</p>
 
@@ -271,7 +396,7 @@ export default function VestingAccelerationClausesExplainedBlogPost() {
 
 <p>This structure rewards tenure while providing some protection for newer employees. However, it's relatively uncommon (appearing in less than 12% of agreements) because it adds complexity.</p>
 
-<h2>Change of Control Definitions: When Does Trigger 1 Occur?</h2>
+<h2 id="change-of-control-definitions-when-does-trigger-1-occur">Change of Control Definitions: When Does Trigger 1 Occur?</h2>
 
 <p>The "change of control" definition determines what transactions qualify as Trigger 1. Narrow definitions can leave you without acceleration in scenarios you'd expect to qualify.</p>
 
@@ -301,7 +426,7 @@ export default function VestingAccelerationClausesExplainedBlogPost() {
 
 <p>According to Gunderson Dettmer's analysis, <strong>28% of acceleration disputes arise from ambiguity in change of control definitions</strong>, making clear drafting critical.</p>
 
-<h2>Real-World Scenarios: How Acceleration Plays Out in M&amp;A</h2>
+<h2 id="real-world-scenarios-how-acceleration-plays-out-in-mampa">Real-World Scenarios: How Acceleration Plays Out in M&amp;A</h2>
 
 <p>Understanding theoretical structures is valuable, but seeing how acceleration works in actual acquisition scenarios illuminates the practical implications.</p>
 
@@ -368,7 +493,7 @@ export default function VestingAccelerationClausesExplainedBlogPost() {
 
 <p>Cooley's data shows <strong>42% of post-acquisition terminations occur between months 12-18</strong>, suggesting acquirers deliberately time terminations to avoid standard 12-month acceleration windows.</p>
 
-<h2>Negotiating Acceleration: Founder Strategies</h2>
+<h2 id="negotiating-acceleration-founder-strategies">Negotiating Acceleration: Founder Strategies</h2>
 
 <p>Acceleration terms are typically negotiated at two distinct moments: initial equity grant (company formation or Series A) and acquisition (as part of M&amp;A deal terms). Each presents different leverage and opportunities.</p>
 
@@ -419,7 +544,7 @@ export default function VestingAccelerationClausesExplainedBlogPost() {
 
 <p>According to Latham &amp; Watkins, <strong>67% of acquisition negotiations include some modification to acceleration terms</strong>, with founders in strong negotiating positions (competitive acquisition, strong revenue growth, product criticality) achieving meaningful improvements in 43% of cases.</p>
 
-<h2>Employee Acceleration: What Regular Employees Should Know</h2>
+<h2 id="employee-acceleration-what-regular-employees-should-know">Employee Acceleration: What Regular Employees Should Know</h2>
 
 <p>While founders typically receive strong acceleration protection, regular employees often receive weaker or no acceleration provisions. Understanding the typical employee experience helps set expectations.</p>
 
@@ -463,7 +588,7 @@ export default function VestingAccelerationClausesExplainedBlogPost() {
 
 <p>Success rates are low (estimated 15-20% according to Cooley's data), but the upside is meaningful enough to attempt, particularly for employees with strong leverage.</p>
 
-<h2>Common Acceleration Mistakes and How to Avoid Them</h2>
+<h2 id="common-acceleration-mistakes-and-how-to-avoid-them">Common Acceleration Mistakes and How to Avoid Them</h2>
 
 <p>After analyzing hundreds of acceleration disputes and forfeited equity situations, several costly patterns emerge.</p>
 
@@ -499,7 +624,7 @@ export default function VestingAccelerationClausesExplainedBlogPost() {
 
 <p><strong>Solution:</strong> Check whether "change of control" includes IPO in your equity agreement. If excluded and IPO is a realistic path, negotiate for IPO inclusion or request separate IPO-trigger provisions.</p>
 
-<h2>Frequently Asked Questions About Vesting Acceleration</h2>
+<h2 id="frequently-asked-questions-about-vesting-acceleration">Frequently Asked Questions About Vesting Acceleration</h2>
 
 <h3>What is double-trigger acceleration?</h3>
 
@@ -564,13 +689,31 @@ export default function VestingAccelerationClausesExplainedBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/exit-calculator-berlin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Berlin Exit Calculator: German Startup Valuation & European M&A 2025</span>
+                </Link>
+                <Link href="/blog/exit-calculator-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">London Exit Calculator: UK Startup Valuation & Brexit Impact on M&A 2025</span>
+                </Link>
+                <Link href="/blog/exit-calculator-new-york/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">NYC Exit Calculator: New York Startup Exit Valuations & Fintech M&A 2025</span>
+                </Link>
+                <Link href="/blog/exit-calculator-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Silicon Valley Exit Calculator: Startup Valuation & M&A Multiples 2025</span>
+                </Link>
+                <Link href="/blog/exit-calculator-singapore/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Singapore Exit Calculator: APAC Startup Valuation & Cross-Border M&A 2025</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/exit-calculator-growth-serial-entrepreneur-miami-model-exit-scenarios-maximize-founder-proceeds/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Exit Calculator</Link>
+              <Link href="/blog/equity-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Equity, Vesting & Option Pool Guides</Link>
+                <Link href="/blog/exit-strategy-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Exit & Pro-Rata Guides</Link>
             </div>
           </div>
         </section>
@@ -580,18 +723,18 @@ export default function VestingAccelerationClausesExplainedBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your Exit Scenarios
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Calculate founder proceeds at different exit valuations with liquidation preference waterfalls.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/startup-exit-visualizer/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Exit Calculator &rarr;
               </a>
             </div>
           </div>

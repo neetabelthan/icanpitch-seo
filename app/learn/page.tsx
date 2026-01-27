@@ -28,64 +28,64 @@ export const metadata: Metadata = {
 export default function LearnPage() {
   const calculators = [
     {
-      name: "SAFE Calculator",
-      slug: "safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership",
-      stage: "Seed",
-      description: "Calculate SAFE conversions and optimize equity dilution"
+      name: "409a Valuation Calculator",
+      slug: "409a-valuation-calculator-series-b-technical-founder-toronto-prepare-employee-options-comply-with-tax-regulations",
+      stage: "Series B",
+      description: "Free 409A valuation calculator for Series B technical founders in Toronto. Prepare employee options and comply with tax regulations using accurate modeling.",
     },
     {
       name: "Burn Rate Calculator",
       slug: "burn-rate-calculator-series-a-first-time-founder-new-york-plan-fundraising-timeline-extend-runway-efficiency",
       stage: "Series A",
-      description: "Plan your fundraising timeline and extend your runway"
-    },
-    {
-      name: "Equity Split Calculator",
-      slug: "equity-split-calculator-pre-seed-serial-entrepreneur-london-resolve-co-founder-disputes-create-fair-equity-distribution",
-      stage: "Pre-Seed",
-      description: "Create fair equity distributions for co-founders"
-    },
-    {
-      name: "Option Pool Calculator",
-      slug: "option-pool-calculator-pre-seed-technical-founder-san-francisco-size-employee-equity-minimize-founder-dilution",
-      stage: "Pre-Seed",
-      description: "Size employee equity pools and minimize founder dilution"
+      description: "Free burn rate calculator for Series A first-time founders in New York. Plan your fundraising timeline and extend runway efficiency with real-time modeling.",
     },
     {
       name: "Convertible Note Calculator",
       slug: "convertible-note-calculator-seed-business-founder-austin-negotiate-better-terms-understand-conversion-scenarios",
       stage: "Seed",
-      description: "Understand convertible note conversion mechanics"
+      description: "Free convertible note calculator for seed-stage business founders in Austin. Negotiate better terms and understand conversion scenarios with accurate modeling.",
     },
     {
-      name: "Vesting Calculator",
-      slug: "vesting-calculator-seed-serial-entrepreneur-boston-plan-founder-vesting-protect-against-co-founder-departure",
-      stage: "Seed",
-      description: "Plan founder vesting schedules and protect against departures"
-    },
-    {
-      name: "Pre/Post Money Calculator",
-      slug: "pre-post-money-calculator-series-a-first-time-founder-seattle-understand-valuation-mechanics-negotiate-better-terms",
-      stage: "Series A",
-      description: "Understand valuation mechanics and negotiate better terms"
-    },
-    {
-      name: "409A Valuation Calculator",
-      slug: "409a-valuation-calculator-series-b-technical-founder-toronto-prepare-employee-options-comply-with-tax-regulations",
-      stage: "Series B",
-      description: "Prepare employee options and comply with tax regulations"
-    },
-    {
-      name: "Pro Rata Calculator",
-      slug: "pro-rata-calculator-series-b-business-founder-chicago-model-future-dilution-plan-investor-rights",
-      stage: "Series B",
-      description: "Model future dilution and plan investor rights"
+      name: "Equity Split Calculator",
+      slug: "equity-split-calculator-pre-seed-serial-entrepreneur-london-resolve-co-founder-disputes-create-fair-equity-distribution",
+      stage: "Pre Seed",
+      description: "Free equity split calculator for pre-seed serial entrepreneurs in London. Resolve co-founder disputes and create fair equity distribution with accurate modeling.",
     },
     {
       name: "Exit Calculator",
       slug: "exit-calculator-growth-serial-entrepreneur-miami-model-exit-scenarios-maximize-founder-proceeds",
       stage: "Growth",
-      description: "Model exit scenarios and maximize founder proceeds"
+      description: "Free exit calculator for growth-stage serial entrepreneurs in Miami. Model exit scenarios and maximize founder proceeds with accurate real-time calculations.",
+    },
+    {
+      name: "Option Pool Calculator",
+      slug: "option-pool-calculator-pre-seed-technical-founder-san-francisco-size-employee-equity-minimize-founder-dilution",
+      stage: "Pre Seed",
+      description: "Free option pool calculator for pre-seed technical founders in San Francisco. Size employee equity and minimize founder dilution with real-time modeling.",
+    },
+    {
+      name: "Pre Post Money Calculator",
+      slug: "pre-post-money-calculator-series-a-first-time-founder-seattle-understand-valuation-mechanics-negotiate-better-terms",
+      stage: "Series A",
+      description: "Free pre and post money calculator for Series A first-time founders in Seattle. Understand valuation mechanics and negotiate better terms with real-time modeling.",
+    },
+    {
+      name: "Pro Rata Calculator",
+      slug: "pro-rata-calculator-series-b-business-founder-chicago-model-future-dilution-plan-investor-rights",
+      stage: "Series B",
+      description: "Free pro rata calculator for Series B business founders in Chicago. Model future dilution and plan investor rights with accurate real-time calculations.",
+    },
+    {
+      name: "Safe Calculator",
+      slug: "safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership",
+      stage: "Seed",
+      description: "Free SAFE calculator for seed-stage technical founders in Silicon Valley. Optimize equity dilution and maximize founder ownership with accurate modeling.",
+    },
+    {
+      name: "Vesting Calculator",
+      slug: "vesting-calculator-seed-serial-entrepreneur-boston-plan-founder-vesting-protect-against-co-founder-departure",
+      stage: "Seed",
+      description: "Free vesting calculator for seed-stage serial entrepreneurs in Boston. Plan founder vesting and protect against co-founder departure with real-time modeling.",
     }
   ];
 
@@ -141,7 +141,7 @@ export default function LearnPage() {
                       asChild
                     >
                       <Link href={`/learn/${calc.slug}/`}>
-                        Read Guide →
+                        Read Guide &rarr;
                       </Link>
                     </Button>
                   </CardContent>

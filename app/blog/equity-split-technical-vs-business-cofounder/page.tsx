@@ -52,6 +52,68 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do technical co-founders get more equity than business co-founders?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In 73% of two-founder startups, co-founders split equity equally at 50/50. However, among successful startups that reach Series B or later funding, 29% favor technical co-founders with 55-65% equity versus only 7% favoring business co-founders. Technical co-founders receive premiums primarily when they possess unique expertise, originated the idea, or when product differentiation constitutes the core competitive moat. For typical SaaS startups, equal splits remain most common."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a fair equity split if the technical co-founder built the product before the business co-founder joined?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If the technical co-founder worked solo for 6-12 months building a functional product before adding a business co-founder, a 55/45 or 60/40 split favoring the technical co-founder is justified. Use this formula: allocate 10-15% for the pre-partnership work, then split the remaining 85-90% equally. For example, 15% for solo work plus 42.5% from equal split equals 57.5% technical co-founder, 42.5% business co-founder. Always apply 4-year vesting going forward to both co-founders."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should the CEO get more equity than the CTO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CEO title alone does not justify more equity—what matters is total contribution and future value creation. In 50/50 splits, it's common for the business co-founder to serve as CEO and the technical co-founder as CTO with equal equity. However, if the CEO originated the idea, recruited the CTO, and brings significant market expertise or customer relationships, a 55/45 split favoring the CEO is reasonable. Avoid splits beyond 60/40, which create unhealthy junior and senior partner dynamics."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I value a business co-founder's customer relationships versus a technical co-founder's product work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use tangible outcomes to value contributions. If the business co-founder brings 5+ customers representing $500,000 or more in pipeline or annual recurring revenue, that's measurable value worth 5-10% extra equity. If the technical co-founder possesses unique expertise such as a PhD, published research, or rare specialization that's impossible to replace, that's also worth a 5-10% premium. Use the points-based framework in this guide to objectively score contributions across seven categories, then moderate extreme results to land between 50/50 and 60/40."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What equity split is recommended for a non-technical founder hiring a CTO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you're a solo non-technical founder hiring your first CTO after you've already validated the market, raised pre-seed funding, or acquired customers, offer 1-3% equity as \"Founding Engineer\" or \"VP Engineering,\" not 30-50% as a co-founder. A true co-founder joins before significant de-risking occurs. If the CTO joins at true ground zero with no product, no customers, and no funding, a 50/50 or 45/55 split favoring the originating founder is appropriate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should co-founders have the same vesting schedule as employees?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, co-founders should use standard 4-year vesting with a 1-year cliff, identical to employee vesting structures. This protects both co-founders if one leaves early. 91% of venture capital-backed startups require co-founder vesting. If co-founders worked together for 6+ months before formally incorporating, you can credit that time by starting the vesting clock earlier. For example, if you worked together for 9 months, vest 25% immediately on incorporation day, then continue monthly vesting for the remainder."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens to equity if a co-founder leaves the company?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unvested equity is forfeited and returns to the company if a co-founder leaves before their vesting schedule completes. For example, if a 50% co-founder leaves after 18 months with 4-year vesting, they keep approximately 18.75% calculated as follows: 12 months of cliff vesting equals 25%, plus 6 months of monthly vesting equals 12.5%, multiplied by their 50% allocation equals 18.75% total. The remaining 31.25% returns to the company and can be re-allocated to the remaining founder, new hires, or a refreshed option pool. Always document this mechanism clearly in your Founders' Stock Purchase Agreement."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +176,27 @@ export default function EquitySplitTechnicalVsBusinessCofounderBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#tldr-the-technical-vs-business-co-founder-equity-question" className="text-blue-600 hover:text-blue-700 text-sm">TL;DR: The Technical vs Business Co-Founder Equity Question</a></li>
+                  <li><a href="#understanding-the-technical-vs-business-co-founder-equity-de" className="text-blue-600 hover:text-blue-700 text-sm">Understanding the Technical vs Business Co-Founder Equity Debate</a></li>
+                  <li><a href="#the-compelling-case-for-equal-5050-equity-splits" className="text-blue-600 hover:text-blue-700 text-sm">The Compelling Case for Equal 50/50 Equity Splits</a></li>
+                  <li><a href="#when-technical-co-founders-justify-higher-equity-stakes" className="text-blue-600 hover:text-blue-700 text-sm">When Technical Co-Founders Justify Higher Equity Stakes</a></li>
+                  <li><a href="#when-business-co-founders-justify-higher-equity-stakes" className="text-blue-600 hover:text-blue-700 text-sm">When Business Co-Founders Justify Higher Equity Stakes</a></li>
+                  <li><a href="#systematic-framework-for-valuing-co-founder-contributions" className="text-blue-600 hover:text-blue-700 text-sm">Systematic Framework for Valuing Co-Founder Contributions</a></li>
+                  <li><a href="#detailed-co-founder-equity-split-scenarios" className="text-blue-600 hover:text-blue-700 text-sm">Detailed Co-Founder Equity Split Scenarios</a></li>
+                  <li><a href="#vesting-schedules-the-critical-protection-mechanism" className="text-blue-600 hover:text-blue-700 text-sm">Vesting Schedules: The Critical Protection Mechanism</a></li>
+                  <li><a href="#common-equity-split-mistakes-and-how-to-avoid-them" className="text-blue-600 hover:text-blue-700 text-sm">Common Equity Split Mistakes and How to Avoid Them</a></li>
+                  <li><a href="#frequently-asked-questions-about-technical-vs-business-co-fo" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions About Technical vs Business Co-Founder Equity</a></li>
+                  <li><a href="#key-takeaways-the-co-founder-equity-split-decision-framework" className="text-blue-600 hover:text-blue-700 text-sm">Key Takeaways: The Co-Founder Equity Split Decision Framework</a></li>
+                  <li><a href="#next-steps-navigate-your-co-founder-equity-split-successfull" className="text-blue-600 hover:text-blue-700 text-sm">Next Steps: Navigate Your Co-Founder Equity Split Successfully</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,11 +207,11 @@ export default function EquitySplitTechnicalVsBusinessCofounderBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>TL;DR: The Technical vs Business Co-Founder Equity Question</h2>
+                <h2 id="tldr-the-technical-vs-business-co-founder-equity-question">TL;DR: The Technical vs Business Co-Founder Equity Question</h2>
 
 <p>In successful startups, technical co-founders average 5-10% more equity than business co-founders, but equal 50/50 splits remain most common at 73% of startups. The fair split depends on who originated the idea, technical complexity of the product, and which co-founder assumes the CEO role. This comprehensive guide provides frameworks, real scenarios with named founders, and negotiation tactics to establish fair equity splits that prevent co-founder conflict.</p>
 
-<h2>Understanding the Technical vs Business Co-Founder Equity Debate</h2>
+<h2 id="understanding-the-technical-vs-business-co-founder-equity-de">Understanding the Technical vs Business Co-Founder Equity Debate</h2>
 
 <p>Few startup decisions generate more anxiety than splitting equity between technical and business co-founders. Get it wrong, and resentment festers for years, sometimes destroying otherwise promising companies. Get it right, and you create aligned incentives that propel both founders toward the same ambitious goals.</p>
 
@@ -142,7 +223,7 @@ export default function EquitySplitTechnicalVsBusinessCofounderBlogPost() {
 
 <p>The 5-10% premium for technical co-founders in successful companies reflects technical complexity and the difficulty of replacing top engineering talent. Yet business acumen remains essential, which is why equal splits dominate even among high-performing startups.</p>
 
-<h2>The Compelling Case for Equal 50/50 Equity Splits</h2>
+<h2 id="the-compelling-case-for-equal-5050-equity-splits">The Compelling Case for Equal 50/50 Equity Splits</h2>
 
 <p>Despite data showing some technical favoritism in successful companies, equal 50/50 splits remain the most common and often the wisest choice for co-founding teams. Here are the compelling reasons why.</p>
 
@@ -172,7 +253,21 @@ export default function EquitySplitTechnicalVsBusinessCofounderBlogPost() {
 
 <p>One prominent Series A investor explained: "When I see a 70/30 technical-business split, my first question is: 'Why is the business co-founder willing to accept being a junior partner?' If they're that unimportant, why are they a co-founder at all? If they're critical to success, why the massive equity gap? Either scenario is concerning."</p>
 
-<h2>When Technical Co-Founders Justify Higher Equity Stakes</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Split Equity Fairly</p>
+                <p className="text-gray-600 mb-4">Use our framework to calculate fair co-founder equity splits based on contributions and commitment.</p>
+                <a
+                  href="https://icanpitch.com/co-founder-equity-split-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Equity Split Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="when-technical-co-founders-justify-higher-equity-stakes">When Technical Co-Founders Justify Higher Equity Stakes</h2>
 
 <p>While 50/50 serves as the default recommendation, legitimate scenarios exist where technical co-founders deserve 55-65% equity. Understanding these scenarios helps you make informed decisions.</p>
 
@@ -212,7 +307,7 @@ export default function EquitySplitTechnicalVsBusinessCofounderBlogPost() {
 
 <p>Founders should be compensated primarily for future value creation, not past salary levels. If the business co-founder can drive equivalent value despite lower opportunity cost, equal splits remain fair. As Naval Ravikant of AngelList argues: "Startups should split equity based on future contribution, not past salary. If someone's only value proposition is their FAANG resume, they shouldn't be a co-founder—they should be an employee with market-rate cash compensation."</p>
 
-<h2>When Business Co-Founders Justify Higher Equity Stakes</h2>
+<h2 id="when-business-co-founders-justify-higher-equity-stakes">When Business Co-Founders Justify Higher Equity Stakes</h2>
 
 <p>While less common, specific scenarios justify business co-founders receiving 55-65% equity versus their technical counterparts.</p>
 
@@ -236,7 +331,7 @@ export default function EquitySplitTechnicalVsBusinessCofounderBlogPost() {
 
 <p>Example calculation: the business co-founder invests $200,000 when the company has effectively zero value pre-product. The technical co-founder builds the MVP over 6 months. At MVP completion, the company is notionally worth $1 million. The $200,000 investment converts to 20% equity using standard early-stage conversion rates. The remaining 80% splits equally at 40% each. Final split: 60% business co-founder (20% from investment plus 40% from sweat equity), 40% technical co-founder.</p>
 
-<h2>Systematic Framework for Valuing Co-Founder Contributions</h2>
+<h2 id="systematic-framework-for-valuing-co-founder-contributions">Systematic Framework for Valuing Co-Founder Contributions</h2>
 
 <p>The hardest aspect of equity splits involves quantifying intangible contributions. Many successful co-founder teams use a points-based system to objectively value contributions across seven key categories.</p>
 
@@ -285,7 +380,7 @@ export default function EquitySplitTechnicalVsBusinessCofounderBlogPost() {
 
 <p>Revised split for Emma and Lucas: 55% Emma, 45% Lucas. This reflects Emma's pre-work and cash investment while acknowledging Lucas's critical future contribution. Both partners should feel the split is "roughly fair," which matters more than mathematical precision.</p>
 
-<h2>Detailed Co-Founder Equity Split Scenarios</h2>
+<h2 id="detailed-co-founder-equity-split-scenarios">Detailed Co-Founder Equity Split Scenarios</h2>
 
 <h3>Scenario One: The Balanced Partnership</h3>
 
@@ -329,7 +424,7 @@ export default function EquitySplitTechnicalVsBusinessCofounderBlogPost() {
 
 <p>As Jason Cohen, founder of WP Engine, explains: "If your 'co-founder' is joining after you've already achieved product-market fit and raised money, they're not a co-founder—they're a critical early hire. Respect them with generous employee equity in the 1-3% range, not dilutive co-founder equity at 30-50%."</p>
 
-<h2>Vesting Schedules: The Critical Protection Mechanism</h2>
+<h2 id="vesting-schedules-the-critical-protection-mechanism">Vesting Schedules: The Critical Protection Mechanism</h2>
 
 <p>Regardless of your equity split decision, both co-founders must implement vesting schedules. This protection is non-negotiable for any serious startup.</p>
 
@@ -349,7 +444,7 @@ export default function EquitySplitTechnicalVsBusinessCofounderBlogPost() {
 
 <p><strong>Double-Trigger Acceleration:</strong> Equity vests only if the company is both acquired and the founder is terminated without cause within 12 months. This protects founders if an acquirer immediately fires them while maintaining incentive to stay and help with integration. <strong>This represents the balanced approach included in 67% of venture capital term sheets and is the recommended structure for most founders.</strong></p>
 
-<h2>Common Equity Split Mistakes and How to Avoid Them</h2>
+<h2 id="common-equity-split-mistakes-and-how-to-avoid-them">Common Equity Split Mistakes and How to Avoid Them</h2>
 
 <h3>Mistake One: Splitting Equity on Day One Without Vesting</h3>
 
@@ -381,7 +476,7 @@ export default function EquitySplitTechnicalVsBusinessCofounderBlogPost() {
 
 <p>The fix: Make decisions by consensus whenever possible. If you consistently need to invoke your 55% to override your co-founder, you have a relationship problem, not an authority problem. Consider parting ways before resentment becomes toxic and derails the company.</p>
 
-<h2>Frequently Asked Questions About Technical vs Business Co-Founder Equity</h2>
+<h2 id="frequently-asked-questions-about-technical-vs-business-co-fo">Frequently Asked Questions About Technical vs Business Co-Founder Equity</h2>
 
 <h3>Do technical co-founders get more equity than business co-founders?</h3>
 
@@ -411,7 +506,7 @@ export default function EquitySplitTechnicalVsBusinessCofounderBlogPost() {
 
 <p>Unvested equity is forfeited and returns to the company if a co-founder leaves before their vesting schedule completes. For example, if a 50% co-founder leaves after 18 months with 4-year vesting, they keep approximately 18.75% calculated as follows: 12 months of cliff vesting equals 25%, plus 6 months of monthly vesting equals 12.5%, multiplied by their 50% allocation equals 18.75% total. The remaining 31.25% returns to the company and can be re-allocated to the remaining founder, new hires, or a refreshed option pool. Always document this mechanism clearly in your Founders' Stock Purchase Agreement.</p>
 
-<h2>Key Takeaways: The Co-Founder Equity Split Decision Framework</h2>
+<h2 id="key-takeaways-the-co-founder-equity-split-decision-framework">Key Takeaways: The Co-Founder Equity Split Decision Framework</h2>
 
 <p><strong>Default to 50/50 unless compelling reasons exist otherwise.</strong> 73% of startups use equal splits because perceived fairness reduces conflict, which represents the number one startup killer. Contributions typically balance over 7-10 year journeys, making mathematical precision less important than long-term alignment.</p>
 
@@ -423,7 +518,7 @@ export default function EquitySplitTechnicalVsBusinessCofounderBlogPost() {
 
 <p><strong>Red flags indicating someone should not be a co-founder:</strong> They're joining after you've raised money and validated product-market fit; the points-based framework suggests a split more extreme than 70/30; they're unwilling to commit full-time for 3+ years; or they want co-founder equity without accepting co-founder responsibility and risk.</p>
 
-<h2>Next Steps: Navigate Your Co-Founder Equity Split Successfully</h2>
+<h2 id="next-steps-navigate-your-co-founder-equity-split-successfull">Next Steps: Navigate Your Co-Founder Equity Split Successfully</h2>
 
 <p><strong>This week, take these actions:</strong> Complete the co-founder equity scorecard independently, then compare results with your potential co-founder. Have the equity conversation using a structured approach that acknowledges both partners' contributions objectively. Land on a split between 50/50 and 60/40—anything more extreme deserves professional legal counsel to ensure you're structuring the relationship correctly.</p>
 
@@ -452,13 +547,30 @@ export default function EquitySplitTechnicalVsBusinessCofounderBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/co-founder-equity-split-50-50-alternatives/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Co-Founder Equity Split: Why 50/50 Fails and Better Alternatives</span>
+                </Link>
+                <Link href="/blog/early-employee-equity-calculator-guide/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Early Employee Equity Calculator: How Much to Offer Guide</span>
+                </Link>
+                <Link href="/blog/founder-vesting-schedules-4-year-1-year-cliff/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Founder Vesting Schedules: 4-Year 1-Year Cliff Explained</span>
+                </Link>
+                <Link href="/blog/how-to-calculate-safe-dilution/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Calculate SAFE Dilution: A Founder's Guide</span>
+                </Link>
+                <Link href="/blog/option-pool-dilution-impact-founders/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Option Pool Dilution Impact on Founders: Complete Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/equity-split-calculator-pre-seed-serial-entrepreneur-london-resolve-co-founder-disputes-create-fair-equity-distribution/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Equity Split Calculator</Link>
+              <Link href="/blog/equity-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Equity, Vesting & Option Pool Guides</Link>
             </div>
           </div>
         </section>
@@ -468,18 +580,18 @@ export default function EquitySplitTechnicalVsBusinessCofounderBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Split Equity Fairly
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Use our framework to calculate fair co-founder equity splits based on contributions and commitment.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/co-founder-equity-split-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Equity Split Calculator &rarr;
               </a>
             </div>
           </div>

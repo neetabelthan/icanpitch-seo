@@ -114,8 +114,25 @@ export default function SafeCalculatorFintechNewYorkBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-nyc-fintech-startups-need-industry-specific-safe-calcula" className="text-blue-600 hover:text-blue-700 text-sm">Why NYC Fintech Startups Need Industry-Specific SAFE Calculations</a></li>
+                  <li><a href="#nyc-fintech-safe-valuation-benchmarks-2024-2025" className="text-blue-600 hover:text-blue-700 text-sm">NYC Fintech SAFE Valuation Benchmarks (2024-2025)</a></li>
+                  <li><a href="#how-regulatory-complexity-impacts-your-fintech-valuation" className="text-blue-600 hover:text-blue-700 text-sm">How Regulatory Complexity Impacts Your Fintech Valuation</a></li>
+                  <li><a href="#nyc-fintech-investor-landscape-and-valuation-expectations" className="text-blue-600 hover:text-blue-700 text-sm">NYC Fintech Investor Landscape and Valuation Expectations</a></li>
+                  <li><a href="#key-metrics-that-drive-nyc-fintech-valuations" className="text-blue-600 hover:text-blue-700 text-sm">Key Metrics That Drive NYC Fintech Valuations</a></li>
+                  <li><a href="#structuring-your-nyc-fintech-safe-key-terms-beyond-valuation" className="text-blue-600 hover:text-blue-700 text-sm">Structuring Your NYC Fintech SAFE: Key Terms Beyond Valuation Cap</a></li>
+                  <li><a href="#tax-and-legal-considerations-for-nyc-fintech-safes" className="text-blue-600 hover:text-blue-700 text-sm">Tax and Legal Considerations for NYC Fintech SAFEs</a></li>
+                  <li><a href="#common-mistakes-nyc-fintech-founders-make-with-safes" className="text-blue-600 hover:text-blue-700 text-sm">Common Mistakes NYC Fintech Founders Make with SAFEs</a></li>
+                  <li><a href="#nyc-fintech-safe-valuation-calculator-step-by-step-framework" className="text-blue-600 hover:text-blue-700 text-sm">NYC Fintech SAFE Valuation Calculator: Step-by-Step Framework</a></li>
+                  <li><a href="#next-steps-calculating-and-negotiating-your-nyc-fintech-safe" className="text-blue-600 hover:text-blue-700 text-sm">Next Steps: Calculating and Negotiating Your NYC Fintech SAFE</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,13 +143,13 @@ export default function SafeCalculatorFintechNewYorkBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why NYC Fintech Startups Need Industry-Specific SAFE Calculations</h2>
+                <h2 id="why-nyc-fintech-startups-need-industry-specific-safe-calcula">Why NYC Fintech Startups Need Industry-Specific SAFE Calculations</h2>
 
 <p>If you're raising a SAFE round for your New York fintech startup, you're operating in one of the most competitive and premium-valued sectors in venture capital. NYC fintech deals represent 18% of all seed-stage financings nationally, yet command valuation premiums averaging 22% above comparable tech startups in other sectors. This isn't arbitrary—it reflects the unique regulatory moats, network effects, and capital intensity that define financial technology.</p>
 
 <p>The challenge? Generic SAFE calculators don't account for fintech-specific dynamics. Whether you're building payments infrastructure, embedded finance platforms, or regulatory compliance tools, your valuation depends on factors like licensing requirements, financial partnerships, regulatory runway, and proximity to Wall Street capital. This guide provides the benchmarks, frameworks, and investor expectations that actually matter when negotiating your NYC fintech SAFE.</p>
 
-<h2>NYC Fintech SAFE Valuation Benchmarks (2024-2025)</h2>
+<h2 id="nyc-fintech-safe-valuation-benchmarks-2024-2025">NYC Fintech SAFE Valuation Benchmarks (2024-2025)</h2>
 
 <p>New York fintech valuations cluster around distinct ranges based on stage, vertical, and regulatory complexity. Here's what the data shows for SAFE rounds closed in the past 18 months:</p>
 
@@ -160,7 +177,7 @@ export default function SafeCalculatorFintechNewYorkBlogPost() {
 
 <p>While this guide focuses on SAFE agreements (typically pre-seed and seed), it's worth noting that NYC fintech Series A rounds range from $40M to $100M+ post-money valuations. The key inflection point: achieving regulatory approval (bank charter, money transmitter licenses, broker-dealer registration) or demonstrating product-market fit with tier-1 financial institutions as customers.</p>
 
-<h2>How Regulatory Complexity Impacts Your Fintech Valuation</h2>
+<h2 id="how-regulatory-complexity-impacts-your-fintech-valuation">How Regulatory Complexity Impacts Your Fintech Valuation</h2>
 
 <p>Regulatory compliance isn't just a cost center—it's a valuation driver. NYC fintech investors explicitly model regulatory risk into their pricing, creating both premiums and discounts based on where you are in the compliance journey.</p>
 
@@ -190,7 +207,21 @@ export default function SafeCalculatorFintechNewYorkBlogPost() {
 
 <p>Mitigation strategy: Retain top-tier fintech legal counsel (Goodwin Procter, Morrison Foerster, Debevoise &amp; Plimpton are NYC standards) and secure legal opinions on regulatory treatment. Investors will still discount for uncertainty but less severely if you demonstrate sophisticated risk management.</p>
 
-<h2>NYC Fintech Investor Landscape and Valuation Expectations</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="nyc-fintech-investor-landscape-and-valuation-expectations">NYC Fintech Investor Landscape and Valuation Expectations</h2>
 
 <p>New York's fintech ecosystem includes specialized investors who understand sector nuances and price deals accordingly. Knowing who invests at what stage and what they expect helps calibrate your SAFE terms.</p>
 
@@ -232,7 +263,7 @@ export default function SafeCalculatorFintechNewYorkBlogPost() {
 
 <p>Trade-off: Corporate VCs often negotiate for information rights, strategic board observers, or preferential partnership terms. They may also expect slightly lower valuations (5-10% discount) in exchange for strategic value. Evaluate whether the distribution access justifies the dilution.</p>
 
-<h2>Key Metrics That Drive NYC Fintech Valuations</h2>
+<h2 id="key-metrics-that-drive-nyc-fintech-valuations">Key Metrics That Drive NYC Fintech Valuations</h2>
 
 <p>Fintech investors evaluate startups through sector-specific KPIs that differ from general SaaS or consumer tech. Understanding which metrics move your valuation helps you optimize your pitch and SAFE terms.</p>
 
@@ -272,7 +303,7 @@ export default function SafeCalculatorFintechNewYorkBlogPost() {
 <li><strong>Regulatory Updates:</strong> Ability to adapt to changing compliance requirements without custom engineering.</li>
 </ul>
 
-<h2>Structuring Your NYC Fintech SAFE: Key Terms Beyond Valuation Cap</h2>
+<h2 id="structuring-your-nyc-fintech-safe-key-terms-beyond-valuation">Structuring Your NYC Fintech SAFE: Key Terms Beyond Valuation Cap</h2>
 
 <p>While the valuation cap gets the most attention, other SAFE terms significantly impact your economics and future fundraising flexibility. NYC fintech investors have specific expectations around these provisions.</p>
 
@@ -307,7 +338,7 @@ export default function SafeCalculatorFintechNewYorkBlogPost() {
 
 <p>These are generally acceptable for material investors ($500K+) but avoid granting to small angels—it creates administrative burden and signals poor governance to future investors.</p>
 
-<h2>Tax and Legal Considerations for NYC Fintech SAFEs</h2>
+<h2 id="tax-and-legal-considerations-for-nyc-fintech-safes">Tax and Legal Considerations for NYC Fintech SAFEs</h2>
 
 <p>New York has specific tax and regulatory implications for SAFE agreements that impact both founders and investors.</p>
 
@@ -342,7 +373,7 @@ export default function SafeCalculatorFintechNewYorkBlogPost() {
 <li><strong>Money Transmitter Licenses:</strong> Some states require disclosure of ownership changes; consult fintech counsel before closing large SAFEs.</li>
 </ul>
 
-<h2>Common Mistakes NYC Fintech Founders Make with SAFEs</h2>
+<h2 id="common-mistakes-nyc-fintech-founders-make-with-safes">Common Mistakes NYC Fintech Founders Make with SAFEs</h2>
 
 <p>After analyzing hundreds of NYC fintech cap tables, several patterns of founder errors emerge:</p>
 
@@ -366,7 +397,7 @@ export default function SafeCalculatorFintechNewYorkBlogPost() {
 
 <p>NYC fintech startups need compliance expertise earlier than other tech companies. Budget for a fractional Chief Compliance Officer ($5K-$10K/month) or compliance consultant before you need one. Regulatory violations torpedo valuations and fundraising prospects.</p>
 
-<h2>NYC Fintech SAFE Valuation Calculator: Step-by-Step Framework</h2>
+<h2 id="nyc-fintech-safe-valuation-calculator-step-by-step-framework">NYC Fintech SAFE Valuation Calculator: Step-by-Step Framework</h2>
 
 <p>Use this framework to estimate a defensible SAFE valuation cap for your NYC fintech startup:</p>
 
@@ -418,7 +449,7 @@ Traction: +$1.5M (tier-2 bank partnership) = $9.8M<br />
 Team: +$1.2M (15% premium for Stripe pedigree) = $11M<br />
 <strong>Suggested SAFE cap: $10M-$12M</strong></p>
 
-<h2>Next Steps: Calculating and Negotiating Your NYC Fintech SAFE</h2>
+<h2 id="next-steps-calculating-and-negotiating-your-nyc-fintech-safe">Next Steps: Calculating and Negotiating Your NYC Fintech SAFE</h2>
 
 <p>Armed with industry benchmarks and regulatory considerations, you're ready to model your specific valuation. The most successful NYC fintech founders approach SAFE negotiations with:</p>
 
@@ -453,13 +484,31 @@ Team: +$1.2M (15% premium for Stripe pedigree) = $11M<br />
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/safe-calculator-new-york-startup-scene/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for New York Startups: NYC Founder's Guide to SAFE Notes</span>
+                </Link>
+                <Link href="/blog/safe-calculator-ai-ml-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">AI/ML SAFE Calculator Silicon Valley: 2025 Valuation Benchmarks for Foundation Models vs Application Layer</span>
+                </Link>
+                <Link href="/blog/safe-calculator-b2b-saas-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">B2B SaaS SAFE Calculator for London Startups: UK Valuation Benchmarks vs US Comparables</span>
+                </Link>
+                <Link href="/blog/safe-calculator-climate-tech-san-francisco/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Climate Tech SAFE Calculator San Francisco: Cleantech Valuations with IRA Impact & Hardware vs Software Dynamics</span>
+                </Link>
+                <Link href="/blog/safe-calculator-consumer-tech-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Consumer Tech SAFE Calculator Silicon Valley: Post-iOS14 Valuation Benchmarks for Social & Mobile Apps</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -469,18 +518,18 @@ Team: +$1.2M (15% premium for Stripe pedigree) = $11M<br />
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

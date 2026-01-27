@@ -201,6 +201,38 @@ export default function Home() {
         </div>
       </main>
 
+      {/* Browse by Topic */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Browse by Topic</h2>
+            <p className="text-gray-600 mb-8">In-depth guide collections organized by startup finance topic</p>
+            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+              <Link href="/blog/safe-calculator-guides/" className="block p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all">
+                <h3 className="font-semibold text-gray-900 mb-1 text-sm">SAFE Guides</h3>
+                <p className="text-xs text-gray-500">Valuation caps, dilution, conversion</p>
+              </Link>
+              <Link href="/blog/burn-rate-guides/" className="block p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all">
+                <h3 className="font-semibold text-gray-900 mb-1 text-sm">Burn Rate & Runway</h3>
+                <p className="text-xs text-gray-500">Cash management, benchmarks</p>
+              </Link>
+              <Link href="/blog/equity-guides/" className="block p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all">
+                <h3 className="font-semibold text-gray-900 mb-1 text-sm">Equity & Vesting</h3>
+                <p className="text-xs text-gray-500">Splits, option pools, schedules</p>
+              </Link>
+              <Link href="/blog/exit-strategy-guides/" className="block p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all">
+                <h3 className="font-semibold text-gray-900 mb-1 text-sm">Exit & Pro-Rata</h3>
+                <p className="text-xs text-gray-500">M&A, investor rights</p>
+              </Link>
+              <Link href="/blog/valuation-guides/" className="block p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all">
+                <h3 className="font-semibold text-gray-900 mb-1 text-sm">Valuations</h3>
+                <p className="text-xs text-gray-500">Pre/post money, 409A</p>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Feature Highlights */}
       <section className="bg-gray-50 py-12 md:py-16">
         <div className="container mx-auto px-4">

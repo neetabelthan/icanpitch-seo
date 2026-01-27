@@ -52,6 +52,52 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What's a typical valuation cap for a Barcelona pre-seed SAFE?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Barcelona pre-seed SAFEs typically have €2M-€4M post-money valuation caps, with strong technical teams commanding €4M-€5M. This is 20-30% lower than comparable London or Paris startups but reflects Barcelona's cost efficiency and earlier-stage ecosystem maturity."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I use a pre-money or post-money SAFE?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Always request post-money SAFEs. They provide transparency on exact dilution (investment amount ÷ post-money cap = ownership %), while pre-money SAFEs create calculation complexity and typically result in more founder dilution. Most European investors now accept post-money structures."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can Spanish SL companies use SAFE agreements?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. While SAFEs originated for Delaware C-Corps, Spanish Sociedad Limitada (SL) companies can implement SAFEs as contractual future equity commitments. Barcelona startup lawyers routinely adapt SAFE templates for Spanish corporate law. The SAFE converts to actual equity (participaciones) when your Series A is formally notarized."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do CDTI grants affect my SAFE terms?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CDTI grants are non-dilutive and don't affect SAFE ownership calculations. However, receiving €100K-€300K in CDTI funding strengthens your negotiating position for SAFE terms, as you have less immediate capital pressure and extended runway. Use CDTI to reach higher milestones before raising equity, justifying higher valuation caps."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What discount rate should I offer Barcelona SAFE investors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "15-20% discounts are market standard in Barcelona, with 20% most common for pre-seed and seed SAFEs. Only offer above 20% if you have extreme capital urgency or the investor provides extraordinary strategic value beyond capital. Never offer below 10% as it signals misaligned incentives."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +160,29 @@ export default function SafeCalculatorBarcelonaBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-barcelona-founders-need-a-safe-calculator-built-for-spai" className="text-blue-600 hover:text-blue-700 text-sm">Why Barcelona Founders Need a SAFE Calculator Built for Spain's Ecosystem</a></li>
+                  <li><a href="#what-is-a-safe-agreement-and-why-barcelona-startups-use-it" className="text-blue-600 hover:text-blue-700 text-sm">What is a SAFE Agreement and Why Barcelona Startups Use It</a></li>
+                  <li><a href="#key-safe-terms-barcelona-founders-must-understand" className="text-blue-600 hover:text-blue-700 text-sm">Key SAFE Terms Barcelona Founders Must Understand</a></li>
+                  <li><a href="#barcelona-startup-valuation-benchmarks-for-safe-negotiations" className="text-blue-600 hover:text-blue-700 text-sm">Barcelona Startup Valuation Benchmarks for SAFE Negotiations</a></li>
+                  <li><a href="#how-to-calculate-safe-dilution-for-barcelona-startups" className="text-blue-600 hover:text-blue-700 text-sm">How to Calculate SAFE Dilution for Barcelona Startups</a></li>
+                  <li><a href="#barcelona-safe-calculator-step-by-step-walkthrough" className="text-blue-600 hover:text-blue-700 text-sm">Barcelona SAFE Calculator: Step-by-Step Walkthrough</a></li>
+                  <li><a href="#coordinating-safes-with-cdti-grants-and-spanish-public-fundi" className="text-blue-600 hover:text-blue-700 text-sm">Coordinating SAFEs with CDTI Grants and Spanish Public Funding</a></li>
+                  <li><a href="#barcelona-safe-negotiations-what-european-investors-expect" className="text-blue-600 hover:text-blue-700 text-sm">Barcelona SAFE Negotiations: What European Investors Expect</a></li>
+                  <li><a href="#common-safe-mistakes-barcelona-founders-make" className="text-blue-600 hover:text-blue-700 text-sm">Common SAFE Mistakes Barcelona Founders Make</a></li>
+                  <li><a href="#barcelona-safe-documents-what-you-need" className="text-blue-600 hover:text-blue-700 text-sm">Barcelona SAFE Documents: What You Need</a></li>
+                  <li><a href="#barcelona-investor-network-where-to-find-safe-investors" className="text-blue-600 hover:text-blue-700 text-sm">Barcelona Investor Network: Where to Find SAFE Investors</a></li>
+                  <li><a href="#from-safe-to-series-a-barcelona-fundraising-timeline" className="text-blue-600 hover:text-blue-700 text-sm">From SAFE to Series A: Barcelona Fundraising Timeline</a></li>
+                  <li><a href="#faq-barcelona-safe-agreements" className="text-blue-600 hover:text-blue-700 text-sm">FAQ: Barcelona SAFE Agreements</a></li>
+                  <li><a href="#calculate-your-barcelona-safe-dilution-with-confidence" className="text-blue-600 hover:text-blue-700 text-sm">Calculate Your Barcelona SAFE Dilution with Confidence</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +193,7 @@ export default function SafeCalculatorBarcelonaBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why Barcelona Founders Need a SAFE Calculator Built for Spain's Ecosystem</h2>
+                <h2 id="why-barcelona-founders-need-a-safe-calculator-built-for-spai">Why Barcelona Founders Need a SAFE Calculator Built for Spain's Ecosystem</h2>
 
 <p>Barcelona has evolved into one of Europe's premier startup ecosystems, producing successful companies like Typeform, Glovo, Wallapop, and TravelPerk. With institutions like <strong>Barcelona Tech City</strong>, accelerators such as <strong>Antai Venture Builder</strong> and <strong>Pier01</strong>, and flagship events like <strong>Mobile World Congress</strong>, the city attracts ambitious founders across software, mobile, travel tech, and gaming sectors.</p>
 
@@ -134,7 +201,7 @@ export default function SafeCalculatorBarcelonaBlogPost() {
 
 <p>This comprehensive guide provides Barcelona founders with everything needed to understand, negotiate, and calculate SAFE terms within Spain's startup ecosystem, including local valuation benchmarks, CDTI grant coordination, and European investor expectations.</p>
 
-<h2>What is a SAFE Agreement and Why Barcelona Startups Use It</h2>
+<h2 id="what-is-a-safe-agreement-and-why-barcelona-startups-use-it">What is a SAFE Agreement and Why Barcelona Startups Use It</h2>
 
 <p>A <strong>SAFE (Simple Agreement for Future Equity)</strong> is an investment contract where investors provide capital today in exchange for equity issued later, typically upon a future priced equity round (Series A) or liquidation event.</p>
 
@@ -161,7 +228,7 @@ export default function SafeCalculatorBarcelonaBlogPost() {
 
 <p>Barcelona lawyers specializing in startup law (such as those affiliated with Barcelona Tech City or major firms like Uría Menéndez) routinely adapt SAFE templates for Spanish corporate structures.</p>
 
-<h2>Key SAFE Terms Barcelona Founders Must Understand</h2>
+<h2 id="key-safe-terms-barcelona-founders-must-understand">Key SAFE Terms Barcelona Founders Must Understand</h2>
 
 <p>Four critical terms determine how your SAFE converts and how much dilution you'll experience:</p>
 
@@ -202,7 +269,21 @@ export default function SafeCalculatorBarcelonaBlogPost() {
 
 <p><strong>Example:</strong> Investor holds 5% after SAFE conversion. Series B raises €10M. Pro-rata rights allow them to invest €500,000 to maintain 5% (or invest less and accept dilution).</p>
 
-<h2>Barcelona Startup Valuation Benchmarks for SAFE Negotiations</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="barcelona-startup-valuation-benchmarks-for-safe-negotiations">Barcelona Startup Valuation Benchmarks for SAFE Negotiations</h2>
 
 <p>Setting appropriate valuation caps requires understanding Barcelona and Spanish market norms. While valuations have increased significantly since 2020, Barcelona startups typically raise at 20-40% lower valuations than London or Silicon Valley peers—creating more founder-friendly dilution dynamics.</p>
 
@@ -254,7 +335,7 @@ export default function SafeCalculatorBarcelonaBlogPost() {
 
 <p><strong>Investor profile:</strong> Growth-stage Spanish VCs, pan-European seed funds (Balderton, Index, Point Nine), strategic angels from successful exits</p>
 
-<h2>How to Calculate SAFE Dilution for Barcelona Startups</h2>
+<h2 id="how-to-calculate-safe-dilution-for-barcelona-startups">How to Calculate SAFE Dilution for Barcelona Startups</h2>
 
 <p>Understanding your ownership percentage after SAFE conversion is critical for long-term cap table planning. Here's the step-by-step calculation process:</p>
 
@@ -318,7 +399,7 @@ Ownership: €300,000 / €5,000,000 = 6%</p>
   <li>Series A investors: 20%</li>
 </ul>
 
-<h2>Barcelona SAFE Calculator: Step-by-Step Walkthrough</h2>
+<h2 id="barcelona-safe-calculator-step-by-step-walkthrough">Barcelona SAFE Calculator: Step-by-Step Walkthrough</h2>
 
 <p>ICanPitch's Barcelona SAFE calculator automates these complex calculations for Spanish founders. Here's how to use it effectively:</p>
 
@@ -358,7 +439,7 @@ Ownership: €300,000 / €5,000,000 = 6%</p>
   <li>Waterfall analysis (what each stakeholder receives at exit values)</li>
 </ul>
 
-<h2>Coordinating SAFEs with CDTI Grants and Spanish Public Funding</h2>
+<h2 id="coordinating-safes-with-cdti-grants-and-spanish-public-fundi">Coordinating SAFEs with CDTI Grants and Spanish Public Funding</h2>
 
 <p>Barcelona startups have a unique advantage: access to substantial non-dilutive Spanish and EU funding programs that complement SAFE equity raises. Strategic founders layer these funding sources to minimize dilution:</p>
 
@@ -408,7 +489,7 @@ Ownership: €300,000 / €5,000,000 = 6%</p>
 
 <p>This approach maintains 70-80% founder ownership through Series A vs 60-70% with equity-only fundraising.</p>
 
-<h2>Barcelona SAFE Negotiations: What European Investors Expect</h2>
+<h2 id="barcelona-safe-negotiations-what-european-investors-expect">Barcelona SAFE Negotiations: What European Investors Expect</h2>
 
 <p>Barcelona startups increasingly raise from pan-European and cross-border investors, each with distinct expectations around SAFE terms:</p>
 
@@ -461,7 +542,7 @@ Ownership: €300,000 / €5,000,000 = 6%</p>
   <li>Focus on global market potential rather than Spain/Europe-only plays</li>
 </ul>
 
-<h2>Common SAFE Mistakes Barcelona Founders Make</h2>
+<h2 id="common-safe-mistakes-barcelona-founders-make">Common SAFE Mistakes Barcelona Founders Make</h2>
 
 <h3>Setting Valuation Cap Too Low Out of Desperation</h3>
 
@@ -493,7 +574,7 @@ Ownership: €300,000 / €5,000,000 = 6%</p>
 
 <p><strong>Fix:</strong> Include flip provisions in SAFEs or work with lawyers (like those at Barcelona Tech City partner firms) who understand cross-border structures.</p>
 
-<h2>Barcelona SAFE Documents: What You Need</h2>
+<h2 id="barcelona-safe-documents-what-you-need">Barcelona SAFE Documents: What You Need</h2>
 
 <p>Raising a SAFE round in Barcelona requires proper legal documentation adapted for Spanish corporate structures:</p>
 
@@ -541,7 +622,7 @@ Ownership: €300,000 / €5,000,000 = 6%</p>
   <li>Registration with Registro Mercantil (when SAFEs convert to equity)</li>
 </ul>
 
-<h2>Barcelona Investor Network: Where to Find SAFE Investors</h2>
+<h2 id="barcelona-investor-network-where-to-find-safe-investors">Barcelona Investor Network: Where to Find SAFE Investors</h2>
 
 <h3>Local Angel Networks</h3>
 
@@ -579,7 +660,7 @@ Ownership: €300,000 / €5,000,000 = 6%</p>
   <li><strong>4 Years From Now (4YFN):</strong> Startup-focused event alongside MWC</li>
 </ul>
 
-<h2>From SAFE to Series A: Barcelona Fundraising Timeline</h2>
+<h2 id="from-safe-to-series-a-barcelona-fundraising-timeline">From SAFE to Series A: Barcelona Fundraising Timeline</h2>
 
 <p>Understanding the typical fundraising journey helps Barcelona founders plan SAFE terms and timing:</p>
 
@@ -604,7 +685,7 @@ Ownership: €300,000 / €5,000,000 = 6%</p>
   <li><strong>Deep tech:</strong> Technical de-risking complete, clear path to commercialization</li>
 </ul>
 
-<h2>FAQ: Barcelona SAFE Agreements</h2>
+<h2 id="faq-barcelona-safe-agreements">FAQ: Barcelona SAFE Agreements</h2>
 
 <h3>What's a typical valuation cap for a Barcelona pre-seed SAFE?</h3>
 
@@ -626,7 +707,7 @@ Ownership: €300,000 / €5,000,000 = 6%</p>
 
 <p>15-20% discounts are market standard in Barcelona, with 20% most common for pre-seed and seed SAFEs. Only offer above 20% if you have extreme capital urgency or the investor provides extraordinary strategic value beyond capital. Never offer below 10% as it signals misaligned incentives.</p>
 
-<h2>Calculate Your Barcelona SAFE Dilution with Confidence</h2>
+<h2 id="calculate-your-barcelona-safe-dilution-with-confidence">Calculate Your Barcelona SAFE Dilution with Confidence</h2>
 
 <p>SAFE agreements have become the fundraising standard for Barcelona startups, but calculating dilution, setting appropriate valuation caps, and coordinating with Spanish public funding requires specialized tools built for the local ecosystem.</p>
 
@@ -667,13 +748,31 @@ Ownership: €300,000 / €5,000,000 = 6%</p>
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/safe-calculator-dublin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Dublin SAFE Calculator: Model Your Startup Valuation and Dilution in EUR</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-barcelona/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Barcelona Burn Rate Calculator: Master Cash Runway for Spanish Startups</span>
+                </Link>
+                <Link href="/blog/avoiding-safe-dilution-traps-founders/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Avoiding SAFE Dilution Traps: 7 Mistakes Founders Make</span>
+                </Link>
+                <Link href="/blog/how-to-calculate-safe-dilution/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Calculate SAFE Dilution: A Founder's Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-amsterdam/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Amsterdam SAFE Calculator: Navigate Cross-Border Fundraising and Dutch Valuations</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -683,18 +782,18 @@ Ownership: €300,000 / €5,000,000 = 6%</p>
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

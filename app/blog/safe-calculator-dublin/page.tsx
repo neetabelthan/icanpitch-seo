@@ -114,8 +114,33 @@ export default function SafeCalculatorDublinBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-dublin-startups-need-a-safe-calculator-calibrated-for-ir" className="text-blue-600 hover:text-blue-700 text-sm">Why Dublin Startups Need a SAFE Calculator Calibrated for Irish Funding</a></li>
+                  <li><a href="#understanding-safes-in-the-dublin-context" className="text-blue-600 hover:text-blue-700 text-sm">Understanding SAFEs in the Dublin Context</a></li>
+                  <li><a href="#dublin-valuation-benchmarks-for-safes-in-2025" className="text-blue-600 hover:text-blue-700 text-sm">Dublin Valuation Benchmarks for SAFEs in 2025</a></li>
+                  <li><a href="#how-safe-conversion-works-step-by-step-example" className="text-blue-600 hover:text-blue-700 text-sm">How SAFE Conversion Works: Step-by-Step Example</a></li>
+                  <li><a href="#enterprise-ireland-co-investment-and-safe-structures" className="text-blue-600 hover:text-blue-700 text-sm">Enterprise Ireland Co-Investment and SAFE Structures</a></li>
+                  <li><a href="#dublin-vs-london-and-european-safe-benchmarks" className="text-blue-600 hover:text-blue-700 text-sm">Dublin vs. London and European SAFE Benchmarks</a></li>
+                  <li><a href="#key-terms-beyond-valuation-cap-in-dublin-safes" className="text-blue-600 hover:text-blue-700 text-sm">Key Terms Beyond Valuation Cap in Dublin SAFEs</a></li>
+                  <li><a href="#common-safe-mistakes-dublin-founders-make" className="text-blue-600 hover:text-blue-700 text-sm">Common SAFE Mistakes Dublin Founders Make</a></li>
+                  <li><a href="#using-a-safe-calculator-step-by-step-walkthrough" className="text-blue-600 hover:text-blue-700 text-sm">Using a SAFE Calculator: Step-by-Step Walkthrough</a></li>
+                  <li><a href="#what-ownership-percentage-should-founders-target" className="text-blue-600 hover:text-blue-700 text-sm">What Ownership Percentage Should Founders Target?</a></li>
+                  <li><a href="#negotiating-safe-terms-with-irish-and-uk-investors" className="text-blue-600 hover:text-blue-700 text-sm">Negotiating SAFE Terms with Irish and UK Investors</a></li>
+                  <li><a href="#safe-conversion-at-exit-what-happens-if-you-sell-before-seri" className="text-blue-600 hover:text-blue-700 text-sm">SAFE Conversion at Exit: What Happens if You Sell Before Series A?</a></li>
+                  <li><a href="#cap-table-management-best-practices-for-dublin-founders" className="text-blue-600 hover:text-blue-700 text-sm">Cap Table Management Best Practices for Dublin Founders</a></li>
+                  <li><a href="#red-flags-when-safe-terms-are-too-investor-friendly" className="text-blue-600 hover:text-blue-700 text-sm">Red Flags: When SAFE Terms Are Too Investor-Friendly</a></li>
+                  <li><a href="#resources-and-tools-for-dublin-founders" className="text-blue-600 hover:text-blue-700 text-sm">Resources and Tools for Dublin Founders</a></li>
+                  <li><a href="#the-dublin-advantage-why-irelands-ecosystem-supports-safe-fr" className="text-blue-600 hover:text-blue-700 text-sm">The Dublin Advantage: Why Ireland's Ecosystem Supports SAFE-Friendly Fundraising</a></li>
+                  <li><a href="#when-to-switch-from-safes-to-priced-equity-rounds" className="text-blue-600 hover:text-blue-700 text-sm">When to Switch from SAFEs to Priced Equity Rounds</a></li>
+                  <li><a href="#take-control-of-your-safe-terms-and-cap-table-today" className="text-blue-600 hover:text-blue-700 text-sm">Take Control of Your SAFE Terms and Cap Table Today</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +151,7 @@ export default function SafeCalculatorDublinBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why Dublin Startups Need a SAFE Calculator Calibrated for Irish Funding</h2>
+                <h2 id="why-dublin-startups-need-a-safe-calculator-calibrated-for-ir">Why Dublin Startups Need a SAFE Calculator Calibrated for Irish Funding</h2>
 
 <p>Dublin's startup ecosystem has matured dramatically over the past decade, with Silicon Docks becoming Europe's answer to Silicon Valley's concentration of tech talent and capital. But raising capital in Ireland—whether from Irish VCs, Enterprise Ireland, UK funds, or European cross-border investors—requires understanding how SAFE (Simple Agreement for Future Equity) instruments work in a EUR-denominated, Irish regulatory environment.</p>
 
@@ -134,7 +159,7 @@ export default function SafeCalculatorDublinBlogPost() {
 
 <p>This guide provides a comprehensive framework for modeling SAFE conversions, calculating dilution, and setting valuation caps that reflect Ireland's funding market in 2025.</p>
 
-<h2>Understanding SAFEs in the Dublin Context</h2>
+<h2 id="understanding-safes-in-the-dublin-context">Understanding SAFEs in the Dublin Context</h2>
 
 <p>A SAFE is a contractual agreement where an investor provides capital today in exchange for equity that will be issued in the future, typically when you raise a priced equity round (Series A or later). The SAFE converts into shares at that future round, with the conversion price determined by either a valuation cap or discount rate.</p>
 
@@ -149,7 +174,7 @@ export default function SafeCalculatorDublinBlogPost() {
 
 <p>In Dublin's market, SAFEs are almost always issued with a valuation cap rather than just a discount. Irish and European investors expect caps to protect against unrealistic valuation inflation between pre-seed and seed rounds.</p>
 
-<h2>Dublin Valuation Benchmarks for SAFEs in 2025</h2>
+<h2 id="dublin-valuation-benchmarks-for-safes-in-2025">Dublin Valuation Benchmarks for SAFEs in 2025</h2>
 
 <p>Setting the right valuation cap is critical—too high and investors will pass, too low and you'll dilute yourself unnecessarily. Here are current Dublin benchmarks based on stage:</p>
 
@@ -192,7 +217,21 @@ export default function SafeCalculatorDublinBlogPost() {
 
 <p>These higher valuations (€12M-€15M) are reserved for startups demonstrating clear path to Series A metrics and strong revenue growth.</p>
 
-<h2>How SAFE Conversion Works: Step-by-Step Example</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="how-safe-conversion-works-step-by-step-example">How SAFE Conversion Works: Step-by-Step Example</h2>
 
 <p>Let's walk through a realistic Dublin scenario to illustrate SAFE conversion mechanics:</p>
 
@@ -243,7 +282,7 @@ export default function SafeCalculatorDublinBlogPost() {
 
 <p>The SAFE investors' €400,000 at a €4M cap gave them 7.7% of a company now valued at €15M, a 2.88x return on paper in 18 months. Founders retained 76.9% after raising €3.4M total.</p>
 
-<h2>Enterprise Ireland Co-Investment and SAFE Structures</h2>
+<h2 id="enterprise-ireland-co-investment-and-safe-structures">Enterprise Ireland Co-Investment and SAFE Structures</h2>
 
 <p>Enterprise Ireland's High Potential Start-Up (HPSU) funding program is a critical capital source for Dublin startups, but it introduces unique considerations for SAFE structures and cap tables.</p>
 
@@ -280,7 +319,7 @@ export default function SafeCalculatorDublinBlogPost() {
 <li><strong>SAFE holders (when converted):</strong> ~8.6%</li>
 </ul>
 
-<h2>Dublin vs. London and European SAFE Benchmarks</h2>
+<h2 id="dublin-vs-london-and-european-safe-benchmarks">Dublin vs. London and European SAFE Benchmarks</h2>
 
 <p>Understanding how Dublin valuations compare to other European tech hubs helps you set competitive yet realistic SAFE caps and negotiate with cross-border investors.</p>
 
@@ -308,7 +347,7 @@ export default function SafeCalculatorDublinBlogPost() {
 
 <p>When pitching European investors, position Dublin valuations as competitive with continental benchmarks while emphasizing Ireland's unique advantages: English-speaking, common law jurisdiction, tech talent from Google/Meta/LinkedIn, and strong government support.</p>
 
-<h2>Key Terms Beyond Valuation Cap in Dublin SAFEs</h2>
+<h2 id="key-terms-beyond-valuation-cap-in-dublin-safes">Key Terms Beyond Valuation Cap in Dublin SAFEs</h2>
 
 <p>While the valuation cap gets the most attention, several other terms in your SAFE agreement materially affect your outcomes:</p>
 
@@ -347,7 +386,7 @@ export default function SafeCalculatorDublinBlogPost() {
 <li><strong>Dissolution:</strong> If the company fails, SAFE holders are last in line after creditors and usually receive nothing</li>
 </ul>
 
-<h2>Common SAFE Mistakes Dublin Founders Make</h2>
+<h2 id="common-safe-mistakes-dublin-founders-make">Common SAFE Mistakes Dublin Founders Make</h2>
 
 <p>Learn from these frequent errors that create cap table problems or fundraising friction down the road:</p>
 
@@ -371,7 +410,7 @@ export default function SafeCalculatorDublinBlogPost() {
 
 <p>In Dublin's relatively small startup community, founders sometimes accept SAFE investments with handshake agreements on pro rata rights, board seats, or information rights without documenting them in side letters. Always memorialize all investor terms in writing—verbal agreements create misunderstandings during Series A diligence.</p>
 
-<h2>Using a SAFE Calculator: Step-by-Step Walkthrough</h2>
+<h2 id="using-a-safe-calculator-step-by-step-walkthrough">Using a SAFE Calculator: Step-by-Step Walkthrough</h2>
 
 <p>Whether you're using a spreadsheet or dedicated SAFE calculator tool, follow this process to model your dilution and cap table accurately:</p>
 
@@ -419,7 +458,7 @@ export default function SafeCalculatorDublinBlogPost() {
 
 <p>Run multiple scenarios with different Series A valuations to understand your range of outcomes. What if your Series A values you at €10M instead of €15M? How much more dilution do you face?</p>
 
-<h2>What Ownership Percentage Should Founders Target?</h2>
+<h2 id="what-ownership-percentage-should-founders-target">What Ownership Percentage Should Founders Target?</h2>
 
 <p>There's no universal "right" ownership percentage, but here are typical ranges for Dublin startups at each stage:</p>
 
@@ -450,7 +489,7 @@ export default function SafeCalculatorDublinBlogPost() {
 
 <p>If founders retain less than 50% after Series A, you've either raised at low valuations, raised too much capital relative to progress, or given away equity to early employees or advisors without corresponding value creation.</p>
 
-<h2>Negotiating SAFE Terms with Irish and UK Investors</h2>
+<h2 id="negotiating-safe-terms-with-irish-and-uk-investors">Negotiating SAFE Terms with Irish and UK Investors</h2>
 
 <p>Dublin founders typically raise from a mix of Irish angels, Irish VCs, UK funds, and European investors. Here's how to approach SAFE negotiations with each:</p>
 
@@ -489,7 +528,7 @@ export default function SafeCalculatorDublinBlogPost() {
 
 <p>UK and European investors are sophisticated and move quickly—if you're raising from them, have your data room ready, articulate your Europe-wide go-to-market strategy, and demonstrate how Dublin's talent and cost advantages support efficient scaling.</p>
 
-<h2>SAFE Conversion at Exit: What Happens if You Sell Before Series A?</h2>
+<h2 id="safe-conversion-at-exit-what-happens-if-you-sell-before-seri">SAFE Conversion at Exit: What Happens if You Sell Before Series A?</h2>
 
 <p>One scenario founders often overlook: what happens if you receive an acquisition offer before your SAFEs convert?</p>
 
@@ -512,7 +551,7 @@ export default function SafeCalculatorDublinBlogPost() {
 
 <p>The SAFE holders' €400K investment returns €1M, a 2.5x return. Founders retain €9M. This is why setting a reasonable valuation cap matters—it protects early investors if you exit before growing substantially, while still leaving founders with the majority of proceeds.</p>
 
-<h2>Cap Table Management Best Practices for Dublin Founders</h2>
+<h2 id="cap-table-management-best-practices-for-dublin-founders">Cap Table Management Best Practices for Dublin Founders</h2>
 
 <p>Maintaining a clean, accurate cap table from day one prevents headaches during fundraising and M&amp;A diligence. Follow these practices:</p>
 
@@ -539,7 +578,7 @@ export default function SafeCalculatorDublinBlogPost() {
 
 <p>Before accepting any investment or setting SAFE terms, model the fully diluted impact on your cap table through Series A. Use a SAFE calculator to run scenarios with different future valuations. Never agree to terms without understanding the ownership implications.</p>
 
-<h2>Red Flags: When SAFE Terms Are Too Investor-Friendly</h2>
+<h2 id="red-flags-when-safe-terms-are-too-investor-friendly">Red Flags: When SAFE Terms Are Too Investor-Friendly</h2>
 
 <p>Watch out for these terms that signal an investor is pushing for excessive control or downside protection:</p>
 
@@ -553,7 +592,7 @@ export default function SafeCalculatorDublinBlogPost() {
 
 <p>If you encounter these terms, push back or find different investors. Early-stage SAFEs should be simple and founder-friendly—complexity is a red flag.</p>
 
-<h2>Resources and Tools for Dublin Founders</h2>
+<h2 id="resources-and-tools-for-dublin-founders">Resources and Tools for Dublin Founders</h2>
 
 <p>Take advantage of these resources to support your SAFE modeling and fundraising process:</p>
 
@@ -565,7 +604,7 @@ export default function SafeCalculatorDublinBlogPost() {
 <li><strong>Irish startup lawyers:</strong> Firms like Matheson, Mason Hayes &amp; Curran, or William Fry have startup practices that understand SAFE structures and Irish/European norms</li>
 </ul>
 
-<h2>The Dublin Advantage: Why Ireland's Ecosystem Supports SAFE-Friendly Fundraising</h2>
+<h2 id="the-dublin-advantage-why-irelands-ecosystem-supports-safe-fr">The Dublin Advantage: Why Ireland's Ecosystem Supports SAFE-Friendly Fundraising</h2>
 
 <p>Dublin's unique combination of factors makes it particularly well-suited for efficient, founder-friendly SAFE-based fundraising:</p>
 
@@ -585,7 +624,7 @@ export default function SafeCalculatorDublinBlogPost() {
 
 <p>Enterprise Ireland's co-investment programs, R&amp;D tax credits, and startup support reduce the amount of dilutive private capital founders need to raise, allowing SAFEs to stretch further and extend runway.</p>
 
-<h2>When to Switch from SAFEs to Priced Equity Rounds</h2>
+<h2 id="when-to-switch-from-safes-to-priced-equity-rounds">When to Switch from SAFEs to Priced Equity Rounds</h2>
 
 <p>SAFEs are perfect for pre-seed and early seed rounds, but at some point you need to transition to priced equity. Make the switch when:</p>
 
@@ -598,7 +637,7 @@ export default function SafeCalculatorDublinBlogPost() {
 
 <p>In Dublin's market, most startups switch to priced equity at seed stage when raising €800K-€2M with institutional lead investors.</p>
 
-<h2>Take Control of Your SAFE Terms and Cap Table Today</h2>
+<h2 id="take-control-of-your-safe-terms-and-cap-table-today">Take Control of Your SAFE Terms and Cap Table Today</h2>
 
 <p>SAFEs are powerful fundraising tools that let Dublin founders raise capital quickly with minimal legal complexity. But used carelessly, they create dilution surprises, investor conflicts, and cap table problems that haunt you through Series A and beyond.</p>
 
@@ -629,13 +668,31 @@ export default function SafeCalculatorDublinBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/safe-calculator-amsterdam/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Amsterdam SAFE Calculator: Navigate Cross-Border Fundraising and Dutch Valuations</span>
+                </Link>
+                <Link href="/blog/safe-calculator-barcelona/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Barcelona SAFE Calculator: Navigate Startup Valuations in Spain's Tech Hub</span>
+                </Link>
+                <Link href="/blog/avoiding-safe-dilution-traps-founders/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Avoiding SAFE Dilution Traps: 7 Mistakes Founders Make</span>
+                </Link>
+                <Link href="/blog/how-to-calculate-safe-dilution/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Calculate SAFE Dilution: A Founder's Guide</span>
+                </Link>
+                <Link href="/blog/pre-seed-valuation-benchmarks-2025/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pre-Seed Valuation Benchmarks 2025: SAFE Caps and Investor Expectations</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -645,18 +702,18 @@ export default function SafeCalculatorDublinBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

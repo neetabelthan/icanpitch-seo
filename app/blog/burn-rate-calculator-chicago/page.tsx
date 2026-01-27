@@ -114,8 +114,28 @@ export default function BurnRateCalculatorChicagoBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-chicago-startups-need-a-burn-rate-calculator" className="text-blue-600 hover:text-blue-700 text-sm">Why Chicago Startups Need a Burn Rate Calculator</a></li>
+                  <li><a href="#what-is-burn-rate-and-why-does-it-matter-in-chicagos-startup" className="text-blue-600 hover:text-blue-700 text-sm">What Is Burn Rate and Why Does It Matter in Chicago's Startup Ecosystem?</a></li>
+                  <li><a href="#how-to-calculate-your-chicago-startups-burn-rate" className="text-blue-600 hover:text-blue-700 text-sm">How to Calculate Your Chicago Startup's Burn Rate</a></li>
+                  <li><a href="#chicago-burn-rate-benchmarks-by-startup-stage-and-sector" className="text-blue-600 hover:text-blue-700 text-sm">Chicago Burn Rate Benchmarks by Startup Stage and Sector</a></li>
+                  <li><a href="#comparing-chicago-burn-rates-to-san-francisco-and-new-york-c" className="text-blue-600 hover:text-blue-700 text-sm">Comparing Chicago Burn Rates to San Francisco and New York City</a></li>
+                  <li><a href="#how-chicagos-ecosystem-resources-help-extend-runway" className="text-blue-600 hover:text-blue-700 text-sm">How Chicago's Ecosystem Resources Help Extend Runway</a></li>
+                  <li><a href="#chicago-investor-expectations-around-burn-rate-and-runway" className="text-blue-600 hover:text-blue-700 text-sm">Chicago Investor Expectations Around Burn Rate and Runway</a></li>
+                  <li><a href="#strategies-to-reduce-burn-rate-in-chicago-without-sacrificin" className="text-blue-600 hover:text-blue-700 text-sm">Strategies to Reduce Burn Rate in Chicago Without Sacrificing Growth</a></li>
+                  <li><a href="#using-a-burn-rate-calculator-step-by-step-guide-for-chicago-" className="text-blue-600 hover:text-blue-700 text-sm">Using a Burn Rate Calculator: Step-by-Step Guide for Chicago Founders</a></li>
+                  <li><a href="#when-to-raise-your-next-round-chicago-timing-considerations" className="text-blue-600 hover:text-blue-700 text-sm">When to Raise Your Next Round: Chicago Timing Considerations</a></li>
+                  <li><a href="#common-burn-rate-mistakes-chicago-founders-make" className="text-blue-600 hover:text-blue-700 text-sm">Common Burn Rate Mistakes Chicago Founders Make</a></li>
+                  <li><a href="#advanced-burn-rate-strategies-for-chicago-scale-ups" className="text-blue-600 hover:text-blue-700 text-sm">Advanced Burn Rate Strategies for Chicago Scale-Ups</a></li>
+                  <li><a href="#calculate-your-chicago-startups-burn-rate-today" className="text-blue-600 hover:text-blue-700 text-sm">Calculate Your Chicago Startup's Burn Rate Today</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +146,7 @@ export default function BurnRateCalculatorChicagoBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why Chicago Startups Need a Burn Rate Calculator</h2>
+                <h2 id="why-chicago-startups-need-a-burn-rate-calculator">Why Chicago Startups Need a Burn Rate Calculator</h2>
 
 <p>Chicago has rapidly evolved into one of North America's most compelling startup ecosystems, particularly for fintech, healthcare technology, and logistics innovation. With a 40-50% cost advantage over San Francisco and 25-30% savings compared to New York City, Chicago offers founders the rare combination of world-class talent, robust infrastructure, and sustainable unit economics. However, this cost efficiency only translates to competitive advantage when founders maintain precise visibility into their burn rate and runway.</p>
 
@@ -134,7 +154,7 @@ export default function BurnRateCalculatorChicagoBlogPost() {
 
 <p>Chicago investors—from <a href="https://mathventurepartners.com" target="_blank" rel="noopener noreferrer">MATH Venture Partners</a> to <a href="https://www.hydeparkangels.com" target="_blank" rel="noopener noreferrer">Hyde Park Angels</a> and <a href="https://www.pritzkergroup.com/venture-capital/" target="_blank" rel="noopener noreferrer">Pritzker Group Venture Capital</a>—expect founders to demonstrate fiscal discipline and capital efficiency. They want to see that you understand the 12-18 month runway convention and can articulate how Chicago's cost structure extends your operational timeline compared to coastal competitors burning through capital at unsustainable rates.</p>
 
-<h2>What Is Burn Rate and Why Does It Matter in Chicago's Startup Ecosystem?</h2>
+<h2 id="what-is-burn-rate-and-why-does-it-matter-in-chicagos-startup">What Is Burn Rate and Why Does It Matter in Chicago's Startup Ecosystem?</h2>
 
 <p>Burn rate represents the speed at which your startup consumes cash reserves to cover operating expenses before achieving positive cash flow. It's calculated as your monthly net cash outflow—essentially subtracting monthly revenue from monthly operating expenses. For pre-revenue startups, burn rate equals your total monthly expenses.</p>
 
@@ -153,7 +173,7 @@ export default function BurnRateCalculatorChicagoBlogPost() {
 
 <p>This cost structure means a Chicago startup with $500,000 in seed funding can often operate for 15-18 months, while a San Francisco equivalent might only stretch that capital for 9-12 months. That additional runway creates more time to iterate toward product-market fit, close enterprise deals, or reach the traction milestones required for your Series A.</p>
 
-<h2>How to Calculate Your Chicago Startup's Burn Rate</h2>
+<h2 id="how-to-calculate-your-chicago-startups-burn-rate">How to Calculate Your Chicago Startup's Burn Rate</h2>
 
 <p>Calculating burn rate requires systematic tracking of all monthly cash outflows against cash inflows. Chicago founders should approach this calculation with the same operational rigor that characterizes the region's business culture.</p>
 
@@ -217,7 +237,21 @@ export default function BurnRateCalculatorChicagoBlogPost() {
 <li>Insurance: $500-$2,000/month</li>
 </ul>
 
-<h2>Chicago Burn Rate Benchmarks by Startup Stage and Sector</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Calculate Your Burn Rate & Runway</p>
+                <p className="text-gray-600 mb-4">Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.</p>
+                <a
+                  href="https://icanpitch.com/burn-rate-runway-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Burn Rate Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="chicago-burn-rate-benchmarks-by-startup-stage-and-sector">Chicago Burn Rate Benchmarks by Startup Stage and Sector</h2>
 
 <p>Understanding how your burn rate compares to Chicago peers provides critical context for fundraising conversations and board discussions. These benchmarks reflect 2024-2025 data from Chicago-based VCs and accelerators.</p>
 
@@ -293,7 +327,7 @@ export default function BurnRateCalculatorChicagoBlogPost() {
 <li>Enterprise sales team expansion: $25,000-$50,000/month</li>
 </ul>
 
-<h2>Comparing Chicago Burn Rates to San Francisco and New York City</h2>
+<h2 id="comparing-chicago-burn-rates-to-san-francisco-and-new-york-c">Comparing Chicago Burn Rates to San Francisco and New York City</h2>
 
 <p>Chicago's cost advantage becomes starkly apparent when comparing equivalent startups across geographic markets. This comparison matters because many Chicago founders raise capital from coastal VCs who need context for Chicago's burn rate benchmarks.</p>
 
@@ -333,7 +367,7 @@ export default function BurnRateCalculatorChicagoBlogPost() {
 
 <p>This means a Chicago startup with $1.5 million in seed funding can operate for approximately 9-15 months, while the same funding would last only 6-9 months in San Francisco or 7-10 months in New York. That additional runway often represents the difference between reaching Series A milestones and running out of capital during the "Series A crunch."</p>
 
-<h2>How Chicago's Ecosystem Resources Help Extend Runway</h2>
+<h2 id="how-chicagos-ecosystem-resources-help-extend-runway">How Chicago's Ecosystem Resources Help Extend Runway</h2>
 
 <p>Beyond raw cost advantages, Chicago offers institutional resources specifically designed to help startups minimize burn rate while maximizing growth velocity.</p>
 
@@ -371,7 +405,7 @@ export default function BurnRateCalculatorChicagoBlogPost() {
 <li>Collaborative innovation programs reduce R&amp;D expenses through shared resources</li>
 </ul>
 
-<h2>Chicago Investor Expectations Around Burn Rate and Runway</h2>
+<h2 id="chicago-investor-expectations-around-burn-rate-and-runway">Chicago Investor Expectations Around Burn Rate and Runway</h2>
 
 <p>Chicago investors bring a distinct perspective shaped by the Midwest's operational culture and historical emphasis on profitability. Understanding these expectations is crucial for fundraising success.</p>
 
@@ -426,7 +460,7 @@ export default function BurnRateCalculatorChicagoBlogPost() {
 
 <p><strong>Chicago Ventures:</strong> Invests in seed-stage Midwest startups with focus on sustainable growth. Prioritizes capital efficiency and expects founders to articulate how Chicago's cost advantages extend runway.</p>
 
-<h2>Strategies to Reduce Burn Rate in Chicago Without Sacrificing Growth</h2>
+<h2 id="strategies-to-reduce-burn-rate-in-chicago-without-sacrificin">Strategies to Reduce Burn Rate in Chicago Without Sacrificing Growth</h2>
 
 <p>Chicago's ecosystem enables specific burn rate reduction strategies that maintain or accelerate growth velocity.</p>
 
@@ -460,7 +494,7 @@ export default function BurnRateCalculatorChicagoBlogPost() {
 <li><strong>Corporate Venture Programs:</strong> Groups like McDonald's Foundry, Exelon Innovation, and Discover Financial's venture arm provide strategic capital with operational support</li>
 </ul>
 
-<h2>Using a Burn Rate Calculator: Step-by-Step Guide for Chicago Founders</h2>
+<h2 id="using-a-burn-rate-calculator-step-by-step-guide-for-chicago-">Using a Burn Rate Calculator: Step-by-Step Guide for Chicago Founders</h2>
 
 <p>A structured approach to burn rate calculation and monitoring helps Chicago founders maintain the financial discipline investors expect.</p>
 
@@ -525,7 +559,7 @@ export default function BurnRateCalculatorChicagoBlogPost() {
 <li>Forward-looking projections for next 6-12 months</li>
 </ul>
 
-<h2>When to Raise Your Next Round: Chicago Timing Considerations</h2>
+<h2 id="when-to-raise-your-next-round-chicago-timing-considerations">When to Raise Your Next Round: Chicago Timing Considerations</h2>
 
 <p>Chicago founders should begin fundraising when they have 9-12 months of runway remaining. This timeline accounts for:</p>
 
@@ -537,7 +571,7 @@ export default function BurnRateCalculatorChicagoBlogPost() {
 
 <p>Chicago investors respect founders who raise proactively from positions of strength rather than reactively when runway nears depletion.</p>
 
-<h2>Common Burn Rate Mistakes Chicago Founders Make</h2>
+<h2 id="common-burn-rate-mistakes-chicago-founders-make">Common Burn Rate Mistakes Chicago Founders Make</h2>
 
 <p>Even in a cost-efficient market like Chicago, founders make burn rate errors that jeopardize runway:</p>
 
@@ -571,7 +605,7 @@ export default function BurnRateCalculatorChicagoBlogPost() {
 
 <p><strong>Solution:</strong> Pay founders market-rate salaries (adjusted for stage). Chicago investors prefer sustainable founder compensation over unsustainable deferrals that lead to burnout or distraction.</p>
 
-<h2>Advanced Burn Rate Strategies for Chicago Scale-Ups</h2>
+<h2 id="advanced-burn-rate-strategies-for-chicago-scale-ups">Advanced Burn Rate Strategies for Chicago Scale-Ups</h2>
 
 <p>As Chicago startups scale from seed to Series A and beyond, burn rate management becomes more sophisticated.</p>
 
@@ -605,7 +639,7 @@ export default function BurnRateCalculatorChicagoBlogPost() {
 <li>Negative net burn through combination of strong unit economics and efficient growth</li>
 </ul>
 
-<h2>Calculate Your Chicago Startup's Burn Rate Today</h2>
+<h2 id="calculate-your-chicago-startups-burn-rate-today">Calculate Your Chicago Startup's Burn Rate Today</h2>
 
 <p>Chicago's position as a world-class startup ecosystem with Midwest cost efficiency creates exceptional opportunities for founders who master burn rate management. The 40-50% cost advantage over San Francisco and 25-30% savings versus New York City translate directly to extended runway, more learning cycles, and better odds of achieving product-market fit before exhausting capital.</p>
 
@@ -635,13 +669,30 @@ export default function BurnRateCalculatorChicagoBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/burn-rate-calculator-seattle/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Seattle Startups: Track Your Runway in 2025</span>
+                </Link>
+                <Link href="/blog/burn-rate-benchmarks-by-industry-stage/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Benchmarks by Industry and Stage: 2025 Data</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-berlin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Berlin Startups: 2025 Cost Guide</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-boston/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Boston Startups: 2025 Cost Guide</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for London Startups: 2025 Cost Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/burn-rate-calculator-series-a-first-time-founder-new-york-plan-fundraising-timeline-extend-runway-efficiency/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Burn Rate Calculator</Link>
+              <Link href="/blog/burn-rate-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Burn Rate & Runway Guides</Link>
             </div>
           </div>
         </section>
@@ -651,18 +702,18 @@ export default function BurnRateCalculatorChicagoBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Calculate Your Burn Rate & Runway
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/burn-rate-runway-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Burn Rate Calculator &rarr;
               </a>
             </div>
           </div>

@@ -52,6 +52,60 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What option pool size do Singapore VCs expect at Series A?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Singapore Series A investors typically expect 12-14% pools, with fintech and regional expansion plays toward the higher end (14-16%). Build a detailed hiring plan including regional roles to justify your specific size rather than accepting default investor requests."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I grant Singapore company options to employees in Indonesia, Thailand, and Vietnam?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It depends on the number of employees and local regulations. For small teams (under 5 employees per country), Singapore parent options work well with proper tax advice. For larger country teams (10+ employees), consider local subsidiary ESOPs or phantom equity to simplify local tax compliance and employee experience."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I explain Singapore options to candidates from India, China, or Australia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Emphasize Singapore's favorable tax treatment: 22% maximum income tax on exercise gains, zero capital gains tax on share sales, and ESOP deferral scheme eliminating dry income tax. Show side-by-side calculations comparing Singapore option taxation to their home country's treatment—Singapore typically wins significantly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use IRAS ESOP deferral for all employees?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Only Singapore tax residents qualify for deferral. Foreign employees (work permit or employment pass holders who aren't tax residents) may not qualify. However, Singapore's low tax rates and no capital gains tax still make options attractive even without deferral."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should Singapore startups create smaller pools than US companies?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Generally yes. Singapore and Southeast Asian compensation norms emphasize stable cash compensation more than US markets, and individual equity grants are typically 25-35% smaller than Silicon Valley equivalents. A 12% Singapore pool often accomplishes what requires 16-18% in San Francisco. Build hiring plans using APAC benchmarks, not US defaults."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens to options if we're acquired by a US or European company?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "At acquisition, Singapore options typically convert to acquirer's equity or cash out based on the acquisition price. Employees pay Singapore income tax on gains (up to 22%), then have zero capital gains tax on any post-acquisition appreciation. Include single-trigger or double-trigger acceleration clauses to protect employees in acquisition scenarios."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +168,28 @@ export default function OptionPoolCalculatorSingaporeBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#understanding-singapore-option-pools-and-esop-standards" className="text-blue-600 hover:text-blue-700 text-sm">Understanding Singapore Option Pools and ESOP Standards</a></li>
+                  <li><a href="#singapore-esop-tax-treatment-the-iras-framework" className="text-blue-600 hover:text-blue-700 text-sm">Singapore ESOP Tax Treatment: The IRAS Framework</a></li>
+                  <li><a href="#singapore-option-pool-standards-by-stage-and-sector" className="text-blue-600 hover:text-blue-700 text-sm">Singapore Option Pool Standards by Stage and Sector</a></li>
+                  <li><a href="#how-to-calculate-singapore-option-pools-step-by-step" className="text-blue-600 hover:text-blue-700 text-sm">How to Calculate Singapore Option Pools: Step-by-Step</a></li>
+                  <li><a href="#pre-money-vs-post-money-option-pools-in-singapore-deals" className="text-blue-600 hover:text-blue-700 text-sm">Pre-Money vs Post-Money Option Pools in Singapore Deals</a></li>
+                  <li><a href="#iras-compliance-and-esop-administration" className="text-blue-600 hover:text-blue-700 text-sm">IRAS Compliance and ESOP Administration</a></li>
+                  <li><a href="#regional-expansion-and-cross-border-option-considerations" className="text-blue-600 hover:text-blue-700 text-sm">Regional Expansion and Cross-Border Option Considerations</a></li>
+                  <li><a href="#common-singapore-option-pool-mistakes" className="text-blue-600 hover:text-blue-700 text-sm">Common Singapore Option Pool Mistakes</a></li>
+                  <li><a href="#singapore-employee-equity-benchmarks-by-role" className="text-blue-600 hover:text-blue-700 text-sm">Singapore Employee Equity Benchmarks by Role</a></li>
+                  <li><a href="#government-support-and-incentives-for-singapore-esops" className="text-blue-600 hover:text-blue-700 text-sm">Government Support and Incentives for Singapore ESOPs</a></li>
+                  <li><a href="#how-to-use-the-icanpitch-singapore-option-pool-calculator" className="text-blue-600 hover:text-blue-700 text-sm">How to Use the ICanPitch Singapore Option Pool Calculator</a></li>
+                  <li><a href="#option-pool-faqs-for-singapore-founders" className="text-blue-600 hover:text-blue-700 text-sm">Option Pool FAQs for Singapore Founders</a></li>
+                  <li><a href="#start-planning-your-singapore-option-pool" className="text-blue-600 hover:text-blue-700 text-sm">Start Planning Your Singapore Option Pool</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +200,7 @@ export default function OptionPoolCalculatorSingaporeBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Understanding Singapore Option Pools and ESOP Standards</h2>
+                <h2 id="understanding-singapore-option-pools-and-esop-standards">Understanding Singapore Option Pools and ESOP Standards</h2>
 
 <p>Singapore has established itself as Southeast Asia's premier startup hub, with a sophisticated venture ecosystem, government-backed incentive programs, and a regulatory framework designed to support high-growth companies. Singapore option pools reflect this unique positioning: typically ranging from 10-15% at Series A, balancing Western-style equity compensation with Asian employee preferences for stable cash compensation.</p>
 
@@ -134,7 +208,7 @@ export default function OptionPoolCalculatorSingaporeBlogPost() {
 
 <p><strong>Key insight for Singapore founders:</strong> While Singapore lacks specialized tax-advantaged schemes like UK's EMI or Germany's VSOP, straightforward IRAS regulations and low capital gains rates (Singapore has no capital gains tax for individuals) make standard Employee Stock Option Plans (ESOPs) highly effective without complex structuring.</p>
 
-<h2>Singapore ESOP Tax Treatment: The IRAS Framework</h2>
+<h2 id="singapore-esop-tax-treatment-the-iras-framework">Singapore ESOP Tax Treatment: The IRAS Framework</h2>
 
 <p>Singapore's tax treatment of stock options follows clear IRAS guidelines that determine when and how employees are taxed on option grants and exercises:</p>
 
@@ -207,7 +281,7 @@ export default function OptionPoolCalculatorSingaporeBlogPost() {
 
 <p>For qualifying companies, employees may receive full or partial tax exemption on the first SGD 2,000 of gains per year from option exercises. While modest, this exemption provides psychological benefit and reinforces Singapore's startup-friendly reputation.</p>
 
-<h2>Singapore Option Pool Standards by Stage and Sector</h2>
+<h2 id="singapore-option-pool-standards-by-stage-and-sector">Singapore Option Pool Standards by Stage and Sector</h2>
 
 <p>Singapore pools reflect the city-state's position as a bridge between Western venture practices and Asian compensation norms:</p>
 
@@ -255,7 +329,21 @@ export default function OptionPoolCalculatorSingaporeBlogPost() {
 
 <p><strong>Regional expansion plays (11-15%):</strong> Companies planning aggressive regional expansion across SEA require larger pools to accommodate country managers and regional leadership across Indonesia, Thailand, Vietnam, Philippines, and beyond.</p>
 
-<h2>How to Calculate Singapore Option Pools: Step-by-Step</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Size Your Option Pool</p>
+                <p className="text-gray-600 mb-4">Model how different option pool sizes affect founder dilution before and after your next round.</p>
+                <a
+                  href="https://icanpitch.com/option-pool-impact-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Option Pool Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="how-to-calculate-singapore-option-pools-step-by-step">How to Calculate Singapore Option Pools: Step-by-Step</h2>
 
 <p>Follow this systematic approach to calculate option pools for Singapore startups:</p>
 
@@ -332,7 +420,7 @@ export default function OptionPoolCalculatorSingaporeBlogPost() {
 
 <p>Calculate exact ownership impacts under each structure before negotiating term sheets.</p>
 
-<h2>Pre-Money vs Post-Money Option Pools in Singapore Deals</h2>
+<h2 id="pre-money-vs-post-money-option-pools-in-singapore-deals">Pre-Money vs Post-Money Option Pools in Singapore Deals</h2>
 
 <p>Singapore's increasingly sophisticated venture market has adopted international standards for option pool treatment:</p>
 
@@ -380,7 +468,7 @@ export default function OptionPoolCalculatorSingaporeBlogPost() {
 
 <p>The 2.2 percentage point difference represents approximately SGD 440,000 for every SGD 20M of exit value—SGD 2.2M on a SGD 100M exit.</p>
 
-<h2>IRAS Compliance and ESOP Administration</h2>
+<h2 id="iras-compliance-and-esop-administration">IRAS Compliance and ESOP Administration</h2>
 
 <p>Maintaining IRAS compliance and properly structuring ESOPs requires attention to Singapore-specific requirements:</p>
 
@@ -428,7 +516,7 @@ export default function OptionPoolCalculatorSingaporeBlogPost() {
 <li>If shares sold within deferral period, report and pay tax in that year's return</li>
 </ul>
 
-<h2>Regional Expansion and Cross-Border Option Considerations</h2>
+<h2 id="regional-expansion-and-cross-border-option-considerations">Regional Expansion and Cross-Border Option Considerations</h2>
 
 <p>Singapore's role as a regional hub means most startups eventually hire across Southeast Asia. This creates complex equity considerations:</p>
 
@@ -483,7 +571,7 @@ export default function OptionPoolCalculatorSingaporeBlogPost() {
 
 <p>This approach resembles Germany's VSOP structure and works well for regional teams where actual share ownership creates legal or tax challenges.</p>
 
-<h2>Common Singapore Option Pool Mistakes</h2>
+<h2 id="common-singapore-option-pool-mistakes">Common Singapore Option Pool Mistakes</h2>
 
 <p>Singapore founders make specific errors related to regional expansion and cross-border equity. Avoid these pitfalls:</p>
 
@@ -517,7 +605,7 @@ export default function OptionPoolCalculatorSingaporeBlogPost() {
 
 <p><strong>Solution:</strong> Consult local tax advisors in countries where you have significant headcount before granting options. Understand local tax treatment of foreign stock options and plan accordingly—potentially using phantom equity instead of actual options where foreign ownership is complicated.</p>
 
-<h2>Singapore Employee Equity Benchmarks by Role</h2>
+<h2 id="singapore-employee-equity-benchmarks-by-role">Singapore Employee Equity Benchmarks by Role</h2>
 
 <p>Use these Singapore-specific benchmarks when building hiring plans:</p>
 
@@ -565,7 +653,7 @@ export default function OptionPoolCalculatorSingaporeBlogPost() {
 <li>Regional Engineer (remote): 0.03-0.08%</li>
 </ul>
 
-<h2>Government Support and Incentives for Singapore ESOPs</h2>
+<h2 id="government-support-and-incentives-for-singapore-esops">Government Support and Incentives for Singapore ESOPs</h2>
 
 <p>Singapore offers various government programs supporting startup equity compensation:</p>
 
@@ -581,7 +669,7 @@ export default function OptionPoolCalculatorSingaporeBlogPost() {
 
 <p>Supports capability and innovation projects including hiring key talent. Grants cover up to 70% of qualifying costs, reducing cash compensation requirements and making equity grants more attractive as a portion of total comp.</p>
 
-<h2>How to Use the ICanPitch Singapore Option Pool Calculator</h2>
+<h2 id="how-to-use-the-icanpitch-singapore-option-pool-calculator">How to Use the ICanPitch Singapore Option Pool Calculator</h2>
 
 <p>The <a href="https://icanpitch.com/" target="_blank" rel="noopener noreferrer">ICanPitch platform</a> includes Singapore and APAC-specific calculators accounting for regional expansion and IRAS tax treatment:</p>
 
@@ -605,7 +693,7 @@ export default function OptionPoolCalculatorSingaporeBlogPost() {
 
 <p>Forecast cap table evolution through Series B and C, accounting for regional expansion hiring needs and refresh pools. Understand long-term founder ownership trajectories.</p>
 
-<h2>Option Pool FAQs for Singapore Founders</h2>
+<h2 id="option-pool-faqs-for-singapore-founders">Option Pool FAQs for Singapore Founders</h2>
 
 <h3>What option pool size do Singapore VCs expect at Series A?</h3>
 
@@ -631,7 +719,7 @@ export default function OptionPoolCalculatorSingaporeBlogPost() {
 
 <p>At acquisition, Singapore options typically convert to acquirer's equity or cash out based on the acquisition price. Employees pay Singapore income tax on gains (up to 22%), then have zero capital gains tax on any post-acquisition appreciation. Include single-trigger or double-trigger acceleration clauses to protect employees in acquisition scenarios.</p>
 
-<h2>Start Planning Your Singapore Option Pool</h2>
+<h2 id="start-planning-your-singapore-option-pool">Start Planning Your Singapore Option Pool</h2>
 
 <p>Singapore option pools benefit from straightforward IRAS regulations, favorable tax treatment with no capital gains tax, and access to diverse APAC talent at reasonable compensation levels. Singapore founders should leverage these advantages while planning for the complexity of regional expansion across Southeast Asia.</p>
 
@@ -660,13 +748,30 @@ export default function OptionPoolCalculatorSingaporeBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/option-pool-calculator-new-york/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">NYC Option Pool Calculator: East Coast Startup Equity Standards (2025)</span>
+                </Link>
+                <Link href="/blog/option-pool-calculator-berlin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Berlin Option Pool Calculator: German ESOP vs VSOP Guide (2025)</span>
+                </Link>
+                <Link href="/blog/option-pool-calculator-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">London Option Pool Calculator: UK ESOP & EMI Scheme Guide (2025)</span>
+                </Link>
+                <Link href="/blog/option-pool-calculator-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Silicon Valley Option Pool Calculator: Pre-Money vs Post-Money ESOP Guide (2025)</span>
+                </Link>
+                <Link href="/blog/safe-calculator-singapore/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Singapore Startups: 2025 Valuation Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/option-pool-calculator-pre-seed-technical-founder-san-francisco-size-employee-equity-minimize-founder-dilution/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Option Pool Calculator</Link>
+              <Link href="/blog/equity-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Equity, Vesting & Option Pool Guides</Link>
             </div>
           </div>
         </section>
@@ -676,18 +781,18 @@ export default function OptionPoolCalculatorSingaporeBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Size Your Option Pool
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Model how different option pool sizes affect founder dilution before and after your next round.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/option-pool-impact-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Option Pool Calculator &rarr;
               </a>
             </div>
           </div>

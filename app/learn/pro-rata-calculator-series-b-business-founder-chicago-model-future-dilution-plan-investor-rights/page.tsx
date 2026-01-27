@@ -38,8 +38,8 @@ const jsonLdData = [
       "@type": "Organization",
       "name": "ICanPitch"
     },
-    "datePublished": "2026-01-27T03:45:30.437Z",
-    "dateModified": "2026-01-27T03:45:30.437Z",
+    "datePublished": "2026-01-27T21:21:28.719Z",
+    "dateModified": "2026-01-27T21:21:28.719Z",
     "url": "https://learn.icanpitch.com/learn/pro-rata-calculator-series-b-business-founder-chicago-model-future-dilution-plan-investor-rights/",
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -109,8 +109,51 @@ export default function ProRataCalculatorSeriesBBusinessFounderChicagoModelFutur
                   <li>Toggle pro rata participation for each investor</li>
                   <li>See how ownership percentages shift with and without pro rata</li>
                 </ol>
+
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">When to Use This Calculator</h2>
+                <ul className="space-y-3 text-lg text-gray-700 list-disc list-inside mb-6">
+                  <li>You are planning your next round and need to know how much room is left for new investors after pro-rata</li>
+                  <li>An investor is asking for super pro-rata rights and you want to model the dilution impact</li>
+                  <li>You want to understand how pro-rata participation affects your fundraising dynamics across rounds</li>
+                  <li>You are negotiating a term sheet and need to decide whether to grant pro-rata rights to seed investors</li>
+                </ul>
+
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">Key Metrics and Formulas</h2>
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">Pro-rata allocation for each investor equals their current ownership percentage multiplied by the new round size: Pro-Rata Amount = Current Ownership % x New Round Size. If an investor owns 10% and the new round is $5M, their pro-rata allocation is $500K. Super pro-rata means investing more than their proportional share. The remaining allocation (New Round Size - Total Pro-Rata Exercised) is available for new investors. Our calculator models each existing investor's pro-rata rights, their participation decisions, and the resulting cap table.</p>
+
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">Common Mistakes to Avoid</h2>
+                <ul className="space-y-3 text-lg text-gray-700 list-disc list-inside mb-6">
+                  <li>Not checking if existing investors plan to exercise: If they all exercise pro-rata, there may be little room for a new lead investor</li>
+                  <li>Granting pro-rata rights to too many early investors: Angel investors with pro-rata can complicate larger rounds</li>
+                  <li>Confusing pro-rata rights with anti-dilution protection: Pro-rata gives the right to invest more, anti-dilution adjusts the conversion price</li>
+                  <li>Ignoring the signaling risk: If an investor with pro-rata rights does not exercise, new investors may question why</li>
+                </ul>
+
+                {/* Expert Tips */}
+                <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Expert Tips</h3>
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex gap-2"><span className="text-blue-500 font-bold flex-shrink-0">&#x2713;</span><span>Map out who has pro-rata rights before opening your next round so you know the available allocation</span></li>
+                    <li className="flex gap-2"><span className="text-blue-500 font-bold flex-shrink-0">&#x2713;</span><span>Consider offering major information rights alongside pro-rata to keep investors engaged</span></li>
+                    <li className="flex gap-2"><span className="text-blue-500 font-bold flex-shrink-0">&#x2713;</span><span>Use our calculator to run scenarios where different combinations of investors exercise or waive their pro-rata</span></li>
+                  </ul>
+                </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Recommended Reading */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Recommended Reading</h3>
+            <ul className="space-y-2">
+              <li><Link href="/blog/pro-rata-calculator-berlin/" className="text-blue-600 hover:text-blue-700 underline">Pro-Rata Rights Calculator for Berlin Startups (2025)</Link></li>
+                  <li><Link href="/blog/pro-rata-calculator-london/" className="text-blue-600 hover:text-blue-700 underline">Pro-Rata Rights Calculator for London Startups (2025)</Link></li>
+                  <li><Link href="/blog/pro-rata-calculator-new-york/" className="text-blue-600 hover:text-blue-700 underline">Pro-Rata Rights Calculator for New York City Startups (2025)</Link></li>
+                  <li><Link href="/blog/pro-rata-calculator-silicon-valley/" className="text-blue-600 hover:text-blue-700 underline">Pro-Rata Rights Calculator for Silicon Valley Startups (2025)</Link></li>
+                  <li><Link href="/blog/pro-rata-calculator-singapore/" className="text-blue-600 hover:text-blue-700 underline">Pro-Rata Rights Calculator for Singapore Startups (2025)</Link></li>
+            </ul>
           </div>
         </section>
 
@@ -150,7 +193,7 @@ export default function ProRataCalculatorSeriesBBusinessFounderChicagoModelFutur
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Start Calculator →
+                      Start Calculator &rarr;
                     </a>
                   </Button>
                 </CardContent>

@@ -52,6 +52,60 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much more expensive is San Francisco than Austin for startups?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "San Francisco startups burn 45-60% more than Austin equivalents depending on stage and team composition. A 10-person seed-stage team burns approximately $185,000/month in SF versus $115,000/month in Austin—a difference of $70,000/month or $840,000 annually. The premium stems primarily from engineering salaries (36% higher in SF), office costs (71% higher), and higher taxes/overhead (10-15% higher). The gap is largest at early stages and narrows slightly at Series B+ as non-personnel costs dominate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I hire equivalent engineering talent in Austin versus San Francisco?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Austin has strong generalist engineering talent (UT Austin produces 2,400 CS graduates annually) and growing expertise in traditional software engineering. However, SF maintains 3.8x more AI/ML engineers, 4.2x more computer vision specialists, and deeper pools of cutting-edge technical talent. For standard full-stack, mobile, or backend development, Austin talent is equivalent. For AI/ML, distributed systems, or emerging technologies, SF has structural advantages. According to Hired's 2025 data, 73% of companies building AI-first products prefer SF-based talent."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do investors discriminate against Austin-based startups?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Top-tier SF-based VCs increasingly invest in Austin companies—Andreessen Horowitz, Sequoia, and Benchmark all have Austin portfolio companies. However, mega-rounds ($50M+) still favor SF companies 32:1. For seed through Series A, location matters less than metrics. For Series B+, SF proximity to mega-funds can provide valuation and access advantages. According to Pitchbook 2025 data, Austin companies raise Series A at 12% lower valuations than equivalent SF companies, but the gap narrows when controlling for metrics and team pedigree."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I relocate from SF to Austin to extend runway?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you're burning $150,000+/month with under 12 months runway and no immediate fundraising path, Austin relocation can extend survival by 40-60%. However, relocation costs ($50,000-$150,000 including recruiting, moving expenses, potential attrition) and disruption must be factored in. Better strategy: open Austin office for new hires while keeping core SF team intact. According to Y Combinator, 18% of SF-based companies opened Austin satellites (2022-2024) but only 4% fully relocated, suggesting hybrid models work better than wholesale moves."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What about remote-first as an alternative to both SF and Austin?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fully remote companies achieve the lowest burn rates—typically 25-35% below SF and 10-15% below Austin through geographic salary arbitrage. However, remote-first companies face challenges: 23% higher recruiting costs, 15-20% longer time-to-hire, and coordination overhead. According to GitLab's 2025 Remote Work Report, remote-first startups work best for: companies with experienced remote-first leadership, async-friendly work (not requiring constant collaboration), and strong documentation culture. Remote-first is a valid third option but requires intentional operational design."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the SF vs Austin decision change at different funding stages?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pre-seed/seed stage: Austin's capital efficiency advantage is strongest—extended runway permits more iteration cycles to find product-market fit. Series A: SF advantages increase as access to top-tier talent and mega-funds becomes critical for scaling. Series B+: SF premium often justified by ecosystem density, customer proximity, and M&amp;A/IPO infrastructure. According to Carta's 2025 data, 62% of pre-seed companies choose Austin but 71% of Series B+ companies operate from SF, suggesting stage-dependent optimization: start in Austin for efficiency, relocate to SF when growth capital and ecosystem access justify the premium."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +168,29 @@ export default function BurnRateCalculatorSanFranciscoVsAustinBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#the-million-dollar-location-decision-every-founder-faces" className="text-blue-600 hover:text-blue-700 text-sm">The Million-Dollar Location Decision Every Founder Faces</a></li>
+                  <li><a href="#the-bottom-line-sf-vs-austin-burn-rate-by-stage" className="text-blue-600 hover:text-blue-700 text-sm">The Bottom Line: SF vs Austin Burn Rate by Stage</a></li>
+                  <li><a href="#engineering-salaries-the-primary-driver-of-burn-rate-differe" className="text-blue-600 hover:text-blue-700 text-sm">Engineering Salaries: The Primary Driver of Burn Rate Difference</a></li>
+                  <li><a href="#office-space-sfs-steepest-premium" className="text-blue-600 hover:text-blue-700 text-sm">Office Space: SF's Steepest Premium</a></li>
+                  <li><a href="#tax-burden-austins-massive-advantage" className="text-blue-600 hover:text-blue-700 text-sm">Tax Burden: Austin's Massive Advantage</a></li>
+                  <li><a href="#cost-of-living-impact-on-compensation-negotiations" className="text-blue-600 hover:text-blue-700 text-sm">Cost of Living Impact on Compensation Negotiations</a></li>
+                  <li><a href="#when-san-franciscos-premium-is-worth-paying" className="text-blue-600 hover:text-blue-700 text-sm">When San Francisco's Premium Is Worth Paying</a></li>
+                  <li><a href="#when-austins-capital-efficiency-wins" className="text-blue-600 hover:text-blue-700 text-sm">When Austin's Capital Efficiency Wins</a></li>
+                  <li><a href="#the-hybrid-strategy-best-of-both-worlds" className="text-blue-600 hover:text-blue-700 text-sm">The Hybrid Strategy: Best of Both Worlds</a></li>
+                  <li><a href="#decision-framework-sf-vs-austin-for-your-startup" className="text-blue-600 hover:text-blue-700 text-sm">Decision Framework: SF vs Austin for Your Startup</a></li>
+                  <li><a href="#marcuss-decision-how-it-played-out" className="text-blue-600 hover:text-blue-700 text-sm">Marcus's Decision: How It Played Out</a></li>
+                  <li><a href="#frequently-asked-questions-sf-vs-austin-burn-rates" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions: SF vs Austin Burn Rates</a></li>
+                  <li><a href="#calculate-your-specific-sf-vs-austin-burn-rate" className="text-blue-600 hover:text-blue-700 text-sm">Calculate Your Specific SF vs Austin Burn Rate</a></li>
+                  <li><a href="#the-bottom-line-location-as-strategic-lever-not-destiny" className="text-blue-600 hover:text-blue-700 text-sm">The Bottom Line: Location as Strategic Lever, Not Destiny</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -128,7 +203,7 @@ export default function BurnRateCalculatorSanFranciscoVsAustinBlogPost() {
               ">
                 <p><strong>TL;DR:</strong> San Francisco startups burn 45-60% more than Austin equivalents—a 10-person seed team burns $185,000/month in SF versus $115,000/month in Austin. The $840,000 annual difference buys deeper talent pools, stronger investor access, and ecosystem density. Choose SF for capital-intensive growth and top-tier fundraising; choose Austin for capital efficiency and extended runway.</p>
 
-<h2>The Million-Dollar Location Decision Every Founder Faces</h2>
+<h2 id="the-million-dollar-location-decision-every-founder-faces">The Million-Dollar Location Decision Every Founder Faces</h2>
 
 <p>Meet Marcus Chen, a second-time founder choosing between San Francisco and Austin for his Series A SaaS startup. His 12-person team could operate from either location, but the financial implications are staggering:</p>
 
@@ -141,7 +216,7 @@ export default function BurnRateCalculatorSanFranciscoVsAustinBlogPost() {
 
 <p>This guide provides the definitive cost comparison between America's most expensive startup hub (SF) and its fastest-growing alternative (Austin), helping you make the location decision that maximizes your odds of success.</p>
 
-<h2>The Bottom Line: SF vs Austin Burn Rate by Stage</h2>
+<h2 id="the-bottom-line-sf-vs-austin-burn-rate-by-stage">The Bottom Line: SF vs Austin Burn Rate by Stage</h2>
 
 <p>Before diving into line-item breakdowns, here's the high-level comparison based on <strong>2025 data from Carta, AngelList, and Wellfound</strong>:</p>
 
@@ -201,7 +276,7 @@ export default function BurnRateCalculatorSanFranciscoVsAustinBlogPost() {
 
 <p>The pattern is clear: <strong>San Francisco companies burn 55-65% more than Austin companies at every stage</strong>. The question isn't whether SF is more expensive—it definitively is—but whether the premium delivers commensurate value for your specific startup.</p>
 
-<h2>Engineering Salaries: The Primary Driver of Burn Rate Difference</h2>
+<h2 id="engineering-salaries-the-primary-driver-of-burn-rate-differe">Engineering Salaries: The Primary Driver of Burn Rate Difference</h2>
 
 <p>Personnel costs represent 68-75% of total burn for early-stage startups. Engineering salaries drive the SF-Austin gap. Here's the 2025 comparison:</p>
 
@@ -316,7 +391,21 @@ export default function BurnRateCalculatorSanFranciscoVsAustinBlogPost() {
 <li><strong>SF Premium:</strong> +27%</li>
 </ul>
 
-<h2>Office Space: SF's Steepest Premium</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Calculate Your Burn Rate & Runway</p>
+                <p className="text-gray-600 mb-4">Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.</p>
+                <a
+                  href="https://icanpitch.com/burn-rate-runway-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Burn Rate Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="office-space-sfs-steepest-premium">Office Space: SF's Steepest Premium</h2>
 
 <p>If engineering salaries drive 50-60% of the SF-Austin burn gap, office space drives another 15-20%.</p>
 
@@ -378,7 +467,7 @@ export default function BurnRateCalculatorSanFranciscoVsAustinBlogPost() {
 
 <p>According to <strong>CBRE's 2025 Tech Office Market report, SF office rents increased 5.2% year-over-year while Austin decreased 1.8%</strong>, widening the already substantial gap.</p>
 
-<h2>Tax Burden: Austin's Massive Advantage</h2>
+<h2 id="tax-burden-austins-massive-advantage">Tax Burden: Austin's Massive Advantage</h2>
 
 <p>Texas's zero state income tax creates a structural cost advantage that compounds over time.</p>
 
@@ -461,7 +550,7 @@ export default function BurnRateCalculatorSanFranciscoVsAustinBlogPost() {
 
 <p>For Marcus's $1.49M SF engineering payroll, employer taxes total approximately $198,000. The equivalent Austin team ($1.09M payroll) incurs $120,000 in employer taxes—a $78,000 annual difference.</p>
 
-<h2>Cost of Living Impact on Compensation Negotiations</h2>
+<h2 id="cost-of-living-impact-on-compensation-negotiations">Cost of Living Impact on Compensation Negotiations</h2>
 
 <p>One often-overlooked factor: employees in Austin can accept lower nominal salaries because their purchasing power is higher.</p>
 
@@ -504,7 +593,7 @@ export default function BurnRateCalculatorSanFranciscoVsAustinBlogPost() {
 
 <p>This cost-of-living differential means Austin employees can maintain similar lifestyles on 25-30% lower salaries—explaining why the salary gap doesn't need to be 1:1 to attract equivalent talent.</p>
 
-<h2>When San Francisco's Premium Is Worth Paying</h2>
+<h2 id="when-san-franciscos-premium-is-worth-paying">When San Francisco's Premium Is Worth Paying</h2>
 
 <p>Despite burning 45-60% more cash, SF offers advantages that justify the premium for certain startups:</p>
 
@@ -571,7 +660,7 @@ export default function BurnRateCalculatorSanFranciscoVsAustinBlogPost() {
 
 <p>Late-stage companies benefit from SF's concentration of investment bankers, M&amp;A advisors, and acquisition-hungry public companies. <strong>According to CB Insights, 64% of $1B+ exits (2020-2024) involved SF-based companies</strong> vs. 3.2% Austin-based.</p>
 
-<h2>When Austin's Capital Efficiency Wins</h2>
+<h2 id="when-austins-capital-efficiency-wins">When Austin's Capital Efficiency Wins</h2>
 
 <p>Austin provides compelling advantages for certain startup profiles:</p>
 
@@ -621,7 +710,7 @@ export default function BurnRateCalculatorSanFranciscoVsAustinBlogPost() {
 
 <p>Lower attrition means reduced recruiting costs, better institutional knowledge, and stronger team cohesion. <strong>Lever's 2025 recruiting data shows Austin startups experience 31% lower engineering attrition</strong> than SF equivalents.</p>
 
-<h2>The Hybrid Strategy: Best of Both Worlds</h2>
+<h2 id="the-hybrid-strategy-best-of-both-worlds">The Hybrid Strategy: Best of Both Worlds</h2>
 
 <p>Many successful startups split the difference with distributed teams:</p>
 
@@ -676,7 +765,7 @@ export default function BurnRateCalculatorSanFranciscoVsAustinBlogPost() {
 
 <p>According to <strong>AngelList's 2025 data, 28% of Austin-based startups maintain some SF presence</strong> for ecosystem access without full relocation costs.</p>
 
-<h2>Decision Framework: SF vs Austin for Your Startup</h2>
+<h2 id="decision-framework-sf-vs-austin-for-your-startup">Decision Framework: SF vs Austin for Your Startup</h2>
 
 <p>Use this framework to evaluate the right location choice:</p>
 
@@ -711,7 +800,7 @@ export default function BurnRateCalculatorSanFranciscoVsAustinBlogPost() {
 <li><strong>You're optimizing for diversity</strong> of perspective and background</li>
 </ol>
 
-<h2>Marcus's Decision: How It Played Out</h2>
+<h2 id="marcuss-decision-how-it-played-out">Marcus's Decision: How It Played Out</h2>
 
 <p>After running the numbers, Marcus chose a hybrid model: SF office with 4 people (himself, co-founder, 2 senior AI engineers) and Austin office with 8 people (6 engineers, PM, designer).</p>
 
@@ -726,7 +815,7 @@ export default function BurnRateCalculatorSanFranciscoVsAustinBlogPost() {
 
 <p>Marcus's reflection: "We couldn't have built this team in Austin—the AI talent just isn't there yet. But we also couldn't have survived on our seed funding burning SF rates. The hybrid model was the only path that worked."</p>
 
-<h2>Frequently Asked Questions: SF vs Austin Burn Rates</h2>
+<h2 id="frequently-asked-questions-sf-vs-austin-burn-rates">Frequently Asked Questions: SF vs Austin Burn Rates</h2>
 
 <h3>How much more expensive is San Francisco than Austin for startups?</h3>
 
@@ -752,7 +841,7 @@ export default function BurnRateCalculatorSanFranciscoVsAustinBlogPost() {
 
 <p>Pre-seed/seed stage: Austin's capital efficiency advantage is strongest—extended runway permits more iteration cycles to find product-market fit. Series A: SF advantages increase as access to top-tier talent and mega-funds becomes critical for scaling. Series B+: SF premium often justified by ecosystem density, customer proximity, and M&amp;A/IPO infrastructure. According to Carta's 2025 data, 62% of pre-seed companies choose Austin but 71% of Series B+ companies operate from SF, suggesting stage-dependent optimization: start in Austin for efficiency, relocate to SF when growth capital and ecosystem access justify the premium.</p>
 
-<h2>Calculate Your Specific SF vs Austin Burn Rate</h2>
+<h2 id="calculate-your-specific-sf-vs-austin-burn-rate">Calculate Your Specific SF vs Austin Burn Rate</h2>
 
 <p>Ready to model your exact cost difference? Use our <a href="https://icanpitch.com/burn-rate-runway-calculator/" target="_blank" rel="noopener noreferrer">interactive burn rate calculator</a> with SF and Austin location options to:</p>
 
@@ -767,7 +856,7 @@ export default function BurnRateCalculatorSanFranciscoVsAustinBlogPost() {
 
 <p>The calculator incorporates all 2025 benchmark data from this guide and provides personalized recommendations based on your industry, stage, and team profile.</p>
 
-<h2>The Bottom Line: Location as Strategic Lever, Not Destiny</h2>
+<h2 id="the-bottom-line-location-as-strategic-lever-not-destiny">The Bottom Line: Location as Strategic Lever, Not Destiny</h2>
 
 <p>San Francisco and Austin represent fundamentally different startup philosophies: SF optimizes for speed, access, and winner-take-most dynamics at the cost of capital efficiency. Austin optimizes for sustainability, unit economics, and extended iteration cycles at the cost of ecosystem density.</p>
 
@@ -799,13 +888,30 @@ export default function BurnRateCalculatorSanFranciscoVsAustinBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/burn-rate-calculator-new-york-city-startup-costs/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for NYC Startups: New York Cost Guide 2025</span>
+                </Link>
+                <Link href="/blog/burn-rate-benchmarks-by-industry-stage/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Benchmarks by Industry and Stage: 2025 Data</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-berlin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Berlin Startups: 2025 Cost Guide</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-boston/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Boston Startups: 2025 Cost Guide</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for London Startups: 2025 Cost Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/burn-rate-calculator-series-a-first-time-founder-new-york-plan-fundraising-timeline-extend-runway-efficiency/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Burn Rate Calculator</Link>
+              <Link href="/blog/burn-rate-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Burn Rate & Runway Guides</Link>
             </div>
           </div>
         </section>
@@ -815,18 +921,18 @@ export default function BurnRateCalculatorSanFranciscoVsAustinBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Calculate Your Burn Rate & Runway
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/burn-rate-runway-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Burn Rate Calculator &rarr;
               </a>
             </div>
           </div>

@@ -115,8 +115,28 @@ export default function SafeCalculatorStockholmBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-stockholm-startups-need-to-understand-safe-agreements" className="text-blue-600 hover:text-blue-700 text-sm">Why Stockholm Startups Need to Understand SAFE Agreements</a></li>
+                  <li><a href="#understanding-safe-agreements-fundamentals-for-swedish-found" className="text-blue-600 hover:text-blue-700 text-sm">Understanding SAFE Agreements: Fundamentals for Swedish Founders</a></li>
+                  <li><a href="#stockholm-valuation-benchmarks-setting-realistic-safe-caps" className="text-blue-600 hover:text-blue-700 text-sm">Stockholm Valuation Benchmarks: Setting Realistic SAFE Caps</a></li>
+                  <li><a href="#calculating-safe-economics-step-by-step-for-stockholm-founde" className="text-blue-600 hover:text-blue-700 text-sm">Calculating SAFE Economics: Step-by-Step for Stockholm Founders</a></li>
+                  <li><a href="#nordic-vc-expectations-what-stockholm-investors-look-for-in-" className="text-blue-600 hover:text-blue-700 text-sm">Nordic VC Expectations: What Stockholm Investors Look For in SAFE Terms</a></li>
+                  <li><a href="#currency-considerations-sek-vs-eur-vs-usd-safe-agreements" className="text-blue-600 hover:text-blue-700 text-sm">Currency Considerations: SEK vs. EUR vs. USD SAFE Agreements</a></li>
+                  <li><a href="#stockholm-startup-ecosystem-and-safe-adoption" className="text-blue-600 hover:text-blue-700 text-sm">Stockholm Startup Ecosystem and SAFE Adoption</a></li>
+                  <li><a href="#negotiating-safe-terms-strategies-for-stockholm-founders" className="text-blue-600 hover:text-blue-700 text-sm">Negotiating SAFE Terms: Strategies for Stockholm Founders</a></li>
+                  <li><a href="#common-safe-mistakes-stockholm-founders-make" className="text-blue-600 hover:text-blue-700 text-sm">Common SAFE Mistakes Stockholm Founders Make</a></li>
+                  <li><a href="#case-studies-how-stockholm-startups-successfully-used-safes" className="text-blue-600 hover:text-blue-700 text-sm">Case Studies: How Stockholm Startups Successfully Used SAFEs</a></li>
+                  <li><a href="#safe-conversion-triggers-what-stockholm-founders-need-to-kno" className="text-blue-600 hover:text-blue-700 text-sm">SAFE Conversion Triggers: What Stockholm Founders Need to Know</a></li>
+                  <li><a href="#legal-and-tax-considerations-for-stockholm-safes" className="text-blue-600 hover:text-blue-700 text-sm">Legal and Tax Considerations for Stockholm SAFEs</a></li>
+                  <li><a href="#key-takeaways-for-stockholm-founders" className="text-blue-600 hover:text-blue-700 text-sm">Key Takeaways for Stockholm Founders</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -127,7 +147,7 @@ export default function SafeCalculatorStockholmBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why Stockholm Startups Need to Understand SAFE Agreements</h2>
+                <h2 id="why-stockholm-startups-need-to-understand-safe-agreements">Why Stockholm Startups Need to Understand SAFE Agreements</h2>
 
 <p>Stockholm has evolved from a quiet Scandinavian capital into one of Europe's most prolific startup ecosystems, producing more unicorns per capita than virtually anywhere outside Silicon Valley. Spotify, Klarna, iZettle, King, Northvolt—these billion-dollar success stories have fundamentally reshaped how Nordic investors approach early-stage funding.</p>
 
@@ -135,7 +155,7 @@ export default function SafeCalculatorStockholmBlogPost() {
 
 <p>This comprehensive guide provides Stockholm founders with everything needed to evaluate, negotiate, and optimize SAFE agreements in the context of Sweden's thriving tech ecosystem.</p>
 
-<h2>Understanding SAFE Agreements: Fundamentals for Swedish Founders</h2>
+<h2 id="understanding-safe-agreements-fundamentals-for-swedish-found">Understanding SAFE Agreements: Fundamentals for Swedish Founders</h2>
 
 <p>A SAFE (Simple Agreement for Future Equity) is a financing instrument created by Y Combinator that allows investors to provide capital in exchange for the right to convert that investment into equity during a future priced round. Unlike convertible notes, SAFEs have no maturity date and typically no interest—they simply wait for a triggering event.</p>
 
@@ -174,7 +194,7 @@ export default function SafeCalculatorStockholmBlogPost() {
 
 <p>Nordic investors increasingly favor SAFEs for pre-seed and early seed rounds, reserving convertible notes for bridge financing or specific strategic situations.</p>
 
-<h2>Stockholm Valuation Benchmarks: Setting Realistic SAFE Caps</h2>
+<h2 id="stockholm-valuation-benchmarks-setting-realistic-safe-caps">Stockholm Valuation Benchmarks: Setting Realistic SAFE Caps</h2>
 
 <p>Stockholm startups often command higher valuations than other European cities, driven by proven exit success and strong VC appetite. Understanding market benchmarks is critical for setting appropriate SAFE valuation caps.</p>
 
@@ -232,7 +252,21 @@ export default function SafeCalculatorStockholmBlogPost() {
 
 <p>For fintech, payments, or music/media tech startups in Stockholm, expect an additional 20-40% valuation premium due to proven domain expertise in the ecosystem.</p>
 
-<h2>Calculating SAFE Economics: Step-by-Step for Stockholm Founders</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="calculating-safe-economics-step-by-step-for-stockholm-founde">Calculating SAFE Economics: Step-by-Step for Stockholm Founders</h2>
 
 <p>Understanding exactly how your SAFE converts is critical for evaluating dilution and investor alignment.</p>
 
@@ -314,7 +348,7 @@ export default function SafeCalculatorStockholmBlogPost() {
 
 <p>This dilution occurs retroactively when the SAFE converts, which can surprise founders who didn't model the economics carefully upfront.</p>
 
-<h2>Nordic VC Expectations: What Stockholm Investors Look For in SAFE Terms</h2>
+<h2 id="nordic-vc-expectations-what-stockholm-investors-look-for-in-">Nordic VC Expectations: What Stockholm Investors Look For in SAFE Terms</h2>
 
 <p>Nordic investors bring a distinct investment philosophy that shapes SAFE negotiations:</p>
 
@@ -366,7 +400,7 @@ export default function SafeCalculatorStockholmBlogPost() {
 
 <p>Stockholm terms typically sit between US (more founder-friendly, higher caps) and broader European norms (lower caps, more investor protections).</p>
 
-<h2>Currency Considerations: SEK vs. EUR vs. USD SAFE Agreements</h2>
+<h2 id="currency-considerations-sek-vs-eur-vs-usd-safe-agreements">Currency Considerations: SEK vs. EUR vs. USD SAFE Agreements</h2>
 
 <p>Stockholm's position between European and global capital markets creates currency complexity:</p>
 
@@ -403,7 +437,7 @@ export default function SafeCalculatorStockholmBlogPost() {
 <li><strong>Consider currency hedging:</strong> For large SAFE rounds in foreign currency, selective hedging can reduce uncertainty</li>
 </ul>
 
-<h2>Stockholm Startup Ecosystem and SAFE Adoption</h2>
+<h2 id="stockholm-startup-ecosystem-and-safe-adoption">Stockholm Startup Ecosystem and SAFE Adoption</h2>
 
 <p>Understanding where SAFEs fit in Stockholm's broader funding landscape helps founders make strategic choices:</p>
 
@@ -448,7 +482,7 @@ export default function SafeCalculatorStockholmBlogPost() {
 
 <p>Angel SAFEs in Stockholm are often more founder-friendly than VC SAFEs—angels prioritize access to promising deals and accept higher caps.</p>
 
-<h2>Negotiating SAFE Terms: Strategies for Stockholm Founders</h2>
+<h2 id="negotiating-safe-terms-strategies-for-stockholm-founders">Negotiating SAFE Terms: Strategies for Stockholm Founders</h2>
 
 <p>While SAFEs are simpler than equity rounds, meaningful negotiation is still possible:</p>
 
@@ -502,7 +536,7 @@ export default function SafeCalculatorStockholmBlogPost() {
 
 <p><strong>Recommendation:</strong> Resist MFN clauses unless the investor is exceptionally valuable or you're confident you won't need to improve terms for subsequent SAFEs. If you must include MFN, limit it to 6-12 months rather than indefinitely.</p>
 
-<h2>Common SAFE Mistakes Stockholm Founders Make</h2>
+<h2 id="common-safe-mistakes-stockholm-founders-make">Common SAFE Mistakes Stockholm Founders Make</h2>
 
 <h3>Mistake 1: Setting the Cap Too Low</h3>
 
@@ -552,7 +586,7 @@ export default function SafeCalculatorStockholmBlogPost() {
 
 <p><strong>Solution:</strong> Standardize on one currency (preferably SEK if you're Stockholm-focused, EUR if targeting broader Europe). If you must accept mixed currencies, use clear conversion methodology and model currency risk.</p>
 
-<h2>Case Studies: How Stockholm Startups Successfully Used SAFEs</h2>
+<h2 id="case-studies-how-stockholm-startups-successfully-used-safes">Case Studies: How Stockholm Startups Successfully Used SAFEs</h2>
 
 <h3>Case Study 1: Fintech Startup with Klarna Alumni Founder</h3>
 
@@ -604,7 +638,7 @@ export default function SafeCalculatorStockholmBlogPost() {
 
 <p><strong>Key lesson:</strong> Currency denomination alignment prevented conversion complications, but operating currency (SEK) vs. funding currency (EUR) risk should be managed through hedging or reserves.</p>
 
-<h2>SAFE Conversion Triggers: What Stockholm Founders Need to Know</h2>
+<h2 id="safe-conversion-triggers-what-stockholm-founders-need-to-kno">SAFE Conversion Triggers: What Stockholm Founders Need to Know</h2>
 
 <p>SAFEs convert to equity when specific events occur. Understanding triggers prevents surprises:</p>
 
@@ -635,7 +669,7 @@ export default function SafeCalculatorStockholmBlogPost() {
 
 <p>If the company shuts down, SAFE investors typically have liquidation preference, receiving their capital back before common shareholders (founders and employees) if any assets remain. However, in most shutdowns, insufficient assets exist to return SAFE capital—investors lose their investment like equity holders.</p>
 
-<h2>Legal and Tax Considerations for Stockholm SAFEs</h2>
+<h2 id="legal-and-tax-considerations-for-stockholm-safes">Legal and Tax Considerations for Stockholm SAFEs</h2>
 
 <h3>Swedish Legal Framework</h3>
 
@@ -661,7 +695,7 @@ export default function SafeCalculatorStockholmBlogPost() {
 
 <p>Consult a Swedish tax advisor (skatterådgivare) familiar with startup equity structures. Costs: 8,000-20,000 SEK for initial consultation and guidance.</p>
 
-<h2>Key Takeaways for Stockholm Founders</h2>
+<h2 id="key-takeaways-for-stockholm-founders">Key Takeaways for Stockholm Founders</h2>
 
 <p>Successfully navigating SAFE agreements in Stockholm requires understanding both the instrument mechanics and local market dynamics:</p>
 
@@ -702,13 +736,31 @@ export default function SafeCalculatorStockholmBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/avoiding-safe-dilution-traps-founders/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Avoiding SAFE Dilution Traps: 7 Mistakes Founders Make</span>
+                </Link>
+                <Link href="/blog/how-to-negotiate-safe-valuation-cap/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Negotiate SAFE Valuation Caps: 2025 Founder's Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-bangalore/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Bangalore Startups: 2025 India Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-chicago/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Chicago SAFE Calculator: Navigate Midwest Valuations and Investor Expectations</span>
+                </Link>
+                <Link href="/blog/safe-calculator-first-time-founders-complete-guide/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for First-Time Founders: Complete 2025 Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -718,18 +770,18 @@ export default function SafeCalculatorStockholmBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

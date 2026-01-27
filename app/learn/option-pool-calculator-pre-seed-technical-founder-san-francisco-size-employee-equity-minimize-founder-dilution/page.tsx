@@ -38,8 +38,8 @@ const jsonLdData = [
       "@type": "Organization",
       "name": "ICanPitch"
     },
-    "datePublished": "2026-01-27T03:45:30.436Z",
-    "dateModified": "2026-01-27T03:45:30.436Z",
+    "datePublished": "2026-01-27T21:21:28.708Z",
+    "dateModified": "2026-01-27T21:21:28.708Z",
     "url": "https://learn.icanpitch.com/learn/option-pool-calculator-pre-seed-technical-founder-san-francisco-size-employee-equity-minimize-founder-dilution/",
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -109,8 +109,51 @@ export default function OptionPoolCalculatorPreSeedTechnicalFounderSanFranciscoS
                   <li>Compare pre-money vs post-money option pool creation</li>
                   <li>Plan your hiring budget against available options</li>
                 </ol>
+
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">When to Use This Calculator</h2>
+                <ul className="space-y-3 text-lg text-gray-700 list-disc list-inside mb-6">
+                  <li>An investor's term sheet specifies an option pool size and you want to understand the dilution impact</li>
+                  <li>You are planning hires for the next 12-18 months and need to size your pool accordingly</li>
+                  <li>You want to compare the founder dilution difference between a 10%, 15%, and 20% pool</li>
+                  <li>You are granting options to a new hire and want to check how much of the pool remains</li>
+                </ul>
+
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">Key Metrics and Formulas</h2>
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">The option pool shuffle is a well-known negotiation tactic: investors ask for the pool to be created from pre-money valuation, which means founders bear 100% of the dilution. The math: Effective Pre-Money = Stated Pre-Money - Option Pool Value. So a $10M pre-money with a 20% option pool on $2M raised means founders effectively get a $8M pre-money valuation. Our calculator shows both the stated and effective pre-money, along with founder ownership before and after the pool is created.</p>
+
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">Common Mistakes to Avoid</h2>
+                <ul className="space-y-3 text-lg text-gray-700 list-disc list-inside mb-6">
+                  <li>Accepting a larger pool than you need: If you only need 12% for planned hires, negotiate down from the standard 20% ask</li>
+                  <li>Not mapping the pool to a hiring plan: Show investors exactly which roles and grant sizes justify the pool size</li>
+                  <li>Ignoring the pre-money vs post-money distinction: Where the pool comes from changes your effective valuation significantly</li>
+                  <li>Granting too many options to early hires: Senior hires at seed stage should receive 0.5%-2%, not 5%+</li>
+                </ul>
+
+                {/* Expert Tips */}
+                <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Expert Tips</h3>
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex gap-2"><span className="text-blue-500 font-bold flex-shrink-0">&#x2713;</span><span>Build a hiring plan spreadsheet with role, timing, and grant size to justify your proposed pool</span></li>
+                    <li className="flex gap-2"><span className="text-blue-500 font-bold flex-shrink-0">&#x2713;</span><span>Negotiate the pool size down if you have already made key hires before the round</span></li>
+                    <li className="flex gap-2"><span className="text-blue-500 font-bold flex-shrink-0">&#x2713;</span><span>Consider a smaller pool with a plan to refresh at the next round rather than over-allocating now</span></li>
+                  </ul>
+                </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Recommended Reading */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Recommended Reading</h3>
+            <ul className="space-y-2">
+              <li><Link href="/blog/option-pool-calculator-berlin/" className="text-blue-600 hover:text-blue-700 underline">Berlin Option Pool Calculator: German ESOP vs VSOP Guide (2025)</Link></li>
+                  <li><Link href="/blog/option-pool-calculator-london/" className="text-blue-600 hover:text-blue-700 underline">London Option Pool Calculator: UK ESOP & EMI Scheme Guide (2025)</Link></li>
+                  <li><Link href="/blog/option-pool-calculator-new-york/" className="text-blue-600 hover:text-blue-700 underline">NYC Option Pool Calculator: East Coast Startup Equity Standards (2025)</Link></li>
+                  <li><Link href="/blog/option-pool-calculator-silicon-valley/" className="text-blue-600 hover:text-blue-700 underline">Silicon Valley Option Pool Calculator: Pre-Money vs Post-Money ESOP Guide (2025)</Link></li>
+                  <li><Link href="/blog/option-pool-calculator-singapore/" className="text-blue-600 hover:text-blue-700 underline">Singapore Option Pool Calculator: APAC ESOP Standards & Tax Guide (2025)</Link></li>
+            </ul>
           </div>
         </section>
 
@@ -150,7 +193,7 @@ export default function OptionPoolCalculatorPreSeedTechnicalFounderSanFranciscoS
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Start Calculator →
+                      Start Calculator &rarr;
                     </a>
                   </Button>
                 </CardContent>

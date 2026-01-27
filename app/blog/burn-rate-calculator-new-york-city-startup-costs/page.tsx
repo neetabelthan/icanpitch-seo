@@ -52,6 +52,60 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the average burn rate for a seed-stage startup in NYC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The median seed-stage NYC startup burns $98,000 per month according to 2025 Carta data—approximately 28% higher than the national median of $76,500/month. NYC SaaS companies burn $92,000/month median, fintech $132,000/month, and ecommerce $115,000/month. Personnel costs account for 68-72% of total burn, with NYC engineering salaries ($150,000-$200,000 median) driving the premium over national averages."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much do software engineers make at NYC startups in 2025?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "NYC startup engineering salaries range from $100,000-$130,000 for junior engineers to $200,000-$280,000 for staff/principal engineers. The median mid-level engineer (3-5 years experience) earns $150,000 base salary, with total compensation including equity reaching $140,000-$190,000. Senior engineers (6-10 years) command $165,000-$220,000 base salaries. These figures are 25-35% higher than national averages but 10-15% below San Francisco Bay Area equivalents."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it cheaper to start a company in Brooklyn or Manhattan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Brooklyn office space costs 35-50% less than Manhattan (median $45-$65/sq ft annually vs. $75-$120/sq ft in Manhattan). Co-working spaces like The Yard in Williamsburg charge $500-$650/month for dedicated desks vs. $650-$850 in Manhattan WeWorks. However, salary expectations are similar across boroughs—engineers expect comparable compensation whether the office is in DUMBO or Midtown. Total burn rate savings from Brooklyn location: 8-12% primarily through office cost reduction."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the hidden costs of running a startup in New York City?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hidden NYC startup costs include: tri-level tax compliance ($3,000-$8,000 annually for corporate tax prep), higher insurance premiums (15-25% above national average), commuter benefits ($100-$150/employee/month), and steeper costs for professional services. NYC payroll taxes are 10.9% of salary vs. 8.3% in zero-state-income-tax locations. First-time NYC founders often underestimate these by $2,000-$5,000/month, creating budget gaps."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I pay myself a salary as a NYC founder?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "According to Kruze Consulting's 2025 data, 71% of NYC pre-seed founders defer salary or pay below-market rates to conserve cash. However, NYC's high cost of living makes this challenging—median 1-bedroom rent is $3,600/month in Manhattan, $2,800 in Brooklyn. Consider paying yourself $60,000-$90,000 (vs. market rate of $150,000-$200,000) if runway permits, allowing you to cover basic living expenses without depleting the company's capital inefficiently."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I reduce my NYC startup's burn rate without leaving the city?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Reduce NYC burn rate by: hiring remote engineers in lower-cost markets (saves 18-25% on engineering costs), moving office from Manhattan to Brooklyn/Queens (saves 35-50% on office), using startup-specialized service providers vs. traditional NYC firms (saves 25-35% on legal/accounting), negotiating annual SaaS contracts for discounts (saves 15-20%), and testing marketing channels at lower spend before scaling (prevents wasteful customer acquisition). These strategies can reduce burn 20-30% while maintaining NYC ecosystem advantages."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +168,27 @@ export default function BurnRateCalculatorNewYorkCityStartupCostsBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-nyc-startup-costs-demand-special-attention" className="text-blue-600 hover:text-blue-700 text-sm">Why NYC Startup Costs Demand Special Attention</a></li>
+                  <li><a href="#nyc-engineering-salaries-your-largest-burn-rate-component" className="text-blue-600 hover:text-blue-700 text-sm">NYC Engineering Salaries: Your Largest Burn Rate Component</a></li>
+                  <li><a href="#nyc-office-space-the-second-largest-burn-component" className="text-blue-600 hover:text-blue-700 text-sm">NYC Office Space: The Second-Largest Burn Component</a></li>
+                  <li><a href="#nyc-operational-costs-professional-services-and-infrastructu" className="text-blue-600 hover:text-blue-700 text-sm">NYC Operational Costs: Professional Services and Infrastructure</a></li>
+                  <li><a href="#lisas-complete-nyc-burn-rate-breakdown" className="text-blue-600 hover:text-blue-700 text-sm">Lisa's Complete NYC Burn Rate Breakdown</a></li>
+                  <li><a href="#nyc-vs-national-average-the-cost-premium-quantified" className="text-blue-600 hover:text-blue-700 text-sm">NYC vs. National Average: The Cost Premium Quantified</a></li>
+                  <li><a href="#when-the-nyc-premium-is-worth-paying" className="text-blue-600 hover:text-blue-700 text-sm">When the NYC Premium Is Worth Paying</a></li>
+                  <li><a href="#cost-arbitrage-strategies-for-nyc-startups" className="text-blue-600 hover:text-blue-700 text-sm">Cost Arbitrage Strategies for NYC Startups</a></li>
+                  <li><a href="#nyc-specific-tax-considerations" className="text-blue-600 hover:text-blue-700 text-sm">NYC-Specific Tax Considerations</a></li>
+                  <li><a href="#frequently-asked-questions-about-nyc-startup-costs" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions About NYC Startup Costs</a></li>
+                  <li><a href="#use-our-nyc-specific-burn-rate-calculator" className="text-blue-600 hover:text-blue-700 text-sm">Use Our NYC-Specific Burn Rate Calculator</a></li>
+                  <li><a href="#the-nyc-startup-equation-premium-costs-for-premium-access" className="text-blue-600 hover:text-blue-700 text-sm">The NYC Startup Equation: Premium Costs for Premium Access</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -128,7 +201,7 @@ export default function BurnRateCalculatorNewYorkCityStartupCostsBlogPost() {
               ">
                 <p><strong>TL;DR:</strong> NYC startup costs run 25-35% higher than national averages, with engineering salaries at $150,000-$200,000, office space at $80-$120/sq ft, and median seed-stage burn rates of $98,000/month. Understanding New York's cost structure is essential for accurate runway planning and competitive fundraising.</p>
 
-<h2>Why NYC Startup Costs Demand Special Attention</h2>
+<h2 id="why-nyc-startup-costs-demand-special-attention">Why NYC Startup Costs Demand Special Attention</h2>
 
 <p>Meet Lisa Martinez, founder of a seed-stage ecommerce platform in Brooklyn. After reading generic startup burn rate guides suggesting $70,000-$80,000 monthly burn for her stage, she budgeted accordingly. Three months later, she was burning $115,000/month—46% over plan—and couldn't understand why.</p>
 
@@ -145,7 +218,7 @@ export default function BurnRateCalculatorNewYorkCityStartupCostsBlogPost() {
 
 <p>Yet NYC's ecosystem advantages—access to fintech/media/fashion expertise, proximity to east coast capital, dense talent pools—often justify the premium. The key is understanding exactly what you're paying for and budgeting realistically. This guide provides the definitive breakdown of NYC startup costs in 2025, helping you calculate accurate burn rate and extend your runway.</p>
 
-<h2>NYC Engineering Salaries: Your Largest Burn Rate Component</h2>
+<h2 id="nyc-engineering-salaries-your-largest-burn-rate-component">NYC Engineering Salaries: Your Largest Burn Rate Component</h2>
 
 <p>Personnel costs represent 65-75% of total burn for NYC startups. Engineering salaries drive the majority of this expense. Here's what competitive compensation looks like in 2025:</p>
 
@@ -261,7 +334,7 @@ export default function BurnRateCalculatorNewYorkCityStartupCostsBlogPost() {
 
 <p>NYC's deep talent pools in fintech, media, fashion, and advertising mean specialized roles (compliance, content, brand) command premium salaries. <strong>Built In NYC's 2025 salary data shows that fintech-specific roles (risk, compliance, payments) earn 15-25% more in NYC than other markets</strong> due to concentration of financial services expertise.</p>
 
-<h2>NYC Office Space: The Second-Largest Burn Component</h2>
+<h2 id="nyc-office-space-the-second-largest-burn-component">NYC Office Space: The Second-Largest Burn Component</h2>
 
 <p>Office costs in New York vary dramatically by neighborhood, but even "affordable" options exceed most startup markets.</p>
 
@@ -342,7 +415,21 @@ export default function BurnRateCalculatorNewYorkCityStartupCostsBlogPost() {
 
 <p><strong>Lisa's office strategy:</strong> She chose WeWork over a traditional lease because her team is still growing and she values flexibility. At $4,200/month, she's paying a premium vs. outer-borough traditional space but avoiding the 3-5 year lease commitment and upfront build-out costs ($50,000-$150,000 typical).</p>
 
-<h2>NYC Operational Costs: Professional Services and Infrastructure</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Calculate Your Burn Rate & Runway</p>
+                <p className="text-gray-600 mb-4">Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.</p>
+                <a
+                  href="https://icanpitch.com/burn-rate-runway-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Burn Rate Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="nyc-operational-costs-professional-services-and-infrastructu">NYC Operational Costs: Professional Services and Infrastructure</h2>
 
 <h3>Legal Costs</h3>
 
@@ -454,7 +541,7 @@ export default function BurnRateCalculatorNewYorkCityStartupCostsBlogPost() {
 
 <p>According to <strong>Bessemer's 2025 Cloud 100 analysis, the average Series A startup spends $1,100 per employee annually on SaaS tools</strong>—remarkably consistent across geographies since software pricing is location-independent.</p>
 
-<h2>Lisa's Complete NYC Burn Rate Breakdown</h2>
+<h2 id="lisas-complete-nyc-burn-rate-breakdown">Lisa's Complete NYC Burn Rate Breakdown</h2>
 
 <p>Let's see how these NYC-specific costs combine into Lisa's total monthly burn rate:</p>
 
@@ -518,7 +605,7 @@ export default function BurnRateCalculatorNewYorkCityStartupCostsBlogPost() {
 
 <p>Lisa's $117,863 net burn aligns almost perfectly with <strong>Carta's 2025 data showing NYC ecommerce startups burn a median of $115,000/month at seed stage</strong>—validating her budget against NYC-specific benchmarks.</p>
 
-<h2>NYC vs. National Average: The Cost Premium Quantified</h2>
+<h2 id="nyc-vs-national-average-the-cost-premium-quantified">NYC vs. National Average: The Cost Premium Quantified</h2>
 
 <p>How much more does it cost to build a startup in NYC versus the national average? Here's the side-by-side comparison for Lisa's 8-person team:</p>
 
@@ -566,7 +653,7 @@ export default function BurnRateCalculatorNewYorkCityStartupCostsBlogPost() {
 
 <p>The bottom line: <strong>NYC startups burn approximately 28% more than national averages for equivalent teams</strong>, with personnel costs driving 75% of the premium.</p>
 
-<h2>When the NYC Premium Is Worth Paying</h2>
+<h2 id="when-the-nyc-premium-is-worth-paying">When the NYC Premium Is Worth Paying</h2>
 
 <p>Despite the cost premium, NYC offers distinct advantages that justify the investment for certain startups:</p>
 
@@ -600,7 +687,7 @@ export default function BurnRateCalculatorNewYorkCityStartupCostsBlogPost() {
 
 <p>Lisa's ecommerce platform targets fashion-conscious consumers and leverages NYC's deep creative, brand, and logistics talent—advantages worth the cost premium for her specific business model.</p>
 
-<h2>Cost Arbitrage Strategies for NYC Startups</h2>
+<h2 id="cost-arbitrage-strategies-for-nyc-startups">Cost Arbitrage Strategies for NYC Startups</h2>
 
 <p>Smart founders capture NYC's advantages while mitigating costs:</p>
 
@@ -661,7 +748,7 @@ export default function BurnRateCalculatorNewYorkCityStartupCostsBlogPost() {
 
 <p>This extends Lisa's runway from 10.2 months to 13.7 months on her $1.2M seed round—critical breathing room to hit key milestones.</p>
 
-<h2>NYC-Specific Tax Considerations</h2>
+<h2 id="nyc-specific-tax-considerations">NYC-Specific Tax Considerations</h2>
 
 <p>New York's tri-level taxation adds complexity and cost:</p>
 
@@ -697,7 +784,7 @@ export default function BurnRateCalculatorNewYorkCityStartupCostsBlogPost() {
 
 <p>Ecommerce companies must collect sales tax from NY customers, adding operational complexity.</p>
 
-<h2>Frequently Asked Questions About NYC Startup Costs</h2>
+<h2 id="frequently-asked-questions-about-nyc-startup-costs">Frequently Asked Questions About NYC Startup Costs</h2>
 
 <h3>What is the average burn rate for a seed-stage startup in NYC?</h3>
 
@@ -723,7 +810,7 @@ export default function BurnRateCalculatorNewYorkCityStartupCostsBlogPost() {
 
 <p>Reduce NYC burn rate by: hiring remote engineers in lower-cost markets (saves 18-25% on engineering costs), moving office from Manhattan to Brooklyn/Queens (saves 35-50% on office), using startup-specialized service providers vs. traditional NYC firms (saves 25-35% on legal/accounting), negotiating annual SaaS contracts for discounts (saves 15-20%), and testing marketing channels at lower spend before scaling (prevents wasteful customer acquisition). These strategies can reduce burn 20-30% while maintaining NYC ecosystem advantages.</p>
 
-<h2>Use Our NYC-Specific Burn Rate Calculator</h2>
+<h2 id="use-our-nyc-specific-burn-rate-calculator">Use Our NYC-Specific Burn Rate Calculator</h2>
 
 <p>Ready to calculate your exact NYC burn rate with location-adjusted benchmarks? Our <a href="https://icanpitch.com/burn-rate-runway-calculator/">comprehensive burn rate and runway calculator</a> includes:</p>
 
@@ -738,7 +825,7 @@ export default function BurnRateCalculatorNewYorkCityStartupCostsBlogPost() {
 
 <p>Input your team composition and the calculator automatically applies NYC cost multipliers, providing accurate burn rate projections and runway estimates tailored to the New York startup ecosystem.</p>
 
-<h2>The NYC Startup Equation: Premium Costs for Premium Access</h2>
+<h2 id="the-nyc-startup-equation-premium-costs-for-premium-access">The NYC Startup Equation: Premium Costs for Premium Access</h2>
 
 <p>Lisa Martinez started her journey frustrated by generic burn rate advice that didn't account for NYC's unique cost structure. Now she understands that her $117,863 monthly burn—28% above national averages—directly reflects the premium ecosystem she's accessing.</p>
 
@@ -772,13 +859,30 @@ export default function BurnRateCalculatorNewYorkCityStartupCostsBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/burn-rate-calculator-berlin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Berlin Startups: 2025 Cost Guide</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-los-angeles/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Los Angeles Startups: 2025 Cost Guide</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-san-francisco-vs-austin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator: San Francisco vs Austin Cost Comparison 2025</span>
+                </Link>
+                <Link href="/blog/burn-rate-benchmarks-by-industry-stage/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Benchmarks by Industry and Stage: 2025 Data</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-boston/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Boston Startups: 2025 Cost Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/burn-rate-calculator-series-a-first-time-founder-new-york-plan-fundraising-timeline-extend-runway-efficiency/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Burn Rate Calculator</Link>
+              <Link href="/blog/burn-rate-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Burn Rate & Runway Guides</Link>
             </div>
           </div>
         </section>
@@ -788,18 +892,18 @@ export default function BurnRateCalculatorNewYorkCityStartupCostsBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Calculate Your Burn Rate & Runway
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/burn-rate-runway-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Burn Rate Calculator &rarr;
               </a>
             </div>
           </div>

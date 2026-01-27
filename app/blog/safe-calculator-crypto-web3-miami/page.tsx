@@ -114,8 +114,24 @@ export default function SafeCalculatorCryptoWeb3MiamiBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-miami-cryptoweb3-startups-need-specialized-safe-benchmar" className="text-blue-600 hover:text-blue-700 text-sm">Why Miami Crypto/Web3 Startups Need Specialized SAFE Benchmarks</a></li>
+                  <li><a href="#miami-cryptoweb3-safe-valuation-benchmarks-2024-2025" className="text-blue-600 hover:text-blue-700 text-sm">Miami Crypto/Web3 SAFE Valuation Benchmarks (2024-2025)</a></li>
+                  <li><a href="#token-vs-equity-financing-critical-valuation-implications" className="text-blue-600 hover:text-blue-700 text-sm">Token vs Equity Financing: Critical Valuation Implications</a></li>
+                  <li><a href="#regulatory-uncertainty-and-its-impact-on-crypto-valuations" className="text-blue-600 hover:text-blue-700 text-sm">Regulatory Uncertainty and Its Impact on Crypto Valuations</a></li>
+                  <li><a href="#crypto-native-investor-landscape-in-miami-and-beyond" className="text-blue-600 hover:text-blue-700 text-sm">Crypto-Native Investor Landscape in Miami and Beyond</a></li>
+                  <li><a href="#key-metrics-that-drive-cryptoweb3-valuations" className="text-blue-600 hover:text-blue-700 text-sm">Key Metrics That Drive Crypto/Web3 Valuations</a></li>
+                  <li><a href="#common-mistakes-miami-crypto-founders-make-with-safes" className="text-blue-600 hover:text-blue-700 text-sm">Common Mistakes Miami Crypto Founders Make with SAFEs</a></li>
+                  <li><a href="#miami-cryptoweb3-safe-valuation-calculator-step-by-step-fram" className="text-blue-600 hover:text-blue-700 text-sm">Miami Crypto/Web3 SAFE Valuation Calculator: Step-by-Step Framework</a></li>
+                  <li><a href="#next-steps-navigating-your-miami-cryptoweb3-safe" className="text-blue-600 hover:text-blue-700 text-sm">Next Steps: Navigating Your Miami Crypto/Web3 SAFE</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,13 +142,13 @@ export default function SafeCalculatorCryptoWeb3MiamiBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why Miami Crypto/Web3 Startups Need Specialized SAFE Benchmarks</h2>
+                <h2 id="why-miami-cryptoweb3-startups-need-specialized-safe-benchmar">Why Miami Crypto/Web3 Startups Need Specialized SAFE Benchmarks</h2>
 
 <p>If you're raising a SAFE round for your crypto or Web3 startup in Miami, you're navigating one of the most volatile, regulatory-uncertain, and structurally unique sectors in venture capital. Crypto startup valuations command 30-50% premiums over traditional tech in bull markets but face 60-80% discounts during bear markets—creating valuation spreads of 5-10x for identical companies based purely on market timing. Miami's emergence as a crypto hub since 2021, anchored by Bitcoin 2022 conference and favorable local policies, has created a distinct funding ecosystem.</p>
 
 <p>The critical complexity: Crypto startups must navigate token vs equity financing decisions that fundamentally alter valuation dynamics, cap table structures, and investor expectations. Traditional SAFEs convert to equity, but many crypto companies raise SAFEs or SAFTs (Simple Agreement for Future Tokens) with complex relationships between equity ownership and token allocation. This guide provides Miami-specific crypto benchmarks, token-equity considerations, and crypto-native investor expectations for 2025.</p>
 
-<h2>Miami Crypto/Web3 SAFE Valuation Benchmarks (2024-2025)</h2>
+<h2 id="miami-cryptoweb3-safe-valuation-benchmarks-2024-2025">Miami Crypto/Web3 SAFE Valuation Benchmarks (2024-2025)</h2>
 
 <p>Crypto valuations in Miami vary dramatically by market cycle, regulatory clarity, and token economics. Here's current market data for crypto SAFEs in the 2024-2025 environment:</p>
 
@@ -186,7 +202,7 @@ export default function SafeCalculatorCryptoWeb3MiamiBlogPost() {
 
 <p>Net result: High variance. The same crypto startup might raise at a $50M cap in a bull market with regulatory optimism but only $15M cap in a bear market with enforcement fears—despite identical product and traction.</p>
 
-<h2>Token vs Equity Financing: Critical Valuation Implications</h2>
+<h2 id="token-vs-equity-financing-critical-valuation-implications">Token vs Equity Financing: Critical Valuation Implications</h2>
 
 <p>The most consequential decision for crypto startups: Are you raising equity (SAFEs/priced rounds) or tokens (SAFTs/token presales)? This fundamentally alters valuation, ownership, and investor alignment.</p>
 
@@ -240,7 +256,21 @@ export default function SafeCalculatorCryptoWeb3MiamiBlogPost() {
 
 <p>Investor expectations: Crypto-native investors expect 2-3x token allocation relative to equity ownership percentage (e.g., 10% equity ownership receives 20-30% of investor token pool, which might be 15-20% of total token supply = 3-6% of all tokens). Negotiate these terms explicitly in side letters.</p>
 
-<h2>Regulatory Uncertainty and Its Impact on Crypto Valuations</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="regulatory-uncertainty-and-its-impact-on-crypto-valuations">Regulatory Uncertainty and Its Impact on Crypto Valuations</h2>
 
 <p>SEC enforcement actions and regulatory ambiguity create the single largest valuation discount for crypto startups in 2025.</p>
 
@@ -287,7 +317,7 @@ export default function SafeCalculatorCryptoWeb3MiamiBlogPost() {
 
 <p>Valuation impact: Miami-based crypto startups targeting Latin American markets command 25-40% premiums over equivalent US-only focused companies due to TAM expansion and regional expertise.</p>
 
-<h2>Crypto-Native Investor Landscape in Miami and Beyond</h2>
+<h2 id="crypto-native-investor-landscape-in-miami-and-beyond">Crypto-Native Investor Landscape in Miami and Beyond</h2>
 
 <p>Crypto investors have distinct expectations and value creation models compared to traditional VCs.</p>
 
@@ -330,7 +360,7 @@ export default function SafeCalculatorCryptoWeb3MiamiBlogPost() {
 
 <p>Negotiation leverage: Having both crypto-native and traditional VC interest creates competitive tension and supports higher valuations (20-40% premium).</p>
 
-<h2>Key Metrics That Drive Crypto/Web3 Valuations</h2>
+<h2 id="key-metrics-that-drive-cryptoweb3-valuations">Key Metrics That Drive Crypto/Web3 Valuations</h2>
 
 <p>Crypto investors evaluate projects through sector-specific KPIs that differ fundamentally from traditional tech.</p>
 
@@ -373,7 +403,7 @@ export default function SafeCalculatorCryptoWeb3MiamiBlogPost() {
 <li><strong>Revenue:</strong> Subscription or usage-based revenue (valued at 15-30x ARR).</li>
 </ul>
 
-<h2>Common Mistakes Miami Crypto Founders Make with SAFEs</h2>
+<h2 id="common-mistakes-miami-crypto-founders-make-with-safes">Common Mistakes Miami Crypto Founders Make with SAFEs</h2>
 
 <p>Crypto fundraising complexity creates unique pitfalls:</p>
 
@@ -407,7 +437,7 @@ export default function SafeCalculatorCryptoWeb3MiamiBlogPost() {
 
 <p>Benchmark: Budget $50K-$200K for comprehensive smart contract audits from top firms. This is non-negotiable for DeFi protocols handling user funds.</p>
 
-<h2>Miami Crypto/Web3 SAFE Valuation Calculator: Step-by-Step Framework</h2>
+<h2 id="miami-cryptoweb3-safe-valuation-calculator-step-by-step-fram">Miami Crypto/Web3 SAFE Valuation Calculator: Step-by-Step Framework</h2>
 
 <p>Use this framework to estimate a defensible crypto SAFE cap in Miami for 2024-2025:</p>
 
@@ -459,7 +489,7 @@ Team (ex-Aave, crypto-native): $100M x 1.40 = $140M<br />
 Miami/LatAm positioning: $140M x 1.15 = $161M<br />
 <strong>Suggested SAFE cap: $150M-$175M</strong></p>
 
-<h2>Next Steps: Navigating Your Miami Crypto/Web3 SAFE</h2>
+<h2 id="next-steps-navigating-your-miami-cryptoweb3-safe">Next Steps: Navigating Your Miami Crypto/Web3 SAFE</h2>
 
 <p>Crypto fundraising in 2025 requires balancing token-equity structures, regulatory risk, and market cycle timing. The most successful Miami crypto founders approach SAFEs with:</p>
 
@@ -496,13 +526,31 @@ Miami/LatAm positioning: $140M x 1.15 = $161M<br />
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/safe-calculator-miami/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Miami SAFE Calculator: Navigate SAFE Financing in South Florida's Crypto & Web3 Capital</span>
+                </Link>
+                <Link href="/blog/safe-calculator-ai-ml-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">AI/ML SAFE Calculator Silicon Valley: 2025 Valuation Benchmarks for Foundation Models vs Application Layer</span>
+                </Link>
+                <Link href="/blog/safe-calculator-b2b-saas-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">B2B SaaS SAFE Calculator for London Startups: UK Valuation Benchmarks vs US Comparables</span>
+                </Link>
+                <Link href="/blog/safe-calculator-climate-tech-san-francisco/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Climate Tech SAFE Calculator San Francisco: Cleantech Valuations with IRA Impact & Hardware vs Software Dynamics</span>
+                </Link>
+                <Link href="/blog/safe-calculator-consumer-tech-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Consumer Tech SAFE Calculator Silicon Valley: Post-iOS14 Valuation Benchmarks for Social & Mobile Apps</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -512,18 +560,18 @@ Miami/LatAm positioning: $140M x 1.15 = $161M<br />
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

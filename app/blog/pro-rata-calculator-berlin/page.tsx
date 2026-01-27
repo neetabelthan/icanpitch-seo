@@ -114,8 +114,25 @@ export default function ProRataCalculatorBerlinBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#pro-rata-rights-in-germanys-venture-capital-ecosystem" className="text-blue-600 hover:text-blue-700 text-sm">Pro-Rata Rights in Germany's Venture Capital Ecosystem</a></li>
+                  <li><a href="#understanding-german-investor-pro-rata-expectations" className="text-blue-600 hover:text-blue-700 text-sm">Understanding German Investor Pro-Rata Expectations</a></li>
+                  <li><a href="#how-pro-rata-rights-work-in-german-series-a-and-series-b-rou" className="text-blue-600 hover:text-blue-700 text-sm">How Pro-Rata Rights Work in German Series A and Series B Rounds</a></li>
+                  <li><a href="#calculating-pro-rata-allocations-berlin-founder-methodology" className="text-blue-600 hover:text-blue-700 text-sm">Calculating Pro-Rata Allocations: Berlin Founder Methodology</a></li>
+                  <li><a href="#berlin-specific-pro-rata-negotiation-tactics" className="text-blue-600 hover:text-blue-700 text-sm">Berlin-Specific Pro-Rata Negotiation Tactics</a></li>
+                  <li><a href="#common-pro-rata-mistakes-berlin-founders-make" className="text-blue-600 hover:text-blue-700 text-sm">Common Pro-Rata Mistakes Berlin Founders Make</a></li>
+                  <li><a href="#pro-rata-rights-and-the-berlin-ecosystems-evolution" className="text-blue-600 hover:text-blue-700 text-sm">Pro-Rata Rights and the Berlin Ecosystem's Evolution</a></li>
+                  <li><a href="#building-a-german-optimized-pro-rata-calculator" className="text-blue-600 hover:text-blue-700 text-sm">Building a German-Optimized Pro-Rata Calculator</a></li>
+                  <li><a href="#german-and-european-resources-for-pro-rata-planning" className="text-blue-600 hover:text-blue-700 text-sm">German and European Resources for Pro-Rata Planning</a></li>
+                  <li><a href="#key-takeaways-for-berlin-and-german-founders" className="text-blue-600 hover:text-blue-700 text-sm">Key Takeaways for Berlin and German Founders</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +143,7 @@ export default function ProRataCalculatorBerlinBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Pro-Rata Rights in Germany's Venture Capital Ecosystem</h2>
+                <h2 id="pro-rata-rights-in-germanys-venture-capital-ecosystem">Pro-Rata Rights in Germany's Venture Capital Ecosystem</h2>
 
 <p>Berlin has emerged as continental Europe's leading startup hub, with a distinctive venture capital culture that blends American-style growth ambitions with traditional German business conservatism. This unique positioning creates specific patterns around pro-rata rights that differ from both Silicon Valley's aggressive follow-on culture and London's tax-scheme-driven complexity.</p>
 
@@ -134,7 +151,7 @@ export default function ProRataCalculatorBerlinBlogPost() {
 
 <p>Data from Dealroom and the German Startup Association indicates that approximately 30-35% of Berlin seed rounds include explicit pro-rata rights for lead investors, lower than London (35-40%) and significantly below New York (52%). However, this percentage increases dramatically at Series A and beyond, reaching 65-75% as institutional investors—both German and international—set terms more aligned with global venture standards.</p>
 
-<h2>Understanding German Investor Pro-Rata Expectations</h2>
+<h2 id="understanding-german-investor-pro-rata-expectations">Understanding German Investor Pro-Rata Expectations</h2>
 
 <p>German venture capitalists approach pro-rata rights through a lens shaped by the country's business culture, which emphasizes long-term relationships, operational support, and capital efficiency over rapid scaling at any cost.</p>
 
@@ -174,7 +191,7 @@ export default function ProRataCalculatorBerlinBlogPost() {
 
 <p>German corporate VCs tend to be more conservative about pro-rata exercise than their U.S. counterparts, reflecting their parent companies' risk-averse cultures and longer decision-making processes.</p>
 
-<h2>How Pro-Rata Rights Work in German Series A and Series B Rounds</h2>
+<h2 id="how-pro-rata-rights-work-in-german-series-a-and-series-b-rou">How Pro-Rata Rights Work in German Series A and Series B Rounds</h2>
 
 <p>Understanding the typical structure and mechanics of pro-rata rights across German funding rounds helps founders model scenarios and negotiate effectively.</p>
 
@@ -254,7 +271,21 @@ export default function ProRataCalculatorBerlinBlogPost() {
 
 <p>This creates opportunities for Berlin founders to negotiate performance-based or contribution-based pro-rata structures that might be unusual in Silicon Valley but fit German investor culture.</p>
 
-<h2>Calculating Pro-Rata Allocations: Berlin Founder Methodology</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Pro-Rata Participation</p>
+                <p className="text-gray-600 mb-4">See how investor follow-on rights affect your cap table in future fundraising rounds.</p>
+                <a
+                  href="https://icanpitch.com/pro-rata-rights-impact-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Pro-Rata Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="calculating-pro-rata-allocations-berlin-founder-methodology">Calculating Pro-Rata Allocations: Berlin Founder Methodology</h2>
 
 <p>German founders need practical frameworks to model pro-rata scenarios across multiple funding rounds and investor types.</p>
 
@@ -316,7 +347,7 @@ export default function ProRataCalculatorBerlinBlogPost() {
 
 <p>German founders should expect base case execution rates around 55-65%, lower than U.S. (60-70%) due to more conservative investor culture and smaller fund sizes among regional investors.</p>
 
-<h2>Berlin-Specific Pro-Rata Negotiation Tactics</h2>
+<h2 id="berlin-specific-pro-rata-negotiation-tactics">Berlin-Specific Pro-Rata Negotiation Tactics</h2>
 
 <p>Negotiating pro-rata rights in Berlin requires understanding both global venture standards and German business culture nuances.</p>
 
@@ -357,7 +388,7 @@ export default function ProRataCalculatorBerlinBlogPost() {
 
 <p>This approach is pragmatic and aligns with the reality that older funds often can't or won't exercise pro-rata rights, even if contractually entitled.</p>
 
-<h2>Common Pro-Rata Mistakes Berlin Founders Make</h2>
+<h2 id="common-pro-rata-mistakes-berlin-founders-make">Common Pro-Rata Mistakes Berlin Founders Make</h2>
 
 <p>German founders face several predictable pitfalls when structuring and managing pro-rata rights.</p>
 
@@ -397,7 +428,7 @@ export default function ProRataCalculatorBerlinBlogPost() {
 
 <p><strong>Solution:</strong> When raising from multiple German VCs (rather than one clear lead), offer tiered pro-rata: largest investor gets full pro-rata, second gets 75%, third gets 50%. This acknowledges the reality that not all seed investors can deploy large follow-on checks from smaller funds.</p>
 
-<h2>Pro-Rata Rights and the Berlin Ecosystem's Evolution</h2>
+<h2 id="pro-rata-rights-and-the-berlin-ecosystems-evolution">Pro-Rata Rights and the Berlin Ecosystem's Evolution</h2>
 
 <p>Berlin's startup ecosystem has matured significantly over the past decade, influencing how pro-rata rights are negotiated and exercised.</p>
 
@@ -431,7 +462,7 @@ export default function ProRataCalculatorBerlinBlogPost() {
 <li><strong>Multi-stage funds:</strong> Success breeds larger funds—Earlybird's Fund VI is €200M+ (vs. €100M for earlier funds), specifically to support pro-rata through unicorn-scale rounds</li>
 </ul>
 
-<h2>Building a German-Optimized Pro-Rata Calculator</h2>
+<h2 id="building-a-german-optimized-pro-rata-calculator">Building a German-Optimized Pro-Rata Calculator</h2>
 
 <p>Berlin founders need modeling tools that account for German ecosystem specifics, fund size constraints, and corporate structures.</p>
 
@@ -466,7 +497,7 @@ export default function ProRataCalculatorBerlinBlogPost() {
 
 <p>This range helps Berlin founders plan realistic Series A processes and avoid surprises when existing investors commit different amounts than expected.</p>
 
-<h2>German and European Resources for Pro-Rata Planning</h2>
+<h2 id="german-and-european-resources-for-pro-rata-planning">German and European Resources for Pro-Rata Planning</h2>
 
 <p>Berlin founders have access to several German and European resources for understanding pro-rata rights:</p>
 
@@ -478,7 +509,7 @@ export default function ProRataCalculatorBerlinBlogPost() {
 <li><strong>HTGF (High-Tech Gründerfonds):</strong> Germany's leading seed investor provides standardized documentation at <a href="https://www.htgf.de" target="_blank" rel="noopener noreferrer">htgf.de</a></li>
 </ul>
 
-<h2>Key Takeaways for Berlin and German Founders</h2>
+<h2 id="key-takeaways-for-berlin-and-german-founders">Key Takeaways for Berlin and German Founders</h2>
 
 <p>Pro-rata rights in Germany's venture ecosystem reflect the country's unique blend of American growth ambitions and traditional German business practices:</p>
 
@@ -515,13 +546,30 @@ export default function ProRataCalculatorBerlinBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/pro-rata-calculator-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pro-Rata Rights Calculator for London Startups (2025)</span>
+                </Link>
+                <Link href="/blog/pro-rata-calculator-new-york/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pro-Rata Rights Calculator for New York City Startups (2025)</span>
+                </Link>
+                <Link href="/blog/pro-rata-calculator-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pro-Rata Rights Calculator for Silicon Valley Startups (2025)</span>
+                </Link>
+                <Link href="/blog/pro-rata-calculator-singapore/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pro-Rata Rights Calculator for Singapore Startups (2025)</span>
+                </Link>
+                <Link href="/blog/understanding-pro-rata-rights-startup-investing/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Understanding Pro-Rata Rights in Startup Investing: A Complete Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/pro-rata-calculator-series-b-business-founder-chicago-model-future-dilution-plan-investor-rights/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Pro Rata Calculator</Link>
+              <Link href="/blog/exit-strategy-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Exit & Pro-Rata Guides</Link>
             </div>
           </div>
         </section>
@@ -531,18 +579,18 @@ export default function ProRataCalculatorBerlinBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Pro-Rata Participation
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See how investor follow-on rights affect your cap table in future fundraising rounds.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/pro-rata-rights-impact-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Pro-Rata Calculator &rarr;
               </a>
             </div>
           </div>

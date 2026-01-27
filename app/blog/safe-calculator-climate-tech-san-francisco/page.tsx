@@ -114,8 +114,24 @@ export default function SafeCalculatorClimateTechSanFranciscoBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-sf-climate-tech-startups-need-ira-aware-safe-benchmarks" className="text-blue-600 hover:text-blue-700 text-sm">Why SF Climate Tech Startups Need IRA-Aware SAFE Benchmarks</a></li>
+                  <li><a href="#sf-climate-tech-safe-valuation-benchmarks-2024-2025" className="text-blue-600 hover:text-blue-700 text-sm">SF Climate Tech SAFE Valuation Benchmarks (2024-2025)</a></li>
+                  <li><a href="#hardware-vs-software-climate-tech-valuation-framework-differ" className="text-blue-600 hover:text-blue-700 text-sm">Hardware vs Software Climate Tech: Valuation Framework Differences</a></li>
+                  <li><a href="#how-ira-incentives-impact-climate-tech-valuations" className="text-blue-600 hover:text-blue-700 text-sm">How IRA Incentives Impact Climate Tech Valuations</a></li>
+                  <li><a href="#san-francisco-climate-tech-investor-landscape" className="text-blue-600 hover:text-blue-700 text-sm">San Francisco Climate Tech Investor Landscape</a></li>
+                  <li><a href="#key-metrics-that-drive-climate-tech-valuations" className="text-blue-600 hover:text-blue-700 text-sm">Key Metrics That Drive Climate Tech Valuations</a></li>
+                  <li><a href="#common-mistakes-sf-climate-tech-founders-make-with-safes" className="text-blue-600 hover:text-blue-700 text-sm">Common Mistakes SF Climate Tech Founders Make with SAFEs</a></li>
+                  <li><a href="#sf-climate-tech-safe-valuation-calculator-step-by-step-frame" className="text-blue-600 hover:text-blue-700 text-sm">SF Climate Tech SAFE Valuation Calculator: Step-by-Step Framework</a></li>
+                  <li><a href="#next-steps-navigating-your-sf-climate-tech-safe" className="text-blue-600 hover:text-blue-700 text-sm">Next Steps: Navigating Your SF Climate Tech SAFE</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,13 +142,13 @@ export default function SafeCalculatorClimateTechSanFranciscoBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why SF Climate Tech Startups Need IRA-Aware SAFE Benchmarks</h2>
+                <h2 id="why-sf-climate-tech-startups-need-ira-aware-safe-benchmarks">Why SF Climate Tech Startups Need IRA-Aware SAFE Benchmarks</h2>
 
 <p>If you're raising a SAFE round for your climate tech startup in San Francisco, you're operating in one of the most capital-intensive, policy-dependent, and strategically critical sectors in venture capital. The passage of the Inflation Reduction Act (IRA) in August 2022, allocating $369 billion in climate and clean energy incentives, fundamentally reshaped climate tech economics—creating tax credits, production incentives, and demand drivers that increase climate hardware project economics by 30-100% and company valuations by similar magnitudes.</p>
 
 <p>San Francisco, as the epicenter of climate innovation with deep concentrations of climate-focused investors (Breakthrough Energy Ventures, Lowercarbon Capital, Congruent Ventures), technical talent from Stanford and Berkeley, and proximity to California's aggressive climate policies, offers unique advantages. However, climate tech valuations bifurcate sharply between capital-light software/data platforms and capital-intensive hardware/manufacturing businesses, creating valuation spreads of 3-10x at equivalent revenues. This guide provides 2025 climate tech benchmarks, IRA impact analysis, and hardware vs software valuation frameworks for SF founders.</p>
 
-<h2>SF Climate Tech SAFE Valuation Benchmarks (2024-2025)</h2>
+<h2 id="sf-climate-tech-safe-valuation-benchmarks-2024-2025">SF Climate Tech SAFE Valuation Benchmarks (2024-2025)</h2>
 
 <p>Climate tech valuations in SF cluster around business model capital intensity, IRA eligibility, and decarbonization impact. Here's current market data for climate SAFEs closed in the past 18 months:</p>
 
@@ -190,7 +206,7 @@ export default function SafeCalculatorClimateTechSanFranciscoBlogPost() {
 
 <p>Valuation impact: Climate hardware companies eligible for IRA credits command 40-100% higher valuations than pre-IRA due to dramatically improved unit economics and reduced project financing risk.</p>
 
-<h2>Hardware vs Software Climate Tech: Valuation Framework Differences</h2>
+<h2 id="hardware-vs-software-climate-tech-valuation-framework-differ">Hardware vs Software Climate Tech: Valuation Framework Differences</h2>
 
 <p>The most critical decision impacting climate tech valuations: Are you building capital-light software or capital-intensive hardware?</p>
 
@@ -235,7 +251,21 @@ export default function SafeCalculatorClimateTechSanFranciscoBlogPost() {
 
 <p>Investor preference: Software-enabled hardware models receive 30-60% valuation premiums over pure hardware due to margin profile and recurring revenue potential.</p>
 
-<h2>How IRA Incentives Impact Climate Tech Valuations</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="how-ira-incentives-impact-climate-tech-valuations">How IRA Incentives Impact Climate Tech Valuations</h2>
 
 <p>The Inflation Reduction Act created the most favorable policy environment for climate tech in US history. Understanding IRA mechanics is critical to valuation.</p>
 
@@ -288,7 +318,7 @@ export default function SafeCalculatorClimateTechSanFranciscoBlogPost() {
 
 <p>Investors apply 15-30% discounts to IRA-dependent business models to account for these risks, but this is far lower than the 100%+ valuation uplift IRA creates, leaving net positive impact.</p>
 
-<h2>San Francisco Climate Tech Investor Landscape</h2>
+<h2 id="san-francisco-climate-tech-investor-landscape">San Francisco Climate Tech Investor Landscape</h2>
 
 <p>SF has the world's most sophisticated climate tech investor ecosystem. Understanding investor archetypes helps calibrate SAFE terms.</p>
 
@@ -330,7 +360,7 @@ export default function SafeCalculatorClimateTechSanFranciscoBlogPost() {
 
 <p>Major growth climate investors: DCVC (deeptech/climate), Khosla Ventures (cleantech 2.0), Energy Impact Partners, Breakthrough Energy Ventures (later-stage), TPG Rise Climate, and traditional growth funds (Sequoia, Kleiner Perkins) re-entering climate post-cleantech 1.0 lessons learned.</p>
 
-<h2>Key Metrics That Drive Climate Tech Valuations</h2>
+<h2 id="key-metrics-that-drive-climate-tech-valuations">Key Metrics That Drive Climate Tech Valuations</h2>
 
 <p>Climate investors evaluate companies through impact-weighted and sector-specific KPIs.</p>
 
@@ -374,7 +404,7 @@ export default function SafeCalculatorClimateTechSanFranciscoBlogPost() {
 <li><strong>Additionality:</strong> Does the solution create carbon reduction that wouldn't happen otherwise?</li>
 </ul>
 
-<h2>Common Mistakes SF Climate Tech Founders Make with SAFEs</h2>
+<h2 id="common-mistakes-sf-climate-tech-founders-make-with-safes">Common Mistakes SF Climate Tech Founders Make with SAFEs</h2>
 
 <p>Climate fundraising combines deeptech complexity with policy dependency, creating unique pitfalls:</p>
 
@@ -408,7 +438,7 @@ export default function SafeCalculatorClimateTechSanFranciscoBlogPost() {
 
 <p>Benchmark: Use SAFEs for climate software and early-stage R&amp;D. Transition to priced equity rounds with milestone financing for capital-intensive scaling beyond $10M raises.</p>
 
-<h2>SF Climate Tech SAFE Valuation Calculator: Step-by-Step Framework</h2>
+<h2 id="sf-climate-tech-safe-valuation-calculator-step-by-step-frame">SF Climate Tech SAFE Valuation Calculator: Step-by-Step Framework</h2>
 
 <p>Use this framework to estimate a defensible climate tech SAFE cap in SF for 2025:</p>
 
@@ -461,7 +491,7 @@ Offtake agreement: $38.25M x 1.50 = $57.4M<br />
 Team + gigaton impact: $57.4M x 1.40 = $80.4M<br />
 <strong>Suggested SAFE cap: $75M-$85M</strong></p>
 
-<h2>Next Steps: Navigating Your SF Climate Tech SAFE</h2>
+<h2 id="next-steps-navigating-your-sf-climate-tech-safe">Next Steps: Navigating Your SF Climate Tech SAFE</h2>
 
 <p>Climate tech fundraising in 2025 requires balancing technical de-risking, policy tailwinds, and capital intensity. The most successful SF climate founders approach SAFEs with:</p>
 
@@ -498,13 +528,31 @@ Team + gigaton impact: $57.4M x 1.40 = $80.4M<br />
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/safe-calculator-ai-ml-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">AI/ML SAFE Calculator Silicon Valley: 2025 Valuation Benchmarks for Foundation Models vs Application Layer</span>
+                </Link>
+                <Link href="/blog/safe-calculator-b2b-saas-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">B2B SaaS SAFE Calculator for London Startups: UK Valuation Benchmarks vs US Comparables</span>
+                </Link>
+                <Link href="/blog/safe-calculator-consumer-tech-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Consumer Tech SAFE Calculator Silicon Valley: Post-iOS14 Valuation Benchmarks for Social & Mobile Apps</span>
+                </Link>
+                <Link href="/blog/safe-calculator-crypto-web3-miami/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Crypto/Web3 SAFE Calculator Miami: Token vs Equity Considerations & Crypto-Native Investor Expectations</span>
+                </Link>
+                <Link href="/blog/safe-calculator-ecommerce-los-angeles/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">E-commerce SAFE Calculator Los Angeles: DTC Brand Valuations Post-iOS14 with Revenue Multiple Benchmarks</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -514,18 +562,18 @@ Team + gigaton impact: $57.4M x 1.40 = $80.4M<br />
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

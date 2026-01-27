@@ -52,6 +52,68 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the average dilution from SAFE notes for first-time founders?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The median first-time founder experiences 12-18% dilution from SAFE notes by the time they close Series A (Carta, 2024). This typically comes from $800K-1.5M raised on SAFEs with valuation caps ranging from $6M-10M. However, founders who raise multiple SAFEs without proper modeling can see SAFE dilution reach 25-30%, which severely constrains ownership through later rounds. Best practice is to limit SAFE dilution to 15% or less by capping total SAFE dollars raised and negotiating valuation caps based on market comparables."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I accept a lower valuation cap to close my SAFE faster?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No — accepting a 20-30% lower cap to close 2-3 weeks faster will cost you far more than the time saved is worth. Every $1M reduction in valuation cap increases your dilution by approximately 1.5-2 percentage points, which translates to $750K-1M on a $50M exit. Instead, use the negotiation time to research comparable SAFE caps using Carta data, AngelList benchmarks, or by asking other founders in your accelerator cohort. According to Y Combinator data, 68% of angel investors will increase their initial cap offer by 15-25% if founders provide credible comparable deal data. The 2-4 weeks spent negotiating proper terms will return 10-50x in preserved equity value."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many SAFE notes should I raise before converting to equity?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Industry best practice is a maximum of three SAFEs before converting to equity via priced round (seed or Series A). Each additional SAFE adds complexity to your cap table, increases combined dilution, and makes Series A diligence more complicated. According to First Round Capital data, companies with 4+ unconverted SAFEs spend 30-40% more time on Series A cap table cleanup and due diligence compared to companies with 1-2 SAFEs. If you need to raise capital after your third SAFE, that's a signal you should raise a priced seed round instead — you're no longer \"bridging\" to Series A, you're raising growth capital and should price it accordingly. The legal costs of a priced round ($15K-30K) are worth paying to clean up your cap table and set clear ownership percentages."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between post-money and pre-money SAFEs, and which should I use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Post-money SAFEs (standard since 2018) specify exact ownership percentages and prevent dilution confusion, making them the only acceptable format for founders to sign. With a post-money SAFE, the valuation cap represents the company's post-money valuation including the SAFE investment. A $500K investment at a $5M post-money cap means investors get exactly 10% ownership ($500K ÷ $5M), regardless of how many other SAFEs you raise. Pre-money SAFEs (the original 2013 version) don't specify fixed ownership — each new SAFE dilutes previous SAFEs in complex ways that require sophisticated modeling. Y Combinator data shows that 94% of SAFEs in 2024 use post-money format. Any investor proposing pre-money SAFEs is either using outdated documents or intentionally trying to extract more equity than market standard. Founders should firmly insist on post-money format, and if an investor refuses, that's a red flag about their knowledge of current market practices."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate the impact of multiple SAFEs with different valuation caps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use a multi-SAFE calculator that models cumulative dilution across all SAFEs simultaneously, accounting for different caps, discount rates, and your projected Series A terms. Manual calculation is error-prone because you need to: (1) determine which term (cap or discount) applies for each SAFE, (2) calculate the conversion price for each SAFE, (3) determine how many shares each SAFE converts into, (4) account for option pool dilution before SAFE conversion, and (5) calculate final ownership percentages after Series A. The icanpitch SAFE calculator handles this complexity automatically. Input each SAFE's terms (amount, cap, discount), your Series A assumptions (pre-money valuation, investment amount, option pool size), and the calculator shows exact ownership percentages for founders, SAFE investors, and Series A investors. Industry data shows that 58% of founders who manually calculate multiple SAFE dilution make errors of 3-5 percentage points — errors that cost $1.5M-2.5M on a $50M exit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I do if I have already signed multiple SAFEs with unfavorable terms?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You have three options to fix problematic SAFEs before Series A: (1) negotiate with existing SAFE holders to amend terms, (2) raise a priced seed round to convert SAFEs early at a favorable valuation, or (3) optimize your Series A terms to minimize compounding dilution. For option 1, approach SAFE investors with data showing your dilution problem and propose amendments — many angels will agree to higher caps or removal of MFN clauses if you've made strong progress since they invested. Success rate for amendments is approximately 40-50% according to startup lawyers. For option 2, if you have strong traction, raise a priced seed round at $12M-20M pre-money that converts your SAFEs and brings in new institutional investors — this \"resets\" your cap table with clean terms. For option 3, if you're stuck with your SAFEs, negotiate aggressively on Series A terms to offset the damage: push for higher Series A valuation (every $1M in higher valuation saves you 1-2 percentage points), negotiate a smaller option pool (12-13% instead of 15-18%), and consider a smaller Series A raise to reduce new investor dilution. The worst approach is ignoring the problem until Series A term sheet arrives — by then you have no leverage to fix dilution issues."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do SAFE notes with pro-rata rights dilute me more at Series A?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pro-rata rights themselves don't increase dilution at SAFE conversion, but they can reduce the amount of Series A you can raise from new investors, which indirectly constrains your valuation and increases dilution risk. Pro-rata rights give SAFE investors the option to invest in future rounds to maintain their ownership percentage. If your SAFEs convert to 15% ownership and all SAFE investors exercise pro-rata rights in your $8M Series A, they could take $1.2M of the round (15% of $8M), leaving only $6.8M for new institutional investors. Many Series A lead investors want to deploy $5M+ and own 20-25%, making a deal difficult if SAFE investors are taking significant allocation. According to Cooley LLP data, 23% of SAFEs include pro-rata rights, but only 35-40% of SAFE investors actually exercise these rights at Series A (most angels don't have capital reserves for follow-on). Founders should negotiate pro-rata rights carefully: offer them only to investors writing $100K+ checks, include a minimum exercise threshold ($25K-50K), and cap the total pro-rata pool at 25-30% of your anticipated Series A to preserve room for new institutional investors."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +176,29 @@ export default function AvoidingSafeDilutionTrapsFoundersBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#the-hidden-cost-of-safe-notes-why-first-time-founders-lose-c" className="text-blue-600 hover:text-blue-700 text-sm">The Hidden Cost of SAFE Notes: Why First-Time Founders Lose Control</a></li>
+                  <li><a href="#the-safe-dilution-framework-understanding-the-stakes" className="text-blue-600 hover:text-blue-700 text-sm">The SAFE Dilution Framework: Understanding the Stakes</a></li>
+                  <li><a href="#the-7-deadly-safe-sins-mistakes-that-cost-founders-millions" className="text-blue-600 hover:text-blue-700 text-sm">The 7 Deadly SAFE Sins: Mistakes That Cost Founders Millions</a></li>
+                  <li><a href="#sin-1-accepting-artificially-low-valuation-caps-to-close-the" className="text-blue-600 hover:text-blue-700 text-sm">Sin #1: Accepting Artificially Low Valuation Caps to Close the Deal</a></li>
+                  <li><a href="#sin-2-stacking-multiple-safes-without-modeling-cumulative-di" className="text-blue-600 hover:text-blue-700 text-sm">Sin #2: Stacking Multiple SAFEs Without Modeling Cumulative Dilution</a></li>
+                  <li><a href="#sin-3-ignoring-the-option-pool-timing-trap" className="text-blue-600 hover:text-blue-700 text-sm">Sin #3: Ignoring the Option Pool Timing Trap</a></li>
+                  <li><a href="#sin-4-using-pre-money-safes-instead-of-post-money-safes" className="text-blue-600 hover:text-blue-700 text-sm">Sin #4: Using Pre-Money SAFEs Instead of Post-Money SAFEs</a></li>
+                  <li><a href="#sin-5-negotiating-discount-rate-before-valuation-cap" className="text-blue-600 hover:text-blue-700 text-sm">Sin #5: Negotiating Discount Rate Before Valuation Cap</a></li>
+                  <li><a href="#sin-6-missing-the-mfn-most-favored-nation-clause-implication" className="text-blue-600 hover:text-blue-700 text-sm">Sin #6: Missing the MFN (Most Favored Nation) Clause Implications</a></li>
+                  <li><a href="#sin-7-failing-to-cap-total-safe-dollars-raised" className="text-blue-600 hover:text-blue-700 text-sm">Sin #7: Failing to Cap Total SAFE Dollars Raised</a></li>
+                  <li><a href="#the-anti-dilution-checklist-what-to-do-before-signing-your-n" className="text-blue-600 hover:text-blue-700 text-sm">The Anti-Dilution Checklist: What to Do Before Signing Your Next SAFE</a></li>
+                  <li><a href="#advanced-safe-strategy-when-to-use-safes-vs-priced-rounds" className="text-blue-600 hover:text-blue-700 text-sm">Advanced SAFE Strategy: When to Use SAFEs vs. Priced Rounds</a></li>
+                  <li><a href="#faq-avoiding-safe-dilution-traps" className="text-blue-600 hover:text-blue-700 text-sm">FAQ: Avoiding SAFE Dilution Traps</a></li>
+                  <li><a href="#key-takeaways-protecting-your-ownership-when-raising-on-safe" className="text-blue-600 hover:text-blue-700 text-sm">Key Takeaways: Protecting Your Ownership When Raising on SAFEs</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +209,7 @@ export default function AvoidingSafeDilutionTrapsFoundersBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>The Hidden Cost of SAFE Notes: Why First-Time Founders Lose Control</h2>
+                <h2 id="the-hidden-cost-of-safe-notes-why-first-time-founders-lose-c">The Hidden Cost of SAFE Notes: Why First-Time Founders Lose Control</h2>
 <p>
   <strong>Here's a statistic that should make every first-time founder pause: Without proper modeling, founders underestimate dilution from SAFE notes by an average of 12-18 percentage points</strong> (AngelList, 2024). This isn't just a rounding error — it's the difference between owning 35% at exit versus 20%, which on a $50M acquisition is $7.5M versus $10M in your pocket.
 </p>
@@ -142,7 +225,7 @@ export default function AvoidingSafeDilutionTrapsFoundersBlogPost() {
   First-time founders make these critical mistakes when raising on SAFE notes: (1) Accepting artificially low valuation caps, (2) Stacking multiple SAFEs without modeling cumulative dilution, (3) Ignoring the option pool timing trap, (4) Choosing pre-money SAFEs over post-money, (5) Negotiating discount rates before caps, (6) Missing the MFN clause implications, and (7) Failing to cap total SAFE dollars raised. Each mistake compounds, leading to 15-25% more dilution than necessary.
 </p>
 
-<h2>The SAFE Dilution Framework: Understanding the Stakes</h2>
+<h2 id="the-safe-dilution-framework-understanding-the-stakes">The SAFE Dilution Framework: Understanding the Stakes</h2>
 
 <h3>What Makes SAFE Dilution Different (and Dangerous)</h3>
 <p>
@@ -165,9 +248,23 @@ export default function AvoidingSafeDilutionTrapsFoundersBlogPost() {
   Here's the critical insight: Every percentage point of unnecessary SAFE dilution costs you 1.5-2 percentage points at exit, because you'll raise multiple rounds before acquisition. Overpaying by 8% on your SAFE could mean 12-16% less ownership at exit — potentially millions of dollars.
 </p>
 
-<h2>The 7 Deadly SAFE Sins: Mistakes That Cost Founders Millions</h2>
+<h2 id="the-7-deadly-safe-sins-mistakes-that-cost-founders-millions">The 7 Deadly SAFE Sins: Mistakes That Cost Founders Millions</h2>
 
-<h2>Sin #1: Accepting Artificially Low Valuation Caps to Close the Deal</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="sin-1-accepting-artificially-low-valuation-caps-to-close-the">Sin #1: Accepting Artificially Low Valuation Caps to Close the Deal</h2>
 
 <h3>The Mistake</h3>
 <p>
@@ -210,7 +307,7 @@ export default function AvoidingSafeDilutionTrapsFoundersBlogPost() {
   <strong>Actionable tactic:</strong> Ask investors for their typical cap range before negotiating. Say: "What valuation cap range do you typically use for [pre-revenue/early revenue] companies in our sector?" Then anchor 20-30% above their range midpoint. <strong>According to negotiation data from Y Combinator, 68% of angels will increase their initial cap offer if founders provide comparable deal data.</strong>
 </p>
 
-<h2>Sin #2: Stacking Multiple SAFEs Without Modeling Cumulative Dilution</h2>
+<h2 id="sin-2-stacking-multiple-safes-without-modeling-cumulative-di">Sin #2: Stacking Multiple SAFEs Without Modeling Cumulative Dilution</h2>
 
 <h3>The Mistake</h3>
 <p>
@@ -253,7 +350,7 @@ export default function AvoidingSafeDilutionTrapsFoundersBlogPost() {
   <strong>Key metric to track: Keep total SAFE dollars raised under 15-20% of your anticipated Series A pre-money valuation.</strong> If you expect to raise Series A at $20M, keep total SAFEs under $3-4M. This prevents SAFE dilution from exceeding 15-20%, leaving room for Series A dilution (20-25%) and option pool (15-20%) while maintaining 45-50% founder ownership.
 </p>
 
-<h2>Sin #3: Ignoring the Option Pool Timing Trap</h2>
+<h2 id="sin-3-ignoring-the-option-pool-timing-trap">Sin #3: Ignoring the Option Pool Timing Trap</h2>
 
 <h3>The Mistake</h3>
 <p>
@@ -283,7 +380,7 @@ export default function AvoidingSafeDilutionTrapsFoundersBlogPost() {
   <strong>Pro tip:</strong> Negotiate with Series A investors to create a smaller option pool (12-13% instead of 15-18%) or to refresh the option pool post-investment, so it dilutes the new investors proportionally instead of hitting existing shareholders entirely.
 </p>
 
-<h2>Sin #4: Using Pre-Money SAFEs Instead of Post-Money SAFEs</h2>
+<h2 id="sin-4-using-pre-money-safes-instead-of-post-money-safes">Sin #4: Using Pre-Money SAFEs Instead of Post-Money SAFEs</h2>
 
 <h3>The Mistake</h3>
 <p>
@@ -317,7 +414,7 @@ export default function AvoidingSafeDilutionTrapsFoundersBlogPost() {
   This clarity protects both founders and investors. <strong>Any investor who insists on pre-money SAFEs in 2025 is either uninformed or intentionally trying to extract more equity than market standard</strong> — both are red flags.
 </p>
 
-<h2>Sin #5: Negotiating Discount Rate Before Valuation Cap</h2>
+<h2 id="sin-5-negotiating-discount-rate-before-valuation-cap">Sin #5: Negotiating Discount Rate Before Valuation Cap</h2>
 
 <h3>The Mistake</h3>
 <p>
@@ -355,7 +452,7 @@ export default function AvoidingSafeDilutionTrapsFoundersBlogPost() {
   This approach shows you're reasonable (accepting market discount) while holding firm on the term that actually matters (cap). <strong>According to Y Combinator partners, this framing increases cap acceptance rates by 40-50% compared to fighting on both terms simultaneously.</strong>
 </p>
 
-<h2>Sin #6: Missing the MFN (Most Favored Nation) Clause Implications</h2>
+<h2 id="sin-6-missing-the-mfn-most-favored-nation-clause-implication">Sin #6: Missing the MFN (Most Favored Nation) Clause Implications</h2>
 
 <h3>The Mistake</h3>
 <p>
@@ -386,7 +483,7 @@ export default function AvoidingSafeDilutionTrapsFoundersBlogPost() {
   <strong>Industry data: 73% of investors will remove or modify MFN clauses if founders provide a clear rationale tied to future fundraising flexibility</strong> (First Round Capital data).
 </p>
 
-<h2>Sin #7: Failing to Cap Total SAFE Dollars Raised</h2>
+<h2 id="sin-7-failing-to-cap-total-safe-dollars-raised">Sin #7: Failing to Cap Total SAFE Dollars Raised</h2>
 
 <h3>The Mistake</h3>
 <p>
@@ -426,7 +523,7 @@ export default function AvoidingSafeDilutionTrapsFoundersBlogPost() {
   Track your total SAFE exposure in a spreadsheet with these columns: Investor name, amount, cap, discount, date signed, projected dilution at Series A. <strong>When cumulative projected dilution exceeds 20%, stop raising SAFEs and start your Series A process.</strong>
 </p>
 
-<h2>The Anti-Dilution Checklist: What to Do Before Signing Your Next SAFE</h2>
+<h2 id="the-anti-dilution-checklist-what-to-do-before-signing-your-n">The Anti-Dilution Checklist: What to Do Before Signing Your Next SAFE</h2>
 
 <p>
   Use this checklist before signing any SAFE note to avoid the 7 deadly sins:
@@ -453,7 +550,7 @@ export default function AvoidingSafeDilutionTrapsFoundersBlogPost() {
   <li><strong>Investor communication:</strong> Send SAFE investors quarterly updates on progress to maintain relationships and prepare for Series A</li>
 </ul>
 
-<h2>Advanced SAFE Strategy: When to Use SAFEs vs. Priced Rounds</h2>
+<h2 id="advanced-safe-strategy-when-to-use-safes-vs-priced-rounds">Advanced SAFE Strategy: When to Use SAFEs vs. Priced Rounds</h2>
 
 <h3>When SAFEs Make Sense</h3>
 <p>
@@ -478,7 +575,7 @@ export default function AvoidingSafeDilutionTrapsFoundersBlogPost() {
   <li><strong>You've already raised 2-3 SAFEs</strong> — clean up your cap table with a priced round before Series A</li>
 </ul>
 
-<h2>FAQ: Avoiding SAFE Dilution Traps</h2>
+<h2 id="faq-avoiding-safe-dilution-traps">FAQ: Avoiding SAFE Dilution Traps</h2>
 
 <h3>What is the average dilution from SAFE notes for first-time founders?</h3>
 <p>
@@ -515,7 +612,7 @@ export default function AvoidingSafeDilutionTrapsFoundersBlogPost() {
   <strong>Pro-rata rights themselves don't increase dilution at SAFE conversion, but they can reduce the amount of Series A you can raise from new investors, which indirectly constrains your valuation and increases dilution risk.</strong> Pro-rata rights give SAFE investors the option to invest in future rounds to maintain their ownership percentage. If your SAFEs convert to 15% ownership and all SAFE investors exercise pro-rata rights in your $8M Series A, they could take $1.2M of the round (15% of $8M), leaving only $6.8M for new institutional investors. Many Series A lead investors want to deploy $5M+ and own 20-25%, making a deal difficult if SAFE investors are taking significant allocation. According to Cooley LLP data, 23% of SAFEs include pro-rata rights, but only 35-40% of SAFE investors actually exercise these rights at Series A (most angels don't have capital reserves for follow-on). Founders should negotiate pro-rata rights carefully: offer them only to investors writing $100K+ checks, include a minimum exercise threshold ($25K-50K), and cap the total pro-rata pool at 25-30% of your anticipated Series A to preserve room for new institutional investors.
 </p>
 
-<h2>Key Takeaways: Protecting Your Ownership When Raising on SAFEs</h2>
+<h2 id="key-takeaways-protecting-your-ownership-when-raising-on-safe">Key Takeaways: Protecting Your Ownership When Raising on SAFEs</h2>
 
 <p>
   SAFE notes are powerful tools for early-stage fundraising, but the simplicity of the documents masks complex dilution math that catches first-time founders off guard. <strong>The seven deadly SAFE sins — low caps, multiple SAFEs, option pool timing, pre-money format, discount obsession, MFN clauses, and unlimited SAFE dollars — collectively cost founders 15-25% more dilution than necessary.</strong>
@@ -558,13 +655,31 @@ export default function AvoidingSafeDilutionTrapsFoundersBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/safe-calculator-first-time-founders-complete-guide/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for First-Time Founders: Complete 2025 Guide</span>
+                </Link>
+                <Link href="/blog/safe-conversion-mechanics-priced-round/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Conversion Mechanics: How SAFEs Convert in Priced Rounds</span>
+                </Link>
+                <Link href="/blog/safe-discount-rate-vs-valuation-cap-which-better/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Discount Rate vs Valuation Cap: Which Matters More?</span>
+                </Link>
+                <Link href="/blog/how-to-calculate-safe-dilution/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Calculate SAFE Dilution: A Founder's Guide</span>
+                </Link>
+                <Link href="/blog/how-to-negotiate-safe-valuation-cap/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Negotiate SAFE Valuation Caps: 2025 Founder's Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/equity-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Equity, Vesting & Option Pool Guides</Link>
             </div>
           </div>
         </section>
@@ -574,18 +689,18 @@ export default function AvoidingSafeDilutionTrapsFoundersBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

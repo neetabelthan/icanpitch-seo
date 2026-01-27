@@ -52,6 +52,92 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Should I price my SAFE in INR or USD?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use INR if: Raising primarily from Indian angels/funds, planning to stay India-focused for 18-24 months, working with investors unfamiliar with USD instruments, want to avoid FEMA complexity. Use USD if: Raising from international investors, planning eventual US market expansion, anticipating Series A from US/global VCs, considering Delaware C-Corp flip. Best practice: If there's any chance you'll raise Series A from international investors or target US markets, start with USD from day one to avoid cap table conversion complexity and FEMA complications."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do government grants affect my SAFE dilution?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Government grants (SISFS up to ₹70 lakh, ELEVATE up to ₹50 lakh) are non-dilutive—they don't dilute your ownership percentage. Stack these grants with SAFE capital to maximize total runway while minimizing dilution. If you raise ₹5 crore on a SAFE at ₹33 crore cap (15% dilution) and secure ₹50 lakh in ELEVATE grants, you have ₹5.5 crore total capital but only gave up 15% equity instead of 16.7% if you had raised the full ₹5.5 crore on the SAFE. Key insight: Always pursue government grants first before raising SAFEs—it's free money that preserves equity."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's a reasonable SAFE cap for a Bangalore pre-seed startup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For pre-revenue or early-traction Bangalore startups: ₹30-35 crore ($3.6M-$4.2M) depending on team pedigree, market opportunity, and technical moat. Rule of thumb: Set your SAFE cap at 25-30% of your expected Bangalore Series A valuation. If you think you'll raise Series A at ₹125 crore, a ₹30-35 crore SAFE cap is appropriate. Add 10-20% if you have IIT/BITS pedigree, prior unicorn experience (Flipkart, Swiggy, Razorpay alumni), or strong early traction (₹5+ lakh MRR, customers in 2+ cities)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do Bangalore SAFE caps compare to US benchmarks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bangalore SAFE caps run 40-60% lower than US equivalents: ₹33 crore ($4M) vs $10M at pre-seed, ₹67 crore ($8M) vs $18M at seed. This discount reflects dramatically lower operating costs (70-85% cheaper engineering talent), smaller exit valuations (60-70% lower on average for India-focused companies), and Indian market dynamics. However, Bangalore caps are 20-40% higher than other Indian cities like Mumbai, Delhi NCR, or Hyderabad, reflecting superior ecosystem maturity and exit track record."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I negotiate my SAFE cap higher as a first-time Bangalore founder?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, if you have leverage: (1) Multiple competing term sheets, (2) Strong traction (₹5+ lakh MRR, revenue growth, pan-India customer base), (3) IIT/BITS/NIT pedigree or prior experience from Flipkart/Swiggy/Razorpay/Ola, (4) Deep technical moat (AI/ML, patents, proprietary data), or (5) DPIIT recognition with government grants secured (signals validation). Without these, first-time founders should accept middle-of-range Bangalore benchmarks: ₹30-35 crore pre-seed, ₹60-70 crore seed. Focus on building traction rather than fighting for 10-15% higher caps that investors will resist without justification."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I raise multiple SAFEs before Series A?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "All SAFEs convert at Series A, each using their own terms. If you raised ₹3 crore at ₹25 crore cap, then ₹5 crore at ₹38 crore cap, they convert independently. The first SAFE gets better terms (lower cap = more shares). Bangalore pattern: 47% of seed companies raise 2-3 SAFEs before Series A. Always use a SAFE calculator to model cumulative dilution from multiple SAFEs before signing each subsequent round. Post-money SAFEs are critical for Bangalore founders raising multiple rounds—they prevent \"SAFE stacking\" dilution surprises."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I include pro-rata rights in my Bangalore SAFE?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Grant pro-rata rights to investors committing ₹1 crore+ who bring strategic value (customer introductions, Series A VC connections, domain expertise, follow-on capital access). Avoid granting pro-rata to small angels (₹10-25 lakh) as it fragments your Series A allocation. In India's smaller institutional funding ecosystem, too many pro-rata rights can make it difficult to accommodate new Series A investors who expect minimum 18-22% ownership. Keep pro-rata rights limited to your top 3-5 strategic investors maximum."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the IIT/BITS pedigree affect SAFE valuations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "IIT/BITS/IISc founders command 15-25% SAFE cap premiums in Bangalore due to perceived technical excellence, alumni network access, and execution track record. An IIT Bangalore founder might close a pre-seed SAFE at ₹35-38 crore while a non-IIT founder with similar traction closes at ₹28-32 crore. According to Indian Angel Network data, 64% of Bangalore startups that raised institutional seed rounds had at least one IIT graduate founder. While pedigree helps initial fundraising, traction ultimately matters more—by Series A, investors care primarily about metrics (MRR, growth rate, retention) regardless of educational background."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the tax implications of SAFEs in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SAFEs themselves don't trigger immediate taxation—they're treated as convertible instruments. However, when SAFEs convert to equity at Series A, there may be implications: (1) For founders: ESOP/equity grants from the option pool may be taxed as perquisites at FMV; (2) For SAFE investors: No tax until actual share sale with capital gains applying (long-term 10% over ₹1 lakh, short-term 15%); (3) Angel tax (Section 56(2)(viib)): DPIIT-recognized startups are exempt, making DPIIT recognition critical before raising SAFEs. Always consult a CA familiar with startup taxation and FEMA compliance before structuring SAFEs, especially if raising from foreign investors requiring RBI approval."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I handle FEMA compliance for USD-denominated SAFEs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "USD-denominated SAFEs from foreign investors require FEMA compliance: (1) File Form FC-GPR within 30 days of receiving foreign investment; (2) Ensure SAFE terms comply with FDI regulations including valuation requirements and sectoral caps; (3) Maintain proper documentation for RBI audits including SAFE agreements, board resolutions, and valuation reports; (4) Use DPIIT recognition to qualify for Angel Tax exemptions. Many Bangalore founders work with specialized law firms (Trilegal, Khaitan &amp; Co, AZB Partners) for FEMA compliance. Non-compliance can result in penalties and complications during Series A due diligence."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +200,31 @@ export default function SafeCalculatorBangaloreBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#what-is-a-safe-note-a-bangalore-founders-complete-introducti" className="text-blue-600 hover:text-blue-700 text-sm">What is a SAFE Note? A Bangalore Founder's Complete Introduction</a></li>
+                  <li><a href="#bangalore-safe-benchmarks-what-indian-investors-actually-pay" className="text-blue-600 hover:text-blue-700 text-sm">Bangalore SAFE Benchmarks: What Indian Investors Actually Pay</a></li>
+                  <li><a href="#bangalores-unique-safe-advantages-cost-efficiency-and-indias" className="text-blue-600 hover:text-blue-700 text-sm">Bangalore's Unique SAFE Advantages: Cost Efficiency and India's Massive Market</a></li>
+                  <li><a href="#bangalore-vs-other-indian-hubs-safe-cap-comparison" className="text-blue-600 hover:text-blue-700 text-sm">Bangalore vs Other Indian Hubs: SAFE Cap Comparison</a></li>
+                  <li><a href="#how-bangalore-investors-evaluate-safes-what-you-need-to-know" className="text-blue-600 hover:text-blue-700 text-sm">How Bangalore Investors Evaluate SAFEs: What You Need to Know</a></li>
+                  <li><a href="#understanding-safe-mechanics-core-calculations-for-bangalore" className="text-blue-600 hover:text-blue-700 text-sm">Understanding SAFE Mechanics: Core Calculations for Bangalore Founders</a></li>
+                  <li><a href="#how-to-use-a-safe-calculator-step-by-step-for-bangalore-foun" className="text-blue-600 hover:text-blue-700 text-sm">How to Use a SAFE Calculator: Step-by-Step for Bangalore Founders</a></li>
+                  <li><a href="#real-world-bangalore-safe-calculator-example-rohans-supply-c" className="text-blue-600 hover:text-blue-700 text-sm">Real-World Bangalore SAFE Calculator Example: Rohan's Supply Chain SaaS Round</a></li>
+                  <li><a href="#common-safe-calculator-mistakes-bangalore-founders-make" className="text-blue-600 hover:text-blue-700 text-sm">Common SAFE Calculator Mistakes Bangalore Founders Make</a></li>
+                  <li><a href="#18-bangalore-safe-statistics-every-indian-founder-should-kno" className="text-blue-600 hover:text-blue-700 text-sm">18 Bangalore SAFE Statistics Every Indian Founder Should Know</a></li>
+                  <li><a href="#how-to-negotiate-safe-terms-as-a-bangalore-founder" className="text-blue-600 hover:text-blue-700 text-sm">How to Negotiate SAFE Terms as a Bangalore Founder</a></li>
+                  <li><a href="#bangalore-startup-success-stories-safes-that-worked" className="text-blue-600 hover:text-blue-700 text-sm">Bangalore Startup Success Stories: SAFEs That Worked</a></li>
+                  <li><a href="#the-bangalore-founders-safe-calculator-checklist" className="text-blue-600 hover:text-blue-700 text-sm">The Bangalore Founder's SAFE Calculator Checklist</a></li>
+                  <li><a href="#frequently-asked-questions-safe-calculators-for-bangalore-fo" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions: SAFE Calculators for Bangalore Founders</a></li>
+                  <li><a href="#key-takeaways-bangalore-safe-calculator-essentials" className="text-blue-600 hover:text-blue-700 text-sm">Key Takeaways: Bangalore SAFE Calculator Essentials</a></li>
+                  <li><a href="#next-steps-model-your-bangalore-safe-today" className="text-blue-600 hover:text-blue-700 text-sm">Next Steps: Model Your Bangalore SAFE Today</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +235,7 @@ export default function SafeCalculatorBangaloreBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>What is a SAFE Note? A Bangalore Founder's Complete Introduction</h2>
+                <h2 id="what-is-a-safe-note-a-bangalore-founders-complete-introducti">What is a SAFE Note? A Bangalore Founder's Complete Introduction</h2>
 <p>
   <strong>SAFE stands for "Simple Agreement for Future Equity"</strong>—a financing instrument created by Y Combinator in 2013 that allows startups to raise capital without immediately determining a company valuation or issuing equity. While SAFEs originated in Silicon Valley, they've become the dominant pre-seed and seed funding instrument across India's startup ecosystem, with Bangalore leading national adoption. <strong>According to Inc42's 2024 data, 58% of Bangalore startups raising pre-seed or seed rounds used SAFEs, up from 39% in 2022.</strong>
 </p>
@@ -148,7 +257,7 @@ export default function SafeCalculatorBangaloreBlogPost() {
   <strong>Rohan's challenge mirrors what thousands of Bangalore founders face:</strong> How do you price a SAFE in a market where valuations run 40-60% lower than US equivalents, but investors expect Silicon Valley-style upside? How do you navigate between INR and USD terms when institutional investors increasingly operate in USD for easier foreign investment? And how do you leverage Bangalore's unique advantages—government co-investment schemes, cost-efficient talent, and India's massive domestic market—while managing dilution across multiple funding rounds?
 </p>
 
-<h2>Bangalore SAFE Benchmarks: What Indian Investors Actually Pay</h2>
+<h2 id="bangalore-safe-benchmarks-what-indian-investors-actually-pay">Bangalore SAFE Benchmarks: What Indian Investors Actually Pay</h2>
 
 <h3>Pre-Seed SAFE Caps in Bangalore: ₹25 Crore - ₹42 Crore ($3M-$5M)</h3>
 <p>
@@ -185,7 +294,7 @@ export default function SafeCalculatorBangaloreBlogPost() {
   <strong>Pro tip from experienced Bangalore founders: If you plan to raise Series A from global VCs or consider US market expansion, start with USD SAFEs from day one.</strong> Converting INR cap tables to USD during Series A creates accounting complexity, FEMA compliance issues, and potential disputes over conversion rates during rupee volatility. <strong>71% of Bangalore startups that raised Series A from international VCs in 2024 wished they had used USD terms from their first SAFE</strong> (Peak XV Partners survey, 2024).
 </p>
 
-<h2>Bangalore's Unique SAFE Advantages: Cost Efficiency and India's Massive Market</h2>
+<h2 id="bangalores-unique-safe-advantages-cost-efficiency-and-indias">Bangalore's Unique SAFE Advantages: Cost Efficiency and India's Massive Market</h2>
 
 <h3>World's Lowest Burn Rates: The Bangalore Capital Efficiency Advantage</h3>
 <p>
@@ -251,7 +360,21 @@ export default function SafeCalculatorBangaloreBlogPost() {
   <strong>How to leverage the India market premium in SAFE negotiations:</strong> If your business model addresses large Indian market opportunities (fintech, e-commerce, edtech, healthtech, agritech), justify 10-20% higher caps by demonstrating clear paths to serving tens of millions of Indian customers. Investors pay premiums for companies that can realistically capture India's digitizing economy. <strong>Data point: Bangalore startups targeting pan-India markets commanded 18% higher median SAFE caps than Bangalore-only focused companies</strong> (Peak XV Partners India data, 2024).
 </p>
 
-<h2>Bangalore vs Other Indian Hubs: SAFE Cap Comparison</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="bangalore-vs-other-indian-hubs-safe-cap-comparison">Bangalore vs Other Indian Hubs: SAFE Cap Comparison</h2>
 
 <h3>Pre-Seed SAFE Caps by Indian Market (2024 Data)</h3>
 <p>
@@ -277,7 +400,7 @@ export default function SafeCalculatorBangaloreBlogPost() {
   <li><strong>Bangalore's premium is justified by exit success:</strong> 50% of India's unicorns are Bangalore-based, proving the city's ability to produce billion-dollar outcomes</li>
 </ul>
 
-<h2>How Bangalore Investors Evaluate SAFEs: What You Need to Know</h2>
+<h2 id="how-bangalore-investors-evaluate-safes-what-you-need-to-know">How Bangalore Investors Evaluate SAFEs: What You Need to Know</h2>
 
 <h3>Indian VC Expectations: Peak XV, Accel India, Stellaris</h3>
 <p>
@@ -320,7 +443,7 @@ export default function SafeCalculatorBangaloreBlogPost() {
   <li><strong>Document with international standards:</strong> Use DocSend-style investor updates, quarterly board decks, and SaaS metrics (ARR, NRR, CAC) familiar to US investors</li>
 </ul>
 
-<h2>Understanding SAFE Mechanics: Core Calculations for Bangalore Founders</h2>
+<h2 id="understanding-safe-mechanics-core-calculations-for-bangalore">Understanding SAFE Mechanics: Core Calculations for Bangalore Founders</h2>
 
 <h3>Valuation Cap: Your Most Important Term</h3>
 <p>
@@ -352,7 +475,7 @@ export default function SafeCalculatorBangaloreBlogPost() {
   <strong>Why this matters more in Bangalore:</strong> Because Indian operating costs are dramatically lower than US equivalents, many Bangalore founders raise multiple smaller SAFEs (₹2 crore, then ₹3 crore, then ₹4 crore) rather than one large round. Post-money SAFEs prevent each subsequent raise from unexpectedly diluting the previous investors, reducing potential conflicts and maintaining clean cap table mathematics.
 </p>
 
-<h2>How to Use a SAFE Calculator: Step-by-Step for Bangalore Founders</h2>
+<h2 id="how-to-use-a-safe-calculator-step-by-step-for-bangalore-foun">How to Use a SAFE Calculator: Step-by-Step for Bangalore Founders</h2>
 
 <h3>Step 1: Gather Your Bangalore SAFE Terms</h3>
 <p>
@@ -404,7 +527,7 @@ export default function SafeCalculatorBangaloreBlogPost() {
   <li><strong>Bangalore-specific scenario:</strong> Raising Series A from domestic Indian investors (lower valuations, INR terms) vs international VCs (higher valuations, USD terms, flip to Delaware C-Corp)</li>
 </ul>
 
-<h2>Real-World Bangalore SAFE Calculator Example: Rohan's Supply Chain SaaS Round</h2>
+<h2 id="real-world-bangalore-safe-calculator-example-rohans-supply-c">Real-World Bangalore SAFE Calculator Example: Rohan's Supply Chain SaaS Round</h2>
 
 <h3>Rohan's SAFE Terms: Modeling Bangalore Economics</h3>
 <p>
@@ -442,7 +565,7 @@ export default function SafeCalculatorBangaloreBlogPost() {
   Rohan chooses Term Sheet B after validating with advisors from IIT Bangalore's alumni network that his AI moat and pan-India traction justify the higher cap. His ₹38 crore cap positions SAFE investors for a 3.3x return at a ₹125 crore Series A—attractive for Bangalore angels without sacrificing founder equity. <strong>The higher cap also signals confidence to future Series A investors that he understands Bangalore's premium positioning within India's startup ecosystem.</strong>
 </p>
 
-<h2>Common SAFE Calculator Mistakes Bangalore Founders Make</h2>
+<h2 id="common-safe-calculator-mistakes-bangalore-founders-make">Common SAFE Calculator Mistakes Bangalore Founders Make</h2>
 
 <h3>Mistake #1: Ignoring Currency Fluctuations in Multi-Currency SAFEs</h3>
 <p>
@@ -485,7 +608,7 @@ export default function SafeCalculatorBangaloreBlogPost() {
   <strong>How to avoid:</strong> Don't optimize for "closing fast" at the expense of appropriate pricing. Aim for middle-of-range Bangalore caps (₹30-35 crore pre-seed, ₹60-70 crore seed) that signal you understand Indian market rates while positioning for international Series A. If investors push for lower caps, ask for comparable investment justification: "Can you share examples of similar-stage IIT-founded companies you invested in at lower caps?"
 </p>
 
-<h2>18 Bangalore SAFE Statistics Every Indian Founder Should Know</h2>
+<h2 id="18-bangalore-safe-statistics-every-indian-founder-should-kno">18 Bangalore SAFE Statistics Every Indian Founder Should Know</h2>
 
 <ol>
   <li><strong>58% of Bangalore startups raising pre-seed or seed rounds in 2024 used SAFEs, up from 39% in 2022</strong> (Inc42 Indian Startup Funding Report, 2024)</li>
@@ -510,7 +633,7 @@ export default function SafeCalculatorBangaloreBlogPost() {
   <li><strong>47% of Indian VC funding in 2024 went to Bangalore startups, totaling ₹56,400 crore ($6.8B) of ₹1.2 lakh crore total</strong> (Inc42 Annual Indian Startup Funding Report, 2024)</li>
 </ol>
 
-<h2>How to Negotiate SAFE Terms as a Bangalore Founder</h2>
+<h2 id="how-to-negotiate-safe-terms-as-a-bangalore-founder">How to Negotiate SAFE Terms as a Bangalore Founder</h2>
 
 <h3>Typical Bangalore SAFE Cap Ranges by Stage (2024 Benchmarks)</h3>
 <p>
@@ -550,7 +673,7 @@ export default function SafeCalculatorBangaloreBlogPost() {
   Pro-rata rights don't affect your immediate dilution but can complicate future fundraising by eating into your Series A round allocation. Consider granting pro-rata only to your largest and most strategic SAFE investors—particularly those who can facilitate introductions to institutional VCs or enterprise customers across India.
 </p>
 
-<h2>Bangalore Startup Success Stories: SAFEs That Worked</h2>
+<h2 id="bangalore-startup-success-stories-safes-that-worked">Bangalore Startup Success Stories: SAFEs That Worked</h2>
 
 <h3>Razorpay: From Bangalore SAFE to ₹62,500 Crore ($7.5B) Valuation</h3>
 <p>
@@ -576,7 +699,7 @@ export default function SafeCalculatorBangaloreBlogPost() {
   <strong>Key lesson:</strong> Bangalore's position as India's tech capital enabled Flipkart to hire 1,000+ engineers at one-tenth the cost of US equivalents, building technology infrastructure that scaled to serve 400+ million Indian consumers.
 </p>
 
-<h2>The Bangalore Founder's SAFE Calculator Checklist</h2>
+<h2 id="the-bangalore-founders-safe-calculator-checklist">The Bangalore Founder's SAFE Calculator Checklist</h2>
 
 <h3>Before You Sign Any Bangalore SAFE, Model These 5 Scenarios</h3>
 <ol>
@@ -596,7 +719,7 @@ export default function SafeCalculatorBangaloreBlogPost() {
   <li><strong>Projected exit ownership below 20-25%:</strong> After 3-4 rounds typical in Indian fundraising cycles, you need at least 20-25% to remain motivated and wealthy at exit</li>
 </ul>
 
-<h2>Frequently Asked Questions: SAFE Calculators for Bangalore Founders</h2>
+<h2 id="frequently-asked-questions-safe-calculators-for-bangalore-fo">Frequently Asked Questions: SAFE Calculators for Bangalore Founders</h2>
 
 <h3>Should I price my SAFE in INR or USD?</h3>
 <p>
@@ -648,7 +771,7 @@ export default function SafeCalculatorBangaloreBlogPost() {
   USD-denominated SAFEs from foreign investors require FEMA compliance: (1) <strong>File Form FC-GPR within 30 days</strong> of receiving foreign investment; (2) <strong>Ensure SAFE terms comply with FDI regulations</strong> including valuation requirements and sectoral caps; (3) <strong>Maintain proper documentation</strong> for RBI audits including SAFE agreements, board resolutions, and valuation reports; (4) <strong>Use DPIIT recognition</strong> to qualify for Angel Tax exemptions. Many Bangalore founders work with specialized law firms (Trilegal, Khaitan &amp; Co, AZB Partners) for FEMA compliance. <strong>Non-compliance can result in penalties and complications during Series A due diligence.</strong>
 </p>
 
-<h2>Key Takeaways: Bangalore SAFE Calculator Essentials</h2>
+<h2 id="key-takeaways-bangalore-safe-calculator-essentials">Key Takeaways: Bangalore SAFE Calculator Essentials</h2>
 
 <ul>
   <li><strong>Bangalore SAFE caps run 40-60% lower than US equivalents:</strong> ₹30-35 crore pre-seed vs $10M-$12M in Silicon Valley, reflecting 70-85% lower operating costs and Indian market dynamics</li>
@@ -668,7 +791,7 @@ export default function SafeCalculatorBangaloreBlogPost() {
   <li><strong>Pan-India scaling justifies premium caps:</strong> Traction in 2+ metros enables 15-20% higher valuations than Bangalore-only focused companies</li>
 </ul>
 
-<h2>Next Steps: Model Your Bangalore SAFE Today</h2>
+<h2 id="next-steps-model-your-bangalore-safe-today">Next Steps: Model Your Bangalore SAFE Today</h2>
 
 <p>
   Before you sign your next Bangalore SAFE term sheet, invest 15 minutes with a <a href="https://icanpitch.com/safe-calculator/" target="_blank" rel="noopener noreferrer">SAFE calculator</a> to model conversion scenarios. Input your actual terms, account for non-dilutive government grants, model both domestic Indian and international Series A scenarios, and see exactly how much dilution you're accepting.
@@ -701,13 +824,31 @@ export default function SafeCalculatorBangaloreBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/safe-calculator-singapore/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Singapore Startups: 2025 Valuation Guide</span>
+                </Link>
+                <Link href="/blog/how-to-negotiate-safe-valuation-cap/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Negotiate SAFE Valuation Caps: 2025 Founder's Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-first-time-founders-complete-guide/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for First-Time Founders: Complete 2025 Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-new-york-startup-scene/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for New York Startups: NYC Founder's Guide to SAFE Notes</span>
+                </Link>
+                <Link href="/blog/safe-calculator-seattle/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Seattle Startups: 2025 Valuation Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -717,18 +858,18 @@ export default function SafeCalculatorBangaloreBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

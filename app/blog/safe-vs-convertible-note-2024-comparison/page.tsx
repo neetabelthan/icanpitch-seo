@@ -52,6 +52,92 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I mix SAFEs and convertible notes in the same round?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, many companies offer both to accommodate different investor preferences. The key is ensuring economic terms are identical (same cap, same discount) so both instruments convert to the same ownership percentage (except for interest on notes). Approximately 23% of seed rounds include both SAFEs and notes, according to Cooley's 2023 data. This hybrid approach accommodates investor preferences without creating cap table complexity, though it does require managing two sets of documents."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which is better for founders: SAFE or convertible note?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SAFEs are generally more founder-friendly because they lack interest (reducing dilution), have no maturity date (eliminating pressure and extension negotiations), and cost less to execute ($1,800 vs $8,500 in legal fees). However, the \"better\" choice depends on investor preference—if your investors only understand or will only invest via convertible notes, then notes are better because they enable you to raise capital. Focus on raising the money first, then optimize the instrument to investor preference."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do SAFEs or notes convert at better valuations for founders?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The valuation terms (cap and discount) are independent of the instrument choice. You can have a $8M cap SAFE or a $8M cap note—the conversion math is identical except for note interest. What matters is negotiating favorable cap and discount terms, not choosing between SAFE vs note. However, notes do cause slightly more dilution (0.4-0.8 percentage points on average) due to accumulated interest, giving SAFEs a marginal advantage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if my convertible note reaches maturity before I raise Series A?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You have three options when a note reaches maturity: (1) Negotiate an extension with noteholders (occurs in 37% of cases per Gunderson Dettmer data), typically requiring some concession like improved terms or increased interest; (2) Trigger automatic conversion if your note includes this provision, converting at the cap or a predetermined valuation; (3) Repay the note with cash (rare for startups). Most notes are extended 6-12 months rather than repaid, but extensions create friction and potentially dilutive concessions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do SAFEs and notes affect my balance sheet differently?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SAFEs appear as \"SAFE liability\" or future equity on the balance sheet, avoiding debt classification. Convertible notes are legal debt, requiring complex accounting: the principal appears as debt, accrued interest increases the liability quarterly, and the embedded conversion option may require derivative accounting under GAAP. For early-stage companies with simple accounting, SAFEs are significantly easier. The debt classification of notes can also complicate bank loans, acquisition due diligence, or employee perception."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are SAFEs legally enforceable outside the United States?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SAFE enforceability varies by jurisdiction. In common law countries (UK, Canada, Australia), SAFEs are generally enforceable as equity contracts. In civil law jurisdictions (much of Europe, Asia, Latin America), legal treatment is less certain. Many international investors prefer convertible notes because debt instruments have clearer legal standing globally. If raising from international investors, consult local counsel about SAFE treatment. According to Wilson Sonsini's international data, 61% of non-U.S. investors prefer convertible notes, largely due to legal familiarity concerns."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I convert my existing convertible notes to SAFEs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, but it requires consent from all noteholders since you're modifying the terms of their investment. Some founders successfully convert notes to SAFEs to eliminate maturity pressure or simplify the cap table, typically when approaching maturity and negotiating extensions anyway. Offer noteholders economically equivalent SAFE terms (same cap and discount), emphasizing the benefit of removing maturity uncertainty. Success rate depends on investor relationships and whether they perceive SAFEs as equally protective of their interests."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do SAFEs or notes give investors more rights and protections?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "By default, SAFEs give minimal investor rights until conversion (no board seats, voting, or information rights). Convertible notes can include more extensive provisions: information rights, board observer seats, limited veto rights, pro-rata participation. However, these differences reflect how the documents are typically drafted, not inherent features. You can add information rights side letters to SAFEs or issue stripped-down notes without protective provisions. The trend is toward minimal pre-conversion rights for both instruments in seed-stage deals."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What interest rate is standard for convertible notes in 2024?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The median convertible note interest rate in 2024 is 5% annual according to NVCA data, with a typical range of 3-8%. Lower rates (2-4%) appear in founder-friendly or competitive scenarios, while higher rates (6-8%) reflect higher risk or investor leverage. Geography matters: East Coast notes average 5.8% while West Coast notes average 4.6%. The interest rate is often less important than cap and discount since most notes convert before maturity, making accrued interest relatively small compared to the equity value at conversion."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long should the maturity date be on a convertible note?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Standard maturity dates are 18-24 months, with 24 months being most common (54% of notes per Fenwick &amp; West data). Choose maturity based on realistic Series A timeline plus 9-12 month buffer. If you expect Series A in 12 months, set 24-month maturity. Shorter maturities (12-18 months) work for explicit bridge rounds to imminent Series A. Avoid maturities beyond 36 months—they signal low conviction about near-term priced rounds and make investors nervous. Remember that 37% of notes require extensions, so build cushion into initial maturity selection."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +200,25 @@ export default function SafeVsConvertibleNote2024ComparisonBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#safe-vs-convertible-note-the-core-difference" className="text-blue-600 hover:text-blue-700 text-sm">SAFE vs Convertible Note: The Core Difference</a></li>
+                  <li><a href="#the-safe-equity-without-a-price" className="text-blue-600 hover:text-blue-700 text-sm">The SAFE: Equity Without a Price</a></li>
+                  <li><a href="#the-convertible-note-debt-that-converts" className="text-blue-600 hover:text-blue-700 text-sm">The Convertible Note: Debt That Converts</a></li>
+                  <li><a href="#the-decision-framework-which-should-you-choose" className="text-blue-600 hover:text-blue-700 text-sm">The Decision Framework: Which Should You Choose?</a></li>
+                  <li><a href="#the-math-safe-vs-note-conversion-scenarios" className="text-blue-600 hover:text-blue-700 text-sm">The Math: SAFE vs Note Conversion Scenarios</a></li>
+                  <li><a href="#hybrid-scenarios-and-special-situations" className="text-blue-600 hover:text-blue-700 text-sm">Hybrid Scenarios and Special Situations</a></li>
+                  <li><a href="#market-trends-the-rise-of-safes-2015-2024" className="text-blue-600 hover:text-blue-700 text-sm">Market Trends: The Rise of SAFEs (2015-2024)</a></li>
+                  <li><a href="#common-mistakes-founders-make" className="text-blue-600 hover:text-blue-700 text-sm">Common Mistakes Founders Make</a></li>
+                  <li><a href="#template-language-and-legal-considerations" className="text-blue-600 hover:text-blue-700 text-sm">Template Language and Legal Considerations</a></li>
+                  <li><a href="#frequently-asked-questions" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -128,7 +231,7 @@ export default function SafeVsConvertibleNote2024ComparisonBlogPost() {
               ">
                 <p><strong>TL;DR:</strong> 78% of Y Combinator companies now choose SAFEs over convertible notes. SAFEs are simpler (no interest, no maturity date), cheaper ($1,000-$2,500 in legal fees vs $5,000-$15,000), and faster to close (1-2 weeks vs 3-6 weeks). Choose a SAFE for pre-seed/seed rounds when speed and simplicity matter. Choose a convertible note only when investors specifically require it or you need the maturity date forcing mechanism.</p>
 
-<h2>SAFE vs Convertible Note: The Core Difference</h2>
+<h2 id="safe-vs-convertible-note-the-core-difference">SAFE vs Convertible Note: The Core Difference</h2>
 
 <p>The fundamental distinction between SAFEs (Simple Agreement for Future Equity) and convertible notes lies in their legal classification: SAFEs are equity instruments, while convertible notes are debt instruments. This single difference cascades into every aspect of how these instruments work, from their cost and complexity to their accounting treatment and founder obligations.</p>
 
@@ -136,7 +239,7 @@ export default function SafeVsConvertibleNote2024ComparisonBlogPost() {
 
 <p>Meet Jessica Park, who raised $1.2M for her fintech startup using both instruments across different investors. Some angels insisted on convertible notes (their traditional structure), while her lead investor required a SAFE. Jessica's experience illuminates the practical differences: her SAFE closed in 8 days with $1,800 in legal costs, while her convertible note took 5 weeks and $12,000 in legal fees to negotiate interest rates, maturity extensions, and conversion mechanics.</p>
 
-<h2>The SAFE: Equity Without a Price</h2>
+<h2 id="the-safe-equity-without-a-price">The SAFE: Equity Without a Price</h2>
 
 <p>A SAFE is a contract where an investor gives a company money today in exchange for equity later, at a future financing round. Unlike traditional equity, the SAFE doesn't immediately set a valuation. Instead, it defers the pricing question until a qualified financing occurs (typically Series A).</p>
 
@@ -191,7 +294,7 @@ export default function SafeVsConvertibleNote2024ComparisonBlogPost() {
 
 <p>The SAFE's strength—its standardization—is also a limitation. Adding custom provisions to SAFEs defeats their simplicity advantage. Convertible notes offer more flexibility for unusual terms.</p>
 
-<h2>The Convertible Note: Debt That Converts</h2>
+<h2 id="the-convertible-note-debt-that-converts">The Convertible Note: Debt That Converts</h2>
 
 <p>A convertible note is legally a loan with special conversion terms. The company borrows money, promising to either repay it with interest at maturity OR convert it to equity at a future financing round (at a discount).</p>
 
@@ -255,7 +358,21 @@ export default function SafeVsConvertibleNote2024ComparisonBlogPost() {
 
 <p>While the note will likely convert rather than require repayment, it's legally debt. This creates anxiety for founders and can complicate narratives with future investors, acquirers, or even employees who see "debt" on the balance sheet.</p>
 
-<h2>The Decision Framework: Which Should You Choose?</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your Convertible Note</p>
+                <p className="text-gray-600 mb-4">Calculate how your convertible notes convert to equity at your next priced round.</p>
+                <a
+                  href="https://icanpitch.com/convertible-note-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Convertible Note Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="the-decision-framework-which-should-you-choose">The Decision Framework: Which Should You Choose?</h2>
 
 <p>The choice between SAFE and convertible note depends on your specific situation across five key dimensions.</p>
 
@@ -343,7 +460,7 @@ export default function SafeVsConvertibleNote2024ComparisonBlogPost() {
 <li>You're comfortable with complex accrual tracking</li>
 </ul>
 
-<h2>The Math: SAFE vs Note Conversion Scenarios</h2>
+<h2 id="the-math-safe-vs-note-conversion-scenarios">The Math: SAFE vs Note Conversion Scenarios</h2>
 
 <p>To illustrate the economic differences, let's compare identical terms using both instruments.</p>
 
@@ -387,7 +504,7 @@ export default function SafeVsConvertibleNote2024ComparisonBlogPost() {
 
 <p>The key insight: <strong>for founders, SAFEs reduce dilution by eliminating interest. For investors, notes provide compensation via interest and maturity optionality</strong>. According to Foundry Group's portfolio analysis, <strong>average total dilution from convertible notes exceeds SAFE dilution by 0.8 percentage points</strong> due to accumulated interest over typical 18-24 month conversion windows.</p>
 
-<h2>Hybrid Scenarios and Special Situations</h2>
+<h2 id="hybrid-scenarios-and-special-situations">Hybrid Scenarios and Special Situations</h2>
 
 <p>Some situations call for creative combinations or specific structures.</p>
 
@@ -428,7 +545,7 @@ export default function SafeVsConvertibleNote2024ComparisonBlogPost() {
 
 <p>The specific treatment depends on the exact language in the SAFE or note, making legal review critical. Latham &amp; Watkins's analysis of 150 early-stage acquisitions found that <strong>SAFEs and notes converted to equity in 89% of cases, while 11% resulted in cash repayment</strong>, with wide variance based on acquisition structure.</p>
 
-<h2>Market Trends: The Rise of SAFEs (2015-2024)</h2>
+<h2 id="market-trends-the-rise-of-safes-2015-2024">Market Trends: The Rise of SAFEs (2015-2024)</h2>
 
 <p>The venture financing landscape has shifted dramatically toward SAFEs over the past decade.</p>
 
@@ -456,7 +573,7 @@ export default function SafeVsConvertibleNote2024ComparisonBlogPost() {
 
 <p>However, convertible notes remain dominant in certain segments: <strong>bridge rounds (52% notes vs 38% SAFEs), East Coast deals (48% notes vs 41% SAFEs), and international rounds (61% notes vs 27% SAFEs)</strong>, per Fenwick &amp; West's 2023 geographic analysis.</p>
 
-<h2>Common Mistakes Founders Make</h2>
+<h2 id="common-mistakes-founders-make">Common Mistakes Founders Make</h2>
 
 <p>After analyzing hundreds of fundraising rounds, several costly patterns emerge.</p>
 
@@ -484,7 +601,7 @@ export default function SafeVsConvertibleNote2024ComparisonBlogPost() {
 
 <p>Some founders add custom provisions to SAFE templates (specific information rights, board seats, pro-rata provisions), defeating the simplicity advantage and increasing legal costs. If you need extensive custom provisions, consider whether a convertible note or priced equity makes more sense.</p>
 
-<h2>Template Language and Legal Considerations</h2>
+<h2 id="template-language-and-legal-considerations">Template Language and Legal Considerations</h2>
 
 <p>Understanding the specific legal provisions helps founders negotiate effectively.</p>
 
@@ -525,7 +642,7 @@ export default function SafeVsConvertibleNote2024ComparisonBlogPost() {
 
 <p>If the note doesn't convert and requires repayment, does it have priority over other debts? Subordination clauses can affect bank loan eligibility and acquisition dynamics.</p>
 
-<h2>Frequently Asked Questions</h2>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
 
 <h3>Can I mix SAFEs and convertible notes in the same round?</h3>
 
@@ -586,13 +703,30 @@ export default function SafeVsConvertibleNote2024ComparisonBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/safe-calculator-toronto/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Toronto Startups: Navigate Canadian Convertible Financing</span>
+                </Link>
+                <Link href="/blog/safe-calculator-paris/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Paris Startups: Navigate French Convertible Financing</span>
+                </Link>
+                <Link href="/blog/how-to-negotiate-safe-valuation-cap/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Negotiate SAFE Valuation Caps: 2025 Founder's Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-first-time-founders-complete-guide/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for First-Time Founders: Complete 2025 Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-silicon-valley-founders-guide/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Silicon Valley Founders: Bay Area Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/convertible-note-calculator-seed-business-founder-austin-negotiate-better-terms-understand-conversion-scenarios/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Convertible Note Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
             </div>
           </div>
         </section>
@@ -602,18 +736,18 @@ export default function SafeVsConvertibleNote2024ComparisonBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your Convertible Note
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Calculate how your convertible notes convert to equity at your next priced round.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/convertible-note-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Convertible Note Calculator &rarr;
               </a>
             </div>
           </div>

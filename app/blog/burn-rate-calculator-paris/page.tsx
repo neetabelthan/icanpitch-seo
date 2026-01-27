@@ -114,8 +114,29 @@ export default function BurnRateCalculatorParisBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-paris-startups-need-a-french-aware-burn-rate-calculator" className="text-blue-600 hover:text-blue-700 text-sm">Why Paris Startups Need a French-Aware Burn Rate Calculator</a></li>
+                  <li><a href="#understanding-burn-rate-foundation-for-french-startup-financ" className="text-blue-600 hover:text-blue-700 text-sm">Understanding Burn Rate: Foundation for French Startup Finance</a></li>
+                  <li><a href="#the-paris-tech-ecosystem-context-for-burn-rate-strategy" className="text-blue-600 hover:text-blue-700 text-sm">The Paris Tech Ecosystem: Context for Burn Rate Strategy</a></li>
+                  <li><a href="#french-labor-costs-social-charges-and-true-employment-expens" className="text-blue-600 hover:text-blue-700 text-sm">French Labor Costs: Social Charges and True Employment Expenses</a></li>
+                  <li><a href="#cir-and-jei-tax-credits-frances-powerful-burn-rate-reduction" className="text-blue-600 hover:text-blue-700 text-sm">CIR and JEI Tax Credits: France's Powerful Burn Rate Reduction Tools</a></li>
+                  <li><a href="#paris-salary-benchmarks-engineering-and-operations-costs" className="text-blue-600 hover:text-blue-700 text-sm">Paris Salary Benchmarks: Engineering and Operations Costs</a></li>
+                  <li><a href="#paris-office-and-operational-costs" className="text-blue-600 hover:text-blue-700 text-sm">Paris Office and Operational Costs</a></li>
+                  <li><a href="#comparing-paris-costs-to-other-european-tech-hubs" className="text-blue-600 hover:text-blue-700 text-sm">Comparing Paris Costs to Other European Tech Hubs</a></li>
+                  <li><a href="#how-to-calculate-your-paris-startup-burn-rate-step-by-step" className="text-blue-600 hover:text-blue-700 text-sm">How to Calculate Your Paris Startup Burn Rate: Step-by-Step</a></li>
+                  <li><a href="#optimizing-burn-rate-paris-specific-strategies" className="text-blue-600 hover:text-blue-700 text-sm">Optimizing Burn Rate: Paris-Specific Strategies</a></li>
+                  <li><a href="#when-to-raise-navigating-the-french-fundraising-calendar" className="text-blue-600 hover:text-blue-700 text-sm">When to Raise: Navigating the French Fundraising Calendar</a></li>
+                  <li><a href="#using-icanpitchs-burn-rate-calculator-for-paris-startups" className="text-blue-600 hover:text-blue-700 text-sm">Using ICanPitch's Burn Rate Calculator for Paris Startups</a></li>
+                  <li><a href="#burn-rate-red-flags-french-investors-watch-for" className="text-blue-600 hover:text-blue-700 text-sm">Burn Rate Red Flags French Investors Watch For</a></li>
+                  <li><a href="#conclusion-mastering-burn-rate-in-pariss-tech-ecosystem" className="text-blue-600 hover:text-blue-700 text-sm">Conclusion: Mastering Burn Rate in Paris's Tech Ecosystem</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,13 +147,13 @@ export default function BurnRateCalculatorParisBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why Paris Startups Need a French-Aware Burn Rate Calculator</h2>
+                <h2 id="why-paris-startups-need-a-french-aware-burn-rate-calculator">Why Paris Startups Need a French-Aware Burn Rate Calculator</h2>
 
 <p>Paris has transformed into Europe's most dynamic startup ecosystem, home to Station F (the world's largest startup campus), a thriving tech scene that produced unicorns like BlaBlaCar, Doctolib, and Mirakl, and an increasingly sophisticated venture capital market. Yet most burn rate calculators and financial planning tools are built for US or UK markets, missing the critical specifics of operating in France: social charges that add 45-55% to salary costs, CIR and JEI tax credits that can reduce R&amp;D burn by 30-60%, and French labor law that fundamentally changes hiring economics.</p>
 
 <p>Understanding burn rate in the Paris context means accounting for EUR currency considerations, navigating the complexity of French employment regulations, leveraging generous government innovation incentives, and recognizing how Paris costs compare to other European tech hubs. This guide provides Paris-specific insights and a calculator built for the realities of building a startup in France's capital.</p>
 
-<h2>Understanding Burn Rate: Foundation for French Startup Finance</h2>
+<h2 id="understanding-burn-rate-foundation-for-french-startup-financ">Understanding Burn Rate: Foundation for French Startup Finance</h2>
 
 <p>Your burn rate represents the monthly cash your startup consumes—the net outflow after accounting for all expenses and any revenue. For pre-revenue startups, it's simply your monthly spending. For companies generating revenue, it's monthly expenses minus monthly income. This metric determines your runway: how many months you can operate before running out of cash.</p>
 
@@ -140,7 +161,7 @@ export default function BurnRateCalculatorParisBlogPost() {
 
 <p>French investors—from early-stage funds like Kima Ventures and Serena Capital to growth investors like Eurazeo and Bpifrance—scrutinize burn rate as a primary indicator of founder discipline and market understanding. Paris VCs have become significantly more sophisticated about efficient growth in the post-2021 market correction, making burn rate management more critical than ever.</p>
 
-<h2>The Paris Tech Ecosystem: Context for Burn Rate Strategy</h2>
+<h2 id="the-paris-tech-ecosystem-context-for-burn-rate-strategy">The Paris Tech Ecosystem: Context for Burn Rate Strategy</h2>
 
 <p>Paris anchors the French Tech ecosystem, which has grown to encompass over 10,000 startups and raised more than EUR 13 billion in 2023. Understanding this ecosystem's structure directly impacts how you should think about burn rate and resource allocation.</p>
 
@@ -150,7 +171,21 @@ export default function BurnRateCalculatorParisBlogPost() {
 
 <p>The city's strengths in luxury/fashion tech (connection to LVMH, Kering, L'Oréal ecosystems), fintech (proximity to traditional banking), deeptech/AI (partnerships with Ecole Polytechnique, Sorbonne, INRIA), and healthtech (Doctolib's success creating local expertise) mean certain verticals have deeper talent pools and more investor familiarity. Building in these domains can improve hiring efficiency and investor conversation productivity, both factors influencing optimal burn rate.</p>
 
-<h2>French Labor Costs: Social Charges and True Employment Expenses</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Calculate Your Burn Rate & Runway</p>
+                <p className="text-gray-600 mb-4">Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.</p>
+                <a
+                  href="https://icanpitch.com/burn-rate-runway-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Burn Rate Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="french-labor-costs-social-charges-and-true-employment-expens">French Labor Costs: Social Charges and True Employment Expenses</h2>
 
 <p>The single biggest difference between Paris burn rate modeling and other markets is French social charges—mandatory employer contributions that add 45-55% to gross salaries. Understanding this system is essential for accurate financial planning.</p>
 
@@ -162,7 +197,7 @@ export default function BurnRateCalculatorParisBlogPost() {
 
 <p><strong>Comparing Paris to Other European Hubs:</strong> Paris employer costs are 20-30% higher than London (where employer national insurance runs 13.8% above salary), 35-45% higher than Berlin (German social charges average 20-22%), and 40-50% higher than Barcelona or Lisbon. This differential is the primary reason Paris startups need 25-40% more capital than equivalently-staffed startups in other European cities to achieve the same runway.</p>
 
-<h2>CIR and JEI Tax Credits: France's Powerful Burn Rate Reduction Tools</h2>
+<h2 id="cir-and-jei-tax-credits-frances-powerful-burn-rate-reduction">CIR and JEI Tax Credits: France's Powerful Burn Rate Reduction Tools</h2>
 
 <p>France offers Europe's most generous R&amp;D tax incentives through the Crédit d'Impôt Recherche (CIR) and Jeune Entreprise Innovante (JEI) programs. For Paris startups focused on product development, these programs can reduce effective annual burn by 25-40%—a transformative impact that makes France competitive with lower-cost European markets.</p>
 
@@ -178,7 +213,7 @@ export default function BurnRateCalculatorParisBlogPost() {
 
 <p><strong>Combined CIR and JEI Impact:</strong> Most qualifying Paris startups use both programs simultaneously. A startup spending EUR 500,000 on R&amp;D salaries would normally cost EUR 725,000 with social charges. With JEI, employer charges drop to approximately EUR 0, reducing cost to EUR 500,000. Then CIR provides a EUR 150,000 credit, reducing net cost to EUR 350,000—a 52% reduction in effective R&amp;D burn. This is the structural advantage that makes Paris competitive despite high nominal costs.</p>
 
-<h2>Paris Salary Benchmarks: Engineering and Operations Costs</h2>
+<h2 id="paris-salary-benchmarks-engineering-and-operations-costs">Paris Salary Benchmarks: Engineering and Operations Costs</h2>
 
 <p>Understanding current Paris salary benchmarks is essential for accurate burn rate projection. The city's talent market reflects competition between startups, scale-ups like Doctolib and Alan, and international tech companies (Google, Meta, Amazon) with Paris engineering offices.</p>
 
@@ -192,7 +227,7 @@ export default function BurnRateCalculatorParisBlogPost() {
 
 <p><strong>French Employment Contracts:</strong> France strongly favors CDI (Contrat à Durée Indéterminée—permanent contracts) over CDD (fixed-term contracts) or freelance arrangements. While CDIs come with substantial termination protections and costs, they're essential for attracting quality talent. Budget for termination costs (indemnités de licenciement) when modeling downside scenarios—typically 25% of annual salary per year of service for economic layoffs.</p>
 
-<h2>Paris Office and Operational Costs</h2>
+<h2 id="paris-office-and-operational-costs">Paris Office and Operational Costs</h2>
 
 <p>Beyond personnel, Paris startups face specific operational cost structures that impact burn rate modeling. Understanding these helps set realistic budgets and identify optimization opportunities.</p>
 
@@ -204,7 +239,7 @@ export default function BurnRateCalculatorParisBlogPost() {
 
 <p><strong>Legal and Accounting:</strong> French compliance requirements demand regular accounting and legal support. Early-stage startups typically spend EUR 500-1,500 monthly on expert-comptable (accountant) services and EUR 1,000-3,000 monthly on legal counsel (Lex Start, Legalstart, Bird &amp; Bird, Fieldfisher for startups). Annual audit costs for companies raising institutional rounds add EUR 8,000-15,000. These costs are 30-50% higher than UK equivalents due to French administrative complexity.</p>
 
-<h2>Comparing Paris Costs to Other European Tech Hubs</h2>
+<h2 id="comparing-paris-costs-to-other-european-tech-hubs">Comparing Paris Costs to Other European Tech Hubs</h2>
 
 <p>Understanding Paris's cost position relative to London, Berlin, Amsterdam, and emerging hubs helps founders evaluate whether to build primarily in Paris or distribute teams across Europe.</p>
 
@@ -216,7 +251,7 @@ export default function BurnRateCalculatorParisBlogPost() {
 
 <p><strong>Strategic Multi-Location Models:</strong> Many successful Paris startups adopt distributed models: Paris headquarters with product/commercial teams (5-10 people), Berlin or Barcelona engineering hub (10-20 people), and remote talent across Europe. This approach balances Paris's ecosystem advantages with cost efficiency. Model the operational complexity costs (travel, coordination overhead) against salary savings when evaluating distributed structures.</p>
 
-<h2>How to Calculate Your Paris Startup Burn Rate: Step-by-Step</h2>
+<h2 id="how-to-calculate-your-paris-startup-burn-rate-step-by-step">How to Calculate Your Paris Startup Burn Rate: Step-by-Step</h2>
 
 <p>Accurate burn rate calculation requires systematic monthly tracking across all expense categories, accounting for French-specific elements like social charges and tax credits.</p>
 
@@ -234,7 +269,7 @@ export default function BurnRateCalculatorParisBlogPost() {
 
 <p><strong>Step 7: Determine Runway.</strong> Divide cash on hand by net burn rate. With EUR 520,000 in the bank and EUR 52,000 net burn (after CIR adjustment), runway is 10 months. French VCs generally want to see 12-18 months minimum; below 6 months triggers urgent fundraising mode.</p>
 
-<h2>Optimizing Burn Rate: Paris-Specific Strategies</h2>
+<h2 id="optimizing-burn-rate-paris-specific-strategies">Optimizing Burn Rate: Paris-Specific Strategies</h2>
 
 <p>Extending runway while maintaining progress toward milestones requires strategic decisions balancing cost reduction with growth. Paris's ecosystem offers specific leverage points.</p>
 
@@ -248,7 +283,7 @@ export default function BurnRateCalculatorParisBlogPost() {
 
 <p><strong>Bpifrance Non-Dilutive Funding:</strong> Bpifrance (French public investment bank) offers loans, grants, and guarantees that can significantly extend runway without dilution. Bourse French Tech provides EUR 30,000 grants for pre-seed companies. Prêt d'Amorçage (seed loans) offer EUR 50,000-100,000 at favorable terms. Innovation Grants can provide EUR 200,000-3M for deep tech projects. Application processes take 2-4 months, so apply early. Many Paris startups use Bpifrance capital to extend runway 6-12 months between equity rounds.</p>
 
-<h2>When to Raise: Navigating the French Fundraising Calendar</h2>
+<h2 id="when-to-raise-navigating-the-french-fundraising-calendar">When to Raise: Navigating the French Fundraising Calendar</h2>
 
 <p>French fundraising has distinct seasonal and cyclical patterns. Understanding these optimizes fundraising timing relative to your runway.</p>
 
@@ -260,7 +295,7 @@ export default function BurnRateCalculatorParisBlogPost() {
 
 <p><strong>The 6-Month Danger Zone:</strong> When runway drops below 6 months, investor leverage shifts dramatically. French investors are generally founder-friendly but realistic—if you're raising from desperation, terms reflect it. Maintain discipline to start fundraising at 9-12 months runway minimum. The added negotiating leverage from having 12+ months of runway often translates to 10-20% better valuation terms.</p>
 
-<h2>Using ICanPitch's Burn Rate Calculator for Paris Startups</h2>
+<h2 id="using-icanpitchs-burn-rate-calculator-for-paris-startups">Using ICanPitch's Burn Rate Calculator for Paris Startups</h2>
 
 <p>While burn rate formulas are conceptually simple, scenario planning with JEI/CIR credits, social charge variations, and multi-currency considerations requires sophisticated modeling. ICanPitch's burn rate calculator is designed for startups navigating complex markets like Paris.</p>
 
@@ -270,7 +305,7 @@ export default function BurnRateCalculatorParisBlogPost() {
 
 <p>Use the calculator during financial planning cycles, board meetings, and fundraising preparation. Share scenarios with investors to demonstrate financial sophistication—French VCs consistently cite rigorous planning as a key evaluation criterion, and showing you understand CIR/JEI dynamics signals operational maturity.</p>
 
-<h2>Burn Rate Red Flags French Investors Watch For</h2>
+<h2 id="burn-rate-red-flags-french-investors-watch-for">Burn Rate Red Flags French Investors Watch For</h2>
 
 <p>French investors have pattern recognition from hundreds of portfolio companies. Certain burn rate profiles trigger concern and deeper scrutiny.</p>
 
@@ -282,7 +317,7 @@ export default function BurnRateCalculatorParisBlogPost() {
 
 <p><strong>No Path to Profitability:</strong> Even if you plan to raise multiple rounds, French investors want to see a credible path to cash flow breakeven. The "growth at all costs" model has less traction in Europe than Silicon Valley. If your burn rate is increasing indefinitely without approaching breakeven, articulate clearly what milestones justify continued cash consumption and when unit economics will flip positive.</p>
 
-<h2>Conclusion: Mastering Burn Rate in Paris's Tech Ecosystem</h2>
+<h2 id="conclusion-mastering-burn-rate-in-pariss-tech-ecosystem">Conclusion: Mastering Burn Rate in Paris's Tech Ecosystem</h2>
 
 <p>Paris offers European and international founders a compelling environment to build capital-efficient, globally competitive startups: access to strong technical talent from elite engineering schools, government programs (JEI/CIR/Bpifrance) that can reduce effective R&amp;D burn by 30-50%, a maturing investor ecosystem with increasingly sophisticated capital sources, and proximity to major European corporate customers.</p>
 
@@ -312,13 +347,30 @@ export default function BurnRateCalculatorParisBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/burn-rate-calculator-toronto/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Toronto Startups: Master Your Runway in Canada's Tech Hub</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-chicago/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Chicago Burn Rate Calculator: Track Startup Runway in the Midwest Tech Hub</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-seattle/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Seattle Startups: Track Your Runway in 2025</span>
+                </Link>
+                <Link href="/blog/burn-rate-benchmarks-by-industry-stage/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Benchmarks by Industry and Stage: 2025 Data</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-berlin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Berlin Startups: 2025 Cost Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/burn-rate-calculator-series-a-first-time-founder-new-york-plan-fundraising-timeline-extend-runway-efficiency/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Burn Rate Calculator</Link>
+              <Link href="/blog/burn-rate-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Burn Rate & Runway Guides</Link>
             </div>
           </div>
         </section>
@@ -328,18 +380,18 @@ export default function BurnRateCalculatorParisBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Calculate Your Burn Rate & Runway
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/burn-rate-runway-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Burn Rate Calculator &rarr;
               </a>
             </div>
           </div>

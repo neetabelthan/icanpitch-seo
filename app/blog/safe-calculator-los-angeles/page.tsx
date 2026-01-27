@@ -114,8 +114,29 @@ export default function SafeCalculatorLosAngelesBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-los-angeles-startups-need-a-safe-calculator-built-for-th" className="text-blue-600 hover:text-blue-700 text-sm">Why Los Angeles Startups Need a SAFE Calculator Built for the LA Ecosystem</a></li>
+                  <li><a href="#understanding-the-los-angeles-startup-ecosystem-why-safe-ter" className="text-blue-600 hover:text-blue-700 text-sm">Understanding the Los Angeles Startup Ecosystem: Why SAFE Terms Differ from Silicon Valley</a></li>
+                  <li><a href="#la-safe-valuation-benchmarks-whats-actually-market-rate-in-2" className="text-blue-600 hover:text-blue-700 text-sm">LA SAFE Valuation Benchmarks: What's Actually Market Rate in 2025</a></li>
+                  <li><a href="#how-to-calculate-safe-dilution-for-your-los-angeles-startup" className="text-blue-600 hover:text-blue-700 text-sm">How to Calculate SAFE Dilution for Your Los Angeles Startup</a></li>
+                  <li><a href="#los-angeles-accelerators-and-their-safe-standards" className="text-blue-600 hover:text-blue-700 text-sm">Los Angeles Accelerators and Their SAFE Standards</a></li>
+                  <li><a href="#when-la-startups-should-choose-safes-vs-other-instruments" className="text-blue-600 hover:text-blue-700 text-sm">When LA Startups Should Choose SAFEs vs. Other Instruments</a></li>
+                  <li><a href="#real-los-angeles-safe-examples-what-actually-happened" className="text-blue-600 hover:text-blue-700 text-sm">Real Los Angeles SAFE Examples: What Actually Happened</a></li>
+                  <li><a href="#safe-calculator-tools-what-la-founders-should-use" className="text-blue-600 hover:text-blue-700 text-sm">SAFE Calculator Tools: What LA Founders Should Use</a></li>
+                  <li><a href="#negotiating-safe-terms-with-los-angeles-investors" className="text-blue-600 hover:text-blue-700 text-sm">Negotiating SAFE Terms with Los Angeles Investors</a></li>
+                  <li><a href="#common-mistakes-la-founders-make-with-safes-and-how-to-avoid" className="text-blue-600 hover:text-blue-700 text-sm">Common Mistakes LA Founders Make with SAFEs (And How to Avoid Them)</a></li>
+                  <li><a href="#preparing-your-los-angeles-startup-for-post-safe-fundraising" className="text-blue-600 hover:text-blue-700 text-sm">Preparing Your Los Angeles Startup for Post-SAFE Fundraising</a></li>
+                  <li><a href="#safe-calculator-step-by-step-guide-for-los-angeles-founders" className="text-blue-600 hover:text-blue-700 text-sm">SAFE Calculator: Step-by-Step Guide for Los Angeles Founders</a></li>
+                  <li><a href="#resources-for-los-angeles-founders-navigating-safe-agreement" className="text-blue-600 hover:text-blue-700 text-sm">Resources for Los Angeles Founders Navigating SAFE Agreements</a></li>
+                  <li><a href="#taking-action-your-next-steps-for-safe-fundraising-in-los-an" className="text-blue-600 hover:text-blue-700 text-sm">Taking Action: Your Next Steps for SAFE Fundraising in Los Angeles</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +147,7 @@ export default function SafeCalculatorLosAngelesBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why Los Angeles Startups Need a SAFE Calculator Built for the LA Ecosystem</h2>
+                <h2 id="why-los-angeles-startups-need-a-safe-calculator-built-for-th">Why Los Angeles Startups Need a SAFE Calculator Built for the LA Ecosystem</h2>
 
 <p>Los Angeles has emerged as the second-largest startup ecosystem in the United States, yet founders consistently underestimate how different LA's fundraising landscape is from Silicon Valley. The entertainment capital's unique blend of media, content, consumer tech, and creative industries demands a fundamentally different approach to SAFE (Simple Agreement for Future Equity) valuations.</p>
 
@@ -134,7 +155,7 @@ export default function SafeCalculatorLosAngelesBlogPost() {
 
 <p>This guide provides Los Angeles-specific SAFE valuation benchmarks, explains how Hollywood's influence shapes funding terms, and shows you exactly how to calculate dilution for your Venice Beach or Santa Monica startup. Whether you're raising from MuckerLab, Idealab, or local angels, you need to understand what "market" really means in LA—not just what TechCrunch says about Silicon Valley.</p>
 
-<h2>Understanding the Los Angeles Startup Ecosystem: Why SAFE Terms Differ from Silicon Valley</h2>
+<h2 id="understanding-the-los-angeles-startup-ecosystem-why-safe-ter">Understanding the Los Angeles Startup Ecosystem: Why SAFE Terms Differ from Silicon Valley</h2>
 
 <p>Los Angeles is not Silicon Valley—and that's exactly why it's become one of the most exciting startup ecosystems in the country. The city's startup landscape is shaped by its entertainment heritage, creative talent pool, and fundamentally different investor base. These factors directly impact how SAFE agreements are structured and valued.</p>
 
@@ -165,7 +186,7 @@ export default function SafeCalculatorLosAngelesBlogPost() {
 
 <p>Many LA angels made their money outside of venture-backed startups—in real estate, entertainment, or consumer brands. This means they often approach valuations more conservatively than Bay Area angels who made their fortunes from 100x startup exits. When negotiating SAFE terms, understand whether you're talking to a tech-native investor or someone from the entertainment world who's evaluating your startup through a different lens.</p>
 
-<h2>LA SAFE Valuation Benchmarks: What's Actually Market Rate in 2025</h2>
+<h2 id="la-safe-valuation-benchmarks-whats-actually-market-rate-in-2">LA SAFE Valuation Benchmarks: What's Actually Market Rate in 2025</h2>
 
 <p>If you search "SAFE valuation benchmarks" online, you'll find data dominated by Silicon Valley deals. Those numbers don't reflect LA market reality. Here's what Los Angeles startups are actually seeing across different stages and industries.</p>
 
@@ -206,7 +227,21 @@ export default function SafeCalculatorLosAngelesBlogPost() {
 
 <p><strong>Health/Wellness/Fitness:</strong> LA's wellness industry expertise gives local startups an advantage, but investors remain valuation-sensitive. Seed caps typically range $10M-18M, with the higher end reserved for companies with clear paths to profitability and strong retention metrics.</p>
 
-<h2>How to Calculate SAFE Dilution for Your Los Angeles Startup</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="how-to-calculate-safe-dilution-for-your-los-angeles-startup">How to Calculate SAFE Dilution for Your Los Angeles Startup</h2>
 
 <p>Understanding your dilution from SAFE agreements is critical to maintaining founder ownership through multiple funding rounds. Los Angeles founders often make the mistake of accepting multiple SAFEs with different caps and discounts without modeling the cumulative dilution effect.</p>
 
@@ -258,7 +293,7 @@ export default function SafeCalculatorLosAngelesBlogPost() {
 
 <p><strong>Forgetting about the option pool:</strong> Your Series A investors will typically require a 10-20% option pool for employee equity. This pool is created before their investment, which means it dilutes you and the SAFE holders, not the new investors. When calculating your post-SAFE ownership, remember to account for this additional dilution.</p>
 
-<h2>Los Angeles Accelerators and Their SAFE Standards</h2>
+<h2 id="los-angeles-accelerators-and-their-safe-standards">Los Angeles Accelerators and Their SAFE Standards</h2>
 
 <p>If you're going through an LA accelerator, understanding their standard SAFE terms helps you plan your overall fundraising strategy.</p>
 
@@ -280,7 +315,7 @@ export default function SafeCalculatorLosAngelesBlogPost() {
 
 <p>The SAFE terms from corporate programs are typically at or above market—they're not trying to optimize for ownership percentage. More importantly, their investment can make your next fundraise significantly easier by demonstrating enterprise interest and partnership potential.</p>
 
-<h2>When LA Startups Should Choose SAFEs vs. Other Instruments</h2>
+<h2 id="when-la-startups-should-choose-safes-vs-other-instruments">When LA Startups Should Choose SAFEs vs. Other Instruments</h2>
 
 <p>SAFEs aren't always the right choice, even though they've become the default for early-stage fundraising. Here's when they make sense for Los Angeles startups—and when you should consider alternatives.</p>
 
@@ -317,7 +352,7 @@ export default function SafeCalculatorLosAngelesBlogPost() {
 
 <p>This hybrid structure gives you the speed and simplicity of SAFEs while providing lead investors the governance and information rights they want. It's become increasingly common in competitive LA deals where founders have multiple term sheets.</p>
 
-<h2>Real Los Angeles SAFE Examples: What Actually Happened</h2>
+<h2 id="real-los-angeles-safe-examples-what-actually-happened">Real Los Angeles SAFE Examples: What Actually Happened</h2>
 
 <p>Let's examine how real LA startups structured their SAFE rounds and what happened when those SAFEs converted. These examples are anonymized but based on actual companies in the LA ecosystem.</p>
 
@@ -359,7 +394,7 @@ export default function SafeCalculatorLosAngelesBlogPost() {
 
 <p>The lesson: If you're building in a category where LA has unique advantages (entertainment tech, content platforms, creative tools), don't be afraid to raise on a SAFE even if the cap feels high. The right strategic progress can justify rapid valuation growth.</p>
 
-<h2>SAFE Calculator Tools: What LA Founders Should Use</h2>
+<h2 id="safe-calculator-tools-what-la-founders-should-use">SAFE Calculator Tools: What LA Founders Should Use</h2>
 
 <p>Modeling your SAFE dilution shouldn't require a finance degree. Here are the tools LA founders actually use to calculate dilution, understand cap table implications, and prepare for future funding rounds.</p>
 
@@ -395,7 +430,7 @@ export default function SafeCalculatorLosAngelesBlogPost() {
 
 <p>Understanding these scenarios before you negotiate terms gives you confidence and helps you make better decisions about how much to raise, at what cap, and when to transition to a priced round.</p>
 
-<h2>Negotiating SAFE Terms with Los Angeles Investors</h2>
+<h2 id="negotiating-safe-terms-with-los-angeles-investors">Negotiating SAFE Terms with Los Angeles Investors</h2>
 
 <p>Los Angeles investors have different negotiation styles than their Silicon Valley counterparts. Understanding these dynamics helps you secure better terms without damaging relationships.</p>
 
@@ -431,7 +466,7 @@ export default function SafeCalculatorLosAngelesBlogPost() {
 
 <p>Push back on MFN clauses unless the investor is writing a large enough check to effectively be your lead investor. For smaller checks, the administrative complexity of MFN clauses outweighs their benefit to investors.</p>
 
-<h2>Common Mistakes LA Founders Make with SAFEs (And How to Avoid Them)</h2>
+<h2 id="common-mistakes-la-founders-make-with-safes-and-how-to-avoid">Common Mistakes LA Founders Make with SAFEs (And How to Avoid Them)</h2>
 
 <p>After reviewing hundreds of LA SAFE agreements, certain mistakes appear repeatedly. Here's what to watch for.</p>
 
@@ -465,7 +500,7 @@ export default function SafeCalculatorLosAngelesBlogPost() {
 
 <p>Send regular updates (monthly or quarterly) to all SAFE holders. Share metrics, challenges, and progress. Treat them like shareholders even though they technically aren't yet. This builds goodwill and creates a supportive investor base for future rounds.</p>
 
-<h2>Preparing Your Los Angeles Startup for Post-SAFE Fundraising</h2>
+<h2 id="preparing-your-los-angeles-startup-for-post-safe-fundraising">Preparing Your Los Angeles Startup for Post-SAFE Fundraising</h2>
 
 <p>Your SAFE round isn't the end of fundraising—it's the beginning. Here's how to position your LA startup for a successful Series A after closing SAFEs.</p>
 
@@ -503,7 +538,7 @@ export default function SafeCalculatorLosAngelesBlogPost() {
   <li>Implement cap table management software (Carta or Pulley) so you can share clean reports</li>
 </ul>
 
-<h2>SAFE Calculator: Step-by-Step Guide for Los Angeles Founders</h2>
+<h2 id="safe-calculator-step-by-step-guide-for-los-angeles-founders">SAFE Calculator: Step-by-Step Guide for Los Angeles Founders</h2>
 
 <p>Let's walk through exactly how to calculate your SAFE dilution as a Los Angeles founder, using a realistic example.</p>
 
@@ -616,7 +651,7 @@ export default function SafeCalculatorLosAngelesBlogPost() {
 
 <p>This is a healthy cap table for an LA startup after Series A. Founders maintain majority control, investors have meaningful ownership, and there's adequate option pool for key hires.</p>
 
-<h2>Resources for Los Angeles Founders Navigating SAFE Agreements</h2>
+<h2 id="resources-for-los-angeles-founders-navigating-safe-agreement">Resources for Los Angeles Founders Navigating SAFE Agreements</h2>
 
 <p>Use these resources to deepen your understanding of SAFEs and connect with the LA startup community.</p>
 
@@ -646,7 +681,7 @@ export default function SafeCalculatorLosAngelesBlogPost() {
 
 <p><strong>AngelList:</strong> Browse LA startup salaries, equity packages, and funding data to benchmark your offerings.</p>
 
-<h2>Taking Action: Your Next Steps for SAFE Fundraising in Los Angeles</h2>
+<h2 id="taking-action-your-next-steps-for-safe-fundraising-in-los-an">Taking Action: Your Next Steps for SAFE Fundraising in Los Angeles</h2>
 
 <p>You now understand how SAFE agreements work in the Los Angeles ecosystem, how to calculate dilution, and how to benchmark your terms against market rates. Here's how to put this knowledge into action.</p>
 
@@ -710,13 +745,31 @@ export default function SafeCalculatorLosAngelesBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/safe-calculator-ecommerce-los-angeles/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">E-commerce SAFE Calculator Los Angeles: DTC Brand Valuations Post-iOS14 with Revenue Multiple Benchmarks</span>
+                </Link>
+                <Link href="/blog/safe-calculator-denver/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Denver SAFE Calculator: Navigate Startup Valuations in Colorado's Growing Tech Ecosystem</span>
+                </Link>
+                <Link href="/blog/how-to-negotiate-safe-valuation-cap/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Negotiate SAFE Valuation Caps: 2025 Founder's Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-chicago/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Chicago SAFE Calculator: Navigate Midwest Valuations and Investor Expectations</span>
+                </Link>
+                <Link href="/blog/safe-calculator-first-time-founders-complete-guide/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for First-Time Founders: Complete 2025 Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -726,18 +779,18 @@ export default function SafeCalculatorLosAngelesBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

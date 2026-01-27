@@ -52,6 +52,68 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much equity should a first employee get?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First employees (hires #1-5) typically receive 0.5-2.0% equity depending on their role. A first engineer usually gets 1.5-2.5%, first sales hire gets 1.0-2.0%, and first product/design hire gets 0.8-1.5%. According to Carta's 2024 data, the median first engineering hire receives exactly 2.0% with 4-year vesting."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between equity percentage and number of options?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Equity percentage represents your ownership slice of the company (e.g., \"you own 1%\"), while options are the specific number of shares you can purchase (e.g., \"you have 100,000 options\"). Always grant options as specific share numbers because percentages change as companies issue more shares. Your \"1%\" could become 0.7% after dilution, but your 100,000 options stay 100,000 options."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate equity value for employees?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Calculate equity value by multiplying (number of options) × (current share price - strike price). For example, 100,000 options with a $0.50 strike price at a company valued at $2.00/share = 100,000 × ($2.00 - $0.50) = $150,000 current spread value. Use exit scenario modeling to project future value at 3×, 10×, and 20× current valuation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should employee equity include a cliff?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, 94% of startups use a 1-year cliff on employee equity grants. This means no equity vests until the employee completes their first year, then 25% vests immediately and the rest vests monthly over the remaining 3 years. Cliffs protect companies from high employee turnover while still offering meaningful equity to those who stay. For your first 1-3 employees, consider a 6-month cliff or no cliff as a recruiting advantage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much equity does employee #10 typically get?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Employee #10 at a post-seed startup typically receives 0.15-0.35% equity depending on seniority and role. Senior engineers receive 0.3-0.5%, mid-level employees receive 0.2-0.3%, and junior hires receive 0.1-0.2%. This assumes standard 4-year vesting. By employee #10, you're past the \"founding team\" phase and into market-rate equity grants."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens to employee equity when the company raises funding?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Employee equity gets diluted (reduced as a percentage) when companies raise funding by issuing new shares. If your company issues 20% new shares in a Series A, your 1.0% ownership becomes approximately 0.8%. However, the value per share typically increases significantly, so your total value goes up even though your percentage goes down. Always explain this trade-off when offering equity to early employees."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I compare equity offers from different startups?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Compare equity offers by calculating expected value at realistic exit scenarios, not just percentage ownership. A 0.5% stake in a company likely to reach $500M valuation (expected value: $2.5M) beats a 2.0% stake in a company likely to reach $50M valuation (expected value: $1M). Use tools like Carta's Total Compensation Calculator to normalize offers, considering company stage, traction, funding history, and comparable exit multiples."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +176,27 @@ export default function EarlyEmployeeEquityCalculatorGuideBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#early-employee-equity-benchmarks-by-hire-number" className="text-blue-600 hover:text-blue-700 text-sm">Early Employee Equity Benchmarks by Hire Number</a></li>
+                  <li><a href="#how-to-calculate-employee-equity-grants" className="text-blue-600 hover:text-blue-700 text-sm">How to Calculate Employee Equity Grants</a></li>
+                  <li><a href="#vesting-schedules-the-critical-implementation-detail" className="text-blue-600 hover:text-blue-700 text-sm">Vesting Schedules: The Critical Implementation Detail</a></li>
+                  <li><a href="#real-world-equity-benchmarks-by-role-and-stage" className="text-blue-600 hover:text-blue-700 text-sm">Real-World Equity Benchmarks by Role and Stage</a></li>
+                  <li><a href="#how-to-use-an-equity-calculator" className="text-blue-600 hover:text-blue-700 text-sm">How to Use an Equity Calculator</a></li>
+                  <li><a href="#negotiating-equity-grants-founder-perspective" className="text-blue-600 hover:text-blue-700 text-sm">Negotiating Equity Grants: Founder Perspective</a></li>
+                  <li><a href="#common-equity-grant-mistakes-and-how-to-avoid-them" className="text-blue-600 hover:text-blue-700 text-sm">Common Equity Grant Mistakes (and How to Avoid Them)</a></li>
+                  <li><a href="#equity-grant-tax-implications-for-employees" className="text-blue-600 hover:text-blue-700 text-sm">Equity Grant Tax Implications for Employees</a></li>
+                  <li><a href="#frequently-asked-questions-about-employee-equity" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions About Employee Equity</a></li>
+                  <li><a href="#templates-and-actionable-resources" className="text-blue-600 hover:text-blue-700 text-sm">Templates and Actionable Resources</a></li>
+                  <li><a href="#key-takeaways-the-equity-grant-framework" className="text-blue-600 hover:text-blue-700 text-sm">Key Takeaways: The Equity Grant Framework</a></li>
+                  <li><a href="#next-steps-calculate-your-employee-equity-grants" className="text-blue-600 hover:text-blue-700 text-sm">Next Steps: Calculate Your Employee Equity Grants</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -130,7 +211,7 @@ export default function EarlyEmployeeEquityCalculatorGuideBlogPost() {
 
 <p><strong>TL;DR:</strong> Early employees (hires #1-5) typically receive 0.5-2% equity, employees #6-20 receive 0.1-0.5%, and hires #21+ receive 0.01-0.1%. This comprehensive guide provides benchmarks, calculators, and negotiation strategies based on real data from Carta and AngelList.</p>
 
-<h2>Early Employee Equity Benchmarks by Hire Number</h2>
+<h2 id="early-employee-equity-benchmarks-by-hire-number">Early Employee Equity Benchmarks by Hire Number</h2>
 
 <p>Determining how much equity to offer early employees is one of the most consequential decisions founders make. Get it right, and you attract exceptional talent who feel genuinely invested in your company's success. Get it wrong, and you either overpay (diluting yourself unnecessarily) or lose top candidates to competitors.</p>
 
@@ -178,7 +259,7 @@ export default function EarlyEmployeeEquityCalculatorGuideBlogPost() {
 
 <p><strong>Pave's 2024 Compensation Report</strong>, analyzing 8,000+ offers, found that the <strong>median Series A employee receives 0.08% equity</strong>, while the median Series B employee receives just 0.03%. This compression accelerates with each funding round.</p>
 
-<h2>How to Calculate Employee Equity Grants</h2>
+<h2 id="how-to-calculate-employee-equity-grants">How to Calculate Employee Equity Grants</h2>
 
 <p>While benchmarks provide helpful guardrails, calculating the right equity grant for a specific candidate requires considering multiple factors. Here's the systematic framework top startups use:</p>
 
@@ -242,7 +323,7 @@ export default function EarlyEmployeeEquityCalculatorGuideBlogPost() {
 
 <p>This creates a compensation "budget" where founders decide whether to spend equity or cash to attract talent. Most successful startups at pre-Series A stage default to slightly below-market cash with above-market equity grants.</p>
 
-<h2>Vesting Schedules: The Critical Implementation Detail</h2>
+<h2 id="vesting-schedules-the-critical-implementation-detail">Vesting Schedules: The Critical Implementation Detail</h2>
 
 <p>Equity grants are meaningless without properly structured vesting. <strong>The industry-standard vesting schedule is 4 years with a 1-year cliff</strong>, but early employees often negotiate better terms.</p>
 
@@ -295,7 +376,21 @@ export default function EarlyEmployeeEquityCalculatorGuideBlogPost() {
   <li><strong>Benefit:</strong> Can save employees millions in taxes if company succeeds</li>
 </ul>
 
-<h2>Real-World Equity Benchmarks by Role and Stage</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Plan Your Vesting Schedule</p>
+                <p className="text-gray-600 mb-4">Visualize vesting timelines, cliff dates, and acceleration scenarios for founders and employees.</p>
+                <a
+                  href="https://icanpitch.com/vesting-schedule-cliff-explorer/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Vesting Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="real-world-equity-benchmarks-by-role-and-stage">Real-World Equity Benchmarks by Role and Stage</h2>
 
 <p>Let's get more granular with role-specific data from Pave, Carta, and AngelList's 2024 compensation benchmarks:</p>
 
@@ -333,7 +428,7 @@ export default function EarlyEmployeeEquityCalculatorGuideBlogPost() {
 
 <p><strong>Source: AngelList Talent Benchmarks 2024</strong></p>
 
-<h2>How to Use an Equity Calculator</h2>
+<h2 id="how-to-use-an-equity-calculator">How to Use an Equity Calculator</h2>
 
 <p>Manual calculations are error-prone and time-consuming. Here's how to use equity calculators effectively:</p>
 
@@ -411,7 +506,7 @@ export default function EarlyEmployeeEquityCalculatorGuideBlogPost() {
   <li><strong>Unique benefit:</strong> Shows how grants affect founder ownership over time</li>
 </ul>
 
-<h2>Negotiating Equity Grants: Founder Perspective</h2>
+<h2 id="negotiating-equity-grants-founder-perspective">Negotiating Equity Grants: Founder Perspective</h2>
 
 <p>Even with perfect calculations, negotiation is inevitable. Here's how to handle equity conversations with candidates:</p>
 
@@ -456,7 +551,7 @@ export default function EarlyEmployeeEquityCalculatorGuideBlogPost() {
 
 <p>According to <strong>First Round Capital's State of Startups 2024</strong>, 68% of founders regret being too generous with early equity grants, while only 22% regret being too conservative. The data suggests erring on the side of benchmark offers unless there's compelling reason to exceed them.</p>
 
-<h2>Common Equity Grant Mistakes (and How to Avoid Them)</h2>
+<h2 id="common-equity-grant-mistakes-and-how-to-avoid-them">Common Equity Grant Mistakes (and How to Avoid Them)</h2>
 
 <h3>Mistake 1: Equal Grants for Unequal Roles</h3>
 
@@ -498,7 +593,7 @@ export default function EarlyEmployeeEquityCalculatorGuideBlogPost() {
 
 <p><strong>The fix:</strong> Always grant specific option numbers with strike price. State the percentage as reference ("approximately 1% of current fully-diluted shares") but the grant is for X options, not Y percentage.</p>
 
-<h2>Equity Grant Tax Implications for Employees</h2>
+<h2 id="equity-grant-tax-implications-for-employees">Equity Grant Tax Implications for Employees</h2>
 
 <p>While you're not providing tax advice, understanding basic tax implications helps you structure competitive packages:</p>
 
@@ -544,7 +639,7 @@ export default function EarlyEmployeeEquityCalculatorGuideBlogPost() {
 
 <p>This is why offering early exercise to your first 5-10 employees is a massive recruiting advantage when strike prices are under $1.00.</p>
 
-<h2>Frequently Asked Questions About Employee Equity</h2>
+<h2 id="frequently-asked-questions-about-employee-equity">Frequently Asked Questions About Employee Equity</h2>
 
 <h3>How much equity should a first employee get?</h3>
 <p>First employees (hires #1-5) typically receive 0.5-2.0% equity depending on their role. A first engineer usually gets 1.5-2.5%, first sales hire gets 1.0-2.0%, and first product/design hire gets 0.8-1.5%. According to Carta's 2024 data, the median first engineering hire receives exactly 2.0% with 4-year vesting.</p>
@@ -567,7 +662,7 @@ export default function EarlyEmployeeEquityCalculatorGuideBlogPost() {
 <h3>How do I compare equity offers from different startups?</h3>
 <p>Compare equity offers by calculating expected value at realistic exit scenarios, not just percentage ownership. A 0.5% stake in a company likely to reach $500M valuation (expected value: $2.5M) beats a 2.0% stake in a company likely to reach $50M valuation (expected value: $1M). Use tools like Carta's Total Compensation Calculator to normalize offers, considering company stage, traction, funding history, and comparable exit multiples.</p>
 
-<h2>Templates and Actionable Resources</h2>
+<h2 id="templates-and-actionable-resources">Templates and Actionable Resources</h2>
 
 <h3>Equity Grant Letter Template</h3>
 
@@ -640,7 +735,7 @@ Employee Signature / Date
   <li><strong>Vested vs. Unvested:</strong> What % of granted options are actually vested?</li>
 </ul>
 
-<h2>Key Takeaways: The Equity Grant Framework</h2>
+<h2 id="key-takeaways-the-equity-grant-framework">Key Takeaways: The Equity Grant Framework</h2>
 
 <p>Use this decision framework every time you make an equity grant:</p>
 
@@ -674,7 +769,7 @@ Employee Signature / Date
 
 <p>Follow this framework religiously for your first 20 employees, and you'll build a compensation structure that's fair, defensible, and competitive.</p>
 
-<h2>Next Steps: Calculate Your Employee Equity Grants</h2>
+<h2 id="next-steps-calculate-your-employee-equity-grants">Next Steps: Calculate Your Employee Equity Grants</h2>
 
 <p>You now have the complete framework for determining employee equity grants. Here's your immediate action plan:</p>
 
@@ -726,13 +821,30 @@ Employee Signature / Date
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/co-founder-equity-split-50-50-alternatives/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Co-Founder Equity Split: Why 50/50 Fails and Better Alternatives</span>
+                </Link>
+                <Link href="/blog/founder-vesting-schedules-4-year-1-year-cliff/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Founder Vesting Schedules: 4-Year 1-Year Cliff Explained</span>
+                </Link>
+                <Link href="/blog/equity-split-technical-vs-business-cofounder/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Equity Split: Technical vs Business Co-Founder Guide</span>
+                </Link>
+                <Link href="/blog/how-to-calculate-safe-dilution/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Calculate SAFE Dilution: A Founder's Guide</span>
+                </Link>
+                <Link href="/blog/option-pool-dilution-impact-founders/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Option Pool Dilution Impact on Founders: Complete Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/vesting-calculator-seed-serial-entrepreneur-boston-plan-founder-vesting-protect-against-co-founder-departure/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Vesting Calculator</Link>
+              <Link href="/blog/equity-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Equity, Vesting & Option Pool Guides</Link>
             </div>
           </div>
         </section>
@@ -742,18 +854,18 @@ Employee Signature / Date
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Plan Your Vesting Schedule
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Visualize vesting timelines, cliff dates, and acceleration scenarios for founders and employees.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/vesting-schedule-cliff-explorer/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Vesting Calculator &rarr;
               </a>
             </div>
           </div>

@@ -119,8 +119,27 @@ export default function SafeCalculatorSeattleBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-seattle-safe-valuations-differ-from-silicon-valley" className="text-blue-600 hover:text-blue-700 text-sm">Why Seattle SAFE Valuations Differ from Silicon Valley</a></li>
+                  <li><a href="#seattles-startup-ecosystem-enterprise-dna-and-cloud-infrastr" className="text-blue-600 hover:text-blue-700 text-sm">Seattle's Startup Ecosystem: Enterprise DNA and Cloud Infrastructure</a></li>
+                  <li><a href="#seattle-safe-valuation-benchmarks-2025-data" className="text-blue-600 hover:text-blue-700 text-sm">Seattle SAFE Valuation Benchmarks: 2025 Data</a></li>
+                  <li><a href="#how-to-use-a-safe-calculator-for-seattle-fundraising" className="text-blue-600 hover:text-blue-700 text-sm">How to Use a SAFE Calculator for Seattle Fundraising</a></li>
+                  <li><a href="#seattle-investor-landscape-whos-writing-safe-notes" className="text-blue-600 hover:text-blue-700 text-sm">Seattle Investor Landscape: Who's Writing SAFE Notes?</a></li>
+                  <li><a href="#industry-specific-considerations-for-seattle-startups" className="text-blue-600 hover:text-blue-700 text-sm">Industry-Specific Considerations for Seattle Startups</a></li>
+                  <li><a href="#common-safe-calculation-mistakes-seattle-founders-make" className="text-blue-600 hover:text-blue-700 text-sm">Common SAFE Calculation Mistakes Seattle Founders Make</a></li>
+                  <li><a href="#step-by-step-using-the-safe-calculator-for-seattle-fundraisi" className="text-blue-600 hover:text-blue-700 text-sm">Step-by-Step: Using the SAFE Calculator for Seattle Fundraising</a></li>
+                  <li><a href="#seattle-safe-negotiation-tips" className="text-blue-600 hover:text-blue-700 text-sm">Seattle SAFE Negotiation Tips</a></li>
+                  <li><a href="#when-to-raise-a-safe-vs-priced-round-in-seattle" className="text-blue-600 hover:text-blue-700 text-sm">When to Raise a SAFE vs. Priced Round in Seattle</a></li>
+                  <li><a href="#resources-for-seattle-founders" className="text-blue-600 hover:text-blue-700 text-sm">Resources for Seattle Founders</a></li>
+                  <li><a href="#final-checklist-using-your-safe-calculator" className="text-blue-600 hover:text-blue-700 text-sm">Final Checklist: Using Your SAFE Calculator</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -131,7 +150,7 @@ export default function SafeCalculatorSeattleBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why Seattle SAFE Valuations Differ from Silicon Valley</h2>
+                <h2 id="why-seattle-safe-valuations-differ-from-silicon-valley">Why Seattle SAFE Valuations Differ from Silicon Valley</h2>
 
 <p>Seattle's startup ecosystem operates under fundamentally different economic dynamics than Silicon Valley. While Bay Area pre-seed startups routinely command $8-12M valuation caps on SAFE notes, Seattle founders typically see caps 20-30% lower—ranging from $5-8M for comparable companies. This gap reflects investor expectations shaped by the Pacific Northwest's enterprise-focused culture, lower operating costs, and a talent market anchored by Amazon and Microsoft.</p>
 
@@ -139,7 +158,7 @@ export default function SafeCalculatorSeattleBlogPost() {
 
 <p>Seattle's valuation pragmatism stems from its roots in profitable, product-market-fit-driven companies. Investors here—many of whom are former Amazon or Microsoft executives—prioritize unit economics and clear paths to profitability over growth-at-all-costs models. This manifests in stricter diligence, lower pre-revenue valuations, and more conservative cap table construction from day one.</p>
 
-<h2>Seattle's Startup Ecosystem: Enterprise DNA and Cloud Infrastructure</h2>
+<h2 id="seattles-startup-ecosystem-enterprise-dna-and-cloud-infrastr">Seattle's Startup Ecosystem: Enterprise DNA and Cloud Infrastructure</h2>
 
 <p>Seattle is the birthplace of cloud computing (AWS), modern enterprise software (Microsoft), and some of the world's most capital-efficient SaaS companies. This heritage creates a distinct funding environment for founders:</p>
 
@@ -152,7 +171,7 @@ export default function SafeCalculatorSeattleBlogPost() {
 
 <p>These factors directly impact SAFE note terms. A Seattle pre-seed round typically looks like: $750K-1.5M raised, $4-7M valuation cap, 15-20% discount, and no valuation floor. Compare this to SF ($1-2M raised, $8-12M cap, 20% discount) or NYC ($800K-1.2M raised, $6-9M cap, 15-20% discount).</p>
 
-<h2>Seattle SAFE Valuation Benchmarks: 2025 Data</h2>
+<h2 id="seattle-safe-valuation-benchmarks-2025-data">Seattle SAFE Valuation Benchmarks: 2025 Data</h2>
 
 <p>Based on aggregated data from PitchBook, Carta, and Seattle-based accelerators (Techstars Seattle, the Allen Institute's Accelerator, and PSL Ventures), here are realistic SAFE valuation cap benchmarks for Seattle startups:</p>
 
@@ -177,7 +196,21 @@ export default function SafeCalculatorSeattleBlogPost() {
 
 <p>When using a <a href="https://www.icanpitch.com/calculators/safe-calculator/" target="_blank" rel="noopener noreferrer">SAFE dilution calculator</a>, Seattle founders should model priced rounds at 1.8-2.2x the last SAFE cap (vs. 2.5-3x in SF). A $6M SAFE cap typically converts at a $12-14M Series A pre-money valuation in Seattle, assuming you've hit $1-2M ARR with strong net revenue retention.</p>
 
-<h2>How to Use a SAFE Calculator for Seattle Fundraising</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="how-to-use-a-safe-calculator-for-seattle-fundraising">How to Use a SAFE Calculator for Seattle Fundraising</h2>
 
 <p>A SAFE calculator is essential for modeling dilution, understanding investor returns, and planning multiple fundraising scenarios. Here's how Seattle founders should use this tool:</p>
 
@@ -232,7 +265,7 @@ export default function SafeCalculatorSeattleBlogPost() {
 
 <p>If your Series A is $5M at $15M pre-money, you'll dilute another 25%, leaving founders with ~55% post-A. This is healthy for Seattle—aim to own 50-60% after your first priced round to preserve control and motivation through Series B and beyond.</p>
 
-<h2>Seattle Investor Landscape: Who's Writing SAFE Notes?</h2>
+<h2 id="seattle-investor-landscape-whos-writing-safe-notes">Seattle Investor Landscape: Who's Writing SAFE Notes?</h2>
 
 <p>Seattle's early-stage funding ecosystem is dominated by a mix of local angels, regional micro-VCs, and national funds with Seattle scouts. Understanding who invests at what stage helps you benchmark your SAFE terms:</p>
 
@@ -269,7 +302,7 @@ export default function SafeCalculatorSeattleBlogPost() {
 
 <p>When modeling your SAFE calculator inputs, use the valuation caps these investors typically accept. For example, if Techstars invests at a $2M post-money, and you subsequently raise a SAFE at $6M cap, use the weighted average to understand your true dilution.</p>
 
-<h2>Industry-Specific Considerations for Seattle Startups</h2>
+<h2 id="industry-specific-considerations-for-seattle-startups">Industry-Specific Considerations for Seattle Startups</h2>
 
 <p>Seattle's industry concentration means SAFE terms vary significantly by vertical. Here's how to adjust your calculator assumptions:</p>
 
@@ -325,7 +358,7 @@ export default function SafeCalculatorSeattleBlogPost() {
 
 <p>Be realistic with your SAFE calculator inputs. Many Seattle consumer startups raise SAFEs locally, then struggle to raise priced rounds without relocating to SF. Model Series A at 1.5-2x your cap unless you have clear path to profitability.</p>
 
-<h2>Common SAFE Calculation Mistakes Seattle Founders Make</h2>
+<h2 id="common-safe-calculation-mistakes-seattle-founders-make">Common SAFE Calculation Mistakes Seattle Founders Make</h2>
 
 <p>Working with Seattle founders through fundraising, I see recurring errors when modeling SAFE dilution:</p>
 
@@ -349,7 +382,7 @@ export default function SafeCalculatorSeattleBlogPost() {
 
 <p>Series A investors typically require a 15-20% post-money option pool. This comes out of founder and existing investor ownership. If your SAFE calculator shows 15% SAFE dilution, add another 3-5% dilution from option pool expansion to get true founder ownership post-A.</p>
 
-<h2>Step-by-Step: Using the SAFE Calculator for Seattle Fundraising</h2>
+<h2 id="step-by-step-using-the-safe-calculator-for-seattle-fundraisi">Step-by-Step: Using the SAFE Calculator for Seattle Fundraising</h2>
 
 <p>Here's a practical walkthrough for a hypothetical Seattle enterprise SaaS startup:</p>
 
@@ -387,7 +420,7 @@ export default function SafeCalculatorSeattleBlogPost() {
 
 <p>Try this calculation yourself with the <a href="https://www.icanpitch.com/calculators/safe-calculator/" target="_blank" rel="noopener noreferrer">ICanPitch SAFE calculator</a> to model your own Seattle fundraising scenario.</p>
 
-<h2>Seattle SAFE Negotiation Tips</h2>
+<h2 id="seattle-safe-negotiation-tips">Seattle SAFE Negotiation Tips</h2>
 
 <p>Negotiating SAFE terms in Seattle differs from SF. Here's what works:</p>
 
@@ -424,7 +457,7 @@ export default function SafeCalculatorSeattleBlogPost() {
 
 <p>Monthly or quarterly updates are standard. Annual financial audits should only be granted to lead investors ($500K+).</p>
 
-<h2>When to Raise a SAFE vs. Priced Round in Seattle</h2>
+<h2 id="when-to-raise-a-safe-vs-priced-round-in-seattle">When to Raise a SAFE vs. Priced Round in Seattle</h2>
 
 <p>Not every Seattle founder should use SAFEs. Here's when to choose each:</p>
 
@@ -450,7 +483,7 @@ export default function SafeCalculatorSeattleBlogPost() {
 
 <p>A good rule: Use SAFEs for pre-seed and bridge rounds. Switch to priced equity for your first $3M+ institutional round.</p>
 
-<h2>Resources for Seattle Founders</h2>
+<h2 id="resources-for-seattle-founders">Resources for Seattle Founders</h2>
 
 <p>Leverage these Seattle-specific resources when planning your fundraising:</p>
 
@@ -479,7 +512,7 @@ export default function SafeCalculatorSeattleBlogPost() {
   <li><strong>Seattle Tech Slack (#fundraising channel):</strong> Real-time discussions of active term sheets and valuations</li>
 </ul>
 
-<h2>Final Checklist: Using Your SAFE Calculator</h2>
+<h2 id="final-checklist-using-your-safe-calculator">Final Checklist: Using Your SAFE Calculator</h2>
 
 <p>Before you send that first SAFE term sheet, run through this checklist with your calculator:</p>
 
@@ -531,13 +564,31 @@ export default function SafeCalculatorSeattleBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/safe-calculator-bangalore/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Bangalore Startups: 2025 India Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-singapore/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Singapore Startups: 2025 Valuation Guide</span>
+                </Link>
+                <Link href="/blog/how-to-negotiate-safe-valuation-cap/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Negotiate SAFE Valuation Caps: 2025 Founder's Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-first-time-founders-complete-guide/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for First-Time Founders: Complete 2025 Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-new-york-startup-scene/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for New York Startups: NYC Founder's Guide to SAFE Notes</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -547,18 +598,18 @@ export default function SafeCalculatorSeattleBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

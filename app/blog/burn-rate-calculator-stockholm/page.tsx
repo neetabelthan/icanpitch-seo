@@ -115,8 +115,27 @@ export default function BurnRateCalculatorStockholmBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-stockholm-startups-need-specialized-burn-rate-tracking" className="text-blue-600 hover:text-blue-700 text-sm">Why Stockholm Startups Need Specialized Burn Rate Tracking</a></li>
+                  <li><a href="#understanding-burn-rate-in-the-stockholm-context" className="text-blue-600 hover:text-blue-700 text-sm">Understanding Burn Rate in the Stockholm Context</a></li>
+                  <li><a href="#stockholm-specific-cost-benchmarks-what-should-you-budget" className="text-blue-600 hover:text-blue-700 text-sm">Stockholm-Specific Cost Benchmarks: What Should You Budget?</a></li>
+                  <li><a href="#calculating-your-stockholm-startups-burn-rate-step-by-step" className="text-blue-600 hover:text-blue-700 text-sm">Calculating Your Stockholm Startup's Burn Rate: Step-by-Step</a></li>
+                  <li><a href="#stockholm-vs-other-european-tech-hubs-burn-rate-comparison" className="text-blue-600 hover:text-blue-700 text-sm">Stockholm vs. Other European Tech Hubs: Burn Rate Comparison</a></li>
+                  <li><a href="#the-swedish-advantage-how-public-benefits-reduce-effective-b" className="text-blue-600 hover:text-blue-700 text-sm">The Swedish Advantage: How Public Benefits Reduce Effective Burn Rate</a></li>
+                  <li><a href="#stockholm-startup-ecosystem-resources-for-managing-burn-rate" className="text-blue-600 hover:text-blue-700 text-sm">Stockholm Startup Ecosystem Resources for Managing Burn Rate</a></li>
+                  <li><a href="#strategies-to-optimize-burn-rate-in-stockholm" className="text-blue-600 hover:text-blue-700 text-sm">Strategies to Optimize Burn Rate in Stockholm</a></li>
+                  <li><a href="#when-to-worry-stockholm-burn-rate-red-flags" className="text-blue-600 hover:text-blue-700 text-sm">When to Worry: Stockholm Burn Rate Red Flags</a></li>
+                  <li><a href="#stockholm-fundraising-timeline-and-burn-rate-planning" className="text-blue-600 hover:text-blue-700 text-sm">Stockholm Fundraising Timeline and Burn Rate Planning</a></li>
+                  <li><a href="#case-study-how-stockholm-unicorns-managed-burn-rate" className="text-blue-600 hover:text-blue-700 text-sm">Case Study: How Stockholm Unicorns Managed Burn Rate</a></li>
+                  <li><a href="#key-takeaways-for-stockholm-founders" className="text-blue-600 hover:text-blue-700 text-sm">Key Takeaways for Stockholm Founders</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -127,7 +146,7 @@ export default function BurnRateCalculatorStockholmBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why Stockholm Startups Need Specialized Burn Rate Tracking</h2>
+                <h2 id="why-stockholm-startups-need-specialized-burn-rate-tracking">Why Stockholm Startups Need Specialized Burn Rate Tracking</h2>
 
 <p>Stockholm has emerged as Europe's unicorn factory, producing success stories like Spotify, Klarna, iZettle, and King. But behind these billion-dollar exits lies a critical reality: Stockholm's unique cost structure demands specialized financial planning. The city's high salaries, SEK currency fluctuations, and Nordic-specific operational costs make burn rate management fundamentally different from Silicon Valley or other European tech hubs.</p>
 
@@ -135,7 +154,7 @@ export default function BurnRateCalculatorStockholmBlogPost() {
 
 <p>This comprehensive guide provides Stockholm founders with the framework, benchmarks, and actionable strategies to calculate, analyze, and optimize burn rate specifically for the Swedish startup environment.</p>
 
-<h2>Understanding Burn Rate in the Stockholm Context</h2>
+<h2 id="understanding-burn-rate-in-the-stockholm-context">Understanding Burn Rate in the Stockholm Context</h2>
 
 <p>Burn rate represents the speed at which your startup consumes cash reserves before reaching profitability or securing additional funding. In Stockholm, this metric takes on particular importance due to the city's unique economic environment.</p>
 
@@ -169,7 +188,7 @@ export default function BurnRateCalculatorStockholmBlogPost() {
 
 <p>Smart Stockholm founders maintain currency hedging strategies or hold reserves in multiple currencies to stabilize burn rate predictability.</p>
 
-<h2>Stockholm-Specific Cost Benchmarks: What Should You Budget?</h2>
+<h2 id="stockholm-specific-cost-benchmarks-what-should-you-budget">Stockholm-Specific Cost Benchmarks: What Should You Budget?</h2>
 
 <p>Stockholm's cost structure differs markedly from other European tech hubs. Here's what founders need to budget for in 2025:</p>
 
@@ -242,7 +261,21 @@ export default function BurnRateCalculatorStockholmBlogPost() {
 <li><strong>Insurance (Liability, D&amp;O):</strong> 3,000-8,000 SEK/month</li>
 </ul>
 
-<h2>Calculating Your Stockholm Startup's Burn Rate: Step-by-Step</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Calculate Your Burn Rate & Runway</p>
+                <p className="text-gray-600 mb-4">Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.</p>
+                <a
+                  href="https://icanpitch.com/burn-rate-runway-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Burn Rate Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="calculating-your-stockholm-startups-burn-rate-step-by-step">Calculating Your Stockholm Startup's Burn Rate: Step-by-Step</h2>
 
 <p>Here's the practical framework Stockholm founders should use monthly:</p>
 
@@ -298,7 +331,7 @@ export default function BurnRateCalculatorStockholmBlogPost() {
 
 <p>If you raised in EUR but operate in SEK, calculate the effective burn rate at current exchange rates and model scenarios with ±10% SEK movement to understand your exposure range.</p>
 
-<h2>Stockholm vs. Other European Tech Hubs: Burn Rate Comparison</h2>
+<h2 id="stockholm-vs-other-european-tech-hubs-burn-rate-comparison">Stockholm vs. Other European Tech Hubs: Burn Rate Comparison</h2>
 
 <p>Understanding how Stockholm's costs compare helps founders make strategic decisions about operations:</p>
 
@@ -327,7 +360,7 @@ export default function BurnRateCalculatorStockholmBlogPost() {
 
 <p>Stockholm's costs are manageable compared to London but higher than continental Europe. The tradeoff: access to world-class talent, a proven unicorn ecosystem, and proximity to Nordic/European markets.</p>
 
-<h2>The Swedish Advantage: How Public Benefits Reduce Effective Burn Rate</h2>
+<h2 id="the-swedish-advantage-how-public-benefits-reduce-effective-b">The Swedish Advantage: How Public Benefits Reduce Effective Burn Rate</h2>
 
 <p>While Stockholm salaries are high, Sweden's robust public benefits system reduces costs that startups elsewhere must bear:</p>
 
@@ -349,7 +382,7 @@ export default function BurnRateCalculatorStockholmBlogPost() {
 
 <p>The net effect: while headline salaries are high, the total cost per employee is more predictable and includes fewer surprise expenses than in many other markets.</p>
 
-<h2>Stockholm Startup Ecosystem Resources for Managing Burn Rate</h2>
+<h2 id="stockholm-startup-ecosystem-resources-for-managing-burn-rate">Stockholm Startup Ecosystem Resources for Managing Burn Rate</h2>
 
 <p>Stockholm's mature startup infrastructure provides extensive support for financial management:</p>
 
@@ -401,7 +434,7 @@ export default function BurnRateCalculatorStockholmBlogPost() {
 <li><strong>Swedish neobanks:</strong> Modern banking with API access for automated financial tracking</li>
 </ul>
 
-<h2>Strategies to Optimize Burn Rate in Stockholm</h2>
+<h2 id="strategies-to-optimize-burn-rate-in-stockholm">Strategies to Optimize Burn Rate in Stockholm</h2>
 
 <p>Swedish founders have unique levers to extend runway without sacrificing growth:</p>
 
@@ -465,7 +498,7 @@ export default function BurnRateCalculatorStockholmBlogPost() {
 <li>Use open-source alternatives where feasible (reduces SaaS spend by 30-50%)</li>
 </ul>
 
-<h2>When to Worry: Stockholm Burn Rate Red Flags</h2>
+<h2 id="when-to-worry-stockholm-burn-rate-red-flags">When to Worry: Stockholm Burn Rate Red Flags</h2>
 
 <p>Swedish VCs watch for these warning signs when evaluating burn rate health:</p>
 
@@ -491,7 +524,7 @@ export default function BurnRateCalculatorStockholmBlogPost() {
 
 <p>Swedish investors expect data-driven decision making. If you can't articulate how each 100,000 SEK spent drives specific growth metrics (CAC, LTV, revenue), you're burning inefficiently.</p>
 
-<h2>Stockholm Fundraising Timeline and Burn Rate Planning</h2>
+<h2 id="stockholm-fundraising-timeline-and-burn-rate-planning">Stockholm Fundraising Timeline and Burn Rate Planning</h2>
 
 <p>Understanding Stockholm's fundraising dynamics is critical for runway planning:</p>
 
@@ -517,7 +550,7 @@ export default function BurnRateCalculatorStockholmBlogPost() {
 
 <p>Stockholm VCs are collaborative but risk-averse. Approaching them from a position of strength (healthy runway, growing metrics) yields better terms and higher valuations.</p>
 
-<h2>Case Study: How Stockholm Unicorns Managed Burn Rate</h2>
+<h2 id="case-study-how-stockholm-unicorns-managed-burn-rate">Case Study: How Stockholm Unicorns Managed Burn Rate</h2>
 
 <h3>Spotify's Early Years</h3>
 
@@ -545,7 +578,7 @@ export default function BurnRateCalculatorStockholmBlogPost() {
 
 <p>Klarna's methodical approach to burn rate created a foundation for becoming Europe's highest-valued fintech unicorn.</p>
 
-<h2>Key Takeaways for Stockholm Founders</h2>
+<h2 id="key-takeaways-for-stockholm-founders">Key Takeaways for Stockholm Founders</h2>
 
 <p>Managing burn rate in Stockholm requires understanding the unique advantages and challenges of the Swedish ecosystem:</p>
 
@@ -586,13 +619,30 @@ export default function BurnRateCalculatorStockholmBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/burn-rate-calculator-hong-kong/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Hong Kong Burn Rate Calculator: HKD Runway Guide for Fintech & APAC Startups (2025)</span>
+                </Link>
+                <Link href="/blog/safe-calculator-stockholm/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Stockholm SAFE Calculator: Navigate Nordic Valuations & SAFE Agreements</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-amsterdam/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Amsterdam Burn Rate Calculator: Master Your Startup Cash Runway in Europe's Tech Hub</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-barcelona/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Barcelona Burn Rate Calculator: Master Cash Runway for Spanish Startups</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-denver/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Denver Burn Rate Calculator: Track Your Startup's Cash Runway in Colorado's Tech Hub</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/burn-rate-calculator-series-a-first-time-founder-new-york-plan-fundraising-timeline-extend-runway-efficiency/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Burn Rate Calculator</Link>
+              <Link href="/blog/burn-rate-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Burn Rate & Runway Guides</Link>
             </div>
           </div>
         </section>
@@ -602,18 +652,18 @@ export default function BurnRateCalculatorStockholmBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Calculate Your Burn Rate & Runway
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/burn-rate-runway-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Burn Rate Calculator &rarr;
               </a>
             </div>
           </div>

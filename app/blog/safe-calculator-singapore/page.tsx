@@ -52,6 +52,68 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Should I price my SAFE in SGD or USD?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use SGD if: Raising primarily from Singapore angels, planning to stay Singapore-focused for 12-18 months, want to avoid FX risk. Use USD if: Raising from international investors, planning immediate regional expansion, anticipating Series A from US/global VCs. Best practice: If there's any chance you'll raise Series A from international investors, start with USD from day one to avoid cap table conversion complexity."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does SEEDS Capital co-investment affect my dilution?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SEEDS Capital matches private investment on identical SAFE terms, effectively doubling your round size and dilution. If you raise S$500K at an S$8M cap (6.25% dilution) and SEEDS matches S$500K, your actual dilution is 12.5% (S$1M ÷ S$8M). Key insight: SEEDS co-investment gives you more runway but proportionally more dilution — it's not \"free money.\""
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's a reasonable SAFE cap for a Singapore pre-seed startup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For pre-revenue or early-traction Singapore startups: S$7M-S$9M (US$5M-US$7M) depending on team, market, and regional potential. Rule of thumb: Set your SAFE cap at 25-30% of your expected Singapore Series A valuation. If you think you'll raise Series A at S$30M, an S$7M-S$9M SAFE cap is appropriate. Add 10-20% if you have documented regional expansion traction."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do Singapore SAFE caps compare to US benchmarks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Singapore SAFE caps run 20-30% lower than US equivalents: S$8M (US$6M) vs US$10M at pre-seed, S$15M (US$11M) vs US$18M at seed. This discount reflects lower operating costs (30-40% cheaper engineering talent), smaller exit valuations (25-35% lower on average), and regional market dynamics. However, Singapore caps are 30-50% higher than other APAC markets like Jakarta or Bangalore."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I negotiate my SAFE cap higher as a first-time Singapore founder?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, if you have leverage: (1) Multiple competing term sheets, (2) Strong traction (revenue, growth, regional expansion), (3) Team with experience from Grab, Sea, Carousell, or other regional successes, or (4) Access to SEEDS Capital co-investment (signals government validation). Without these, first-time founders should accept middle-of-range Singapore benchmarks: S$7M-S$8M pre-seed, S$14M-S$16M seed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I raise multiple SAFEs before Series A?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "All SAFEs convert at Series A, each using their own terms. If you raised S$400K at S$6M cap, then S$600K at S$9M cap, they convert independently. The first SAFE gets better terms (lower cap = more shares). Singapore pattern: 47% of seed companies raise 2-3 SAFEs. Always use a SAFE calculator to model cumulative dilution from multiple SAFEs before signing each subsequent round."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I include pro-rata rights in my Singapore SAFE?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Grant pro-rata rights to investors committing S$250K+ who bring strategic value (customer intros, regional network, follow-on capital access). Avoid granting pro-rata to small angels (S$25K-S$50K) as it fragments your Series A allocation. In Singapore's smaller funding ecosystem, too many pro-rata rights can make it difficult to accommodate new Series A investors who expect minimum 18-22% ownership."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +176,31 @@ export default function SafeCalculatorSingaporeBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#what-is-a-safe-note-the-singapore-founders-introduction" className="text-blue-600 hover:text-blue-700 text-sm">What is a SAFE Note? The Singapore Founder's Introduction</a></li>
+                  <li><a href="#singapore-safe-benchmarks-what-local-and-regional-investors-" className="text-blue-600 hover:text-blue-700 text-sm">Singapore SAFE Benchmarks: What Local and Regional Investors Actually Pay</a></li>
+                  <li><a href="#singapores-unique-safe-advantages-government-co-investment-a" className="text-blue-600 hover:text-blue-700 text-sm">Singapore's Unique SAFE Advantages: Government Co-Investment and Ecosystem Support</a></li>
+                  <li><a href="#singapore-vs-regional-hubs-safe-cap-comparison-across-apac" className="text-blue-600 hover:text-blue-700 text-sm">Singapore vs Regional Hubs: SAFE Cap Comparison Across APAC</a></li>
+                  <li><a href="#how-singapore-investors-evaluate-safes-what-you-need-to-know" className="text-blue-600 hover:text-blue-700 text-sm">How Singapore Investors Evaluate SAFEs: What You Need to Know</a></li>
+                  <li><a href="#understanding-safe-mechanics-the-core-calculations-every-sin" className="text-blue-600 hover:text-blue-700 text-sm">Understanding SAFE Mechanics: The Core Calculations Every Singapore Founder Needs</a></li>
+                  <li><a href="#how-to-use-a-safe-calculator-step-by-step-for-singapore-foun" className="text-blue-600 hover:text-blue-700 text-sm">How to Use a SAFE Calculator: Step-by-Step for Singapore Founders</a></li>
+                  <li><a href="#real-world-singapore-safe-calculator-example-priyas-logistic" className="text-blue-600 hover:text-blue-700 text-sm">Real-World Singapore SAFE Calculator Example: Priya's Logistics SaaS Round</a></li>
+                  <li><a href="#common-safe-calculator-mistakes-singapore-founders-make" className="text-blue-600 hover:text-blue-700 text-sm">Common SAFE Calculator Mistakes Singapore Founders Make</a></li>
+                  <li><a href="#15-singapore-safe-statistics-every-apac-founder-should-know" className="text-blue-600 hover:text-blue-700 text-sm">15 Singapore SAFE Statistics Every APAC Founder Should Know</a></li>
+                  <li><a href="#how-to-negotiate-safe-terms-as-a-singapore-founder" className="text-blue-600 hover:text-blue-700 text-sm">How to Negotiate SAFE Terms as a Singapore Founder</a></li>
+                  <li><a href="#singapore-startup-success-stories-safes-that-worked" className="text-blue-600 hover:text-blue-700 text-sm">Singapore Startup Success Stories: SAFEs That Worked</a></li>
+                  <li><a href="#the-singapore-founders-safe-calculator-checklist" className="text-blue-600 hover:text-blue-700 text-sm">The Singapore Founder's SAFE Calculator Checklist</a></li>
+                  <li><a href="#frequently-asked-questions-safe-calculators-for-singapore-fo" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions: SAFE Calculators for Singapore Founders</a></li>
+                  <li><a href="#key-takeaways-singapore-safe-calculator-essentials" className="text-blue-600 hover:text-blue-700 text-sm">Key Takeaways: Singapore SAFE Calculator Essentials</a></li>
+                  <li><a href="#next-steps-model-your-singapore-safe-today" className="text-blue-600 hover:text-blue-700 text-sm">Next Steps: Model Your Singapore SAFE Today</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +211,7 @@ export default function SafeCalculatorSingaporeBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>What is a SAFE Note? The Singapore Founder's Introduction</h2>
+                <h2 id="what-is-a-safe-note-the-singapore-founders-introduction">What is a SAFE Note? The Singapore Founder's Introduction</h2>
 <p>
   <strong>SAFE stands for "Simple Agreement for Future Equity"</strong> — a financing instrument created by Y Combinator in 2013 that allows startups to raise capital without immediately determining a company valuation. While SAFEs originated in Silicon Valley, they've become the dominant pre-seed and seed funding instrument across APAC, with Singapore leading regional adoption. <strong>According to Startup SG data, 62% of Singaporean startups raising pre-seed or seed rounds in 2024 used SAFEs, up from 41% in 2022.</strong>
 </p>
@@ -148,7 +233,7 @@ export default function SafeCalculatorSingaporeBlogPost() {
   <strong>Priya's challenge mirrors what thousands of Singapore founders face:</strong> How do you price a SAFE in a market where valuations run 20-30% lower than US equivalents, but regional investors expect Silicon Valley-style upside? How do you navigate between SGD and USD terms when most institutional investors operate in USD? And how do you leverage Singapore's unique advantages — government co-investment schemes, proximity to APAC markets, and access to regional capital — while managing dilution across multiple funding rounds?
 </p>
 
-<h2>Singapore SAFE Benchmarks: What Local and Regional Investors Actually Pay</h2>
+<h2 id="singapore-safe-benchmarks-what-local-and-regional-investors-">Singapore SAFE Benchmarks: What Local and Regional Investors Actually Pay</h2>
 
 <h3>Pre-Seed SAFE Caps in Singapore: S$6M-S$10M (US$4.5M-US$7.5M)</h3>
 <p>
@@ -185,7 +270,7 @@ export default function SafeCalculatorSingaporeBlogPost() {
   <strong>Pro tip from experienced Singapore founders: If you plan to raise Series A from US or global VCs, start with USD SAFEs from day one.</strong> Converting SGD cap tables to USD during Series A creates accounting complexity and potential disputes over conversion rates. <strong>68% of Singapore startups that raised Series A from international VCs in 2024 wished they had used USD terms from their first SAFE</strong> (Insignia Ventures Partners survey, 2024).
 </p>
 
-<h2>Singapore's Unique SAFE Advantages: Government Co-Investment and Ecosystem Support</h2>
+<h2 id="singapores-unique-safe-advantages-government-co-investment-a">Singapore's Unique SAFE Advantages: Government Co-Investment and Ecosystem Support</h2>
 
 <h3>SEEDS Capital Co-Investment: Government Matching for SAFE Rounds</h3>
 <p>
@@ -214,7 +299,21 @@ export default function SafeCalculatorSingaporeBlogPost() {
   <strong>How to leverage the APAC gateway premium in SAFE negotiations:</strong> If your business model has clear regional expansion potential (fintech, e-commerce enablement, logistics, SaaS), justify 10-20% higher caps by demonstrating your Singapore-to-SEA scaling roadmap. Investors pay premiums for companies that can realistically capture multi-country markets. <strong>Data point: Singapore startups with documented expansion plans to 2+ SEA markets commanded 15% higher median SAFE caps than Singapore-only focused companies</strong> (Monk's Hill Ventures, 2024).
 </p>
 
-<h2>Singapore vs Regional Hubs: SAFE Cap Comparison Across APAC</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="singapore-vs-regional-hubs-safe-cap-comparison-across-apac">Singapore vs Regional Hubs: SAFE Cap Comparison Across APAC</h2>
 
 <h3>Pre-Seed SAFE Caps by APAC Market</h3>
 <p>
@@ -240,7 +339,7 @@ export default function SafeCalculatorSingaporeBlogPost() {
   <li><strong>Singapore's premium is justified by exit track record:</strong> Grab (US$40B peak valuation), Sea (US$200B+ peak), Carousell (US$1B+) prove Singapore can produce global-scale companies</li>
 </ul>
 
-<h2>How Singapore Investors Evaluate SAFEs: What You Need to Know</h2>
+<h2 id="how-singapore-investors-evaluate-safes-what-you-need-to-know">How Singapore Investors Evaluate SAFEs: What You Need to Know</h2>
 
 <h3>Local Investor Expectations: Temasek, GIC, and Singapore Family Offices</h3>
 <p>
@@ -283,7 +382,7 @@ export default function SafeCalculatorSingaporeBlogPost() {
   <li><strong>Document regional traction metrics:</strong> US investors evaluate APAC companies on revenue, growth, and retention — not vanity metrics like downloads or signups</li>
 </ul>
 
-<h2>Understanding SAFE Mechanics: The Core Calculations Every Singapore Founder Needs</h2>
+<h2 id="understanding-safe-mechanics-the-core-calculations-every-sin">Understanding SAFE Mechanics: The Core Calculations Every Singapore Founder Needs</h2>
 
 <h3>Valuation Cap: Your Most Important Term</h3>
 <p>
@@ -315,7 +414,7 @@ export default function SafeCalculatorSingaporeBlogPost() {
   <strong>Why this matters more in Singapore:</strong> Because Singapore operating costs are lower than US equivalents, many Singapore founders raise multiple smaller SAFEs (S$300K, then S$400K, then S$500K) rather than one large round. Post-money SAFEs prevent each subsequent raise from unexpectedly diluting the previous investors, reducing potential conflicts and maintaining clean cap table mathematics.
 </p>
 
-<h2>How to Use a SAFE Calculator: Step-by-Step for Singapore Founders</h2>
+<h2 id="how-to-use-a-safe-calculator-step-by-step-for-singapore-foun">How to Use a SAFE Calculator: Step-by-Step for Singapore Founders</h2>
 
 <h3>Step 1: Gather Your Singapore SAFE Terms</h3>
 <p>
@@ -367,7 +466,7 @@ export default function SafeCalculatorSingaporeBlogPost() {
   <li><strong>Singapore-specific scenario:</strong> Raising Series A from local investors (lower valuations) vs international VCs (higher valuations but more dilution)</li>
 </ul>
 
-<h2>Real-World Singapore SAFE Calculator Example: Priya's Logistics SaaS Round</h2>
+<h2 id="real-world-singapore-safe-calculator-example-priyas-logistic">Real-World Singapore SAFE Calculator Example: Priya's Logistics SaaS Round</h2>
 
 <h3>Priya's SAFE Terms: Modeling Singapore Economics</h3>
 <p>
@@ -409,7 +508,7 @@ export default function SafeCalculatorSingaporeBlogPost() {
   Priya chooses Term Sheet B after validating with her advisors that her regional expansion traction justifies the higher cap. Her S$9M cap positions her SAFE investors for a 3.3x return at an S$30M Series A — attractive for Singapore angels without sacrificing founder equity. <strong>The higher cap also signals confidence to future Series A investors that she understands her company's regional value, not just local Singapore positioning.</strong>
 </p>
 
-<h2>Common SAFE Calculator Mistakes Singapore Founders Make</h2>
+<h2 id="common-safe-calculator-mistakes-singapore-founders-make">Common SAFE Calculator Mistakes Singapore Founders Make</h2>
 
 <h3>Mistake #1: Ignoring Currency Fluctuations in Multi-Currency SAFEs</h3>
 <p>
@@ -452,7 +551,7 @@ export default function SafeCalculatorSingaporeBlogPost() {
   <strong>How to avoid:</strong> Don't optimize for "closing fast" at the expense of appropriate pricing. Aim for middle-of-range Singapore caps (S$7M-S$8M pre-seed, S$14M-S$16M seed) that signal you understand market rates. If investors push for lower caps, ask for comparable investment justification: "Can you share examples of similar-stage companies you invested in at lower caps?"
 </p>
 
-<h2>15 Singapore SAFE Statistics Every APAC Founder Should Know</h2>
+<h2 id="15-singapore-safe-statistics-every-apac-founder-should-know">15 Singapore SAFE Statistics Every APAC Founder Should Know</h2>
 
 <ol>
   <li><strong>62% of Singapore startups raising pre-seed or seed rounds in 2024 used SAFEs, up from 41% in 2022</strong> (Startup SG data, 2024)</li>
@@ -472,7 +571,7 @@ export default function SafeCalculatorSingaporeBlogPost() {
   <li><strong>Only 12-15% of Singapore seed-stage companies exit above US$100M, compared to 15-20% in Silicon Valley</strong> (Tech in Asia Exit Analysis, 2024)</li>
 </ol>
 
-<h2>How to Negotiate SAFE Terms as a Singapore Founder</h2>
+<h2 id="how-to-negotiate-safe-terms-as-a-singapore-founder">How to Negotiate SAFE Terms as a Singapore Founder</h2>
 
 <h3>Typical Singapore SAFE Cap Ranges by Stage (2024 Benchmarks)</h3>
 <p>
@@ -512,7 +611,7 @@ export default function SafeCalculatorSingaporeBlogPost() {
   Pro-rata rights don't affect your immediate dilution but can complicate future fundraising by eating into your Series A round allocation. Consider granting pro-rata only to your largest and most strategic SAFE investors — particularly those who can facilitate introductions to regional VCs or enterprise customers across Southeast Asia.
 </p>
 
-<h2>Singapore Startup Success Stories: SAFEs That Worked</h2>
+<h2 id="singapore-startup-success-stories-safes-that-worked">Singapore Startup Success Stories: SAFEs That Worked</h2>
 
 <h3>Carousell: From Singapore SAFE to US$1.1B Valuation</h3>
 <p>
@@ -538,7 +637,7 @@ export default function SafeCalculatorSingaporeBlogPost() {
   <strong>Key lesson:</strong> Regional logistics and infrastructure plays benefit enormously from Singapore headquarters, as the city-state's operational excellence and regulatory environment provide playbooks for scaling across less-developed SEA markets.
 </p>
 
-<h2>The Singapore Founder's SAFE Calculator Checklist</h2>
+<h2 id="the-singapore-founders-safe-calculator-checklist">The Singapore Founder's SAFE Calculator Checklist</h2>
 
 <h3>Before You Sign Any Singapore SAFE, Model These 5 Scenarios</h3>
 <ol>
@@ -558,7 +657,7 @@ export default function SafeCalculatorSingaporeBlogPost() {
   <li><strong>Projected exit ownership below 18-22%:</strong> After 3-4 rounds typical in APAC fundraising cycles, you need at least 18-22% to remain motivated</li>
 </ul>
 
-<h2>Frequently Asked Questions: SAFE Calculators for Singapore Founders</h2>
+<h2 id="frequently-asked-questions-safe-calculators-for-singapore-fo">Frequently Asked Questions: SAFE Calculators for Singapore Founders</h2>
 
 <h3>Should I price my SAFE in SGD or USD?</h3>
 <p>
@@ -595,7 +694,7 @@ export default function SafeCalculatorSingaporeBlogPost() {
   Grant pro-rata rights to investors committing S$250K+ who bring strategic value (customer intros, regional network, follow-on capital access). <strong>Avoid granting pro-rata to small angels (S$25K-S$50K) as it fragments your Series A allocation.</strong> In Singapore's smaller funding ecosystem, too many pro-rata rights can make it difficult to accommodate new Series A investors who expect minimum 18-22% ownership.
 </p>
 
-<h2>Key Takeaways: Singapore SAFE Calculator Essentials</h2>
+<h2 id="key-takeaways-singapore-safe-calculator-essentials">Key Takeaways: Singapore SAFE Calculator Essentials</h2>
 
 <ul>
   <li><strong>Singapore SAFE caps run 20-30% lower than US equivalents:</strong> S$7M-S$9M pre-seed vs US$10M-US$12M in Silicon Valley, reflecting lower operating costs and regional market dynamics</li>
@@ -615,7 +714,7 @@ export default function SafeCalculatorSingaporeBlogPost() {
   <li><strong>Regional scaling justifies premium caps:</strong> Traction in 2+ SEA markets enables 10-20% higher valuations than Singapore-only focused companies</li>
 </ul>
 
-<h2>Next Steps: Model Your Singapore SAFE Today</h2>
+<h2 id="next-steps-model-your-singapore-safe-today">Next Steps: Model Your Singapore SAFE Today</h2>
 
 <p>
   Before you sign your next Singapore SAFE term sheet, invest 15 minutes with a <a href="https://icanpitch.com/safe-calculator/" target="_blank" rel="noopener noreferrer">SAFE calculator</a> to model conversion scenarios. Input your actual terms, adjust for SEEDS Capital co-investment if applicable, model both local APAC and international Series A scenarios, and see exactly how much dilution you're accepting.
@@ -649,13 +748,31 @@ export default function SafeCalculatorSingaporeBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/safe-calculator-bangalore/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Bangalore Startups: 2025 India Guide</span>
+                </Link>
+                <Link href="/blog/how-to-negotiate-safe-valuation-cap/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Negotiate SAFE Valuation Caps: 2025 Founder's Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-first-time-founders-complete-guide/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for First-Time Founders: Complete 2025 Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-new-york-startup-scene/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for New York Startups: NYC Founder's Guide to SAFE Notes</span>
+                </Link>
+                <Link href="/blog/safe-calculator-seattle/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Seattle Startups: 2025 Valuation Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -665,18 +782,18 @@ export default function SafeCalculatorSingaporeBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

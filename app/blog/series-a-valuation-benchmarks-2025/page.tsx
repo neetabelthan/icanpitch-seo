@@ -114,8 +114,27 @@ export default function SeriesAValuationBenchmarks2025BlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#understanding-series-a-valuations-in-2025" className="text-blue-600 hover:text-blue-700 text-sm">Understanding Series A Valuations in 2025</a></li>
+                  <li><a href="#series-a-valuation-ranges-by-geography-2025" className="text-blue-600 hover:text-blue-700 text-sm">Series A Valuation Ranges by Geography (2025)</a></li>
+                  <li><a href="#arr-requirements-by-valuation-tier-2025" className="text-blue-600 hover:text-blue-700 text-sm">ARR Requirements by Valuation Tier (2025)</a></li>
+                  <li><a href="#revenue-multiples-by-industry-2025" className="text-blue-600 hover:text-blue-700 text-sm">Revenue Multiples by Industry (2025)</a></li>
+                  <li><a href="#what-series-a-investors-evaluate-in-2025" className="text-blue-600 hover:text-blue-700 text-sm">What Series A Investors Evaluate in 2025</a></li>
+                  <li><a href="#series-a-dilution-and-cap-table-structure" className="text-blue-600 hover:text-blue-700 text-sm">Series A Dilution and Cap Table Structure</a></li>
+                  <li><a href="#series-a-round-structures-and-terms" className="text-blue-600 hover:text-blue-700 text-sm">Series A Round Structures and Terms</a></li>
+                  <li><a href="#series-a-valuation-by-traction-milestones" className="text-blue-600 hover:text-blue-700 text-sm">Series A Valuation by Traction Milestones</a></li>
+                  <li><a href="#how-to-increase-your-series-a-valuation" className="text-blue-600 hover:text-blue-700 text-sm">How to Increase Your Series A Valuation</a></li>
+                  <li><a href="#common-series-a-valuation-mistakes" className="text-blue-600 hover:text-blue-700 text-sm">Common Series A Valuation Mistakes</a></li>
+                  <li><a href="#series-a-valuation-benchmarks-key-takeaways" className="text-blue-600 hover:text-blue-700 text-sm">Series A Valuation Benchmarks: Key Takeaways</a></li>
+                  <li><a href="#model-your-series-a-valuation-and-dilution" className="text-blue-600 hover:text-blue-700 text-sm">Model Your Series A Valuation and Dilution</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,13 +145,13 @@ export default function SeriesAValuationBenchmarks2025BlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Understanding Series A Valuations in 2025</h2>
+                <h2 id="understanding-series-a-valuations-in-2025">Understanding Series A Valuations in 2025</h2>
 
 <p>Series A valuations have undergone significant rationalization since the 2021-2022 peak, with investors now emphasizing sustainable growth, strong unit economics, and clear paths to profitability over pure growth metrics. In 2025, Series A companies must demonstrate not just product-market fit but scalable, repeatable go-to-market motions and efficient customer acquisition before commanding premium valuations.</p>
 
 <p>According to <a href="https://www.carta.com" target="_blank" rel="noopener noreferrer">Carta's</a> Q4 2024 Series A Report, median pre-money valuations range from $25 million to $50 million, with most rounds clustering around $30M-$40M. This represents a 35-45% compression from 2021 peaks but healthier fundamentals, with companies raising at 2-3x higher ARR levels than during the boom years.</p>
 
-<h2>Series A Valuation Ranges by Geography (2025)</h2>
+<h2 id="series-a-valuation-ranges-by-geography-2025">Series A Valuation Ranges by Geography (2025)</h2>
 
 <h3>San Francisco Bay Area</h3>
 
@@ -178,7 +197,7 @@ export default function SeriesAValuationBenchmarks2025BlogPost() {
 
 <p>APAC valuations vary widely by country. Singapore approaches US Tier 2 levels ($20M-$35M), while India, Australia, and Southeast Asia typically see $12M-$25M Series A pre-money valuations.</p>
 
-<h2>ARR Requirements by Valuation Tier (2025)</h2>
+<h2 id="arr-requirements-by-valuation-tier-2025">ARR Requirements by Valuation Tier (2025)</h2>
 
 <p>For B2B SaaS companies, ARR is the primary valuation driver. Here are 2025 benchmarks:</p>
 
@@ -209,7 +228,21 @@ export default function SeriesAValuationBenchmarks2025BlogPost() {
 
 <p>Many companies at this level could raise Series B but choose Series A structures for timing, investor selection, or strategic reasons.</p>
 
-<h2>Revenue Multiples by Industry (2025)</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="revenue-multiples-by-industry-2025">Revenue Multiples by Industry (2025)</h2>
 
 <p>Valuation multiples (pre-money valuation divided by ARR) vary significantly by industry:</p>
 
@@ -279,7 +312,7 @@ export default function SeriesAValuationBenchmarks2025BlogPost() {
 
 <p>Hardware Series A valuations focus on technical milestones, manufacturing readiness, early customer commitments, and market opportunity rather than revenue multiples. Working prototypes, design-for-manufacturing completion, and significant pre-orders drive valuations.</p>
 
-<h2>What Series A Investors Evaluate in 2025</h2>
+<h2 id="what-series-a-investors-evaluate-in-2025">What Series A Investors Evaluate in 2025</h2>
 
 <h3>1. ARR and Growth Trajectory</h3>
 
@@ -327,7 +360,7 @@ export default function SeriesAValuationBenchmarks2025BlogPost() {
 
 <p>Investors evaluate whether your team can scale the company to $100M+ ARR. This often means recruiting VP-level operators (VP Sales, VP Engineering) before or during Series A.</p>
 
-<h2>Series A Dilution and Cap Table Structure</h2>
+<h2 id="series-a-dilution-and-cap-table-structure">Series A Dilution and Cap Table Structure</h2>
 
 <p>Typical Series A dilution ranges from 20% to 30%, with most rounds settling around 22-25%.</p>
 
@@ -357,7 +390,7 @@ export default function SeriesAValuationBenchmarks2025BlogPost() {
 
 <p>Most Series A rounds include option pool refreshes to 12-18% fully diluted, providing equity for key executive hires and team scaling. This dilution is typically borne pro-rata by all shareholders or negotiated to come from pre-money (diluting existing shareholders only).</p>
 
-<h2>Series A Round Structures and Terms</h2>
+<h2 id="series-a-round-structures-and-terms">Series A Round Structures and Terms</h2>
 
 <h3>Priced Equity Rounds Dominate</h3>
 
@@ -384,7 +417,7 @@ export default function SeriesAValuationBenchmarks2025BlogPost() {
   <li><strong>Blocking rights beyond standard:</strong> Excessive veto rights that hamstring operations</li>
 </ul>
 
-<h2>Series A Valuation by Traction Milestones</h2>
+<h2 id="series-a-valuation-by-traction-milestones">Series A Valuation by Traction Milestones</h2>
 
 <h3>Strong Traction Profile</h3>
 
@@ -428,7 +461,7 @@ export default function SeriesAValuationBenchmarks2025BlogPost() {
   <li>Team: 15-25 employees</li>
 </ul>
 
-<h2>How to Increase Your Series A Valuation</h2>
+<h2 id="how-to-increase-your-series-a-valuation">How to Increase Your Series A Valuation</h2>
 
 <h3>1. Improve Key Metrics Before Fundraising</h3>
 
@@ -450,7 +483,7 @@ export default function SeriesAValuationBenchmarks2025BlogPost() {
 
 <p>Warm relationships with target Series A investors 6-12 months before fundraising result in faster processes, better terms, and often 10-20% higher valuations than cold outreach.</p>
 
-<h2>Common Series A Valuation Mistakes</h2>
+<h2 id="common-series-a-valuation-mistakes">Common Series A Valuation Mistakes</h2>
 
 <h3>Mistake 1: Raising Too Early</h3>
 
@@ -468,7 +501,7 @@ export default function SeriesAValuationBenchmarks2025BlogPost() {
 
 <p>Participating preferred, full ratchet anti-dilution, or 2x+ liquidation preferences can destroy founder economics. Never accept these terms regardless of valuation.</p>
 
-<h2>Series A Valuation Benchmarks: Key Takeaways</h2>
+<h2 id="series-a-valuation-benchmarks-key-takeaways">Series A Valuation Benchmarks: Key Takeaways</h2>
 
 <ul>
   <li><strong>Pre-money range:</strong> $25M-$50M typical, with $30M-$40M most common</li>
@@ -481,7 +514,7 @@ export default function SeriesAValuationBenchmarks2025BlogPost() {
   <li><strong>Geographic variance:</strong> SF/NYC command 20-40% premiums over other markets</li>
 </ul>
 
-<h2>Model Your Series A Valuation and Dilution</h2>
+<h2 id="model-your-series-a-valuation-and-dilution">Model Your Series A Valuation and Dilution</h2>
 
 <p>Use <a href="https://www.icanpitch.com" target="_blank" rel="noopener noreferrer">ICanPitch's Series A valuation calculator</a> to model different ARR and growth scenarios, understand how unit economics impact valuations, and benchmark your metrics against top performers. Get data-driven insights to optimize your fundraising strategy and maximize your Series A outcome.</p>
 
@@ -504,13 +537,30 @@ export default function SeriesAValuationBenchmarks2025BlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/pre-seed-valuation-benchmarks-2025/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pre-Seed Valuation Benchmarks 2025: SAFE Caps and Investor Expectations</span>
+                </Link>
+                <Link href="/blog/safe-calculator-b2b-saas-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">B2B SaaS SAFE Calculator for London Startups: UK Valuation Benchmarks vs US Comparables</span>
+                </Link>
+                <Link href="/blog/safe-calculator-miami/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Miami SAFE Calculator: Navigate SAFE Financing in South Florida's Crypto & Web3 Capital</span>
+                </Link>
+                <Link href="/blog/safe-calculator-ai-ml-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">AI/ML SAFE Calculator Silicon Valley: 2025 Valuation Benchmarks for Foundation Models vs Application Layer</span>
+                </Link>
+                <Link href="/blog/safe-calculator-amsterdam/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Amsterdam SAFE Calculator: Navigate Cross-Border Fundraising and Dutch Valuations</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -520,18 +570,18 @@ export default function SeriesAValuationBenchmarks2025BlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

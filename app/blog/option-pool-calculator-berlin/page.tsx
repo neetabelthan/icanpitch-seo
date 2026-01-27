@@ -52,6 +52,60 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Should I use VSOP or ESOP for my Berlin startup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "VSOP is the default choice for most German startups (60-70% of Berlin companies) due to overwhelming tax advantages (26.375% capital gains vs up to 50% income tax + social contributions for ESOP). Choose ESOP only if you have specific needs for real share ownership, such as recruiting international executives who demand voting rights or targeting IPO where employee share ownership matters."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I explain VSOPs to international candidates unfamiliar with the structure?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Frame VSOPs as \"tax-optimized equity\" that delivers more after-tax value than traditional options. Show candidates side-by-side calculations: a VSOP grant results in ~50% more after-tax proceeds than an equivalent ESOP grant due to capital gains treatment. International candidates quickly understand the value proposition when you model actual exit scenarios."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What option pool size do German VCs typically expect at Series A?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Berlin Series A investors typically expect 14-16% pools, depending on industry and hiring plans. Enterprise SaaS and fintech tend toward 15-18%, while consumer and marketplace companies land at 12-15%. Build a detailed hiring plan to justify your specific needs rather than accepting default investor requests."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I convert from ESOP to VSOP after initially choosing ESOP?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, but it requires shareholder approval and may have tax implications for existing option holders. It's cleaner to choose the right structure initially. If you must convert, consult German tax advisors to structure the transition properly and communicate clearly with affected employees."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I handle option pools when employees relocate internationally?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Include mobility clauses in option/VSOP agreements addressing international transfers. Generally, taxation occurs based on the employee's tax residency when options are exercised (ESOP) or VSOPs are paid out. Employees moving to higher-tax jurisdictions may lose Germany's favorable capital gains treatment. Consult international tax advisors before granting significant equity to employees likely to relocate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should Berlin startups create smaller option pools than US companies?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Generally yes. German compensation packages emphasize base salary more than US equivalents, and individual equity grants are typically 20-30% smaller than Silicon Valley benchmarks. A 14% Berlin pool often accomplishes what requires 18-20% in San Francisco. Build hiring plans using German-specific benchmarks rather than copying US standards."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +168,27 @@ export default function OptionPoolCalculatorBerlinBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#understanding-german-option-pools-esop-vs-vsop" className="text-blue-600 hover:text-blue-700 text-sm">Understanding German Option Pools: ESOP vs VSOP</a></li>
+                  <li><a href="#esop-vs-vsop-the-fundamental-choice-for-german-startups" className="text-blue-600 hover:text-blue-700 text-sm">ESOP vs VSOP: The Fundamental Choice for German Startups</a></li>
+                  <li><a href="#berlin-option-pool-standards-by-stage-and-sector" className="text-blue-600 hover:text-blue-700 text-sm">Berlin Option Pool Standards by Stage and Sector</a></li>
+                  <li><a href="#how-to-calculate-your-berlin-option-pool-step-by-step" className="text-blue-600 hover:text-blue-700 text-sm">How to Calculate Your Berlin Option Pool: Step-by-Step</a></li>
+                  <li><a href="#pre-money-vs-post-money-option-pools-in-berlin-deals" className="text-blue-600 hover:text-blue-700 text-sm">Pre-Money vs Post-Money Option Pools in Berlin Deals</a></li>
+                  <li><a href="#german-legal-and-tax-considerations-for-option-pools" className="text-blue-600 hover:text-blue-700 text-sm">German Legal and Tax Considerations for Option Pools</a></li>
+                  <li><a href="#common-german-option-pool-mistakes" className="text-blue-600 hover:text-blue-700 text-sm">Common German Option Pool Mistakes</a></li>
+                  <li><a href="#berlin-employee-equity-benchmarks-by-role" className="text-blue-600 hover:text-blue-700 text-sm">Berlin Employee Equity Benchmarks by Role</a></li>
+                  <li><a href="#negotiating-option-pool-size-with-german-vcs" className="text-blue-600 hover:text-blue-700 text-sm">Negotiating Option Pool Size with German VCs</a></li>
+                  <li><a href="#how-to-use-the-icanpitch-berlin-option-pool-calculator" className="text-blue-600 hover:text-blue-700 text-sm">How to Use the ICanPitch Berlin Option Pool Calculator</a></li>
+                  <li><a href="#option-pool-faqs-for-berlin-founders" className="text-blue-600 hover:text-blue-700 text-sm">Option Pool FAQs for Berlin Founders</a></li>
+                  <li><a href="#start-calculating-your-berlin-option-pool" className="text-blue-600 hover:text-blue-700 text-sm">Start Calculating Your Berlin Option Pool</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +199,7 @@ export default function OptionPoolCalculatorBerlinBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Understanding German Option Pools: ESOP vs VSOP</h2>
+                <h2 id="understanding-german-option-pools-esop-vs-vsop">Understanding German Option Pools: ESOP vs VSOP</h2>
 
 <p>Berlin has emerged as Europe's fastest-growing startup hub, but German employee equity operates within a fundamentally different legal and tax framework than Anglo-American models. The critical distinction for Berlin founders is choosing between traditional Employee Stock Option Plans (ESOPs) and Virtual Stock Option Plans (VSOPs)—each with distinct tax implications, administrative complexity, and employee value propositions.</p>
 
@@ -134,7 +207,7 @@ export default function OptionPoolCalculatorBerlinBlogPost() {
 
 <p><strong>The German founder's challenge:</strong> Traditional ESOPs face punitive tax treatment that can cost employees 40-50% of option value in income taxes and social contributions at exercise. VSOPs solve this by creating phantom equity that's taxed only at exit as capital gains, but they introduce legal complexity and liquidity constraints. Understanding which structure fits your stage, industry, and hiring needs is essential for creating pools that attract talent without excessive founder dilution.</p>
 
-<h2>ESOP vs VSOP: The Fundamental Choice for German Startups</h2>
+<h2 id="esop-vs-vsop-the-fundamental-choice-for-german-startups">ESOP vs VSOP: The Fundamental Choice for German Startups</h2>
 
 <p>German founders must choose between two structurally different approaches to employee equity. Each has significant tax, legal, and practical implications:</p>
 
@@ -204,7 +277,7 @@ export default function OptionPoolCalculatorBerlinBlogPost() {
 <li>You're targeting IPO where share ownership matters for employee wealth-building</li>
 </ul>
 
-<h2>Berlin Option Pool Standards by Stage and Sector</h2>
+<h2 id="berlin-option-pool-standards-by-stage-and-sector">Berlin Option Pool Standards by Stage and Sector</h2>
 
 <p>German option pools follow European sizing conventions while reflecting Berlin's entrepreneurial culture and competitive talent market:</p>
 
@@ -250,7 +323,21 @@ export default function OptionPoolCalculatorBerlinBlogPost() {
 
 <p><strong>Deep Tech and Biotech (12-16%):</strong> Hardware, AI, and life sciences companies require specialized technical talent commanding premium equity packages.</p>
 
-<h2>How to Calculate Your Berlin Option Pool: Step-by-Step</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Size Your Option Pool</p>
+                <p className="text-gray-600 mb-4">Model how different option pool sizes affect founder dilution before and after your next round.</p>
+                <a
+                  href="https://icanpitch.com/option-pool-impact-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Option Pool Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="how-to-calculate-your-berlin-option-pool-step-by-step">How to Calculate Your Berlin Option Pool: Step-by-Step</h2>
 
 <p>Follow this systematic approach to calculate German option pools accounting for VSOP vs ESOP structures:</p>
 
@@ -325,7 +412,7 @@ export default function OptionPoolCalculatorBerlinBlogPost() {
 
 <p>Model both scenarios to understand the ownership impact and negotiate effectively with investors.</p>
 
-<h2>Pre-Money vs Post-Money Option Pools in Berlin Deals</h2>
+<h2 id="pre-money-vs-post-money-option-pools-in-berlin-deals">Pre-Money vs Post-Money Option Pools in Berlin Deals</h2>
 
 <p>Understanding the timing of pool creation determines who absorbs the dilution cost—founders alone, or founders and investors proportionally.</p>
 
@@ -375,7 +462,7 @@ export default function OptionPoolCalculatorBerlinBlogPost() {
 
 <p>The 2.5 percentage point difference represents approximately €325,000 in value for every €13M of exit valuation—€1.3M for a €50M exit.</p>
 
-<h2>German Legal and Tax Considerations for Option Pools</h2>
+<h2 id="german-legal-and-tax-considerations-for-option-pools">German Legal and Tax Considerations for Option Pools</h2>
 
 <p>German equity compensation operates within specific legal frameworks that impact pool structuring and administration:</p>
 
@@ -422,7 +509,7 @@ export default function OptionPoolCalculatorBerlinBlogPost() {
 
 <p><strong>Good leaver provisions:</strong> Define good leaver (voluntary resignation, retirement, mutual termination) vs bad leaver (cause termination) scenarios with appropriate equity treatment.</p>
 
-<h2>Common German Option Pool Mistakes</h2>
+<h2 id="common-german-option-pool-mistakes">Common German Option Pool Mistakes</h2>
 
 <p>Berlin founders make specific errors related to German legal structures and tax treatment. Avoid these pitfalls:</p>
 
@@ -456,7 +543,7 @@ export default function OptionPoolCalculatorBerlinBlogPost() {
 
 <p><strong>Solution:</strong> Include comprehensive leaver provisions in all option and VSOP agreements. Define termination scenarios and their equity impacts clearly. Consult German employment lawyers to ensure enforceability.</p>
 
-<h2>Berlin Employee Equity Benchmarks by Role</h2>
+<h2 id="berlin-employee-equity-benchmarks-by-role">Berlin Employee Equity Benchmarks by Role</h2>
 
 <p>Use these Berlin-specific benchmarks when building hiring plans:</p>
 
@@ -494,7 +581,7 @@ export default function OptionPoolCalculatorBerlinBlogPost() {
 <li>Marketing Manager: 0.02-0.06%</li>
 </ul>
 
-<h2>Negotiating Option Pool Size with German VCs</h2>
+<h2 id="negotiating-option-pool-size-with-german-vcs">Negotiating Option Pool Size with German VCs</h2>
 
 <p>Berlin's venture ecosystem has matured, with sophisticated investors who understand local compensation dynamics. Here's how to negotiate effectively:</p>
 
@@ -540,7 +627,7 @@ export default function OptionPoolCalculatorBerlinBlogPost() {
 
 <p>This protects founders from dilution if growth is slower than projected while satisfying investors that capacity will exist if growth accelerates.</p>
 
-<h2>How to Use the ICanPitch Berlin Option Pool Calculator</h2>
+<h2 id="how-to-use-the-icanpitch-berlin-option-pool-calculator">How to Use the ICanPitch Berlin Option Pool Calculator</h2>
 
 <p>The <a href="https://icanpitch.com/" target="_blank" rel="noopener noreferrer">ICanPitch platform</a> includes Germany-specific calculators accounting for VSOP vs ESOP structures and German compensation benchmarks:</p>
 
@@ -564,7 +651,7 @@ export default function OptionPoolCalculatorBerlinBlogPost() {
 
 <p>Forecast your cap table through Series B and C to understand long-term ownership trajectories and plan refresh pools appropriately.</p>
 
-<h2>Option Pool FAQs for Berlin Founders</h2>
+<h2 id="option-pool-faqs-for-berlin-founders">Option Pool FAQs for Berlin Founders</h2>
 
 <h3>Should I use VSOP or ESOP for my Berlin startup?</h3>
 
@@ -590,7 +677,7 @@ export default function OptionPoolCalculatorBerlinBlogPost() {
 
 <p>Generally yes. German compensation packages emphasize base salary more than US equivalents, and individual equity grants are typically 20-30% smaller than Silicon Valley benchmarks. A 14% Berlin pool often accomplishes what requires 18-20% in San Francisco. Build hiring plans using German-specific benchmarks rather than copying US standards.</p>
 
-<h2>Start Calculating Your Berlin Option Pool</h2>
+<h2 id="start-calculating-your-berlin-option-pool">Start Calculating Your Berlin Option Pool</h2>
 
 <p>German option pools require navigating unique choices between VSOP and ESOP structures, understanding tax implications that differ dramatically from US/UK models, and applying compensation benchmarks that reflect European employee expectations. Berlin founders have a powerful tool in VSOPs—delivering tax-efficient equity that provides more after-tax value per percentage point granted.</p>
 
@@ -619,13 +706,30 @@ export default function OptionPoolCalculatorBerlinBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/option-pool-calculator-new-york/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">NYC Option Pool Calculator: East Coast Startup Equity Standards (2025)</span>
+                </Link>
+                <Link href="/blog/option-pool-calculator-singapore/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Singapore Option Pool Calculator: APAC ESOP Standards & Tax Guide (2025)</span>
+                </Link>
+                <Link href="/blog/option-pool-calculator-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">London Option Pool Calculator: UK ESOP & EMI Scheme Guide (2025)</span>
+                </Link>
+                <Link href="/blog/option-pool-calculator-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Silicon Valley Option Pool Calculator: Pre-Money vs Post-Money ESOP Guide (2025)</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-berlin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Berlin Startups: 2025 Cost Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/option-pool-calculator-pre-seed-technical-founder-san-francisco-size-employee-equity-minimize-founder-dilution/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Option Pool Calculator</Link>
+              <Link href="/blog/equity-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Equity, Vesting & Option Pool Guides</Link>
             </div>
           </div>
         </section>
@@ -635,18 +739,18 @@ export default function OptionPoolCalculatorBerlinBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Size Your Option Pool
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Model how different option pool sizes affect founder dilution before and after your next round.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/option-pool-impact-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Option Pool Calculator &rarr;
               </a>
             </div>
           </div>

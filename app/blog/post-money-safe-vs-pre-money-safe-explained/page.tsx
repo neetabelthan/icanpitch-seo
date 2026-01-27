@@ -52,6 +52,68 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Which is better for founders: post-money or pre-money SAFEs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Post-money SAFEs are better for founders in virtually all scenarios. While pre-money SAFEs result in slightly less mathematical dilution when raising multiple SAFEs (typically 1-2 percentage points less), post-money SAFEs provide transparency and predictability that enable better decision-making. The ability to model your cap table accurately and know exactly what you're selling is worth far more than marginal dilution savings."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I raise one pre-money SAFE and one post-money SAFE?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can, but you absolutely shouldn't. Mixing pre-money and post-money SAFEs creates massive cap table complexity because the two formats calculate dilution using incompatible formulas. Most cap table software can't accurately model mixed SAFE types, and you'll confuse both yourself and your investors. Pick one format (post-money) and use it consistently across all SAFEs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What percentage of SAFEs in 2025 are post-money?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "87% of all SAFEs signed in 2024 were post-money format, and that percentage is expected to reach 90%+ in 2025 (Carta data). Post-money SAFEs are the overwhelming industry standard. Any investor pushing for pre-money SAFEs in 2025 is either using outdated templates or trying to gain an advantage through founder confusion."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "If pre-money SAFEs dilute founders less, why did Y Combinator switch to post-money?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Y Combinator switched to post-money SAFEs in 2018 because the transparency and predictability benefits outweigh the minor dilution advantages of pre-money SAFEs. Founders couldn't accurately calculate dilution with pre-money SAFEs when raising multiple rounds, leading to poor decision-making and cap table surprises. The 1-2 percentage point dilution savings from pre-money SAFEs isn't worth the planning chaos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do post-money SAFEs have higher valuation caps than pre-money SAFEs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not inherently — the valuation cap is a negotiated number based on your company's value, stage, and market conditions. However, some investors try to negotiate lower caps on post-money SAFEs by arguing that post-money format requires a \"discount\" to offset higher founder dilution. This is investor-favorable logic. Your valuation cap should reflect your company's value, not the SAFE format. A $10M company should raise at a $10M cap whether using post-money or pre-money SAFEs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if an investor insists on a pre-money SAFE?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If an investor insists on a pre-money SAFE in 2025, you should ask why. Legitimate reasons (sophisticated angels who want to share dilution risk) are rare. Illegitimate reasons (using confusion to gain advantage) are more common. Educate the investor on post-money SAFEs and explain that 87% of the market uses post-money format. If they still insist, consider whether you want to work with an investor who is either uninformed about current standards or deliberately seeking non-standard terms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I convert a pre-money SAFE term sheet to post-money?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The conversion is straightforward: Take the pre-money valuation cap and add the SAFE investment amount to get the post-money cap. Example: A $500K investment on a $6M pre-money cap becomes a $500K investment on a $6.5M post-money cap ($6M + $500K). This maintains approximately equivalent economics while switching to the clearer post-money format. However, negotiate the actual cap number based on your company's value, not mechanical conversions."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +176,31 @@ export default function PostMoneySafeVsPreMoneySafeExplainedBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#what-is-a-post-money-safe" className="text-blue-600 hover:text-blue-700 text-sm">What is a Post-Money SAFE?</a></li>
+                  <li><a href="#what-is-a-pre-money-safe" className="text-blue-600 hover:text-blue-700 text-sm">What is a Pre-Money SAFE?</a></li>
+                  <li><a href="#the-critical-difference-dilution-calculation" className="text-blue-600 hover:text-blue-700 text-sm">The Critical Difference: Dilution Calculation</a></li>
+                  <li><a href="#real-world-example-the-500k-safe-comparison" className="text-blue-600 hover:text-blue-700 text-sm">Real-World Example: The $500K SAFE Comparison</a></li>
+                  <li><a href="#why-y-combinator-switched-to-post-money-in-2018" className="text-blue-600 hover:text-blue-700 text-sm">Why Y Combinator Switched to Post-Money in 2018</a></li>
+                  <li><a href="#post-money-safe-advantages-for-founders" className="text-blue-600 hover:text-blue-700 text-sm">Post-Money SAFE Advantages for Founders</a></li>
+                  <li><a href="#pre-money-safe-risks-the-stacking-problem" className="text-blue-600 hover:text-blue-700 text-sm">Pre-Money SAFE Risks: The Stacking Problem</a></li>
+                  <li><a href="#when-if-ever-to-use-pre-money-safes" className="text-blue-600 hover:text-blue-700 text-sm">When (If Ever) to Use Pre-Money SAFEs</a></li>
+                  <li><a href="#how-to-calculate-dilution-post-vs-pre" className="text-blue-600 hover:text-blue-700 text-sm">How to Calculate Dilution: Post vs Pre</a></li>
+                  <li><a href="#common-mistakes-founders-make" className="text-blue-600 hover:text-blue-700 text-sm">Common Mistakes Founders Make</a></li>
+                  <li><a href="#using-a-safe-calculator-to-model-both-types" className="text-blue-600 hover:text-blue-700 text-sm">Using a SAFE Calculator to Model Both Types</a></li>
+                  <li><a href="#frequently-asked-questions-post-money-vs-pre-money-safes" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions: Post-Money vs Pre-Money SAFEs</a></li>
+                  <li><a href="#expert-negotiation-tips-for-safe-terms" className="text-blue-600 hover:text-blue-700 text-sm">Expert Negotiation Tips for SAFE Terms</a></li>
+                  <li><a href="#the-2025-verdict-post-money-wins" className="text-blue-600 hover:text-blue-700 text-sm">The 2025 Verdict: Post-Money Wins</a></li>
+                  <li><a href="#key-takeaways-post-money-vs-pre-money-safes" className="text-blue-600 hover:text-blue-700 text-sm">Key Takeaways: Post-Money vs Pre-Money SAFEs</a></li>
+                  <li><a href="#next-steps-model-your-safe-options" className="text-blue-600 hover:text-blue-700 text-sm">Next Steps: Model Your SAFE Options</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,7 +211,7 @@ export default function PostMoneySafeVsPreMoneySafeExplainedBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>What is a Post-Money SAFE?</h2>
+                <h2 id="what-is-a-post-money-safe">What is a Post-Money SAFE?</h2>
 <p>
   <strong>A Post-Money SAFE (Simple Agreement for Future Equity) is a financing instrument where the valuation cap is calculated after (post) including the SAFE investment amount.</strong> This means investors know exactly what percentage of your company they will own when the SAFE converts, regardless of how many additional SAFEs you raise before your next priced round.
 </p>
@@ -142,7 +227,7 @@ export default function PostMoneySafeVsPreMoneySafeExplainedBlogPost() {
   Here's the statistic that ended the pre-money vs post-money debate: <strong>87% of all SAFEs were post-money SAFEs in 2024, up from just 43% at the start of 2020</strong> (Carta quarterly data). This represents a complete market shift in just four years. First-time founders no longer need to debate which format to use — post-money is the standard, and any investor pushing for pre-money in 2025 is either uninformed or trying to gain an unfair advantage.
 </p>
 
-<h2>What is a Pre-Money SAFE?</h2>
+<h2 id="what-is-a-pre-money-safe">What is a Pre-Money SAFE?</h2>
 <p>
   <strong>A Pre-Money SAFE is the original SAFE format (introduced by Y Combinator in 2013) where the valuation cap is calculated before (pre) including the SAFE investment and any subsequent SAFEs.</strong> This creates uncertainty about exactly how much ownership SAFE investors will receive, because their final percentage depends on how much additional SAFE capital you raise before your priced equity round.
 </p>
@@ -153,7 +238,7 @@ export default function PostMoneySafeVsPreMoneySafeExplainedBlogPost() {
   Pre-money SAFEs remain in limited use, primarily in three scenarios: (1) highly founder-friendly deals where sophisticated angels intentionally accept more dilution risk, (2) international markets where post-money adoption lags the US, or (3) situations where both founders and investors are unfamiliar with the 2018 changes and are using outdated templates.
 </p>
 
-<h2>The Critical Difference: Dilution Calculation</h2>
+<h2 id="the-critical-difference-dilution-calculation">The Critical Difference: Dilution Calculation</h2>
 <p>
   The fundamental difference between post-money and pre-money SAFEs comes down to one question: <strong>Who bears the dilution burden when you raise multiple SAFEs?</strong>
 </p>
@@ -167,7 +252,21 @@ export default function PostMoneySafeVsPreMoneySafeExplainedBlogPost() {
   <strong>The paradox:</strong> While pre-money SAFEs mathematically dilute founders less than post-money SAFEs when raising multiple rounds, this comes at the cost of predictability. As one Silicon Valley law firm explains: "The dilution burden of multiple post-money SAFE financings solely impacts founders upon conversion, unlike pre-money SAFEs where dilution is shared with earlier investors. However, the transparency of post-money SAFEs typically outweighs the mathematical dilution advantage of pre-money SAFEs."
 </p>
 
-<h2>Real-World Example: The $500K SAFE Comparison</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Understand Your Valuation</p>
+                <p className="text-gray-600 mb-4">See how pre-money valuation, investment amount, and post-money relate to ownership percentages.</p>
+                <a
+                  href="https://icanpitch.com/pre-post-money-valuation-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Valuation Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="real-world-example-the-500k-safe-comparison">Real-World Example: The $500K SAFE Comparison</h2>
 
 <h3>Meet Alex: A Fintech Founder in Miami</h3>
 <p>
@@ -221,7 +320,7 @@ export default function PostMoneySafeVsPreMoneySafeExplainedBlogPost() {
   <strong>The difference:</strong> Alex owns 1.79 percentage points more with pre-money SAFEs (49.82% vs 48.03%). On a $100M exit, that's $1.79M. But here's the catch — she had no idea what her ownership would be until Series A closed. She couldn't model scenarios, negotiate confidently, or plan her cap table. The mathematical gain came at the cost of total uncertainty.
 </p>
 
-<h2>Why Y Combinator Switched to Post-Money in 2018</h2>
+<h2 id="why-y-combinator-switched-to-post-money-in-2018">Why Y Combinator Switched to Post-Money in 2018</h2>
 <p>
   Y Combinator's decision to abandon pre-money SAFEs in October 2018 wasn't arbitrary — it addressed a real problem that emerged as SAFE usage evolved. <strong>"The original pre-money SAFE was standardized on a pre-money basis, which made it difficult for founders to calculate precisely how they were being diluted when raising money,"</strong> Y Combinator explained in their announcement.
 </p>
@@ -247,7 +346,7 @@ export default function PostMoneySafeVsPreMoneySafeExplainedBlogPost() {
   <strong>The market validated Y Combinator's decision:</strong> Post-money SAFE adoption went from 0% in 2017 to 87% in 2024, one of the fastest format shifts in startup finance history.
 </p>
 
-<h2>Post-Money SAFE Advantages for Founders</h2>
+<h2 id="post-money-safe-advantages-for-founders">Post-Money SAFE Advantages for Founders</h2>
 
 <h3>Advantage #1: Instant Dilution Clarity</h3>
 <p>
@@ -274,7 +373,7 @@ export default function PostMoneySafeVsPreMoneySafeExplainedBlogPost() {
   Perhaps the most practical advantage: <strong>87% of SAFEs in 2024 are post-money format</strong>, which means investors, lawyers, and accelerators are all optimized for post-money terms. Standard templates work out of the box. Lawyers can draft documents quickly. Investors don't push back on structure because it's what they see in 9 out of 10 deals. Pre-money SAFEs create friction — investors wonder why you're using an outdated format, and lawyers need to explain the differences.
 </p>
 
-<h2>Pre-Money SAFE Risks: The Stacking Problem</h2>
+<h2 id="pre-money-safe-risks-the-stacking-problem">Pre-Money SAFE Risks: The Stacking Problem</h2>
 
 <h3>What is the SAFE Stacking Problem?</h3>
 <p>
@@ -313,7 +412,7 @@ export default function PostMoneySafeVsPreMoneySafeExplainedBlogPost() {
   <strong>Trading 1.5 percentage points of mathematical dilution for total planning chaos is not founder-friendly — it's founder-hostile.</strong>
 </p>
 
-<h2>When (If Ever) to Use Pre-Money SAFEs</h2>
+<h2 id="when-if-ever-to-use-pre-money-safes">When (If Ever) to Use Pre-Money SAFEs</h2>
 
 <h3>The Three Pre-Money Use Cases That Still Make Sense</h3>
 <p>
@@ -340,7 +439,7 @@ export default function PostMoneySafeVsPreMoneySafeExplainedBlogPost() {
   Outside these three narrow exceptions, founders should default to post-money SAFEs. The transparency, predictability, and market standardization benefits massively outweigh any marginal mathematical dilution advantages of pre-money SAFEs. <strong>When 87% of the market uses one format, that format is the right choice unless you have a compelling specific reason to deviate.</strong>
 </p>
 
-<h2>How to Calculate Dilution: Post vs Pre</h2>
+<h2 id="how-to-calculate-dilution-post-vs-pre">How to Calculate Dilution: Post vs Pre</h2>
 
 <h3>Post-Money SAFE Dilution Formula</h3>
 <p>
@@ -401,7 +500,7 @@ export default function PostMoneySafeVsPreMoneySafeExplainedBlogPost() {
   Both pre-money and post-money SAFEs get diluted by the option pool creation at Series A. Typically, Series A investors require a 15-20% option pool created before their investment, which dilutes everyone proportionally. <strong>Key difference:</strong> With post-money SAFEs, you can calculate option pool dilution easily because you know your pre-option-pool ownership. With pre-money SAFEs, option pool dilution adds another layer of uncertainty until Series A terms are finalized.
 </p>
 
-<h2>Common Mistakes Founders Make</h2>
+<h2 id="common-mistakes-founders-make">Common Mistakes Founders Make</h2>
 
 <h3>Mistake #1: Using Pre-Money SAFEs Without Understanding Why</h3>
 <p>
@@ -428,7 +527,7 @@ export default function PostMoneySafeVsPreMoneySafeExplainedBlogPost() {
   When raising your second or third SAFE, many founders only think about the new SAFE in isolation. <strong>Critical mistake:</strong> Always consider cumulative dilution across all SAFEs. If you've already raised two SAFEs totaling 12% dilution and a new investor wants another 8% SAFE, you're now giving away 20% to SAFE holders before Series A even starts. That might be too much. Model the total stack, not individual tranches.
 </p>
 
-<h2>Using a SAFE Calculator to Model Both Types</h2>
+<h2 id="using-a-safe-calculator-to-model-both-types">Using a SAFE Calculator to Model Both Types</h2>
 
 <h3>What a Good SAFE Calculator Should Include</h3>
 <p>
@@ -485,7 +584,7 @@ export default function PostMoneySafeVsPreMoneySafeExplainedBlogPost() {
   The founder gains 1.4 percentage points with pre-money SAFEs, but neither the founder nor the SAFE investors knew what they would own until Series A closed. <strong>Is 1.4% worth 12-18 months of uncertainty? For 87% of founders in 2024, the answer is no.</strong>
 </p>
 
-<h2>Frequently Asked Questions: Post-Money vs Pre-Money SAFEs</h2>
+<h2 id="frequently-asked-questions-post-money-vs-pre-money-safes">Frequently Asked Questions: Post-Money vs Pre-Money SAFEs</h2>
 
 <h3>Which is better for founders: post-money or pre-money SAFEs?</h3>
 <p>
@@ -522,7 +621,7 @@ export default function PostMoneySafeVsPreMoneySafeExplainedBlogPost() {
   The conversion is straightforward: <strong>Take the pre-money valuation cap and add the SAFE investment amount to get the post-money cap.</strong> Example: A $500K investment on a $6M pre-money cap becomes a $500K investment on a $6.5M post-money cap ($6M + $500K). This maintains approximately equivalent economics while switching to the clearer post-money format. However, negotiate the actual cap number based on your company's value, not mechanical conversions.
 </p>
 
-<h2>Expert Negotiation Tips for SAFE Terms</h2>
+<h2 id="expert-negotiation-tips-for-safe-terms">Expert Negotiation Tips for SAFE Terms</h2>
 
 <h3>YC Partner Advice: "Post-Money SAFEs Are Non-Negotiable"</h3>
 <p>
@@ -553,7 +652,7 @@ export default function PostMoneySafeVsPreMoneySafeExplainedBlogPost() {
   This response is firm but professional, grounded in market data, and shows you're informed. Most investors will immediately accept post-money terms when they see you understand the difference.
 </p>
 
-<h2>The 2025 Verdict: Post-Money Wins</h2>
+<h2 id="the-2025-verdict-post-money-wins">The 2025 Verdict: Post-Money Wins</h2>
 <p>
   The pre-money vs post-money SAFE debate is over. <strong>Post-money SAFEs have won with 87% market adoption</strong>, and that percentage will only increase as remaining pre-money holdouts modernize their processes. For first-time founders raising pre-seed and seed capital in 2025, the decision is simple: use post-money SAFEs.
 </p>
@@ -564,7 +663,7 @@ export default function PostMoneySafeVsPreMoneySafeExplainedBlogPost() {
   Y Combinator made the right call in 2018, and the market has validated that decision. Every data point supports post-money SAFEs as the superior format for both founders and investors. The faster remaining pre-money usage disappears, the better for everyone in the ecosystem.
 </p>
 
-<h2>Key Takeaways: Post-Money vs Pre-Money SAFEs</h2>
+<h2 id="key-takeaways-post-money-vs-pre-money-safes">Key Takeaways: Post-Money vs Pre-Money SAFEs</h2>
 <ul>
   <li><strong>Post-money SAFEs dominate with 87% market share in 2024</strong> — they are the industry standard for pre-seed and seed fundraising</li>
   <li><strong>Post-money SAFEs guarantee fixed investor ownership</strong> — founders know exactly what percentage they're selling at signing</li>
@@ -580,7 +679,7 @@ export default function PostMoneySafeVsPreMoneySafeExplainedBlogPost() {
   <li><strong>Investor insistence on pre-money is a red flag</strong> — legitimate investors accept industry-standard post-money terms</li>
 </ul>
 
-<h2>Next Steps: Model Your SAFE Options</h2>
+<h2 id="next-steps-model-your-safe-options">Next Steps: Model Your SAFE Options</h2>
 <p>
   Before signing your next SAFE, take 10 minutes to model both post-money and pre-money scenarios using a <a href="https://icanpitch.com/safe-calculator/" target="_blank" rel="noopener noreferrer">SAFE calculator</a>. Input your actual terms — investment amount, valuation cap, and Series A assumptions — and see the real dilution difference between the two formats.
 </p>
@@ -614,13 +713,31 @@ export default function PostMoneySafeVsPreMoneySafeExplainedBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/post-money-safe-vs-pre-money-safe-2025/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Post-Money SAFE vs Pre-Money SAFE: Complete 2025 Comparison</span>
+                </Link>
+                <Link href="/blog/safe-notes-multiple-safes-stacking-guide/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Multiple SAFEs and SAFE Stacking: Complete Founder's Guide (2025)</span>
+                </Link>
+                <Link href="/blog/safe-conversion-mechanics-priced-round/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Conversion Mechanics: How SAFEs Convert in Priced Rounds</span>
+                </Link>
+                <Link href="/blog/seed-valuation-benchmarks-2025/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Seed Valuation Benchmarks 2025: Post-Money Caps, ARR Requirements, and Investor Expectations</span>
+                </Link>
+                <Link href="/blog/avoiding-safe-dilution-traps-founders/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Avoiding SAFE Dilution Traps: 7 Mistakes Founders Make</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/pre-post-money-calculator-series-a-first-time-founder-seattle-understand-valuation-mechanics-negotiate-better-terms/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Pre Post Money Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -630,18 +747,18 @@ export default function PostMoneySafeVsPreMoneySafeExplainedBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Understand Your Valuation
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See how pre-money valuation, investment amount, and post-money relate to ownership percentages.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/pre-post-money-valuation-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Valuation Calculator &rarr;
               </a>
             </div>
           </div>

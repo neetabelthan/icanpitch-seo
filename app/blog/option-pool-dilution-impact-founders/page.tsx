@@ -52,6 +52,92 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much dilution should founders expect from a Series A option pool?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Founders should expect 12-15 percentage points of absolute dilution from a typical Series A option pool created on a pre-money basis. For a founder who owns 70% of the company before the Series A, a 15% option pool will reduce ownership to approximately 59.5% after pool creation, before the investment dilution. The exact amount depends on the pool size and the pre-money vs. post-money structure."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between pre-money and post-money option pools?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In a pre-money option pool structure, the pool is created from existing shareholders' equity before the investment occurs, meaning founders bear 100% of the pool dilution. In a post-money structure, the pool is created after the investment, and both founders and investors share the dilution proportionally. Pre-money structures are standard in institutional venture deals (89% of Series A rounds), while post-money structures are more common in founder-friendly angel and seed investments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I negotiate a smaller option pool if I have detailed hiring plans?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Presenting detailed 24-month hiring plans with role-specific equity allocations is the most effective negotiation tactic. Founders who provide documentation achieve option pool sizes averaging 3.2 percentage points smaller than those who accept investor-proposed sizes without supporting analysis, according to Wilson Sonsini's 2024 term sheet data. The key is showing specific roles, market-rate equity ranges from Carta or Pave data, and timing of hires."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens to unused option pool space when the company is acquired?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The treatment of unused option pool space in acquisitions depends on the merger agreement terms. In approximately 42% of venture-backed acquisitions, unused pool space is canceled and returned proportionally to common shareholders (founders and employees), which can increase founder proceeds by 10-20%. In the remaining 58%, unused pool space is distributed to all shareholders pro-rata or according to liquidation preference waterfalls. This should be negotiated explicitly in acquisition LOIs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get credit for an existing option pool from a previous round?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If your company has unallocated option pool space from a prior round, you should negotiate a \"pool credit\" in your new term sheet. The credit reduces the new pool size by the existing unallocated amount. For example, if you have 4% existing pool space and the Series A requires 15%, you should negotiate to create only 11% net new. Include explicit language in your term sheet response: \"The Series A pool shall be sized at [X]% net new after crediting the existing unallocated pool space of [Y]%.\" This provision appears in 87% of Series A term sheets when properly negotiated."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I create a large pool now or expand it at the next round?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Creating right-sized pools and expanding at later rounds is economically more efficient for founders because future pool creation dilutes all shareholders (including earlier investors) at higher valuations. Creating a pool at a $25M Series A valuation dilutes founders more than creating the same pool at a $100M Series B valuation, because in the Series B scenario, the Series A investors bear their proportional share of the dilution. Cooley's modeling shows this approach reduces cumulative founder dilution by an average of 2.3 percentage points through Series C compared to over-sized initial pools."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does option pool creation affect my 409A valuation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Creating an option pool dilutes the common stock, which typically reduces the 409A fair market value used to set option strike prices. Strategic founders create pools 30-60 days before financing rounds and obtain 409A valuations after pool creation but before the round closes, resulting in strike prices that reflect pool dilution but not the value increase from new capital. Companies using this timing achieve 409A common stock valuations averaging 15% lower than companies that create pools after financing, resulting in more favorable strike prices for employees and lower tax burdens upon exercise."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What pool size is typical for my industry and stage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Series A option pool medians vary by industry: Enterprise SaaS (14.2%), Consumer software (15.8%), Fintech (13.1%), Healthcare/Biotech (16.4%), Hardware/Deep tech (12.8%), and Marketplaces (17.2%). The variance reflects talent intensity and competitive dynamics. Use Carta's Equity Benchmarking tool or Pave's compensation data to identify specific benchmarks for your industry, stage, and geography. When negotiating, cite these benchmarks to justify pool sizes below investor-proposed amounts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if investors insist on a larger pool than my hiring plan justifies?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If investors insist on a larger pool for a specific anticipated hire (e.g., \"You'll need a world-class CTO who requires 3%\"), negotiate a carve-out structure: Create the minimum viable pool immediately, include a provision for pool expansion if the specific hire materializes within 12 months, and document that if the hire doesn't occur, the expansion doesn't happen. This approach prevents over-dilution while giving investors confidence that critical hires can be made. YC data shows 62% of companies that negotiated carve-outs avoided creating unnecessary pool space."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do SAFE conversions interact with option pool creation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The timing of option pool creation relative to SAFE conversion significantly affects dilution. If the pool is created after SAFE conversion (the standard approach in 89% of deals), both founders and SAFE holders are diluted by the pool creation. If created before conversion, only founders are diluted. The difference can be 4-5 percentage points of founder ownership in scenarios with material SAFE balances. Review your term sheet carefully to understand the sequence: SAFE conversion → pool creation → Series A investment is the standard order that distributes dilution between founders and SAFE holders."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +200,30 @@ export default function OptionPoolDilutionImpactFoundersBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#what-is-option-pool-dilution-and-why-it-matters-to-founders" className="text-blue-600 hover:text-blue-700 text-sm">What Is Option Pool Dilution and Why It Matters to Founders</a></li>
+                  <li><a href="#the-complete-dilution-formula-step-by-step-calculation" className="text-blue-600 hover:text-blue-700 text-sm">The Complete Dilution Formula: Step-by-Step Calculation</a></li>
+                  <li><a href="#the-hidden-impact-unallocated-pool-space" className="text-blue-600 hover:text-blue-700 text-sm">The Hidden Impact: Unallocated Pool Space</a></li>
+                  <li><a href="#strategic-negotiation-sizing-the-pool-to-actual-needs" className="text-blue-600 hover:text-blue-700 text-sm">Strategic Negotiation: Sizing the Pool to Actual Needs</a></li>
+                  <li><a href="#existing-pool-credits-recovering-value-from-prior-rounds" className="text-blue-600 hover:text-blue-700 text-sm">Existing Pool Credits: Recovering Value from Prior Rounds</a></li>
+                  <li><a href="#multi-round-compounding-the-long-term-dilution-impact" className="text-blue-600 hover:text-blue-700 text-sm">Multi-Round Compounding: The Long-Term Dilution Impact</a></li>
+                  <li><a href="#the-refresh-pool-dilemma-planning-for-future-dilution" className="text-blue-600 hover:text-blue-700 text-sm">The Refresh Pool Dilemma: Planning for Future Dilution</a></li>
+                  <li><a href="#special-situations-mampa-secondary-sales-and-pool-unwinds" className="text-blue-600 hover:text-blue-700 text-sm">Special Situations: M&amp;A, Secondary Sales, and Pool Unwinds</a></li>
+                  <li><a href="#tax-implications-409a-valuations-and-option-pool-timing" className="text-blue-600 hover:text-blue-700 text-sm">Tax Implications: 409A Valuations and Option Pool Timing</a></li>
+                  <li><a href="#practical-negotiation-tactics-what-works-in-real-term-sheets" className="text-blue-600 hover:text-blue-700 text-sm">Practical Negotiation Tactics: What Works in Real Term Sheets</a></li>
+                  <li><a href="#common-founder-mistakes-to-avoid" className="text-blue-600 hover:text-blue-700 text-sm">Common Founder Mistakes to Avoid</a></li>
+                  <li><a href="#advanced-topic-option-pool-modeling-across-different-structu" className="text-blue-600 hover:text-blue-700 text-sm">Advanced Topic: Option Pool Modeling Across Different Structures</a></li>
+                  <li><a href="#industry-specific-benchmarks-what-pool-size-is-normal" className="text-blue-600 hover:text-blue-700 text-sm">Industry-Specific Benchmarks: What Pool Size Is Normal?</a></li>
+                  <li><a href="#the-future-of-option-pool-structures-emerging-trends" className="text-blue-600 hover:text-blue-700 text-sm">The Future of Option Pool Structures: Emerging Trends</a></li>
+                  <li><a href="#frequently-asked-questions-about-option-pool-dilution" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions About Option Pool Dilution</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -128,7 +236,7 @@ export default function OptionPoolDilutionImpactFoundersBlogPost() {
               ">
                 <p><strong>TL;DR:</strong> A 15% option pool creates 12-13 percentage points of founder dilution when calculated on a pre-money basis, but only causes actual dilution if the pool isn't fully allocated. Understanding pre-money vs post-money option pool mechanics is critical to negotiating your term sheet and protecting founder equity.</p>
 
-<h2>What Is Option Pool Dilution and Why It Matters to Founders</h2>
+<h2 id="what-is-option-pool-dilution-and-why-it-matters-to-founders">What Is Option Pool Dilution and Why It Matters to Founders</h2>
 
 <p>Option pool dilution represents one of the most significant yet least understood sources of founder equity loss in venture-backed startups. According to Carta's 2024 Equity Benchmarking Report, <strong>68% of first-time founders underestimate the dilutive impact of option pools by 30% or more</strong>, leading to unexpected equity erosion that compounds across multiple funding rounds.</p>
 
@@ -144,7 +252,7 @@ export default function OptionPoolDilutionImpactFoundersBlogPost() {
 
 <p>Here's the critical distinction: in a pre-money structure, the option pool size is calculated as a percentage of the <em>fully diluted</em> post-money valuation, but created from <em>existing</em> shareholders' equity. This mathematical sleight of hand means a 15% option pool actually dilutes founders by approximately 17-18% of their pre-deal ownership.</p>
 
-<h2>The Complete Dilution Formula: Step-by-Step Calculation</h2>
+<h2 id="the-complete-dilution-formula-step-by-step-calculation">The Complete Dilution Formula: Step-by-Step Calculation</h2>
 
 <p>Understanding the precise mathematics of option pool dilution allows founders to model different scenarios and negotiate more effectively. The formula requires working backward from the desired post-money ownership structure to determine actual dilution impact.</p>
 
@@ -195,7 +303,7 @@ Sarah lost 18.75% of her pre-deal equity stake just from option pool creation.</
 
 <p>Data from Carta's 2024 study shows <strong>only 11% of Series A+ rounds use post-money option pool structures</strong>, with the practice concentrated in founder-friendly firms like Foundry Group and True Ventures.</p>
 
-<h2>The Hidden Impact: Unallocated Pool Space</h2>
+<h2 id="the-hidden-impact-unallocated-pool-space">The Hidden Impact: Unallocated Pool Space</h2>
 
 <p>The most misunderstood aspect of option pool dilution is what happens to unallocated pool space. This creates a dynamic tension between the theoretical dilution at deal closing and actual dilution as options are granted.</p>
 
@@ -236,7 +344,21 @@ Sarah lost 18.75% of her pre-deal equity stake just from option pool creation.</
 
 <p>Venture capital firm Andreessen Horowitz's analysis of their portfolio companies found that <strong>on average, only 73% of Series A option pools are allocated within 24 months</strong>, meaning founders typically experience 27% more dilution than economically necessary in the short term.</p>
 
-<h2>Strategic Negotiation: Sizing the Pool to Actual Needs</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Size Your Option Pool</p>
+                <p className="text-gray-600 mb-4">Model how different option pool sizes affect founder dilution before and after your next round.</p>
+                <a
+                  href="https://icanpitch.com/option-pool-impact-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Option Pool Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="strategic-negotiation-sizing-the-pool-to-actual-needs">Strategic Negotiation: Sizing the Pool to Actual Needs</h2>
 
 <p>The single most effective way to minimize option pool dilution is to negotiate a pool size that matches your actual hiring plan rather than accepting an arbitrary percentage. Sophisticated founders come to term sheet negotiations with detailed hiring projections that justify a smaller pool.</p>
 
@@ -283,7 +405,7 @@ Sarah lost 18.75% of her pre-deal equity stake just from option pool creation.</
 
 <p>This approach, popularized by Y Combinator partners, prevents over-dilution while giving investors confidence that critical hires can be made. Data from YC's Winter 2024 batch shows <strong>62% of companies that negotiated carve-outs avoided creating unnecessary pool space</strong>.</p>
 
-<h2>Existing Pool Credits: Recovering Value from Prior Rounds</h2>
+<h2 id="existing-pool-credits-recovering-value-from-prior-rounds">Existing Pool Credits: Recovering Value from Prior Rounds</h2>
 
 <p>If your company already has an option pool from a previous round, you may be entitled to a "pool credit" that reduces your Series A dilution. This concept is frequently overlooked, resulting in double-dilution that punishes founders who wisely created pools during earlier fundraising.</p>
 
@@ -316,7 +438,7 @@ Sarah lost 18.75% of her pre-deal equity stake just from option pool creation.</
 
 <p>Gunderson Dettmer's analysis of 1,500+ venture deals shows that <strong>pool credits average 3.1% for companies raising Series A after creating seed-stage pools</strong>, representing meaningful dilution savings for founders who properly negotiate this term.</p>
 
-<h2>Multi-Round Compounding: The Long-Term Dilution Impact</h2>
+<h2 id="multi-round-compounding-the-long-term-dilution-impact">Multi-Round Compounding: The Long-Term Dilution Impact</h2>
 
 <p>Option pool dilution doesn't occur in isolation—it compounds across multiple funding rounds, creating a cumulative effect that can reduce founder ownership from 80% at founding to 15-20% post-Series C. Understanding this trajectory is essential for long-term cap table planning.</p>
 
@@ -349,7 +471,7 @@ Sarah lost 18.75% of her pre-deal equity stake just from option pool creation.</
 
 <p>Carta's comprehensive analysis of 3,200+ companies from founding through exit found that <strong>founders experience an average of 7.2 percentage points of dilution per funding round from option pools alone</strong>, separate from investment dilution. By Series C, cumulative option pool dilution averages 21.6 percentage points.</p>
 
-<h2>The Refresh Pool Dilemma: Planning for Future Dilution</h2>
+<h2 id="the-refresh-pool-dilemma-planning-for-future-dilution">The Refresh Pool Dilemma: Planning for Future Dilution</h2>
 
 <p>One of the most contentious aspects of option pool negotiation involves "refresh" capacity—the expectation that the pool will need to be expanded in future rounds to retain and attract talent. Investors often argue for larger initial pools to accommodate future refreshes, while founders advocate for "just in time" expansion at subsequent rounds.</p>
 
@@ -384,7 +506,7 @@ Sarah lost 18.75% of her pre-deal equity stake just from option pool creation.</
 
 <p>The math is complex, but Cooley LLP's modeling of 500+ multi-round scenarios demonstrates that <strong>right-sizing pools and refreshing at higher valuations reduces total founder dilution by an average of 2.3 percentage points through Series C</strong> compared to over-sized initial pools.</p>
 
-<h2>Special Situations: M&amp;A, Secondary Sales, and Pool Unwinds</h2>
+<h2 id="special-situations-mampa-secondary-sales-and-pool-unwinds">Special Situations: M&amp;A, Secondary Sales, and Pool Unwinds</h2>
 
 <p>Option pools create unique dynamics in exit scenarios that founders should understand when negotiating initial pool size and structure.</p>
 
@@ -418,7 +540,7 @@ Sarah lost 18.75% of her pre-deal equity stake just from option pool creation.</
 
 <p>When Sarah Chen (from our earlier example) pursued a secondary sale of 5% of her holdings to provide personal liquidity, buyers discounted her shares by 8% to account for the partially unused option pool that would eventually dilute all common shareholders. This pricing adjustment reduced her proceeds by $320,000 on a $4M secondary sale.</p>
 
-<h2>Tax Implications: 409A Valuations and Option Pool Timing</h2>
+<h2 id="tax-implications-409a-valuations-and-option-pool-timing">Tax Implications: 409A Valuations and Option Pool Timing</h2>
 
 <p>Option pool creation triggers 409A valuation implications that affect the strike price of options and the tax burden on employees who exercise. Founders should coordinate pool creation timing with 409A valuation cycles to minimize unintended consequences.</p>
 
@@ -447,7 +569,7 @@ Sarah lost 18.75% of her pre-deal equity stake just from option pool creation.</
 
 <p>However, this strategy requires careful coordination with your legal counsel and 409A valuation firm to ensure compliance with IRS safe harbor provisions. Wilson Sonsini recommends <strong>obtaining the 409A valuation no more than 45 days before option grants</strong> to maintain safe harbor protection.</p>
 
-<h2>Practical Negotiation Tactics: What Works in Real Term Sheets</h2>
+<h2 id="practical-negotiation-tactics-what-works-in-real-term-sheets">Practical Negotiation Tactics: What Works in Real Term Sheets</h2>
 
 <p>Theory is valuable, but founders need practical tactics for term sheet negotiations. Here are six evidence-based strategies that have proven effective in reducing option pool dilution.</p>
 
@@ -512,7 +634,7 @@ Sarah lost 18.75% of her pre-deal equity stake just from option pool creation.</
 
 <p>Data-driven arguments are particularly effective with analytical investors. According to Index Ventures partner Mike Volpi, <strong>"founders who cite specific market data in negotiations are perceived as more sophisticated and credible, increasing their success rate by approximately 30%."</strong></p>
 
-<h2>Common Founder Mistakes to Avoid</h2>
+<h2 id="common-founder-mistakes-to-avoid">Common Founder Mistakes to Avoid</h2>
 
 <p>After analyzing hundreds of term sheet negotiations and cap table outcomes, several recurring mistakes emerge that founders should actively avoid.</p>
 
@@ -546,7 +668,7 @@ Sarah lost 18.75% of her pre-deal equity stake just from option pool creation.</
 
 <p>The optimal pool size is the minimum viable size to execute your hiring plan with a 10-15% buffer, not the absolute smallest number you can negotiate.</p>
 
-<h2>Advanced Topic: Option Pool Modeling Across Different Structures</h2>
+<h2 id="advanced-topic-option-pool-modeling-across-different-structu">Advanced Topic: Option Pool Modeling Across Different Structures</h2>
 
 <p>For founders facing complex capital structures (multiple convertible notes, SAFEs with different terms, prior equity rounds), option pool dilution calculations become significantly more complicated. Understanding the interaction between conversion mechanics and pool creation is essential.</p>
 
@@ -574,7 +696,7 @@ Sarah lost 18.75% of her pre-deal equity stake just from option pool creation.</
 
 <p>According to Orrick's analysis of 400+ Series A deals following SAFE rounds, <strong>89% of term sheets create the option pool after SAFE conversion</strong>, placing the dilution burden on both founders and SAFE holders rather than on the new investors.</p>
 
-<h2>Industry-Specific Benchmarks: What Pool Size Is Normal?</h2>
+<h2 id="industry-specific-benchmarks-what-pool-size-is-normal">Industry-Specific Benchmarks: What Pool Size Is Normal?</h2>
 
 <p>Option pool size varies significantly across industries and company stages. Understanding relevant benchmarks helps founders negotiate from an informed position.</p>
 
@@ -603,7 +725,7 @@ Sarah lost 18.75% of her pre-deal equity stake just from option pool creation.</
 
 <p>Geographic differences reflect compensation norms and talent competition. According to Balderton Capital's European VC survey, <strong>European companies can operate with 15-20% smaller option pools</strong> because equity compensation represents a smaller portion of total compensation compared to the US market.</p>
 
-<h2>The Future of Option Pool Structures: Emerging Trends</h2>
+<h2 id="the-future-of-option-pool-structures-emerging-trends">The Future of Option Pool Structures: Emerging Trends</h2>
 
 <p>Several innovative approaches to option pool structuring are emerging in founder-friendly firms and YC-backed companies that may become more widespread in the coming years.</p>
 
@@ -644,7 +766,7 @@ Sarah lost 18.75% of her pre-deal equity stake just from option pool creation.</
 
 <p>According to Cooley's data, <strong>average annual forfeiture rates are 8-12% at early-stage companies</strong>, providing material replenishment that can offset future pool expansion needs.</p>
 
-<h2>Frequently Asked Questions About Option Pool Dilution</h2>
+<h2 id="frequently-asked-questions-about-option-pool-dilution">Frequently Asked Questions About Option Pool Dilution</h2>
 
 <h3>How much dilution should founders expect from a Series A option pool?</h3>
 
@@ -704,13 +826,30 @@ Sarah lost 18.75% of her pre-deal equity stake just from option pool creation.</
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/option-pool-sizing-pre-seed-seed-series-a/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Option Pool Sizing: Pre-Seed, Seed, and Series A Guide</span>
+                </Link>
+                <Link href="/blog/option-pool-calculator-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Silicon Valley Option Pool Calculator: Pre-Money vs Post-Money ESOP Guide (2025)</span>
+                </Link>
+                <Link href="/blog/co-founder-equity-split-50-50-alternatives/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Co-Founder Equity Split: Why 50/50 Fails and Better Alternatives</span>
+                </Link>
+                <Link href="/blog/option-pool-calculator-berlin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Berlin Option Pool Calculator: German ESOP vs VSOP Guide (2025)</span>
+                </Link>
+                <Link href="/blog/option-pool-calculator-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">London Option Pool Calculator: UK ESOP & EMI Scheme Guide (2025)</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/option-pool-calculator-pre-seed-technical-founder-san-francisco-size-employee-equity-minimize-founder-dilution/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Option Pool Calculator</Link>
+              <Link href="/blog/equity-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Equity, Vesting & Option Pool Guides</Link>
             </div>
           </div>
         </section>
@@ -720,18 +859,18 @@ Sarah lost 18.75% of her pre-deal equity stake just from option pool creation.</
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Size Your Option Pool
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Model how different option pool sizes affect founder dilution before and after your next round.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/option-pool-impact-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Option Pool Calculator &rarr;
               </a>
             </div>
           </div>

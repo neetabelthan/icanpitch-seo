@@ -114,8 +114,24 @@ export default function SafeCalculatorB2bSaasLondonBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-london-b2b-saas-startups-need-uk-specific-safe-benchmark" className="text-blue-600 hover:text-blue-700 text-sm">Why London B2B SaaS Startups Need UK-Specific SAFE Benchmarks</a></li>
+                  <li><a href="#london-b2b-saas-safe-valuation-benchmarks-2024-2025" className="text-blue-600 hover:text-blue-700 text-sm">London B2B SaaS SAFE Valuation Benchmarks (2024-2025)</a></li>
+                  <li><a href="#london-b2b-saas-investor-landscape-and-valuation-expectation" className="text-blue-600 hover:text-blue-700 text-sm">London B2B SaaS Investor Landscape and Valuation Expectations</a></li>
+                  <li><a href="#key-metrics-that-drive-london-b2b-saas-valuations" className="text-blue-600 hover:text-blue-700 text-sm">Key Metrics That Drive London B2B SaaS Valuations</a></li>
+                  <li><a href="#how-uk-enterprise-buyers-impact-your-b2b-saas-valuation" className="text-blue-600 hover:text-blue-700 text-sm">How UK Enterprise Buyers Impact Your B2B SaaS Valuation</a></li>
+                  <li><a href="#structuring-your-london-b2b-saas-safe-key-terms-and-consider" className="text-blue-600 hover:text-blue-700 text-sm">Structuring Your London B2B SaaS SAFE: Key Terms and Considerations</a></li>
+                  <li><a href="#common-mistakes-london-b2b-saas-founders-make-with-safes" className="text-blue-600 hover:text-blue-700 text-sm">Common Mistakes London B2B SaaS Founders Make with SAFEs</a></li>
+                  <li><a href="#london-b2b-saas-safe-valuation-calculator-step-by-step-frame" className="text-blue-600 hover:text-blue-700 text-sm">London B2B SaaS SAFE Valuation Calculator: Step-by-Step Framework</a></li>
+                  <li><a href="#next-steps-calculating-and-negotiating-your-london-b2b-saas-" className="text-blue-600 hover:text-blue-700 text-sm">Next Steps: Calculating and Negotiating Your London B2B SaaS SAFE</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,13 +142,13 @@ export default function SafeCalculatorB2bSaasLondonBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why London B2B SaaS Startups Need UK-Specific SAFE Benchmarks</h2>
+                <h2 id="why-london-b2b-saas-startups-need-uk-specific-safe-benchmark">Why London B2B SaaS Startups Need UK-Specific SAFE Benchmarks</h2>
 
 <p>If you're raising a SAFE round for your London-based B2B SaaS startup, you're navigating a valuation landscape distinctly different from Silicon Valley. While London has emerged as Europe's leading tech hub with sophisticated enterprise SaaS investors, UK valuations consistently run 15-25% below US comparables at equivalent ARR and growth rates. This isn't a market inefficiency—it reflects structural differences in enterprise buying behavior, contract sizes, expansion timelines, and investor return expectations.</p>
 
 <p>The challenge for London founders: US-centric SAFE calculators and benchmarks don't account for UK-specific dynamics like longer enterprise sales cycles, lower average contract values (ACV), currency exposure, and the complexities of selling into European versus transatlantic enterprise markets. This guide provides the London-specific benchmarks, ARR multiples, and investor expectations you need to price your B2B SaaS SAFE competitively while preserving equity for future growth.</p>
 
-<h2>London B2B SaaS SAFE Valuation Benchmarks (2024-2025)</h2>
+<h2 id="london-b2b-saas-safe-valuation-benchmarks-2024-2025">London B2B SaaS SAFE Valuation Benchmarks (2024-2025)</h2>
 
 <p>London B2B SaaS valuations follow distinct patterns based on ARR, customer segment, and geographic revenue mix. Here's the current market data for SAFEs closed in the UK over the past 18 months:</p>
 
@@ -169,7 +185,7 @@ export default function SafeCalculatorB2bSaasLondonBlogPost() {
 
 <p>How to narrow the gap: Demonstrate US customer acquisition, price in dollars, or secure term sheets from US funds alongside UK investors to create competitive tension.</p>
 
-<h2>London B2B SaaS Investor Landscape and Valuation Expectations</h2>
+<h2 id="london-b2b-saas-investor-landscape-and-valuation-expectation">London B2B SaaS Investor Landscape and Valuation Expectations</h2>
 
 <p>The UK B2B SaaS funding ecosystem has matured significantly, with specialized investors understanding enterprise software economics. Knowing who invests at what stage helps calibrate SAFE terms.</p>
 
@@ -214,7 +230,21 @@ export default function SafeCalculatorB2bSaasLondonBlogPost() {
 
 <p>These firms apply US valuation frameworks but discount 10-15% for operational complexity and currency risk. To maximize valuations, secure US fund interest early and use it as leverage with UK investors.</p>
 
-<h2>Key Metrics That Drive London B2B SaaS Valuations</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="key-metrics-that-drive-london-b2b-saas-valuations">Key Metrics That Drive London B2B SaaS Valuations</h2>
 
 <p>UK investors evaluate B2B SaaS through the same core metrics as their US peers, but with different threshold expectations. Understanding these benchmarks helps you optimize pitch positioning.</p>
 
@@ -282,7 +312,7 @@ export default function SafeCalculatorB2bSaasLondonBlogPost() {
 
 <p>Strategic implication: Securing even 2-3 US enterprise customers pre-seed materially increases your SAFE valuation by demonstrating product appeal beyond UK/European markets.</p>
 
-<h2>How UK Enterprise Buyers Impact Your B2B SaaS Valuation</h2>
+<h2 id="how-uk-enterprise-buyers-impact-your-b2b-saas-valuation">How UK Enterprise Buyers Impact Your B2B SaaS Valuation</h2>
 
 <p>Understanding UK and European enterprise buying behavior helps you build investor-friendly traction before raising your SAFE.</p>
 
@@ -312,7 +342,7 @@ export default function SafeCalculatorB2bSaasLondonBlogPost() {
 
 <p>Investor perspective: European expansion signals ambition but requires disciplined execution. Investors prefer depth in UK before broad European expansion unless you have local market expertise or partnerships.</p>
 
-<h2>Structuring Your London B2B SaaS SAFE: Key Terms and Considerations</h2>
+<h2 id="structuring-your-london-b2b-saas-safe-key-terms-and-consider">Structuring Your London B2B SaaS SAFE: Key Terms and Considerations</h2>
 
 <p>UK SAFE terms follow similar conventions to US SAFEs, but with some regional variations and investor expectations.</p>
 
@@ -368,7 +398,7 @@ export default function SafeCalculatorB2bSaasLondonBlogPost() {
 
 <p>Negotiation leverage: Offer pro-rata to lead investors and strategic value-add investors while excluding small financial angels to preserve future round flexibility.</p>
 
-<h2>Common Mistakes London B2B SaaS Founders Make with SAFEs</h2>
+<h2 id="common-mistakes-london-b2b-saas-founders-make-with-safes">Common Mistakes London B2B SaaS Founders Make with SAFEs</h2>
 
 <p>After reviewing hundreds of London B2B SaaS cap tables, several recurring founder errors emerge:</p>
 
@@ -402,7 +432,7 @@ export default function SafeCalculatorB2bSaasLondonBlogPost() {
 
 <p>Discipline: Maintain sales momentum throughout fundraising. Demonstrate continued ARR growth in investor updates to justify your valuation and create urgency.</p>
 
-<h2>London B2B SaaS SAFE Valuation Calculator: Step-by-Step Framework</h2>
+<h2 id="london-b2b-saas-safe-valuation-calculator-step-by-step-frame">London B2B SaaS SAFE Valuation Calculator: Step-by-Step Framework</h2>
 
 <p>Use this framework to estimate a defensible SAFE valuation cap for your London B2B SaaS startup:</p>
 
@@ -459,7 +489,7 @@ Geographic mix: £12.42M x 1.10 = £13.66M<br />
 Team premium: £13.66M x 1.10 = £15M<br />
 <strong>Suggested SAFE cap: £14M-£16M (approximately $18M-$21M USD)</strong></p>
 
-<h2>Next Steps: Calculating and Negotiating Your London B2B SaaS SAFE</h2>
+<h2 id="next-steps-calculating-and-negotiating-your-london-b2b-saas-">Next Steps: Calculating and Negotiating Your London B2B SaaS SAFE</h2>
 
 <p>With UK-specific benchmarks and ARR multiple frameworks, you're equipped to model your valuation defensibly. The most successful London B2B SaaS founders approach SAFE negotiations with:</p>
 
@@ -495,13 +525,31 @@ Team premium: £13.66M x 1.10 = £15M<br />
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/safe-calculator-ai-ml-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">AI/ML SAFE Calculator Silicon Valley: 2025 Valuation Benchmarks for Foundation Models vs Application Layer</span>
+                </Link>
+                <Link href="/blog/safe-calculator-climate-tech-san-francisco/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Climate Tech SAFE Calculator San Francisco: Cleantech Valuations with IRA Impact & Hardware vs Software Dynamics</span>
+                </Link>
+                <Link href="/blog/safe-calculator-consumer-tech-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Consumer Tech SAFE Calculator Silicon Valley: Post-iOS14 Valuation Benchmarks for Social & Mobile Apps</span>
+                </Link>
+                <Link href="/blog/safe-calculator-crypto-web3-miami/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Crypto/Web3 SAFE Calculator Miami: Token vs Equity Considerations & Crypto-Native Investor Expectations</span>
+                </Link>
+                <Link href="/blog/safe-calculator-ecommerce-los-angeles/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">E-commerce SAFE Calculator Los Angeles: DTC Brand Valuations Post-iOS14 with Revenue Multiple Benchmarks</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -511,18 +559,18 @@ Team premium: £13.66M x 1.10 = £15M<br />
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

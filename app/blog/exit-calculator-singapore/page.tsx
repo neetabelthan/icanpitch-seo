@@ -52,6 +52,52 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does Singapore's small market size impact exit valuations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Singapore-only companies (100% SGD revenue) face 30-40% valuation discount vs pan-SEA competitors due to 5.9M population market size constraint. Singapore SaaS companies with 100% local revenue receive 6-10x ARR multiples vs 10-14x ARR for companies with 4+ country presence. To maximize valuation, expand regionally at $3-5M Singapore ARR. Each additional SEA market generating &gt;$500K ARR adds 8-15% to valuation. Companies with 60%+ revenue from non-Singapore SEA markets eliminate market size discount entirely and access US/China tech giant acquirers who pay 25-40% premium vs regional buyers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which SEA markets should I expand to first for maximum exit value?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Prioritize Indonesia (275M population, largest SEA market) or Vietnam (100M, fastest-growing) as first expansion market post-Singapore. Acquirers pay 20-30% premium for companies with Indonesia+Vietnam traction vs other market combinations due to market size and growth potential. Indonesia revenue carries 30-50% more valuation weight than equivalent revenue from Thailand, Malaysia, or Philippines. Expansion sequence: (1) Dominate Singapore to $3-5M ARR, (2) Expand to Indonesia or Vietnam to $1-2M ARR, (3) Add Thailand and Philippines for pan-SEA coverage, (4) Enter exit process with 5+ country presence attracting US/China acquirers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do US or regional acquirers pay higher valuations for Singapore startups?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "US tech giants (Google, Meta, Microsoft) and Chinese acquirers (Alibaba, Tencent, ByteDance) pay 25-40% premium vs regional SEA acquirers (Grab, GoTo, Sea Group) for pan-SEA companies with 4+ country presence. US acquirers apply US market multiples (10-15x ARR) vs regional acquirers' 8-12x revenue. However, US acquirers require $30M+ ARR and proven international traction. Regional acquirers offer advantages: faster execution (6-9 months vs 12-18 months), deeper SEA market expertise, and better strategic fit for companies with &lt;$30M ARR. Best practice: run dual-track with both US/China and regional acquirers to create competitive tension."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How valuable is MAS licensing for Singapore fintech exits?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MAS Major Payment Institution (MPI) license adds $5-8M standalone value to Singapore fintech exits, representing 18-24 months of regulatory approval time advantage for acquirers. Multi-country licensing portfolio (MAS + Indonesia OJK + Thailand BOT) adds $8-12M and drives 40-60% valuation premium vs single-country licensed peers. Digital bank license (only 4 granted) adds $15-30M value. Apply for MAS MPI license 24 months before exit; timeline is 12-18 months. For pan-SEA fintech, begin parallel license applications in Indonesia, Thailand, and Vietnam 30 months before exit (each market requires 18-30 months approval timeline)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the risks of accepting stock from regional acquirers like Grab or GoTo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Regional SEA acquirer stock (Grab, GoTo, Sea Group post-IPO) carries high volatility risk. Grab stock declined 75% from IPO to 2023 lows; GoTo down 85% from IPO. If exit offer includes 30-40% stock consideration with 18-month lockup, founder faces material downside risk. Discount illiquid public company stock by 30-40% when comparing offers. Push for 80%+ cash consideration or negotiate stock collar with floor price protecting against &gt;20% declines. All-cash US acquirer offer of $80M is economically superior to regional acquirer $100M offer with $60M cash + $40M stock given historical 40-60% stock declines post-acquisition."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +160,26 @@ export default function ExitCalculatorSingaporeBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#singapore-exit-calculator-model-your-apac-startup-exit-valua" className="text-blue-600 hover:text-blue-700 text-sm">Singapore Exit Calculator: Model Your APAC Startup Exit Valuation</a></li>
+                  <li><a href="#tldr-singapore-exit-valuation-quick-reference" className="text-blue-600 hover:text-blue-700 text-sm">TL;DR: Singapore Exit Valuation Quick Reference</a></li>
+                  <li><a href="#singapores-unique-position-in-apac-tech-exits" className="text-blue-600 hover:text-blue-700 text-sm">Singapore's Unique Position in APAC Tech Exits</a></li>
+                  <li><a href="#singapore-exit-multiples-by-sector-2025-benchmarks-in-usd" className="text-blue-600 hover:text-blue-700 text-sm">Singapore Exit Multiples by Sector (2025 Benchmarks in USD)</a></li>
+                  <li><a href="#step-by-step-singapore-exit-valuation-calculation" className="text-blue-600 hover:text-blue-700 text-sm">Step-by-Step Singapore Exit Valuation Calculation</a></li>
+                  <li><a href="#optimizing-singapore-exits-regional-expansion-strategy" className="text-blue-600 hover:text-blue-700 text-sm">Optimizing Singapore Exits: Regional Expansion Strategy</a></li>
+                  <li><a href="#common-singapore-exit-valuation-mistakes" className="text-blue-600 hover:text-blue-700 text-sm">Common Singapore Exit Valuation Mistakes</a></li>
+                  <li><a href="#singapore-exit-calculator-ready-to-use-valuation-framework" className="text-blue-600 hover:text-blue-700 text-sm">Singapore Exit Calculator: Ready-to-Use Valuation Framework</a></li>
+                  <li><a href="#resources-and-tools-for-singapore-exit-planning" className="text-blue-600 hover:text-blue-700 text-sm">Resources and Tools for Singapore Exit Planning</a></li>
+                  <li><a href="#frequently-asked-questions-singapore-exit-valuations" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions: Singapore Exit Valuations</a></li>
+                  <li><a href="#next-steps-plan-your-singapore-exit-strategy" className="text-blue-600 hover:text-blue-700 text-sm">Next Steps: Plan Your Singapore Exit Strategy</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,13 +190,13 @@ export default function ExitCalculatorSingaporeBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Singapore Exit Calculator: Model Your APAC Startup Exit Valuation</h2>
+                <h2 id="singapore-exit-calculator-model-your-apac-startup-exit-valua">Singapore Exit Calculator: Model Your APAC Startup Exit Valuation</h2>
 
 <p>Singapore has established itself as Southeast Asia's dominant tech exit hub, with 2024 exit values reaching $8.2B USD across 156 transactions. Singapore exit valuations reflect unique APAC market dynamics including regional expansion complexity, cross-border acquirer strategies, Singapore's role as pan-Asian platform, and the growing influence of Chinese, Japanese, and Korean strategic buyers.</p>
 
 <p>This comprehensive guide provides Singapore founders with actionable exit valuation frameworks, current APAC market multiples, and step-by-step calculations to model regional vs international acquirer scenarios with realistic Southeast Asian market benchmarks.</p>
 
-<h2>TL;DR: Singapore Exit Valuation Quick Reference</h2>
+<h2 id="tldr-singapore-exit-valuation-quick-reference">TL;DR: Singapore Exit Valuation Quick Reference</h2>
 
 <p><strong>Singapore SaaS Exit Multiples (2025):</strong> 6-10x ARR for companies with Singapore-only revenue; 8-12x ARR for companies with proven SEA regional expansion (Indonesia, Vietnam, Thailand, Philippines, Malaysia).</p>
 
@@ -144,7 +208,7 @@ export default function ExitCalculatorSingaporeBlogPost() {
 
 <p><strong>Market Size Reality:</strong> Singapore's 5.9M population creates mandatory regional expansion requirement. Companies with 40%+ revenue from SEA markets beyond Singapore command 30-50% valuation premium vs Singapore-only companies.</p>
 
-<h2>Singapore's Unique Position in APAC Tech Exits</h2>
+<h2 id="singapores-unique-position-in-apac-tech-exits">Singapore's Unique Position in APAC Tech Exits</h2>
 
 <p>Singapore functions as Southeast Asia's tech gateway, with exit dynamics shaped by regional expansion complexity, cross-border acquirer strategies, and Singapore's role as launching pad for pan-Asian platforms.</p>
 
@@ -221,7 +285,21 @@ export default function ExitCalculatorSingaporeBlogPost() {
   <li>Faster regulatory approvals for domestic M&amp;A vs cross-border deals</li>
 </ul>
 
-<h2>Singapore Exit Multiples by Sector (2025 Benchmarks in USD)</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your Exit Scenarios</p>
+                <p className="text-gray-600 mb-4">Calculate founder proceeds at different exit valuations with liquidation preference waterfalls.</p>
+                <a
+                  href="https://icanpitch.com/startup-exit-visualizer/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Exit Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="singapore-exit-multiples-by-sector-2025-benchmarks-in-usd">Singapore Exit Multiples by Sector (2025 Benchmarks in USD)</h2>
 
 <h3>Fintech and Payments Exit Multiples</h3>
 
@@ -303,7 +381,7 @@ export default function ExitCalculatorSingaporeBlogPost() {
   <li>Key Drivers: Delivery network density (&gt;100 cities), tech-enabled logistics (route optimization), B2B enterprise contracts</li>
 </ul>
 
-<h2>Step-by-Step Singapore Exit Valuation Calculation</h2>
+<h2 id="step-by-step-singapore-exit-valuation-calculation">Step-by-Step Singapore Exit Valuation Calculation</h2>
 
 <h3>Step 1: Calculate ARR or Revenue in USD</h3>
 
@@ -443,7 +521,7 @@ export default function ExitCalculatorSingaporeBlogPost() {
   <li><strong>Founder Proceeds: $151M x 0.19 = $28.7M USD</strong></li>
 </ul>
 
-<h2>Optimizing Singapore Exits: Regional Expansion Strategy</h2>
+<h2 id="optimizing-singapore-exits-regional-expansion-strategy">Optimizing Singapore Exits: Regional Expansion Strategy</h2>
 
 <h3>The Singapore Expansion Dilemma</h3>
 
@@ -520,7 +598,7 @@ export default function ExitCalculatorSingaporeBlogPost() {
 
 <p><strong>Chinese Acquirer Deal Structure:</strong> All-cash transactions at aggressive multiples, but potential geopolitical risk. US regulators increasingly scrutinizing Chinese acquisitions of tech companies with US users or data.</p>
 
-<h2>Common Singapore Exit Valuation Mistakes</h2>
+<h2 id="common-singapore-exit-valuation-mistakes">Common Singapore Exit Valuation Mistakes</h2>
 
 <h3>Mistake 1: Remaining Singapore-Only Too Long</h3>
 
@@ -546,7 +624,7 @@ export default function ExitCalculatorSingaporeBlogPost() {
 
 <p><strong>Solution:</strong> Discount illiquid public company stock by 30-40% when comparing offers. Push for higher cash percentage (80%+) or negotiate stock collar with floor price. Regional acquirer stock (Grab, GoTo, Sea Group) highly volatile post-IPO.</p>
 
-<h2>Singapore Exit Calculator: Ready-to-Use Valuation Framework</h2>
+<h2 id="singapore-exit-calculator-ready-to-use-valuation-framework">Singapore Exit Calculator: Ready-to-Use Valuation Framework</h2>
 
 <h3>Pan-SEA Company Valuation Calculator</h3>
 
@@ -607,7 +685,7 @@ export default function ExitCalculatorSingaporeBlogPost() {
 <p><strong>Step 7:</strong> Model founder proceeds:</p>
 <p><strong>Founder Proceeds = (Exit Valuation - Liquidation Preferences) x Founder Ownership %</strong></p>
 
-<h2>Resources and Tools for Singapore Exit Planning</h2>
+<h2 id="resources-and-tools-for-singapore-exit-planning">Resources and Tools for Singapore Exit Planning</h2>
 
 <h3>APAC-Specific Exit Resources</h3>
 
@@ -634,7 +712,7 @@ export default function ExitCalculatorSingaporeBlogPost() {
   <li><strong>Regional SEA M&amp;A:</strong> Convergence Partners, Quest Ventures (VC with M&amp;A advisory)</li>
 </ul>
 
-<h2>Frequently Asked Questions: Singapore Exit Valuations</h2>
+<h2 id="frequently-asked-questions-singapore-exit-valuations">Frequently Asked Questions: Singapore Exit Valuations</h2>
 
 <h3>How does Singapore's small market size impact exit valuations?</h3>
 
@@ -656,7 +734,7 @@ export default function ExitCalculatorSingaporeBlogPost() {
 
 <p>Regional SEA acquirer stock (Grab, GoTo, Sea Group post-IPO) carries high volatility risk. Grab stock declined 75% from IPO to 2023 lows; GoTo down 85% from IPO. If exit offer includes 30-40% stock consideration with 18-month lockup, founder faces material downside risk. Discount illiquid public company stock by 30-40% when comparing offers. Push for 80%+ cash consideration or negotiate stock collar with floor price protecting against &gt;20% declines. All-cash US acquirer offer of $80M is economically superior to regional acquirer $100M offer with $60M cash + $40M stock given historical 40-60% stock declines post-acquisition.</p>
 
-<h2>Next Steps: Plan Your Singapore Exit Strategy</h2>
+<h2 id="next-steps-plan-your-singapore-exit-strategy">Next Steps: Plan Your Singapore Exit Strategy</h2>
 
 <p>Successful Singapore exits require early regional expansion, multi-country go-to-market execution, and strategic positioning that attracts both regional champions and international tech giants. The optimal exit window occurs when you've built pan-SEA platform (4+ countries) with $25-40M ARR and proven playbook that acquirers can scale further.</p>
 
@@ -694,13 +772,31 @@ export default function ExitCalculatorSingaporeBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/exit-calculator-berlin/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Berlin Exit Calculator: German Startup Valuation & European M&A 2025</span>
+                </Link>
+                <Link href="/blog/exit-calculator-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">London Exit Calculator: UK Startup Valuation & Brexit Impact on M&A 2025</span>
+                </Link>
+                <Link href="/blog/exit-calculator-new-york/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">NYC Exit Calculator: New York Startup Exit Valuations & Fintech M&A 2025</span>
+                </Link>
+                <Link href="/blog/exit-calculator-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Silicon Valley Exit Calculator: Startup Valuation & M&A Multiples 2025</span>
+                </Link>
+                <Link href="/blog/vesting-acceleration-clauses-explained/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Vesting Acceleration Clauses: Single vs Double Trigger Explained</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/exit-calculator-growth-serial-entrepreneur-miami-model-exit-scenarios-maximize-founder-proceeds/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Exit Calculator</Link>
+              <Link href="/blog/exit-strategy-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Exit & Pro-Rata Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -710,18 +806,18 @@ export default function ExitCalculatorSingaporeBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your Exit Scenarios
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Calculate founder proceeds at different exit valuations with liquidation preference waterfalls.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/startup-exit-visualizer/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Exit Calculator &rarr;
               </a>
             </div>
           </div>

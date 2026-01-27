@@ -114,8 +114,24 @@ export default function SafeCalculatorHealthcareTechBostonBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#why-boston-healthcare-tech-startups-need-regulatory-aware-sa" className="text-blue-600 hover:text-blue-700 text-sm">Why Boston Healthcare Tech Startups Need Regulatory-Aware SAFE Benchmarks</a></li>
+                  <li><a href="#boston-healthcare-tech-safe-valuation-benchmarks-2024-2025" className="text-blue-600 hover:text-blue-700 text-sm">Boston Healthcare Tech SAFE Valuation Benchmarks (2024-2025)</a></li>
+                  <li><a href="#how-fda-regulatory-pathways-impact-healthcare-tech-valuation" className="text-blue-600 hover:text-blue-700 text-sm">How FDA Regulatory Pathways Impact Healthcare Tech Valuations</a></li>
+                  <li><a href="#clinical-validation-and-reimbursement-critical-valuation-dri" className="text-blue-600 hover:text-blue-700 text-sm">Clinical Validation and Reimbursement: Critical Valuation Drivers</a></li>
+                  <li><a href="#boston-healthcare-investor-landscape-and-expectations" className="text-blue-600 hover:text-blue-700 text-sm">Boston Healthcare Investor Landscape and Expectations</a></li>
+                  <li><a href="#key-metrics-that-drive-boston-healthcare-tech-valuations" className="text-blue-600 hover:text-blue-700 text-sm">Key Metrics That Drive Boston Healthcare Tech Valuations</a></li>
+                  <li><a href="#common-mistakes-boston-healthcare-founders-make-with-safes" className="text-blue-600 hover:text-blue-700 text-sm">Common Mistakes Boston Healthcare Founders Make with SAFEs</a></li>
+                  <li><a href="#boston-healthcare-tech-safe-valuation-calculator-step-by-ste" className="text-blue-600 hover:text-blue-700 text-sm">Boston Healthcare Tech SAFE Valuation Calculator: Step-by-Step Framework</a></li>
+                  <li><a href="#next-steps-navigating-your-boston-healthcare-tech-safe" className="text-blue-600 hover:text-blue-700 text-sm">Next Steps: Navigating Your Boston Healthcare Tech SAFE</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,13 +142,13 @@ export default function SafeCalculatorHealthcareTechBostonBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Why Boston Healthcare Tech Startups Need Regulatory-Aware SAFE Benchmarks</h2>
+                <h2 id="why-boston-healthcare-tech-startups-need-regulatory-aware-sa">Why Boston Healthcare Tech Startups Need Regulatory-Aware SAFE Benchmarks</h2>
 
 <p>If you're raising a SAFE round for your healthcare or biotech startup in Boston, you're navigating the most regulatory-intensive, capital-demanding, and timeline-uncertain sector in venture capital. Healthcare valuations bifurcate sharply based on your regulatory pathway: FDA-regulated medical devices and therapeutics follow fundamentally different risk-return profiles than software-based digital health tools, creating valuation spreads of 50-200% at equivalent stages.</p>
 
 <p>Boston's unique healthcare ecosystem—anchored by Mass General Brigham, Harvard Medical School, MIT, and dense concentrations of life sciences investors—creates specialized expectations around clinical validation, reimbursement strategy, and healthcare system integration. Generic SAFE calculators ignore these dynamics. This guide provides Boston-specific healthcare tech benchmarks, regulatory pathway valuations, and investor expectations across digital health, medical devices, and biotech.</p>
 
-<h2>Boston Healthcare Tech SAFE Valuation Benchmarks (2024-2025)</h2>
+<h2 id="boston-healthcare-tech-safe-valuation-benchmarks-2024-2025">Boston Healthcare Tech SAFE Valuation Benchmarks (2024-2025)</h2>
 
 <p>Healthcare tech valuations in Boston cluster around regulatory classification and clinical validation stage. Here's current market data for healthcare SAFEs closed in the past 18 months:</p>
 
@@ -191,7 +207,7 @@ export default function SafeCalculatorHealthcareTechBostonBlogPost() {
 
 <p>Strategic implication: The most valuable milestone for healthcare tech valuations is FDA clearance + initial reimbursement pathway. This combination typically doubles pre-money valuations overnight.</p>
 
-<h2>How FDA Regulatory Pathways Impact Healthcare Tech Valuations</h2>
+<h2 id="how-fda-regulatory-pathways-impact-healthcare-tech-valuation">How FDA Regulatory Pathways Impact Healthcare Tech Valuations</h2>
 
 <p>Understanding your FDA regulatory classification is critical to valuation expectations. Investors price risk and timelines based on pathway complexity.</p>
 
@@ -258,7 +274,21 @@ export default function SafeCalculatorHealthcareTechBostonBlogPost() {
 
 <p>Examples: AI radiology diagnostics (Zebra Medical, Aidoc), AI pathology (PathAI), digital therapeutics (Pear Therapeutics). Boston has exceptional concentration of SaMD companies given Harvard/MIT AI expertise + healthcare focus.</p>
 
-<h2>Clinical Validation and Reimbursement: Critical Valuation Drivers</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="clinical-validation-and-reimbursement-critical-valuation-dri">Clinical Validation and Reimbursement: Critical Valuation Drivers</h2>
 
 <p>Beyond FDA clearance, healthcare investors evaluate clinical evidence and payment pathways that determine commercial viability.</p>
 
@@ -304,7 +334,7 @@ export default function SafeCalculatorHealthcareTechBostonBlogPost() {
 
 <p>Boston-specific: Partnerships with Partners HealthCare (now Mass General Brigham) or their innovation programs (MESH, Catalyst) serve as validation signals worth 15-25% valuation premiums to investors familiar with the ecosystem.</p>
 
-<h2>Boston Healthcare Investor Landscape and Expectations</h2>
+<h2 id="boston-healthcare-investor-landscape-and-expectations">Boston Healthcare Investor Landscape and Expectations</h2>
 
 <p>Boston's healthcare investor ecosystem is the most specialized and sophisticated globally. Understanding investor archetypes helps calibrate SAFE terms.</p>
 
@@ -349,7 +379,7 @@ export default function SafeCalculatorHealthcareTechBostonBlogPost() {
 
 <p>Understanding their portfolio helps founders benchmark: If you're building digital therapeutics, study Pear Therapeutics (Polaris) or Akili Interactive (PureTech). If medical devices, reference iRhythm or Silk Road Medical exits.</p>
 
-<h2>Key Metrics That Drive Boston Healthcare Tech Valuations</h2>
+<h2 id="key-metrics-that-drive-boston-healthcare-tech-valuations">Key Metrics That Drive Boston Healthcare Tech Valuations</h2>
 
 <p>Healthcare investors evaluate companies through clinical, regulatory, and commercial KPIs specific to the sector.</p>
 
@@ -383,7 +413,7 @@ export default function SafeCalculatorHealthcareTechBostonBlogPost() {
 <li><strong>Partnership interest:</strong> Pharma partnership discussions or term sheets</li>
 </ul>
 
-<h2>Common Mistakes Boston Healthcare Founders Make with SAFEs</h2>
+<h2 id="common-mistakes-boston-healthcare-founders-make-with-safes">Common Mistakes Boston Healthcare Founders Make with SAFEs</h2>
 
 <p>Healthcare fundraising has unique complexities that trip up even experienced founders:</p>
 
@@ -417,7 +447,7 @@ export default function SafeCalculatorHealthcareTechBostonBlogPost() {
 
 <p>Benchmark: Budget $500K-$2M for clinical studies depending on size/complexity, $300K-$1M for regulatory, $500K-$1M for product development. Minimum viable healthcare seed: $2.5M-$5M.</p>
 
-<h2>Boston Healthcare Tech SAFE Valuation Calculator: Step-by-Step Framework</h2>
+<h2 id="boston-healthcare-tech-safe-valuation-calculator-step-by-ste">Boston Healthcare Tech SAFE Valuation Calculator: Step-by-Step Framework</h2>
 
 <p>Use this framework to estimate a defensible healthcare tech SAFE cap in Boston:</p>
 
@@ -469,7 +499,7 @@ Reimbursement progress: $30.24M x 1.20 = $36.29M<br />
 Team/ecosystem: $36.29M x 1.30 = $47.2M<br />
 <strong>Suggested SAFE cap: $45M-$50M</strong></p>
 
-<h2>Next Steps: Navigating Your Boston Healthcare Tech SAFE</h2>
+<h2 id="next-steps-navigating-your-boston-healthcare-tech-safe">Next Steps: Navigating Your Boston Healthcare Tech SAFE</h2>
 
 <p>Healthcare tech fundraising requires balancing clinical validation, regulatory de-risking, and commercial traction. The most successful Boston healthcare founders approach SAFEs with:</p>
 
@@ -506,13 +536,31 @@ Team/ecosystem: $36.29M x 1.30 = $47.2M<br />
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/safe-calculator-ai-ml-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">AI/ML SAFE Calculator Silicon Valley: 2025 Valuation Benchmarks for Foundation Models vs Application Layer</span>
+                </Link>
+                <Link href="/blog/safe-calculator-b2b-saas-london/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">B2B SaaS SAFE Calculator for London Startups: UK Valuation Benchmarks vs US Comparables</span>
+                </Link>
+                <Link href="/blog/safe-calculator-climate-tech-san-francisco/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Climate Tech SAFE Calculator San Francisco: Cleantech Valuations with IRA Impact & Hardware vs Software Dynamics</span>
+                </Link>
+                <Link href="/blog/safe-calculator-consumer-tech-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Consumer Tech SAFE Calculator Silicon Valley: Post-iOS14 Valuation Benchmarks for Social & Mobile Apps</span>
+                </Link>
+                <Link href="/blog/safe-calculator-crypto-web3-miami/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Crypto/Web3 SAFE Calculator Miami: Token vs Equity Considerations & Crypto-Native Investor Expectations</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -522,18 +570,18 @@ Team/ecosystem: $36.29M x 1.30 = $47.2M<br />
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

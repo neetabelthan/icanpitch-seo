@@ -52,6 +52,92 @@ const jsonLdData = [
         "url": "https://icanpitch.com/logo.png"
       }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "When exactly do SAFEs convert in a Series A?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SAFEs convert at the closing of the Series A financing, simultaneously with the issuance of new preferred shares to Series A investors. The conversion is automatic and happens immediately upon the qualified financing closing. You don't need separate signatures or documents beyond the conversion notices prepared by your attorney."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I negotiate SAFE conversion terms after issuing the SAFE?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Generally no. SAFE terms are locked in when you sign the agreement. However, in specific circumstances (like a down round or strategic acquisition), you may negotiate amendments with SAFE holder consent. This requires unanimous approval from all SAFE holders and new documentation. Most investors won't agree to worse terms unless the alternative is company failure."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if my Series A valuation is below my SAFE cap?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This is called a \"down round\" relative to your SAFE. The SAFE will convert using the discount rate if it provides an advantage, or at the Series A price if neither cap nor discount benefits the investor. You may need to negotiate with SAFE holders about participation in the new round or amended terms. Some investors may agree to convert at Series A terms to support the company."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do SAFEs convert before or after the employee option pool is created?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SAFEs convert before the Series A option pool creation. Here's the sequence: (1) SAFEs convert into preferred shares, (2) Employee option pool is carved out (typically 10-20% on a pre-money basis), (3) Series A shares are issued. This means SAFE holders get diluted by the option pool creation along with founders."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate dilution from SAFE conversion?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Calculate dilution as: (New Shares Issued ÷ Total Shares Post-Conversion) × Your Pre-Conversion Ownership Percentage. For example, if you owned 100% of 10M shares, and SAFEs convert to 2M new shares, your dilution is: 2M ÷ 12M × 100% = 16.7% dilution. Your new ownership is 10M ÷ 12M = 83.3%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can SAFEs convert in tranches or do they all convert at once?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "All SAFEs that meet the conversion trigger criteria convert simultaneously. You cannot selectively convert some SAFEs and leave others outstanding. If you've issued SAFEs with different terms, each calculates conversion independently, but all convert at the same moment (Series A closing)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if my company is acquired before a priced round?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SAFEs convert based on the acquisition price. Investors receive either: (1) Their pro-rata share calculated using the cap, or (2) Their original investment returned, whichever is greater. The exact formula is in your SAFE agreement under \"Liquidity Event.\" Most acquirers require SAFE conversion as a closing condition."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does the conversion process take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Administrative conversion takes 7-10 days after Series A term sheet execution. Your attorney prepares conversion notices, board resolutions, and updated cap table documentation. The actual legal conversion happens simultaneously with Series A closing. Plan for 2-3 weeks between finalizing Series A terms and physical closing to allow for conversion preparation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need SAFE holder approval to convert?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Conversion is automatic when trigger events occur—it's not optional and doesn't require investor approval. However, best practice is to notify SAFE holders 10-15 days before closing with detailed conversion calculations. This prevents last-minute surprises and maintains good investor relations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens to SAFE holders' rights after conversion?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SAFE holders receive the same class of preferred stock as Series A investors, with identical rights: liquidation preference, anti-dilution protection, voting rights, information rights, and pro-rata investment rights in future rounds. They're treated as if they invested in the Series A directly, but at their more favorable SAFE conversion price."
+        }
+      }
+    ]
   }
 ];
 
@@ -114,8 +200,30 @@ export default function SafeConversionMechanicsPricedRoundBlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#tldr" className="text-blue-600 hover:text-blue-700 text-sm">TL;DR</a></li>
+                  <li><a href="#what-is-safe-conversion" className="text-blue-600 hover:text-blue-700 text-sm">What is SAFE Conversion?</a></li>
+                  <li><a href="#what-triggers-safe-conversion" className="text-blue-600 hover:text-blue-700 text-sm">What Triggers SAFE Conversion?</a></li>
+                  <li><a href="#understanding-conversion-price-calculation" className="text-blue-600 hover:text-blue-700 text-sm">Understanding Conversion Price Calculation</a></li>
+                  <li><a href="#step-by-step-conversion-walkthrough-alexs-series-a" className="text-blue-600 hover:text-blue-700 text-sm">Step-by-Step Conversion Walkthrough: Alex's Series A</a></li>
+                  <li><a href="#share-issuance-mechanics-behind-the-scenes" className="text-blue-600 hover:text-blue-700 text-sm">Share Issuance Mechanics: Behind the Scenes</a></li>
+                  <li><a href="#15-critical-safe-conversion-statistics" className="text-blue-600 hover:text-blue-700 text-sm">15 Critical SAFE Conversion Statistics</a></li>
+                  <li><a href="#common-conversion-pitfalls-and-how-to-avoid-them" className="text-blue-600 hover:text-blue-700 text-sm">Common Conversion Pitfalls and How to Avoid Them</a></li>
+                  <li><a href="#advanced-conversion-scenarios" className="text-blue-600 hover:text-blue-700 text-sm">Advanced Conversion Scenarios</a></li>
+                  <li><a href="#safe-conversion-checklist-for-founders" className="text-blue-600 hover:text-blue-700 text-sm">SAFE Conversion Checklist for Founders</a></li>
+                  <li><a href="#tools-and-resources-for-modeling-conversion" className="text-blue-600 hover:text-blue-700 text-sm">Tools and Resources for Modeling Conversion</a></li>
+                  <li><a href="#real-world-conversion-examples" className="text-blue-600 hover:text-blue-700 text-sm">Real-World Conversion Examples</a></li>
+                  <li><a href="#frequently-asked-questions-about-safe-conversion" className="text-blue-600 hover:text-blue-700 text-sm">Frequently Asked Questions About SAFE Conversion</a></li>
+                  <li><a href="#key-takeaways-for-founders-approaching-series-a" className="text-blue-600 hover:text-blue-700 text-sm">Key Takeaways for Founders Approaching Series A</a></li>
+                  <li><a href="#further-reading-and-resources" className="text-blue-600 hover:text-blue-700 text-sm">Further Reading and Resources</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,12 +234,12 @@ export default function SafeConversionMechanicsPricedRoundBlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>TL;DR</h2>
+                <h2 id="tldr">TL;DR</h2>
 <p>
   SAFE conversion is the process where your Simple Agreement for Future Equity transforms into actual shares during a priced equity round. Understanding conversion mechanics is critical for founders approaching Series A—the math determines how much ownership you'll dilute and what your investors receive. This guide provides step-by-step conversion calculations, real examples, and cap table impacts.
 </p>
 
-<h2>What is SAFE Conversion?</h2>
+<h2 id="what-is-safe-conversion">What is SAFE Conversion?</h2>
 <p>
   SAFE conversion is the mechanism by which a Simple Agreement for Future Equity (SAFE) transforms from a contractual right into actual preferred stock shares during a qualified financing event. Unlike convertible notes that accrue interest and have maturity dates, SAFEs remain dormant until triggered by specific events—most commonly, a priced equity round like Series A.
 </p>
@@ -145,7 +253,7 @@ export default function SafeConversionMechanicsPricedRoundBlogPost() {
   <strong>SAFE Conversion:</strong> The automatic transformation of a SAFE investment into preferred stock shares during a priced equity round, calculated using predetermined formulas based on valuation cap, discount rate, and the new round's share price.
 </p>
 
-<h2>What Triggers SAFE Conversion?</h2>
+<h2 id="what-triggers-safe-conversion">What Triggers SAFE Conversion?</h2>
 <p>
   Understanding conversion triggers is essential because timing significantly impacts your cap table. SAFEs don't convert based on time elapsed—they convert based on specific corporate events.
 </p>
@@ -166,7 +274,21 @@ export default function SafeConversionMechanicsPricedRoundBlogPost() {
   <strong>Critical Note:</strong> Time alone does not trigger conversion. A SAFE can remain outstanding indefinitely until one of these events occurs. The average time from SAFE issuance to conversion is 12-18 months, but this varies significantly by company trajectory and fundraising timeline.
 </p>
 
-<h2>Understanding Conversion Price Calculation</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="understanding-conversion-price-calculation">Understanding Conversion Price Calculation</h2>
 <p>
   The conversion price determines how many shares SAFE holders receive. This is where the valuation cap and discount rate come into play, creating scenarios where early investors receive better pricing than Series A investors.
 </p>
@@ -217,7 +339,7 @@ export default function SafeConversionMechanicsPricedRoundBlogPost() {
   In rare cases where the Series A valuation is below both the cap and the discount provides no advantage, the SAFE converts at the Series A price. This typically only happens with down rounds.
 </p>
 
-<h2>Step-by-Step Conversion Walkthrough: Alex's Series A</h2>
+<h2 id="step-by-step-conversion-walkthrough-alexs-series-a">Step-by-Step Conversion Walkthrough: Alex's Series A</h2>
 <p>
   Let's walk through a complete conversion scenario with real numbers. Meet Alex, a founder closing a $6M Series A who needs to convert $800K in outstanding SAFEs.
 </p>
@@ -353,7 +475,7 @@ export default function SafeConversionMechanicsPricedRoundBlogPost() {
   <li>Effective valuation for SAFE #2: $8M (still better than Series A terms)</li>
 </ul>
 
-<h2>Share Issuance Mechanics: Behind the Scenes</h2>
+<h2 id="share-issuance-mechanics-behind-the-scenes">Share Issuance Mechanics: Behind the Scenes</h2>
 <p>
   Understanding the administrative process helps you prepare for conversion and avoid delays in closing your priced round.
 </p>
@@ -386,7 +508,7 @@ export default function SafeConversionMechanicsPricedRoundBlogPost() {
   <li>Update stockholder records and maintain investor communications</li>
 </ul>
 
-<h2>15 Critical SAFE Conversion Statistics</h2>
+<h2 id="15-critical-safe-conversion-statistics">15 Critical SAFE Conversion Statistics</h2>
 <p>
   Data-driven insights to benchmark your conversion against industry norms:
 </p>
@@ -409,7 +531,7 @@ export default function SafeConversionMechanicsPricedRoundBlogPost() {
   <li><strong>18% of Series A rounds require SAFE amendments</strong> before conversion (correcting errors or updating terms)</li>
 </ol>
 
-<h2>Common Conversion Pitfalls and How to Avoid Them</h2>
+<h2 id="common-conversion-pitfalls-and-how-to-avoid-them">Common Conversion Pitfalls and How to Avoid Them</h2>
 
 <h3>Pitfall 1: Miscalculating Post-Money vs. Pre-Money SAFEs</h3>
 <p>
@@ -451,7 +573,7 @@ export default function SafeConversionMechanicsPricedRoundBlogPost() {
   <strong>Solution:</strong> SAFEs should convert simultaneously with Series A closing as part of a single transaction. Your legal counsel will structure this properly, but you should understand the timing to coordinate investor communications.
 </p>
 
-<h2>Advanced Conversion Scenarios</h2>
+<h2 id="advanced-conversion-scenarios">Advanced Conversion Scenarios</h2>
 
 <h3>Scenario: Bridge Round Between SAFE and Series A</h3>
 <p>
@@ -488,7 +610,7 @@ export default function SafeConversionMechanicsPricedRoundBlogPost() {
   <li>Example: $500K SAFE with $5M cap, company acquired for $20M → SAFE holder receives $2M (20M × 10% = 2M)</li>
 </ul>
 
-<h2>SAFE Conversion Checklist for Founders</h2>
+<h2 id="safe-conversion-checklist-for-founders">SAFE Conversion Checklist for Founders</h2>
 
 <h3>30 Days Before Series A Close</h3>
 <ul>
@@ -526,7 +648,7 @@ export default function SafeConversionMechanicsPricedRoundBlogPost() {
   <li>Document conversion in corporate records and minute book</li>
 </ul>
 
-<h2>Tools and Resources for Modeling Conversion</h2>
+<h2 id="tools-and-resources-for-modeling-conversion">Tools and Resources for Modeling Conversion</h2>
 
 <h3>Cap Table Management Platforms</h3>
 <p>
@@ -557,7 +679,7 @@ export default function SafeConversionMechanicsPricedRoundBlogPost() {
   <li>Shares issued and final ownership percentage</li>
 </ul>
 
-<h2>Real-World Conversion Examples</h2>
+<h2 id="real-world-conversion-examples">Real-World Conversion Examples</h2>
 
 <h3>Example 1: Multiple SAFEs with Varying Caps</h3>
 <p><strong>Company:</strong> FinTech startup, raising $8M Series A at $25M pre-money</p>
@@ -595,7 +717,7 @@ export default function SafeConversionMechanicsPricedRoundBlogPost() {
 <p><strong>Key Lesson:</strong> When Series A valuation falls below the SAFE cap, the discount rate becomes the primary protection mechanism for early investors.
 </p>
 
-<h2>Frequently Asked Questions About SAFE Conversion</h2>
+<h2 id="frequently-asked-questions-about-safe-conversion">Frequently Asked Questions About SAFE Conversion</h2>
 
 <h3>When exactly do SAFEs convert in a Series A?</h3>
 <p>
@@ -647,7 +769,7 @@ export default function SafeConversionMechanicsPricedRoundBlogPost() {
   SAFE holders receive the same class of preferred stock as Series A investors, with identical rights: liquidation preference, anti-dilution protection, voting rights, information rights, and pro-rata investment rights in future rounds. They're treated as if they invested in the Series A directly, but at their more favorable SAFE conversion price.
 </p>
 
-<h2>Key Takeaways for Founders Approaching Series A</h2>
+<h2 id="key-takeaways-for-founders-approaching-series-a">Key Takeaways for Founders Approaching Series A</h2>
 
 <p>
   SAFE conversion is a critical but often misunderstood aspect of Series A fundraising. Understanding the mechanics protects you from unexpected dilution and ensures smooth closing execution.
@@ -674,7 +796,7 @@ export default function SafeConversionMechanicsPricedRoundBlogPost() {
   The goal isn't to avoid SAFE dilution—SAFEs are powerful instruments that enable you to raise capital without immediate valuation negotiations. The goal is to understand exactly how conversion works so you can make informed decisions about caps, discounts, and total SAFE capital raised relative to your Series A plans.
 </p>
 
-<h2>Further Reading and Resources</h2>
+<h2 id="further-reading-and-resources">Further Reading and Resources</h2>
 
 <ul>
   <li><a href="https://www.ycombinator.com/documents" target="_blank" rel="noopener noreferrer">Y Combinator SAFE Templates</a> - Official post-money SAFE agreements and explanations</li>
@@ -703,13 +825,30 @@ export default function SafeConversionMechanicsPricedRoundBlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/avoiding-safe-dilution-traps-founders/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Avoiding SAFE Dilution Traps: 7 Mistakes Founders Make</span>
+                </Link>
+                <Link href="/blog/safe-calculator-first-time-founders-complete-guide/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for First-Time Founders: Complete 2025 Guide</span>
+                </Link>
+                <Link href="/blog/safe-discount-rate-vs-valuation-cap-which-better/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Discount Rate vs Valuation Cap: Which Matters More?</span>
+                </Link>
+                <Link href="/blog/how-to-negotiate-safe-valuation-cap/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Negotiate SAFE Valuation Caps: 2025 Founder's Guide</span>
+                </Link>
+                <Link href="/blog/safe-calculator-bangalore/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Bangalore Startups: 2025 India Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
             </div>
           </div>
         </section>
@@ -719,18 +858,18 @@ export default function SafeConversionMechanicsPricedRoundBlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>

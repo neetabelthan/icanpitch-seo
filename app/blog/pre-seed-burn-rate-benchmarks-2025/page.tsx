@@ -114,8 +114,25 @@ export default function PreSeedBurnRateBenchmarks2025BlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#understanding-pre-seed-burn-rate-in-2025" className="text-blue-600 hover:text-blue-700 text-sm">Understanding Pre-Seed Burn Rate in 2025</a></li>
+                  <li><a href="#pre-seed-burn-rate-by-industry-2025-data" className="text-blue-600 hover:text-blue-700 text-sm">Pre-Seed Burn Rate by Industry (2025 Data)</a></li>
+                  <li><a href="#pre-seed-team-composition-and-cost-structure" className="text-blue-600 hover:text-blue-700 text-sm">Pre-Seed Team Composition and Cost Structure</a></li>
+                  <li><a href="#geographic-burn-rate-variations" className="text-blue-600 hover:text-blue-700 text-sm">Geographic Burn Rate Variations</a></li>
+                  <li><a href="#runway-expectations-how-long-should-your-pre-seed-last" className="text-blue-600 hover:text-blue-700 text-sm">Runway Expectations: How Long Should Your Pre-Seed Last?</a></li>
+                  <li><a href="#how-to-calculate-your-target-burn-rate" className="text-blue-600 hover:text-blue-700 text-sm">How to Calculate Your Target Burn Rate</a></li>
+                  <li><a href="#red-flags-when-your-burn-rate-is-too-high" className="text-blue-600 hover:text-blue-700 text-sm">Red Flags: When Your Burn Rate Is Too High</a></li>
+                  <li><a href="#optimizing-your-pre-seed-burn-rate" className="text-blue-600 hover:text-blue-700 text-sm">Optimizing Your Pre-Seed Burn Rate</a></li>
+                  <li><a href="#pre-seed-burn-rate-benchmarks-key-takeaways" className="text-blue-600 hover:text-blue-700 text-sm">Pre-Seed Burn Rate Benchmarks: Key Takeaways</a></li>
+                  <li><a href="#ready-to-optimize-your-burn-rate-and-runway" className="text-blue-600 hover:text-blue-700 text-sm">Ready to Optimize Your Burn Rate and Runway?</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,13 +143,13 @@ export default function PreSeedBurnRateBenchmarks2025BlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Understanding Pre-Seed Burn Rate in 2025</h2>
+                <h2 id="understanding-pre-seed-burn-rate-in-2025">Understanding Pre-Seed Burn Rate in 2025</h2>
 
 <p>Pre-seed burn rate represents the monthly cash a startup consumes before achieving product-market fit or significant traction. In 2025, pre-seed burn rates have stabilized after the 2022-2023 correction, with founders returning to capital-efficient growth models. Understanding these benchmarks is critical for setting realistic expectations, managing runway, and demonstrating fiscal responsibility to investors.</p>
 
 <p>According to <a href="https://www.carta.com" target="_blank" rel="noopener noreferrer">Carta's</a> 2024 State of Startups report, the median pre-seed company now burns between $30,000 and $80,000 per month, with significant variation by geography, industry, and founding team composition. This represents a 25-30% decrease from 2021 peak levels, reflecting the current emphasis on sustainable growth over growth-at-all-costs.</p>
 
-<h2>Pre-Seed Burn Rate by Industry (2025 Data)</h2>
+<h2 id="pre-seed-burn-rate-by-industry-2025-data">Pre-Seed Burn Rate by Industry (2025 Data)</h2>
 
 <p>Industry choice fundamentally impacts burn rate expectations. Here are the 2025 benchmarks across key sectors:</p>
 
@@ -168,7 +185,7 @@ export default function PreSeedBurnRateBenchmarks2025BlogPost() {
 
 <p>Many successful fintech pre-seeds leverage Banking-as-a-Service platforms (Stripe Treasury, Unit.co, Synapse) to reduce infrastructure costs, keeping burn on the lower end of the range.</p>
 
-<h2>Pre-Seed Team Composition and Cost Structure</h2>
+<h2 id="pre-seed-team-composition-and-cost-structure">Pre-Seed Team Composition and Cost Structure</h2>
 
 <p>Your team composition directly determines your burn rate. Here are the standard models in 2025:</p>
 
@@ -204,7 +221,21 @@ export default function PreSeedBurnRateBenchmarks2025BlogPost() {
 
 <p>While higher burn rates accelerate product development, they also reduce flexibility. Many 2024-2025 pre-seed investors actively discourage this model unless there's a compelling reason for speed-to-market.</p>
 
-<h2>Geographic Burn Rate Variations</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Calculate Your Burn Rate & Runway</p>
+                <p className="text-gray-600 mb-4">Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.</p>
+                <a
+                  href="https://icanpitch.com/burn-rate-runway-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open Burn Rate Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="geographic-burn-rate-variations">Geographic Burn Rate Variations</h2>
 
 <p>Location dramatically impacts burn rate through salary expectations and operational costs:</p>
 
@@ -238,7 +269,7 @@ export default function PreSeedBurnRateBenchmarks2025BlogPost() {
 
 <p>Significantly lower burn rates in Europe (particularly Eastern Europe), Latin America, and Southeast Asia. A $500K pre-seed round in these markets can provide 18-24 months of runway versus 8-12 months in Silicon Valley.</p>
 
-<h2>Runway Expectations: How Long Should Your Pre-Seed Last?</h2>
+<h2 id="runway-expectations-how-long-should-your-pre-seed-last">Runway Expectations: How Long Should Your Pre-Seed Last?</h2>
 
 <p>The standard pre-seed runway target in 2025 is <strong>12-18 months</strong>, with most sophisticated investors expecting founders to plan for 15+ months minimum. Here's why:</p>
 
@@ -263,7 +294,7 @@ export default function PreSeedBurnRateBenchmarks2025BlogPost() {
   <li><strong>Network effects:</strong> Marketplace and social products need time to reach critical mass</li>
 </ul>
 
-<h2>How to Calculate Your Target Burn Rate</h2>
+<h2 id="how-to-calculate-your-target-burn-rate">How to Calculate Your Target Burn Rate</h2>
 
 <p>Use this formula to reverse-engineer your appropriate burn rate:</p>
 
@@ -289,7 +320,7 @@ export default function PreSeedBurnRateBenchmarks2025BlogPost() {
   <li><strong>Maximum monthly burn: $50,000</strong></li>
 </ul>
 
-<h2>Red Flags: When Your Burn Rate Is Too High</h2>
+<h2 id="red-flags-when-your-burn-rate-is-too-high">Red Flags: When Your Burn Rate Is Too High</h2>
 
 <p>Investors will scrutinize your burn rate during seed fundraising. Here are warning signs your burn is unsustainable:</p>
 
@@ -305,7 +336,7 @@ export default function PreSeedBurnRateBenchmarks2025BlogPost() {
 
 <p>Your burn rate should correlate with traction. If you're burning 30% more each month but user growth or revenue is flat, you're scaling costs without scaling output—a major red flag.</p>
 
-<h2>Optimizing Your Pre-Seed Burn Rate</h2>
+<h2 id="optimizing-your-pre-seed-burn-rate">Optimizing Your Pre-Seed Burn Rate</h2>
 
 <p>Here are tactical strategies to extend runway without sacrificing velocity:</p>
 
@@ -325,7 +356,7 @@ export default function PreSeedBurnRateBenchmarks2025BlogPost() {
 
 <p>Defer spending on office space, conferences, premium tools, and brand design until post-product-market-fit. Every dollar saved extends runway and increases your chances of reaching key milestones.</p>
 
-<h2>Pre-Seed Burn Rate Benchmarks: Key Takeaways</h2>
+<h2 id="pre-seed-burn-rate-benchmarks-key-takeaways">Pre-Seed Burn Rate Benchmarks: Key Takeaways</h2>
 
 <ul>
   <li><strong>Standard range:</strong> $30K-$80K/month depending on industry, geography, and team</li>
@@ -336,7 +367,7 @@ export default function PreSeedBurnRateBenchmarks2025BlogPost() {
   <li><strong>Capital efficiency:</strong> Investors in 2025 reward lean operations; demonstrate you can do more with less</li>
 </ul>
 
-<h2>Ready to Optimize Your Burn Rate and Runway?</h2>
+<h2 id="ready-to-optimize-your-burn-rate-and-runway">Ready to Optimize Your Burn Rate and Runway?</h2>
 
 <p>Understanding benchmarks is just the first step. Use <a href="https://www.icanpitch.com" target="_blank" rel="noopener noreferrer">ICanPitch's runway calculator</a> to model different scenarios, compare your burn rate against industry peers, and plan your path to seed funding with confidence. Get data-driven insights tailored to your stage, industry, and geography.</p>
 
@@ -359,13 +390,30 @@ export default function PreSeedBurnRateBenchmarks2025BlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/seed-burn-rate-benchmarks-2025/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Seed Stage Burn Rate Benchmarks 2025: Scaling from Pre-Seed to PMF</span>
+                </Link>
+                <Link href="/blog/series-a-burn-rate-benchmarks-2025/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Series A Burn Rate Benchmarks 2025: Efficiency Metrics and Growth Scaling</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-chicago/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Chicago Burn Rate Calculator: Track Startup Runway in the Midwest Tech Hub</span>
+                </Link>
+                <Link href="/blog/burn-rate-calculator-seattle/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Calculator for Seattle Startups: Track Your Runway in 2025</span>
+                </Link>
+                <Link href="/blog/burn-rate-benchmarks-by-industry-stage/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Burn Rate Benchmarks by Industry and Stage: 2025 Data</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/burn-rate-calculator-series-a-first-time-founder-new-york-plan-fundraising-timeline-extend-runway-efficiency/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Burn Rate Calculator</Link>
+              <Link href="/blog/burn-rate-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Burn Rate & Runway Guides</Link>
             </div>
           </div>
         </section>
@@ -375,18 +423,18 @@ export default function PreSeedBurnRateBenchmarks2025BlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Calculate Your Burn Rate & Runway
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                Enter your expenses and cash balance to see your runway in months. Plan your next fundraise.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/burn-rate-runway-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open Burn Rate Calculator &rarr;
               </a>
             </div>
           </div>

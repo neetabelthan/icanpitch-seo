@@ -114,8 +114,27 @@ export default function PreSeedValuationBenchmarks2025BlogPost() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
+
+              {/* Table of Contents */}
+              <nav className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Table of Contents</p>
+                <ul className="space-y-2">
+                  <li><a href="#understanding-pre-seed-valuations-in-2025" className="text-blue-600 hover:text-blue-700 text-sm">Understanding Pre-Seed Valuations in 2025</a></li>
+                  <li><a href="#pre-seed-valuation-ranges-by-geography-2025" className="text-blue-600 hover:text-blue-700 text-sm">Pre-Seed Valuation Ranges by Geography (2025)</a></li>
+                  <li><a href="#valuation-benchmarks-by-founder-profile" className="text-blue-600 hover:text-blue-700 text-sm">Valuation Benchmarks by Founder Profile</a></li>
+                  <li><a href="#traction-requirements-by-valuation-tier" className="text-blue-600 hover:text-blue-700 text-sm">Traction Requirements by Valuation Tier</a></li>
+                  <li><a href="#pre-seed-valuation-by-industry-2025" className="text-blue-600 hover:text-blue-700 text-sm">Pre-Seed Valuation by Industry (2025)</a></li>
+                  <li><a href="#pre-seed-round-structures-safes-vs-priced-rounds" className="text-blue-600 hover:text-blue-700 text-sm">Pre-Seed Round Structures: SAFEs vs. Priced Rounds</a></li>
+                  <li><a href="#pre-seed-dilution-how-much-equity-should-you-give-up" className="text-blue-600 hover:text-blue-700 text-sm">Pre-Seed Dilution: How Much Equity Should You Give Up?</a></li>
+                  <li><a href="#what-investors-expect-at-pre-seed-in-2025" className="text-blue-600 hover:text-blue-700 text-sm">What Investors Expect at Pre-Seed in 2025</a></li>
+                  <li><a href="#common-pre-seed-valuation-mistakes" className="text-blue-600 hover:text-blue-700 text-sm">Common Pre-Seed Valuation Mistakes</a></li>
+                  <li><a href="#how-to-increase-your-pre-seed-valuation" className="text-blue-600 hover:text-blue-700 text-sm">How to Increase Your Pre-Seed Valuation</a></li>
+                  <li><a href="#pre-seed-valuation-benchmarks-key-takeaways" className="text-blue-600 hover:text-blue-700 text-sm">Pre-Seed Valuation Benchmarks: Key Takeaways</a></li>
+                  <li><a href="#model-your-pre-seed-valuation-and-dilution" className="text-blue-600 hover:text-blue-700 text-sm">Model Your Pre-Seed Valuation and Dilution</a></li>
+                </ul>
+              </nav>
               <article className="
-                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0
+                [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mb-4 [&>h2]:mt-12 [&>h2]:first:mt-0 [&>h2]:scroll-mt-20
                 [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mb-3 [&>h3]:mt-8
                 [&>p]:text-lg [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6
                 [&>ul]:text-lg [&>ul]:text-gray-700 [&>ul]:leading-relaxed [&>ul]:mb-6 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:space-y-2
@@ -126,13 +145,13 @@ export default function PreSeedValuationBenchmarks2025BlogPost() {
                 [&>p>a]:text-blue-600 [&>p>a]:underline [&>p>a]:hover:text-blue-700
                 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6
               ">
-                <h2>Understanding Pre-Seed Valuations in 2025</h2>
+                <h2 id="understanding-pre-seed-valuations-in-2025">Understanding Pre-Seed Valuations in 2025</h2>
 
 <p>Pre-seed valuations have undergone significant recalibration since the 2021-2022 peak. In 2025, pre-seed founders face a market that values sustainable growth, capital efficiency, and realistic milestone planning over hockey-stick projections. Understanding current benchmarks is essential for setting appropriate SAFE caps, managing dilution, and building productive investor relationships.</p>
 
 <p>According to <a href="https://www.carta.com" target="_blank" rel="noopener noreferrer">Carta's</a> Q4 2024 data, median pre-seed valuations now range from $2 million to $8 million post-money, with significant variance by geography, founder pedigree, market opportunity, and early traction. This represents a 30-40% decrease from 2021 peaks but reflects healthier, more sustainable startup ecosystems.</p>
 
-<h2>Pre-Seed Valuation Ranges by Geography (2025)</h2>
+<h2 id="pre-seed-valuation-ranges-by-geography-2025">Pre-Seed Valuation Ranges by Geography (2025)</h2>
 
 <p>Geographic location remains one of the strongest predictors of pre-seed valuation, driven by local capital availability, talent density, and ecosystem maturity.</p>
 
@@ -186,7 +205,7 @@ export default function PreSeedValuationBenchmarks2025BlogPost() {
 
 <p>LatAm pre-seeds typically raise at lower valuations but from investors who understand regional dynamics. Sao Paulo, Mexico City, and Buenos Aires lead the ecosystem, with fintech and e-commerce commanding the highest valuations.</p>
 
-<h2>Valuation Benchmarks by Founder Profile</h2>
+<h2 id="valuation-benchmarks-by-founder-profile">Valuation Benchmarks by Founder Profile</h2>
 
 <p>Your background significantly influences pre-seed valuation, often more than initial traction:</p>
 
@@ -220,7 +239,21 @@ export default function PreSeedValuationBenchmarks2025BlogPost() {
 
 <p>Non-technical solo founders face the toughest pre-seed environment. Investors worry about technical execution risk and seek evidence of strong technical co-founders or exceptional domain expertise to compensate.</p>
 
-<h2>Traction Requirements by Valuation Tier</h2>
+
+              <div className="my-10 p-6 rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-100">
+                <p className="text-lg font-semibold text-gray-900 mb-2">Model Your SAFE Conversion</p>
+                <p className="text-gray-600 mb-4">See exactly how your SAFE converts at different valuations. Free calculator, no signup required.</p>
+                <a
+                  href="https://icanpitch.com/safe-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all text-sm"
+                >
+                  Open SAFE Calculator &rarr;
+                </a>
+              </div>
+
+              <h2 id="traction-requirements-by-valuation-tier">Traction Requirements by Valuation Tier</h2>
 
 <p>What traction do you need to justify different valuation levels? Here's the 2025 reality:</p>
 
@@ -277,7 +310,7 @@ export default function PreSeedValuationBenchmarks2025BlogPost() {
 
 <p>Many startups at this level could raise seed rounds but choose pre-seed structures for speed and flexibility.</p>
 
-<h2>Pre-Seed Valuation by Industry (2025)</h2>
+<h2 id="pre-seed-valuation-by-industry-2025">Pre-Seed Valuation by Industry (2025)</h2>
 
 <p>Industry selection impacts valuation expectations significantly:</p>
 
@@ -319,7 +352,7 @@ export default function PreSeedValuationBenchmarks2025BlogPost() {
 
 <p>Hardware startups face lower valuations but also lower expectations at pre-seed. Investors understand longer timelines and capital requirements. Working prototypes significantly increase valuations versus CAD models or concepts.</p>
 
-<h2>Pre-Seed Round Structures: SAFEs vs. Priced Rounds</h2>
+<h2 id="pre-seed-round-structures-safes-vs-priced-rounds">Pre-Seed Round Structures: SAFEs vs. Priced Rounds</h2>
 
 <p>In 2025, approximately 85% of pre-seed rounds use SAFE notes rather than priced equity rounds, according to <a href="https://www.cooleygo.com" target="_blank" rel="noopener noreferrer">Cooley</a> data. Here's why:</p>
 
@@ -353,7 +386,7 @@ export default function PreSeedValuationBenchmarks2025BlogPost() {
   <li>You're in a geography where SAFEs are uncommon (some European markets)</li>
 </ul>
 
-<h2>Pre-Seed Dilution: How Much Equity Should You Give Up?</h2>
+<h2 id="pre-seed-dilution-how-much-equity-should-you-give-up">Pre-Seed Dilution: How Much Equity Should You Give Up?</h2>
 
 <p>Typical pre-seed dilution ranges from 10% to 20%, with most rounds settling around 12-15%.</p>
 
@@ -379,7 +412,7 @@ export default function PreSeedValuationBenchmarks2025BlogPost() {
 
 <p>Great pre-seed investors provide strategic value: customer intros, recruitment help, and warm seed-stage investor connections. This value often outweighs an extra 2-3% dilution.</p>
 
-<h2>What Investors Expect at Pre-Seed in 2025</h2>
+<h2 id="what-investors-expect-at-pre-seed-in-2025">What Investors Expect at Pre-Seed in 2025</h2>
 
 <p>Beyond traction benchmarks, here's what pre-seed investors actually evaluate:</p>
 
@@ -403,7 +436,7 @@ export default function PreSeedValuationBenchmarks2025BlogPost() {
 
 <p>Investors evaluate how you fundraise as a proxy for how you'll operate the business. Clear data rooms, responsive communication, and organized processes signal competence.</p>
 
-<h2>Common Pre-Seed Valuation Mistakes</h2>
+<h2 id="common-pre-seed-valuation-mistakes">Common Pre-Seed Valuation Mistakes</h2>
 
 <h3>Mistake 1: Anchoring to 2021 Valuations</h3>
 
@@ -423,7 +456,7 @@ export default function PreSeedValuationBenchmarks2025BlogPost() {
 
 <p>Founders who nickel-and-dime angels over 1-2% dilution often lose those investors entirely. Pre-seed is about building relationships, not extracting maximum value from every negotiation.</p>
 
-<h2>How to Increase Your Pre-Seed Valuation</h2>
+<h2 id="how-to-increase-your-pre-seed-valuation">How to Increase Your Pre-Seed Valuation</h2>
 
 <p>If your initial investor conversations suggest lower valuations than expected, here are tactical strategies:</p>
 
@@ -443,7 +476,7 @@ export default function PreSeedValuationBenchmarks2025BlogPost() {
 
 <p>A tight pitch deck, compelling demo, and impressive early metrics signal professionalism. Many founders lose 10-20% valuation simply by presenting poorly.</p>
 
-<h2>Pre-Seed Valuation Benchmarks: Key Takeaways</h2>
+<h2 id="pre-seed-valuation-benchmarks-key-takeaways">Pre-Seed Valuation Benchmarks: Key Takeaways</h2>
 
 <ul>
   <li><strong>Geographic range:</strong> $2M-$8M caps, with SF/NYC 30-50% above other markets</li>
@@ -455,7 +488,7 @@ export default function PreSeedValuationBenchmarks2025BlogPost() {
   <li><strong>Investor priorities:</strong> Founder-market fit, capital efficiency, and market timing matter more than perfect traction</li>
 </ul>
 
-<h2>Model Your Pre-Seed Valuation and Dilution</h2>
+<h2 id="model-your-pre-seed-valuation-and-dilution">Model Your Pre-Seed Valuation and Dilution</h2>
 
 <p>Use <a href="https://www.icanpitch.com" target="_blank" rel="noopener noreferrer">ICanPitch's valuation calculator</a> to model different SAFE cap scenarios, understand dilution across multiple funding rounds, and benchmark your company against industry-specific pre-seed data. Get clarity on the right valuation range for your stage, geography, and traction.</p>
 
@@ -478,13 +511,31 @@ export default function PreSeedValuationBenchmarks2025BlogPost() {
           </div>
         </section>
 
-        {/* Related Resources */}
+        {/* Related Articles */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 max-w-3xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
-              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
+            <div className="space-y-1 mb-6">
+              <Link href="/blog/safe-calculator-denver/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Denver SAFE Calculator: Navigate Startup Valuations in Colorado's Growing Tech Ecosystem</span>
+                </Link>
+                <Link href="/blog/safe-calculator-fintech-new-york/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Fintech SAFE Calculator for New York Startups: Valuation Benchmarks & Investor Expectations</span>
+                </Link>
+                <Link href="/blog/safe-calculator-los-angeles/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Calculator for Los Angeles Startups: LA Valuation Benchmarks & Terms</span>
+                </Link>
+                <Link href="/blog/series-a-valuation-benchmarks-2025/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Series A Valuation Benchmarks 2025: ARR Requirements and Valuation Multiples by Sector</span>
+                </Link>
+                <Link href="/blog/how-to-negotiate-safe-valuation-cap/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Negotiate SAFE Valuation Caps: 2025 Founder's Guide</span>
+                </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">
+              <Link href="/learn/safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Calculator Guide: Safe Calculator</Link>
+              <Link href="/blog/safe-calculator-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">SAFE Calculator Guides</Link>
+                <Link href="/blog/valuation-guides/" className="text-blue-600 hover:text-blue-700 underline text-sm font-medium">Startup Valuation Guides</Link>
             </div>
           </div>
         </section>
@@ -494,18 +545,18 @@ export default function PreSeedValuationBenchmarks2025BlogPost() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Model Your Startup?
+                Model Your SAFE Conversion
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Try our free startup calculators to make informed decisions about your equity and fundraising.
+                See exactly how your SAFE converts at different valuations. Free calculator, no signup required.
               </p>
               <a
-                href="https://icanpitch.com"
+                href="https://icanpitch.com/safe-calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 hover:from-blue-600 hover:via-indigo-500 hover:to-purple-600 shadow-md hover:shadow-lg transition-all"
               >
-                Explore Calculators →
+                Open SAFE Calculator &rarr;
               </a>
             </div>
           </div>
