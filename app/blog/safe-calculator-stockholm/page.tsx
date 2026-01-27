@@ -3,23 +3,27 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "Stockholm SAFE Calculator: Navigate Nordic Valuations & SAFE Agreements | ICanPitch ",
+  title: "Stockholm SAFE Calculator: Navigate Nordic Valuations & SAFE Agreements | ICanPitch",
   description: "Calculate SAFE terms for Stockholm startups. Understand Nordic VC expectations, Swedish valuation benchmarks, and how Spotify/Klarna success shapes investor terms.",
   keywords: ["Stockholm valuations", "SAFE calculator", "Nordic VC", "Swedish startups", "Klarna", "Spotify", "valuation caps", "discount rates"],
   openGraph: {
     title: "Stockholm SAFE Calculator: Navigate Nordic Valuations & SAFE Agreements",
     description: "Calculate SAFE terms for Stockholm startups. Understand Nordic VC expectations, Swedish valuation benchmarks, and how Spotify/Klarna success shapes investor terms.",
     type: "article",
-    publishedTime: "2025-01-07T00:00:00.000Z",
+    publishedTime: "2025-01-04T00:00:00.000Z",
     url: "https://icanpitch.com/blog/safe-calculator-stockholm/",
   },
   twitter: {
     card: "summary_large_image",
     title: "Stockholm SAFE Calculator: Navigate Nordic Valuations & SAFE Agreements",
     description: "Calculate SAFE terms for Stockholm startups. Understand Nordic VC expectations, Swedish valuation benchmarks, and how Spotify/Klarna success shapes investor terms.",
+  },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/safe-calculator-stockholm/",
   },
 };
 
@@ -29,7 +33,16 @@ const jsonLdData = [
     "@type": "Article",
     "headline": "Stockholm SAFE Calculator: Navigate Nordic Valuations & SAFE Agreements",
     "description": "Calculate SAFE terms for Stockholm startups. Understand Nordic VC expectations, Swedish valuation benchmarks, and how Spotify/Klarna success shapes investor terms.",
-    "datePublished": "2025-01-07T00:00:00.000Z",
+    "datePublished": "2025-01-04T00:00:00.000Z",
+    "dateModified": "2025-01-04T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/safe-calculator-stockholm/"
+    },
     "url": "https://icanpitch.com/blog/safe-calculator-stockholm/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function SafeCalculatorStockholmBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Stockholm SAFE Calculator: Navigate Nordic Valuations & SAFE Agreements" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function SafeCalculatorStockholmBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -79,7 +98,7 @@ export default function SafeCalculatorStockholmBlogPost() {
               {/* Meta */}
               <div className="flex items-center gap-4 text-gray-600 mb-8">
                 
-                <time dateTime="2025-01-07T00:00:00.000Z">January 6, 2025</time>
+                <time dateTime="2025-01-04T00:00:00.000Z">January 3, 2025</time>
                 <span>•</span>
                 <span>11 min read</span>
               </div>
@@ -679,6 +698,17 @@ export default function SafeCalculatorStockholmBlogPost() {
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

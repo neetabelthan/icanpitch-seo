@@ -3,23 +3,27 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "NYC Exit Calculator: New York Startup Exit Valuations & Fintech M&A 2025 | ICanPitch ",
+  title: "NYC Exit Calculator: New York Startup Exit Valuations & Fintech M&A 2025 | ICanPitch",
   description: "Calculate your NYC startup exit value with fintech (8-12x ARR), e-commerce (1-3x revenue), and media tech multiples. Model strategic vs financial buyer scenarios with New York market benchmarks.",
   keywords: ["exit calculator", "NYC exits", "fintech valuation", "New York M&A", "startup acquisition", "financial buyer", "strategic acquirer", "e-commerce exit"],
   openGraph: {
     title: "NYC Exit Calculator: New York Startup Exit Valuations & Fintech M&A 2025",
     description: "Calculate your NYC startup exit value with fintech (8-12x ARR), e-commerce (1-3x revenue), and media tech multiples. Model strategic vs financial buyer scenarios with New York market benchmarks.",
     type: "article",
-    publishedTime: "2025-01-07T08:00:00.000Z",
+    publishedTime: "2024-10-23T00:00:00.000Z",
     url: "https://icanpitch.com/blog/exit-calculator-new-york/",
   },
   twitter: {
     card: "summary_large_image",
     title: "NYC Exit Calculator: New York Startup Exit Valuations & Fintech M&A 2025",
     description: "Calculate your NYC startup exit value with fintech (8-12x ARR), e-commerce (1-3x revenue), and media tech multiples. Model strategic vs financial buyer scenarios with New York market benchmarks.",
+  },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/exit-calculator-new-york/",
   },
 };
 
@@ -29,7 +33,16 @@ const jsonLdData = [
     "@type": "Article",
     "headline": "NYC Exit Calculator: New York Startup Exit Valuations & Fintech M&A 2025",
     "description": "Calculate your NYC startup exit value with fintech (8-12x ARR), e-commerce (1-3x revenue), and media tech multiples. Model strategic vs financial buyer scenarios with New York market benchmarks.",
-    "datePublished": "2025-01-07T08:00:00.000Z",
+    "datePublished": "2024-10-23T00:00:00.000Z",
+    "dateModified": "2024-10-23T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/exit-calculator-new-york/"
+    },
     "url": "https://icanpitch.com/blog/exit-calculator-new-york/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function ExitCalculatorNewYorkBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "NYC Exit Calculator: New York Startup Exit Valuations & Fintech M&A 2025" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function ExitCalculatorNewYorkBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -78,9 +97,9 @@ export default function ExitCalculatorNewYorkBlogPost() {
               {/* Meta */}
               <div className="flex items-center gap-4 text-gray-600 mb-8">
                 
-                <time dateTime="2025-01-07T08:00:00.000Z">January 7, 2025</time>
+                <time dateTime="2024-10-23T00:00:00.000Z">October 22, 2024</time>
                 <span>•</span>
-                <span>12 min min read</span>
+                <span>12 min read</span>
               </div>
 
               {/* Description */}
@@ -589,6 +608,17 @@ export default function ExitCalculatorNewYorkBlogPost() {
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

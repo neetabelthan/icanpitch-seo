@@ -3,10 +3,11 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "Option Pool Dilution Impact on Founders: Complete Guide | ICanPitch ",
+  title: "Option Pool Dilution Impact on Founders: Complete Guide | ICanPitch",
   description: "15% option pool equals 12-13 points of founder dilution. Learn the math of option pool dilution, pre-money vs post-money structures, and negotiation tactics to minimize founder dilution.",
   keywords: ["option-pool", "dilution", "founder-equity", "cap-table", "term-sheet"],
   openGraph: {
@@ -21,6 +22,9 @@ export const metadata: Metadata = {
     title: "Option Pool Dilution Impact on Founders: Complete Guide",
     description: "15% option pool equals 12-13 points of founder dilution. Learn the math of option pool dilution, pre-money vs post-money structures, and negotiation tactics to minimize founder dilution.",
   },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/option-pool-dilution-impact-founders/",
+  },
 };
 
 const jsonLdData = [
@@ -30,6 +34,15 @@ const jsonLdData = [
     "headline": "Option Pool Dilution Impact on Founders: Complete Guide",
     "description": "15% option pool equals 12-13 points of founder dilution. Learn the math of option pool dilution, pre-money vs post-money structures, and negotiation tactics to minimize founder dilution.",
     "datePublished": "2025-01-18T00:00:00.000Z",
+    "dateModified": "2025-01-18T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/option-pool-dilution-impact-founders/"
+    },
     "url": "https://icanpitch.com/blog/option-pool-dilution-impact-founders/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function OptionPoolDilutionImpactFoundersBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Option Pool Dilution Impact on Founders: Complete Guide" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function OptionPoolDilutionImpactFoundersBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -681,6 +700,17 @@ Sarah lost 18.75% of her pre-deal equity stake just from option pool creation.</
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

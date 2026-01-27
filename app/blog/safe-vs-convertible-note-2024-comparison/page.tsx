@@ -3,10 +3,11 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "SAFE vs Convertible Note: Complete 2024 Comparison Guide | ICanPitch ",
+  title: "SAFE vs Convertible Note: Complete 2024 Comparison Guide | ICanPitch",
   description: "78% of YC companies choose SAFEs over convertible notes. Compare interest rates, maturity dates, legal costs, and conversion mechanics to make the right choice.",
   keywords: ["SAFE", "convertible-note", "startup-financing", "Y-Combinator", "pre-seed", "seed-round"],
   openGraph: {
@@ -21,6 +22,9 @@ export const metadata: Metadata = {
     title: "SAFE vs Convertible Note: Complete 2024 Comparison Guide",
     description: "78% of YC companies choose SAFEs over convertible notes. Compare interest rates, maturity dates, legal costs, and conversion mechanics to make the right choice.",
   },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/safe-vs-convertible-note-2024-comparison/",
+  },
 };
 
 const jsonLdData = [
@@ -30,6 +34,15 @@ const jsonLdData = [
     "headline": "SAFE vs Convertible Note: Complete 2024 Comparison Guide",
     "description": "78% of YC companies choose SAFEs over convertible notes. Compare interest rates, maturity dates, legal costs, and conversion mechanics to make the right choice.",
     "datePublished": "2025-01-17T00:00:00.000Z",
+    "dateModified": "2025-01-17T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/safe-vs-convertible-note-2024-comparison/"
+    },
     "url": "https://icanpitch.com/blog/safe-vs-convertible-note-2024-comparison/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function SafeVsConvertibleNote2024ComparisonBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "SAFE vs Convertible Note: Complete 2024 Comparison Guide" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function SafeVsConvertibleNote2024ComparisonBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -563,6 +582,17 @@ export default function SafeVsConvertibleNote2024ComparisonBlogPost() {
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

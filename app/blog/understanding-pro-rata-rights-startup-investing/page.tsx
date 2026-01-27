@@ -3,10 +3,11 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "Understanding Pro-Rata Rights in Startup Investing: A Complete Guide | ICanPitch ",
+  title: "Understanding Pro-Rata Rights in Startup Investing: A Complete Guide | ICanPitch",
   description: "Learn everything about pro-rata rights in startup investing, how they work, why they matter for founders and investors, and how to calculate pro-rata allocation in future funding rounds.",
   keywords: ["pro-rata", "investment-rights", "follow-on-investment", "equity", "dilution"],
   openGraph: {
@@ -21,6 +22,9 @@ export const metadata: Metadata = {
     title: "Understanding Pro-Rata Rights in Startup Investing: A Complete Guide",
     description: "Learn everything about pro-rata rights in startup investing, how they work, why they matter for founders and investors, and how to calculate pro-rata allocation in future funding rounds.",
   },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/understanding-pro-rata-rights-startup-investing/",
+  },
 };
 
 const jsonLdData = [
@@ -30,6 +34,15 @@ const jsonLdData = [
     "headline": "Understanding Pro-Rata Rights in Startup Investing: A Complete Guide",
     "description": "Learn everything about pro-rata rights in startup investing, how they work, why they matter for founders and investors, and how to calculate pro-rata allocation in future funding rounds.",
     "datePublished": "2025-01-15T00:00:00.000Z",
+    "dateModified": "2025-01-15T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/understanding-pro-rata-rights-startup-investing/"
+    },
     "url": "https://icanpitch.com/blog/understanding-pro-rata-rights-startup-investing/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function UnderstandingProRataRightsStartupInvestingBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Understanding Pro-Rata Rights in Startup Investing: A Complete Guide" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function UnderstandingProRataRightsStartupInvestingBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -362,6 +381,17 @@ export default function UnderstandingProRataRightsStartupInvestingBlogPost() {
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

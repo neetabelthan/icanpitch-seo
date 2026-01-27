@@ -3,10 +3,11 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "How to Calculate Pre-Money Valuation for Series A | ICanPitch ",
+  title: "How to Calculate Pre-Money Valuation for Series A | ICanPitch",
   description: "Complete guide to calculating pre-money valuation for your Series A funding round. Learn the methods, formulas, and factors investors consider.",
   keywords: ["pre-money valuation", "Series A", "valuation", "fundraising", "equity"],
   openGraph: {
@@ -21,6 +22,9 @@ export const metadata: Metadata = {
     title: "How to Calculate Pre-Money Valuation for Series A",
     description: "Complete guide to calculating pre-money valuation for your Series A funding round. Learn the methods, formulas, and factors investors consider.",
   },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/how-to-calculate-pre-money-valuation-series-a/",
+  },
 };
 
 const jsonLdData = [
@@ -30,6 +34,15 @@ const jsonLdData = [
     "headline": "How to Calculate Pre-Money Valuation for Series A",
     "description": "Complete guide to calculating pre-money valuation for your Series A funding round. Learn the methods, formulas, and factors investors consider.",
     "datePublished": "2025-01-15T00:00:00.000Z",
+    "dateModified": "2025-01-15T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/how-to-calculate-pre-money-valuation-series-a/"
+    },
     "url": "https://icanpitch.com/blog/how-to-calculate-pre-money-valuation-series-a/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function HowToCalculatePreMoneyValuationSeriesABlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "How to Calculate Pre-Money Valuation for Series A" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function HowToCalculatePreMoneyValuationSeriesABlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -380,6 +399,17 @@ export default function HowToCalculatePreMoneyValuationSeriesABlogPost() {
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

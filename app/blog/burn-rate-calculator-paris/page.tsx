@@ -3,23 +3,27 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "Burn Rate Calculator for Paris Startups: Master Runway in Europe's Tech Capital | ICanPitch ",
+  title: "Burn Rate Calculator for Paris Startups: Master Runway in Europe's Tech Capital | ICanPitch",
   description: "Calculate your Paris startup's burn rate with precision. Navigate French labor laws, CIR/JEI tax credits, and EUR costs. Free calculator + Station F insights.",
   keywords: ["burn rate", "Paris startups", "French startups", "runway calculator", "startup finance", "CIR tax credit", "JEI", "Station F"],
   openGraph: {
     title: "Burn Rate Calculator for Paris Startups: Master Runway in Europe's Tech Capital",
     description: "Calculate your Paris startup's burn rate with precision. Navigate French labor laws, CIR/JEI tax credits, and EUR costs. Free calculator + Station F insights.",
     type: "article",
-    publishedTime: "2025-01-07T00:00:00.000Z",
+    publishedTime: "2024-10-08T00:00:00.000Z",
     url: "https://icanpitch.com/blog/burn-rate-calculator-paris/",
   },
   twitter: {
     card: "summary_large_image",
     title: "Burn Rate Calculator for Paris Startups: Master Runway in Europe's Tech Capital",
     description: "Calculate your Paris startup's burn rate with precision. Navigate French labor laws, CIR/JEI tax credits, and EUR costs. Free calculator + Station F insights.",
+  },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/burn-rate-calculator-paris/",
   },
 };
 
@@ -29,7 +33,16 @@ const jsonLdData = [
     "@type": "Article",
     "headline": "Burn Rate Calculator for Paris Startups: Master Runway in Europe's Tech Capital",
     "description": "Calculate your Paris startup's burn rate with precision. Navigate French labor laws, CIR/JEI tax credits, and EUR costs. Free calculator + Station F insights.",
-    "datePublished": "2025-01-07T00:00:00.000Z",
+    "datePublished": "2024-10-08T00:00:00.000Z",
+    "dateModified": "2024-10-08T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/burn-rate-calculator-paris/"
+    },
     "url": "https://icanpitch.com/blog/burn-rate-calculator-paris/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function BurnRateCalculatorParisBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Burn Rate Calculator for Paris Startups: Master Runway in Europe's Tech Capital" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function BurnRateCalculatorParisBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -78,7 +97,7 @@ export default function BurnRateCalculatorParisBlogPost() {
               {/* Meta */}
               <div className="flex items-center gap-4 text-gray-600 mb-8">
                 
-                <time dateTime="2025-01-07T00:00:00.000Z">January 6, 2025</time>
+                <time dateTime="2024-10-08T00:00:00.000Z">October 7, 2024</time>
                 <span>•</span>
                 <span>11 min read</span>
               </div>
@@ -289,6 +308,17 @@ export default function BurnRateCalculatorParisBlogPost() {
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

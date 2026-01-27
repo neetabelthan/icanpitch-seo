@@ -3,23 +3,27 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "SAFE Calculator for Los Angeles Startups: LA Valuation Benchmarks & Terms | ICanPitch ",
+  title: "SAFE Calculator for Los Angeles Startups: LA Valuation Benchmarks & Terms | ICanPitch",
   description: "SAFE calculator for LA startups. Compare LA vs SF valuation caps, Hollywood entertainment SAFE terms, Venice Beach startup benchmarks. MuckerLab & Idealab guidance.",
   keywords: ["SAFE", "Los Angeles", "valuation", "pre-seed", "seed round", "entertainment tech", "Venice Beach", "Santa Monica"],
   openGraph: {
     title: "SAFE Calculator for Los Angeles Startups: LA Valuation Benchmarks & Terms",
     description: "SAFE calculator for LA startups. Compare LA vs SF valuation caps, Hollywood entertainment SAFE terms, Venice Beach startup benchmarks. MuckerLab & Idealab guidance.",
     type: "article",
-    publishedTime: "2025-01-07T00:00:00.000Z",
+    publishedTime: "2024-12-24T00:00:00.000Z",
     url: "https://icanpitch.com/blog/safe-calculator-los-angeles/",
   },
   twitter: {
     card: "summary_large_image",
     title: "SAFE Calculator for Los Angeles Startups: LA Valuation Benchmarks & Terms",
     description: "SAFE calculator for LA startups. Compare LA vs SF valuation caps, Hollywood entertainment SAFE terms, Venice Beach startup benchmarks. MuckerLab & Idealab guidance.",
+  },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/safe-calculator-los-angeles/",
   },
 };
 
@@ -29,7 +33,16 @@ const jsonLdData = [
     "@type": "Article",
     "headline": "SAFE Calculator for Los Angeles Startups: LA Valuation Benchmarks & Terms",
     "description": "SAFE calculator for LA startups. Compare LA vs SF valuation caps, Hollywood entertainment SAFE terms, Venice Beach startup benchmarks. MuckerLab & Idealab guidance.",
-    "datePublished": "2025-01-07T00:00:00.000Z",
+    "datePublished": "2024-12-24T00:00:00.000Z",
+    "dateModified": "2024-12-24T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/safe-calculator-los-angeles/"
+    },
     "url": "https://icanpitch.com/blog/safe-calculator-los-angeles/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function SafeCalculatorLosAngelesBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "SAFE Calculator for Los Angeles Startups: LA Valuation Benchmarks & Terms" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function SafeCalculatorLosAngelesBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -78,7 +97,7 @@ export default function SafeCalculatorLosAngelesBlogPost() {
               {/* Meta */}
               <div className="flex items-center gap-4 text-gray-600 mb-8">
                 
-                <time dateTime="2025-01-07T00:00:00.000Z">January 6, 2025</time>
+                <time dateTime="2024-12-24T00:00:00.000Z">December 23, 2024</time>
                 <span>•</span>
                 <span>11 min read</span>
               </div>
@@ -687,6 +706,17 @@ export default function SafeCalculatorLosAngelesBlogPost() {
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

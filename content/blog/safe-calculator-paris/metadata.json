@@ -1,9 +1,21 @@
 {
   "title": "SAFE Calculator for Paris Startups: Navigate French Convertible Financing",
   "description": "Calculate SAFE dilution for Paris startups. Understand French vs US SAFE differences, European VC expectations, and valuation benchmarks. Free calculator.",
-  "date": "2025-01-07",
-  "categories": ["Fundraising", "SAFE"],
-  "tags": ["SAFE", "Paris startups", "French fundraising", "convertible loans", "startup valuation", "dilution calculator", "European VC", "BSA-AIR"],
+  "date": "2024-12-28",
+  "categories": [
+    "Fundraising",
+    "SAFE"
+  ],
+  "tags": [
+    "SAFE",
+    "Paris startups",
+    "French fundraising",
+    "convertible loans",
+    "startup valuation",
+    "dilution calculator",
+    "European VC",
+    "BSA-AIR"
+  ],
   "readingTime": 11,
   "pageType": "seo"
 }

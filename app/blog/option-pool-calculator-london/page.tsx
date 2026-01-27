@@ -3,23 +3,27 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "London Option Pool Calculator: UK ESOP & EMI Scheme Guide (2025) | ICanPitch ",
+  title: "London Option Pool Calculator: UK ESOP & EMI Scheme Guide (2025) | ICanPitch",
   description: "Calculate UK startup option pools with EMI tax advantages. Understand London standards (10-15%), HMRC compliance, and valuation requirements. Free calculator + EMI templates.",
   keywords: ["option pool", "london", "UK", "EMI", "ESOP", "tax-advantaged options", "HMRC"],
   openGraph: {
     title: "London Option Pool Calculator: UK ESOP & EMI Scheme Guide (2025)",
     description: "Calculate UK startup option pools with EMI tax advantages. Understand London standards (10-15%), HMRC compliance, and valuation requirements. Free calculator + EMI templates.",
     type: "article",
-    publishedTime: "2025-01-07T00:00:00.000Z",
+    publishedTime: "2024-10-31T00:00:00.000Z",
     url: "https://icanpitch.com/blog/option-pool-calculator-london/",
   },
   twitter: {
     card: "summary_large_image",
     title: "London Option Pool Calculator: UK ESOP & EMI Scheme Guide (2025)",
     description: "Calculate UK startup option pools with EMI tax advantages. Understand London standards (10-15%), HMRC compliance, and valuation requirements. Free calculator + EMI templates.",
+  },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/option-pool-calculator-london/",
   },
 };
 
@@ -29,7 +33,16 @@ const jsonLdData = [
     "@type": "Article",
     "headline": "London Option Pool Calculator: UK ESOP & EMI Scheme Guide (2025)",
     "description": "Calculate UK startup option pools with EMI tax advantages. Understand London standards (10-15%), HMRC compliance, and valuation requirements. Free calculator + EMI templates.",
-    "datePublished": "2025-01-07T00:00:00.000Z",
+    "datePublished": "2024-10-31T00:00:00.000Z",
+    "dateModified": "2024-10-31T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/option-pool-calculator-london/"
+    },
     "url": "https://icanpitch.com/blog/option-pool-calculator-london/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function OptionPoolCalculatorLondonBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "London Option Pool Calculator: UK ESOP & EMI Scheme Guide (2025)" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function OptionPoolCalculatorLondonBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -78,9 +97,9 @@ export default function OptionPoolCalculatorLondonBlogPost() {
               {/* Meta */}
               <div className="flex items-center gap-4 text-gray-600 mb-8">
                 
-                <time dateTime="2025-01-07T00:00:00.000Z">January 6, 2025</time>
+                <time dateTime="2024-10-31T00:00:00.000Z">October 30, 2024</time>
                 <span>•</span>
-                <span>11 min min read</span>
+                <span>11 min read</span>
               </div>
 
               {/* Description */}
@@ -587,6 +606,17 @@ export default function OptionPoolCalculatorLondonBlogPost() {
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

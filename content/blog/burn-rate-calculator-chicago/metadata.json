@@ -1,9 +1,19 @@
 {
   "title": "Chicago Burn Rate Calculator: Track Startup Runway in the Midwest Tech Hub",
   "description": "Calculate your Chicago startup's burn rate and runway. Compare costs vs SF (40-50% lower) and NYC (25-30% lower). Essential for fintech, healthcare tech, and logistics founders.",
-  "date": "2025-01-07",
-  "categories": ["Fundraising", "Operations"],
-  "tags": ["burn rate", "Chicago", "startup costs", "runway", "fintech", "healthcare tech"],
+  "date": "2024-09-23",
+  "categories": [
+    "Fundraising",
+    "Operations"
+  ],
+  "tags": [
+    "burn rate",
+    "Chicago",
+    "startup costs",
+    "runway",
+    "fintech",
+    "healthcare tech"
+  ],
   "readingTime": 12,
   "pageType": "seo"
 }

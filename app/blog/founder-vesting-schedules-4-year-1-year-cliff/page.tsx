@@ -3,10 +3,11 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "Founder Vesting Schedules: 4-Year 1-Year Cliff Explained | ICanPitch ",
+  title: "Founder Vesting Schedules: 4-Year 1-Year Cliff Explained | ICanPitch",
   description: "92% of funded startups require founder vesting. Learn why the 4-year schedule with 1-year cliff matters and how to protect your equity.",
   keywords: ["vesting", "founder-equity", "4-year-vesting", "cliff", "83b-election"],
   openGraph: {
@@ -21,6 +22,9 @@ export const metadata: Metadata = {
     title: "Founder Vesting Schedules: 4-Year 1-Year Cliff Explained",
     description: "92% of funded startups require founder vesting. Learn why the 4-year schedule with 1-year cliff matters and how to protect your equity.",
   },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/founder-vesting-schedules-4-year-1-year-cliff/",
+  },
 };
 
 const jsonLdData = [
@@ -30,6 +34,15 @@ const jsonLdData = [
     "headline": "Founder Vesting Schedules: 4-Year 1-Year Cliff Explained",
     "description": "92% of funded startups require founder vesting. Learn why the 4-year schedule with 1-year cliff matters and how to protect your equity.",
     "datePublished": "2025-01-18T00:00:00.000Z",
+    "dateModified": "2025-01-18T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/founder-vesting-schedules-4-year-1-year-cliff/"
+    },
     "url": "https://icanpitch.com/blog/founder-vesting-schedules-4-year-1-year-cliff/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function FounderVestingSchedules4Year1YearCliffBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Founder Vesting Schedules: 4-Year 1-Year Cliff Explained" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function FounderVestingSchedules4Year1YearCliffBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -586,6 +605,17 @@ export default function FounderVestingSchedules4Year1YearCliffBlogPost() {
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

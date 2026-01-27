@@ -3,10 +3,11 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "Co-Founder Equity Split: Why 50/50 Fails and Better Alternatives | ICanPitch ",
+  title: "Co-Founder Equity Split: Why 50/50 Fails and Better Alternatives | ICanPitch",
   description: "62% of 50/50 splits end in founder conflict within 3 years. Learn why equal equity splits fail, proven alternative models (60/40, 70/30), and decision frameworks for dividing founder equity fairly.",
   keywords: ["equity-split", "co-founder", "founder-equity", "vesting", "cap-table"],
   openGraph: {
@@ -21,6 +22,9 @@ export const metadata: Metadata = {
     title: "Co-Founder Equity Split: Why 50/50 Fails and Better Alternatives",
     description: "62% of 50/50 splits end in founder conflict within 3 years. Learn why equal equity splits fail, proven alternative models (60/40, 70/30), and decision frameworks for dividing founder equity fairly.",
   },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/co-founder-equity-split-50-50-alternatives/",
+  },
 };
 
 const jsonLdData = [
@@ -30,6 +34,15 @@ const jsonLdData = [
     "headline": "Co-Founder Equity Split: Why 50/50 Fails and Better Alternatives",
     "description": "62% of 50/50 splits end in founder conflict within 3 years. Learn why equal equity splits fail, proven alternative models (60/40, 70/30), and decision frameworks for dividing founder equity fairly.",
     "datePublished": "2025-01-18T00:00:00.000Z",
+    "dateModified": "2025-01-18T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/co-founder-equity-split-50-50-alternatives/"
+    },
     "url": "https://icanpitch.com/blog/co-founder-equity-split-50-50-alternatives/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function CoFounderEquitySplit5050AlternativesBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Co-Founder Equity Split: Why 50/50 Fails and Better Alternatives" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function CoFounderEquitySplit5050AlternativesBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -749,6 +768,17 @@ Founder C (Head of Growth): 20% - joined 3 months later, brings enterprise sales
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

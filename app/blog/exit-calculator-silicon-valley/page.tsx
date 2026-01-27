@@ -3,23 +3,27 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "Silicon Valley Exit Calculator: Startup Valuation & M&A Multiples 2025 | ICanPitch ",
+  title: "Silicon Valley Exit Calculator: Startup Valuation & M&A Multiples 2025 | ICanPitch",
   description: "Calculate your Silicon Valley startup exit value with real SaaS (10-15x ARR), consumer tech (2-4x), and AI exit multiples. Model IPO vs M&A scenarios with valley-specific benchmarks.",
   keywords: ["exit calculator", "Silicon Valley exits", "startup valuation", "M&A multiples", "SaaS exit", "tech IPO", "acquisition valuation", "ARR multiple"],
   openGraph: {
     title: "Silicon Valley Exit Calculator: Startup Valuation & M&A Multiples 2025",
     description: "Calculate your Silicon Valley startup exit value with real SaaS (10-15x ARR), consumer tech (2-4x), and AI exit multiples. Model IPO vs M&A scenarios with valley-specific benchmarks.",
     type: "article",
-    publishedTime: "2025-01-07T08:00:00.000Z",
+    publishedTime: "2024-10-25T00:00:00.000Z",
     url: "https://icanpitch.com/blog/exit-calculator-silicon-valley/",
   },
   twitter: {
     card: "summary_large_image",
     title: "Silicon Valley Exit Calculator: Startup Valuation & M&A Multiples 2025",
     description: "Calculate your Silicon Valley startup exit value with real SaaS (10-15x ARR), consumer tech (2-4x), and AI exit multiples. Model IPO vs M&A scenarios with valley-specific benchmarks.",
+  },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/exit-calculator-silicon-valley/",
   },
 };
 
@@ -29,7 +33,16 @@ const jsonLdData = [
     "@type": "Article",
     "headline": "Silicon Valley Exit Calculator: Startup Valuation & M&A Multiples 2025",
     "description": "Calculate your Silicon Valley startup exit value with real SaaS (10-15x ARR), consumer tech (2-4x), and AI exit multiples. Model IPO vs M&A scenarios with valley-specific benchmarks.",
-    "datePublished": "2025-01-07T08:00:00.000Z",
+    "datePublished": "2024-10-25T00:00:00.000Z",
+    "dateModified": "2024-10-25T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/exit-calculator-silicon-valley/"
+    },
     "url": "https://icanpitch.com/blog/exit-calculator-silicon-valley/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function ExitCalculatorSiliconValleyBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Silicon Valley Exit Calculator: Startup Valuation & M&A Multiples 2025" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function ExitCalculatorSiliconValleyBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -78,9 +97,9 @@ export default function ExitCalculatorSiliconValleyBlogPost() {
               {/* Meta */}
               <div className="flex items-center gap-4 text-gray-600 mb-8">
                 
-                <time dateTime="2025-01-07T08:00:00.000Z">January 7, 2025</time>
+                <time dateTime="2024-10-25T00:00:00.000Z">October 24, 2024</time>
                 <span>•</span>
-                <span>12 min min read</span>
+                <span>12 min read</span>
               </div>
 
               {/* Description */}
@@ -509,6 +528,17 @@ export default function ExitCalculatorSiliconValleyBlogPost() {
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

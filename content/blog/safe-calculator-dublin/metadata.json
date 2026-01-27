@@ -1,9 +1,20 @@
 {
   "title": "Dublin SAFE Calculator: Model Your Startup Valuation and Dilution in EUR",
   "description": "Calculate SAFE conversions for Dublin startups with Irish valuation benchmarks, Enterprise Ireland co-investment terms, and UK/European funding scenarios.",
-  "date": "2025-01-07",
-  "categories": ["Fundraising", "Dublin Startups"],
-  "tags": ["SAFE", "Dublin", "Irish startups", "valuation", "dilution", "fundraising", "Enterprise Ireland"],
+  "date": "2024-12-14",
+  "categories": [
+    "Fundraising",
+    "Dublin Startups"
+  ],
+  "tags": [
+    "SAFE",
+    "Dublin",
+    "Irish startups",
+    "valuation",
+    "dilution",
+    "fundraising",
+    "Enterprise Ireland"
+  ],
   "readingTime": "11 min read",
   "pageType": "seo"
 }

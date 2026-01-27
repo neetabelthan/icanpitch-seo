@@ -1,28 +1,30 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Script from 'next/script';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
   title: "Exit Calculator for Growth Serial Entrepreneur in Miami",
-  description: "Free exit calculator for growth serial-entrepreneur in Miami. Maximize-founder-proceeds with accurate modeling and real-time calculations. Used by 1000+ founders.",
+  description: "Free exit calculator for growth-stage serial entrepreneurs in Miami. Model exit scenarios and maximize founder proceeds with accurate real-time calculations.",
   keywords: ["exit-calculator", "growth", "serial-entrepreneur", "miami", "startup calculator"],
   openGraph: {
     title: "Exit Calculator for Growth Serial Entrepreneur in Miami",
-    description: "Free exit calculator for growth serial-entrepreneur in Miami. Maximize-founder-proceeds with accurate modeling and real-time calculations. Used by 1000+ founders.",
+    description: "Free exit calculator for growth-stage serial entrepreneurs in Miami. Model exit scenarios and maximize founder proceeds with accurate real-time calculations.",
     type: "article",
     url: "https://icanpitch.com/learn/exit-calculator-growth-serial-entrepreneur-miami-model-exit-scenarios-maximize-founder-proceeds/",
-    images: ["/og/exit-calculator-growth-serial-entrepreneur-miami-model-exit-scenarios-maximize-founder-proceeds.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Exit Calculator for Growth Serial Entrepreneur in Miami",
-    description: "Free exit calculator for growth serial-entrepreneur in Miami. Maximize-founder-proceeds with accurate modeling and real-time calculations. Used by 1000+ founders.",
-    images: ["/og/exit-calculator-growth-serial-entrepreneur-miami-model-exit-scenarios-maximize-founder-proceeds.png"],
+    description: "Free exit calculator for growth-stage serial entrepreneurs in Miami. Model exit scenarios and maximize founder proceeds with accurate real-time calculations.",
+  },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/learn/exit-calculator-growth-serial-entrepreneur-miami-model-exit-scenarios-maximize-founder-proceeds/",
   },
 };
 
@@ -31,19 +33,32 @@ const jsonLdData = [
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Exit Calculator for Growth Serial Entrepreneur",
-    "description": "Free exit calculator for growth serial-entrepreneur in Miami. Maximize-founder-proceeds with accurate modeling and real-time calculations. Used by 1000+ founders.",
+    "description": "Free exit calculator for growth-stage serial entrepreneurs in Miami. Model exit scenarios and maximize founder proceeds with accurate real-time calculations.",
     "author": {
       "@type": "Organization",
       "name": "ICanPitch"
     },
-    "datePublished": "2025-11-06T20:44:56.969Z",
-    "url": "https://icanpitch.com/learn/exit-calculator-growth-serial-entrepreneur-miami-model-exit-scenarios-maximize-founder-proceeds/"
+    "datePublished": "2026-01-27T03:45:30.435Z",
+    "dateModified": "2026-01-27T03:45:30.435Z",
+    "url": "https://learn.icanpitch.com/learn/exit-calculator-growth-serial-entrepreneur-miami-model-exit-scenarios-maximize-founder-proceeds/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/learn/exit-calculator-growth-serial-entrepreneur-miami-model-exit-scenarios-maximize-founder-proceeds/"
+    }
   }
 ];
 
 export default function ExitCalculatorGrowthSerialEntrepreneurMiamiModelExitScenariosMaximizeFounderProceedsPage(): React.JSX.Element {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Calculator Guides", href: "/learn/" },
+    { label: "Exit Calculator for Growth Serial Entrepreneur in Miami" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data: Record<string, any>, index: number) => (
         <Script
           key={index}
@@ -56,8 +71,6 @@ export default function ExitCalculatorGrowthSerialEntrepreneurMiamiModelExitScen
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section with Aurora Background */}
         <section className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -67,7 +80,7 @@ export default function ExitCalculatorGrowthSerialEntrepreneurMiamiModelExitScen
                 Exit Calculator for Growth Serial Entrepreneur
               </h1>
               <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-8">
-                Free exit calculator for growth serial-entrepreneur in Miami. Maximize-founder-proceeds with accurate modeling and real-time calculations. Used by 1000+ founders.
+                Free exit calculator for growth-stage serial entrepreneurs in Miami. Model exit scenarios and maximize founder proceeds with accurate real-time calculations.
               </p>
               <div className="flex flex-wrap justify-center gap-2">
                 <Badge className="bg-blue-100 text-blue-800 border-blue-200">Growth</Badge>
@@ -83,49 +96,31 @@ export default function ExitCalculatorGrowthSerialEntrepreneurMiamiModelExitScen
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto">
               <div className="prose prose-lg prose-gray max-w-none">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Exit Calculator Does</h2>
-                <p className="text-gray-700 leading-relaxed">
-                  Our Exit Calculator is specifically designed for growth serial entrepreneur who need precise financial modeling.
-                  This professional-grade tool provides comprehensive analysis of your startup's financial structure,
-                  allowing you to explore different scenarios and understand the implications of various decisions.
-                </p>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">Modeling Startup Exit Scenarios</h2>
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">Whether you're planning for an acquisition or IPO, understanding how exit proceeds are distributed among shareholders is critical. Liquidation preferences, participation rights, and cap table structure all affect what founders actually receive.</p>
 
-                <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-4">Why This Matters for Growth Serial Entrepreneur</h2>
-                <p className="text-gray-700 leading-relaxed">
-                  At the growth stage, serial entrepreneurs face unique challenges that require specialized financial tools.
-                  Traditional spreadsheets often fall short when modeling complex equity structures and conversion scenarios.
-                  Our Exit Calculator addresses these specific needs with industry-standard calculations and professional-grade analysis.
-                </p>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">Liquidation Preferences and Waterfall Analysis</h2>
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">Preferred stock holders typically get paid first in an exit. Our calculator models the full waterfall distribution so you can see exactly what each shareholder receives at different exit valuations.</p>
 
-                <p className="text-gray-700 leading-relaxed">
-                  The accuracy of your financial models directly impacts your ability to raise capital and negotiate favorable terms.
-                  Investors expect sophisticated analysis and clear understanding of dilution, ownership, and potential returns.
-                  This tool ensures you're prepared for those conversations.
-                </p>
-
-                <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-4">How to Maximize Founder Proceeds with Exit Calculator</h2>
-                <p className="text-gray-700 leading-relaxed mb-6">Our calculator is specifically built to help you maximize founder proceeds. The process is straightforward:</p>
-
-                <ol className="space-y-4">
-                  <li className="text-gray-700">
-                    <strong className="text-gray-900 font-semibold">Input your current situation</strong> - Enter your existing equity structure, investment amounts, and valuation parameters
-                  </li>
-                  <li className="text-gray-700">
-                    <strong className="text-gray-900 font-semibold">Model different scenarios</strong> - Explore various outcomes by adjusting key variables like valuation caps, discount rates, or investment amounts
-                  </li>
-                  <li className="text-gray-700">
-                    <strong className="text-gray-900 font-semibold">Analyze the results</strong> - Review detailed breakdowns of ownership percentages, dilution effects, and financial projections
-                  </li>
-                  <li className="text-gray-700">
-                    <strong className="text-gray-900 font-semibold">Export and share</strong> - Generate professional reports for investor presentations or team discussions
-                  </li>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">How to Use the Exit Calculator</h2>
+                <ol className="space-y-3 text-lg text-gray-700 list-decimal list-inside mb-6">
+                  <li>Enter your cap table with preferred stock terms</li>
+                  <li>Set liquidation preferences and participation caps</li>
+                  <li>Model different exit valuations to see payout ranges</li>
+                  <li>Compare founder proceeds across exit scenarios</li>
                 </ol>
-
-                <p className="text-gray-700 leading-relaxed mt-6">
-                  The tool's advanced algorithms ensure accuracy while the intuitive interface makes complex calculations
-                  accessible to founders at any experience level.
-                </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">All Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">Blog & Articles</Link>
             </div>
           </div>
         </section>

@@ -1,9 +1,19 @@
 {
   "title": "NYC Option Pool Calculator: East Coast Startup Equity Standards (2025)",
   "description": "Calculate option pools for NYC startups. Learn East Coast equity benchmarks (16-20%), employee grant standards, and how New York option pools differ from Silicon Valley. Free calculator.",
-  "date": "2025-01-07",
-  "categories": ["Fundraising", "Employee Equity"],
-  "tags": ["option pool", "new york", "NYC", "ESOP", "employee equity", "startup compensation"],
+  "date": "2024-11-02",
+  "categories": [
+    "Fundraising",
+    "Employee Equity"
+  ],
+  "tags": [
+    "option pool",
+    "new york",
+    "NYC",
+    "ESOP",
+    "employee equity",
+    "startup compensation"
+  ],
   "readingTime": "11 min",
   "pageType": "seo"
 }

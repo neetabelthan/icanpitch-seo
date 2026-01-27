@@ -3,23 +3,27 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "Crypto/Web3 SAFE Calculator Miami: Token vs Equity Considerations & Crypto-Native Investor Expectations | ICanPitch ",
+  title: "Crypto/Web3 SAFE Calculator Miami: Token vs Equity Considerations & Crypto-Native Investor Expectations | ICanPitch",
   description: "Miami crypto/Web3 founders: Calculate your SAFE with crypto-specific benchmarks. Learn how token economics, regulatory uncertainty, and crypto-native investors impact valuations in 2025.",
   keywords: ["SAFE", "crypto", "Web3", "Miami", "blockchain", "tokens", "valuation"],
   openGraph: {
     title: "Crypto/Web3 SAFE Calculator Miami: Token vs Equity Considerations & Crypto-Native Investor Expectations",
     description: "Miami crypto/Web3 founders: Calculate your SAFE with crypto-specific benchmarks. Learn how token economics, regulatory uncertainty, and crypto-native investors impact valuations in 2025.",
     type: "article",
-    publishedTime: "2025-01-07T00:00:00.000Z",
+    publishedTime: "2024-12-10T00:00:00.000Z",
     url: "https://icanpitch.com/blog/safe-calculator-crypto-web3-miami/",
   },
   twitter: {
     card: "summary_large_image",
     title: "Crypto/Web3 SAFE Calculator Miami: Token vs Equity Considerations & Crypto-Native Investor Expectations",
     description: "Miami crypto/Web3 founders: Calculate your SAFE with crypto-specific benchmarks. Learn how token economics, regulatory uncertainty, and crypto-native investors impact valuations in 2025.",
+  },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/safe-calculator-crypto-web3-miami/",
   },
 };
 
@@ -29,7 +33,16 @@ const jsonLdData = [
     "@type": "Article",
     "headline": "Crypto/Web3 SAFE Calculator Miami: Token vs Equity Considerations & Crypto-Native Investor Expectations",
     "description": "Miami crypto/Web3 founders: Calculate your SAFE with crypto-specific benchmarks. Learn how token economics, regulatory uncertainty, and crypto-native investors impact valuations in 2025.",
-    "datePublished": "2025-01-07T00:00:00.000Z",
+    "datePublished": "2024-12-10T00:00:00.000Z",
+    "dateModified": "2024-12-10T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/safe-calculator-crypto-web3-miami/"
+    },
     "url": "https://icanpitch.com/blog/safe-calculator-crypto-web3-miami/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function SafeCalculatorCryptoWeb3MiamiBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Crypto/Web3 SAFE Calculator Miami: Token vs Equity Considerations & Crypto-Native Investor Expectations" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function SafeCalculatorCryptoWeb3MiamiBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -78,9 +97,9 @@ export default function SafeCalculatorCryptoWeb3MiamiBlogPost() {
               {/* Meta */}
               <div className="flex items-center gap-4 text-gray-600 mb-8">
                 
-                <time dateTime="2025-01-07T00:00:00.000Z">January 6, 2025</time>
+                <time dateTime="2024-12-10T00:00:00.000Z">December 9, 2024</time>
                 <span>•</span>
-                <span>12 min min read</span>
+                <span>12 min read</span>
               </div>
 
               {/* Description */}
@@ -473,6 +492,17 @@ Miami/LatAm positioning: $140M x 1.15 = $161M<br />
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

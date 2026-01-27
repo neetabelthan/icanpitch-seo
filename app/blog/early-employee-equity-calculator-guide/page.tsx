@@ -3,10 +3,11 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "Early Employee Equity Calculator: How Much to Offer Guide | ICanPitch ",
+  title: "Early Employee Equity Calculator: How Much to Offer Guide | ICanPitch",
   description: "Complete guide to early employee equity allocation. Learn what equity to offer employees #1-5 (0.5-2%), #6-20 (0.1-0.5%), and #21+ with real benchmarks from Carta and AngelList.",
   keywords: ["equity-calculator", "employee-equity", "startup-compensation", "vesting", "equity-grants"],
   openGraph: {
@@ -21,6 +22,9 @@ export const metadata: Metadata = {
     title: "Early Employee Equity Calculator: How Much to Offer Guide",
     description: "Complete guide to early employee equity allocation. Learn what equity to offer employees #1-5 (0.5-2%), #6-20 (0.1-0.5%), and #21+ with real benchmarks from Carta and AngelList.",
   },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/early-employee-equity-calculator-guide/",
+  },
 };
 
 const jsonLdData = [
@@ -30,6 +34,15 @@ const jsonLdData = [
     "headline": "Early Employee Equity Calculator: How Much to Offer Guide",
     "description": "Complete guide to early employee equity allocation. Learn what equity to offer employees #1-5 (0.5-2%), #6-20 (0.1-0.5%), and #21+ with real benchmarks from Carta and AngelList.",
     "datePublished": "2025-01-18T00:00:00.000Z",
+    "dateModified": "2025-01-18T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/early-employee-equity-calculator-guide/"
+    },
     "url": "https://icanpitch.com/blog/early-employee-equity-calculator-guide/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function EarlyEmployeeEquityCalculatorGuideBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Early Employee Equity Calculator: How Much to Offer Guide" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function EarlyEmployeeEquityCalculatorGuideBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -703,6 +722,17 @@ Employee Signature / Date
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

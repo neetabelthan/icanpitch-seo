@@ -1,9 +1,21 @@
 {
   "title": "Berlin Exit Calculator: German Startup Valuation & European M&A 2025",
   "description": "Calculate your Berlin startup exit value with German/EU market multiples (EUR-denominated), compare valuations vs US exits, and model strategic acquirer scenarios for European tech companies.",
-  "date": "January 7, 2025",
-  "categories": ["Fundraising", "Exit Strategy"],
-  "tags": ["exit calculator", "Berlin exits", "German startup valuation", "European M&A", "EUR valuation", "German tech exits", "European acquirers", "Berlin startup exit"],
+  "date": "2024-10-18",
+  "categories": [
+    "Fundraising",
+    "Exit Strategy"
+  ],
+  "tags": [
+    "exit calculator",
+    "Berlin exits",
+    "German startup valuation",
+    "European M&A",
+    "EUR valuation",
+    "German tech exits",
+    "European acquirers",
+    "Berlin startup exit"
+  ],
   "readingTime": "12 min",
   "pageType": "seo"
 }

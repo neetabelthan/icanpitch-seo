@@ -3,10 +3,11 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "How to Negotiate SAFE Valuation Caps: 2025 Founder's Guide | ICanPitch ",
+  title: "How to Negotiate SAFE Valuation Caps: 2025 Founder's Guide | ICanPitch",
   description: "Master SAFE valuation cap negotiations with data-backed benchmarks, proven frameworks, and real scenarios. Includes geographic caps and the 30-40% Rule.",
   keywords: ["SAFE", "valuation-cap", "negotiation", "pre-seed", "seed-round", "startup-equity"],
   openGraph: {
@@ -21,6 +22,9 @@ export const metadata: Metadata = {
     title: "How to Negotiate SAFE Valuation Caps: 2025 Founder's Guide",
     description: "Master SAFE valuation cap negotiations with data-backed benchmarks, proven frameworks, and real scenarios. Includes geographic caps and the 30-40% Rule.",
   },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/how-to-negotiate-safe-valuation-cap/",
+  },
 };
 
 const jsonLdData = [
@@ -30,6 +34,15 @@ const jsonLdData = [
     "headline": "How to Negotiate SAFE Valuation Caps: 2025 Founder's Guide",
     "description": "Master SAFE valuation cap negotiations with data-backed benchmarks, proven frameworks, and real scenarios. Includes geographic caps and the 30-40% Rule.",
     "datePublished": "2025-01-17T00:00:00.000Z",
+    "dateModified": "2025-01-17T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/how-to-negotiate-safe-valuation-cap/"
+    },
     "url": "https://icanpitch.com/blog/how-to-negotiate-safe-valuation-cap/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function HowToNegotiateSafeValuationCapBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "How to Negotiate SAFE Valuation Caps: 2025 Founder's Guide" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function HowToNegotiateSafeValuationCapBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -621,6 +640,17 @@ Example: $750K total raised ÷ $8M cap = 9.375% dilution</li>
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

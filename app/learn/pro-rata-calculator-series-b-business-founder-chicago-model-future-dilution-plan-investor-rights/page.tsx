@@ -1,28 +1,30 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Script from 'next/script';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
   title: "Pro Rata Calculator for Series-b Business Founder in Chicago",
-  description: "Free pro rata calculator for series-b business-founder in Chicago. Plan-investor-rights with accurate modeling and real-time calculations. Used by 1000+ founders.",
+  description: "Free pro rata calculator for Series B business founders in Chicago. Model future dilution and plan investor rights with accurate real-time calculations.",
   keywords: ["pro-rata-calculator", "series-b", "business-founder", "chicago", "startup calculator"],
   openGraph: {
     title: "Pro Rata Calculator for Series-b Business Founder in Chicago",
-    description: "Free pro rata calculator for series-b business-founder in Chicago. Plan-investor-rights with accurate modeling and real-time calculations. Used by 1000+ founders.",
+    description: "Free pro rata calculator for Series B business founders in Chicago. Model future dilution and plan investor rights with accurate real-time calculations.",
     type: "article",
     url: "https://icanpitch.com/learn/pro-rata-calculator-series-b-business-founder-chicago-model-future-dilution-plan-investor-rights/",
-    images: ["/og/pro-rata-calculator-series-b-business-founder-chicago-model-future-dilution-plan-investor-rights.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Pro Rata Calculator for Series-b Business Founder in Chicago",
-    description: "Free pro rata calculator for series-b business-founder in Chicago. Plan-investor-rights with accurate modeling and real-time calculations. Used by 1000+ founders.",
-    images: ["/og/pro-rata-calculator-series-b-business-founder-chicago-model-future-dilution-plan-investor-rights.png"],
+    description: "Free pro rata calculator for Series B business founders in Chicago. Model future dilution and plan investor rights with accurate real-time calculations.",
+  },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/learn/pro-rata-calculator-series-b-business-founder-chicago-model-future-dilution-plan-investor-rights/",
   },
 };
 
@@ -31,19 +33,32 @@ const jsonLdData = [
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Pro Rata Calculator for Series-b Business Founder",
-    "description": "Free pro rata calculator for series-b business-founder in Chicago. Plan-investor-rights with accurate modeling and real-time calculations. Used by 1000+ founders.",
+    "description": "Free pro rata calculator for Series B business founders in Chicago. Model future dilution and plan investor rights with accurate real-time calculations.",
     "author": {
       "@type": "Organization",
       "name": "ICanPitch"
     },
-    "datePublished": "2025-11-06T20:44:56.970Z",
-    "url": "https://icanpitch.com/learn/pro-rata-calculator-series-b-business-founder-chicago-model-future-dilution-plan-investor-rights/"
+    "datePublished": "2026-01-27T03:45:30.437Z",
+    "dateModified": "2026-01-27T03:45:30.437Z",
+    "url": "https://learn.icanpitch.com/learn/pro-rata-calculator-series-b-business-founder-chicago-model-future-dilution-plan-investor-rights/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/learn/pro-rata-calculator-series-b-business-founder-chicago-model-future-dilution-plan-investor-rights/"
+    }
   }
 ];
 
 export default function ProRataCalculatorSeriesBBusinessFounderChicagoModelFutureDilutionPlanInvestorRightsPage(): React.JSX.Element {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Calculator Guides", href: "/learn/" },
+    { label: "Pro Rata Calculator for Series-b Business Founder in Chicago" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data: Record<string, any>, index: number) => (
         <Script
           key={index}
@@ -56,8 +71,6 @@ export default function ProRataCalculatorSeriesBBusinessFounderChicagoModelFutur
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section with Aurora Background */}
         <section className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -67,7 +80,7 @@ export default function ProRataCalculatorSeriesBBusinessFounderChicagoModelFutur
                 Pro Rata Calculator for Series-b Business Founder
               </h1>
               <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-8">
-                Free pro rata calculator for series-b business-founder in Chicago. Plan-investor-rights with accurate modeling and real-time calculations. Used by 1000+ founders.
+                Free pro rata calculator for Series B business founders in Chicago. Model future dilution and plan investor rights with accurate real-time calculations.
               </p>
               <div className="flex flex-wrap justify-center gap-2">
                 <Badge className="bg-blue-100 text-blue-800 border-blue-200">Series B</Badge>
@@ -83,49 +96,31 @@ export default function ProRataCalculatorSeriesBBusinessFounderChicagoModelFutur
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto">
               <div className="prose prose-lg prose-gray max-w-none">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Pro Rata Calculator Does</h2>
-                <p className="text-gray-700 leading-relaxed">
-                  Our Pro Rata Calculator is specifically designed for series-b business founder who need precise financial modeling.
-                  This professional-grade tool provides comprehensive analysis of your startup's financial structure,
-                  allowing you to explore different scenarios and understand the implications of various decisions.
-                </p>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">Understanding Pro Rata Rights</h2>
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">Pro rata rights allow existing investors to maintain their ownership percentage by investing in future rounds. Understanding how pro rata participation affects your cap table helps you plan dilution across multiple rounds.</p>
 
-                <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-4">Why This Matters for Series B Business Founder</h2>
-                <p className="text-gray-700 leading-relaxed">
-                  At the series-b stage, business founders face unique challenges that require specialized financial tools.
-                  Traditional spreadsheets often fall short when modeling complex equity structures and conversion scenarios.
-                  Our Pro Rata Calculator addresses these specific needs with industry-standard calculations and professional-grade analysis.
-                </p>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">Impact on Future Fundraising</h2>
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">When investors exercise pro rata rights, it reduces the amount of equity available to new investors. Our calculator shows how pro rata participation changes the dynamics of your next round.</p>
 
-                <p className="text-gray-700 leading-relaxed">
-                  The accuracy of your financial models directly impacts your ability to raise capital and negotiate favorable terms.
-                  Investors expect sophisticated analysis and clear understanding of dilution, ownership, and potential returns.
-                  This tool ensures you're prepared for those conversations.
-                </p>
-
-                <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-4">How to Plan Investor Rights with Pro Rata Calculator</h2>
-                <p className="text-gray-700 leading-relaxed mb-6">Our calculator is specifically built to help you plan investor rights. The process is straightforward:</p>
-
-                <ol className="space-y-4">
-                  <li className="text-gray-700">
-                    <strong className="text-gray-900 font-semibold">Input your current situation</strong> - Enter your existing equity structure, investment amounts, and valuation parameters
-                  </li>
-                  <li className="text-gray-700">
-                    <strong className="text-gray-900 font-semibold">Model different scenarios</strong> - Explore various outcomes by adjusting key variables like valuation caps, discount rates, or investment amounts
-                  </li>
-                  <li className="text-gray-700">
-                    <strong className="text-gray-900 font-semibold">Analyze the results</strong> - Review detailed breakdowns of ownership percentages, dilution effects, and financial projections
-                  </li>
-                  <li className="text-gray-700">
-                    <strong className="text-gray-900 font-semibold">Export and share</strong> - Generate professional reports for investor presentations or team discussions
-                  </li>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">How to Use the Pro Rata Calculator</h2>
+                <ol className="space-y-3 text-lg text-gray-700 list-decimal list-inside mb-6">
+                  <li>Enter your current cap table and investor ownership</li>
+                  <li>Set the terms of your upcoming round</li>
+                  <li>Toggle pro rata participation for each investor</li>
+                  <li>See how ownership percentages shift with and without pro rata</li>
                 </ol>
-
-                <p className="text-gray-700 leading-relaxed mt-6">
-                  The tool's advanced algorithms ensure accuracy while the intuitive interface makes complex calculations
-                  accessible to founders at any experience level.
-                </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">All Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">Blog & Articles</Link>
             </div>
           </div>
         </section>

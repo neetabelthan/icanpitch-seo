@@ -3,23 +3,27 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "Singapore Option Pool Calculator: APAC ESOP Standards & Tax Guide (2025) | ICanPitch ",
+  title: "Singapore Option Pool Calculator: APAC ESOP Standards & Tax Guide (2025) | ICanPitch",
   description: "Calculate option pools for Singapore startups. Understand APAC equity norms (10-15%), IRAS tax implications, and employee stock option schemes. Free calculator + templates.",
   keywords: ["option pool", "singapore", "APAC", "ESOP", "IRAS", "employee equity", "startup compensation"],
   openGraph: {
     title: "Singapore Option Pool Calculator: APAC ESOP Standards & Tax Guide (2025)",
     description: "Calculate option pools for Singapore startups. Understand APAC equity norms (10-15%), IRAS tax implications, and employee stock option schemes. Free calculator + templates.",
     type: "article",
-    publishedTime: "2025-01-07T00:00:00.000Z",
+    publishedTime: "2024-11-06T00:00:00.000Z",
     url: "https://icanpitch.com/blog/option-pool-calculator-singapore/",
   },
   twitter: {
     card: "summary_large_image",
     title: "Singapore Option Pool Calculator: APAC ESOP Standards & Tax Guide (2025)",
     description: "Calculate option pools for Singapore startups. Understand APAC equity norms (10-15%), IRAS tax implications, and employee stock option schemes. Free calculator + templates.",
+  },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/option-pool-calculator-singapore/",
   },
 };
 
@@ -29,7 +33,16 @@ const jsonLdData = [
     "@type": "Article",
     "headline": "Singapore Option Pool Calculator: APAC ESOP Standards & Tax Guide (2025)",
     "description": "Calculate option pools for Singapore startups. Understand APAC equity norms (10-15%), IRAS tax implications, and employee stock option schemes. Free calculator + templates.",
-    "datePublished": "2025-01-07T00:00:00.000Z",
+    "datePublished": "2024-11-06T00:00:00.000Z",
+    "dateModified": "2024-11-06T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/option-pool-calculator-singapore/"
+    },
     "url": "https://icanpitch.com/blog/option-pool-calculator-singapore/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function OptionPoolCalculatorSingaporeBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Singapore Option Pool Calculator: APAC ESOP Standards & Tax Guide (2025)" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function OptionPoolCalculatorSingaporeBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -78,9 +97,9 @@ export default function OptionPoolCalculatorSingaporeBlogPost() {
               {/* Meta */}
               <div className="flex items-center gap-4 text-gray-600 mb-8">
                 
-                <time dateTime="2025-01-07T00:00:00.000Z">January 6, 2025</time>
+                <time dateTime="2024-11-06T00:00:00.000Z">November 5, 2024</time>
                 <span>•</span>
-                <span>11 min min read</span>
+                <span>11 min read</span>
               </div>
 
               {/* Description */}
@@ -637,6 +656,17 @@ export default function OptionPoolCalculatorSingaporeBlogPost() {
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

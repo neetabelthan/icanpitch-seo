@@ -1,11 +1,27 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { AuroraBackground } from "@/components/aurora-background";
-import { Header } from "@/components/header";
+import Link from "next/link";
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: "Blog - Startup Insights & Guides | ICanPitch",
-  description: "Expert insights on startup fundraising, equity, and financial modeling from Neeta Belthan. Learn how to navigate SAFEs, convertible notes, and cap tables.",
+export const metadata: Metadata = {
+  title: "Startup Insights & Guides",
+  description: "Expert articles on SAFE notes, convertible notes, burn rate management, equity dilution, cap tables, and fundraising strategy for startup founders.",
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/",
+  },
+  openGraph: {
+    title: "Startup Insights & Guides | ICanPitch Blog",
+    description: "Expert articles on SAFE notes, convertible notes, burn rate management, equity dilution, and fundraising strategy.",
+    url: "https://learn.icanpitch.com/blog/",
+    type: "website",
+    siteName: "ICanPitch",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Startup Insights & Guides | ICanPitch Blog",
+    description: "Expert articles on SAFE notes, convertible notes, burn rate management, equity dilution, and fundraising strategy.",
+  },
 };
 
 export default function BlogPage() {
@@ -92,14 +108,6 @@ export default function BlogPage() {
       readingTime: 12,
     },
     {
-      slug: "safe-calculator-hong-kong",
-      title: "Hong Kong SAFE Calculator: Navigate Startup Valuations in Asia's Financial Hub",
-      description: "Calculate SAFE valuations for Hong Kong startups with APAC benchmarks. Pre-seed $2M-$5M, Seed $6M-$10M. Understand Hong Kong's role as gateway to China and Southeast Asia markets.",
-      date: "January 7, 2025",
-      categories: ["Fundraising", "Hong Kong Startups"],
-      readingTime: 11,
-    },
-    {
       slug: "burn-rate-calculator-hong-kong",
       title: "Hong Kong Burn Rate Calculator: Track Your Startup's Cash Runway in HKD",
       description: "Calculate your Hong Kong startup's burn rate with Asia-specific costs. Office space premium but zero capital gains tax. Essential for fintech and cross-border commerce startups.",
@@ -182,14 +190,6 @@ export default function BlogPage() {
       readingTime: 11,
     },
     {
-      slug: "pro-rata-calculator-singapore",
-      title: "Singapore Pro-Rata Calculator: APAC Investor Follow-On Rights 2025",
-      description: "Calculate pro-rata allocation for Singapore investors with Asia-Pacific participation benchmarks. Model cross-border follow-on scenarios and regional investor dynamics.",
-      date: "January 7, 2025",
-      categories: ["Fundraising", "Investors"],
-      readingTime: 11,
-    },
-    {
       slug: "option-pool-calculator-silicon-valley",
       title: "Silicon Valley Option Pool Calculator: Employee Equity Planning 2025",
       description: "Calculate option pool sizes for Silicon Valley startups with valley-specific benchmarks. Pre-seed 10%, Seed 15%, Series A 20%. Model dilution impact and competitive grant sizes.",
@@ -230,69 +230,69 @@ export default function BlogPage() {
       readingTime: 12,
     },
 
-    // Industry-Specific (8 posts)
+    // Industry-Specific SAFE Calculators (8 posts)
     {
-      slug: "fintech-startup-benchmarks-new-york",
-      title: "NYC Fintech Startup Benchmarks: Valuation, Burn Rate & Exit Multiples 2025",
-      description: "Complete financial benchmarks for NYC fintech startups. Series A valuations $25M-$60M, burn rates $300K-$500K/month, exit multiples 8-12x ARR. Wall Street talent and regulatory costs.",
+      slug: "safe-calculator-fintech-new-york",
+      title: "Fintech SAFE Calculator for New York Startups: Valuation Benchmarks & Investor Expectations",
+      description: "NYC fintech founders: Calculate your SAFE with industry-specific benchmarks. Learn why fintech valuations command 22% premiums and how regulatory complexity impacts your cap table.",
       date: "January 7, 2025",
-      categories: ["Fundraising", "Industry Benchmarks"],
+      categories: ["Fundraising", "Industry Analysis"],
       readingTime: 12,
     },
     {
-      slug: "b2b-saas-startup-benchmarks-london",
-      title: "London B2B SaaS Startup Benchmarks: UK Valuation & Growth Metrics 2025",
-      description: "Complete financial benchmarks for London B2B SaaS startups. Series A valuations £15M-£40M, ARR growth 3x year-over-year, and UK/EU market expansion metrics.",
+      slug: "safe-calculator-b2b-saas-london",
+      title: "B2B SaaS SAFE Calculator for London Startups: UK Valuation Benchmarks vs US Comparables",
+      description: "London B2B SaaS founders: Calculate your SAFE with UK-specific benchmarks. Learn why London ARR multiples run 20% below US and how to navigate European enterprise buyers.",
       date: "January 7, 2025",
-      categories: ["Fundraising", "Industry Benchmarks"],
+      categories: ["Fundraising", "Industry Analysis"],
       readingTime: 12,
     },
     {
-      slug: "consumer-tech-startup-benchmarks-silicon-valley",
-      title: "Silicon Valley Consumer Tech Benchmarks: Valuation & User Growth 2025",
-      description: "Complete benchmarks for Silicon Valley consumer tech startups. Series A valuations $30M-$80M, user growth 10-15% monthly, and valley-specific consumer app metrics.",
+      slug: "safe-calculator-consumer-tech-silicon-valley",
+      title: "Consumer Tech SAFE Calculator Silicon Valley: Post-iOS14 Valuation Benchmarks for Social & Mobile Apps",
+      description: "Silicon Valley consumer tech founders: Calculate your SAFE with post-iOS14 benchmarks. Learn how DAU, engagement, and attribution challenges impact valuations in 2025.",
       date: "January 7, 2025",
-      categories: ["Fundraising", "Industry Benchmarks"],
+      categories: ["Fundraising", "Industry Analysis"],
       readingTime: 12,
     },
     {
-      slug: "ai-ml-startup-benchmarks-silicon-valley",
-      title: "Silicon Valley AI/ML Startup Benchmarks: Valuation & Talent Costs 2025",
-      description: "Complete benchmarks for Silicon Valley AI/ML startups. Series A valuations $40M-$100M, ML engineer salaries $200K-$400K, GPU costs, and model training budgets.",
+      slug: "safe-calculator-ai-ml-silicon-valley",
+      title: "AI/ML SAFE Calculator Silicon Valley: 2025 Valuation Benchmarks for Foundation Models vs Application Layer",
+      description: "Silicon Valley AI/ML founders: Calculate your SAFE with 2025 AI-specific benchmarks. Learn how technical talent, compute costs, and foundation vs application layer positioning impact valuations.",
       date: "January 7, 2025",
-      categories: ["Fundraising", "Industry Benchmarks"],
+      categories: ["Fundraising", "Industry Analysis"],
       readingTime: 12,
     },
     {
-      slug: "healthcare-tech-startup-benchmarks-boston",
-      title: "Boston Healthcare Tech Benchmarks: MedTech Valuation & Regulatory 2025",
-      description: "Complete benchmarks for Boston healthcare tech startups. Series A valuations $20M-$50M, FDA approval timelines, clinical trial costs, and medical device development budgets.",
+      slug: "safe-calculator-healthcare-tech-boston",
+      title: "Healthcare Tech SAFE Calculator Boston: Biotech & Digital Health Valuation Benchmarks with FDA Pathway Impact",
+      description: "Boston healthcare tech founders: Calculate your SAFE with regulatory pathway considerations. Learn how FDA clearance, clinical trials, and reimbursement impact digital health and biotech valuations.",
       date: "January 7, 2025",
-      categories: ["Fundraising", "Industry Benchmarks"],
+      categories: ["Fundraising", "Industry Analysis"],
       readingTime: 12,
     },
     {
-      slug: "crypto-web3-startup-benchmarks-miami",
-      title: "Miami Crypto/Web3 Startup Benchmarks: Token Economics & Valuation 2025",
-      description: "Complete benchmarks for Miami crypto and Web3 startups. Token launch valuations $50M-$200M, treasury management, and Web3 developer salaries in South Florida's crypto hub.",
+      slug: "safe-calculator-crypto-web3-miami",
+      title: "Crypto/Web3 SAFE Calculator Miami: Token vs Equity Considerations & Crypto-Native Investor Expectations",
+      description: "Miami crypto/Web3 founders: Calculate your SAFE with crypto-specific benchmarks. Learn how token economics, regulatory uncertainty, and crypto-native investors impact valuations in 2025.",
       date: "January 7, 2025",
-      categories: ["Fundraising", "Industry Benchmarks"],
+      categories: ["Fundraising", "Industry Analysis"],
       readingTime: 12,
     },
     {
-      slug: "ecommerce-startup-benchmarks-los-angeles",
-      title: "LA E-commerce Startup Benchmarks: DTC Metrics & Influencer Marketing 2025",
-      description: "Complete benchmarks for LA e-commerce startups. Series A valuations $15M-$40M, CAC/LTV ratios, influencer marketing ROI, and DTC brand growth metrics.",
+      slug: "safe-calculator-ecommerce-los-angeles",
+      title: "E-commerce SAFE Calculator Los Angeles: DTC Brand Valuations Post-iOS14 with Revenue Multiple Benchmarks",
+      description: "LA e-commerce founders: Calculate your SAFE with DTC-specific benchmarks. Learn how revenue multiples, CAC payback, and iOS14 attribution challenges impact consumer brand valuations.",
       date: "January 7, 2025",
-      categories: ["Fundraising", "Industry Benchmarks"],
+      categories: ["Fundraising", "Industry Analysis"],
       readingTime: 12,
     },
     {
-      slug: "climate-tech-startup-benchmarks-san-francisco",
-      title: "SF Climate Tech Benchmarks: Clean Energy Valuation & Impact Metrics 2025",
-      description: "Complete benchmarks for San Francisco climate tech startups. Series A valuations $25M-$70M, carbon reduction metrics, clean energy ROI, and impact investor expectations.",
+      slug: "safe-calculator-climate-tech-san-francisco",
+      title: "Climate Tech SAFE Calculator San Francisco: Cleantech Valuations with IRA Impact & Hardware vs Software Dynamics",
+      description: "SF climate tech founders: Calculate your SAFE with cleantech-specific benchmarks. Learn how IRA incentives, hardware vs software positioning, and climate investors impact valuations in 2025.",
       date: "January 7, 2025",
-      categories: ["Fundraising", "Industry Benchmarks"],
+      categories: ["Fundraising", "Industry Analysis"],
       readingTime: 12,
     },
 
@@ -412,11 +412,11 @@ export default function BlogPage() {
       readingTime: 11,
     },
     {
-      slug: "safe-calculator-berlin",
-      title: "SAFE Calculator for Berlin Startups: 2025 German Guide",
-      description: "Berlin SAFE valuations with European VC standards. Calculate dilution with German startup ecosystem benchmarks and EUR currency considerations.",
+      slug: "burn-rate-calculator-berlin",
+      title: "Burn Rate Calculator for Berlin Startups: 2025 Cost Guide",
+      description: "Berlin startups burn 30-40% less than London. Calculate your Berlin burn rate with city-specific salary benchmarks, Kreuzberg office costs, and runway projections.",
       date: "January 7, 2025",
-      categories: ["Fundraising", "SAFE"],
+      categories: ["Fundraising", "Operations"],
       readingTime: 11,
     },
     {
@@ -684,6 +684,14 @@ export default function BlogPage() {
       readingTime: 12,
     },
     {
+      slug: "post-money-safe-vs-pre-money-safe-2025",
+      title: "Post-Money SAFE vs Pre-Money SAFE: Complete 2025 Comparison",
+      description: "Understand the critical differences between post-money and pre-money SAFEs. Learn why 87% of startups use post-money SAFEs, how dilution calculations differ, and which format protects founder equity.",
+      date: "January 17, 2025",
+      categories: ["Fundraising", "SAFE"],
+      readingTime: 15,
+    },
+    {
       slug: "safe-calculator-first-time-founders-complete-guide",
       title: "SAFE Calculator for First-Time Founders: Complete 2025 Guide",
       description: "Learn how to use a SAFE calculator as a first-time founder. Understand SAFE note mechanics, valuation caps, discount rates, and calculate dilution.",
@@ -719,8 +727,6 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header />
-
       {/* Hero Section */}
       <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
         <AuroraBackground />
@@ -731,6 +737,9 @@ export default function BlogPage() {
             </h1>
             <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
               Expert advice on fundraising, equity, and financial modeling from Neeta Belthan
+            </p>
+            <p className="text-base text-gray-500 mt-4 max-w-2xl mx-auto">
+              From negotiating valuation caps to understanding burn rate benchmarks by city, these guides cover practical fundraising and financial topics for founders at every stage.
             </p>
           </div>
         </div>
@@ -767,13 +776,13 @@ export default function BlogPage() {
                     </div>
                   </CardHeader>
                   <CardContent className="pt-0 pb-5">
-                    <a
+                    <Link
                       href={`/blog/${post.slug}/`}
                       className="text-blue-600 hover:text-blue-700 font-medium text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all"
                     >
                       Read Article
                       <span className="transition-transform group-hover:translate-x-1">→</span>
-                    </a>
+                    </Link>
                   </CardContent>
                 </Card>
               ))}
@@ -785,6 +794,12 @@ export default function BlogPage() {
               </div>
             )}
           </div>
+        </div>
+      </section>
+
+      <section className="py-8 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+          <p className="text-gray-600">Want to put these insights into practice? <Link href="/learn/" className="text-blue-600 hover:text-blue-700 font-medium underline">Try our free calculator guides</Link> to model SAFE conversions, burn rate, equity splits, and more.</p>
         </div>
       </section>
     </div>

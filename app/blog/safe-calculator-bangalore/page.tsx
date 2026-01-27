@@ -3,23 +3,27 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "SAFE Calculator for Bangalore Startups: 2025 India Guide | ICanPitch ",
+  title: "SAFE Calculator for Bangalore Startups: 2025 India Guide | ICanPitch",
   description: "Bangalore SAFE caps average 40-60% lower than US with 3-4x capital efficiency. Calculate your SAFE dilution with India-specific benchmarks and investor expectations.",
   keywords: ["SAFE", "bangalore", "india-startups", "valuation-cap", "safe-calculator"],
   openGraph: {
     title: "SAFE Calculator for Bangalore Startups: 2025 India Guide",
     description: "Bangalore SAFE caps average 40-60% lower than US with 3-4x capital efficiency. Calculate your SAFE dilution with India-specific benchmarks and investor expectations.",
     type: "article",
-    publishedTime: "2025-01-07T00:00:00.000Z",
+    publishedTime: "2024-11-29T00:00:00.000Z",
     url: "https://icanpitch.com/blog/safe-calculator-bangalore/",
   },
   twitter: {
     card: "summary_large_image",
     title: "SAFE Calculator for Bangalore Startups: 2025 India Guide",
     description: "Bangalore SAFE caps average 40-60% lower than US with 3-4x capital efficiency. Calculate your SAFE dilution with India-specific benchmarks and investor expectations.",
+  },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/safe-calculator-bangalore/",
   },
 };
 
@@ -29,7 +33,16 @@ const jsonLdData = [
     "@type": "Article",
     "headline": "SAFE Calculator for Bangalore Startups: 2025 India Guide",
     "description": "Bangalore SAFE caps average 40-60% lower than US with 3-4x capital efficiency. Calculate your SAFE dilution with India-specific benchmarks and investor expectations.",
-    "datePublished": "2025-01-07T00:00:00.000Z",
+    "datePublished": "2024-11-29T00:00:00.000Z",
+    "dateModified": "2024-11-29T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/safe-calculator-bangalore/"
+    },
     "url": "https://icanpitch.com/blog/safe-calculator-bangalore/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function SafeCalculatorBangaloreBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "SAFE Calculator for Bangalore Startups: 2025 India Guide" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function SafeCalculatorBangaloreBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -78,7 +97,7 @@ export default function SafeCalculatorBangaloreBlogPost() {
               {/* Meta */}
               <div className="flex items-center gap-4 text-gray-600 mb-8">
                 
-                <time dateTime="2025-01-07T00:00:00.000Z">January 6, 2025</time>
+                <time dateTime="2024-11-29T00:00:00.000Z">November 28, 2024</time>
                 <span>•</span>
                 <span>12 min read</span>
               </div>
@@ -678,6 +697,17 @@ export default function SafeCalculatorBangaloreBlogPost() {
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

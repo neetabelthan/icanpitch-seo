@@ -3,10 +3,11 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "Cash Runway Calculator: How to Extend Your Startup's Survival | ICanPitch ",
+  title: "Cash Runway Calculator: How to Extend Your Startup's Survival | ICanPitch",
   description: "Calculate your startup's runway and learn proven strategies to extend it. Discover when to fundraise, how to cut costs strategically, and avoid the 68% of startups that fail from running out of cash.",
   keywords: ["cash-runway", "burn-rate", "fundraising", "cost-optimization", "startup-survival"],
   openGraph: {
@@ -21,6 +22,9 @@ export const metadata: Metadata = {
     title: "Cash Runway Calculator: How to Extend Your Startup's Survival",
     description: "Calculate your startup's runway and learn proven strategies to extend it. Discover when to fundraise, how to cut costs strategically, and avoid the 68% of startups that fail from running out of cash.",
   },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/cash-runway-calculator-extend-startup-survival/",
+  },
 };
 
 const jsonLdData = [
@@ -30,6 +34,15 @@ const jsonLdData = [
     "headline": "Cash Runway Calculator: How to Extend Your Startup's Survival",
     "description": "Calculate your startup's runway and learn proven strategies to extend it. Discover when to fundraise, how to cut costs strategically, and avoid the 68% of startups that fail from running out of cash.",
     "datePublished": "2025-01-18T00:00:00.000Z",
+    "dateModified": "2025-01-18T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/cash-runway-calculator-extend-startup-survival/"
+    },
     "url": "https://icanpitch.com/blog/cash-runway-calculator-extend-startup-survival/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function CashRunwayCalculatorExtendStartupSurvivalBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Cash Runway Calculator: How to Extend Your Startup's Survival" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function CashRunwayCalculatorExtendStartupSurvivalBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -713,6 +732,17 @@ $640,000 ÷ $80,000 = <strong>8 months of runway</strong></p>
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

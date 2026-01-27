@@ -48,6 +48,9 @@ function generateBlogPage(metadata, content) {
   const { slug, title, description, date, categories, tags, readingTime, heroImage, pageType } = metadata;
   const isSeoPage = pageType === 'seo';
 
+  // Normalize readingTime to a number to avoid "min min read" bug
+  const readingTimeNum = typeof readingTime === 'string' ? parseInt(readingTime) : readingTime;
+
   // Generate function name from slug
   let functionName = slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join('') + 'BlogPost';
   // If function name starts with a number, prefix with underscore
@@ -66,7 +69,7 @@ function generateBlogPage(metadata, content) {
 
   const metadataBlock = isSeoPage ?
 `export const metadata: Metadata = {
-  title: "${title} | ICanPitch ",
+  title: "${title} | ICanPitch",
   description: "${description}",
   keywords: [${tags.map(tag => `"${tag}"`).join(', ')}],
   openGraph: {
@@ -80,6 +83,9 @@ function generateBlogPage(metadata, content) {
     card: "summary_large_image",
     title: "${title}",
     description: "${description}",
+  },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/${slug}/",
   },
 };` :
 `export const metadata: Metadata = {
@@ -100,6 +106,9 @@ function generateBlogPage(metadata, content) {
     title: "${title}",
     description: "${description}",
   },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/${slug}/",
+  },
 };`;
 
   const jsonLdBlock = isSeoPage ?
@@ -110,6 +119,15 @@ function generateBlogPage(metadata, content) {
     "headline": "${title}",
     "description": "${description}",
     "datePublished": "${isoDate}",
+    "dateModified": "${isoDate}",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/${slug}/"
+    },
     "url": "https://icanpitch.com/blog/${slug}/",` :
 `const jsonLdData = [
   {
@@ -122,6 +140,11 @@ function generateBlogPage(metadata, content) {
       "name": "Neeta Belthan"
     },
     "datePublished": "${isoDate}",
+    "dateModified": "${isoDate}",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/${slug}/"
+    },
     "url": "https://icanpitch.com/blog/${slug}/",`;
 
   return `import React from 'react';
@@ -129,7 +152,8 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 ${metadataBlock}
 
@@ -146,8 +170,16 @@ ${jsonLdBlock}
 ];
 
 export default function ${functionName}() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "${title.replace(/"/g, '\\"')}" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -160,8 +192,6 @@ export default function ${functionName}() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -184,8 +214,8 @@ export default function ${functionName}() {
                 </div>
                 <span>•</span>` : ''}
                 <time dateTime="${isoDate}">${publishDate}</time>
-                ${readingTime ? `<span>•</span>
-                <span>${readingTime} min read</span>` : ''}
+                ${readingTimeNum ? `<span>•</span>
+                <span>${readingTimeNum} min read</span>` : ''}
               </div>
 
               {/* Description */}
@@ -239,6 +269,17 @@ export default function ${functionName}() {
                   </div>
                 </div>
               </div>` : ''}
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

@@ -3,23 +3,27 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "Miami SAFE Calculator: Navigate SAFE Financing in South Florida's Crypto & Web3 Capital | ICanPitch ",
+  title: "Miami SAFE Calculator: Navigate SAFE Financing in South Florida's Crypto & Web3 Capital | ICanPitch",
   description: "Calculate SAFE dilution for Miami startups. Pre-seed $4M-$7M, Seed $8M-$13M benchmarks. Crypto/Web3 focus, Latin America expansion, and local VC landscape insights.",
   keywords: ["SAFE", "Miami", "valuation", "crypto", "Web3", "Latin America", "venture capital"],
   openGraph: {
     title: "Miami SAFE Calculator: Navigate SAFE Financing in South Florida's Crypto & Web3 Capital",
     description: "Calculate SAFE dilution for Miami startups. Pre-seed $4M-$7M, Seed $8M-$13M benchmarks. Crypto/Web3 focus, Latin America expansion, and local VC landscape insights.",
     type: "article",
-    publishedTime: "2025-01-07T08:00:00.000Z",
+    publishedTime: "2024-12-26T00:00:00.000Z",
     url: "https://icanpitch.com/blog/safe-calculator-miami/",
   },
   twitter: {
     card: "summary_large_image",
     title: "Miami SAFE Calculator: Navigate SAFE Financing in South Florida's Crypto & Web3 Capital",
     description: "Calculate SAFE dilution for Miami startups. Pre-seed $4M-$7M, Seed $8M-$13M benchmarks. Crypto/Web3 focus, Latin America expansion, and local VC landscape insights.",
+  },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/safe-calculator-miami/",
   },
 };
 
@@ -29,7 +33,16 @@ const jsonLdData = [
     "@type": "Article",
     "headline": "Miami SAFE Calculator: Navigate SAFE Financing in South Florida's Crypto & Web3 Capital",
     "description": "Calculate SAFE dilution for Miami startups. Pre-seed $4M-$7M, Seed $8M-$13M benchmarks. Crypto/Web3 focus, Latin America expansion, and local VC landscape insights.",
-    "datePublished": "2025-01-07T08:00:00.000Z",
+    "datePublished": "2024-12-26T00:00:00.000Z",
+    "dateModified": "2024-12-26T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/safe-calculator-miami/"
+    },
     "url": "https://icanpitch.com/blog/safe-calculator-miami/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function SafeCalculatorMiamiBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Miami SAFE Calculator: Navigate SAFE Financing in South Florida's Crypto & Web3 Capital" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function SafeCalculatorMiamiBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -78,9 +97,9 @@ export default function SafeCalculatorMiamiBlogPost() {
               {/* Meta */}
               <div className="flex items-center gap-4 text-gray-600 mb-8">
                 
-                <time dateTime="2025-01-07T08:00:00.000Z">January 7, 2025</time>
+                <time dateTime="2024-12-26T00:00:00.000Z">December 25, 2024</time>
                 <span>•</span>
-                <span>11 min read min read</span>
+                <span>11 min read</span>
               </div>
 
               {/* Description */}
@@ -385,6 +404,17 @@ export default function SafeCalculatorMiamiBlogPost() {
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

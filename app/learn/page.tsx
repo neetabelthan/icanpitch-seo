@@ -2,60 +2,76 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { AuroraBackground } from "@/components/aurora-background";
-import { Header } from "@/components/header";
+import Link from "next/link";
+import { Metadata } from "next";
 
-export const metadata = {
-  title: "Learn - Startup Calculator Guides | ICanPitch",
-  description: "Browse our comprehensive collection of startup calculator guides and resources for founders at every stage.",
+export const metadata: Metadata = {
+  title: "Startup Calculator Guides",
+  description: "Free interactive calculators for startup founders. Model SAFE conversions, burn rate, equity splits, option pools, valuations, vesting schedules, and more.",
+  alternates: {
+    canonical: "https://learn.icanpitch.com/learn/",
+  },
+  openGraph: {
+    title: "Startup Calculator Guides",
+    description: "Free interactive calculators for startup founders. Model SAFE conversions, burn rate, equity splits, and more.",
+    url: "https://learn.icanpitch.com/learn/",
+    type: "website",
+    siteName: "ICanPitch",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Startup Calculator Guides",
+    description: "Free interactive calculators for startup founders. Model SAFE conversions, burn rate, equity splits, and more.",
+  },
 };
 
 export default function LearnPage() {
   const calculators = [
     {
       name: "SAFE Calculator",
-      slug: "safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-owne",
+      slug: "safe-calculator-seed-technical-founder-silicon-valley-optimize-equity-dilution-maximize-founder-ownership",
       stage: "Seed",
       description: "Calculate SAFE conversions and optimize equity dilution"
     },
     {
       name: "Burn Rate Calculator",
-      slug: "burn-rate-calculator-series-a-first-time-founder-new-york-plan-fundraising-timeline-extend-runway-ef",
+      slug: "burn-rate-calculator-series-a-first-time-founder-new-york-plan-fundraising-timeline-extend-runway-efficiency",
       stage: "Series A",
       description: "Plan your fundraising timeline and extend your runway"
     },
     {
       name: "Equity Split Calculator",
-      slug: "equity-split-calculator-pre-seed-serial-entrepreneur-london-resolve-co-founder-disputes-create-fair-",
+      slug: "equity-split-calculator-pre-seed-serial-entrepreneur-london-resolve-co-founder-disputes-create-fair-equity-distribution",
       stage: "Pre-Seed",
       description: "Create fair equity distributions for co-founders"
     },
     {
       name: "Option Pool Calculator",
-      slug: "option-pool-calculator-pre-seed-technical-founder-san-francisco-size-employee-equity-minimize-founde",
+      slug: "option-pool-calculator-pre-seed-technical-founder-san-francisco-size-employee-equity-minimize-founder-dilution",
       stage: "Pre-Seed",
       description: "Size employee equity pools and minimize founder dilution"
     },
     {
       name: "Convertible Note Calculator",
-      slug: "convertible-note-calculator-seed-business-founder-austin-negotiate-better-terms-understand-conversio",
+      slug: "convertible-note-calculator-seed-business-founder-austin-negotiate-better-terms-understand-conversion-scenarios",
       stage: "Seed",
       description: "Understand convertible note conversion mechanics"
     },
     {
       name: "Vesting Calculator",
-      slug: "vesting-calculator-seed-serial-entrepreneur-boston-plan-founder-vesting-protect-against-co-founder-d",
+      slug: "vesting-calculator-seed-serial-entrepreneur-boston-plan-founder-vesting-protect-against-co-founder-departure",
       stage: "Seed",
       description: "Plan founder vesting schedules and protect against departures"
     },
     {
       name: "Pre/Post Money Calculator",
-      slug: "pre-post-money-calculator-series-a-first-time-founder-seattle-understand-valuation-mechanics-negotia",
+      slug: "pre-post-money-calculator-series-a-first-time-founder-seattle-understand-valuation-mechanics-negotiate-better-terms",
       stage: "Series A",
       description: "Understand valuation mechanics and negotiate better terms"
     },
     {
       name: "409A Valuation Calculator",
-      slug: "409a-valuation-calculator-series-b-technical-founder-toronto-prepare-employee-options-comply-with-ta",
+      slug: "409a-valuation-calculator-series-b-technical-founder-toronto-prepare-employee-options-comply-with-tax-regulations",
       stage: "Series B",
       description: "Prepare employee options and comply with tax regulations"
     },
@@ -75,7 +91,6 @@ export default function LearnPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header />
 
       {/* Hero Section with Aurora Background */}
       <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
@@ -87,6 +102,9 @@ export default function LearnPage() {
             </h1>
             <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
               Comprehensive guides and resources for founders at every stage of their startup journey
+            </p>
+            <p className="text-base text-gray-500 mt-4 max-w-2xl mx-auto">
+              Each guide walks you through a specific financial modeling tool, from SAFE note conversion and burn rate analysis to equity splitting and exit scenario planning. Built for pre-seed through Series B founders.
             </p>
           </div>
         </div>
@@ -122,15 +140,22 @@ export default function LearnPage() {
                       className="font-medium"
                       asChild
                     >
-                      <a href={`/learn/${calc.slug}/`}>
+                      <Link href={`/learn/${calc.slug}/`}>
                         Read Guide →
-                      </a>
+                      </Link>
                     </Button>
                   </CardContent>
                 </Card>
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Blog Link */}
+      <section className="py-8 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+          <p className="text-gray-600">Looking for more in-depth analysis? <Link href="/blog/" className="text-blue-600 hover:text-blue-700 font-medium underline">Read our blog</Link> for detailed articles on fundraising, equity, and startup finance.</p>
         </div>
       </section>
     </div>

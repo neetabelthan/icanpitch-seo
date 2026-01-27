@@ -3,23 +3,27 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "NYC Option Pool Calculator: East Coast Startup Equity Standards (2025) | ICanPitch ",
+  title: "NYC Option Pool Calculator: East Coast Startup Equity Standards (2025) | ICanPitch",
   description: "Calculate option pools for NYC startups. Learn East Coast equity benchmarks (16-20%), employee grant standards, and how New York option pools differ from Silicon Valley. Free calculator.",
   keywords: ["option pool", "new york", "NYC", "ESOP", "employee equity", "startup compensation"],
   openGraph: {
     title: "NYC Option Pool Calculator: East Coast Startup Equity Standards (2025)",
     description: "Calculate option pools for NYC startups. Learn East Coast equity benchmarks (16-20%), employee grant standards, and how New York option pools differ from Silicon Valley. Free calculator.",
     type: "article",
-    publishedTime: "2025-01-07T00:00:00.000Z",
+    publishedTime: "2024-11-02T00:00:00.000Z",
     url: "https://icanpitch.com/blog/option-pool-calculator-new-york/",
   },
   twitter: {
     card: "summary_large_image",
     title: "NYC Option Pool Calculator: East Coast Startup Equity Standards (2025)",
     description: "Calculate option pools for NYC startups. Learn East Coast equity benchmarks (16-20%), employee grant standards, and how New York option pools differ from Silicon Valley. Free calculator.",
+  },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/option-pool-calculator-new-york/",
   },
 };
 
@@ -29,7 +33,16 @@ const jsonLdData = [
     "@type": "Article",
     "headline": "NYC Option Pool Calculator: East Coast Startup Equity Standards (2025)",
     "description": "Calculate option pools for NYC startups. Learn East Coast equity benchmarks (16-20%), employee grant standards, and how New York option pools differ from Silicon Valley. Free calculator.",
-    "datePublished": "2025-01-07T00:00:00.000Z",
+    "datePublished": "2024-11-02T00:00:00.000Z",
+    "dateModified": "2024-11-02T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/option-pool-calculator-new-york/"
+    },
     "url": "https://icanpitch.com/blog/option-pool-calculator-new-york/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function OptionPoolCalculatorNewYorkBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "NYC Option Pool Calculator: East Coast Startup Equity Standards (2025)" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function OptionPoolCalculatorNewYorkBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -78,9 +97,9 @@ export default function OptionPoolCalculatorNewYorkBlogPost() {
               {/* Meta */}
               <div className="flex items-center gap-4 text-gray-600 mb-8">
                 
-                <time dateTime="2025-01-07T00:00:00.000Z">January 6, 2025</time>
+                <time dateTime="2024-11-02T00:00:00.000Z">November 1, 2024</time>
                 <span>•</span>
-                <span>11 min min read</span>
+                <span>11 min read</span>
               </div>
 
               {/* Description */}
@@ -513,6 +532,17 @@ export default function OptionPoolCalculatorNewYorkBlogPost() {
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

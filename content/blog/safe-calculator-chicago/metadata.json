@@ -1,9 +1,20 @@
 {
   "title": "Chicago SAFE Calculator: Navigate Midwest Valuations and Investor Expectations",
   "description": "Calculate SAFE terms for Chicago startups. Pre-seed caps $3.5M-$6M, Seed $8M-$12M. Understand Midwest valuation benchmarks 30-35% below SF. Built for fintech and healthcare founders.",
-  "date": "2025-01-07",
-  "categories": ["Fundraising", "SAFE"],
-  "tags": ["SAFE", "Chicago", "valuations", "pre-seed", "seed funding", "fintech", "healthcare tech"],
+  "date": "2024-12-03",
+  "categories": [
+    "Fundraising",
+    "SAFE"
+  ],
+  "tags": [
+    "SAFE",
+    "Chicago",
+    "valuations",
+    "pre-seed",
+    "seed funding",
+    "fintech",
+    "healthcare tech"
+  ],
   "readingTime": 11,
   "pageType": "seo"
 }

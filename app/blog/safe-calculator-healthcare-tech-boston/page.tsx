@@ -3,23 +3,27 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "Healthcare Tech SAFE Calculator Boston: Biotech & Digital Health Valuation Benchmarks with FDA Pathway Impact | ICanPitch ",
+  title: "Healthcare Tech SAFE Calculator Boston: Biotech & Digital Health Valuation Benchmarks with FDA Pathway Impact | ICanPitch",
   description: "Boston healthcare tech founders: Calculate your SAFE with regulatory pathway considerations. Learn how FDA clearance, clinical trials, and reimbursement impact digital health and biotech valuations.",
   keywords: ["SAFE", "healthcare", "biotech", "Boston", "digital health", "FDA", "valuation"],
   openGraph: {
     title: "Healthcare Tech SAFE Calculator Boston: Biotech & Digital Health Valuation Benchmarks with FDA Pathway Impact",
     description: "Boston healthcare tech founders: Calculate your SAFE with regulatory pathway considerations. Learn how FDA clearance, clinical trials, and reimbursement impact digital health and biotech valuations.",
     type: "article",
-    publishedTime: "2025-01-07T00:00:00.000Z",
+    publishedTime: "2024-12-20T00:00:00.000Z",
     url: "https://icanpitch.com/blog/safe-calculator-healthcare-tech-boston/",
   },
   twitter: {
     card: "summary_large_image",
     title: "Healthcare Tech SAFE Calculator Boston: Biotech & Digital Health Valuation Benchmarks with FDA Pathway Impact",
     description: "Boston healthcare tech founders: Calculate your SAFE with regulatory pathway considerations. Learn how FDA clearance, clinical trials, and reimbursement impact digital health and biotech valuations.",
+  },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/safe-calculator-healthcare-tech-boston/",
   },
 };
 
@@ -29,7 +33,16 @@ const jsonLdData = [
     "@type": "Article",
     "headline": "Healthcare Tech SAFE Calculator Boston: Biotech & Digital Health Valuation Benchmarks with FDA Pathway Impact",
     "description": "Boston healthcare tech founders: Calculate your SAFE with regulatory pathway considerations. Learn how FDA clearance, clinical trials, and reimbursement impact digital health and biotech valuations.",
-    "datePublished": "2025-01-07T00:00:00.000Z",
+    "datePublished": "2024-12-20T00:00:00.000Z",
+    "dateModified": "2024-12-20T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/safe-calculator-healthcare-tech-boston/"
+    },
     "url": "https://icanpitch.com/blog/safe-calculator-healthcare-tech-boston/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function SafeCalculatorHealthcareTechBostonBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Healthcare Tech SAFE Calculator Boston: Biotech & Digital Health Valuation Benchmarks with FDA Pathway Impact" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function SafeCalculatorHealthcareTechBostonBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -78,9 +97,9 @@ export default function SafeCalculatorHealthcareTechBostonBlogPost() {
               {/* Meta */}
               <div className="flex items-center gap-4 text-gray-600 mb-8">
                 
-                <time dateTime="2025-01-07T00:00:00.000Z">January 6, 2025</time>
+                <time dateTime="2024-12-20T00:00:00.000Z">December 19, 2024</time>
                 <span>•</span>
-                <span>12 min min read</span>
+                <span>12 min read</span>
               </div>
 
               {/* Description */}
@@ -483,6 +502,17 @@ Team/ecosystem: $36.29M x 1.30 = $47.2M<br />
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

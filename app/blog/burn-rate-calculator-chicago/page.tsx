@@ -3,23 +3,27 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "Chicago Burn Rate Calculator: Track Startup Runway in the Midwest Tech Hub | ICanPitch ",
+  title: "Chicago Burn Rate Calculator: Track Startup Runway in the Midwest Tech Hub | ICanPitch",
   description: "Calculate your Chicago startup's burn rate and runway. Compare costs vs SF (40-50% lower) and NYC (25-30% lower). Essential for fintech, healthcare tech, and logistics founders.",
   keywords: ["burn rate", "Chicago", "startup costs", "runway", "fintech", "healthcare tech"],
   openGraph: {
     title: "Chicago Burn Rate Calculator: Track Startup Runway in the Midwest Tech Hub",
     description: "Calculate your Chicago startup's burn rate and runway. Compare costs vs SF (40-50% lower) and NYC (25-30% lower). Essential for fintech, healthcare tech, and logistics founders.",
     type: "article",
-    publishedTime: "2025-01-07T00:00:00.000Z",
+    publishedTime: "2024-09-23T00:00:00.000Z",
     url: "https://icanpitch.com/blog/burn-rate-calculator-chicago/",
   },
   twitter: {
     card: "summary_large_image",
     title: "Chicago Burn Rate Calculator: Track Startup Runway in the Midwest Tech Hub",
     description: "Calculate your Chicago startup's burn rate and runway. Compare costs vs SF (40-50% lower) and NYC (25-30% lower). Essential for fintech, healthcare tech, and logistics founders.",
+  },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/burn-rate-calculator-chicago/",
   },
 };
 
@@ -29,7 +33,16 @@ const jsonLdData = [
     "@type": "Article",
     "headline": "Chicago Burn Rate Calculator: Track Startup Runway in the Midwest Tech Hub",
     "description": "Calculate your Chicago startup's burn rate and runway. Compare costs vs SF (40-50% lower) and NYC (25-30% lower). Essential for fintech, healthcare tech, and logistics founders.",
-    "datePublished": "2025-01-07T00:00:00.000Z",
+    "datePublished": "2024-09-23T00:00:00.000Z",
+    "dateModified": "2024-09-23T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/burn-rate-calculator-chicago/"
+    },
     "url": "https://icanpitch.com/blog/burn-rate-calculator-chicago/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function BurnRateCalculatorChicagoBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Chicago Burn Rate Calculator: Track Startup Runway in the Midwest Tech Hub" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function BurnRateCalculatorChicagoBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -78,7 +97,7 @@ export default function BurnRateCalculatorChicagoBlogPost() {
               {/* Meta */}
               <div className="flex items-center gap-4 text-gray-600 mb-8">
                 
-                <time dateTime="2025-01-07T00:00:00.000Z">January 6, 2025</time>
+                <time dateTime="2024-09-23T00:00:00.000Z">September 22, 2024</time>
                 <span>•</span>
                 <span>12 min read</span>
               </div>
@@ -612,6 +631,17 @@ export default function BurnRateCalculatorChicagoBlogPost() {
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

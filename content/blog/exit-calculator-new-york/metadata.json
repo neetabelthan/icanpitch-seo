@@ -1,9 +1,21 @@
 {
   "title": "NYC Exit Calculator: New York Startup Exit Valuations & Fintech M&A 2025",
   "description": "Calculate your NYC startup exit value with fintech (8-12x ARR), e-commerce (1-3x revenue), and media tech multiples. Model strategic vs financial buyer scenarios with New York market benchmarks.",
-  "date": "January 7, 2025",
-  "categories": ["Fundraising", "Exit Strategy"],
-  "tags": ["exit calculator", "NYC exits", "fintech valuation", "New York M&A", "startup acquisition", "financial buyer", "strategic acquirer", "e-commerce exit"],
+  "date": "2024-10-23",
+  "categories": [
+    "Fundraising",
+    "Exit Strategy"
+  ],
+  "tags": [
+    "exit calculator",
+    "NYC exits",
+    "fintech valuation",
+    "New York M&A",
+    "startup acquisition",
+    "financial buyer",
+    "strategic acquirer",
+    "e-commerce exit"
+  ],
   "readingTime": "12 min",
   "pageType": "seo"
 }

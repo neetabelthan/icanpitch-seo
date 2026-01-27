@@ -3,23 +3,27 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "E-commerce SAFE Calculator Los Angeles: DTC Brand Valuations Post-iOS14 with Revenue Multiple Benchmarks | ICanPitch ",
+  title: "E-commerce SAFE Calculator Los Angeles: DTC Brand Valuations Post-iOS14 with Revenue Multiple Benchmarks | ICanPitch",
   description: "LA e-commerce founders: Calculate your SAFE with DTC-specific benchmarks. Learn how revenue multiples, CAC payback, and iOS14 attribution challenges impact consumer brand valuations.",
   keywords: ["SAFE", "e-commerce", "DTC", "Los Angeles", "consumer brands", "valuation"],
   openGraph: {
     title: "E-commerce SAFE Calculator Los Angeles: DTC Brand Valuations Post-iOS14 with Revenue Multiple Benchmarks",
     description: "LA e-commerce founders: Calculate your SAFE with DTC-specific benchmarks. Learn how revenue multiples, CAC payback, and iOS14 attribution challenges impact consumer brand valuations.",
     type: "article",
-    publishedTime: "2025-01-07T00:00:00.000Z",
+    publishedTime: "2024-12-16T00:00:00.000Z",
     url: "https://icanpitch.com/blog/safe-calculator-ecommerce-los-angeles/",
   },
   twitter: {
     card: "summary_large_image",
     title: "E-commerce SAFE Calculator Los Angeles: DTC Brand Valuations Post-iOS14 with Revenue Multiple Benchmarks",
     description: "LA e-commerce founders: Calculate your SAFE with DTC-specific benchmarks. Learn how revenue multiples, CAC payback, and iOS14 attribution challenges impact consumer brand valuations.",
+  },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/safe-calculator-ecommerce-los-angeles/",
   },
 };
 
@@ -29,7 +33,16 @@ const jsonLdData = [
     "@type": "Article",
     "headline": "E-commerce SAFE Calculator Los Angeles: DTC Brand Valuations Post-iOS14 with Revenue Multiple Benchmarks",
     "description": "LA e-commerce founders: Calculate your SAFE with DTC-specific benchmarks. Learn how revenue multiples, CAC payback, and iOS14 attribution challenges impact consumer brand valuations.",
-    "datePublished": "2025-01-07T00:00:00.000Z",
+    "datePublished": "2024-12-16T00:00:00.000Z",
+    "dateModified": "2024-12-16T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/safe-calculator-ecommerce-los-angeles/"
+    },
     "url": "https://icanpitch.com/blog/safe-calculator-ecommerce-los-angeles/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function SafeCalculatorEcommerceLosAngelesBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "E-commerce SAFE Calculator Los Angeles: DTC Brand Valuations Post-iOS14 with Revenue Multiple Benchmarks" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function SafeCalculatorEcommerceLosAngelesBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -78,9 +97,9 @@ export default function SafeCalculatorEcommerceLosAngelesBlogPost() {
               {/* Meta */}
               <div className="flex items-center gap-4 text-gray-600 mb-8">
                 
-                <time dateTime="2025-01-07T00:00:00.000Z">January 6, 2025</time>
+                <time dateTime="2024-12-16T00:00:00.000Z">December 15, 2024</time>
                 <span>•</span>
-                <span>12 min min read</span>
+                <span>12 min read</span>
               </div>
 
               {/* Description */}
@@ -461,6 +480,17 @@ Channel diversification: $22.8M x 1.20 = $27.4M<br />
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

@@ -3,23 +3,27 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "SAFE Calculator for Paris Startups: Navigate French Convertible Financing | ICanPitch ",
+  title: "SAFE Calculator for Paris Startups: Navigate French Convertible Financing | ICanPitch",
   description: "Calculate SAFE dilution for Paris startups. Understand French vs US SAFE differences, European VC expectations, and valuation benchmarks. Free calculator.",
   keywords: ["SAFE", "Paris startups", "French fundraising", "convertible loans", "startup valuation", "dilution calculator", "European VC", "BSA-AIR"],
   openGraph: {
     title: "SAFE Calculator for Paris Startups: Navigate French Convertible Financing",
     description: "Calculate SAFE dilution for Paris startups. Understand French vs US SAFE differences, European VC expectations, and valuation benchmarks. Free calculator.",
     type: "article",
-    publishedTime: "2025-01-07T00:00:00.000Z",
+    publishedTime: "2024-12-28T00:00:00.000Z",
     url: "https://icanpitch.com/blog/safe-calculator-paris/",
   },
   twitter: {
     card: "summary_large_image",
     title: "SAFE Calculator for Paris Startups: Navigate French Convertible Financing",
     description: "Calculate SAFE dilution for Paris startups. Understand French vs US SAFE differences, European VC expectations, and valuation benchmarks. Free calculator.",
+  },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/safe-calculator-paris/",
   },
 };
 
@@ -29,7 +33,16 @@ const jsonLdData = [
     "@type": "Article",
     "headline": "SAFE Calculator for Paris Startups: Navigate French Convertible Financing",
     "description": "Calculate SAFE dilution for Paris startups. Understand French vs US SAFE differences, European VC expectations, and valuation benchmarks. Free calculator.",
-    "datePublished": "2025-01-07T00:00:00.000Z",
+    "datePublished": "2024-12-28T00:00:00.000Z",
+    "dateModified": "2024-12-28T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/safe-calculator-paris/"
+    },
     "url": "https://icanpitch.com/blog/safe-calculator-paris/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function SafeCalculatorParisBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "SAFE Calculator for Paris Startups: Navigate French Convertible Financing" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function SafeCalculatorParisBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -78,7 +97,7 @@ export default function SafeCalculatorParisBlogPost() {
               {/* Meta */}
               <div className="flex items-center gap-4 text-gray-600 mb-8">
                 
-                <time dateTime="2025-01-07T00:00:00.000Z">January 6, 2025</time>
+                <time dateTime="2024-12-28T00:00:00.000Z">December 27, 2024</time>
                 <span>•</span>
                 <span>11 min read</span>
               </div>
@@ -329,6 +348,17 @@ export default function SafeCalculatorParisBlogPost() {
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

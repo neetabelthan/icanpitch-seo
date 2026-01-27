@@ -3,10 +3,11 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "SAFE Discount Rate vs Valuation Cap: Which Matters More? | ICanPitch ",
+  title: "SAFE Discount Rate vs Valuation Cap: Which Matters More? | ICanPitch",
   description: "82% of SAFEs trigger the cap, not the discount. Learn the math behind which SAFE term actually protects investors and what founders should negotiate.",
   keywords: ["SAFE", "discount-rate", "valuation-cap", "SAFE-terms", "dilution"],
   openGraph: {
@@ -21,6 +22,9 @@ export const metadata: Metadata = {
     title: "SAFE Discount Rate vs Valuation Cap: Which Matters More?",
     description: "82% of SAFEs trigger the cap, not the discount. Learn the math behind which SAFE term actually protects investors and what founders should negotiate.",
   },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/safe-discount-rate-vs-valuation-cap-which-better/",
+  },
 };
 
 const jsonLdData = [
@@ -30,6 +34,15 @@ const jsonLdData = [
     "headline": "SAFE Discount Rate vs Valuation Cap: Which Matters More?",
     "description": "82% of SAFEs trigger the cap, not the discount. Learn the math behind which SAFE term actually protects investors and what founders should negotiate.",
     "datePublished": "2025-01-17T00:00:00.000Z",
+    "dateModified": "2025-01-17T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/safe-discount-rate-vs-valuation-cap-which-better/"
+    },
     "url": "https://icanpitch.com/blog/safe-discount-rate-vs-valuation-cap-which-better/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function SafeDiscountRateVsValuationCapWhichBetterBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "SAFE Discount Rate vs Valuation Cap: Which Matters More?" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function SafeDiscountRateVsValuationCapWhichBetterBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -602,6 +621,17 @@ export default function SafeDiscountRateVsValuationCapWhichBetterBlogPost() {
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

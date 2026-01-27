@@ -3,7 +3,8 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
   title: "Burn Rate Calculator for Los Angeles Startups: 2025 Cost Guide | ICanPitch Blog",
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     title: "Burn Rate Calculator for Los Angeles Startups: 2025 Cost Guide",
     description: "LA startups burn 15-25% less than SF with unique entertainment tech advantage. Calculate your LA burn rate with Silicon Beach costs and creator economy insights.",
     type: "article",
-    publishedTime: "2025-01-07T00:00:00.000Z",
+    publishedTime: "2024-10-04T00:00:00.000Z",
     authors: ["Neeta Belthan"],
     url: "https://icanpitch.com/blog/burn-rate-calculator-los-angeles/",
   },
@@ -22,6 +23,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Burn Rate Calculator for Los Angeles Startups: 2025 Cost Guide",
     description: "LA startups burn 15-25% less than SF with unique entertainment tech advantage. Calculate your LA burn rate with Silicon Beach costs and creator economy insights.",
+  },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/burn-rate-calculator-los-angeles/",
   },
 };
 
@@ -35,7 +39,12 @@ const jsonLdData = [
       "@type": "Person",
       "name": "Neeta Belthan"
     },
-    "datePublished": "2025-01-07T00:00:00.000Z",
+    "datePublished": "2024-10-04T00:00:00.000Z",
+    "dateModified": "2024-10-04T00:00:00.000Z",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/burn-rate-calculator-los-angeles/"
+    },
     "url": "https://icanpitch.com/blog/burn-rate-calculator-los-angeles/",
     "publisher": {
       "@type": "Organization",
@@ -49,8 +58,16 @@ const jsonLdData = [
 ];
 
 export default function BurnRateCalculatorLosAngelesBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Burn Rate Calculator for Los Angeles Startups: 2025 Cost Guide" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -63,8 +80,6 @@ export default function BurnRateCalculatorLosAngelesBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -87,7 +102,7 @@ export default function BurnRateCalculatorLosAngelesBlogPost() {
                   <span className="font-medium text-gray-900">Neeta Belthan</span>
                 </div>
                 <span>•</span>
-                <time dateTime="2025-01-07T00:00:00.000Z">January 6, 2025</time>
+                <time dateTime="2024-10-04T00:00:00.000Z">October 3, 2024</time>
                 <span>•</span>
                 <span>11 min read</span>
               </div>
@@ -754,6 +769,17 @@ export default function BurnRateCalculatorLosAngelesBlogPost() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

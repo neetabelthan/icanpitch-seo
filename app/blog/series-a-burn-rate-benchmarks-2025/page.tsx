@@ -3,23 +3,27 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "Series A Burn Rate Benchmarks 2025: Efficiency Metrics and Growth Scaling | ICanPitch ",
+  title: "Series A Burn Rate Benchmarks 2025: Efficiency Metrics and Growth Scaling | ICanPitch",
   description: "Comprehensive Series A burn rate benchmarks for 2025. Understand burn multiples, efficiency metrics, team scaling, and when to raise Series B.",
   keywords: ["series a", "burn rate", "burn multiple", "efficiency", "growth stage"],
   openGraph: {
     title: "Series A Burn Rate Benchmarks 2025: Efficiency Metrics and Growth Scaling",
     description: "Comprehensive Series A burn rate benchmarks for 2025. Understand burn multiples, efficiency metrics, team scaling, and when to raise Series B.",
     type: "article",
-    publishedTime: "2025-01-07T00:00:00.000Z",
+    publishedTime: "2025-01-12T00:00:00.000Z",
     url: "https://icanpitch.com/blog/series-a-burn-rate-benchmarks-2025/",
   },
   twitter: {
     card: "summary_large_image",
     title: "Series A Burn Rate Benchmarks 2025: Efficiency Metrics and Growth Scaling",
     description: "Comprehensive Series A burn rate benchmarks for 2025. Understand burn multiples, efficiency metrics, team scaling, and when to raise Series B.",
+  },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/series-a-burn-rate-benchmarks-2025/",
   },
 };
 
@@ -29,7 +33,16 @@ const jsonLdData = [
     "@type": "Article",
     "headline": "Series A Burn Rate Benchmarks 2025: Efficiency Metrics and Growth Scaling",
     "description": "Comprehensive Series A burn rate benchmarks for 2025. Understand burn multiples, efficiency metrics, team scaling, and when to raise Series B.",
-    "datePublished": "2025-01-07T00:00:00.000Z",
+    "datePublished": "2025-01-12T00:00:00.000Z",
+    "dateModified": "2025-01-12T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/series-a-burn-rate-benchmarks-2025/"
+    },
     "url": "https://icanpitch.com/blog/series-a-burn-rate-benchmarks-2025/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function SeriesABurnRateBenchmarks2025BlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Series A Burn Rate Benchmarks 2025: Efficiency Metrics and Growth Scaling" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function SeriesABurnRateBenchmarks2025BlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -78,9 +97,9 @@ export default function SeriesABurnRateBenchmarks2025BlogPost() {
               {/* Meta */}
               <div className="flex items-center gap-4 text-gray-600 mb-8">
                 
-                <time dateTime="2025-01-07T00:00:00.000Z">January 6, 2025</time>
+                <time dateTime="2025-01-12T00:00:00.000Z">January 11, 2025</time>
                 <span>•</span>
-                <span>12 min min read</span>
+                <span>12 min read</span>
               </div>
 
               {/* Description */}
@@ -487,6 +506,17 @@ export default function SeriesABurnRateBenchmarks2025BlogPost() {
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>

@@ -3,10 +3,11 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { Badge } from '@/components/ui/badge';
 import { AuroraBackground } from '@/components/aurora-background';
-import { Header } from '@/components/header';
+import Link from 'next/link';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "Vesting Acceleration Clauses: Single vs Double Trigger Explained | ICanPitch ",
+  title: "Vesting Acceleration Clauses: Single vs Double Trigger Explained | ICanPitch",
   description: "Complete guide to vesting acceleration clauses in M&A and acquisitions. 85% of acquisitions include double-trigger acceleration. Learn single trigger vs double trigger, when acceleration happens, and negotiation tactics.",
   keywords: ["vesting-acceleration", "single-trigger", "double-trigger", "M&A", "acquisition", "equity-vesting"],
   openGraph: {
@@ -21,6 +22,9 @@ export const metadata: Metadata = {
     title: "Vesting Acceleration Clauses: Single vs Double Trigger Explained",
     description: "Complete guide to vesting acceleration clauses in M&A and acquisitions. 85% of acquisitions include double-trigger acceleration. Learn single trigger vs double trigger, when acceleration happens, and negotiation tactics.",
   },
+  alternates: {
+    canonical: "https://learn.icanpitch.com/blog/vesting-acceleration-clauses-explained/",
+  },
 };
 
 const jsonLdData = [
@@ -30,6 +34,15 @@ const jsonLdData = [
     "headline": "Vesting Acceleration Clauses: Single vs Double Trigger Explained",
     "description": "Complete guide to vesting acceleration clauses in M&A and acquisitions. 85% of acquisitions include double-trigger acceleration. Learn single trigger vs double trigger, when acceleration happens, and negotiation tactics.",
     "datePublished": "2025-01-18T00:00:00.000Z",
+    "dateModified": "2025-01-18T00:00:00.000Z",
+    "author": {
+      "@type": "Organization",
+      "name": "ICanPitch"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://learn.icanpitch.com/blog/vesting-acceleration-clauses-explained/"
+    },
     "url": "https://icanpitch.com/blog/vesting-acceleration-clauses-explained/",
     "publisher": {
       "@type": "Organization",
@@ -43,8 +56,16 @@ const jsonLdData = [
 ];
 
 export default function VestingAccelerationClausesExplainedBlogPost() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Vesting Acceleration Clauses: Single vs Double Trigger Explained" },
+  ];
+
   return (
     <>
+      <Breadcrumbs items={breadcrumbItems} />
+
       {jsonLdData.map((data, index) => (
         <Script
           key={index}
@@ -57,8 +78,6 @@ export default function VestingAccelerationClausesExplainedBlogPost() {
       ))}
 
       <div className="min-h-screen bg-white">
-        <Header />
-
         {/* Hero Section */}
         <article className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
           <AuroraBackground />
@@ -541,6 +560,17 @@ export default function VestingAccelerationClausesExplainedBlogPost() {
               </div>
 
               
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link href="/learn/" className="text-blue-600 hover:text-blue-700 underline">Calculator Guides</Link>
+              <Link href="/blog/" className="text-blue-600 hover:text-blue-700 underline">More Articles</Link>
             </div>
           </div>
         </section>
