@@ -857,7 +857,7 @@ Founder Final Ownership = 1 - Total SAFE Dilution - Series A % - Option Pool %
                   <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Calculate Pre-Money Valuation for Series A</span>
                 </Link>
                 <Link href="/blog/seed-valuation-benchmarks-2025/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Seed Valuation Benchmarks 2025: Post-Money Caps, ARR Requirements, and Investor Expectations</span>
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Seed Valuation 2025: $8M-$15M Post-Money Caps (by Sector)</span>
                 </Link>
                 <Link href="/blog/option-pool-dilution-impact-founders/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
                   <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Option Pool Dilution Impact on Founders: Complete Guide</span>

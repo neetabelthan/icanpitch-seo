@@ -27,6 +27,30 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   const posts = [
     {
+      slug: "option-pool-sizing-pre-seed-seed-series-a",
+      title: "Option Pool Calculator Guide: 10-20% Sizing by Stage (2025)",
+      description: "Free option pool calculator + complete sizing guide. Pre-seed: 10%, Seed: 15%, Series A: 18%. See how option pools dilute founders, not investors. Includes hiring plan templates.",
+      date: "January 27, 2025",
+      categories: ["Fundraising", "Equity"],
+      readingTime: 16,
+    },
+    {
+      slug: "equity-split-technical-vs-business-cofounder",
+      title: "Technical vs Business Co-Founder Equity: 55/45 or 50/50?",
+      description: "Data shows technical co-founders average 5-10% more equity. See the fairness calculator, real examples, and avoid the #1 mistake that kills startups.",
+      date: "January 24, 2025",
+      categories: ["Fundraising", "Equity"],
+      readingTime: 12,
+    },
+    {
+      slug: "seed-valuation-benchmarks-2025",
+      title: "Seed Valuation 2025: $8M-$15M Post-Money Caps (by Sector)",
+      description: "What's a fair seed valuation in 2025? SaaS: $10-15M, Consumer: $8-12M. See investor expectations, ARR requirements, and negotiate better terms. Data from 500+ rounds.",
+      date: "January 19, 2025",
+      categories: ["Fundraising", "Benchmarks"],
+      readingTime: 11,
+    },
+    {
       slug: "burn-rate-benchmarks-by-industry-stage",
       title: "Burn Rate Benchmarks by Industry and Stage: 2025 Data",
       description: "Compare your startup's burn rate against 2025 industry benchmarks. Comprehensive data for SaaS, fintech, ecommerce, biotech, and hardware across pre-seed to Series B stages.",
@@ -75,14 +99,6 @@ export default function BlogPage() {
       readingTime: 12,
     },
     {
-      slug: "equity-split-technical-vs-business-cofounder",
-      title: "Equity Split: Technical vs Business Co-Founder Guide",
-      description: "How to fairly split equity between technical and business co-founders. Data shows technical co-founders average 5-10% more equity. Learn fair splits, valuation methods, and how to avoid co-founder resentment.",
-      date: "January 17, 2025",
-      categories: ["Fundraising", "Equity"],
-      readingTime: 12,
-    },
-    {
       slug: "founder-vesting-schedules-4-year-1-year-cliff",
       title: "Founder Vesting Schedules: 4-Year 1-Year Cliff Explained",
       description: "92% of funded startups require founder vesting. Learn why the 4-year schedule with 1-year cliff matters and how to protect your equity.",
@@ -113,14 +129,6 @@ export default function BlogPage() {
       date: "January 17, 2025",
       categories: ["Fundraising", "Equity"],
       readingTime: 15,
-    },
-    {
-      slug: "option-pool-sizing-pre-seed-seed-series-a",
-      title: "Option Pool Sizing: Pre-Seed, Seed, and Series A Guide",
-      description: "Standard option pools: 10% pre-seed, 15% seed, 15-20% Series A. Learn how to size your option pool, who it dilutes, refresh mechanics, and benchmarks by funding stage.",
-      date: "January 17, 2025",
-      categories: ["Fundraising", "Equity"],
-      readingTime: 16,
     },
     {
       slug: "reducing-burn-rate-without-killing-growth",
@@ -251,6 +259,14 @@ export default function BlogPage() {
       readingTime: 8,
     },
     {
+      slug: "pre-seed-burn-rate-benchmarks-2025",
+      title: "Pre-Seed Burn Rate 2025: $15K-$50K/Month Benchmarks by Industry",
+      description: "Is your burn rate too high? See exact pre-seed burn rate benchmarks for 2025. SaaS: $20-35K/mo, Hardware: $40-50K/mo. Free calculator + runway templates inside.",
+      date: "January 14, 2025",
+      categories: ["Fundraising", "Benchmarks"],
+      readingTime: 12,
+    },
+    {
       slug: "understanding-pro-rata-rights-startup-investing",
       title: "Understanding Pro-Rata Rights in Startup Investing: A Complete Guide",
       description: "Learn everything about pro-rata rights in startup investing, how they work, why they matter for founders and investors, and how to calculate pro-rata allocation in future funding rounds.",
@@ -273,14 +289,6 @@ export default function BlogPage() {
       date: "January 11, 2025",
       categories: ["Fundraising", "Benchmarks"],
       readingTime: 12,
-    },
-    {
-      slug: "seed-valuation-benchmarks-2025",
-      title: "Seed Valuation Benchmarks 2025: Post-Money Caps, ARR Requirements, and Investor Expectations",
-      description: "Complete seed valuation benchmarks for 2025. Understand seed-stage post-money valuations, revenue requirements by sector, and what top investors expect.",
-      date: "January 9, 2025",
-      categories: ["Fundraising", "Benchmarks"],
-      readingTime: 11,
     },
     {
       slug: "seed-burn-rate-benchmarks-2025",
@@ -513,14 +521,6 @@ export default function BlogPage() {
       date: "November 9, 2024",
       categories: ["Fundraising", "Benchmarks"],
       readingTime: 11,
-    },
-    {
-      slug: "pre-seed-burn-rate-benchmarks-2025",
-      title: "Pre-Seed Burn Rate Benchmarks 2025: What Founders Need to Know",
-      description: "Complete guide to pre-seed burn rate benchmarks in 2025. Industry-specific ranges, team composition costs, and runway expectations for early-stage startups.",
-      date: "November 7, 2024",
-      categories: ["Fundraising", "Benchmarks"],
-      readingTime: 12,
     },
     {
       slug: "option-pool-calculator-singapore",

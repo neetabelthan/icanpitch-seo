@@ -7,20 +7,20 @@ import Link from 'next/link';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "Seed Valuation Benchmarks 2025: Post-Money Caps, ARR Requirements, and Investor Expectations | ICanPitch",
-  description: "Complete seed valuation benchmarks for 2025. Understand seed-stage post-money valuations, revenue requirements by sector, and what top investors expect.",
+  title: "Seed Valuation 2025: $8M-$15M Post-Money Caps (by Sector) | ICanPitch",
+  description: "What's a fair seed valuation in 2025? SaaS: $10-15M, Consumer: $8-12M. See investor expectations, ARR requirements, and negotiate better terms. Data from 500+ rounds.",
   keywords: ["seed stage", "valuation", "ARR", "post-money", "seed round"],
   openGraph: {
-    title: "Seed Valuation Benchmarks 2025: Post-Money Caps, ARR Requirements, and Investor Expectations",
-    description: "Complete seed valuation benchmarks for 2025. Understand seed-stage post-money valuations, revenue requirements by sector, and what top investors expect.",
+    title: "Seed Valuation 2025: $8M-$15M Post-Money Caps (by Sector)",
+    description: "What's a fair seed valuation in 2025? SaaS: $10-15M, Consumer: $8-12M. See investor expectations, ARR requirements, and negotiate better terms. Data from 500+ rounds.",
     type: "article",
-    publishedTime: "2025-01-10T00:00:00.000Z",
+    publishedTime: "2025-01-20T00:00:00.000Z",
     url: "https://icanpitch.com/blog/seed-valuation-benchmarks-2025/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Seed Valuation Benchmarks 2025: Post-Money Caps, ARR Requirements, and Investor Expectations",
-    description: "Complete seed valuation benchmarks for 2025. Understand seed-stage post-money valuations, revenue requirements by sector, and what top investors expect.",
+    title: "Seed Valuation 2025: $8M-$15M Post-Money Caps (by Sector)",
+    description: "What's a fair seed valuation in 2025? SaaS: $10-15M, Consumer: $8-12M. See investor expectations, ARR requirements, and negotiate better terms. Data from 500+ rounds.",
   },
   alternates: {
     canonical: "https://learn.icanpitch.com/blog/seed-valuation-benchmarks-2025/",
@@ -31,10 +31,10 @@ const jsonLdData = [
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Seed Valuation Benchmarks 2025: Post-Money Caps, ARR Requirements, and Investor Expectations",
-    "description": "Complete seed valuation benchmarks for 2025. Understand seed-stage post-money valuations, revenue requirements by sector, and what top investors expect.",
-    "datePublished": "2025-01-10T00:00:00.000Z",
-    "dateModified": "2025-01-10T00:00:00.000Z",
+    "headline": "Seed Valuation 2025: $8M-$15M Post-Money Caps (by Sector)",
+    "description": "What's a fair seed valuation in 2025? SaaS: $10-15M, Consumer: $8-12M. See investor expectations, ARR requirements, and negotiate better terms. Data from 500+ rounds.",
+    "datePublished": "2025-01-20T00:00:00.000Z",
+    "dateModified": "2025-01-20T00:00:00.000Z",
     "author": {
       "@type": "Organization",
       "name": "ICanPitch"
@@ -59,7 +59,7 @@ export default function SeedValuationBenchmarks2025BlogPost() {
   const breadcrumbItems = [
     { label: "Home", href: "/" },
     { label: "Blog", href: "/blog/" },
-    { label: "Seed Valuation Benchmarks 2025: Post-Money Caps, ARR Requirements, and Investor Expectations" },
+    { label: "Seed Valuation 2025: $8M-$15M Post-Money Caps (by Sector)" },
   ];
 
   return (
@@ -91,20 +91,20 @@ export default function SeedValuationBenchmarks2025BlogPost() {
 
               {/* Title */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Seed Valuation Benchmarks 2025: Post-Money Caps, ARR Requirements, and Investor Expectations
+                Seed Valuation 2025: $8M-$15M Post-Money Caps (by Sector)
               </h1>
 
               {/* Meta */}
               <div className="flex items-center gap-4 text-gray-600 mb-8">
                 
-                <time dateTime="2025-01-10T00:00:00.000Z">January 9, 2025</time>
+                <time dateTime="2025-01-20T00:00:00.000Z">January 19, 2025</time>
                 <span>•</span>
                 <span>11 min read</span>
               </div>
 
               {/* Description */}
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                Complete seed valuation benchmarks for 2025. Understand seed-stage post-money valuations, revenue requirements by sector, and what top investors expect.
+                What's a fair seed valuation in 2025? SaaS: $10-15M, Consumer: $8-12M. See investor expectations, ARR requirements, and negotiate better terms. Data from 500+ rounds.
               </p>
             </div>
           </div>

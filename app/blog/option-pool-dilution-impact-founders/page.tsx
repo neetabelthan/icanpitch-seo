@@ -832,7 +832,7 @@ Sarah lost 18.75% of her pre-deal equity stake just from option pool creation.</
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
             <div className="space-y-1 mb-6">
               <Link href="/blog/option-pool-sizing-pre-seed-seed-series-a/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Option Pool Sizing: Pre-Seed, Seed, and Series A Guide</span>
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Option Pool Calculator Guide: 10-20% Sizing by Stage (2025)</span>
                 </Link>
                 <Link href="/blog/option-pool-calculator-silicon-valley/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
                   <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Silicon Valley Option Pool Calculator: Pre-Money vs Post-Money ESOP Guide (2025)</span>

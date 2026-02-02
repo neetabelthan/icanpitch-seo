@@ -35,6 +35,14 @@ export default function ValuationGuidesHubPage() {
 
   const posts = [
     {
+      slug: "seed-valuation-benchmarks-2025",
+      title: "Seed Valuation 2025: $8M-$15M Post-Money Caps (by Sector)",
+      description: "What's a fair seed valuation in 2025? SaaS: $10-15M, Consumer: $8-12M. See investor expectations, ARR requirements, and negotiate better terms. Data from 500+ rounds.",
+      date: "January 19, 2025",
+      categories: ["Fundraising", "Benchmarks"],
+      readingTime: 11,
+    },
+    {
       slug: "how-to-negotiate-safe-valuation-cap",
       title: "How to Negotiate SAFE Valuation Caps: 2025 Founder's Guide",
       description: "Master SAFE valuation cap negotiations with data-backed benchmarks, proven frameworks, and real scenarios. Includes geographic caps and the 30-40% Rule.",
@@ -111,14 +119,6 @@ export default function ValuationGuidesHubPage() {
       title: "Series A Valuation Benchmarks 2025: ARR Requirements and Valuation Multiples by Sector",
       description: "Complete Series A valuation guide for 2025. Learn pre-money valuation ranges, ARR requirements, revenue multiples, and what top VCs expect.",
       date: "January 13, 2025",
-      categories: ["Fundraising", "Benchmarks"],
-      readingTime: 11,
-    },
-    {
-      slug: "seed-valuation-benchmarks-2025",
-      title: "Seed Valuation Benchmarks 2025: Post-Money Caps, ARR Requirements, and Investor Expectations",
-      description: "Complete seed valuation benchmarks for 2025. Understand seed-stage post-money valuations, revenue requirements by sector, and what top investors expect.",
-      date: "January 9, 2025",
       categories: ["Fundraising", "Benchmarks"],
       readingTime: 11,
     },

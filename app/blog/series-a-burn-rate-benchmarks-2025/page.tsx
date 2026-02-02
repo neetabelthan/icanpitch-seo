@@ -550,7 +550,7 @@ export default function SeriesABurnRateBenchmarks2025BlogPost() {
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
             <div className="space-y-1 mb-6">
               <Link href="/blog/pre-seed-burn-rate-benchmarks-2025/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pre-Seed Burn Rate Benchmarks 2025: What Founders Need to Know</span>
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Pre-Seed Burn Rate 2025: $15K-$50K/Month Benchmarks by Industry</span>
                 </Link>
                 <Link href="/blog/seed-burn-rate-benchmarks-2025/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
                   <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Seed Stage Burn Rate Benchmarks 2025: Scaling from Pre-Seed to PMF</span>

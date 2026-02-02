@@ -7,20 +7,20 @@ import Link from 'next/link';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "Equity Split: Technical vs Business Co-Founder Guide | ICanPitch",
-  description: "How to fairly split equity between technical and business co-founders. Data shows technical co-founders average 5-10% more equity. Learn fair splits, valuation methods, and how to avoid co-founder resentment.",
+  title: "Technical vs Business Co-Founder Equity: 55/45 or 50/50? | ICanPitch",
+  description: "Data shows technical co-founders average 5-10% more equity. See the fairness calculator, real examples, and avoid the #1 mistake that kills startups.",
   keywords: ["co-founder-equity", "equity-split", "technical-founder", "business-founder", "founder-agreements"],
   openGraph: {
-    title: "Equity Split: Technical vs Business Co-Founder Guide",
-    description: "How to fairly split equity between technical and business co-founders. Data shows technical co-founders average 5-10% more equity. Learn fair splits, valuation methods, and how to avoid co-founder resentment.",
+    title: "Technical vs Business Co-Founder Equity: 55/45 or 50/50?",
+    description: "Data shows technical co-founders average 5-10% more equity. See the fairness calculator, real examples, and avoid the #1 mistake that kills startups.",
     type: "article",
-    publishedTime: "2025-01-18T00:00:00.000Z",
+    publishedTime: "2025-01-25T00:00:00.000Z",
     url: "https://icanpitch.com/blog/equity-split-technical-vs-business-cofounder/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Equity Split: Technical vs Business Co-Founder Guide",
-    description: "How to fairly split equity between technical and business co-founders. Data shows technical co-founders average 5-10% more equity. Learn fair splits, valuation methods, and how to avoid co-founder resentment.",
+    title: "Technical vs Business Co-Founder Equity: 55/45 or 50/50?",
+    description: "Data shows technical co-founders average 5-10% more equity. See the fairness calculator, real examples, and avoid the #1 mistake that kills startups.",
   },
   alternates: {
     canonical: "https://learn.icanpitch.com/blog/equity-split-technical-vs-business-cofounder/",
@@ -31,10 +31,10 @@ const jsonLdData = [
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Equity Split: Technical vs Business Co-Founder Guide",
-    "description": "How to fairly split equity between technical and business co-founders. Data shows technical co-founders average 5-10% more equity. Learn fair splits, valuation methods, and how to avoid co-founder resentment.",
-    "datePublished": "2025-01-18T00:00:00.000Z",
-    "dateModified": "2025-01-18T00:00:00.000Z",
+    "headline": "Technical vs Business Co-Founder Equity: 55/45 or 50/50?",
+    "description": "Data shows technical co-founders average 5-10% more equity. See the fairness calculator, real examples, and avoid the #1 mistake that kills startups.",
+    "datePublished": "2025-01-25T00:00:00.000Z",
+    "dateModified": "2025-01-25T00:00:00.000Z",
     "author": {
       "@type": "Organization",
       "name": "ICanPitch"
@@ -121,7 +121,7 @@ export default function EquitySplitTechnicalVsBusinessCofounderBlogPost() {
   const breadcrumbItems = [
     { label: "Home", href: "/" },
     { label: "Blog", href: "/blog/" },
-    { label: "Equity Split: Technical vs Business Co-Founder Guide" },
+    { label: "Technical vs Business Co-Founder Equity: 55/45 or 50/50?" },
   ];
 
   return (
@@ -153,20 +153,20 @@ export default function EquitySplitTechnicalVsBusinessCofounderBlogPost() {
 
               {/* Title */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Equity Split: Technical vs Business Co-Founder Guide
+                Technical vs Business Co-Founder Equity: 55/45 or 50/50?
               </h1>
 
               {/* Meta */}
               <div className="flex items-center gap-4 text-gray-600 mb-8">
                 
-                <time dateTime="2025-01-18T00:00:00.000Z">January 17, 2025</time>
+                <time dateTime="2025-01-25T00:00:00.000Z">January 24, 2025</time>
                 <span>•</span>
                 <span>12 min read</span>
               </div>
 
               {/* Description */}
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                How to fairly split equity between technical and business co-founders. Data shows technical co-founders average 5-10% more equity. Learn fair splits, valuation methods, and how to avoid co-founder resentment.
+                Data shows technical co-founders average 5-10% more equity. See the fairness calculator, real examples, and avoid the #1 mistake that kills startups.
               </p>
             </div>
           </div>

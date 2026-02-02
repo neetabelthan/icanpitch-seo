@@ -7,20 +7,20 @@ import Link from 'next/link';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "Option Pool Sizing: Pre-Seed, Seed, and Series A Guide | ICanPitch",
-  description: "Standard option pools: 10% pre-seed, 15% seed, 15-20% Series A. Learn how to size your option pool, who it dilutes, refresh mechanics, and benchmarks by funding stage.",
-  keywords: ["option-pool", "equity-compensation", "hiring", "dilution", "cap-table"],
+  title: "Option Pool Calculator Guide: 10-20% Sizing by Stage (2025) | ICanPitch",
+  description: "Free option pool calculator + complete sizing guide. Pre-seed: 10%, Seed: 15%, Series A: 18%. See how option pools dilute founders, not investors. Includes hiring plan templates.",
+  keywords: ["option-pool", "option-pool-calculator", "equity-compensation", "hiring", "dilution", "cap-table"],
   openGraph: {
-    title: "Option Pool Sizing: Pre-Seed, Seed, and Series A Guide",
-    description: "Standard option pools: 10% pre-seed, 15% seed, 15-20% Series A. Learn how to size your option pool, who it dilutes, refresh mechanics, and benchmarks by funding stage.",
+    title: "Option Pool Calculator Guide: 10-20% Sizing by Stage (2025)",
+    description: "Free option pool calculator + complete sizing guide. Pre-seed: 10%, Seed: 15%, Series A: 18%. See how option pools dilute founders, not investors. Includes hiring plan templates.",
     type: "article",
-    publishedTime: "2025-01-18T00:00:00.000Z",
+    publishedTime: "2025-01-28T00:00:00.000Z",
     url: "https://icanpitch.com/blog/option-pool-sizing-pre-seed-seed-series-a/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Option Pool Sizing: Pre-Seed, Seed, and Series A Guide",
-    description: "Standard option pools: 10% pre-seed, 15% seed, 15-20% Series A. Learn how to size your option pool, who it dilutes, refresh mechanics, and benchmarks by funding stage.",
+    title: "Option Pool Calculator Guide: 10-20% Sizing by Stage (2025)",
+    description: "Free option pool calculator + complete sizing guide. Pre-seed: 10%, Seed: 15%, Series A: 18%. See how option pools dilute founders, not investors. Includes hiring plan templates.",
   },
   alternates: {
     canonical: "https://learn.icanpitch.com/blog/option-pool-sizing-pre-seed-seed-series-a/",
@@ -31,10 +31,10 @@ const jsonLdData = [
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Option Pool Sizing: Pre-Seed, Seed, and Series A Guide",
-    "description": "Standard option pools: 10% pre-seed, 15% seed, 15-20% Series A. Learn how to size your option pool, who it dilutes, refresh mechanics, and benchmarks by funding stage.",
-    "datePublished": "2025-01-18T00:00:00.000Z",
-    "dateModified": "2025-01-18T00:00:00.000Z",
+    "headline": "Option Pool Calculator Guide: 10-20% Sizing by Stage (2025)",
+    "description": "Free option pool calculator + complete sizing guide. Pre-seed: 10%, Seed: 15%, Series A: 18%. See how option pools dilute founders, not investors. Includes hiring plan templates.",
+    "datePublished": "2025-01-28T00:00:00.000Z",
+    "dateModified": "2025-01-28T00:00:00.000Z",
     "author": {
       "@type": "Organization",
       "name": "ICanPitch"
@@ -113,7 +113,7 @@ export default function OptionPoolSizingPreSeedSeedSeriesABlogPost() {
   const breadcrumbItems = [
     { label: "Home", href: "/" },
     { label: "Blog", href: "/blog/" },
-    { label: "Option Pool Sizing: Pre-Seed, Seed, and Series A Guide" },
+    { label: "Option Pool Calculator Guide: 10-20% Sizing by Stage (2025)" },
   ];
 
   return (
@@ -145,20 +145,20 @@ export default function OptionPoolSizingPreSeedSeedSeriesABlogPost() {
 
               {/* Title */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Option Pool Sizing: Pre-Seed, Seed, and Series A Guide
+                Option Pool Calculator Guide: 10-20% Sizing by Stage (2025)
               </h1>
 
               {/* Meta */}
               <div className="flex items-center gap-4 text-gray-600 mb-8">
                 
-                <time dateTime="2025-01-18T00:00:00.000Z">January 17, 2025</time>
+                <time dateTime="2025-01-28T00:00:00.000Z">January 27, 2025</time>
                 <span>•</span>
                 <span>16 min read</span>
               </div>
 
               {/* Description */}
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                Standard option pools: 10% pre-seed, 15% seed, 15-20% Series A. Learn how to size your option pool, who it dilutes, refresh mechanics, and benchmarks by funding stage.
+                Free option pool calculator + complete sizing guide. Pre-seed: 10%, Seed: 15%, Series A: 18%. See how option pools dilute founders, not investors. Includes hiring plan templates.
               </p>
             </div>
           </div>
@@ -995,6 +995,7 @@ export default function OptionPoolSizingPreSeedSeedSeriesABlogPost() {
                 <h3 className="text-sm font-semibold text-gray-900 mb-4">Tags</h3>
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="outline" className="text-gray-700">option-pool</Badge>
+                  <Badge variant="outline" className="text-gray-700">option-pool-calculator</Badge>
                   <Badge variant="outline" className="text-gray-700">equity-compensation</Badge>
                   <Badge variant="outline" className="text-gray-700">hiring</Badge>
                   <Badge variant="outline" className="text-gray-700">dilution</Badge>

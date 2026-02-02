@@ -441,7 +441,7 @@ export default function HowToCalculatePreMoneyValuationSeriesABlogPost() {
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Articles</h3>
             <div className="space-y-1 mb-6">
               <Link href="/blog/seed-valuation-benchmarks-2025/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Seed Valuation Benchmarks 2025: Post-Money Caps, ARR Requirements, and Investor Expectations</span>
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Seed Valuation 2025: $8M-$15M Post-Money Caps (by Sector)</span>
                 </Link>
                 <Link href="/blog/post-money-safe-vs-pre-money-safe-2025/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
                   <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Post-Money SAFE vs Pre-Money SAFE: Complete 2025 Comparison</span>

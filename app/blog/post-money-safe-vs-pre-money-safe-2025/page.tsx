@@ -728,7 +728,7 @@ export default function PostMoneySafeVsPreMoneySafe2025BlogPost() {
                   <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">SAFE Conversion Mechanics: How SAFEs Convert in Priced Rounds</span>
                 </Link>
                 <Link href="/blog/seed-valuation-benchmarks-2025/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Seed Valuation Benchmarks 2025: Post-Money Caps, ARR Requirements, and Investor Expectations</span>
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Seed Valuation 2025: $8M-$15M Post-Money Caps (by Sector)</span>
                 </Link>
                 <Link href="/blog/avoiding-safe-dilution-traps-founders/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
                   <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Avoiding SAFE Dilution Traps: 7 Mistakes Founders Make</span>

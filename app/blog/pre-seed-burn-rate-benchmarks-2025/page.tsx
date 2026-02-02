@@ -7,20 +7,20 @@ import Link from 'next/link';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "Pre-Seed Burn Rate Benchmarks 2025: What Founders Need to Know | ICanPitch",
-  description: "Complete guide to pre-seed burn rate benchmarks in 2025. Industry-specific ranges, team composition costs, and runway expectations for early-stage startups.",
+  title: "Pre-Seed Burn Rate 2025: $15K-$50K/Month Benchmarks by Industry | ICanPitch",
+  description: "Is your burn rate too high? See exact pre-seed burn rate benchmarks for 2025. SaaS: $20-35K/mo, Hardware: $40-50K/mo. Free calculator + runway templates inside.",
   keywords: ["pre-seed", "burn rate", "runway", "early stage", "startup metrics"],
   openGraph: {
-    title: "Pre-Seed Burn Rate Benchmarks 2025: What Founders Need to Know",
-    description: "Complete guide to pre-seed burn rate benchmarks in 2025. Industry-specific ranges, team composition costs, and runway expectations for early-stage startups.",
+    title: "Pre-Seed Burn Rate 2025: $15K-$50K/Month Benchmarks by Industry",
+    description: "Is your burn rate too high? See exact pre-seed burn rate benchmarks for 2025. SaaS: $20-35K/mo, Hardware: $40-50K/mo. Free calculator + runway templates inside.",
     type: "article",
-    publishedTime: "2024-11-08T00:00:00.000Z",
+    publishedTime: "2025-01-15T00:00:00.000Z",
     url: "https://icanpitch.com/blog/pre-seed-burn-rate-benchmarks-2025/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pre-Seed Burn Rate Benchmarks 2025: What Founders Need to Know",
-    description: "Complete guide to pre-seed burn rate benchmarks in 2025. Industry-specific ranges, team composition costs, and runway expectations for early-stage startups.",
+    title: "Pre-Seed Burn Rate 2025: $15K-$50K/Month Benchmarks by Industry",
+    description: "Is your burn rate too high? See exact pre-seed burn rate benchmarks for 2025. SaaS: $20-35K/mo, Hardware: $40-50K/mo. Free calculator + runway templates inside.",
   },
   alternates: {
     canonical: "https://learn.icanpitch.com/blog/pre-seed-burn-rate-benchmarks-2025/",
@@ -31,10 +31,10 @@ const jsonLdData = [
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Pre-Seed Burn Rate Benchmarks 2025: What Founders Need to Know",
-    "description": "Complete guide to pre-seed burn rate benchmarks in 2025. Industry-specific ranges, team composition costs, and runway expectations for early-stage startups.",
-    "datePublished": "2024-11-08T00:00:00.000Z",
-    "dateModified": "2024-11-08T00:00:00.000Z",
+    "headline": "Pre-Seed Burn Rate 2025: $15K-$50K/Month Benchmarks by Industry",
+    "description": "Is your burn rate too high? See exact pre-seed burn rate benchmarks for 2025. SaaS: $20-35K/mo, Hardware: $40-50K/mo. Free calculator + runway templates inside.",
+    "datePublished": "2025-01-15T00:00:00.000Z",
+    "dateModified": "2025-01-15T00:00:00.000Z",
     "author": {
       "@type": "Organization",
       "name": "ICanPitch"
@@ -59,7 +59,7 @@ export default function PreSeedBurnRateBenchmarks2025BlogPost() {
   const breadcrumbItems = [
     { label: "Home", href: "/" },
     { label: "Blog", href: "/blog/" },
-    { label: "Pre-Seed Burn Rate Benchmarks 2025: What Founders Need to Know" },
+    { label: "Pre-Seed Burn Rate 2025: $15K-$50K/Month Benchmarks by Industry" },
   ];
 
   return (
@@ -91,20 +91,20 @@ export default function PreSeedBurnRateBenchmarks2025BlogPost() {
 
               {/* Title */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Pre-Seed Burn Rate Benchmarks 2025: What Founders Need to Know
+                Pre-Seed Burn Rate 2025: $15K-$50K/Month Benchmarks by Industry
               </h1>
 
               {/* Meta */}
               <div className="flex items-center gap-4 text-gray-600 mb-8">
                 
-                <time dateTime="2024-11-08T00:00:00.000Z">November 7, 2024</time>
+                <time dateTime="2025-01-15T00:00:00.000Z">January 14, 2025</time>
                 <span>•</span>
                 <span>12 min read</span>
               </div>
 
               {/* Description */}
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                Complete guide to pre-seed burn rate benchmarks in 2025. Industry-specific ranges, team composition costs, and runway expectations for early-stage startups.
+                Is your burn rate too high? See exact pre-seed burn rate benchmarks for 2025. SaaS: $20-35K/mo, Hardware: $40-50K/mo. Free calculator + runway templates inside.
               </p>
             </div>
           </div>

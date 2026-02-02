@@ -35,6 +35,22 @@ export default function EquityGuidesHubPage() {
 
   const posts = [
     {
+      slug: "option-pool-sizing-pre-seed-seed-series-a",
+      title: "Option Pool Calculator Guide: 10-20% Sizing by Stage (2025)",
+      description: "Free option pool calculator + complete sizing guide. Pre-seed: 10%, Seed: 15%, Series A: 18%. See how option pools dilute founders, not investors. Includes hiring plan templates.",
+      date: "January 27, 2025",
+      categories: ["Fundraising", "Equity"],
+      readingTime: 16,
+    },
+    {
+      slug: "equity-split-technical-vs-business-cofounder",
+      title: "Technical vs Business Co-Founder Equity: 55/45 or 50/50?",
+      description: "Data shows technical co-founders average 5-10% more equity. See the fairness calculator, real examples, and avoid the #1 mistake that kills startups.",
+      date: "January 24, 2025",
+      categories: ["Fundraising", "Equity"],
+      readingTime: 12,
+    },
+    {
       slug: "co-founder-equity-split-50-50-alternatives",
       title: "Co-Founder Equity Split: Why 50/50 Fails and Better Alternatives",
       description: "62% of 50/50 splits end in founder conflict within 3 years. Learn why equal equity splits fail, proven alternative models (60/40, 70/30), and decision frameworks for dividing founder equity fairly.",
@@ -46,14 +62,6 @@ export default function EquityGuidesHubPage() {
       slug: "early-employee-equity-calculator-guide",
       title: "Early Employee Equity Calculator: How Much to Offer Guide",
       description: "Complete guide to early employee equity allocation. Learn what equity to offer employees #1-5 (0.5-2%), #6-20 (0.1-0.5%), and #21+ with real benchmarks from Carta and AngelList.",
-      date: "January 17, 2025",
-      categories: ["Fundraising", "Equity"],
-      readingTime: 12,
-    },
-    {
-      slug: "equity-split-technical-vs-business-cofounder",
-      title: "Equity Split: Technical vs Business Co-Founder Guide",
-      description: "How to fairly split equity between technical and business co-founders. Data shows technical co-founders average 5-10% more equity. Learn fair splits, valuation methods, and how to avoid co-founder resentment.",
       date: "January 17, 2025",
       categories: ["Fundraising", "Equity"],
       readingTime: 12,
@@ -73,14 +81,6 @@ export default function EquityGuidesHubPage() {
       date: "January 17, 2025",
       categories: ["Fundraising", "Equity"],
       readingTime: 15,
-    },
-    {
-      slug: "option-pool-sizing-pre-seed-seed-series-a",
-      title: "Option Pool Sizing: Pre-Seed, Seed, and Series A Guide",
-      description: "Standard option pools: 10% pre-seed, 15% seed, 15-20% Series A. Learn how to size your option pool, who it dilutes, refresh mechanics, and benchmarks by funding stage.",
-      date: "January 17, 2025",
-      categories: ["Fundraising", "Equity"],
-      readingTime: 16,
     },
     {
       slug: "vesting-acceleration-clauses-explained",

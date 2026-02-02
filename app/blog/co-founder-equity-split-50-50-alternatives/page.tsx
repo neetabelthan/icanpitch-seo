@@ -876,10 +876,10 @@ Founder C (Head of Growth): 20% - joined 3 months later, brings enterprise sales
                   <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Option Pool Dilution Impact on Founders: Complete Guide</span>
                 </Link>
                 <Link href="/blog/equity-split-technical-vs-business-cofounder/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Equity Split: Technical vs Business Co-Founder Guide</span>
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Technical vs Business Co-Founder Equity: 55/45 or 50/50?</span>
                 </Link>
                 <Link href="/blog/option-pool-sizing-pre-seed-seed-series-a/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Option Pool Sizing: Pre-Seed, Seed, and Series A Guide</span>
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Option Pool Calculator Guide: 10-20% Sizing by Stage (2025)</span>
                 </Link>
             </div>
             <div className="pt-4 border-t border-gray-200 flex flex-wrap gap-4">

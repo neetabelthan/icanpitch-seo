@@ -833,7 +833,7 @@ Employee Signature / Date
                   <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Founder Vesting Schedules: 4-Year 1-Year Cliff Explained</span>
                 </Link>
                 <Link href="/blog/equity-split-technical-vs-business-cofounder/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Equity Split: Technical vs Business Co-Founder Guide</span>
+                  <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">Technical vs Business Co-Founder Equity: 55/45 or 50/50?</span>
                 </Link>
                 <Link href="/blog/how-to-calculate-safe-dilution/" className="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
                   <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">How to Calculate SAFE Dilution: A Founder's Guide</span>
