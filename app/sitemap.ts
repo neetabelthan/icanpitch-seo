@@ -5,23 +5,23 @@ import path from 'path';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://learn.icanpitch.com'; // Update this to your subdomain
 
-  // Static pages
+  // Static pages - updated dates for fresh sitemap
   const routes: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
-      lastModified: new Date('2025-01-18'),
+      lastModified: new Date('2026-02-02'),
       changeFrequency: 'monthly',
       priority: 1.0,
     },
     {
       url: `${baseUrl}/learn/`,
-      lastModified: new Date('2025-01-18'),
+      lastModified: new Date('2026-02-02'),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/blog/`,
-      lastModified: new Date('2025-01-18'),
+      lastModified: new Date('2026-02-02'),
       changeFrequency: 'daily',
       priority: 0.9,
     },

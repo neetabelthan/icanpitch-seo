@@ -17,7 +17,7 @@ node generate-pages.js   # Generate /app/learn/*/page.tsx from /learn/*/
 bash qa_blog_posts.sh    # Validate blog content (HTML tags, metadata, word count 3.5k-4.5k)
 ```
 
-Note: `qa_blog_posts.sh` has a hardcoded path that may need updating (`BLOG_DIR` on line 6).
+Note: `qa_blog_posts.sh` has hardcoded paths (`BLOG_DIR` and `REPORT_FILE` at lines 6-7) that may need updating for your environment.
 
 ## Architecture
 
@@ -71,3 +71,22 @@ Required: `slug`, `title`, `metaDescription`, `h1`, `dataRow` (object with `calc
 - Path alias: `@/*` maps to project root
 - Base URL for sitemap/robots hardcoded in `app/sitemap.ts` and `app/robots.ts` — update before deploying to a new domain
 - No environment variables or secrets required
+
+## Workflow: Adding New Content
+
+### New Blog Post / SEO Page
+1. Create folder: `content/blog/<slug>/` (folder name **must** match slug in metadata)
+2. Create `metadata.json` with required fields
+3. Create `content.html` with article content
+4. Run `node generate-blog.js`
+5. Verify at `http://localhost:3000/blog/<slug>/`
+
+The blog index (`app/blog/page.tsx`) is auto-generated. Hub/pillar pages are also auto-generated based on topic detection.
+
+### New Calculator Guide
+1. Create folder: `learn/<slug>/metadata.json`
+2. Add slug mapping to `generate-pages.js` if calculator URL differs from name
+3. Run `node generate-pages.js`
+4. Verify at `http://localhost:3000/learn/<slug>/`
+
+The learn index (`app/learn/page.tsx`) is auto-generated.
